@@ -27,11 +27,13 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    graphicsview.cpp
+    graphicsview.cpp \
+    bottombuttongroup.cpp
 
 HEADERS += \
         mainwindow.h \
-    graphicsview.h
+    graphicsview.h \
+    bottombuttongroup.h
 
 FORMS +=
 
