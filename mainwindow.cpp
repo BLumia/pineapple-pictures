@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     this->setAttribute(Qt::WA_TranslucentBackground, true);
-    this->setMinimumSize(610, 410);
+    this->setMinimumSize(710, 530);
 
     m_fadeOutAnimation = new QPropertyAnimation(this, "windowOpacity");
     m_fadeOutAnimation->setDuration(300);
