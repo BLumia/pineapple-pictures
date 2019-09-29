@@ -12,6 +12,7 @@ public:
 
     void showImage(const QPixmap &pixmap);
     void showText(const QString &text);
+    void showSvg(const QString &filepath);
 
 private:
     QGraphicsItem * m_theThing;

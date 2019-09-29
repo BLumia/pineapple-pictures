@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/zoom-in.svg</file>
+        <file>icons/zoom-out.svg</file>
+        <file>icons/view-fullscreen.svg</file>
+        <file>icons/zoom-original.svg</file>
+        <file>icons/object-rorate-right.svg</file>
+    </qresource>
+</RCC>

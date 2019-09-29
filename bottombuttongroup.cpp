@@ -24,15 +24,16 @@ BottomButtonGroup::BottomButtonGroup(QWidget *parent)
                         "}");
 
     auto newBtn = [](QString text) -> QPushButton * {
-        QPushButton * btn = new QPushButton(text);
+        QPushButton * btn = new QPushButton(QIcon(QStringLiteral(":/icons/") + text), "");
+        btn->setIconSize(QSize(40, 40));
         btn->setFixedSize(40, 40);
         return btn;
     };
-    addButton(newBtn("1:1"));
-    addButton(newBtn("Full"));
-    addButton(newBtn("Zoom+"));
-    addButton(newBtn("Zoom-"));
-    addButton(newBtn("Rorate"));
+    addButton(newBtn("zoom-original"));
+    addButton(newBtn("view-fullscreen"));
+    addButton(newBtn("zoom-in"));
+    addButton(newBtn("zoom-out"));
+    addButton(newBtn("object-rorate-right"));
 }
 
 void BottomButtonGroup::addButton(QAbstractButton *button)

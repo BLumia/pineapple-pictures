@@ -35,6 +35,11 @@ void GraphicsView::showText(const QString &text)
     scene()->showText(text);
 }
 
+void GraphicsView::showSvg(const QString &filepath)
+{
+    scene()->showSvg(filepath);
+}
+
 GraphicsScene *GraphicsView::scene() const
 {
     return qobject_cast<GraphicsScene*>(QGraphicsView::scene());
@@ -129,12 +134,18 @@ void GraphicsView::dropEvent(QDropEvent *event)
 
     if (mimeData->hasUrls()) {
         QUrl url(mimeData->urls().first());
-        QImageReader imageReader(url.toLocalFile());
-        QImage::Format imageFormat = imageReader.imageFormat();
-        if (imageFormat == QImage::Format_Invalid) {
-            showText("File is not a valid image");
+        QString filePath(url.toLocalFile());
+
+        if (filePath.endsWith(".svg")) {
+            showSvg(filePath);
         } else {
-            showImage(QPixmap::fromImageReader(&imageReader));
+            QImageReader imageReader(filePath);
+            QImage::Format imageFormat = imageReader.imageFormat();
+            if (imageFormat == QImage::Format_Invalid) {
+                showText("File is not a valid image");
+            } else {
+                showImage(QPixmap::fromImageReader(&imageReader));
+            }
         }
     } else if (mimeData->hasImage()) {
         QImage img = qvariant_cast<QImage>(mimeData->imageData());
