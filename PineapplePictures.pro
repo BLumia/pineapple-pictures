@@ -28,12 +28,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     graphicsview.cpp \
-    bottombuttongroup.cpp
+    bottombuttongroup.cpp \
+    graphicsscene.cpp
 
 HEADERS += \
         mainwindow.h \
     graphicsview.h \
-    bottombuttongroup.h
+    bottombuttongroup.h \
+    graphicsscene.h
 
 FORMS +=
 

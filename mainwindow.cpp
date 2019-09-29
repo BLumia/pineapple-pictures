@@ -2,12 +2,15 @@
 
 #include "bottombuttongroup.h"
 #include "graphicsview.h"
+#include "graphicsscene.h"
 
 #include <QMouseEvent>
 #include <QMovie>
 #include <QDebug>
 #include <QGraphicsTextItem>
 #include <QApplication>
+#include <QStyle>
+#include <QScreen>
 
 #ifdef _WIN32
 #include <windows.h>
@@ -33,9 +36,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(m_exitAnimationGroup, &QParallelAnimationGroup::finished,
             this, &QMainWindow::close);
 
-    QGraphicsScene * scene = new QGraphicsScene(this);
-    QGraphicsTextItem * textItem = scene->addText("Hello, world!");
-    textItem->setDefaultTextColor(QColor("White"));
+    GraphicsScene * scene = new GraphicsScene(this);
 
     GraphicsView * pictureView = new GraphicsView(this);
     pictureView->setScene(scene);
@@ -55,6 +56,15 @@ MainWindow::MainWindow(QWidget *parent) :
             this, &MainWindow::closeWindow);
 
     m_bottomButtonGroup = new BottomButtonGroup(this);
+
+    this->setGeometry(
+        QStyle::alignedRect(
+            Qt::LeftToRight,
+            Qt::AlignCenter,
+            this->size(),
+            qApp->screenAt(QCursor::pos())->geometry()
+        )
+    );
 }
 
 MainWindow::~MainWindow()
