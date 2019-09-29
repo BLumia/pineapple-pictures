@@ -195,7 +195,7 @@ bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, long *r
 
     return false;
 #else
-    return QMainWindow::nativeEvent(eventType, *message, *result);
+    return QMainWindow::nativeEvent(eventType, message, result);
 #endif // _WIN32
 }
 
