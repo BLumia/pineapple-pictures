@@ -14,6 +14,7 @@ GraphicsView::GraphicsView(QWidget *parent)
     setDragMode(QGraphicsView::ScrollHandDrag);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setResizeAnchor(QGraphicsView::AnchorUnderMouse);
     setStyleSheet("background-color: rgba(0, 0, 0, 180);"
                   "border-radius: 3px;");
     setAcceptDrops(true);
@@ -21,7 +22,12 @@ GraphicsView::GraphicsView(QWidget *parent)
 
 void GraphicsView::showImage(const QPixmap &pixmap)
 {
+    resetTransform();
     scene()->showImage(pixmap);
+    if (!isThingSmallerThanWindowWith(transform())) {
+        m_enableFitInView = true;
+        fitInView(sceneRect(), Qt::KeepAspectRatio);
+    }
 }
 
 void GraphicsView::showText(const QString &text)
@@ -41,23 +47,19 @@ void GraphicsView::setScene(GraphicsScene *scene)
 
 void GraphicsView::mousePressEvent(QMouseEvent *event)
 {
-    QGraphicsItem *item = itemAt(event->pos());
-    if (!item) {
+    if (shouldIgnoreMousePressMoveEvent(event)) {
         event->ignore();
         // blumia: return here, or the QMouseEvent event transparency won't
         //         work if we set a QGraphicsView::ScrollHandDrag drag mode.
         return;
     }
 
-    qDebug() << item;
-
     return QGraphicsView::mousePressEvent(event);
 }
 
 void GraphicsView::mouseMoveEvent(QMouseEvent *event)
 {
-    QGraphicsItem *item = itemAt(event->pos());
-    if (!item) {
+    if (shouldIgnoreMousePressMoveEvent(event)) {
         event->ignore();
     }
 
@@ -76,11 +78,26 @@ void GraphicsView::mouseReleaseEvent(QMouseEvent *event)
 
 void GraphicsView::wheelEvent(QWheelEvent *event)
 {
-    if(event->delta() > 0) {
+    m_enableFitInView = false;
+    if (event->delta() > 0) {
         scale(1.25, 1.25);
     } else {
         scale(0.8, 0.8);
     }
+}
+
+void GraphicsView::resizeEvent(QResizeEvent *event)
+{
+    if (m_enableFitInView) {
+        if (isThingSmallerThanWindowWith(QTransform()) && transform().m11() >= 1) {
+            // no longer need to do fitInView()
+            // but we leave the m_enableFitInView value unchanged in case
+            // user resize down the window again.
+        } else {
+            fitInView(sceneRect(), Qt::KeepAspectRatio);
+        }
+    }
+    return QGraphicsView::resizeEvent(event);
 }
 
 void GraphicsView::dragEnterEvent(QDragEnterEvent *event)
@@ -129,5 +146,27 @@ void GraphicsView::dropEvent(QDropEvent *event)
         }
     } else if (mimeData->hasText()) {
         showText(mimeData->text());
+    } else {
+        showText("Not supported mimedata: " + mimeData->formats().first());
     }
+}
+
+bool GraphicsView::isThingSmallerThanWindowWith(const QTransform &transform) const
+{
+    return rect().size().expandedTo(transform.mapRect(sceneRect()).size().toSize())
+            == rect().size();
+}
+
+bool GraphicsView::shouldIgnoreMousePressMoveEvent(const QMouseEvent *event) const
+{
+    if (isThingSmallerThanWindowWith(transform())) {
+        return true;
+    }
+
+    QGraphicsItem *item = itemAt(event->pos());
+    if (!item) {
+        return true;
+    }
+
+    return false;
 }

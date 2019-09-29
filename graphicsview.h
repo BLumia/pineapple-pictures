@@ -20,10 +20,16 @@ private:
     void mouseMoveEvent(QMouseEvent * event) override;
     void mouseReleaseEvent(QMouseEvent * event) override;
     void wheelEvent(QWheelEvent *event) override;
+    void resizeEvent(QResizeEvent *event) override;
 
     void dragEnterEvent(QDragEnterEvent *event) override;
     void dragMoveEvent(QDragMoveEvent *event) override;
     void dropEvent(QDropEvent *event) override;
+
+    bool isThingSmallerThanWindowWith(const QTransform &transform) const;
+    bool shouldIgnoreMousePressMoveEvent(const QMouseEvent *event) const;
+
+    bool m_enableFitInView = false;
 };
 
 #endif // GRAPHICSVIEW_H
