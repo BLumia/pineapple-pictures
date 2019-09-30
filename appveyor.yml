@@ -18,6 +18,7 @@ build_script:
   - qmake ..\PineapplePictures.pro
   - mingw32-make
   - cd release
+  - del /a /f /q "*.o" "*.cpp" "*.h"
   - windeployqt --no-quick-import  --release .\PineapplePictures.exe
 
 artifacts:
