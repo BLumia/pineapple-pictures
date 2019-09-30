@@ -6,6 +6,8 @@
 #include <QGraphicsItem>
 #include <QUrl>
 #include <QGraphicsSvgItem>
+#include <QMovie>
+#include <QLabel>
 
 GraphicsScene::GraphicsScene(QObject *parent)
     : QGraphicsScene(parent)
@@ -40,5 +42,18 @@ void GraphicsScene::showSvg(const QString &filepath)
     QGraphicsSvgItem * svgItem = new QGraphicsSvgItem(filepath);
     this->addItem(svgItem);
     m_theThing = svgItem;
+    this->setSceneRect(m_theThing->boundingRect());
+}
+
+void GraphicsScene::showGif(const QString &filepath)
+{
+    this->clear();
+    QMovie * movie = new QMovie(filepath);
+    QLabel * label = new QLabel;
+    label->setStyleSheet("background-color:white;");
+    label->setMovie(movie);
+    this->addWidget(label);
+    movie->start();
+    m_theThing = this->addRect(QRect(QPoint(0, 0), movie->scaledSize()));
     this->setSceneRect(m_theThing->boundingRect());
 }

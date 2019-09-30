@@ -21,6 +21,7 @@ BottomButtonGroup::BottomButtonGroup(QWidget *parent)
                         "QPushButton {"
                         "background-color:rgba(225,255,255,0);"
                         "color: white;"
+                        "border-style: none;"
                         "}");
 
     auto newBtn = [](QString text) -> QPushButton * {

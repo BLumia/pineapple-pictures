@@ -40,6 +40,11 @@ void GraphicsView::showSvg(const QString &filepath)
     scene()->showSvg(filepath);
 }
 
+void GraphicsView::showGif(const QString &filepath)
+{
+    scene()->showGif(filepath);
+}
+
 GraphicsScene *GraphicsView::scene() const
 {
     return qobject_cast<GraphicsScene*>(QGraphicsView::scene());
@@ -138,6 +143,8 @@ void GraphicsView::dropEvent(QDropEvent *event)
 
         if (filePath.endsWith(".svg")) {
             showSvg(filePath);
+        } else if (filePath.endsWith(".gif")) {
+            showGif(filePath);
         } else {
             QImageReader imageReader(filePath);
             QImage::Format imageFormat = imageReader.imageFormat();
