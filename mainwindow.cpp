@@ -57,6 +57,15 @@ MainWindow::MainWindow(QWidget *parent) :
 
     m_bottomButtonGroup = new BottomButtonGroup(this);
 
+    connect(m_bottomButtonGroup, &BottomButtonGroup::resetToOriginalBtnClicked,
+            this, [ = ](){ pictureView->setTransform(QTransform()); });
+    connect(m_bottomButtonGroup, &BottomButtonGroup::zoomInBtnClicked,
+            this, [ = ](){ pictureView->scale(1.25, 1.25); });
+    connect(m_bottomButtonGroup, &BottomButtonGroup::zoomOutBtnClicked,
+            this, [ = ](){ pictureView->scale(0.75, 0.75); });
+    connect(m_bottomButtonGroup, &BottomButtonGroup::toggleCheckerboardBtnClicked,
+            this, [ = ](){ pictureView->toggleCheckerboard(); });
+
     this->setGeometry(
         QStyle::alignedRect(
             Qt::LeftToRight,

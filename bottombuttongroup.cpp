@@ -1,5 +1,7 @@
 #include "bottombuttongroup.h"
 
+#include <functional>
+
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QDebug>
@@ -24,17 +26,27 @@ BottomButtonGroup::BottomButtonGroup(QWidget *parent)
                         "border-style: none;"
                         "}");
 
-    auto newBtn = [](QString text) -> QPushButton * {
+    auto newBtn = [](QString text, std::function<void()> func) -> QPushButton * {
         QPushButton * btn = new QPushButton(QIcon(QStringLiteral(":/icons/") + text), "");
         btn->setIconSize(QSize(40, 40));
         btn->setFixedSize(40, 40);
+        connect(btn, &QAbstractButton::clicked, btn, func);
         return btn;
     };
-    addButton(newBtn("zoom-original"));
-    addButton(newBtn("view-fullscreen"));
-    addButton(newBtn("zoom-in"));
-    addButton(newBtn("zoom-out"));
-    addButton(newBtn("object-rorate-right"));
+    addButton(newBtn("zoom-original", [this]() {
+        emit resetToOriginalBtnClicked();
+    }));
+    addButton(newBtn("view-fullscreen", [](){qDebug()<< "TODO: view-fullscreen";}));
+    addButton(newBtn("zoom-in", [this]() {
+        emit zoomInBtnClicked();
+    }));
+    addButton(newBtn("zoom-out", [this]() {
+        emit zoomOutBtnClicked();
+    }));
+    addButton(newBtn("view-background-checkerboard", [this]() {
+        emit toggleCheckerboardBtnClicked();
+    }));
+    addButton(newBtn("object-rorate-right", [](){qDebug()<< "TODO: object-rorate-right";}));
 }
 
 void BottomButtonGroup::addButton(QAbstractButton *button)

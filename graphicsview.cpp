@@ -18,31 +18,35 @@ GraphicsView::GraphicsView(QWidget *parent)
     setStyleSheet("background-color: rgba(0, 0, 0, 220);"
                   "border-radius: 3px;");
     setAcceptDrops(true);
+    setCheckerboardEnabled(false);
 }
 
 void GraphicsView::showImage(const QPixmap &pixmap)
 {
     resetTransform();
     scene()->showImage(pixmap);
-    if (!isThingSmallerThanWindowWith(transform())) {
-        m_enableFitInView = true;
-        fitInView(sceneRect(), Qt::KeepAspectRatio);
-    }
+    checkAndDoFitInView();
 }
 
 void GraphicsView::showText(const QString &text)
 {
+    resetTransform();
     scene()->showText(text);
+    checkAndDoFitInView();
 }
 
 void GraphicsView::showSvg(const QString &filepath)
 {
+    resetTransform();
     scene()->showSvg(filepath);
+    checkAndDoFitInView();
 }
 
 void GraphicsView::showGif(const QString &filepath)
 {
+    resetTransform();
     scene()->showGif(filepath);
+    checkAndDoFitInView();
 }
 
 GraphicsScene *GraphicsView::scene() const
@@ -53,6 +57,11 @@ GraphicsScene *GraphicsView::scene() const
 void GraphicsView::setScene(GraphicsScene *scene)
 {
     return QGraphicsView::setScene(scene);
+}
+
+void GraphicsView::toggleCheckerboard()
+{
+    setCheckerboardEnabled(!m_checkerboardEnabled);
 }
 
 void GraphicsView::mousePressEvent(QMouseEvent *event)
@@ -138,6 +147,11 @@ void GraphicsView::dropEvent(QDropEvent *event)
     const QMimeData * mimeData = event->mimeData();
 
     if (mimeData->hasUrls()) {
+        if (mimeData->urls().isEmpty()) {
+            // yeah, it's possible. dragging QQ's original sticker will trigger this, for example.
+            showText("File url list is empty");
+            return;
+        }
         QUrl url(mimeData->urls().first());
         QString filePath(url.toLocalFile());
 
@@ -187,4 +201,31 @@ bool GraphicsView::shouldIgnoreMousePressMoveEvent(const QMouseEvent *event) con
     }
 
     return false;
+}
+
+void GraphicsView::checkAndDoFitInView()
+{
+    if (!isThingSmallerThanWindowWith(transform())) {
+        m_enableFitInView = true;
+        fitInView(sceneRect(), Qt::KeepAspectRatio);
+    }
+}
+
+void GraphicsView::setCheckerboardEnabled(bool enabled)
+{
+    m_checkerboardEnabled = enabled;
+    if (m_checkerboardEnabled) {
+        // Prepare background check-board pattern
+        QPixmap tilePixmap(0x20, 0x20);
+        tilePixmap.fill(QColor(30, 30, 30, 100));
+        QPainter tilePainter(&tilePixmap);
+        QColor color(40, 40, 40, 100);
+        tilePainter.fillRect(0, 0, 0x10, 0x10, color);
+        tilePainter.fillRect(0x10, 0x10, 0x10, 0x10, color);
+        tilePainter.end();
+
+        setBackgroundBrush(tilePixmap);
+    } else {
+        setBackgroundBrush(Qt::transparent);
+    }
 }
