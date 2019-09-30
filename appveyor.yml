@@ -1,0 +1,24 @@
+environment:
+  matrix:
+    - build_name: mingw53_32_qt5_11_3
+      QTPATH: C:\Qt\5.11.3\mingw53_32
+      MINGW32: C:\Qt\Tools\mingw530_32
+#    - build_name: msvc2017_64
+#      QTPATH: C:\Qt\5.11.2\msvc2017_64
+#      MINGW32: C:\Qt\Tools\mingw530_32
+
+install:
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - git submodule update --init --recursive
+  - set PATH=%PATH%;%QTPATH%\bin;%MINGW32%\bin
+
+build_script:
+  - mkdir build
+  - cd build
+  - qmake ..\PineapplePictures.pro
+  - mingw32-make
+  - cd release
+  - windeployqt --no-quick-import  --release .\PineapplePictures.exe
+
+artifacts:
+  - path: build\release
