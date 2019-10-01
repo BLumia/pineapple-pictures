@@ -6,5 +6,6 @@
         <file>icons/zoom-original.svg</file>
         <file>icons/object-rorate-right.svg</file>
         <file>icons/view-background-checkerboard.svg</file>
+        <file>icons/app-icon.svg</file>
     </qresource>
 </RCC>

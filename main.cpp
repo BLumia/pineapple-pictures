@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
 
     if (!urlList.isEmpty()) {
         w.showUrls(urlList);
+        w.adjustWindowSizeBySceneRect();
     }
 
     return a.exec();

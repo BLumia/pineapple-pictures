@@ -22,6 +22,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     this->setAttribute(Qt::WA_TranslucentBackground, true);
     this->setMinimumSize(710, 530);
+    this->setWindowIcon(QIcon(":/icons/app-icon.svg"));
 
     m_fadeOutAnimation = new QPropertyAnimation(this, "windowOpacity");
     m_fadeOutAnimation->setDuration(300);
@@ -66,14 +67,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(m_bottomButtonGroup, &BottomButtonGroup::toggleCheckerboardBtnClicked,
             this, [ = ](){ m_graphicsView->toggleCheckerboard(); });
 
-    this->setGeometry(
-        QStyle::alignedRect(
-            Qt::LeftToRight,
-            Qt::AlignCenter,
-            this->size(),
-            qApp->screenAt(QCursor::pos())->geometry()
-        )
-    );
+    centerWindow();
 }
 
 MainWindow::~MainWindow()
@@ -84,6 +78,28 @@ MainWindow::~MainWindow()
 void MainWindow::showUrls(const QList<QUrl> &urls)
 {
     m_graphicsView->showFromUrlList(urls);
+}
+
+void MainWindow::adjustWindowSizeBySceneRect()
+{
+    if (m_graphicsView->transform().m11() < 1) {
+        // if it scaled down by the resize policy:
+        QSize screenSize = qApp->screenAt(QCursor::pos())->availableSize();
+        QSize sceneSize = m_graphicsView->sceneRect().toRect().size();
+        QSize sceneSizeWithMargins = sceneSize + QSize(20, 20);
+        if (screenSize.expandedTo(sceneSize) == screenSize) {
+            // we can show the picture by increase the window size.
+            if (screenSize.expandedTo(sceneSizeWithMargins) == screenSize) {
+                this->resize(sceneSizeWithMargins);
+            } else {
+                this->resize(screenSize);
+            }
+            centerWindow();
+        } else {
+            // toggle maximum
+            showMaximized();
+        }
+    }
 }
 
 void MainWindow::showEvent(QShowEvent *event)
@@ -221,6 +237,18 @@ bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, long *r
 #else
     return QMainWindow::nativeEvent(eventType, message, result);
 #endif // _WIN32
+}
+
+void MainWindow::centerWindow()
+{
+    this->setGeometry(
+        QStyle::alignedRect(
+            Qt::LeftToRight,
+            Qt::AlignCenter,
+            this->size(),
+            qApp->screenAt(QCursor::pos())->geometry()
+        )
+    );
 }
 
 void MainWindow::closeWindow()
