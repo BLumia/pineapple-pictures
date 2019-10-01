@@ -2,12 +2,15 @@
 #define GRAPHICSVIEW_H
 
 #include <QGraphicsView>
+#include <QUrl>
 
 class GraphicsScene;
 class GraphicsView : public QGraphicsView
 {
 public:
     GraphicsView(QWidget *parent = nullptr);
+
+    void showFromUrlList(const QList<QUrl> &urlList);
 
     void showImage(const QPixmap &pixmap);
     void showText(const QString &text);

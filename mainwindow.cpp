@@ -38,11 +38,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
     GraphicsScene * scene = new GraphicsScene(this);
 
-    GraphicsView * pictureView = new GraphicsView(this);
-    pictureView->setScene(scene);
-    this->setCentralWidget(pictureView);
+    m_graphicsView = new GraphicsView(this);
+    m_graphicsView->setScene(scene);
+    this->setCentralWidget(m_graphicsView);
 
-    m_closeButton = new QPushButton(pictureView);
+    m_closeButton = new QPushButton(m_graphicsView);
     m_closeButton->setFlat(true);
     m_closeButton->setFixedSize(50, 50);
     m_closeButton->setStyleSheet("QPushButton {"
@@ -58,13 +58,13 @@ MainWindow::MainWindow(QWidget *parent) :
     m_bottomButtonGroup = new BottomButtonGroup(this);
 
     connect(m_bottomButtonGroup, &BottomButtonGroup::resetToOriginalBtnClicked,
-            this, [ = ](){ pictureView->setTransform(QTransform()); });
+            this, [ = ](){ m_graphicsView->setTransform(QTransform()); });
     connect(m_bottomButtonGroup, &BottomButtonGroup::zoomInBtnClicked,
-            this, [ = ](){ pictureView->scale(1.25, 1.25); });
+            this, [ = ](){ m_graphicsView->scale(1.25, 1.25); });
     connect(m_bottomButtonGroup, &BottomButtonGroup::zoomOutBtnClicked,
-            this, [ = ](){ pictureView->scale(0.75, 0.75); });
+            this, [ = ](){ m_graphicsView->scale(0.75, 0.75); });
     connect(m_bottomButtonGroup, &BottomButtonGroup::toggleCheckerboardBtnClicked,
-            this, [ = ](){ pictureView->toggleCheckerboard(); });
+            this, [ = ](){ m_graphicsView->toggleCheckerboard(); });
 
     this->setGeometry(
         QStyle::alignedRect(
@@ -79,6 +79,11 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
 
+}
+
+void MainWindow::showUrls(const QList<QUrl> &urls)
+{
+    m_graphicsView->showFromUrlList(urls);
 }
 
 void MainWindow::showEvent(QShowEvent *event)

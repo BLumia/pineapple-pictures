@@ -50,7 +50,7 @@ void GraphicsScene::showGif(const QString &filepath)
     this->clear();
     QMovie * movie = new QMovie(filepath);
     QLabel * label = new QLabel;
-    label->setStyleSheet("background-color:white;");
+    label->setStyleSheet("background-color:rgba(225,255,255,0);");
     label->setMovie(movie);
     this->addWidget(label);
     movie->start();

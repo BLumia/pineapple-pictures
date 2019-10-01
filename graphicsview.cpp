@@ -21,6 +21,31 @@ GraphicsView::GraphicsView(QWidget *parent)
     setCheckerboardEnabled(false);
 }
 
+void GraphicsView::showFromUrlList(const QList<QUrl> &urlList)
+{
+    if (urlList.isEmpty()) {
+        // yeah, it's possible. dragging QQ's original sticker will trigger this, for example.
+        showText("File url list is empty");
+        return;
+    }
+    QUrl url(urlList.first());
+    QString filePath(url.toLocalFile());
+
+    if (filePath.endsWith(".svg")) {
+        showSvg(filePath);
+    } else if (filePath.endsWith(".gif")) {
+        showGif(filePath);
+    } else {
+        QImageReader imageReader(filePath);
+        QImage::Format imageFormat = imageReader.imageFormat();
+        if (imageFormat == QImage::Format_Invalid) {
+            showText("File is not a valid image");
+        } else {
+            showImage(QPixmap::fromImageReader(&imageReader));
+        }
+    }
+}
+
 void GraphicsView::showImage(const QPixmap &pixmap)
 {
     resetTransform();
@@ -147,27 +172,7 @@ void GraphicsView::dropEvent(QDropEvent *event)
     const QMimeData * mimeData = event->mimeData();
 
     if (mimeData->hasUrls()) {
-        if (mimeData->urls().isEmpty()) {
-            // yeah, it's possible. dragging QQ's original sticker will trigger this, for example.
-            showText("File url list is empty");
-            return;
-        }
-        QUrl url(mimeData->urls().first());
-        QString filePath(url.toLocalFile());
-
-        if (filePath.endsWith(".svg")) {
-            showSvg(filePath);
-        } else if (filePath.endsWith(".gif")) {
-            showGif(filePath);
-        } else {
-            QImageReader imageReader(filePath);
-            QImage::Format imageFormat = imageReader.imageFormat();
-            if (imageFormat == QImage::Format_Invalid) {
-                showText("File is not a valid image");
-            } else {
-                showImage(QPixmap::fromImageReader(&imageReader));
-            }
-        }
+        showFromUrlList(mimeData->urls());
     } else if (mimeData->hasImage()) {
         QImage img = qvariant_cast<QImage>(mimeData->imageData());
         QPixmap pixmap = QPixmap::fromImage(img);

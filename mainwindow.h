@@ -6,6 +6,7 @@
 #include <QPropertyAnimation>
 #include <QPushButton>
 
+class GraphicsView;
 class BottomButtonGroup;
 class MainWindow : public QMainWindow
 {
@@ -14,6 +15,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow() override;
+
+    void showUrls(const QList<QUrl> &urls);
 
 protected slots:
     void showEvent(QShowEvent *event) override;
@@ -34,6 +37,7 @@ private:
     QPropertyAnimation *m_floatUpAnimation;
     QParallelAnimationGroup *m_exitAnimationGroup;
     QPushButton *m_closeButton;
+    GraphicsView *m_graphicsView;
     BottomButtonGroup *m_bottomButtonGroup;
     bool m_clickedOnWindow = false;
 };
