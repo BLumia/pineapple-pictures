@@ -54,6 +54,7 @@ void GraphicsScene::showGif(const QString &filepath)
     label->setMovie(movie);
     this->addWidget(label);
     movie->start();
-    m_theThing = this->addRect(QRect(QPoint(0, 0), movie->scaledSize()));
+    m_theThing = this->addRect(QRect(QPoint(0, 0), label->sizeHint()),
+                               QPen(Qt::transparent));
     this->setSceneRect(m_theThing->boundingRect());
 }
