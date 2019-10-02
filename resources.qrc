@@ -4,7 +4,7 @@
         <file>icons/zoom-out.svg</file>
         <file>icons/view-fullscreen.svg</file>
         <file>icons/zoom-original.svg</file>
-        <file>icons/object-rorate-right.svg</file>
+        <file>icons/object-rotate-right.svg</file>
         <file>icons/view-background-checkerboard.svg</file>
         <file>icons/app-icon.svg</file>
     </qresource>

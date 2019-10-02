@@ -46,7 +46,9 @@ BottomButtonGroup::BottomButtonGroup(QWidget *parent)
     addButton(newBtn("view-background-checkerboard", [this]() {
         emit toggleCheckerboardBtnClicked();
     }));
-    addButton(newBtn("object-rorate-right", [](){qDebug()<< "TODO: object-rorate-right";}));
+    addButton(newBtn("object-rotate-right", [this]() {
+        emit rotateRightBtnClicked();
+    }));
 }
 
 void BottomButtonGroup::addButton(QAbstractButton *button)

@@ -17,6 +17,7 @@ signals:
     void zoomInBtnClicked();
     void zoomOutBtnClicked();
     void toggleCheckerboardBtnClicked();
+    void rotateRightBtnClicked();
 };
 
 #endif // BOTTOMBUTTONGROUP_H

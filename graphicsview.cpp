@@ -84,6 +84,14 @@ void GraphicsView::setScene(GraphicsScene *scene)
     return QGraphicsView::setScene(scene);
 }
 
+void GraphicsView::checkAndDoFitInView()
+{
+    if (!isThingSmallerThanWindowWith(transform())) {
+        m_enableFitInView = true;
+        fitInView(sceneRect(), Qt::KeepAspectRatio);
+    }
+}
+
 void GraphicsView::toggleCheckerboard()
 {
     setCheckerboardEnabled(!m_checkerboardEnabled);
@@ -189,14 +197,14 @@ void GraphicsView::dropEvent(QDropEvent *event)
 }
 
 bool GraphicsView::isThingSmallerThanWindowWith(const QTransform &transform) const
-{
+{qDebug() << sceneRect();
     return rect().size().expandedTo(transform.mapRect(sceneRect()).size().toSize())
             == rect().size();
 }
 
 bool GraphicsView::shouldIgnoreMousePressMoveEvent(const QMouseEvent *event) const
 {
-    if (isThingSmallerThanWindowWith(transform())) {
+    if (event->buttons() == Qt::NoButton) {
         return true;
     }
 
@@ -205,15 +213,11 @@ bool GraphicsView::shouldIgnoreMousePressMoveEvent(const QMouseEvent *event) con
         return true;
     }
 
-    return false;
-}
-
-void GraphicsView::checkAndDoFitInView()
-{
-    if (!isThingSmallerThanWindowWith(transform())) {
-        m_enableFitInView = true;
-        fitInView(sceneRect(), Qt::KeepAspectRatio);
+    if (isThingSmallerThanWindowWith(transform())) {
+        return true;
     }
+
+    return false;
 }
 
 void GraphicsView::setCheckerboardEnabled(bool enabled)
@@ -222,9 +226,9 @@ void GraphicsView::setCheckerboardEnabled(bool enabled)
     if (m_checkerboardEnabled) {
         // Prepare background check-board pattern
         QPixmap tilePixmap(0x20, 0x20);
-        tilePixmap.fill(QColor(30, 30, 30, 100));
+        tilePixmap.fill(QColor(35, 35, 35, 110));
         QPainter tilePainter(&tilePixmap);
-        QColor color(40, 40, 40, 100);
+        QColor color(40, 40, 40, 110);
         tilePainter.fillRect(0, 0, 0x10, 0x10, color);
         tilePainter.fillRect(0x10, 0x10, 0x10, 0x10, color);
         tilePainter.end();

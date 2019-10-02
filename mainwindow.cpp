@@ -59,13 +59,18 @@ MainWindow::MainWindow(QWidget *parent) :
     m_bottomButtonGroup = new BottomButtonGroup(this);
 
     connect(m_bottomButtonGroup, &BottomButtonGroup::resetToOriginalBtnClicked,
-            this, [ = ](){ m_graphicsView->setTransform(QTransform()); });
+            this, [ = ](){ m_graphicsView->resetTransform(); });
     connect(m_bottomButtonGroup, &BottomButtonGroup::zoomInBtnClicked,
             this, [ = ](){ m_graphicsView->scale(1.25, 1.25); });
     connect(m_bottomButtonGroup, &BottomButtonGroup::zoomOutBtnClicked,
             this, [ = ](){ m_graphicsView->scale(0.75, 0.75); });
     connect(m_bottomButtonGroup, &BottomButtonGroup::toggleCheckerboardBtnClicked,
             this, [ = ](){ m_graphicsView->toggleCheckerboard(); });
+    connect(m_bottomButtonGroup, &BottomButtonGroup::rotateRightBtnClicked,
+            this, [ = ](){
+        m_graphicsView->rotate(90);
+        m_graphicsView->checkAndDoFitInView();
+    });
 
     centerWindow();
 }
@@ -114,7 +119,8 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
     if (event->buttons() & Qt::LeftButton) {
         m_clickedOnWindow = true;
         m_oldMousePos = event->pos();
-        qDebug() << m_oldMousePos;
+        qDebug() << m_oldMousePos << m_graphicsView->transform().m11()
+                 << m_graphicsView->transform().m22() << m_graphicsView->matrix().m11();
         event->accept();
     }
 
