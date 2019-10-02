@@ -20,6 +20,14 @@ public:
     GraphicsScene * scene() const;
     void setScene(GraphicsScene *scene);
 
+    qreal scaleFactor() const;
+
+    void resetTransform();
+    void zoomView(qreal scaleFactor);
+    void resetScale();
+    void rotateView(qreal rotateAngel);
+    void fitInView(const QRectF &rect, Qt::AspectRatioMode aspectRadioMode = Qt::IgnoreAspectRatio);
+
     void checkAndDoFitInView();
 
 public slots:
@@ -40,8 +48,12 @@ private:
     bool shouldIgnoreMousePressMoveEvent(const QMouseEvent *event) const;
     void setCheckerboardEnabled(bool enabled);
 
+    void reapplyViewTransform();
+
     bool m_enableFitInView = false;
     bool m_checkerboardEnabled = false;
+    qreal m_scaleFactor = 1;
+    qreal m_rotateAngle = 0;
 };
 
 #endif // GRAPHICSVIEW_H
