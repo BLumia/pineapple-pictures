@@ -6,6 +6,10 @@
 #include <QPropertyAnimation>
 #include <QPushButton>
 
+QT_BEGIN_NAMESPACE
+class QGraphicsOpacityEffect;
+QT_END_NAMESPACE
+
 class GraphicsView;
 class BottomButtonGroup;
 class MainWindow : public QMainWindow
@@ -21,6 +25,8 @@ public:
 
 protected slots:
     void showEvent(QShowEvent *event) override;
+    void enterEvent(QEvent *event) override;
+    void leaveEvent(QEvent *event) override;
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) override;
@@ -35,6 +41,8 @@ protected slots:
 
 private:
     QPoint m_oldMousePos;
+    QGraphicsOpacityEffect *m_opacityEffect;
+    QPropertyAnimation *m_btnGrpAnimation;
     QPropertyAnimation *m_fadeOutAnimation;
     QPropertyAnimation *m_floatUpAnimation;
     QParallelAnimationGroup *m_exitAnimationGroup;

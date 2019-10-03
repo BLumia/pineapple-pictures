@@ -11,6 +11,7 @@
 #include <QApplication>
 #include <QStyle>
 #include <QScreen>
+#include <QGraphicsOpacityEffect>
 
 #ifdef _WIN32
 #include <windows.h>
@@ -73,6 +74,13 @@ MainWindow::MainWindow(QWidget *parent) :
         m_graphicsView->checkAndDoFitInView();
     });
 
+    m_opacityEffect = new QGraphicsOpacityEffect(m_bottomButtonGroup);
+    m_bottomButtonGroup->setGraphicsEffect(m_opacityEffect);
+    m_btnGrpAnimation = new QPropertyAnimation(m_opacityEffect, "opacity");
+    m_btnGrpAnimation->setDuration(300);
+
+    m_opacityEffect->setOpacity(0);
+
     centerWindow();
 }
 
@@ -113,6 +121,26 @@ void MainWindow::showEvent(QShowEvent *event)
     updateWidgetsPosition();
 
     return QMainWindow::showEvent(event);
+}
+
+void MainWindow::enterEvent(QEvent *event)
+{
+    m_btnGrpAnimation->stop();
+    m_btnGrpAnimation->setStartValue(m_opacityEffect->opacity());
+    m_btnGrpAnimation->setEndValue(1);
+    m_btnGrpAnimation->start();
+
+    return QMainWindow::enterEvent(event);
+}
+
+void MainWindow::leaveEvent(QEvent *event)
+{
+    m_btnGrpAnimation->stop();
+    m_btnGrpAnimation->setStartValue(m_opacityEffect->opacity());
+    m_btnGrpAnimation->setEndValue(0);
+    m_btnGrpAnimation->start();
+
+    return QMainWindow::leaveEvent(event);
 }
 
 void MainWindow::mousePressEvent(QMouseEvent *event)
