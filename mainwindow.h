@@ -8,9 +8,11 @@
 
 QT_BEGIN_NAMESPACE
 class QGraphicsOpacityEffect;
+class QGraphicsView;
 QT_END_NAMESPACE
 
 class GraphicsView;
+class NavigatorView;
 class BottomButtonGroup;
 class MainWindow : public QMainWindow
 {
@@ -41,13 +43,16 @@ protected slots:
 
 private:
     QPoint m_oldMousePos;
-    QGraphicsOpacityEffect *m_opacityEffect;
-    QPropertyAnimation *m_btnGrpAnimation;
+    QGraphicsOpacityEffect *m_btnGrpEffect;
+    QGraphicsOpacityEffect *m_bribViewEffect;
+    QPropertyAnimation *m_btnGrpOpacityAnimation;
+    QPropertyAnimation *m_bribViewOpacityAnimation;
     QPropertyAnimation *m_fadeOutAnimation;
     QPropertyAnimation *m_floatUpAnimation;
     QParallelAnimationGroup *m_exitAnimationGroup;
     QPushButton *m_closeButton;
     GraphicsView *m_graphicsView;
+    NavigatorView *m_gv;
     BottomButtonGroup *m_bottomButtonGroup;
     bool m_clickedOnWindow = false;
 };

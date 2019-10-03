@@ -7,6 +7,7 @@
 class GraphicsScene;
 class GraphicsView : public QGraphicsView
 {
+    Q_OBJECT
 public:
     GraphicsView(QWidget *parent = nullptr);
 
@@ -29,6 +30,9 @@ public:
     void fitInView(const QRectF &rect, Qt::AspectRatioMode aspectRadioMode = Qt::IgnoreAspectRatio);
 
     void checkAndDoFitInView();
+
+signals:
+    void navigatorViewRequired(bool required, qreal angle);
 
 public slots:
     void toggleCheckerboard();

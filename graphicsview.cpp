@@ -23,6 +23,7 @@ GraphicsView::GraphicsView(QWidget *parent)
 
 void GraphicsView::showFromUrlList(const QList<QUrl> &urlList)
 {
+    emit navigatorViewRequired(false, 0);
     if (urlList.isEmpty()) {
         // yeah, it's possible. dragging QQ's original sticker will trigger this, for example.
         showText("File url list is empty");
@@ -105,12 +106,14 @@ void GraphicsView::zoomView(qreal scaleFactor)
 {
     m_scaleFactor *= scaleFactor;
     reapplyViewTransform();
+    emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), m_rotateAngle);
 }
 
 void GraphicsView::resetScale()
 {
     m_scaleFactor = 1;
     reapplyViewTransform();
+    emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), m_rotateAngle);
 }
 
 void GraphicsView::rotateView(qreal rotateAngel)

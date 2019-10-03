@@ -2,6 +2,7 @@
 
 #include "bottombuttongroup.h"
 #include "graphicsview.h"
+#include "navigatorview.h"
 #include "graphicsscene.h"
 
 #include <QMouseEvent>
@@ -44,6 +45,19 @@ MainWindow::MainWindow(QWidget *parent) :
     m_graphicsView->setScene(scene);
     this->setCentralWidget(m_graphicsView);
 
+    m_gv = new NavigatorView(this);
+    m_gv->setFixedSize(250, 160);
+    m_gv->setScene(scene);
+    m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
+
+    connect(m_graphicsView, &GraphicsView::navigatorViewRequired,
+            this, [ = ](bool required, qreal angle){
+        m_gv->resetTransform();
+        m_gv->rotate(angle);
+        m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
+        m_gv->setVisible(required);
+    });
+
     m_closeButton = new QPushButton(m_graphicsView);
     m_closeButton->setFlat(true);
     m_closeButton->setFixedSize(50, 50);
@@ -72,14 +86,20 @@ MainWindow::MainWindow(QWidget *parent) :
         m_graphicsView->resetScale();
         m_graphicsView->rotateView(90);
         m_graphicsView->checkAndDoFitInView();
+        m_gv->setVisible(false);
     });
 
-    m_opacityEffect = new QGraphicsOpacityEffect(m_bottomButtonGroup);
-    m_bottomButtonGroup->setGraphicsEffect(m_opacityEffect);
-    m_btnGrpAnimation = new QPropertyAnimation(m_opacityEffect, "opacity");
-    m_btnGrpAnimation->setDuration(300);
+    m_btnGrpEffect = new QGraphicsOpacityEffect(this);
+    m_bribViewEffect = new QGraphicsOpacityEffect(this);
+    m_bottomButtonGroup->setGraphicsEffect(m_btnGrpEffect);
+    m_gv->setGraphicsEffect(m_bribViewEffect);
+    m_btnGrpOpacityAnimation = new QPropertyAnimation(m_btnGrpEffect, "opacity");
+    m_btnGrpOpacityAnimation->setDuration(300);
+    m_bribViewOpacityAnimation = new QPropertyAnimation(m_bribViewEffect, "opacity");
+    m_bribViewOpacityAnimation->setDuration(300);
 
-    m_opacityEffect->setOpacity(0);
+    m_btnGrpEffect->setOpacity(0);
+    m_bribViewEffect->setOpacity(0);
 
     centerWindow();
 }
@@ -92,6 +112,7 @@ MainWindow::~MainWindow()
 void MainWindow::showUrls(const QList<QUrl> &urls)
 {
     m_graphicsView->showFromUrlList(urls);
+    m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
 }
 
 void MainWindow::adjustWindowSizeBySceneRect()
@@ -125,20 +146,30 @@ void MainWindow::showEvent(QShowEvent *event)
 
 void MainWindow::enterEvent(QEvent *event)
 {
-    m_btnGrpAnimation->stop();
-    m_btnGrpAnimation->setStartValue(m_opacityEffect->opacity());
-    m_btnGrpAnimation->setEndValue(1);
-    m_btnGrpAnimation->start();
+    m_btnGrpOpacityAnimation->stop();
+    m_btnGrpOpacityAnimation->setStartValue(m_btnGrpEffect->opacity());
+    m_btnGrpOpacityAnimation->setEndValue(1);
+    m_btnGrpOpacityAnimation->start();
+
+    m_bribViewOpacityAnimation->stop();
+    m_bribViewOpacityAnimation->setStartValue(m_bribViewEffect->opacity());
+    m_bribViewOpacityAnimation->setEndValue(1);
+    m_bribViewOpacityAnimation->start();
 
     return QMainWindow::enterEvent(event);
 }
 
 void MainWindow::leaveEvent(QEvent *event)
 {
-    m_btnGrpAnimation->stop();
-    m_btnGrpAnimation->setStartValue(m_opacityEffect->opacity());
-    m_btnGrpAnimation->setEndValue(0);
-    m_btnGrpAnimation->start();
+    m_btnGrpOpacityAnimation->stop();
+    m_btnGrpOpacityAnimation->setStartValue(m_btnGrpEffect->opacity());
+    m_btnGrpOpacityAnimation->setEndValue(0);
+    m_btnGrpOpacityAnimation->start();
+
+    m_bribViewOpacityAnimation->stop();
+    m_bribViewOpacityAnimation->setStartValue(m_bribViewEffect->opacity());
+    m_bribViewOpacityAnimation->setEndValue(0);
+    m_bribViewOpacityAnimation->start();
 
     return QMainWindow::leaveEvent(event);
 }
@@ -190,7 +221,7 @@ void MainWindow::resizeEvent(QResizeEvent *event)
 bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, long *result)
 {
 #ifdef _WIN32
-    // https://stackoverflow.com/questions/6649936/c-compiling-on-windows-and-linux-ifdef-switch
+    // https://stackoverflow.com/questions/43505580/qt-windows-resizable-frameless-window
     // Too lazy to do this now.. just stackoverflow it and did a copy and paste..
     Q_UNUSED(eventType);
     MSG* msg = static_cast<MSG*>(message);
@@ -301,4 +332,5 @@ void MainWindow::updateWidgetsPosition()
     m_closeButton->move(width() - m_closeButton->width(), 0);
     m_bottomButtonGroup->move((width() - m_bottomButtonGroup->width()) / 2,
                               height() - m_bottomButtonGroup->height());
+    m_gv->move(width() - m_gv->width(), height() - m_gv->height());
 }
