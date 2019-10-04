@@ -33,6 +33,7 @@ public:
 
 signals:
     void navigatorViewRequired(bool required, qreal angle);
+    void viewportRectChanged();
 
 public slots:
     void toggleCheckerboard();
@@ -47,6 +48,8 @@ private:
     void dragEnterEvent(QDragEnterEvent *event) override;
     void dragMoveEvent(QDragMoveEvent *event) override;
     void dropEvent(QDropEvent *event) override;
+
+    void paintEvent(QPaintEvent *event) override;
 
     bool isThingSmallerThanWindowWith(const QTransform &transform) const;
     bool shouldIgnoreMousePressMoveEvent(const QMouseEvent *event) const;

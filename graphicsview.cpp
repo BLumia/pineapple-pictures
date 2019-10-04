@@ -104,6 +104,7 @@ void GraphicsView::resetTransform()
 
 void GraphicsView::zoomView(qreal scaleFactor)
 {
+    m_enableFitInView = false;
     m_scaleFactor *= scaleFactor;
     reapplyViewTransform();
     emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), m_rotateAngle);
@@ -175,12 +176,9 @@ void GraphicsView::mouseReleaseEvent(QMouseEvent *event)
 
 void GraphicsView::wheelEvent(QWheelEvent *event)
 {
-    m_enableFitInView = false;
-    if (event->delta() > 0) {
-        zoomView(1.25);
-    } else {
-        zoomView(0.8);
-    }
+    event->ignore();
+
+    return QGraphicsView::wheelEvent(event);
 }
 
 void GraphicsView::resizeEvent(QResizeEvent *event)
@@ -241,6 +239,17 @@ void GraphicsView::dropEvent(QDropEvent *event)
     } else {
         showText("Not supported mimedata: " + mimeData->formats().first());
     }
+}
+
+void GraphicsView::paintEvent(QPaintEvent *event)
+{
+    // A little dirty hack way to get the viewport "pan" event
+    // but still doesn't works well with gif which scaled up bigger than the window.
+    if (event->rect() == this->rect() && !isThingSmallerThanWindowWith(transform())) {
+        emit viewportRectChanged();
+//        qDebug() << "paintEvent" << event << QObject::sender();
+    }
+    return QGraphicsView::paintEvent(event);
 }
 
 bool GraphicsView::isThingSmallerThanWindowWith(const QTransform &transform) const

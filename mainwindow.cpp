@@ -48,6 +48,7 @@ MainWindow::MainWindow(QWidget *parent) :
     m_gv = new NavigatorView(this);
     m_gv->setFixedSize(250, 160);
     m_gv->setScene(scene);
+    m_gv->setMainView(m_graphicsView);
     m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
 
     connect(m_graphicsView, &GraphicsView::navigatorViewRequired,
@@ -57,6 +58,9 @@ MainWindow::MainWindow(QWidget *parent) :
         m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
         m_gv->setVisible(required);
     });
+
+    connect(m_graphicsView, &GraphicsView::viewportRectChanged,
+            m_gv, &NavigatorView::updateMainViewportRegion);
 
     m_closeButton = new QPushButton(m_graphicsView);
     m_closeButton->setFlat(true);
@@ -209,6 +213,15 @@ void MainWindow::mouseDoubleClickEvent(QMouseEvent *event)
     closeWindow();
 
     return QMainWindow::mouseDoubleClickEvent(event);
+}
+
+void MainWindow::wheelEvent(QWheelEvent *event)
+{
+    if (event->delta() > 0) {
+        m_graphicsView->zoomView(1.25);
+    } else {
+        m_graphicsView->zoomView(0.8);
+    }
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event)
