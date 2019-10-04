@@ -11,7 +11,7 @@ NavigatorView::NavigatorView(QWidget *parent)
 {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    setStyleSheet("background-color: rgba(0, 0, 0, 220);"
+    setStyleSheet("background-color: rgba(0, 0, 0, 120);"
                   "border-radius: 3px;");
 }
 
@@ -34,6 +34,7 @@ void NavigatorView::mousePressEvent(QMouseEvent *event)
 
     if (m_mainView) {
         m_mainView->centerOn(mapToScene(event->pos()));
+        update();
     }
 
     return QGraphicsView::mousePressEvent(event);
@@ -43,6 +44,7 @@ void NavigatorView::mouseMoveEvent(QMouseEvent *event)
 {
     if (m_mouseDown && m_mainView) {
         m_mainView->centerOn(mapToScene(event->pos()));
+        update();
     }
 
     return QGraphicsView::mouseMoveEvent(event);

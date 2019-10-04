@@ -193,6 +193,8 @@ void GraphicsView::resizeEvent(QResizeEvent *event)
         } else {
             fitInView(sceneRect(), Qt::KeepAspectRatio);
         }
+    } else {
+        emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), m_rotateAngle);
     }
     return QGraphicsView::resizeEvent(event);
 }

@@ -46,7 +46,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->setCentralWidget(m_graphicsView);
 
     m_gv = new NavigatorView(this);
-    m_gv->setFixedSize(250, 160);
+    m_gv->setFixedSize(220, 160);
     m_gv->setScene(scene);
     m_gv->setMainView(m_graphicsView);
     m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
@@ -79,6 +79,14 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(m_bottomButtonGroup, &BottomButtonGroup::resetToOriginalBtnClicked,
             this, [ = ](){ m_graphicsView->resetScale(); });
+    connect(m_bottomButtonGroup, &BottomButtonGroup::toggleWindowMaximum,
+            this, [ = ](){
+        if (isMaximized()) {
+            showNormal();
+        } else {
+            showMaximized();
+        }
+    });
     connect(m_bottomButtonGroup, &BottomButtonGroup::zoomInBtnClicked,
             this, [ = ](){ m_graphicsView->zoomView(1.25); });
     connect(m_bottomButtonGroup, &BottomButtonGroup::zoomOutBtnClicked,

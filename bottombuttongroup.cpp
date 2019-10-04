@@ -36,7 +36,9 @@ BottomButtonGroup::BottomButtonGroup(QWidget *parent)
     addButton(newBtn("zoom-original", [this]() {
         emit resetToOriginalBtnClicked();
     }));
-    addButton(newBtn("view-fullscreen", [](){qDebug()<< "TODO: view-fullscreen";}));
+    addButton(newBtn("view-fullscreen", [this]() {
+        emit toggleWindowMaximum();
+    }));
     addButton(newBtn("zoom-in", [this]() {
         emit zoomInBtnClicked();
     }));
