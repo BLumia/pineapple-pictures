@@ -25,8 +25,34 @@ void NavigatorView::updateMainViewportRegion()
 {
     if (m_mainView != nullptr) {
         m_viewportRegion = mapFromScene(m_mainView->mapToScene(m_mainView->rect()));
-        qDebug() << m_mainView->rect() << m_mainView->mapToScene(m_mainView->rect()) << m_viewportRegion;
     }
+}
+
+void NavigatorView::mousePressEvent(QMouseEvent *event)
+{
+    m_mouseDown = true;
+
+    if (m_mainView) {
+        m_mainView->centerOn(mapToScene(event->pos()));
+    }
+
+    return QGraphicsView::mousePressEvent(event);
+}
+
+void NavigatorView::mouseMoveEvent(QMouseEvent *event)
+{
+    if (m_mouseDown && m_mainView) {
+        m_mainView->centerOn(mapToScene(event->pos()));
+    }
+
+    return QGraphicsView::mouseMoveEvent(event);
+}
+
+void NavigatorView::mouseReleaseEvent(QMouseEvent *event)
+{
+    m_mouseDown = false;
+
+    return QGraphicsView::mouseReleaseEvent(event);
 }
 
 void NavigatorView::wheelEvent(QWheelEvent *event)

@@ -16,9 +16,14 @@ public slots:
     void updateMainViewportRegion();
 
 private:
+    void mousePressEvent(QMouseEvent * event) override;
+    void mouseMoveEvent(QMouseEvent * event) override;
+    void mouseReleaseEvent(QMouseEvent * event) override;
+
     void wheelEvent(QWheelEvent *event) override;
     void paintEvent(QPaintEvent *event) override;
 
+    bool m_mouseDown = false;
     QPolygon m_viewportRegion;
     QGraphicsView *m_mainView = nullptr;
 };
