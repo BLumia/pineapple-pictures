@@ -55,6 +55,7 @@ private:
     GraphicsView *m_graphicsView;
     NavigatorView *m_gv;
     BottomButtonGroup *m_bottomButtonGroup;
+    bool m_protectedMode = false;
     bool m_clickedOnWindow = false;
 };
 

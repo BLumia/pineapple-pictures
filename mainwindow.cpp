@@ -133,7 +133,7 @@ void MainWindow::adjustWindowSizeBySceneRect()
         // if it scaled down by the resize policy:
         QSize screenSize = qApp->screenAt(QCursor::pos())->availableSize();
         QSize sceneSize = m_graphicsView->sceneRect().toRect().size();
-        QSize sceneSizeWithMargins = sceneSize + QSize(20, 20);
+        QSize sceneSizeWithMargins = sceneSize + QSize(130, 125);
         if (screenSize.expandedTo(sceneSize) == screenSize) {
             // we can show the picture by increase the window size.
             if (screenSize.expandedTo(sceneSizeWithMargins) == screenSize) {
@@ -141,6 +141,11 @@ void MainWindow::adjustWindowSizeBySceneRect()
             } else {
                 this->resize(screenSize);
             }
+            // We're sure the window can display the whole thing with 1:1 scale.
+            // The old window size may cause fitInView call from resize() and the
+            // above resize() call won't reset the scale back to 1:1, so we
+            // just call resetScale() here to ensure the thing is no longer scaled.
+            m_graphicsView->resetScale();
             centerWindow();
         } else {
             // toggle maximum
@@ -218,7 +223,9 @@ void MainWindow::mouseReleaseEvent(QMouseEvent *event)
 
 void MainWindow::mouseDoubleClickEvent(QMouseEvent *event)
 {
-    closeWindow();
+    if (!m_protectedMode) {
+        closeWindow();
+    }
 
     return QMainWindow::mouseDoubleClickEvent(event);
 }
