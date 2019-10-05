@@ -2,7 +2,6 @@ environment:
   matrix:
     - build_name: mingw73_32_qt5_12_4
       QTPATH: C:\Qt\5.12.4\mingw73_32
-      MINGW32: C:\Qt\Tools\mingw530_32
 #    - build_name: msvc2017_64
 #      QTPATH: C:\Qt\5.11.2\msvc2017_64
 #      MINGW32: C:\Qt\Tools\mingw530_32
@@ -10,7 +9,7 @@ environment:
 install:
   - cd %APPVEYOR_BUILD_FOLDER%
   - git submodule update --init --recursive
-  - set PATH=%PATH%;%QTPATH%\bin;%MINGW32%\bin
+  - set PATH=%PATH%;%QTPATH%\bin
 
 build_script:
   - mkdir build
