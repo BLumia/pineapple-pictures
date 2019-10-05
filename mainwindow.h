@@ -35,12 +35,14 @@ protected slots:
     void mouseDoubleClickEvent(QMouseEvent *event) override;
     void wheelEvent(QWheelEvent *event) override;
     void resizeEvent(QResizeEvent *event) override;
+    void contextMenuEvent(QContextMenuEvent *event) override;
 
     bool nativeEvent(const QByteArray& eventType, void* message, long* result) override;
 
     void centerWindow();
     void closeWindow();
     void updateWidgetsPosition();
+    void toggleProtectedMode();
 
 private:
     QPoint m_oldMousePos;

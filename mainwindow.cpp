@@ -13,6 +13,7 @@
 #include <QStyle>
 #include <QScreen>
 #include <QGraphicsOpacityEffect>
+#include <QMenu>
 
 #ifdef _WIN32
 #include <windows.h>
@@ -246,6 +247,22 @@ void MainWindow::resizeEvent(QResizeEvent *event)
     return QMainWindow::resizeEvent(event);
 }
 
+void MainWindow::contextMenuEvent(QContextMenuEvent *event)
+{
+    QMenu * menu = new QMenu;
+    QAction * protectedMode = new QAction(tr("Protected mode"));
+    connect(protectedMode, &QAction::triggered, this, [ = ](){
+        toggleProtectedMode();
+    });
+    protectedMode->setCheckable(true);
+    protectedMode->setChecked(m_protectedMode);
+    menu->addAction(protectedMode);
+    menu->exec(mapToGlobal(event->pos()));
+    menu->deleteLater();
+
+    return QMainWindow::contextMenuEvent(event);
+}
+
 bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, long *result)
 {
 #ifdef _WIN32
@@ -361,4 +378,10 @@ void MainWindow::updateWidgetsPosition()
     m_bottomButtonGroup->move((width() - m_bottomButtonGroup->width()) / 2,
                               height() - m_bottomButtonGroup->height());
     m_gv->move(width() - m_gv->width(), height() - m_gv->height());
+}
+
+void MainWindow::toggleProtectedMode()
+{
+    m_protectedMode = !m_protectedMode;
+    m_closeButton->setVisible(!m_protectedMode);
 }
