@@ -1,2 +1,5 @@
 # User files
 *.user
+
+# Translation files
+*.qm

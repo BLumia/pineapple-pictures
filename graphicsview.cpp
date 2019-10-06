@@ -29,7 +29,7 @@ void GraphicsView::showFromUrlList(const QList<QUrl> &urlList)
     emit navigatorViewRequired(false, 0);
     if (urlList.isEmpty()) {
         // yeah, it's possible. dragging QQ's original sticker will trigger this, for example.
-        showText("File url list is empty");
+        showText(tr("File url list is empty"));
         return;
     }
     QUrl url(urlList.first());
@@ -43,7 +43,7 @@ void GraphicsView::showFromUrlList(const QList<QUrl> &urlList)
         QImageReader imageReader(filePath);
         QImage::Format imageFormat = imageReader.imageFormat();
         if (imageFormat == QImage::Format_Invalid) {
-            showText("File is not a valid image");
+            showText(tr("File is not a valid image"));
         } else {
             showImage(QPixmap::fromImageReader(&imageReader));
         }
@@ -218,7 +218,7 @@ void GraphicsView::dragEnterEvent(QDragEnterEvent *event)
 
 void GraphicsView::dragMoveEvent(QDragMoveEvent *event)
 {
-    Q_UNUSED(event);
+    Q_UNUSED(event)
     // by default, QGraphicsView/Scene will ignore the action if there are no QGraphicsItem under cursor.
     // We actually doesn't care and would like to keep the drag event as-is, so just do nothing here.
 }
@@ -235,14 +235,14 @@ void GraphicsView::dropEvent(QDropEvent *event)
         QImage img = qvariant_cast<QImage>(mimeData->imageData());
         QPixmap pixmap = QPixmap::fromImage(img);
         if (pixmap.isNull()) {
-            showText("Image data is invalid");
+            showText(tr("Image data is invalid"));
         } else {
             showImage(pixmap);
         }
     } else if (mimeData->hasText()) {
         showText(mimeData->text());
     } else {
-        showText("Not supported mimedata: " + mimeData->formats().first());
+        showText(tr("Not supported mimedata: %1").arg(mimeData->formats().first()));
     }
 }
 

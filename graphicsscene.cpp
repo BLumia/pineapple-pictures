@@ -12,7 +12,7 @@
 GraphicsScene::GraphicsScene(QObject *parent)
     : QGraphicsScene(parent)
 {
-    showText("Drag image here");
+    showText(tr("Drag image here"));
 }
 
 GraphicsScene::~GraphicsScene()
