@@ -43,7 +43,9 @@ HEADERS += \
     opacityhelper.h \
     toolbutton.h
 
-FORMS +=
+TRANSLATIONS = \
+    languages/PineapplePictures.ts \
+    languages/PineapplePictures_zh_CN.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
