@@ -49,8 +49,6 @@ private:
     void dragMoveEvent(QDragMoveEvent *event) override;
     void dropEvent(QDropEvent *event) override;
 
-    void paintEvent(QPaintEvent *event) override;
-
     bool isThingSmallerThanWindowWith(const QTransform &transform) const;
     bool shouldIgnoreMousePressMoveEvent(const QMouseEvent *event) const;
     void setCheckerboardEnabled(bool enabled);
