@@ -13,7 +13,6 @@
 #include <QApplication>
 #include <QStyle>
 #include <QScreen>
-#include <QGraphicsOpacityEffect>
 #include <QMenu>
 
 #ifdef _WIN32
@@ -97,17 +96,9 @@ MainWindow::MainWindow(QWidget *parent) :
         m_gv->setVisible(false);
     });
 
-    m_btnGrpEffect = new QGraphicsOpacityEffect(this);
-    m_bribViewEffect = new QGraphicsOpacityEffect(this);
-    m_bottomButtonGroup->setGraphicsEffect(m_btnGrpEffect);
-    m_gv->setGraphicsEffect(m_bribViewEffect);
-    m_btnGrpOpacityAnimation = new QPropertyAnimation(m_btnGrpEffect, "opacity");
-    m_btnGrpOpacityAnimation->setDuration(300);
-    m_bribViewOpacityAnimation = new QPropertyAnimation(m_bribViewEffect, "opacity");
-    m_bribViewOpacityAnimation->setDuration(300);
-
-    m_btnGrpEffect->setOpacity(0);
-    m_bribViewEffect->setOpacity(0);
+    m_bottomButtonGroup->setOpacity(0, false);
+    m_gv->setOpacity(0, false);
+    m_closeButton->setOpacity(0, false);
 
     centerWindow();
 }
@@ -159,34 +150,20 @@ void MainWindow::showEvent(QShowEvent *event)
 
 void MainWindow::enterEvent(QEvent *event)
 {
-    m_btnGrpOpacityAnimation->stop();
-    m_btnGrpOpacityAnimation->setStartValue(m_btnGrpEffect->opacity());
-    m_btnGrpOpacityAnimation->setEndValue(1);
-    m_btnGrpOpacityAnimation->start();
+    m_bottomButtonGroup->setOpacity(1);
+    m_gv->setOpacity(1);
 
-    m_bribViewOpacityAnimation->stop();
-    m_bribViewOpacityAnimation->setStartValue(m_bribViewEffect->opacity());
-    m_bribViewOpacityAnimation->setEndValue(1);
-    m_bribViewOpacityAnimation->start();
-
-    m_closeButton->setIconOpacity(1);
+    m_closeButton->setOpacity(1);
 
     return QMainWindow::enterEvent(event);
 }
 
 void MainWindow::leaveEvent(QEvent *event)
 {
-    m_btnGrpOpacityAnimation->stop();
-    m_btnGrpOpacityAnimation->setStartValue(m_btnGrpEffect->opacity());
-    m_btnGrpOpacityAnimation->setEndValue(0);
-    m_btnGrpOpacityAnimation->start();
+    m_bottomButtonGroup->setOpacity(0);
+    m_gv->setOpacity(0);
 
-    m_bribViewOpacityAnimation->stop();
-    m_bribViewOpacityAnimation->setStartValue(m_bribViewEffect->opacity());
-    m_bribViewOpacityAnimation->setEndValue(0);
-    m_bribViewOpacityAnimation->start();
-
-    m_closeButton->setIconOpacity(0);
+    m_closeButton->setOpacity(0);
 
     return QMainWindow::leaveEvent(event);
 }
@@ -274,7 +251,7 @@ bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, long *r
 #ifdef _WIN32
     // https://stackoverflow.com/questions/43505580/qt-windows-resizable-frameless-window
     // Too lazy to do this now.. just stackoverflow it and did a copy and paste..
-    Q_UNUSED(eventType);
+    Q_UNUSED(eventType)
     MSG* msg = static_cast<MSG*>(message);
 
     if (msg->message == WM_NCHITTEST) {

@@ -3,11 +3,7 @@
 
 #include <QPushButton>
 
-QT_BEGIN_NAMESPACE
-class QGraphicsOpacityEffect;
-class QPropertyAnimation;
-QT_END_NAMESPACE
-
+class OpacityHelper;
 class ToolButton : public QPushButton
 {
     Q_OBJECT
@@ -15,11 +11,10 @@ public:
     ToolButton(QWidget * parent = nullptr);
 
 public slots:
-    void setIconOpacity(qreal opacity);
+    void setOpacity(qreal opacity, bool animated = true);
 
 private:
-    QGraphicsOpacityEffect * m_opacityFx;
-    QPropertyAnimation * m_opacityAnimation;
+    OpacityHelper * m_opacityHelper;
 };
 
 #endif // TOOLBUTTON_H

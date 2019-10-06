@@ -49,10 +49,6 @@ protected slots:
 
 private:
     QPoint m_oldMousePos;
-    QGraphicsOpacityEffect *m_btnGrpEffect;
-    QGraphicsOpacityEffect *m_bribViewEffect;
-    QPropertyAnimation *m_btnGrpOpacityAnimation;
-    QPropertyAnimation *m_bribViewOpacityAnimation;
     QPropertyAnimation *m_fadeOutAnimation;
     QPropertyAnimation *m_floatUpAnimation;
     QParallelAnimationGroup *m_exitAnimationGroup;

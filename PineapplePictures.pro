@@ -31,6 +31,7 @@ SOURCES += \
     bottombuttongroup.cpp \
     graphicsscene.cpp \
     navigatorview.cpp \
+    opacityhelper.cpp \
     toolbutton.cpp
 
 HEADERS += \
@@ -39,6 +40,7 @@ HEADERS += \
     bottombuttongroup.h \
     graphicsscene.h \
     navigatorview.h \
+    opacityhelper.h \
     toolbutton.h
 
 FORMS +=

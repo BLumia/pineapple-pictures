@@ -1,5 +1,7 @@
 #include "bottombuttongroup.h"
 
+#include "opacityhelper.h"
+
 #include <functional>
 
 #include <QPushButton>
@@ -8,6 +10,7 @@
 
 BottomButtonGroup::BottomButtonGroup(QWidget *parent)
     : QGroupBox (parent)
+    , m_opacityHelper(new OpacityHelper(this))
 {
     QHBoxLayout * mainLayout = new QHBoxLayout(this);
     mainLayout->setSizeConstraint(QLayout::SetFixedSize);
@@ -51,6 +54,11 @@ BottomButtonGroup::BottomButtonGroup(QWidget *parent)
     addButton(newBtn("object-rotate-right", [this]() {
         emit rotateRightBtnClicked();
     }));
+}
+
+void BottomButtonGroup::setOpacity(qreal opacity, bool animated)
+{
+    m_opacityHelper->setOpacity(opacity, animated);
 }
 
 void BottomButtonGroup::addButton(QAbstractButton *button)

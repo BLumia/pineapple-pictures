@@ -1,31 +1,26 @@
 #include "toolbutton.h"
 
+#include "opacityhelper.h"
+
 #include <QPainter>
 #include <QGraphicsOpacityEffect>
 #include <QPropertyAnimation>
 
 ToolButton::ToolButton(QWidget *parent)
     : QPushButton(parent)
-    , m_opacityFx(new QGraphicsOpacityEffect(this))
-    , m_opacityAnimation(new QPropertyAnimation(m_opacityFx, "opacity"))
+    , m_opacityHelper(new OpacityHelper(this))
 {
     setFlat(true);
     setFixedSize(50, 50);
-    setGraphicsEffect(m_opacityFx);
     setStyleSheet("QPushButton {"
                   "background: transparent;"
                   "}"
                   "QPushButton:hover {"
                   "background: red;"
                   "}");
-
-    m_opacityAnimation->setDuration(300);
 }
 
-void ToolButton::setIconOpacity(qreal opacity)
+void ToolButton::setOpacity(qreal opacity, bool animated)
 {
-    m_opacityAnimation->stop();
-    m_opacityAnimation->setStartValue(m_opacityFx->opacity());
-    m_opacityAnimation->setEndValue(opacity);
-    m_opacityAnimation->start();
+    m_opacityHelper->setOpacity(opacity, animated);
 }
