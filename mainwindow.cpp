@@ -250,12 +250,19 @@ void MainWindow::resizeEvent(QResizeEvent *event)
 void MainWindow::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu * menu = new QMenu;
+    QAction * stayOnTopMode = new QAction(tr("Stay on top"));
+    connect(stayOnTopMode, &QAction::triggered, this, [ = ](){
+        toggleStayOnTop();
+    });
+    stayOnTopMode->setCheckable(true);
+    stayOnTopMode->setChecked(stayOnTop());
     QAction * protectedMode = new QAction(tr("Protected mode"));
     connect(protectedMode, &QAction::triggered, this, [ = ](){
         toggleProtectedMode();
     });
     protectedMode->setCheckable(true);
     protectedMode->setChecked(m_protectedMode);
+    menu->addAction(stayOnTopMode);
     menu->addAction(protectedMode);
     menu->exec(mapToGlobal(event->pos()));
     menu->deleteLater();
@@ -384,4 +391,14 @@ void MainWindow::toggleProtectedMode()
 {
     m_protectedMode = !m_protectedMode;
     m_closeButton->setVisible(!m_protectedMode);
+}
+
+void MainWindow::toggleStayOnTop()
+{
+    setWindowFlag(Qt::WindowStaysOnTopHint, !stayOnTop());
+}
+
+bool MainWindow::stayOnTop()
+{
+    return windowFlags().testFlag(Qt::WindowStaysOnTopHint);
 }
