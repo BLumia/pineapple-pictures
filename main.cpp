@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include <QApplication>
 #include <QCommandLineParser>
-#include <QLibraryInfo>
 #include <QTranslator>
 #include <QUrl>
 
@@ -9,9 +8,9 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+    // since we did `CONFIG += lrelease embed_translations`...
     QTranslator translator;
-    translator.load(QString("PineapplePictures_%1").arg(QLocale::system().name()),
-                    QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    translator.load(QString("PineapplePictures_%1").arg(QLocale::system().name()), ":/i18n/");
     a.installTranslator(&translator);
 
     // parse commandline arguments
