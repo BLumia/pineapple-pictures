@@ -11,6 +11,7 @@ class QGraphicsOpacityEffect;
 class QGraphicsView;
 QT_END_NAMESPACE
 
+class ToolButton;
 class GraphicsView;
 class NavigatorView;
 class BottomButtonGroup;
@@ -55,7 +56,7 @@ private:
     QPropertyAnimation *m_fadeOutAnimation;
     QPropertyAnimation *m_floatUpAnimation;
     QParallelAnimationGroup *m_exitAnimationGroup;
-    QPushButton *m_closeButton;
+    ToolButton *m_closeButton;
     GraphicsView *m_graphicsView;
     NavigatorView *m_gv;
     BottomButtonGroup *m_bottomButtonGroup;

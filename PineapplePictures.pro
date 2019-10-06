@@ -30,14 +30,16 @@ SOURCES += \
     graphicsview.cpp \
     bottombuttongroup.cpp \
     graphicsscene.cpp \
-    navigatorview.cpp
+    navigatorview.cpp \
+    toolbutton.cpp
 
 HEADERS += \
         mainwindow.h \
     graphicsview.h \
     bottombuttongroup.h \
     graphicsscene.h \
-    navigatorview.h
+    navigatorview.h \
+    toolbutton.h
 
 FORMS +=
 

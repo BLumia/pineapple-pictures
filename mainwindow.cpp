@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 
+#include "toolbutton.h"
 #include "bottombuttongroup.h"
 #include "graphicsview.h"
 #include "navigatorview.h"
@@ -63,15 +64,9 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(m_graphicsView, &GraphicsView::viewportRectChanged,
             m_gv, &NavigatorView::updateMainViewportRegion);
 
-    m_closeButton = new QPushButton(m_graphicsView);
-    m_closeButton->setFlat(true);
-    m_closeButton->setFixedSize(50, 50);
-    m_closeButton->setStyleSheet("QPushButton {"
-                                 "background: transparent;"
-                                 "}"
-                                 "QPushButton:hover {"
-                                 "background: red;"
-                                 "}");
+    m_closeButton = new ToolButton(m_graphicsView);
+    m_closeButton->setIcon(QIcon(":/icons/window-close"));
+    m_closeButton->setIconSize(QSize(50, 50));
 
     connect(m_closeButton, &QAbstractButton::clicked,
             this, &MainWindow::closeWindow);
@@ -174,6 +169,8 @@ void MainWindow::enterEvent(QEvent *event)
     m_bribViewOpacityAnimation->setEndValue(1);
     m_bribViewOpacityAnimation->start();
 
+    m_closeButton->setIconOpacity(1);
+
     return QMainWindow::enterEvent(event);
 }
 
@@ -188,6 +185,8 @@ void MainWindow::leaveEvent(QEvent *event)
     m_bribViewOpacityAnimation->setStartValue(m_bribViewEffect->opacity());
     m_bribViewOpacityAnimation->setEndValue(0);
     m_bribViewOpacityAnimation->start();
+
+    m_closeButton->setIconOpacity(0);
 
     return QMainWindow::leaveEvent(event);
 }

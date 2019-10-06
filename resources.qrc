@@ -7,5 +7,6 @@
         <file>icons/object-rotate-right.svg</file>
         <file>icons/view-background-checkerboard.svg</file>
         <file>icons/app-icon.svg</file>
+        <file>icons/window-close.svg</file>
     </qresource>
 </RCC>
