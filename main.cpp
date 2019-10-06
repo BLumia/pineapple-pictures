@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
     // parse commandline arguments
     QCommandLineParser parser;
     parser.addPositionalArgument("File list", QCoreApplication::translate("main", "File list."));
+    parser.addHelpOption();
 
     parser.process(a);
 

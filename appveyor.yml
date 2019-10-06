@@ -19,7 +19,7 @@ build_script:
   - mingw32-make
   - cd release
   - del /a /f /q "*.o" "*.cpp" "*.h"
-  - windeployqt --no-quick-import --no-translations --no-opengl-sw --release .\PineapplePictures.exe
+  - windeployqt --no-quick-import --no-translations --no-opengl-sw --no-system-d3d-compiler --release .\PineapplePictures.exe
 
 artifacts:
   - path: build\release
