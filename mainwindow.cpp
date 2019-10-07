@@ -116,11 +116,12 @@ void MainWindow::showUrls(const QList<QUrl> &urls)
 
 void MainWindow::adjustWindowSizeBySceneRect()
 {
-    if (m_graphicsView->scaleFactor() < 1) {
+    QSize sceneSize = m_graphicsView->sceneRect().toRect().size();
+    QSize sceneSizeWithMargins = sceneSize + QSize(130, 125);
+
+    if (m_graphicsView->scaleFactor() < 1 || size().expandedTo(sceneSizeWithMargins) != size()) {
         // if it scaled down by the resize policy:
         QSize screenSize = qApp->screenAt(QCursor::pos())->availableSize();
-        QSize sceneSize = m_graphicsView->sceneRect().toRect().size();
-        QSize sceneSizeWithMargins = sceneSize + QSize(130, 125);
         if (screenSize.expandedTo(sceneSize) == screenSize) {
             // we can show the picture by increase the window size.
             if (screenSize.expandedTo(sceneSizeWithMargins) == screenSize) {
