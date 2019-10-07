@@ -15,6 +15,7 @@ GraphicsView::GraphicsView(QWidget *parent)
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setResizeAnchor(QGraphicsView::AnchorUnderMouse);
+    setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
     setStyleSheet("background-color: rgba(0, 0, 0, 220);"
                   "border-radius: 3px;");
     setAcceptDrops(true);
@@ -180,8 +181,7 @@ void GraphicsView::mouseReleaseEvent(QMouseEvent *event)
 void GraphicsView::wheelEvent(QWheelEvent *event)
 {
     event->ignore();
-
-    return QGraphicsView::wheelEvent(event);
+    // blumia: no need for calling parent method.
 }
 
 void GraphicsView::resizeEvent(QResizeEvent *event)
