@@ -58,6 +58,7 @@ MainWindow::MainWindow(QWidget *parent) :
         m_gv->rotate(angle);
         m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
         m_gv->setVisible(required);
+        m_gv->updateMainViewportRegion();
     });
 
     connect(m_graphicsView, &GraphicsView::viewportRectChanged,
