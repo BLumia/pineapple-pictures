@@ -7,3 +7,7 @@
  - For windows build, win32 APIs are used.
  - No license file provided.
  - No drag-window-border-to-resize support under non-windows platforms (I use <kbd>Meta+Drag</kbd> to resize window under my x11 desktop).
+
+## License
+
+This program released under MIT license
