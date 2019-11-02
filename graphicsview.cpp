@@ -103,7 +103,6 @@ qreal GraphicsView::scaleFactor() const
 
 void GraphicsView::resetTransform()
 {
-    m_scaleFactor = 1;
     m_rotateAngle = 0;
     QGraphicsView::resetTransform();
 }
@@ -111,15 +110,13 @@ void GraphicsView::resetTransform()
 void GraphicsView::zoomView(qreal scaleFactor)
 {
     m_enableFitInView = false;
-    m_scaleFactor *= scaleFactor;
-    reapplyViewTransform();
+    scale(scaleFactor, scaleFactor);
     emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), m_rotateAngle);
 }
 
 void GraphicsView::resetScale()
 {
-    m_scaleFactor = 1;
-    reapplyViewTransform();
+    resetWithScaleAndRotate(1, m_rotateAngle);
     emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), m_rotateAngle);
 }
 
@@ -127,13 +124,12 @@ void GraphicsView::rotateView(qreal rotateAngel)
 {
     m_rotateAngle += rotateAngel;
     m_rotateAngle = static_cast<int>(m_rotateAngle) % 360;
-    reapplyViewTransform();
+    resetWithScaleAndRotate(1, m_rotateAngle);
 }
 
 void GraphicsView::fitInView(const QRectF &rect, Qt::AspectRatioMode aspectRadioMode)
 {
     QGraphicsView::fitInView(rect, aspectRadioMode);
-    m_scaleFactor = scaleFactor();
 }
 
 void GraphicsView::checkAndDoFitInView()
@@ -291,9 +287,9 @@ void GraphicsView::setCheckerboardEnabled(bool enabled)
     }
 }
 
-void GraphicsView::reapplyViewTransform()
+void GraphicsView::resetWithScaleAndRotate(qreal scaleFactor, qreal rotateAngle)
 {
     QGraphicsView::resetTransform();
-    scale(m_scaleFactor, m_scaleFactor);
-    rotate(m_rotateAngle);
+    scale(scaleFactor, scaleFactor);
+    rotate(rotateAngle);
 }

@@ -53,11 +53,10 @@ private:
     bool shouldIgnoreMousePressMoveEvent(const QMouseEvent *event) const;
     void setCheckerboardEnabled(bool enabled);
 
-    void reapplyViewTransform();
+    void resetWithScaleAndRotate(qreal scaleFactor, qreal rotateAngle);
 
     bool m_enableFitInView = false;
     bool m_checkerboardEnabled = false;
-    qreal m_scaleFactor = 1;
     qreal m_rotateAngle = 0;
 };
 
