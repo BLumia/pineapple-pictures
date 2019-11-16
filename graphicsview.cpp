@@ -25,15 +25,10 @@ GraphicsView::GraphicsView(QWidget *parent)
     connect(verticalScrollBar(), &QScrollBar::valueChanged, this, &GraphicsView::viewportRectChanged);
 }
 
-void GraphicsView::showFromUrlList(const QList<QUrl> &urlList)
+void GraphicsView::showFileFromUrl(const QUrl &url, bool doRequestGallery)
 {
     emit navigatorViewRequired(false, 0);
-    if (urlList.isEmpty()) {
-        // yeah, it's possible. dragging QQ's original sticker will trigger this, for example.
-        showText(tr("File url list is empty"));
-        return;
-    }
-    QUrl url(urlList.first());
+
     QString filePath(url.toLocalFile());
 
     if (filePath.endsWith(".svg")) {
@@ -50,6 +45,10 @@ void GraphicsView::showFromUrlList(const QList<QUrl> &urlList)
         } else {
             showImage(QPixmap::fromImageReader(&imageReader));
         }
+    }
+
+    if (doRequestGallery) {
+        emit requestGallery(filePath);
     }
 }
 
@@ -228,7 +227,12 @@ void GraphicsView::dropEvent(QDropEvent *event)
     const QMimeData * mimeData = event->mimeData();
 
     if (mimeData->hasUrls()) {
-        showFromUrlList(mimeData->urls());
+        const QList<QUrl> &urls = mimeData->urls();
+        if (urls.isEmpty()) {
+            showText(tr("File url list is empty"));
+        } else {
+            showFileFromUrl(urls.first());
+        }
     } else if (mimeData->hasImage()) {
         QImage img = qvariant_cast<QImage>(mimeData->imageData());
         QPixmap pixmap = QPixmap::fromImage(img);

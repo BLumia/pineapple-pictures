@@ -11,7 +11,7 @@ class GraphicsView : public QGraphicsView
 public:
     GraphicsView(QWidget *parent = nullptr);
 
-    void showFromUrlList(const QList<QUrl> &urlList);
+    void showFileFromUrl(const QUrl &url, bool requestGallery = false);
 
     void showImage(const QPixmap &pixmap);
     void showText(const QString &text);
@@ -34,6 +34,7 @@ public:
 signals:
     void navigatorViewRequired(bool required, qreal angle);
     void viewportRectChanged();
+    void requestGallery(const QString &filePath);
 
 public slots:
     void toggleCheckerboard();

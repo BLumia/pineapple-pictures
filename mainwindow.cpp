@@ -15,6 +15,8 @@
 #include <QScreen>
 #include <QMenu>
 #include <QShortcut>
+#include <QDir>
+#include <QCollator>
 
 #ifdef _WIN32
 #include <windows.h>
@@ -65,6 +67,9 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(m_graphicsView, &GraphicsView::viewportRectChanged,
             m_gv, &NavigatorView::updateMainViewportRegion);
 
+    connect(m_graphicsView, &GraphicsView::requestGallery,
+            this, &MainWindow::loadGalleryBySingleLocalFile);
+
     m_closeButton = new ToolButton(m_graphicsView);
     m_closeButton->setIcon(QIcon(":/icons/window-close"));
     m_closeButton->setIconSize(QSize(50, 50));
@@ -106,6 +111,14 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(quitAppShorucut, &QShortcut::activated,
             std::bind(&MainWindow::quitAppAction, this, false));
 
+    QShortcut * prevPictureShorucut = new QShortcut(QKeySequence(Qt::Key_PageUp), this);
+    connect(prevPictureShorucut, &QShortcut::activated,
+            this, &MainWindow::galleryPrev);
+
+    QShortcut * nextPictureShorucut = new QShortcut(QKeySequence(Qt::Key_PageDown), this);
+    connect(nextPictureShorucut, &QShortcut::activated,
+            this, &MainWindow::galleryNext);
+
     centerWindow();
 }
 
@@ -116,7 +129,19 @@ MainWindow::~MainWindow()
 
 void MainWindow::showUrls(const QList<QUrl> &urls)
 {
-    m_graphicsView->showFromUrlList(urls);
+    if (!urls.isEmpty()) {
+        if (urls.count() == 1) {
+            m_graphicsView->showFileFromUrl(urls.first(), true);
+        } else {
+            m_graphicsView->showFileFromUrl(urls.first(), false);
+            m_files = urls;
+            m_currentFileIndex = 0;
+        }
+    } else {
+        m_graphicsView->showText(tr("File url list is empty"));
+        return;
+    }
+
     m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
 }
 
@@ -146,6 +171,57 @@ void MainWindow::adjustWindowSizeBySceneRect()
             showMaximized();
         }
     }
+}
+
+void MainWindow::loadGalleryBySingleLocalFile(const QString &path)
+{
+    QFileInfo info(path);
+    QDir dir(info.path());
+    QString currentFileName = info.fileName();
+    QStringList entryList = dir.entryList({"*.jpg", "*.jpeg", "*.png", "*.gif", "*.svg"},
+                                          QDir::Files | QDir::NoSymLinks, QDir::NoSort);
+
+    QCollator collator;
+    collator.setNumericMode(true);
+
+    std::sort(entryList.begin(), entryList.end(), collator);
+
+    m_currentFileIndex = -1;
+    m_files.clear();
+
+    for (int i = 0; i < entryList.count(); i++) {
+        const QString & oneEntry = entryList.at(i);
+        m_files.append(QUrl::fromLocalFile(dir.absoluteFilePath(oneEntry)));
+        if (oneEntry == currentFileName) {
+            m_currentFileIndex = i;
+        }
+    }
+
+    qDebug() << m_files << m_currentFileIndex;
+}
+
+void MainWindow::galleryPrev()
+{
+    int count = m_files.count();
+    if (m_currentFileIndex < 0 || m_files.isEmpty() || m_currentFileIndex >= m_files.count()) {
+        return;
+    }
+
+    m_currentFileIndex = m_currentFileIndex - 1 < 0 ? count - 1 : m_currentFileIndex - 1;
+
+    m_graphicsView->showFileFromUrl(m_files.at(m_currentFileIndex), false);
+}
+
+void MainWindow::galleryNext()
+{
+    int count = m_files.count();
+    if (m_currentFileIndex < 0 || m_files.isEmpty() || m_currentFileIndex >= m_files.count()) {
+        return;
+    }
+
+    m_currentFileIndex = m_currentFileIndex + 1 == count ? 0 : m_currentFileIndex + 1;
+
+    m_graphicsView->showFileFromUrl(m_files.at(m_currentFileIndex), false);
 }
 
 void MainWindow::showEvent(QShowEvent *event)
