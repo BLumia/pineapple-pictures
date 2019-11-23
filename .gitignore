@@ -3,3 +3,6 @@
 
 # Translation files
 *.qm
+
+# Generic Build Dir
+[Bb]uild/
