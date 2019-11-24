@@ -61,6 +61,14 @@ add_executable (${EXE_NAME}
 
 target_link_libraries (${EXE_NAME} Qt5::Widgets Qt5::Svg)
 
+# Extra build settings
+if (WIN32)
+    set_property (
+        TARGET ${EXE_NAME}
+        PROPERTY WIN32_EXECUTABLE true
+    )
+endif ()
+
 # Install settings
 if (UNIX)
     if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
