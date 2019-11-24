@@ -15,11 +15,12 @@ install:
 build_script:
   - mkdir build
   - cd build
-  - qmake ..\PineapplePictures.pro
+  - cmake -G "Unix Makefiles" -DCMAKE_MAKE_PROGRAM=mingw32-make ..\
   - mingw32-make
-  - cd release
-  - del /a /f /q "*.o" "*.cpp" "*.h"
-  - windeployqt --no-quick-import --no-translations --no-opengl-sw --no-angle --no-system-d3d-compiler --release .\PineapplePictures.exe
+  - mkdir cmake_release_folder
+  - cd cmake_release_folder
+  - copy ..\ppic.exe .\
+  - windeployqt --no-quick-import --no-translations --no-opengl-sw --no-angle --no-system-d3d-compiler --release .\ppic.exe
 
 artifacts:
-  - path: build\release
+  - path: build\cmake_release_folder
