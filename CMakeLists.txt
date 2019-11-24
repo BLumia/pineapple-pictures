@@ -35,6 +35,10 @@ set (PPIC_QRC_FILES
     resources.qrc
 )
 
+set (PPIC_RC_FILES
+    # yeah, it's empty.
+)
+
 set (EXE_NAME ppic)
 
 # Translation
@@ -43,10 +47,15 @@ set (PPIC_CPP_FILES_FOR_I18N ${PPIC_CPP_FILES})
 
 qt5_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})
 
+if (WIN32)
+    list(APPEND PPIC_RC_FILES pineapple-pictures.rc)
+endif ()
+
 add_executable (${EXE_NAME}
     ${PPIC_HEADER_FILES}
     ${PPIC_CPP_FILES}
     ${PPIC_QRC_FILES}
+    ${PPIC_RC_FILES}
     ${PPIC_QM_FILES}
 )
 
