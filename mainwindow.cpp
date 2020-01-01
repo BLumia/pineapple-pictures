@@ -17,6 +17,8 @@
 #include <QShortcut>
 #include <QDir>
 #include <QCollator>
+#include <QClipboard>
+#include <QMimeData>
 
 #ifdef _WIN32
 #include <windows.h>
@@ -173,12 +175,22 @@ void MainWindow::adjustWindowSizeBySceneRect()
     }
 }
 
+// can be empty if it is NOT from a local file.
+QUrl MainWindow::currentImageFileUrl() const
+{
+    if (m_currentFileIndex != -1) {
+        return m_files.value(m_currentFileIndex);
+    }
+
+    return QUrl();
+}
+
 void MainWindow::loadGalleryBySingleLocalFile(const QString &path)
 {
     QFileInfo info(path);
     QDir dir(info.path());
     QString currentFileName = info.fileName();
-    QStringList entryList = dir.entryList({"*.jpg", "*.jpeg", "*.png", "*.gif", "*.svg"},
+    QStringList entryList = dir.entryList({"*.jpg", "*.jpeg", "*.png", "*.gif", "*.svg", "*.bmp"},
                                           QDir::Files | QDir::NoSymLinks, QDir::NoSort);
 
     QCollator collator;
@@ -197,7 +209,7 @@ void MainWindow::loadGalleryBySingleLocalFile(const QString &path)
         }
     }
 
-    qDebug() << m_files << m_currentFileIndex;
+//    qDebug() << m_files << m_currentFileIndex;
 }
 
 void MainWindow::galleryPrev()
@@ -307,6 +319,52 @@ void MainWindow::resizeEvent(QResizeEvent *event)
 void MainWindow::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu * menu = new QMenu;
+    QMenu * copyMenu = new QMenu(tr("&Copy"));
+    QUrl currentFileUrl = currentImageFileUrl();
+    QImage clipboardImage;
+    QUrl clipboardFileUrl;
+
+    const QMimeData * clipboardData = QApplication::clipboard()->mimeData();
+    if (clipboardData->hasImage()) {
+        QVariant imageVariant(clipboardData->imageData());
+        if (imageVariant.isValid()) {
+            clipboardImage = qvariant_cast<QImage>(imageVariant);
+        }
+    } else if (clipboardData->hasText()) {
+        QString clipboardText(clipboardData->text());
+        if (clipboardText.startsWith("PICTURE:")) {
+            QString maybeFilename(clipboardText.mid(8));
+            if (QFile::exists(maybeFilename)) {
+                clipboardFileUrl = QUrl::fromLocalFile(maybeFilename);
+            }
+        }
+    }
+
+    QAction * copyPixmap = new QAction(tr("Copy &Pixmap"));
+    connect(copyPixmap, &QAction::triggered, this, [ = ](){
+        QClipboard *cb = QApplication::clipboard();
+        cb->setPixmap(m_graphicsView->scene()->renderToPixmap());
+    });
+    QAction * copyFilePath = new QAction(tr("Copy &File Path"));
+    connect(copyFilePath, &QAction::triggered, this, [ = ](){
+        QClipboard *cb = QApplication::clipboard();
+        cb->setText(currentFileUrl.toLocalFile());
+    });
+    copyMenu->addAction(copyPixmap);
+    if (currentFileUrl.isValid()) {
+        copyMenu->addAction(copyFilePath);
+    }
+
+    QAction * pasteImage = new QAction(tr("&Paste Image"));
+    connect(pasteImage, &QAction::triggered, this, [ = ](){
+        m_graphicsView->showImage(clipboardImage);
+    });
+
+    QAction * pasteImageFile = new QAction(tr("&Paste Image File"));
+    connect(pasteImageFile, &QAction::triggered, this, [ = ](){
+        m_graphicsView->showFileFromUrl(clipboardFileUrl, true);
+    });
+
     QAction * stayOnTopMode = new QAction(tr("Stay on top"));
     connect(stayOnTopMode, &QAction::triggered, this, [ = ](){
         toggleStayOnTop();
@@ -331,6 +389,18 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
         };
         m_graphicsView->showText(sl.join('\n'));
     });
+
+    if (copyMenu->actions().count() == 1) {
+        menu->addActions(copyMenu->actions());
+    } else {
+        menu->addMenu(copyMenu);
+    }
+    if (!clipboardImage.isNull()) {
+        menu->addAction(pasteImage);
+    } else if (clipboardFileUrl.isValid()) {
+        menu->addAction(pasteImageFile);
+    }
+    menu->addSeparator();
     menu->addAction(stayOnTopMode);
     menu->addAction(protectedMode);
     menu->addSeparator();

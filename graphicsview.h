@@ -14,6 +14,7 @@ public:
     void showFileFromUrl(const QUrl &url, bool requestGallery = false);
 
     void showImage(const QPixmap &pixmap);
+    void showImage(const QImage &image);
     void showText(const QString &text);
     void showSvg(const QString &filepath);
     void showGif(const QString &filepath);

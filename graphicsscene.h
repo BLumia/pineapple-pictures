@@ -15,6 +15,8 @@ public:
     void showSvg(const QString &filepath);
     void showGif(const QString &filepath);
 
+    QPixmap renderToPixmap();
+
 private:
     QGraphicsItem * m_theThing;
 };

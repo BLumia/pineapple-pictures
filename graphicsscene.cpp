@@ -8,6 +8,7 @@
 #include <QGraphicsSvgItem>
 #include <QMovie>
 #include <QLabel>
+#include <QPainter>
 
 GraphicsScene::GraphicsScene(QObject *parent)
     : QGraphicsScene(parent)
@@ -57,4 +58,13 @@ void GraphicsScene::showGif(const QString &filepath)
     m_theThing = this->addRect(QRect(QPoint(0, 0), label->sizeHint()),
                                QPen(Qt::transparent));
     this->setSceneRect(m_theThing->boundingRect());
+}
+
+QPixmap GraphicsScene::renderToPixmap()
+{
+    QPixmap pixmap(sceneRect().toRect().size());
+    QPainter p(&pixmap);
+    render(&p, sceneRect());
+
+    return pixmap;
 }
