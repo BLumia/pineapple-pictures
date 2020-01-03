@@ -15,12 +15,13 @@ install:
 build_script:
   - mkdir build
   - cd build
-  - cmake -G "Unix Makefiles" -DCMAKE_MAKE_PROGRAM=mingw32-make ..\
+  - cmake -G "Unix Makefiles" -DCMAKE_MAKE_PROGRAM=mingw32-make -DCMAKE_INSTALL_PREFIX='%cd%' ..\
   - mingw32-make
-  - mkdir cmake_release_folder
-  - cd cmake_release_folder
-  - copy ..\ppic.exe .\
+  - mingw32-make install
+# fixme: I don't know how to NOT make the binary installed to the ./bin/ folder...
+  - cd bin
   - windeployqt --no-quick-import --no-translations --no-opengl-sw --no-angle --no-system-d3d-compiler --release .\ppic.exe
+  - tree
 
 artifacts:
-  - path: build\cmake_release_folder
+  - path: build\bin

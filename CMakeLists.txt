@@ -69,16 +69,28 @@ if (WIN32)
     )
 endif ()
 
+# Helper macros for install settings
+macro (ppic_convert_to_relative_path _var)
+    # Make sure _var is a relative path
+    if (IS_ABSOLUTE "${${_var}}")
+        file (RELATIVE_PATH ${_var} "${CMAKE_INSTALL_PREFIX}" "${${_var}}")
+    endif ()
+endmacro ()
+
 # Install settings
-if (UNIX)
+if (WIN32)
+    # FIXME: try to avoid install to a "bin" subfolder under windows...
+    #        when fixed, don't forget to update the CI config file...
+    set (BIN_INSTALL_DIR "") # seems useless, don't know why...
+elseif (UNIX)
     if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
         set(CMAKE_INSTALL_PREFIX /usr)
     endif ()
 
-    install (
-        TARGETS ${EXE_NAME}
-        RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
-    )
+    set (BIN_INSTALL_DIR "${CMAKE_INSTALL_BINDIR}") # relative, usually "bin"
+    ppic_convert_to_relative_path(BIN_INSTALL_DIR)
+    set (LIB_INSTALL_DIR "${CMAKE_INSTALL_LIBDIR}") # "lib" or "lib64"
+    ppic_convert_to_relative_path(LIB_INSTALL_DIR)
 
     # install icon
     install (
@@ -92,5 +104,42 @@ if (UNIX)
         FILES pineapple-pictures.desktop
         DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
     )
-endif (UNIX)
+endif()
 
+set (INSTALL_TARGETS_DEFAULT_ARGS
+    RUNTIME DESTINATION ${BIN_INSTALL_DIR}
+    LIBRARY DESTINATION ${LIB_INSTALL_DIR}
+    ARCHIVE DESTINATION ${LIB_INSTALL_DIR} COMPONENT Devel
+)
+
+install (
+    TARGETS ${EXE_NAME}
+    ${INSTALL_TARGETS_DEFAULT_ARGS}
+)
+
+if (WIN32)
+    set (QM_FILE_INSTALL_DIR "${CMAKE_INSTALL_BINDIR}/translations")
+else ()
+    set (QM_FILE_INSTALL_DIR "${CMAKE_INSTALL_FULL_DATADIR}/pineapple-pictures/translations")
+endif ()
+
+install (
+    FILES ${PPIC_QM_FILES}
+    DESTINATION ${QM_FILE_INSTALL_DIR}
+)
+
+# CPACK: General Settings
+set (CPACK_GENERATOR "TBZ2")
+set (CPACK_PACKAGE_NAME "PineapplePictures")
+set (CPACK_PACKAGE_DESCRIPTION_SUMMARY "Yet another image viewer")
+set (CPACK_PACKAGE_VENDOR "Gary Wang")
+set (CPACK_PACKAGE_CONTACT "https://github.com/BLumia/PineapplePictures/issues/")
+if (WIN32)
+    # ...
+elseif (APPLE)
+    # ...
+elseif (UNIX)
+    set(CPACK_SYSTEM_NAME "${CMAKE_SYSTEM_NAME}-${CMAKE_SYSTEM_PROCESSOR}")
+endif()
+
+include(CPack)
