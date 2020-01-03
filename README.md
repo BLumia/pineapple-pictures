@@ -1,5 +1,7 @@
 Yet another image viewer.
 
+![Pineapple Pictures - Main Window](https://repository-images.githubusercontent.com/211888654/21fb6300-269f-11ea-8e85-953e5d57da44)
+
 ## Uncleaned shits inside(TM):
 
  - Mixed `CR LF` and `LF`.
