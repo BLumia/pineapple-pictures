@@ -121,6 +121,9 @@ if (WIN32)
     set (QM_FILE_INSTALL_DIR "${CMAKE_INSTALL_BINDIR}/translations")
 else ()
     set (QM_FILE_INSTALL_DIR "${CMAKE_INSTALL_FULL_DATADIR}/pineapple-pictures/translations")
+    target_compile_definitions(${EXE_NAME}
+        PRIVATE QM_FILE_INSTALL_DIR=${QM_FILE_INSTALL_DIR}
+    )
 endif ()
 
 install (

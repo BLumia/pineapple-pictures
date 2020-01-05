@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include <QApplication>
 #include <QCommandLineParser>
+#include <QDir>
 #include <QTranslator>
 #include <QUrl>
 
@@ -8,9 +9,14 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    // since we did `CONFIG += lrelease embed_translations`...
     QTranslator translator;
-    translator.load(QString("PineapplePictures_%1").arg(QLocale::system().name()), ":/i18n/");
+    QString qmDir;
+#ifdef _WIN32
+    qmDir = QDir(QCoreApplication::applicationDirPath()).absoluteFilePath("translations");
+#else
+    qmDir = QString(QM_FILE_INSTALL_DIR);
+#endif
+    translator.load(QString("PineapplePictures_%1").arg(QLocale::system().name()), qmDir);
     a.installTranslator(&translator);
 
     // parse commandline arguments
