@@ -5,6 +5,11 @@
 #include <QTranslator>
 #include <QUrl>
 
+// QM_FILE_INSTALL_DIR should be defined from the CMakeLists file.
+#ifndef QM_FILE_INSTALL_DIR
+#define QM_FILE_INSTALL_DIR ":/i18n/"
+#endif // QM_FILE_INSTALL_DIR
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -14,7 +19,7 @@ int main(int argc, char *argv[])
 #ifdef _WIN32
     qmDir = QDir(QCoreApplication::applicationDirPath()).absoluteFilePath("translations");
 #else
-    qmDir = QString(QM_FILE_INSTALL_DIR);
+    qmDir = QT_STRINGIFY(QM_FILE_INSTALL_DIR);
 #endif
     translator.load(QString("PineapplePictures_%1").arg(QLocale::system().name()), qmDir);
     a.installTranslator(&translator);
