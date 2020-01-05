@@ -63,6 +63,7 @@ void GraphicsScene::showGif(const QString &filepath)
 QPixmap GraphicsScene::renderToPixmap()
 {
     QPixmap pixmap(sceneRect().toRect().size());
+    pixmap.fill(Qt::transparent);
     QPainter p(&pixmap);
     render(&p, sceneRect());
 
