@@ -45,9 +45,13 @@
         <translation>复制(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="343"/>
         <source>Copy &amp;Pixmap</source>
-        <translation>复制位图(&amp;P)</translation>
+        <translation type="vanished">复制位图(&amp;P)</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="343"/>
+        <source>Copy P&amp;ixmap</source>
+        <translation>复制位图(&amp;I)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="348"/>
@@ -110,7 +114,7 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.cpp" line="18"/>
+        <location filename="../main.cpp" line="24"/>
         <source>File list.</source>
         <translation>文件列表。</translation>
     </message>

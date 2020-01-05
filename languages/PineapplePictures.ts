@@ -46,7 +46,7 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="343"/>
-        <source>Copy &amp;Pixmap</source>
+        <source>Copy P&amp;ixmap</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -110,7 +110,7 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.cpp" line="18"/>
+        <location filename="../main.cpp" line="24"/>
         <source>File list.</source>
         <translation type="unfinished"></translation>
     </message>

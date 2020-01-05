@@ -340,7 +340,7 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
         }
     }
 
-    QAction * copyPixmap = new QAction(tr("Copy &Pixmap"));
+    QAction * copyPixmap = new QAction(tr("Copy P&ixmap"));
     connect(copyPixmap, &QAction::triggered, this, [ = ](){
         QClipboard *cb = QApplication::clipboard();
         cb->setPixmap(m_graphicsView->scene()->renderToPixmap());
