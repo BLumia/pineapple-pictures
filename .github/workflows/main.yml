@@ -13,7 +13,6 @@ jobs:
       run: sudo apt install cmake qtbase5-dev libqt5svg5-dev qttools5-dev
     - name: Build it
       run: |
-        cd PineapplePictures
         mkdir build
         cd build
         cmake ../
