@@ -268,8 +268,8 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
     if (event->buttons() & Qt::LeftButton && !isMaximized()) {
         m_clickedOnWindow = true;
         m_oldMousePos = event->pos();
-        qDebug() << m_oldMousePos << m_graphicsView->transform().m11()
-                 << m_graphicsView->transform().m22() << m_graphicsView->matrix().m12();
+//        qDebug() << m_oldMousePos << m_graphicsView->transform().m11()
+//                 << m_graphicsView->transform().m22() << m_graphicsView->matrix().m12();
         event->accept();
     }
 

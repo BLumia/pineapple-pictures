@@ -213,9 +213,9 @@ void GraphicsView::dragEnterEvent(QDragEnterEvent *event)
     } else {
         event->ignore();
     }
-    qDebug() << event->mimeData() << "Drag Enter Event"
-             << event->mimeData()->hasUrls() << event->mimeData()->hasImage()
-             << event->mimeData()->formats() << event->mimeData()->hasFormat("text/uri-list");
+//    qDebug() << event->mimeData() << "Drag Enter Event"
+//             << event->mimeData()->hasUrls() << event->mimeData()->hasImage()
+//             << event->mimeData()->formats() << event->mimeData()->hasFormat("text/uri-list");
 
     return QGraphicsView::dragEnterEvent(event);
 }
@@ -285,9 +285,9 @@ void GraphicsView::setCheckerboardEnabled(bool enabled)
     if (m_checkerboardEnabled) {
         // Prepare background check-board pattern
         QPixmap tilePixmap(0x20, 0x20);
-        tilePixmap.fill(QColor(35, 35, 35, 110));
+        tilePixmap.fill(QColor(35, 35, 35, 170));
         QPainter tilePainter(&tilePixmap);
-        QColor color(40, 40, 40, 110);
+        QColor color(45, 45, 45, 170);
         tilePainter.fillRect(0, 0, 0x10, 0x10, color);
         tilePainter.fillRect(0x10, 0x10, 0x10, 0x10, color);
         tilePainter.end();
