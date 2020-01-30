@@ -6,7 +6,7 @@ include (GNUInstallDirs)
 
 set (CMAKE_AUTOMOC ON)
 set (CMAKE_AUTORCC ON)
-set (QT_MINIMUM_VERSION "5.7.1")
+set (QT_MINIMUM_VERSION "5.10")
 
 find_package(Qt5 ${QT_MINIMUM_VERSION} CONFIG REQUIRED Widgets Svg LinguistTools)
 
