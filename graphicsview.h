@@ -54,6 +54,7 @@ private:
     bool isThingSmallerThanWindowWith(const QTransform &transform) const;
     bool shouldIgnoreMousePressMoveEvent(const QMouseEvent *event) const;
     void setCheckerboardEnabled(bool enabled);
+    void applyTransformationModeByScaleFactor();
 
     void resetWithScaleAndRotate(qreal scaleFactor, qreal rotateAngle);
 

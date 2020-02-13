@@ -15,6 +15,8 @@ public:
     void showSvg(const QString &filepath);
     void showGif(const QString &filepath);
 
+    bool trySetTransformationMode(Qt::TransformationMode mode);
+
     QPixmap renderToPixmap();
 
 private:

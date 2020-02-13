@@ -60,6 +60,17 @@ void GraphicsScene::showGif(const QString &filepath)
     this->setSceneRect(m_theThing->boundingRect());
 }
 
+bool GraphicsScene::trySetTransformationMode(Qt::TransformationMode mode)
+{
+    QGraphicsPixmapItem * pixmapItem = qgraphicsitem_cast<QGraphicsPixmapItem *>(m_theThing);
+    if (pixmapItem) {
+        pixmapItem->setTransformationMode(mode);
+        return true;
+    }
+
+    return false;
+}
+
 QPixmap GraphicsScene::renderToPixmap()
 {
     QPixmap pixmap(sceneRect().toRect().size());

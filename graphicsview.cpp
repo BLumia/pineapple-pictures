@@ -117,6 +117,7 @@ void GraphicsView::zoomView(qreal scaleFactor)
 {
     m_enableFitInView = false;
     scale(scaleFactor, scaleFactor);
+    applyTransformationModeByScaleFactor();
     emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), m_rotateAngle);
 }
 
@@ -136,6 +137,7 @@ void GraphicsView::rotateView(qreal rotateAngel)
 void GraphicsView::fitInView(const QRectF &rect, Qt::AspectRatioMode aspectRadioMode)
 {
     QGraphicsView::fitInView(rect, aspectRadioMode);
+    applyTransformationModeByScaleFactor();
 }
 
 void GraphicsView::checkAndDoFitInView()
@@ -295,6 +297,15 @@ void GraphicsView::setCheckerboardEnabled(bool enabled)
         setBackgroundBrush(tilePixmap);
     } else {
         setBackgroundBrush(Qt::transparent);
+    }
+}
+
+void GraphicsView::applyTransformationModeByScaleFactor()
+{
+    if (this->scaleFactor() < 1) {
+        scene()->trySetTransformationMode(Qt::SmoothTransformation);
+    } else {
+        scene()->trySetTransformationMode(Qt::FastTransformation);
     }
 }
 
