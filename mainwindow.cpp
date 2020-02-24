@@ -200,7 +200,7 @@ void MainWindow::loadGalleryBySingleLocalFile(const QString &path)
     QFileInfo info(path);
     QDir dir(info.path());
     QString currentFileName = info.fileName();
-    QStringList entryList = dir.entryList({"*.jpg", "*.jpeg", "*.jiff", "*.png", "*.gif", "*.svg", "*.bmp"},
+    QStringList entryList = dir.entryList({"*.jpg", "*.jpeg", "*.jfif", "*.png", "*.gif", "*.svg", "*.bmp"},
                                           QDir::Files | QDir::NoSymLinks, QDir::NoSort);
 
     QCollator collator;
