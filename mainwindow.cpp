@@ -19,6 +19,7 @@
 #include <QCollator>
 #include <QClipboard>
 #include <QMimeData>
+#include <QStackedLayout>
 
 #ifdef _WIN32
 #include <windows.h>
@@ -45,13 +46,22 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(m_exitAnimationGroup, &QParallelAnimationGroup::finished,
             this, &QMainWindow::close);
 
+    QWidget * mainWindowWidget = new QWidget;
+    this->setCentralWidget(mainWindowWidget);
+
     GraphicsScene * scene = new GraphicsScene(this);
 
-    m_graphicsView = new GraphicsView(this);
-    m_graphicsView->setScene(scene);
-    this->setCentralWidget(m_graphicsView);
+    QStackedLayout * stackedLayout = new QStackedLayout();
+    stackedLayout->setStackingMode(QStackedLayout::StackAll);
+    mainWindowWidget->setLayout(stackedLayout);
 
-    m_gv = new NavigatorView(this);
+    QWidget * hudContainer = new QWidget;
+    QVBoxLayout * hudLayout = new QVBoxLayout(hudContainer);
+
+    m_graphicsView = new GraphicsView();
+    m_graphicsView->setScene(scene);
+
+    m_gv = new NavigatorView;
     m_gv->setFixedSize(220, 160);
     m_gv->setScene(scene);
     m_gv->setMainView(m_graphicsView);
@@ -72,14 +82,14 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(m_graphicsView, &GraphicsView::requestGallery,
             this, &MainWindow::loadGalleryBySingleLocalFile);
 
-    m_closeButton = new ToolButton(m_graphicsView);
+    m_closeButton = new ToolButton;
     m_closeButton->setIcon(QIcon(":/icons/window-close"));
     m_closeButton->setIconSize(QSize(50, 50));
 
     connect(m_closeButton, &QAbstractButton::clicked,
             this, &MainWindow::closeWindow);
 
-    m_bottomButtonGroup = new BottomButtonGroup(this);
+    m_bottomButtonGroup = new BottomButtonGroup();
 
     connect(m_bottomButtonGroup, &BottomButtonGroup::resetToOriginalBtnClicked,
             this, [ = ](){ m_graphicsView->resetScale(); });
@@ -128,6 +138,17 @@ MainWindow::MainWindow(QWidget *parent) :
     QShortcut * fullscreenShorucut = new QShortcut(QKeySequence(QKeySequence::FullScreen), this);
     connect(fullscreenShorucut, &QShortcut::activated,
             this, &MainWindow::toggleFullscreen);
+
+    // Main UI layer things.
+    stackedLayout->addWidget(m_graphicsView);
+    int hudIndex = stackedLayout->addWidget(hudContainer);
+    stackedLayout->setCurrentIndex(hudIndex);
+
+    hudLayout->setMargin(0);
+    hudLayout->addWidget(m_closeButton, 0, Qt::AlignRight);
+    hudLayout->addStretch();
+    hudLayout->addWidget(m_gv, 0, Qt::AlignRight);
+    hudLayout->addWidget(m_bottomButtonGroup, 0, Qt::AlignCenter);
 
     centerWindow();
 }
@@ -536,10 +557,7 @@ void MainWindow::closeWindow()
 
 void MainWindow::updateWidgetsPosition()
 {
-    m_closeButton->move(width() - m_closeButton->width(), 0);
-    m_bottomButtonGroup->move((width() - m_bottomButtonGroup->width()) / 2,
-                              height() - m_bottomButtonGroup->height());
-    m_gv->move(width() - m_gv->width(), height() - m_gv->height());
+    // nothing here since we now using the QStackedLayout
 }
 
 void MainWindow::toggleProtectedMode()
