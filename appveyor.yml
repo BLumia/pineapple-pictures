@@ -17,7 +17,7 @@ build_script:
   - cinst ninja
 # install ECM so we can build KImageFormats
   - cd 3rdparty
-  - git clone -q git://anongit.kde.org/extra-cmake-modules.git
+  - git clone -q https://invent.kde.org/frameworks/extra-cmake-modules.git
   - cd extra-cmake-modules
   - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT%
   - cmake --build .
@@ -25,7 +25,7 @@ build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
 # install KImageFormats
   - cd 3rdparty
-  - git clone git://anongit.kde.org/kimageformats.git
+  - git clone -q https://invent.kde.org/frameworks/kimageformats.git
   - cd kimageformats
   - mkdir build
   - cd build
