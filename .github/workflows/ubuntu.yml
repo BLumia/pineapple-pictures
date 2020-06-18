@@ -1,0 +1,20 @@
+name: Ubuntu 20.04 CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Get build dept.
+      run: sudo apt install cmake qtbase5-dev libqt5svg5-dev qttools5-dev
+    - name: Build it
+      run: |
+        mkdir build
+        cd build
+        cmake ../
+        make
+        sudo cpack
