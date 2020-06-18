@@ -1,4 +1,4 @@
-name: MyCi_MacOS
+name: macOS CI
 
 on: [push]
 
