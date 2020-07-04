@@ -6,18 +6,20 @@
 #include <QGraphicsOpacityEffect>
 #include <QPropertyAnimation>
 
-ToolButton::ToolButton(QWidget *parent)
+ToolButton::ToolButton(bool hoverColor, QWidget *parent)
     : QPushButton(parent)
     , m_opacityHelper(new OpacityHelper(this))
 {
     setFlat(true);
-    setFixedSize(50, 50);
-    setStyleSheet("QPushButton {"
+    QString qss = "QPushButton {"
                   "background: transparent;"
-                  "}"
-                  "QPushButton:hover {"
-                  "background: red;"
-                  "}");
+                  "}";
+    if (hoverColor) {
+        qss += "QPushButton:hover {"
+               "background: red;"
+               "}";
+    }
+    setStyleSheet(qss);
 }
 
 void ToolButton::setOpacity(qreal opacity, bool animated)

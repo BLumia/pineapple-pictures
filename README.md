@@ -23,6 +23,7 @@ Feel free to open up an issue to request an new language to translate.
 
  - Mixed `CR LF` and `LF`.
  - Ugly action icons.
+ - Ugly implementations.
  - For windows build, win32 APIs are used.
  - No drag-window-border-to-resize support under non-windows platforms (I use <kbd>Meta+Drag</kbd> to resize window under my x11 desktop).
 

@@ -242,7 +242,7 @@ void GraphicsView::dropEvent(QDropEvent *event)
         if (urls.isEmpty()) {
             showText(tr("File url list is empty"));
         } else {
-            showFileFromUrl(urls.first());
+            showFileFromUrl(urls.first(), true);
         }
     } else if (mimeData->hasImage()) {
         QImage img = qvariant_cast<QImage>(mimeData->imageData());

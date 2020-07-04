@@ -8,7 +8,7 @@ class ToolButton : public QPushButton
 {
     Q_OBJECT
 public:
-    ToolButton(QWidget * parent = nullptr);
+    ToolButton(bool hoverColor = false, QWidget * parent = nullptr);
 
 public slots:
     void setOpacity(qreal opacity, bool animated = true);

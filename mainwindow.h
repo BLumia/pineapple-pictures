@@ -31,6 +31,10 @@ public:
     void loadGalleryBySingleLocalFile(const QString &path);
     void galleryPrev();
     void galleryNext();
+    bool isGalleryAvailable();
+
+signals:
+    void galleryLoaded();
 
 protected slots:
     void showEvent(QShowEvent *event) override;
@@ -61,6 +65,8 @@ private:
     QPropertyAnimation *m_floatUpAnimation;
     QParallelAnimationGroup *m_exitAnimationGroup;
     ToolButton *m_closeButton;
+    ToolButton *m_prevButton;
+    ToolButton *m_nextButton;
     GraphicsView *m_graphicsView;
     NavigatorView *m_gv;
     BottomButtonGroup *m_bottomButtonGroup;
