@@ -349,10 +349,23 @@ void MainWindow::mouseDoubleClickEvent(QMouseEvent *event)
 
 void MainWindow::wheelEvent(QWheelEvent *event)
 {
-    if (event->delta() > 0) {
-        m_graphicsView->zoomView(1.25);
+    QPoint numDegrees = event->angleDelta() / 8;
+    bool needZoom = false, zoomIn = false;
+
+    // NOTE: Only checking angleDelta since the QWheelEvent::pixelDelta() doc says
+    //       pixelDelta() value is driver specific and unreliable on X11...
+    //       We are not scrolling the canvas, just zoom in or out, so it probably
+    //       doesn't matter here.
+    if (!numDegrees.isNull() && numDegrees.y() != 0) {
+        needZoom = true;
+        zoomIn = numDegrees.y() > 0;
+    }
+
+    if (needZoom) {
+        m_graphicsView->zoomView(zoomIn ? 1.25 : 0.8);
+        event->accept();
     } else {
-        m_graphicsView->zoomView(0.8);
+        QMainWindow::wheelEvent(event);
     }
 }
 
