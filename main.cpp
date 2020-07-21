@@ -23,6 +23,8 @@ int main(int argc, char *argv[])
 #endif
     translator.load(QString("PineapplePictures_%1").arg(QLocale::system().name()), qmDir);
     a.installTranslator(&translator);
+    a.setApplicationName("Pineapple Pictures");
+    a.setApplicationDisplayName(QCoreApplication::translate("main", "Pineapple Pictures"));
 
     // parse commandline arguments
     QCommandLineParser parser;

@@ -1,1 +1,17 @@
 IDI_ICON1               ICON    DISCARDABLE     "icons/app-icon.ico"
+1               VERSIONINFO
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "FileDescription", "Pineapple Pictures - Image Viewer"
+            VALUE "LegalCopyright", "MIT/Expat License - Copyright (C) 2020 Gary Wang"
+            VALUE "ProductName", "Pineapple Pictures"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
