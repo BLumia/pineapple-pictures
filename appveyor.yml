@@ -1,5 +1,6 @@
 environment:
   CMAKE_INSTALL_ROOT: C:\projects\cmake
+  ZLIB_ROOT: C:\projects\zlib
   matrix:
     - build_name: mingw73_32_qt5_12_6
       QTPATH: C:\Qt\5.12.6\mingw73_32
@@ -7,6 +8,7 @@ environment:
 
 install:
   - mkdir %CMAKE_INSTALL_ROOT%
+  - mkdir %ZLIB_ROOT%
   - cd %APPVEYOR_BUILD_FOLDER%
   - git submodule update --init --recursive
   - set PATH=%PATH%;%CMAKE_INSTALL_ROOT%;%QTPATH%\bin;%MINGW32%\bin
@@ -22,6 +24,22 @@ build_script:
   - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT%
   - cmake --build .
   - cmake --build . --target install
+  - cd %APPVEYOR_BUILD_FOLDER%
+# download and install zlib for KArchive
+  - cd %ZLIB_ROOT%
+  - curl -fsS -o zlib128-dll.zip http://zlib.net/zlib128-dll.zip
+  - 7z e zlib128-dll.zip
+  - cd %APPVEYOR_BUILD_FOLDER%
+# install KArchive for kra format support of KImageFormats
+  - cd 3rdparty
+  - git clone -q https://invent.kde.org/frameworks/karchive.git
+  - cd karchive
+  - mkdir build
+  - cd build
+  - cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DCMAKE_MAKE_PROGRAM=mingw32-make -DZLIB_ROOT=%ZLIB_ROOT%
+# -DCMAKE_PREFIX_PATH=%CMAKE_INSTALL_ROOT% 
+  - cmake --build . --config Release
+  - cmake --build . --config Release --target install
   - cd %APPVEYOR_BUILD_FOLDER%
 # install KImageFormats
   - cd 3rdparty
@@ -41,6 +59,7 @@ build_script:
   - mingw32-make install
 # fixme: I don't know how to NOT make the binary installed to the ./bin/ folder...
   - cd bin
+  - copy C:\projects\cmake\bin\libKF5Archive.dll .
   - windeployqt --verbose=2 --no-quick-import --no-translations --no-opengl-sw --no-angle --no-system-d3d-compiler --release .\ppic.exe
 # for debug..
   - tree /f
