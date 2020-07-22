@@ -56,5 +56,5 @@ RESOURCES += \
     resources.qrc
 
 # Generate fron svg:
-# magick convert -background none ./app-icon.svg -define icon:auto-resize=64,48,32,16 app-icon.ico
+# magick convert -background none app-icon.svg -define icon:auto-resize="16,32,48,64,128,256" app-icon.ico
 RC_ICONS = icons/app-icon.ico
