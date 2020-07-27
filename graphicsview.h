@@ -30,7 +30,7 @@ public:
     void rotateView(qreal rotateAngel);
     void fitInView(const QRectF &rect, Qt::AspectRatioMode aspectRadioMode = Qt::IgnoreAspectRatio);
 
-    void checkAndDoFitInView();
+    void checkAndDoFitInView(bool markItOnAnyway = true);
 
 signals:
     void navigatorViewRequired(bool required, qreal angle);

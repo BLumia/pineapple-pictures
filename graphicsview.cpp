@@ -142,11 +142,15 @@ void GraphicsView::fitInView(const QRectF &rect, Qt::AspectRatioMode aspectRadio
     applyTransformationModeByScaleFactor();
 }
 
-void GraphicsView::checkAndDoFitInView()
+void GraphicsView::checkAndDoFitInView(bool markItOnAnyway)
 {
     if (!isThingSmallerThanWindowWith(transform())) {
         m_enableFitInView = true;
         fitInView(sceneRect(), Qt::KeepAspectRatio);
+    }
+
+    if (markItOnAnyway) {
+        m_enableFitInView = true;
     }
 }
 

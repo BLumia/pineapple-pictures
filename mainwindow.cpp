@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
     this->setAttribute(Qt::WA_TranslucentBackground, true);
-    this->setMinimumSize(710, 530);
+    this->setMinimumSize(350, 350);
     this->setWindowIcon(QIcon(":/icons/app-icon.svg"));
     this->setMouseTracking(true);
 
@@ -187,11 +187,11 @@ void MainWindow::adjustWindowSizeBySceneRect()
         QSize screenSize = qApp->screenAt(QCursor::pos())->availableSize();
         if (screenSize.expandedTo(sceneSize) == screenSize) {
             // we can show the picture by increase the window size.
-            if (screenSize.expandedTo(sceneSizeWithMargins) == screenSize) {
-                this->resize(sceneSizeWithMargins);
-            } else {
-                this->resize(screenSize);
-            }
+            QSize finalSize = (screenSize.expandedTo(sceneSizeWithMargins) == screenSize) ?
+                              sceneSizeWithMargins : screenSize;
+            // We have a very reasonable sizeHint() value ;P
+            this->resize(finalSize.expandedTo(this->sizeHint()));
+
             // We're sure the window can display the whole thing with 1:1 scale.
             // The old window size may cause fitInView call from resize() and the
             // above resize() call won't reset the scale back to 1:1, so we
@@ -557,6 +557,11 @@ bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, long *r
 #else
     return QMainWindow::nativeEvent(eventType, message, result);
 #endif // _WIN32
+}
+
+QSize MainWindow::sizeHint() const
+{
+    return QSize(710, 530);
 }
 
 void MainWindow::centerWindow()

@@ -50,6 +50,8 @@ protected slots:
 
     bool nativeEvent(const QByteArray& eventType, void* message, long* result) override;
 
+    QSize sizeHint() const override;
+
     void centerWindow();
     void closeWindow();
     void updateWidgetsPosition();
