@@ -33,7 +33,8 @@ SOURCES += \
     navigatorview.cpp \
     opacityhelper.cpp \
     toolbutton.cpp \
-	settings.cpp
+    settings.cpp \
+    settingsdialog.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -43,7 +44,8 @@ HEADERS += \
     navigatorview.h \
     opacityhelper.h \
     toolbutton.h \
-	settings.h
+    settings.h \
+    settingsdialog.h
 
 TRANSLATIONS = \
     languages/PineapplePictures.ts \

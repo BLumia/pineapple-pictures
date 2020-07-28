@@ -16,9 +16,9 @@ Settings *Settings::instance()
     return m_settings_instance;
 }
 
-bool Settings::alwaysOnTop()
+bool Settings::stayOnTop()
 {
-    return m_qsettings->value("always_on_top", true).toBool();
+    return m_qsettings->value("stay_on_top", true).toBool();
 }
 
 DoubleClickBehavior Settings::doubleClickBehavior()
@@ -26,6 +26,18 @@ DoubleClickBehavior Settings::doubleClickBehavior()
     QString result = m_qsettings->value("double_click_behavior", "close").toString().toLower();
 
     return stringToDoubleClickBehavior(result);
+}
+
+void Settings::setStayOnTop(bool on)
+{
+    m_qsettings->setValue("stay_on_top", on);
+    m_qsettings->sync();
+}
+
+void Settings::setDoubleClickBehavior(DoubleClickBehavior dcb)
+{
+    m_qsettings->setValue("double_click_behavior", doubleClickBehaviorToString(dcb));
+    m_qsettings->sync();
 }
 
 QString Settings::doubleClickBehaviorToString(DoubleClickBehavior dcb)

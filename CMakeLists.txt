@@ -20,6 +20,7 @@ set (PPIC_CPP_FILES
     opacityhelper.cpp
     toolbutton.cpp
     settings.cpp
+    settingsdialog.cpp
 )
 
 set (PPIC_HEADER_FILES
@@ -31,6 +32,7 @@ set (PPIC_HEADER_FILES
     opacityhelper.h
     toolbutton.h
     settings.h
+    settingsdialog.h
 )
 
 set (PPIC_QRC_FILES

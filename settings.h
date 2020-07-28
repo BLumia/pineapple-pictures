@@ -6,7 +6,10 @@
 enum DoubleClickBehavior {
     ActionDoNothing,
     ActionCloseWindow,
-    ActionMaximizeWindow
+    ActionMaximizeWindow,
+
+    ActionStart = ActionDoNothing,
+    ActionEnd = ActionMaximizeWindow
 };
 
 class Settings : public QObject
@@ -15,8 +18,11 @@ class Settings : public QObject
 public:
     static Settings *instance();
 
-    bool alwaysOnTop();
+    bool stayOnTop();
     DoubleClickBehavior doubleClickBehavior();
+
+    void setStayOnTop(bool on);
+    void setDoubleClickBehavior(DoubleClickBehavior dcb);
 
     static QString doubleClickBehaviorToString(DoubleClickBehavior dcb);
     static DoubleClickBehavior stringToDoubleClickBehavior(QString str);

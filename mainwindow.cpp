@@ -6,6 +6,7 @@
 #include "graphicsview.h"
 #include "navigatorview.h"
 #include "graphicsscene.h"
+#include "settingsdialog.h"
 
 #include <QMouseEvent>
 #include <QMovie>
@@ -28,7 +29,7 @@
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent)
 {
-    if (Settings::instance()->alwaysOnTop()) {
+    if (Settings::instance()->stayOnTop()) {
         this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
     } else {
         this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
@@ -445,12 +446,21 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     });
     stayOnTopMode->setCheckable(true);
     stayOnTopMode->setChecked(stayOnTop());
+
     QAction * protectedMode = new QAction(tr("Protected mode"));
     connect(protectedMode, &QAction::triggered, this, [ = ](){
         toggleProtectedMode();
     });
     protectedMode->setCheckable(true);
     protectedMode->setChecked(m_protectedMode);
+
+    QAction * toggleSettings = new QAction(tr("Configure..."));
+    connect(toggleSettings, &QAction::triggered, this, [ = ](){
+        SettingsDialog * sd = new SettingsDialog(this);
+        sd->exec();
+        sd->deleteLater();
+    });
+
     QAction * helpAction = new QAction(tr("Help"));
     connect(helpAction, &QAction::triggered, this, [ = ](){
         QStringList sl {
@@ -478,6 +488,7 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     menu->addAction(stayOnTopMode);
     menu->addAction(protectedMode);
     menu->addSeparator();
+    menu->addAction(toggleSettings);
     menu->addAction(helpAction);
     menu->exec(mapToGlobal(event->pos()));
     menu->deleteLater();
