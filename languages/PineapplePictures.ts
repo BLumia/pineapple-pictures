@@ -12,7 +12,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../graphicsview.cpp" line="243"/>
+        <location filename="../graphicsview.cpp" line="247"/>
         <source>File url list is empty</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22,12 +22,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="251"/>
+        <location filename="../graphicsview.cpp" line="255"/>
         <source>Image data is invalid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="258"/>
+        <location filename="../graphicsview.cpp" line="262"/>
         <source>Not supported mimedata: %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40,69 +40,69 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="382"/>
+        <location filename="../mainwindow.cpp" line="396"/>
         <source>&amp;Copy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="403"/>
+        <location filename="../mainwindow.cpp" line="417"/>
         <source>Copy P&amp;ixmap</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="408"/>
+        <location filename="../mainwindow.cpp" line="422"/>
         <source>Copy &amp;File Path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="418"/>
+        <location filename="../mainwindow.cpp" line="432"/>
         <source>&amp;Paste Image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="424"/>
+        <location filename="../mainwindow.cpp" line="438"/>
         <source>&amp;Paste Image File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="429"/>
-        <location filename="../mainwindow.cpp" line="448"/>
+        <location filename="../mainwindow.cpp" line="443"/>
+        <location filename="../mainwindow.cpp" line="462"/>
         <source>Stay on top</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="435"/>
         <location filename="../mainwindow.cpp" line="449"/>
+        <location filename="../mainwindow.cpp" line="463"/>
         <source>Protected mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="441"/>
+        <location filename="../mainwindow.cpp" line="455"/>
         <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="444"/>
+        <location filename="../mainwindow.cpp" line="458"/>
         <source>Launch application with image file path as argument to load the file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="445"/>
+        <location filename="../mainwindow.cpp" line="459"/>
         <source>Drag and drop image file onto the window is also supported.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="447"/>
+        <location filename="../mainwindow.cpp" line="461"/>
         <source>Context menu option explanation:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="448"/>
+        <location filename="../mainwindow.cpp" line="462"/>
         <source>Make window stay on top of all other windows.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="449"/>
+        <location filename="../mainwindow.cpp" line="463"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
         <translation type="unfinished"></translation>
     </message>

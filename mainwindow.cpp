@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 
+#include "settings.h"
 #include "toolbutton.h"
 #include "bottombuttongroup.h"
 #include "graphicsview.h"
@@ -27,7 +28,12 @@
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent)
 {
-    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+    if (Settings::instance()->alwaysOnTop()) {
+        this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+    } else {
+        this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    }
+
     this->setAttribute(Qt::WA_TranslucentBackground, true);
     this->setMinimumSize(350, 350);
     this->setWindowIcon(QIcon(":/icons/app-icon.svg"));
@@ -101,13 +107,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(m_bottomButtonGroup, &BottomButtonGroup::resetToOriginalBtnClicked,
             this, [ = ](){ m_graphicsView->resetScale(); });
     connect(m_bottomButtonGroup, &BottomButtonGroup::toggleWindowMaximum,
-            this, [ = ](){
-        if (isMaximized()) {
-            showNormal();
-        } else {
-            showMaximized();
-        }
-    });
+            this, &MainWindow::toggleMaximize);
     connect(m_bottomButtonGroup, &BottomButtonGroup::zoomInBtnClicked,
             this, [ = ](){ m_graphicsView->zoomView(1.25); });
     connect(m_bottomButtonGroup, &BottomButtonGroup::zoomOutBtnClicked,
@@ -325,7 +325,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 
 void MainWindow::mouseMoveEvent(QMouseEvent *event)
 {
-    if (event->buttons() & Qt::LeftButton && m_clickedOnWindow) {
+    if (event->buttons() & Qt::LeftButton && m_clickedOnWindow && !isMaximized()) {
         move(event->globalPos() - m_oldMousePos);
         event->accept();
     }
@@ -342,9 +342,22 @@ void MainWindow::mouseReleaseEvent(QMouseEvent *event)
 
 void MainWindow::mouseDoubleClickEvent(QMouseEvent *event)
 {
-    quitAppAction();
+    switch (Settings::instance()->doubleClickBehavior()) {
+    case ActionCloseWindow:
+        quitAppAction();
+        event->accept();
+        break;
+    case ActionMaximizeWindow:
+        toggleMaximize();
+        event->accept();
+        break;
+    case ActionDoNothing:
+        break;
+    }
 
-    return QMainWindow::mouseDoubleClickEvent(event);
+    // blumia: don't call parent constructor here, seems it will cause mouse move
+    //         event get called even if we set event->accept();
+    // return QMainWindow::mouseDoubleClickEvent(event);
 }
 
 void MainWindow::wheelEvent(QWheelEvent *event)
@@ -629,5 +642,14 @@ void MainWindow::toggleFullscreen()
         showNormal();
     } else {
         showFullScreen();
+    }
+}
+
+void MainWindow::toggleMaximize()
+{
+    if (isMaximized()) {
+        showNormal();
+    } else {
+        showMaximized();
     }
 }

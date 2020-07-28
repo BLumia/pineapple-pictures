@@ -19,6 +19,7 @@ set (PPIC_CPP_FILES
     navigatorview.cpp
     opacityhelper.cpp
     toolbutton.cpp
+    settings.cpp
 )
 
 set (PPIC_HEADER_FILES
@@ -29,6 +30,7 @@ set (PPIC_HEADER_FILES
     navigatorview.h
     opacityhelper.h
     toolbutton.h
+    settings.h
 )
 
 set (PPIC_QRC_FILES

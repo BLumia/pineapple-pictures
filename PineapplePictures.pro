@@ -32,7 +32,8 @@ SOURCES += \
     graphicsscene.cpp \
     navigatorview.cpp \
     opacityhelper.cpp \
-    toolbutton.cpp
+    toolbutton.cpp \
+	settings.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -41,7 +42,8 @@ HEADERS += \
     graphicsscene.h \
     navigatorview.h \
     opacityhelper.h \
-    toolbutton.h
+    toolbutton.h \
+	settings.h
 
 TRANSLATIONS = \
     languages/PineapplePictures.ts \
