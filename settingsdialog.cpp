@@ -41,7 +41,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
         Settings::instance()->setDoubleClickBehavior(static_cast<DoubleClickBehavior>(index));
     });
 
-    setMinimumSize(200,50); // FIXME: use minimumSizeHint() instead?
+    this->setMinimumSize(300, 61); // not sure why it complain "Unable to set geometry"
 }
 
 SettingsDialog::~SettingsDialog()
