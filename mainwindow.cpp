@@ -30,9 +30,9 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent)
 {
     if (Settings::instance()->stayOnTop()) {
-        this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+        this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint | Qt::WindowStaysOnTopHint);
     } else {
-        this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+        this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint);
     }
 
     this->setAttribute(Qt::WA_TranslucentBackground, true);
