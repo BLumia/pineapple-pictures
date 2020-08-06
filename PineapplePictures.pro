@@ -59,6 +59,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     resources.qrc
 
-# Generate fron svg:
+# Generate from svg:
 # magick convert -background none app-icon.svg -define icon:auto-resize="16,32,48,64,128,256" app-icon.ico
 RC_ICONS = icons/app-icon.ico
