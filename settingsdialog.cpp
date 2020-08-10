@@ -42,6 +42,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     });
 
     this->setMinimumSize(300, 61); // not sure why it complain "Unable to set geometry"
+    setWindowFlag(Qt::WindowContextHelpButtonHint, false);
 }
 
 SettingsDialog::~SettingsDialog()
