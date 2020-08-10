@@ -71,6 +71,10 @@ if (WIN32)
         TARGET ${EXE_NAME}
         PROPERTY WIN32_EXECUTABLE true
     )
+
+    target_compile_definitions(${EXE_NAME} PRIVATE
+        FLAG_PORTABLE_MODE_SUPPORT=1
+    )
 endif ()
 
 # Helper macros for install settings

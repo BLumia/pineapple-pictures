@@ -67,12 +67,14 @@ Settings::Settings()
 {
     QString configPath;
 
+#ifdef FLAG_PORTABLE_MODE_SUPPORT
     QString portableConfigDirPath = QDir(QCoreApplication::applicationDirPath()).absoluteFilePath("data");
     QFileInfo portableConfigDirInfo(portableConfigDirPath);
     if (portableConfigDirInfo.exists() && portableConfigDirInfo.isDir() && portableConfigDirInfo.isWritable()) {
         // we can use it.
         configPath = portableConfigDirPath;
     }
+#endif // FLAG_PORTABLE_MODE_SUPPORT
 
     // %LOCALAPPDATA% under Windows.
     if (configPath.isEmpty()) {
