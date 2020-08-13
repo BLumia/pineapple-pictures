@@ -3,6 +3,7 @@ project (pineapple-pictures)
 cmake_minimum_required (VERSION 3.9.5)
 
 include (GNUInstallDirs)
+include (FeatureSummary)
 
 set (CMAKE_AUTOMOC ON)
 set (CMAKE_AUTORCC ON)
@@ -75,6 +76,45 @@ if (WIN32)
     target_compile_definitions(${EXE_NAME} PRIVATE
         FLAG_PORTABLE_MODE_SUPPORT=1
     )
+endif ()
+
+# Helper macros for parsing and setting project version from `git describe --long` result
+macro (ppic_set_version_via_describe _describe_long)
+    string (
+        REGEX REPLACE
+        "^([0-9a-z.]*)-[0-9]+-g[0-9a-f]*$"
+        "\\1"
+        _tag_parts
+        "${_describe_long}"
+    )
+    list (GET _tag_parts 0 _matched_tag_version)
+    if ("${_matched_tag_version}" MATCHES "^[0-9]+\\.[0-9]+\\.[0-9]+$")
+        string (
+            REGEX REPLACE
+            "^([0-9]+)\\.([0-9]+)\\.([0-9]+).*$"
+            "\\1;\\2;\\3"
+            _ver_parts
+            "${_matched_tag_version}"
+        )
+        list (GET _ver_parts 0 CPACK_PACKAGE_VERSION_MAJOR)
+        list (GET _ver_parts 1 CPACK_PACKAGE_VERSION_MINOR)
+        list (GET _ver_parts 2 CPACK_PACKAGE_VERSION_PATCH)
+    endif ()
+endmacro ()
+
+# Version setup
+if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
+    find_package(Git)
+    set_package_properties(Git PROPERTIES TYPE OPTIONAL PURPOSE "Determine exact build version.")
+    if (GIT_FOUND)
+        execute_process (
+            COMMAND ${GIT_EXECUTABLE} describe --tags --always --long
+            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+            OUTPUT_VARIABLE _git_describe_long
+        )
+        string (REGEX REPLACE "\n" "" _git_describe_long "${_git_describe_long}")
+        ppic_set_version_via_describe(${_git_describe_long})
+    endif ()
 endif ()
 
 # Helper macros for install settings

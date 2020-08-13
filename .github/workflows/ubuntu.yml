@@ -17,4 +17,8 @@ jobs:
         cd build
         cmake ../
         make
-        sudo cpack
+        cpack -G DEB
+    - uses: actions/upload-artifact@v2
+      with:
+        name: ubuntu-20.04-deb-package
+        path: build/*.deb
