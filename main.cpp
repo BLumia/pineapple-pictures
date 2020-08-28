@@ -37,6 +37,14 @@ int main(int argc, char *argv[])
     QList<QUrl> urlList;
     for (const QString & str : urlStrList) {
         QUrl url = QUrl::fromLocalFile(str);
+#ifdef Q_OS_WIN
+        // TODO: remove this workaround when M$ change the "wsl$" hostname.
+        if (Q_UNLIKELY(str.startsWith(R"(\\wsl$\)"))) {
+            url.clear();
+            url.setScheme(QStringLiteral("qtbug-86277"));
+            url.setPath(str);
+        }
+#endif // Q_OS_WIN
         if (url.isValid()) {
             urlList.append(url);
         }
