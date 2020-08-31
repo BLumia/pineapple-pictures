@@ -238,9 +238,20 @@ void MainWindow::loadGalleryBySingleLocalFile(const QString &path)
     clearGallery();
 
     for (int i = 0; i < entryList.count(); i++) {
-        const QString & oneEntry = entryList.at(i);
-        m_files.append(QUrl::fromLocalFile(dir.absoluteFilePath(oneEntry)));
-        if (oneEntry == currentFileName) {
+        const QString & fileName = entryList.at(i);
+        const QString & oneEntry = dir.absoluteFilePath(fileName);
+        QUrl url = QUrl::fromLocalFile(oneEntry);
+#ifdef Q_OS_WIN
+        // TODO: remove this workaround when M$ change the "wsl$" hostname.
+        // Qt will convert path "\\wsl$\" to "//wsl$/"...
+        if (Q_UNLIKELY(oneEntry.startsWith(R"(//wsl$/)"))) {
+            url.clear();
+            url.setScheme(QStringLiteral("qtbug-86277"));
+            url.setPath(oneEntry);
+        }
+#endif // Q_OS_WIN
+        m_files.append(url);
+        if (fileName == currentFileName) {
             m_currentFileIndex = i;
         }
     }
