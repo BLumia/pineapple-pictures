@@ -152,6 +152,12 @@ elseif (UNIX)
         FILES pineapple-pictures.desktop
         DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
     )
+
+    # install app metadata file for appstream (and some other stuff using this metadata like snapcraft)
+    install (
+        FILES dist/appstream/net.blumia.pineapple-pictures.appdata.xml
+        DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/metainfo"
+    )
 endif()
 
 set (INSTALL_TARGETS_DEFAULT_ARGS

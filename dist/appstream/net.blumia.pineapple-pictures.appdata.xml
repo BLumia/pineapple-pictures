@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>net.blumia.pineapple-pictures</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>Pineapple Pictures</name>
+  <name xml:lang="zh-CN">菠萝看图</name>
+  <summary>图像查看器</summary>
+  <description>
+    <p>Pineapple Pictures is a lightweight image viewer</p>
+    <p xml:lang="zh-CN">菠萝看图是一个轻量级的图像查看器</p>
+  </description>
+  <url type="homepage">https://github.com/BLumia/pineapple-pictures</url>
+  <url type="bugtracker">https://github.com/BLumia/pineapple-pictures/issues</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=$YOURBINARYNAME</url>
+  <provides>
+    <binary>ppic</binary>
+  </provides>
+</component>
