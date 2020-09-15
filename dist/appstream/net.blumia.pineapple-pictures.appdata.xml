@@ -5,14 +5,14 @@
   <project_license>GPL-3.0+</project_license>
   <name>Pineapple Pictures</name>
   <name xml:lang="zh-CN">菠萝看图</name>
-  <summary>图像查看器</summary>
+  <summary>Image Viewer</summary>
+  <summary xml:lang="zh-CN">图像查看器</summary>
   <description>
-    <p>Pineapple Pictures is a lightweight image viewer</p>
-    <p xml:lang="zh-CN">菠萝看图是一个轻量级的图像查看器</p>
+    <p>Pineapple Pictures is a lightweight and easy to use image viewer, comes with a handy navigation thumbnail when zoom-in, and doesn't contains any image management support.</p>
+    <p xml:lang="zh-CN">菠萝看图是一个轻量级易用的图像查看器，在图片放大时提供了方便的鸟瞰导航功能，且不包含任何图片管理功能。</p>
   </description>
   <url type="homepage">https://github.com/BLumia/pineapple-pictures</url>
   <url type="bugtracker">https://github.com/BLumia/pineapple-pictures/issues</url>
-  <url type="donation">https://www.kde.org/community/donations/?app=$YOURBINARYNAME</url>
   <provides>
     <binary>ppic</binary>
   </provides>
