@@ -149,7 +149,7 @@ elseif (UNIX)
 
     # install shortcut
     install (
-        FILES pineapple-pictures.desktop
+        FILES dist/net.blumia.pineapple-pictures.desktop
         DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
     )
 
