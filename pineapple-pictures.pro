@@ -4,11 +4,9 @@
 #
 #-------------------------------------------------
 
-QT       += core gui svg
+QT       += core widgets gui svg
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
-TARGET = PineapplePictures
+TARGET = ppic
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -62,3 +60,8 @@ RESOURCES += \
 # Generate from svg:
 # magick convert -background none app-icon.svg -define icon:auto-resize="16,32,48,64,128,256" app-icon.ico
 RC_ICONS = icons/app-icon.ico
+
+# Windows only, for rc file (we're not going to use the .rc file in this repo)
+QMAKE_TARGET_PRODUCT = Pineapple Pictures
+QMAKE_TARGET_DESCRIPTION = Pineapple Pictures - Image Viewer
+QMAKE_TARGET_COPYRIGHT = MIT/Expat License - Copyright (C) 2020 Gary Wang
