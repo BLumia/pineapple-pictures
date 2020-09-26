@@ -24,7 +24,9 @@ GraphicsScene::~GraphicsScene()
 void GraphicsScene::showImage(const QPixmap &pixmap)
 {
     this->clear();
-    m_theThing = this->addPixmap(pixmap);
+    QGraphicsPixmapItem * pixmapItem = this->addPixmap(pixmap);
+    pixmapItem->setShapeMode(QGraphicsPixmapItem::BoundingRectShape);
+    m_theThing = pixmapItem;
     this->setSceneRect(m_theThing->boundingRect());
 }
 
