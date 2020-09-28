@@ -24,37 +24,47 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="35"/>
+        <location filename="../aboutdialog.cpp" line="28"/>
+        <source>Make window stay on top of all other windows.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="30"/>
+        <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="37"/>
         <source>Built with Qt %1 (%2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="36"/>
+        <location filename="../aboutdialog.cpp" line="38"/>
         <source>Source code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="40"/>
+        <location filename="../aboutdialog.cpp" line="42"/>
         <source>&lt;p&gt;&lt;i&gt;%1&lt;/i&gt; is released under the MIT License.&lt;/p&gt;&lt;p&gt;This license grants people a number of freedoms:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;You are free to use &lt;i&gt;%1&lt;/i&gt;, for any purpose&lt;/li&gt;&lt;li&gt;You are free to distribute &lt;i&gt;%1&lt;/i&gt;&lt;/li&gt;&lt;li&gt;You can study how &lt;i&gt;%1&lt;/i&gt; works and change it&lt;/li&gt;&lt;li&gt;You can distribute changed versions of &lt;i&gt;%1&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="53"/>
+        <location filename="../aboutdialog.cpp" line="55"/>
         <source>Your Rights</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="88"/>
+        <location filename="../aboutdialog.cpp" line="90"/>
         <source>&amp;Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="89"/>
+        <location filename="../aboutdialog.cpp" line="91"/>
         <source>&amp;About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="90"/>
+        <location filename="../aboutdialog.cpp" line="92"/>
         <source>&amp;License</source>
         <translation type="unfinished"></translation>
     </message>
@@ -129,7 +139,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="28"/>
+        <location filename="../aboutdialog.cpp" line="29"/>
         <location filename="../mainwindow.cpp" line="462"/>
         <source>Protected mode</source>
         <translation type="unfinished"></translation>
@@ -142,19 +152,6 @@
     <message>
         <location filename="../mainwindow.cpp" line="476"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>QCoreApplication</name>
-    <message>
-        <location filename="../aboutdialog.cpp" line="27"/>
-        <source>Make window stay on top of all other windows.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../aboutdialog.cpp" line="28"/>
-        <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

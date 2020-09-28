@@ -24,8 +24,10 @@ AboutDialog::AboutDialog(QWidget *parent)
         tr("Drag and drop image file onto the window is also supported."),
         "",
         tr("Context menu option explanation:"),
-        ("* " + QCoreApplication::translate("MainWindow", "Stay on top") + " : " + tr("Make window stay on top of all other windows.")),
-        ("* " + QCoreApplication::translate("MainWindow", "Protected mode") + " : " + tr("Avoid close window accidentally. (eg. by double clicking the window)"))
+        ("* " + QCoreApplication::translate("MainWindow", "Stay on top") + " : "
+              + this->tr("Make window stay on top of all other windows.")),
+        ("* " + QCoreApplication::translate("MainWindow", "Protected mode") + " : "
+              + this->tr("Avoid close window accidentally. (eg. by double clicking the window)"))
     };
 
     QStringList aboutStr {
