@@ -2,7 +2,6 @@
 #define SETTINGSDIALOG_H
 
 #include <QObject>
-#include <QWidget>
 #include <QDialog>
 
 class QCheckBox;

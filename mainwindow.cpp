@@ -7,6 +7,7 @@
 #include "navigatorview.h"
 #include "graphicsscene.h"
 #include "settingsdialog.h"
+#include "aboutdialog.h"
 
 #include <QMouseEvent>
 #include <QMovie>
@@ -474,15 +475,9 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
 
     QAction * helpAction = new QAction(tr("Help"));
     connect(helpAction, &QAction::triggered, this, [ = ](){
-        QStringList sl {
-            tr("Launch application with image file path as argument to load the file."),
-            tr("Drag and drop image file onto the window is also supported."),
-            "",
-            tr("Context menu option explanation:"),
-            (tr("Stay on top") + " : " + tr("Make window stay on top of all other windows.")),
-            (tr("Protected mode") + " : " + tr("Avoid close window accidentally. (eg. by double clicking the window)"))
-        };
-        m_graphicsView->showText(sl.join('\n'));
+        AboutDialog * ad = new AboutDialog(this);
+        ad->exec();
+        ad->deleteLater();
     });
 
     if (copyMenu->actions().count() == 1) {

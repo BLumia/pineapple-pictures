@@ -22,6 +22,7 @@ set (PPIC_CPP_FILES
     toolbutton.cpp
     settings.cpp
     settingsdialog.cpp
+    aboutdialog.cpp
 )
 
 set (PPIC_HEADER_FILES
@@ -34,6 +35,7 @@ set (PPIC_HEADER_FILES
     toolbutton.h
     settings.h
     settingsdialog.h
+    aboutdialog.h
 )
 
 set (PPIC_QRC_FILES

@@ -23,6 +23,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11 lrelease embed_translations
 
 SOURCES += \
+    aboutdialog.cpp \
         main.cpp \
         mainwindow.cpp \
     graphicsview.cpp \
@@ -35,6 +36,7 @@ SOURCES += \
     settingsdialog.cpp
 
 HEADERS += \
+    aboutdialog.h \
         mainwindow.h \
     graphicsview.h \
     bottombuttongroup.h \
