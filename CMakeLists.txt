@@ -116,6 +116,9 @@ if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
         )
         string (REGEX REPLACE "\n" "" _git_describe_long "${_git_describe_long}")
         ppic_set_version_via_describe(${_git_describe_long})
+        target_compile_definitions(${EXE_NAME} PRIVATE
+            GIT_DESCRIBE_VERSION_STRING="${_git_describe_long}"
+        )
     endif ()
 endif ()
 

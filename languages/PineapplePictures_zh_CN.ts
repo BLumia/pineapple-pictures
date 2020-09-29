@@ -35,36 +35,41 @@
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="37"/>
+        <source>Version: %1</source>
+        <translation>版本: %1</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="40"/>
         <source>Built with Qt %1 (%2)</source>
         <translation>使用 Qt %1 (%2) 进行构建</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="38"/>
+        <location filename="../aboutdialog.cpp" line="41"/>
         <source>Source code</source>
         <translation>源代码</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="42"/>
+        <location filename="../aboutdialog.cpp" line="45"/>
         <source>&lt;p&gt;&lt;i&gt;%1&lt;/i&gt; is released under the MIT License.&lt;/p&gt;&lt;p&gt;This license grants people a number of freedoms:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;You are free to use &lt;i&gt;%1&lt;/i&gt;, for any purpose&lt;/li&gt;&lt;li&gt;You are free to distribute &lt;i&gt;%1&lt;/i&gt;&lt;/li&gt;&lt;li&gt;You can study how &lt;i&gt;%1&lt;/i&gt; works and change it&lt;/li&gt;&lt;li&gt;You can distribute changed versions of &lt;i&gt;%1&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;i&gt;%1&lt;/i&gt; 是在 MIT 许可协议下发布的。&lt;/p&gt;&lt;p&gt;此许可证赋予人们以下自由的权利：&lt;/p&gt;&lt;ul&gt;&lt;li&gt;任何人都可以为了任何目的自由地使用 &lt;i&gt;%1&lt;/i&gt;&lt;/li&gt;&lt;li&gt;任何人都可以自由地分发 &lt;i&gt;%1&lt;/i&gt;&lt;/li&gt;&lt;li&gt;任何人都可以自由地研究 &lt;i&gt;%1&lt;/i&gt; 的工作原理并对其进行修改&lt;/li&gt;&lt;li&gt;任何人都可以自由地分发修改过的 &lt;i&gt;%1&lt;/i&gt; 版本&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;此软件通过 MIT 许可证赋予用户上述自由，任何人无权剥夺。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="55"/>
+        <location filename="../aboutdialog.cpp" line="58"/>
         <source>Your Rights</source>
         <translation>用户的权利</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="90"/>
+        <location filename="../aboutdialog.cpp" line="93"/>
         <source>&amp;Help</source>
         <translation>帮助(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="91"/>
+        <location filename="../aboutdialog.cpp" line="94"/>
         <source>&amp;About</source>
         <translation>关于(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="92"/>
+        <location filename="../aboutdialog.cpp" line="95"/>
         <source>&amp;License</source>
         <translation>软件许可证(&amp;L)</translation>
     </message>

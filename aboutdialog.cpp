@@ -33,6 +33,9 @@ AboutDialog::AboutDialog(QWidget *parent)
     QStringList aboutStr {
         QStringLiteral("<center><img width='128' height='128' src=':/icons/app-icon.svg'/><br/>"),
         qApp->applicationDisplayName(),
+#ifdef GIT_DESCRIBE_VERSION_STRING
+        (QStringLiteral("<br/>") + tr("Version: %1").arg(GIT_DESCRIBE_VERSION_STRING)),
+#endif // GIT_DESCRIBE_VERSION_STRING
         "<hr/>",
         tr("Built with Qt %1 (%2)").arg(QT_VERSION_STR, QSysInfo::buildCpuArchitecture()),
         QStringLiteral("<br/><a href='%1'>%2</a>").arg("https://github.com/BLumia/pineapple-pictures", tr("Source code")),
@@ -103,7 +106,7 @@ SOFTWARE.
 
     this->setLayout(mainLayout);
     this->setMinimumSize(361, 161); // not sure why it complain "Unable to set geometry"
-    this->resize(520, 320);
+    this->resize(520, 330);
     setWindowFlag(Qt::WindowContextHelpButtonHint, false);
 }
 
