@@ -195,7 +195,7 @@ set (CPACK_GENERATOR "TBZ2")
 set (CPACK_PACKAGE_NAME "pineapple-pictures")
 set (CPACK_PACKAGE_DESCRIPTION_SUMMARY "Yet another image viewer")
 set (CPACK_PACKAGE_VENDOR "Gary Wang")
-set (CPACK_PACKAGE_CONTACT "https://github.com/BLumia/PineapplePictures/issues/")
+set (CPACK_PACKAGE_CONTACT "https://github.com/BLumia/pineapple-pictures/issues/")
 if (WIN32)
     # ...
 elseif (APPLE)
