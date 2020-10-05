@@ -4,72 +4,157 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../aboutdialog.cpp" line="20"/>
+        <location filename="../aboutdialog.cpp" line="22"/>
         <source>About</source>
         <translation>关于</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="23"/>
+        <location filename="../aboutdialog.cpp" line="25"/>
         <source>Launch application with image file path as argument to load the file.</source>
         <translation>以图片文件的路径作为参数运行程序即可直接打开图片文件。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="24"/>
+        <location filename="../aboutdialog.cpp" line="26"/>
         <source>Drag and drop image file onto the window is also supported.</source>
         <translation>也支持拖放图片文件到窗口内来加载图片。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="26"/>
+        <location filename="../aboutdialog.cpp" line="27"/>
         <source>Context menu option explanation:</source>
         <translation>菜单项说明：</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="28"/>
+        <location filename="../aboutdialog.cpp" line="31"/>
         <source>Make window stay on top of all other windows.</source>
         <translation>使窗口始终至于其它非置顶窗口上方。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="30"/>
+        <location filename="../aboutdialog.cpp" line="35"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
         <translation>避免窗口意外关闭。（如：不小心双击了窗口触发了关闭窗口行为）</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="37"/>
+        <location filename="../aboutdialog.cpp" line="44"/>
         <source>Version: %1</source>
         <translation>版本: %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="40"/>
+        <location filename="../aboutdialog.cpp" line="47"/>
+        <source>Copyright (c) 2020 %1</source>
+        <translation>版权所有 (c) 2020 %1</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="49"/>
+        <source>Logo designed by %1</source>
+        <translation>Logo 由 %1 设计</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="51"/>
         <source>Built with Qt %1 (%2)</source>
         <translation>使用 Qt %1 (%2) 进行构建</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="41"/>
+        <location filename="../aboutdialog.cpp" line="52"/>
         <source>Source code</source>
         <translation>源代码</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="45"/>
-        <source>&lt;p&gt;&lt;i&gt;%1&lt;/i&gt; is released under the MIT License.&lt;/p&gt;&lt;p&gt;This license grants people a number of freedoms:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;You are free to use &lt;i&gt;%1&lt;/i&gt;, for any purpose&lt;/li&gt;&lt;li&gt;You are free to distribute &lt;i&gt;%1&lt;/i&gt;&lt;/li&gt;&lt;li&gt;You can study how &lt;i&gt;%1&lt;/i&gt; works and change it&lt;/li&gt;&lt;li&gt;You can distribute changed versions of &lt;i&gt;%1&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;i&gt;%1&lt;/i&gt; 是在 MIT 许可协议下发布的。&lt;/p&gt;&lt;p&gt;此许可证赋予人们以下自由的权利：&lt;/p&gt;&lt;ul&gt;&lt;li&gt;任何人都可以为了任何目的自由地使用 &lt;i&gt;%1&lt;/i&gt;&lt;/li&gt;&lt;li&gt;任何人都可以自由地分发 &lt;i&gt;%1&lt;/i&gt;&lt;/li&gt;&lt;li&gt;任何人都可以自由地研究 &lt;i&gt;%1&lt;/i&gt; 的工作原理并对其进行修改&lt;/li&gt;&lt;li&gt;任何人都可以自由地分发修改过的 &lt;i&gt;%1&lt;/i&gt; 版本&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;此软件通过 MIT 许可证赋予用户上述自由，任何人无权剥夺。&lt;/p&gt;</translation>
+        <location filename="../aboutdialog.cpp" line="58"/>
+        <source>Contributors</source>
+        <translation>贡献者</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="58"/>
+        <location filename="../aboutdialog.cpp" line="60"/>
+        <source>List of contributors on GitHub</source>
+        <translation>GitHub 上的贡献者列表</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="61"/>
+        <source>Thanks to all people who contributed to this project.</source>
+        <translation>感谢所有参与此项目的朋友。</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="65"/>
+        <source>Translators</source>
+        <translation>翻译者</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="66"/>
+        <source>I would like to thank the following people who volunteered to translate this application.</source>
+        <translation>我想要感谢下列自愿参与翻译此应用程序的朋友。</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="131"/>
+        <source>&amp;Special Thanks</source>
+        <translation>致谢(&amp;S)</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="133"/>
+        <source>&amp;Third-party Libraries</source>
+        <translation>第三方程序库(&amp;T)</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="72"/>
         <source>Your Rights</source>
         <translation>用户的权利</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="93"/>
+        <location filename="../aboutdialog.cpp" line="74"/>
+        <source>%1 is released under the MIT License.</source>
+        <translation>%1 是在 MIT 许可协议下发布的。</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="75"/>
+        <source>This license grants people a number of freedoms:</source>
+        <translation>此许可证赋予人们以下自由的权利：</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="76"/>
+        <source>You are free to use %1, for any purpose</source>
+        <translation>任何人都可以为了任何目的自由地使用 %1</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="77"/>
+        <source>You are free to distribute %1</source>
+        <translation>任何人都可以自由地分发 %1</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="78"/>
+        <source>You can study how %1 works and change it</source>
+        <translation>任何人都可以自由地研究 %1 的工作原理并对其进行修改</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="79"/>
+        <source>You can distribute changed versions of %1</source>
+        <translation>任何人都可以自由地分发修改过的 %1 版本</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="81"/>
+        <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
+        <translation>此软件通过 MIT 许可证赋予用户上述自由，任何人无权剥夺。</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="109"/>
+        <source>Third-party Libraries used by %1</source>
+        <translation>%1 使用的第三方程序库</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="110"/>
+        <source>%1 is built on the following free software libraries:</source>
+        <translation>%1 采用了下列自由软件程序库进行构建：</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="129"/>
         <source>&amp;Help</source>
         <translation>帮助(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="94"/>
+        <location filename="../aboutdialog.cpp" line="130"/>
         <source>&amp;About</source>
         <translation>关于(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="95"/>
+        <location filename="../aboutdialog.cpp" line="132"/>
         <source>&amp;License</source>
         <translation>软件许可证(&amp;L)</translation>
     </message>
@@ -118,10 +203,6 @@
         <translation>复制(&amp;C)</translation>
     </message>
     <message>
-        <source>Copy &amp;Pixmap</source>
-        <translation type="vanished">复制位图(&amp;P)</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="429"/>
         <source>Copy P&amp;ixmap</source>
         <translation>复制位图(&amp;I)</translation>
@@ -142,13 +223,13 @@
         <translation>粘贴图像文件(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="27"/>
+        <location filename="../aboutdialog.cpp" line="30"/>
         <location filename="../mainwindow.cpp" line="455"/>
         <source>Stay on top</source>
         <translation>总在最前</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="29"/>
+        <location filename="../aboutdialog.cpp" line="34"/>
         <location filename="../mainwindow.cpp" line="462"/>
         <source>Protected mode</source>
         <translation>保护模式</translation>
@@ -163,62 +244,36 @@
         <source>Help</source>
         <translation>帮助</translation>
     </message>
-    <message>
-        <source>Launch application with image file path as argument to load the file.</source>
-        <translation type="vanished">以图片文件的路径作为参数运行程序即可直接打开图片文件。</translation>
-    </message>
-    <message>
-        <source>Drag and drop image file onto the window is also supported.</source>
-        <translation type="vanished">也支持拖放图片文件到窗口内来加载图片。</translation>
-    </message>
-    <message>
-        <source>Context menu option explanation:</source>
-        <translation type="vanished">菜单项说明：</translation>
-    </message>
-    <message>
-        <source>Make window stay on top of all other windows.</source>
-        <translation type="vanished">使窗口始终至于其它非置顶窗口上方。</translation>
-    </message>
-    <message>
-        <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation type="vanished">避免窗口意外关闭。（如：不小心双击了窗口触发了关闭窗口行为）</translation>
-    </message>
-</context>
-<context>
-    <name>QCoreApplication</name>
-    <message>
-        <source>Make window stay on top of all other windows.</source>
-        <translation type="vanished">使窗口始终至于其它非置顶窗口上方。</translation>
-    </message>
-    <message>
-        <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation type="vanished">避免窗口意外关闭。（如：不小心双击了窗口触发了关闭窗口行为）</translation>
-    </message>
 </context>
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="18"/>
+        <location filename="../settingsdialog.cpp" line="15"/>
+        <source>Settings</source>
+        <translation>设定</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="20"/>
         <source>Do nothing</source>
         <translation>什么也不做</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="19"/>
+        <location filename="../settingsdialog.cpp" line="21"/>
         <source>Close the window</source>
         <translation>关闭窗口</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="20"/>
+        <location filename="../settingsdialog.cpp" line="22"/>
         <source>Toggle maximize</source>
         <translation>最大化窗口</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="28"/>
+        <location filename="../settingsdialog.cpp" line="30"/>
         <source>Stay on top when start-up</source>
         <translation>启动时保持窗口总在最前</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="29"/>
+        <location filename="../settingsdialog.cpp" line="31"/>
         <source>Double-click behavior</source>
         <translation>双击时的行为</translation>
     </message>

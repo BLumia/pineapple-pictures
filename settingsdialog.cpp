@@ -12,6 +12,8 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     , m_stayOnTop(new QCheckBox)
     , m_doubleClickBehavior(new QComboBox)
 {
+    this->setWindowTitle(tr("Settings"));
+
     QFormLayout * settingsForm = new QFormLayout(this);
 
     static QMap<DoubleClickBehavior, QString> _map {

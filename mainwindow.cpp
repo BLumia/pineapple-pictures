@@ -37,7 +37,7 @@ MainWindow::MainWindow(QWidget *parent) :
     }
 
     this->setAttribute(Qt::WA_TranslucentBackground, true);
-    this->setMinimumSize(350, 350);
+    this->setMinimumSize(350, 330);
     this->setWindowIcon(QIcon(":/icons/app-icon.svg"));
     this->setMouseTracking(true);
 

@@ -22,7 +22,9 @@ private:
 
     QTextBrowser * m_helpTextEdit = nullptr;
     QTextBrowser * m_aboutTextEdit = nullptr;
+    QTextBrowser * m_specialThanksTextEdit = nullptr;
     QTextBrowser * m_licenseTextEdit = nullptr;
+    QTextBrowser * m_3rdPartyLibsTextEdit = nullptr;
 };
 
 #endif // ABOUTDIALOG_H
