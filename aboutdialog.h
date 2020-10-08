@@ -14,7 +14,9 @@ class AboutDialog : public QDialog
     Q_OBJECT
 public:
     explicit AboutDialog(QWidget *parent = nullptr);
-    ~AboutDialog();
+    ~AboutDialog() override;
+
+    QSize sizeHint() const override;
 
 private:
     QTabWidget * m_tabWidget = nullptr;

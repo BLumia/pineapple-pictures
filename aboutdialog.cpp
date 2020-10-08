@@ -137,18 +137,21 @@ SOFTWARE.
         this->close();
     });
 
-    QVBoxLayout * mainLayout = new QVBoxLayout;
+    setLayout(new QVBoxLayout);
 
-    mainLayout->addWidget(m_tabWidget);
-    mainLayout->addWidget(m_buttonBox);
+    layout()->addWidget(m_tabWidget);
+    layout()->addWidget(m_buttonBox);
 
-    this->setLayout(mainLayout);
-    this->setMinimumSize(361, 161); // not sure why it complain "Unable to set geometry"
-    this->resize(520, 350);
+    setMinimumSize(361, 161); // not sure why it complain "Unable to set geometry"
     setWindowFlag(Qt::WindowContextHelpButtonHint, false);
 }
 
 AboutDialog::~AboutDialog()
 {
 
+}
+
+QSize AboutDialog::sizeHint() const
+{
+    return QSize(520, 350);
 }
