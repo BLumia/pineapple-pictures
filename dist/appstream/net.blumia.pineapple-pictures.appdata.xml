@@ -2,7 +2,7 @@
 <component type="desktop-application">
   <id>net.blumia.pineapple-pictures</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-3.0+</project_license>
+  <project_license>MIT</project_license>
   <name>Pineapple Pictures</name>
   <name xml:lang="zh-CN">菠萝看图</name>
   <summary>Image Viewer</summary>
