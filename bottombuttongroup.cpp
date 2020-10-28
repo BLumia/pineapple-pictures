@@ -33,7 +33,7 @@ BottomButtonGroup::BottomButtonGroup(QWidget *parent)
         QPushButton * btn = new QPushButton(QIcon(QStringLiteral(":/icons/") + text), "");
         btn->setIconSize(QSize(40, 40));
         btn->setFixedSize(40, 40);
-        connect(btn, &QAbstractButton::clicked, btn, func);
+        QObject::connect(btn, &QAbstractButton::clicked, btn, func);
         return btn;
     };
     addButton(newBtn("zoom-original", [this]() {
