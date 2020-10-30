@@ -8,6 +8,8 @@
 #include "graphicsscene.h"
 #include "settingsdialog.h"
 #include "aboutdialog.h"
+#include "metadatamodel.h"
+#include "metadatadialog.h"
 
 #include <QMouseEvent>
 #include <QMovie>
@@ -487,6 +489,17 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
         ad->deleteLater();
     });
 
+    QAction * propertiesAction = new QAction(tr("Properties"));
+    connect(propertiesAction, &QAction::triggered, this, [ = ](){
+        MetadataModel * md = new MetadataModel();
+        md->setFile(currentFileUrl.toLocalFile());
+
+        MetadataDialog * ad = new MetadataDialog(this);
+        ad->setMetadataModel(md);
+        ad->exec();
+        ad->deleteLater();
+    });
+
     if (copyMenu->actions().count() == 1) {
         menu->addActions(copyMenu->actions());
     } else {
@@ -503,6 +516,10 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     menu->addSeparator();
     menu->addAction(toggleSettings);
     menu->addAction(helpAction);
+    if (currentFileUrl.isValid()) {
+        menu->addSeparator();
+        menu->addAction(propertiesAction);
+    }
     menu->exec(mapToGlobal(event->pos()));
     menu->deleteLater();
 

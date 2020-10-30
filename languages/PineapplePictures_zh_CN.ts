@@ -193,56 +193,103 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="175"/>
+        <location filename="../mainwindow.cpp" line="178"/>
         <source>File url list is empty</source>
         <translation>文件 URL 列表为空</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="408"/>
+        <location filename="../mainwindow.cpp" line="417"/>
         <source>&amp;Copy</source>
         <translation>复制(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="429"/>
+        <location filename="../mainwindow.cpp" line="438"/>
         <source>Copy P&amp;ixmap</source>
         <translation>复制位图(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="434"/>
+        <location filename="../mainwindow.cpp" line="443"/>
         <source>Copy &amp;File Path</source>
         <translation>复制文件路径(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="444"/>
+        <location filename="../mainwindow.cpp" line="453"/>
         <source>&amp;Paste Image</source>
         <translation>粘贴图像(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="450"/>
+        <location filename="../mainwindow.cpp" line="459"/>
         <source>&amp;Paste Image File</source>
         <translation>粘贴图像文件(&amp;P)</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="492"/>
+        <source>Properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../aboutdialog.cpp" line="30"/>
-        <location filename="../mainwindow.cpp" line="455"/>
+        <location filename="../mainwindow.cpp" line="464"/>
         <source>Stay on top</source>
         <translation>总在最前</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="34"/>
-        <location filename="../mainwindow.cpp" line="462"/>
+        <location filename="../mainwindow.cpp" line="471"/>
         <source>Protected mode</source>
         <translation>保护模式</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="469"/>
+        <location filename="../mainwindow.cpp" line="478"/>
         <source>Configure...</source>
         <translation>设置...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="476"/>
+        <location filename="../mainwindow.cpp" line="485"/>
         <source>Help</source>
         <translation>帮助</translation>
+    </message>
+</context>
+<context>
+    <name>MetadataDialog</name>
+    <message>
+        <location filename="../metadatadialog.cpp" line="16"/>
+        <source>Image Metadata</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MetadataModel</name>
+    <message>
+        <location filename="../metadatamodel.cpp" line="29"/>
+        <source>General</source>
+        <comment>General info about the image, section name.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="32"/>
+        <source>File Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="34"/>
+        <source>File Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="36"/>
+        <source>Last Modified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="38"/>
+        <source>Image Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="46"/>
+        <source>%1 x %2</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

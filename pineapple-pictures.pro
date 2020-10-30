@@ -1,9 +1,3 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2019-09-26T23:36:07
-#
-#-------------------------------------------------
-
 QT       += core widgets gui svg
 
 TARGET = ppic
@@ -24,8 +18,8 @@ CONFIG += c++11 lrelease embed_translations
 
 SOURCES += \
     aboutdialog.cpp \
-        main.cpp \
-        mainwindow.cpp \
+    main.cpp \
+    mainwindow.cpp \
     graphicsview.cpp \
     bottombuttongroup.cpp \
     graphicsscene.cpp \
@@ -33,11 +27,13 @@ SOURCES += \
     opacityhelper.cpp \
     toolbutton.cpp \
     settings.cpp \
-    settingsdialog.cpp
+    settingsdialog.cpp \
+    metadatamodel.cpp \
+    metadatadialog.cpp
 
 HEADERS += \
     aboutdialog.h \
-        mainwindow.h \
+    mainwindow.h \
     graphicsview.h \
     bottombuttongroup.h \
     graphicsscene.h \
@@ -45,7 +41,9 @@ HEADERS += \
     opacityhelper.h \
     toolbutton.h \
     settings.h \
-    settingsdialog.h
+    settingsdialog.h \
+    metadatamodel.h \
+    metadatadialog.h
 
 TRANSLATIONS = \
     languages/PineapplePictures.ts \

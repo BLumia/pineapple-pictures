@@ -23,6 +23,8 @@ set (PPIC_CPP_FILES
     settings.cpp
     settingsdialog.cpp
     aboutdialog.cpp
+    metadatamodel.cpp
+    metadatadialog.cpp
 )
 
 set (PPIC_HEADER_FILES
@@ -36,6 +38,8 @@ set (PPIC_HEADER_FILES
     settings.h
     settingsdialog.h
     aboutdialog.h
+    metadatamodel.h
+    metadatadialog.h
 )
 
 set (PPIC_QRC_FILES
