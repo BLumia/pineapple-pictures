@@ -51,8 +51,15 @@ void GraphicsView::showFileFromUrl(const QUrl &url, bool doRequestGallery)
         // QImage::Format imageFormat = imageReader.imageFormat();
         if (imageReader.format().isEmpty()) {
             showText(tr("File is not a valid image"));
+        } else if (!imageReader.supportsAnimation() && !imageReader.canRead()) {
+            showText(tr("Image data is invalid or currently unsupported"));
         } else {
-            showImage(QPixmap::fromImageReader(&imageReader));
+            const QPixmap & pixmap = QPixmap::fromImageReader(&imageReader);
+            if (pixmap.isNull()) {
+                showText(tr("Image data is invalid or currently unsupported"));
+            } else {
+                showImage(pixmap);
+            }
         }
     }
 
