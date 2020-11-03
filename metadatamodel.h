@@ -13,6 +13,7 @@ public:
 
     void setFile(const QString & imageFilePath);
     static QString imageSize(const QSize &size);
+    static QString imageSizeRatio(const QSize &size);
     bool appendSection(const QString & sectionKey, const QString & sectionDisplayName);
     bool appendProperty(const QString & sectionKey, const QString & propertyKey,
                         const QString & propertyDisplayName, const QString & propertyValue = QString());

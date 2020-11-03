@@ -170,7 +170,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../graphicsview.cpp" line="254"/>
+        <location filename="../graphicsview.cpp" line="261"/>
         <source>File url list is empty</source>
         <translation type="unfinished"></translation>
     </message>
@@ -180,12 +180,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="262"/>
-        <source>Image data is invalid</source>
+        <location filename="../graphicsview.cpp" line="55"/>
+        <location filename="../graphicsview.cpp" line="59"/>
+        <source>Image data is invalid or currently unsupported</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="269"/>
+        <source>Image data is invalid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../graphicsview.cpp" line="276"/>
         <source>Not supported mimedata: %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -253,7 +259,7 @@
 <context>
     <name>MetadataDialog</name>
     <message>
-        <location filename="../metadatadialog.cpp" line="16"/>
+        <location filename="../metadatadialog.cpp" line="75"/>
         <source>Image Metadata</source>
         <translation type="unfinished"></translation>
     </message>
@@ -261,34 +267,110 @@
 <context>
     <name>MetadataModel</name>
     <message>
-        <location filename="../metadatamodel.cpp" line="29"/>
-        <source>General</source>
-        <comment>General info about the image, section name.</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../metadatamodel.cpp" line="32"/>
-        <source>File Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../metadatamodel.cpp" line="34"/>
-        <source>File Size</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../metadatamodel.cpp" line="36"/>
-        <source>Last Modified</source>
+        <source>Origin</source>
+        <comment>Section name.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="38"/>
-        <source>Image Size</source>
+        <source>Image</source>
+        <comment>Section name.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="46"/>
+        <location filename="../metadatamodel.cpp" line="44"/>
+        <source>File</source>
+        <comment>Section name.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="40"/>
+        <source>Camera</source>
+        <comment>Section name.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="27"/>
+        <source>%1 File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="35"/>
+        <source>Description</source>
+        <comment>Section name.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="41"/>
+        <source>Advanced photo</source>
+        <comment>Section name.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="42"/>
+        <source>GPS</source>
+        <comment>Section name.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="47"/>
+        <source>Dimensions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="49"/>
+        <source>Aspect Ratio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="52"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="54"/>
+        <source>Item type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="56"/>
+        <source>Folder path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="58"/>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="60"/>
+        <source>Date Created</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="62"/>
+        <source>Date Modified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="70"/>
         <source>%1 x %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="88"/>
+        <source>%1 : %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="204"/>
+        <source>Property</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="204"/>
+        <source>Value</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
