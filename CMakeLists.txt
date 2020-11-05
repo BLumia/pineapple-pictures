@@ -12,34 +12,34 @@ set (QT_MINIMUM_VERSION "5.10")
 find_package(Qt5 ${QT_MINIMUM_VERSION} CONFIG REQUIRED Widgets Svg LinguistTools)
 
 set (PPIC_CPP_FILES
-    main.cpp
-    mainwindow.cpp
-    graphicsview.cpp
-    graphicsscene.cpp
-    bottombuttongroup.cpp
-    navigatorview.cpp
-    opacityhelper.cpp
-    toolbutton.cpp
-    settings.cpp
-    settingsdialog.cpp
-    aboutdialog.cpp
-    metadatamodel.cpp
-    metadatadialog.cpp
+    app/main.cpp
+    app/mainwindow.cpp
+    app/graphicsview.cpp
+    app/graphicsscene.cpp
+    app/bottombuttongroup.cpp
+    app/navigatorview.cpp
+    app/opacityhelper.cpp
+    app/toolbutton.cpp
+    app/settings.cpp
+    app/settingsdialog.cpp
+    app/aboutdialog.cpp
+    app/metadatamodel.cpp
+    app/metadatadialog.cpp
 )
 
 set (PPIC_HEADER_FILES
-    mainwindow.h
-    graphicsview.h
-    graphicsscene.h
-    bottombuttongroup.h
-    navigatorview.h
-    opacityhelper.h
-    toolbutton.h
-    settings.h
-    settingsdialog.h
-    aboutdialog.h
-    metadatamodel.h
-    metadatadialog.h
+    app/mainwindow.h
+    app/graphicsview.h
+    app/graphicsscene.h
+    app/bottombuttongroup.h
+    app/navigatorview.h
+    app/opacityhelper.h
+    app/toolbutton.h
+    app/settings.h
+    app/settingsdialog.h
+    app/aboutdialog.h
+    app/metadatamodel.h
+    app/metadatadialog.h
 )
 
 set (PPIC_QRC_FILES
@@ -53,7 +53,7 @@ set (PPIC_RC_FILES
 set (EXE_NAME ppic)
 
 # Translation
-file (GLOB PPIC_TS_FILES languages/*.ts)
+file (GLOB PPIC_TS_FILES translations/*.ts)
 set (PPIC_CPP_FILES_FOR_I18N ${PPIC_CPP_FILES})
 
 qt5_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})

@@ -17,37 +17,37 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11 lrelease embed_translations
 
 SOURCES += \
-    aboutdialog.cpp \
-    main.cpp \
-    mainwindow.cpp \
-    graphicsview.cpp \
-    bottombuttongroup.cpp \
-    graphicsscene.cpp \
-    navigatorview.cpp \
-    opacityhelper.cpp \
-    toolbutton.cpp \
-    settings.cpp \
-    settingsdialog.cpp \
-    metadatamodel.cpp \
-    metadatadialog.cpp
+    app/aboutdialog.cpp \
+    app/main.cpp \
+    app/mainwindow.cpp \
+    app/graphicsview.cpp \
+    app/bottombuttongroup.cpp \
+    app/graphicsscene.cpp \
+    app/navigatorview.cpp \
+    app/opacityhelper.cpp \
+    app/toolbutton.cpp \
+    app/settings.cpp \
+    app/settingsdialog.cpp \
+    app/metadatamodel.cpp \
+    app/metadatadialog.cpp
 
 HEADERS += \
-    aboutdialog.h \
-    mainwindow.h \
-    graphicsview.h \
-    bottombuttongroup.h \
-    graphicsscene.h \
-    navigatorview.h \
-    opacityhelper.h \
-    toolbutton.h \
-    settings.h \
-    settingsdialog.h \
-    metadatamodel.h \
-    metadatadialog.h
+    app/aboutdialog.h \
+    app/mainwindow.h \
+    app/graphicsview.h \
+    app/bottombuttongroup.h \
+    app/graphicsscene.h \
+    app/navigatorview.h \
+    app/opacityhelper.h \
+    app/toolbutton.h \
+    app/settings.h \
+    app/settingsdialog.h \
+    app/metadatamodel.h \
+    app/metadatadialog.h
 
 TRANSLATIONS = \
-    languages/PineapplePictures.ts \
-    languages/PineapplePictures_zh_CN.ts
+    translations/PineapplePictures.ts \
+    translations/PineapplePictures_zh_CN.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
