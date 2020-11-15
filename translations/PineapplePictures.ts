@@ -84,12 +84,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/aboutdialog.cpp" line="131"/>
+        <location filename="../app/aboutdialog.cpp" line="134"/>
         <source>&amp;Special Thanks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/aboutdialog.cpp" line="133"/>
+        <location filename="../app/aboutdialog.cpp" line="136"/>
         <source>&amp;Third-party Libraries</source>
         <translation type="unfinished"></translation>
     </message>
@@ -144,17 +144,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/aboutdialog.cpp" line="129"/>
+        <location filename="../app/aboutdialog.cpp" line="132"/>
         <source>&amp;Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/aboutdialog.cpp" line="130"/>
+        <location filename="../app/aboutdialog.cpp" line="133"/>
         <source>&amp;About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/aboutdialog.cpp" line="132"/>
+        <location filename="../app/aboutdialog.cpp" line="135"/>
         <source>&amp;License</source>
         <translation type="unfinished"></translation>
     </message>
@@ -273,25 +273,25 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="38"/>
+        <location filename="../app/metadatamodel.cpp" line="37"/>
         <source>Image</source>
         <comment>Section name.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="44"/>
+        <location filename="../app/metadatamodel.cpp" line="43"/>
         <source>File</source>
         <comment>Section name.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="40"/>
+        <location filename="../app/metadatamodel.cpp" line="38"/>
         <source>Camera</source>
         <comment>Section name.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="27"/>
+        <location filename="../app/metadatamodel.cpp" line="28"/>
         <source>%1 File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -302,74 +302,119 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="41"/>
+        <location filename="../app/metadatamodel.cpp" line="39"/>
         <source>Advanced photo</source>
         <comment>Section name.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="42"/>
+        <location filename="../app/metadatamodel.cpp" line="41"/>
         <source>GPS</source>
         <comment>Section name.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="47"/>
+        <location filename="../app/metadatamodel.cpp" line="46"/>
         <source>Dimensions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="49"/>
+        <location filename="../app/metadatamodel.cpp" line="48"/>
         <source>Aspect Ratio</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="52"/>
+        <location filename="../app/metadatamodel.cpp" line="51"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="54"/>
+        <location filename="../app/metadatamodel.cpp" line="53"/>
         <source>Item type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="56"/>
+        <location filename="../app/metadatamodel.cpp" line="55"/>
         <source>Folder path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="58"/>
+        <location filename="../app/metadatamodel.cpp" line="57"/>
         <source>Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="60"/>
+        <location filename="../app/metadatamodel.cpp" line="59"/>
         <source>Date Created</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="62"/>
+        <location filename="../app/metadatamodel.cpp" line="61"/>
         <source>Date Modified</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="70"/>
+        <location filename="../app/metadatamodel.cpp" line="68"/>
+        <source>Comments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="71"/>
+        <source>Program name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="73"/>
+        <source>Colour representation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="75"/>
+        <source>Camera maker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="77"/>
+        <source>Camera model</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="79"/>
+        <source>ISO speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="81"/>
+        <source>Focal length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="83"/>
+        <source>Digital zoom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="85"/>
+        <source>EXIF version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="94"/>
         <source>%1 x %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="88"/>
+        <location filename="../app/metadatamodel.cpp" line="112"/>
         <source>%1 : %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="204"/>
+        <location filename="../app/metadatamodel.cpp" line="240"/>
         <source>Property</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="204"/>
+        <location filename="../app/metadatamodel.cpp" line="240"/>
         <source>Value</source>
         <translation type="unfinished"></translation>
     </message>

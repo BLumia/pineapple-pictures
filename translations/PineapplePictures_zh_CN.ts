@@ -84,12 +84,12 @@
         <translation>我想要感谢下列自愿参与翻译此应用程序的朋友。</translation>
     </message>
     <message>
-        <location filename="../app/aboutdialog.cpp" line="131"/>
+        <location filename="../app/aboutdialog.cpp" line="134"/>
         <source>&amp;Special Thanks</source>
         <translation>致谢(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../app/aboutdialog.cpp" line="133"/>
+        <location filename="../app/aboutdialog.cpp" line="136"/>
         <source>&amp;Third-party Libraries</source>
         <translation>第三方程序库(&amp;T)</translation>
     </message>
@@ -144,17 +144,17 @@
         <translation>%1 采用了下列自由软件程序库进行构建：</translation>
     </message>
     <message>
-        <location filename="../app/aboutdialog.cpp" line="129"/>
+        <location filename="../app/aboutdialog.cpp" line="132"/>
         <source>&amp;Help</source>
         <translation>帮助(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../app/aboutdialog.cpp" line="130"/>
+        <location filename="../app/aboutdialog.cpp" line="133"/>
         <source>&amp;About</source>
         <translation>关于(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../app/aboutdialog.cpp" line="132"/>
+        <location filename="../app/aboutdialog.cpp" line="135"/>
         <source>&amp;License</source>
         <translation>软件许可证(&amp;L)</translation>
     </message>
@@ -273,25 +273,25 @@
         <translation>来源</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="38"/>
+        <location filename="../app/metadatamodel.cpp" line="37"/>
         <source>Image</source>
         <comment>Section name.</comment>
         <translation>图像</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="44"/>
+        <location filename="../app/metadatamodel.cpp" line="43"/>
         <source>File</source>
         <comment>Section name.</comment>
         <translation>文件</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="40"/>
+        <location filename="../app/metadatamodel.cpp" line="38"/>
         <source>Camera</source>
         <comment>Section name.</comment>
         <translation>照相机</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="27"/>
+        <location filename="../app/metadatamodel.cpp" line="28"/>
         <source>%1 File</source>
         <translation>%1 文件</translation>
     </message>
@@ -302,74 +302,119 @@
         <translation>说明</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="41"/>
+        <location filename="../app/metadatamodel.cpp" line="39"/>
         <source>Advanced photo</source>
         <comment>Section name.</comment>
         <translation>高级照片</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="42"/>
+        <location filename="../app/metadatamodel.cpp" line="41"/>
         <source>GPS</source>
         <comment>Section name.</comment>
         <translation>GPS</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="47"/>
+        <location filename="../app/metadatamodel.cpp" line="46"/>
         <source>Dimensions</source>
         <translation>分辨率</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="49"/>
+        <location filename="../app/metadatamodel.cpp" line="48"/>
         <source>Aspect Ratio</source>
         <translation>纵横比</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="52"/>
+        <location filename="../app/metadatamodel.cpp" line="51"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="54"/>
+        <location filename="../app/metadatamodel.cpp" line="53"/>
         <source>Item type</source>
         <translation>项目类型</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="56"/>
+        <location filename="../app/metadatamodel.cpp" line="55"/>
         <source>Folder path</source>
         <translation>文件夹路径</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="58"/>
+        <location filename="../app/metadatamodel.cpp" line="57"/>
         <source>Size</source>
         <translation>大小</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="60"/>
+        <location filename="../app/metadatamodel.cpp" line="59"/>
         <source>Date Created</source>
         <translation>创建日期</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="62"/>
+        <location filename="../app/metadatamodel.cpp" line="61"/>
         <source>Date Modified</source>
         <translation>修改日期</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="70"/>
+        <location filename="../app/metadatamodel.cpp" line="68"/>
+        <source>Comments</source>
+        <translation>备注</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="71"/>
+        <source>Program name</source>
+        <translation>程序名称</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="73"/>
+        <source>Colour representation</source>
+        <translation>颜色表示</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="75"/>
+        <source>Camera maker</source>
+        <translation>照相机制造商</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="77"/>
+        <source>Camera model</source>
+        <translation>照相机型号</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="79"/>
+        <source>ISO speed</source>
+        <translation>ISO 速度</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="81"/>
+        <source>Focal length</source>
+        <translation>焦距</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="83"/>
+        <source>Digital zoom</source>
+        <translation>数字缩放</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="85"/>
+        <source>EXIF version</source>
+        <translation>EXIF 版本</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="94"/>
         <source>%1 x %2</source>
         <translation>%1 x %2</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="88"/>
+        <location filename="../app/metadatamodel.cpp" line="112"/>
         <source>%1 : %2</source>
         <translation>%1 : %2</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="204"/>
+        <location filename="../app/metadatamodel.cpp" line="240"/>
         <source>Property</source>
         <translation>属性</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="204"/>
+        <location filename="../app/metadatamodel.cpp" line="240"/>
         <source>Value</source>
         <translation>值</translation>
     </message>

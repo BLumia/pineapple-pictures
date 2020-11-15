@@ -21,8 +21,8 @@ build_script:
   - cinst ninja
 # build libexiv2
   - cd %LIBEXIV2_ROOT%
-  - curl -fsS -o v0.27.3.zip https://github.com/Exiv2/exiv2/archive/v0.27.3.zip
-  - 7z e v0.27.3.zip
+  - curl -fsSL -o v0.27.3.zip https://github.com/Exiv2/exiv2/archive/v0.27.3.zip
+  - 7z e v0.27.3.zip -y
   - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT%
   - cmake --build . --target install
   - tree /f
