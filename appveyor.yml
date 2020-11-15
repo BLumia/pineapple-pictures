@@ -1,6 +1,7 @@
 environment:
   CMAKE_INSTALL_ROOT: C:\projects\cmake
   ZLIB_ROOT: C:\projects\zlib
+  LIBEXIV2_ROOT: C:\projects\exiv2
   matrix:
     - build_name: mingw73_32_qt5_12_6
       QTPATH: C:\Qt\5.12.6\mingw73_32
@@ -9,6 +10,7 @@ environment:
 install:
   - mkdir %CMAKE_INSTALL_ROOT%
   - mkdir %ZLIB_ROOT%
+  - mkdir %LIBEXIV2_ROOT%
   - cd %APPVEYOR_BUILD_FOLDER%
   - git submodule update --init --recursive
   - set PATH=%PATH%;%CMAKE_INSTALL_ROOT%;%QTPATH%\bin;%MINGW32%\bin
@@ -17,6 +19,14 @@ build_script:
 # prepare
   - mkdir 3rdparty
   - cinst ninja
+# build libexiv2
+  - cd %LIBEXIV2_ROOT%
+  - curl -fsS -o v0.27.3.zip https://github.com/Exiv2/exiv2/archive/v0.27.3.zip
+  - 7z e v0.27.3.zip
+  - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT%
+  - cmake --build . --target install
+  - tree /f
+  - cd %APPVEYOR_BUILD_FOLDER%
 # install ECM so we can build KImageFormats
   - cd 3rdparty
   - git clone -q https://invent.kde.org/frameworks/extra-cmake-modules.git
@@ -54,12 +64,13 @@ build_script:
 # finally...
   - mkdir build
   - cd build
-  - cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=mingw32-make -DCMAKE_INSTALL_PREFIX='%cd%'
+  - cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=mingw32-make -DCMAKE_INSTALL_PREFIX='%cd%' -DEXIV2_METADATA_SUPPORT=OFF
   - mingw32-make
   - mingw32-make install
 # fixme: I don't know how to NOT make the binary installed to the ./bin/ folder...
   - cd bin
   - copy %APPVEYOR_BUILD_FOLDER%\LICENSE .
+  - copy %ZLIB_ROOT%\zlib1.dll .
   - copy C:\projects\cmake\bin\libKF5Archive.dll .
   - windeployqt --verbose=2 --no-quick-import --no-translations --no-opengl-sw --no-angle --no-system-d3d-compiler --release .\ppic.exe
 # for debug..
