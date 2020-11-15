@@ -9,8 +9,21 @@ set (CMAKE_AUTOMOC ON)
 set (CMAKE_AUTORCC ON)
 set (QT_MINIMUM_VERSION "5.10")
 
+option (EXIV2_METADATA_SUPPORT "Better image metadata support via libexiv2" ON)
+
 find_package(Qt5 ${QT_MINIMUM_VERSION} CONFIG REQUIRED Widgets Svg LinguistTools)
 
+if (EXIV2_METADATA_SUPPORT)
+    find_package(Exiv2)
+    set_package_properties(Exiv2 PROPERTIES
+        URL "https://www.exiv2.org"
+        DESCRIPTION "image metadata support"
+        TYPE OPTIONAL
+        PURPOSE "Bring better image metadata support"
+    )
+endif ()
+
+#LibExiv2_FOUND
 set (PPIC_CPP_FILES
     app/main.cpp
     app/mainwindow.cpp
@@ -25,6 +38,7 @@ set (PPIC_CPP_FILES
     app/aboutdialog.cpp
     app/metadatamodel.cpp
     app/metadatadialog.cpp
+    app/exiv2wrapper.cpp
 )
 
 set (PPIC_HEADER_FILES
@@ -40,6 +54,7 @@ set (PPIC_HEADER_FILES
     app/aboutdialog.h
     app/metadatamodel.h
     app/metadatadialog.h
+    app/exiv2wrapper.h
 )
 
 set (PPIC_QRC_FILES
@@ -71,6 +86,20 @@ add_executable (${EXE_NAME}
 )
 
 target_link_libraries (${EXE_NAME} Qt5::Widgets Qt5::Svg)
+
+if (Exiv2_FOUND)
+    message(INFO ${LibExiv2_INCLUDE_DIRS})
+    target_include_directories(${EXE_NAME}
+    PRIVATE
+        ${LibExiv2_INCLUDE_DIRS}
+    )
+    target_link_libraries (${EXE_NAME}
+        Exiv2
+    )
+    target_compile_definitions(${EXE_NAME} PRIVATE
+        HAVE_EXIV2_VERSION="${LibExiv2_VERSION}"
+    )
+endif ()
 
 # Extra build settings
 if (WIN32)
@@ -194,6 +223,8 @@ install (
     DESTINATION ${QM_FILE_INSTALL_DIR}
 )
 
+feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
+
 # CPACK: General Settings
 set (CPACK_GENERATOR "TBZ2")
 set (CPACK_PACKAGE_NAME "pineapple-pictures")
@@ -206,7 +237,7 @@ elseif (APPLE)
     # ...
 elseif (UNIX)
     set (CPACK_SYSTEM_NAME "${CMAKE_SYSTEM_NAME}-${CMAKE_SYSTEM_PROCESSOR}")
-    set (CPACK_DEBIAN_PACKAGE_DEPENDS "libqt5svg5")
+    set (CPACK_DEBIAN_PACKAGE_DEPENDS "libqt5svg5 libexiv2-14")
     set (CPACK_DEBIAN_PACKAGE_RECOMMENDS "kimageformat-plugins")
 endif()
 

@@ -109,6 +109,9 @@ SOFTWARE.
         QStringLiteral("<h1 align='center'><b>%1</b></h1>").arg(tr("Third-party Libraries used by %1")),
         tr("%1 is built on the following free software libraries:"),
         QStringLiteral("<ul>"),
+#ifdef HAVE_EXIV2_VERSION
+        QStringLiteral("<li><a href='%1'>%2</a>: %3</li>").arg("https://www.exiv2.org/", "Exiv2", "GPLv2"),
+#endif // EXIV2_VERSION
         QStringLiteral("<li><a href='%1'>%2</a>: %3</li>").arg("https://www.qt.io/", "Qt", "GPLv2 + GPLv3 + LGPLv2.1 + LGPLv3"),
         QStringLiteral("</ul>")
     };

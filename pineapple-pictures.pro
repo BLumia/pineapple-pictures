@@ -29,7 +29,8 @@ SOURCES += \
     app/settings.cpp \
     app/settingsdialog.cpp \
     app/metadatamodel.cpp \
-    app/metadatadialog.cpp
+    app/metadatadialog.cpp \
+    app/exiv2wrapper.cpp
 
 HEADERS += \
     app/aboutdialog.h \
@@ -43,7 +44,8 @@ HEADERS += \
     app/settings.h \
     app/settingsdialog.h \
     app/metadatamodel.h \
-    app/metadatadialog.h
+    app/metadatadialog.h \
+    app/exiv2wrapper.h
 
 TRANSLATIONS = \
     translations/PineapplePictures.ts \

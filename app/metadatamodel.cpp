@@ -1,4 +1,5 @@
 #include "metadatamodel.h"
+#include "exiv2wrapper.h"
 
 #include <QDebug>
 #include <QDateTime>
@@ -31,14 +32,12 @@ void MetadataModel::setFile(const QString &imageFilePath)
     const QString & imageDimensionsString = imageSize(imgReader.size());
     const QString & imageRatioString = imageSizeRatio(imgReader.size());
 
-#if 0
     appendSection(QStringLiteral("Description"), tr("Description", "Section name."));
     appendSection(QStringLiteral("Origin"), tr("Origin", "Section name."));
-#endif // 0
     appendSection(QStringLiteral("Image"), tr("Image", "Section name."));
-#if 0
     appendSection(QStringLiteral("Camera"), tr("Camera", "Section name."));
     appendSection(QStringLiteral("AdvancedPhoto"), tr("Advanced photo", "Section name."));
+#if 0
     appendSection(QStringLiteral("GPS"), tr("GPS", "Section name."));
 #endif // 0
     appendSection(QStringLiteral("File"), tr("File", "Section name."));
@@ -60,6 +59,31 @@ void MetadataModel::setFile(const QString &imageFilePath)
                    tr("Date Created"), birthTimeString);
     appendProperty(QStringLiteral("File"), QStringLiteral("File.LastModified"),
                    tr("Date Modified"), lastModifiedTimeString);
+
+    Exiv2Wrapper wrapper;
+    if (wrapper.load(imageFilePath)) {
+        wrapper.cacheSections();
+
+        appendProperty(QStringLiteral("Description"), QStringLiteral("Description.Comments"),
+                       tr("Comments"), wrapper.comment());
+
+        appendExivPropertyIfExist(wrapper, QStringLiteral("Origin"),
+                                  QStringLiteral("Exif.Image.Software"), tr("Program name"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("Image"),
+                                  QStringLiteral("Exif.Photo.ColorSpace"), tr("Colour representation"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
+                                  QStringLiteral("Exif.Image.Make"), tr("Camera maker"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
+                                  QStringLiteral("Exif.Image.Model"), tr("Camera model"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
+                                  QStringLiteral("Exif.Photo.ISOSpeedRatings"), tr("ISO speed"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
+                                  QStringLiteral("Exif.Photo.FocalLength"), tr("Focal length"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
+                                  QStringLiteral("Exif.Photo.DigitalZoomRatio"), tr("Digital zoom"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
+                                  QStringLiteral("Exif.Photo.ExifVersion"), tr("EXIF version"));
+    }
 }
 
 QString MetadataModel::imageSize(const QSize &size)
@@ -123,6 +147,18 @@ bool MetadataModel::updateProperty(const QString &propertyKey, const QString &pr
         return true;
     }
 
+    return false;
+}
+
+bool MetadataModel::appendExivPropertyIfExist(const Exiv2Wrapper &wrapper, const QString &sectionKey, const QString &exiv2propertyKey, const QString &propertyDisplayName)
+{
+    const QString & value = wrapper.value(exiv2propertyKey);
+    if (!value.isEmpty()) {
+        appendProperty(sectionKey, exiv2propertyKey,
+                       propertyDisplayName.isEmpty() ? wrapper.label(exiv2propertyKey) : propertyDisplayName,
+                       value);
+        return true;
+    }
     return false;
 }
 
