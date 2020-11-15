@@ -2,6 +2,8 @@ project (pineapple-pictures)
 
 cmake_minimum_required (VERSION 3.9.5)
 
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
+
 include (GNUInstallDirs)
 include (FeatureSummary)
 
@@ -14,8 +16,8 @@ option (EXIV2_METADATA_SUPPORT "Better image metadata support via libexiv2" ON)
 find_package(Qt5 ${QT_MINIMUM_VERSION} CONFIG REQUIRED Widgets Svg LinguistTools)
 
 if (EXIV2_METADATA_SUPPORT)
-    find_package(Exiv2)
-    set_package_properties(Exiv2 PROPERTIES
+    find_package(LibExiv2)
+    set_package_properties(LibExiv2 PROPERTIES
         URL "https://www.exiv2.org"
         DESCRIPTION "image metadata support"
         TYPE OPTIONAL
@@ -87,14 +89,14 @@ add_executable (${EXE_NAME}
 
 target_link_libraries (${EXE_NAME} Qt5::Widgets Qt5::Svg)
 
-if (Exiv2_FOUND)
+if (LibExiv2_FOUND)
     message(INFO ${LibExiv2_INCLUDE_DIRS})
     target_include_directories(${EXE_NAME}
     PRIVATE
         ${LibExiv2_INCLUDE_DIRS}
     )
     target_link_libraries (${EXE_NAME}
-        Exiv2
+        LibExiv2::LibExiv2
     )
     target_compile_definitions(${EXE_NAME} PRIVATE
         HAVE_EXIV2_VERSION="${LibExiv2_VERSION}"

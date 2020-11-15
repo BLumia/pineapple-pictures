@@ -11,7 +11,8 @@ Yet another image viewer.
 ## Get it!
 
  - [GitHub Release Page](https://github.com/BLumia/pineapple-pictures/releases)
- - Archlinux AUR: [pineapple-pictures-git](https://aur.archlinux.org/packages/pineapple-pictures-git/)
+ - Archlinux AUR: [pineapple-pictures](https://aur.archlinux.org/packages/pineapple-pictures/) | [pineapple-pictures-git](https://aur.archlinux.org/packages/pineapple-pictures-git/)
+ - Debian (sid / testing): `sudo apt install pineapple-pictures`
 
 ## Build it manually:
 
@@ -19,6 +20,7 @@ Current state, we need:
 
  - `cmake`: as the build system.
  - `qt5` with `qt5-svg` and `qt5-tools`: since the app is using Qt.
+ - `libexiv2`: able to display more image metadata. (optional, but recommended)
 
 Then we can build it with any proper c++ compiler like g++ or msvc.
 
@@ -31,6 +33,8 @@ $ cmake --build . # or simply using `make` if you are using Makefile as the cmak
 ```
 
 After that, a `ppic` executable file will be available to use. You can also optionally install it by using the target `install` (or simply `make install` in case you are using Makefile). After the build process, you can also use `cpack` to make a package.
+
+The project will try to build with `exiv2` when it's available at build time, if you would like to build the project without `exiv2`, pass `-DEXIV2_METADATA_SUPPORT=OFF` to `cmake`. The project will also not use `exiv2` if it's not found, the `EXIV2_METADATA_SUPPORT` option can be useful if you have `exiv2` but specifically don't want to use it.
 
 Image formats supports rely on Qt's imageformats plugins, just get the plugins you need from your distro's package manager will be fine. For Windows user, you may need build and install the imageformats plugin manually, read the content below.
 
@@ -64,4 +68,4 @@ Feel free to open up an issue to request a new language to translate.
 
 ## License
 
-This program released under MIT license
+Pineapple Pictures as a whole is licensed under MIT license. Individual files may have a different, but compatible license.
