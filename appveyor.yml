@@ -19,14 +19,6 @@ build_script:
 # prepare
   - mkdir 3rdparty
   - cinst ninja
-# build libexiv2
-  - cd %LIBEXIV2_ROOT%
-  - curl -fsSL -o v0.27.3.zip https://github.com/Exiv2/exiv2/archive/v0.27.3.zip
-  - 7z e v0.27.3.zip -y
-  - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT%
-  - cmake --build . --target install
-  - tree /f
-  - cd %APPVEYOR_BUILD_FOLDER%
 # install ECM so we can build KImageFormats
   - cd 3rdparty
   - git clone -q https://invent.kde.org/frameworks/extra-cmake-modules.git
@@ -40,13 +32,21 @@ build_script:
   - curl -fsS -o zlib128-dll.zip http://zlib.net/zlib128-dll.zip
   - 7z e zlib128-dll.zip
   - cd %APPVEYOR_BUILD_FOLDER%
+# build libexiv2
+  - cd %LIBEXIV2_ROOT%
+  - curl -fsSL -o v0.27.3.zip https://github.com/Exiv2/exiv2/archive/v0.27.3.zip
+  - 7z e v0.27.3.zip -y
+  - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXIV2_BUILD_SAMPLES=OFF -DCMAKE_CXX_FLAGS_RELEASE="-s"
+  - cmake --build . --target install
+  - tree /f
+  - cd %APPVEYOR_BUILD_FOLDER%
 # install KArchive for kra format support of KImageFormats
   - cd 3rdparty
   - git clone -q https://invent.kde.org/frameworks/karchive.git
   - cd karchive
   - mkdir build
   - cd build
-  - cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DCMAKE_MAKE_PROGRAM=mingw32-make -DZLIB_ROOT=%ZLIB_ROOT%
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DZLIB_ROOT=%ZLIB_ROOT%
 # -DCMAKE_PREFIX_PATH=%CMAKE_INSTALL_ROOT% 
   - cmake --build . --config Release
   - cmake --build . --config Release --target install
