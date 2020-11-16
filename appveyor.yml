@@ -80,8 +80,8 @@ build_script:
 # fixme: I don't know how to NOT make the binary installed to the ./bin/ folder...
   - cd bin
   - copy %APPVEYOR_BUILD_FOLDER%\LICENSE .
-  - copy %CMAKE_INSTALL_ROOT%\lib\libexpat.dll
-  - copy %CMAKE_INSTALL_ROOT%\lib\libexiv2.dll
+  - copy %CMAKE_INSTALL_ROOT%\bin\libexpat.dll
+  - copy %CMAKE_INSTALL_ROOT%\bin\libexiv2.dll
   - copy %ZLIB_ROOT%\zlib1.dll .
   - copy C:\projects\cmake\bin\libKF5Archive.dll .
   - windeployqt --verbose=2 --no-quick-import --no-translations --no-opengl-sw --no-angle --no-system-d3d-compiler --release .\ppic.exe
