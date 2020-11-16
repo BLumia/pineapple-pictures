@@ -30,6 +30,7 @@ void Exiv2Wrapper::cacheSection(Collection collection)
     Iterator it = exifData.begin(), end = exifData.end();
     for (; it != end; ++it) {
         QString key = QString::fromUtf8(it->key().c_str());
+        if (it->tagName().substr(0, 2) == "0x") continue;
         QString label = QString::fromLocal8Bit(it->tagLabel().c_str());
         std::ostringstream stream;
         stream << *it;

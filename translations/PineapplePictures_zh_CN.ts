@@ -355,66 +355,161 @@
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="68"/>
+        <source>Rating</source>
+        <translation>分级</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="70"/>
         <source>Comments</source>
         <translation>备注</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="71"/>
+        <location filename="../app/metadatamodel.cpp" line="73"/>
+        <source>Authors</source>
+        <translation>作者</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="75"/>
+        <source>Date taken</source>
+        <translation>拍摄日期</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="77"/>
         <source>Program name</source>
         <translation>程序名称</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="73"/>
+        <location filename="../app/metadatamodel.cpp" line="80"/>
+        <source>Horizontal resolution</source>
+        <translation>水平分辨率</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="82"/>
+        <source>Vertical resolution</source>
+        <translation>垂直分辨率</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="84"/>
+        <source>Resolution unit</source>
+        <translation>分辨率单位</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="86"/>
         <source>Colour representation</source>
         <translation>颜色表示</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="75"/>
+        <location filename="../app/metadatamodel.cpp" line="89"/>
         <source>Camera maker</source>
         <translation>照相机制造商</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="77"/>
+        <location filename="../app/metadatamodel.cpp" line="91"/>
         <source>Camera model</source>
         <translation>照相机型号</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="79"/>
+        <location filename="../app/metadatamodel.cpp" line="93"/>
+        <source>F-stop</source>
+        <translation>光圈值</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="95"/>
+        <source>Exposure time</source>
+        <translation>曝光时间</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="97"/>
         <source>ISO speed</source>
         <translation>ISO 速度</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="81"/>
+        <location filename="../app/metadatamodel.cpp" line="99"/>
+        <source>Exposure bias</source>
+        <translation>曝光补偿</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="101"/>
         <source>Focal length</source>
         <translation>焦距</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="83"/>
+        <location filename="../app/metadatamodel.cpp" line="103"/>
+        <source>Max aperture</source>
+        <translation>最大光圈</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="105"/>
+        <source>Metering mode</source>
+        <translation>测光模式</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="107"/>
+        <source>Flash mode</source>
+        <translation>闪光灯模式</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="109"/>
+        <source>35mm focal length</source>
+        <translation>35mm 焦距</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="112"/>
+        <source>Lens model</source>
+        <translation>镜头型号</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="114"/>
+        <source>Brightness</source>
+        <translation>亮度</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="116"/>
+        <source>Exposure program</source>
+        <translation>曝光程序</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="118"/>
+        <source>Saturation</source>
+        <translation>饱和度</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="120"/>
+        <source>Sharpness</source>
+        <translation>清晰度</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="122"/>
+        <source>White balance</source>
+        <translation>白平衡</translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="124"/>
         <source>Digital zoom</source>
         <translation>数字缩放</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="85"/>
+        <location filename="../app/metadatamodel.cpp" line="126"/>
         <source>EXIF version</source>
         <translation>EXIF 版本</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="94"/>
+        <location filename="../app/metadatamodel.cpp" line="135"/>
         <source>%1 x %2</source>
         <translation>%1 x %2</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="112"/>
+        <location filename="../app/metadatamodel.cpp" line="153"/>
         <source>%1 : %2</source>
         <translation>%1 : %2</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="240"/>
+        <location filename="../app/metadatamodel.cpp" line="288"/>
         <source>Property</source>
         <translation>属性</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="240"/>
+        <location filename="../app/metadatamodel.cpp" line="288"/>
         <source>Value</source>
         <translation>值</translation>
     </message>
