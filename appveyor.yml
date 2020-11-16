@@ -23,7 +23,7 @@ build_script:
   - cd 3rdparty
   - git clone -q https://invent.kde.org/frameworks/extra-cmake-modules.git
   - cd extra-cmake-modules
-  - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT%
+  - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DBUILD_TESTING=OFF
   - cmake --build .
   - cmake --build . --target install
   - cd %APPVEYOR_BUILD_FOLDER%
@@ -37,7 +37,7 @@ build_script:
   - curl -fsSL -o v0.27.3.zip https://github.com/Exiv2/exiv2/archive/v0.27.3.zip
   - 7z x v0.27.3.zip -y
   - cd exiv2-0.27.3
-  - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXIV2_BUILD_SAMPLES=OFF -DCMAKE_CXX_FLAGS_RELEASE="-s"
+  - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXIV2_BUILD_SAMPLES=OFF -DCMAKE_CXX_FLAGS_RELEASE="-s" -DZLIB_ROOT=%ZLIB_ROOT%
   - cmake --build . --target install
   - tree /f
   - cd %APPVEYOR_BUILD_FOLDER%
@@ -58,14 +58,14 @@ build_script:
   - cd kimageformats
   - mkdir build
   - cd build
-  - cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS_RELEASE="-s" -DCMAKE_MAKE_PROGRAM=mingw32-make -DQT_PLUGIN_INSTALL_DIR=%QTPATH%\plugins
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS_RELEASE="-s" -DQT_PLUGIN_INSTALL_DIR=%QTPATH%\plugins
   - cmake --build . --config Release
   - cmake --build . --config Release --target install
   - cd %APPVEYOR_BUILD_FOLDER%
 # finally...
   - mkdir build
   - cd build
-  - cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=mingw32-make -DCMAKE_INSTALL_PREFIX='%cd%' -DEXIV2_METADATA_SUPPORT=OFF
+  - cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS_RELEASE="-s" -DCMAKE_MAKE_PROGRAM=mingw32-make -DCMAKE_INSTALL_PREFIX='%cd%' -DEXIV2_METADATA_SUPPORT=OFF
   - mingw32-make
   - mingw32-make install
 # fixme: I don't know how to NOT make the binary installed to the ./bin/ folder...
