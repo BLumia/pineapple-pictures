@@ -1,6 +1,7 @@
 environment:
   CMAKE_INSTALL_ROOT: C:\projects\cmake
   ZLIB_ROOT: C:\projects\zlib
+  LIBEXPAT: C:\projects\libexpat
   LIBEXIV2_ROOT: C:\projects\exiv2
   matrix:
     - build_name: mingw73_32_qt5_12_6
@@ -10,6 +11,7 @@ environment:
 install:
   - mkdir %CMAKE_INSTALL_ROOT%
   - mkdir %ZLIB_ROOT%
+  - mkdir %LIBEXPAT%
   - mkdir %LIBEXIV2_ROOT%
   - cd %APPVEYOR_BUILD_FOLDER%
   - git submodule update --init --recursive
@@ -31,6 +33,15 @@ build_script:
   - cd %ZLIB_ROOT%
   - curl -fsS -o zlib128-dll.zip http://zlib.net/zlib128-dll.zip
   - 7z x zlib128-dll.zip
+  - cd %APPVEYOR_BUILD_FOLDER%
+# build libexpat for libexiv2
+  - cd %LIBEXPAT_ROOT%
+  - curl -fsSL -o R_2_2_10.zip https://github.com/libexpat/libexpat/archive/R_2_2_10.zip
+  - 7z x R_2_2_10.zip -y
+  - cd libexpat-R_2_2_10/expat/
+  - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s"
+  - cmake --build . --target install
+  - tree /f
   - cd %APPVEYOR_BUILD_FOLDER%
 # build libexiv2
   - cd %LIBEXIV2_ROOT%
