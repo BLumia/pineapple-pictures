@@ -41,7 +41,6 @@ build_script:
   - cd libexpat-R_2_2_10/expat/
   - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s"
   - cmake --build . --target install
-  - tree /f
   - cd %APPVEYOR_BUILD_FOLDER%
 # build libexiv2
   - cd %LIBEXIV2_ROOT%
@@ -50,7 +49,6 @@ build_script:
   - cd exiv2-0.27.3
   - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXIV2_BUILD_SAMPLES=OFF -DCMAKE_CXX_FLAGS_RELEASE="-s" -DZLIB_ROOT=%ZLIB_ROOT%
   - cmake --build . --target install
-  - tree /f
   - cd %APPVEYOR_BUILD_FOLDER%
 # install KArchive for kra format support of KImageFormats
   - cd 3rdparty
@@ -76,12 +74,14 @@ build_script:
 # finally...
   - mkdir build
   - cd build
-  - cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS_RELEASE="-s" -DCMAKE_MAKE_PROGRAM=mingw32-make -DCMAKE_INSTALL_PREFIX='%cd%' -DEXIV2_METADATA_SUPPORT=OFF
+  - cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS_RELEASE="-s" -DCMAKE_MAKE_PROGRAM=mingw32-make -DCMAKE_INSTALL_PREFIX='%cd%'
   - mingw32-make
   - mingw32-make install
 # fixme: I don't know how to NOT make the binary installed to the ./bin/ folder...
   - cd bin
   - copy %APPVEYOR_BUILD_FOLDER%\LICENSE .
+  - copy %CMAKE_INSTALL_ROOT%\lib\libexpat.dll
+  - copy %CMAKE_INSTALL_ROOT%\lib\libexiv2.dll
   - copy %ZLIB_ROOT%\zlib1.dll .
   - copy C:\projects\cmake\bin\libKF5Archive.dll .
   - windeployqt --verbose=2 --no-quick-import --no-translations --no-opengl-sw --no-angle --no-system-d3d-compiler --release .\ppic.exe
