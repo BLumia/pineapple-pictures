@@ -30,12 +30,12 @@ build_script:
 # download and install zlib for KArchive
   - cd %ZLIB_ROOT%
   - curl -fsS -o zlib128-dll.zip http://zlib.net/zlib128-dll.zip
-  - 7z e zlib128-dll.zip
+  - 7z x zlib128-dll.zip
   - cd %APPVEYOR_BUILD_FOLDER%
 # build libexiv2
   - cd %LIBEXIV2_ROOT%
   - curl -fsSL -o v0.27.3.zip https://github.com/Exiv2/exiv2/archive/v0.27.3.zip
-  - 7z e v0.27.3.zip -y
+  - 7z x v0.27.3.zip -y
   - cd exiv2-0.27.3
   - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXIV2_BUILD_SAMPLES=OFF -DCMAKE_CXX_FLAGS_RELEASE="-s"
   - cmake --build . --target install
