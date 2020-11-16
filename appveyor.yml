@@ -1,6 +1,7 @@
 environment:
   CMAKE_INSTALL_ROOT: C:\projects\cmake
   ZLIB_ROOT: C:\projects\zlib
+  LIBEXPAT: C:\projects\libexpat
   LIBEXIV2_ROOT: C:\projects\exiv2
   matrix:
     - build_name: mingw73_32_qt5_12_6
@@ -10,6 +11,7 @@ environment:
 install:
   - mkdir %CMAKE_INSTALL_ROOT%
   - mkdir %ZLIB_ROOT%
+  - mkdir %LIBEXPAT%
   - mkdir %LIBEXIV2_ROOT%
   - cd %APPVEYOR_BUILD_FOLDER%
   - git submodule update --init --recursive
@@ -19,26 +21,34 @@ build_script:
 # prepare
   - mkdir 3rdparty
   - cinst ninja
-# build libexiv2
-  - cd %LIBEXIV2_ROOT%
-  - curl -fsSL -o v0.27.3.zip https://github.com/Exiv2/exiv2/archive/v0.27.3.zip
-  - 7z e v0.27.3.zip -y
-  - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT%
-  - cmake --build . --target install
-  - tree /f
-  - cd %APPVEYOR_BUILD_FOLDER%
 # install ECM so we can build KImageFormats
   - cd 3rdparty
   - git clone -q https://invent.kde.org/frameworks/extra-cmake-modules.git
   - cd extra-cmake-modules
-  - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT%
+  - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DBUILD_TESTING=OFF
   - cmake --build .
   - cmake --build . --target install
   - cd %APPVEYOR_BUILD_FOLDER%
 # download and install zlib for KArchive
   - cd %ZLIB_ROOT%
   - curl -fsS -o zlib128-dll.zip http://zlib.net/zlib128-dll.zip
-  - 7z e zlib128-dll.zip
+  - 7z x zlib128-dll.zip
+  - cd %APPVEYOR_BUILD_FOLDER%
+# build libexpat for libexiv2
+  - cd %LIBEXPAT_ROOT%
+  - curl -fsSL -o R_2_2_10.zip https://github.com/libexpat/libexpat/archive/R_2_2_10.zip
+  - 7z x R_2_2_10.zip -y
+  - cd libexpat-R_2_2_10/expat/
+  - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s"
+  - cmake --build . --target install
+  - cd %APPVEYOR_BUILD_FOLDER%
+# build libexiv2
+  - cd %LIBEXIV2_ROOT%
+  - curl -fsSL -o v0.27.3.zip https://github.com/Exiv2/exiv2/archive/v0.27.3.zip
+  - 7z x v0.27.3.zip -y
+  - cd exiv2-0.27.3
+  - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXIV2_BUILD_SAMPLES=OFF -DCMAKE_CXX_FLAGS_RELEASE="-s" -DZLIB_ROOT=%ZLIB_ROOT%
+  - cmake --build . --target install
   - cd %APPVEYOR_BUILD_FOLDER%
 # install KArchive for kra format support of KImageFormats
   - cd 3rdparty
@@ -46,7 +56,7 @@ build_script:
   - cd karchive
   - mkdir build
   - cd build
-  - cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DCMAKE_MAKE_PROGRAM=mingw32-make -DZLIB_ROOT=%ZLIB_ROOT%
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DZLIB_ROOT=%ZLIB_ROOT%
 # -DCMAKE_PREFIX_PATH=%CMAKE_INSTALL_ROOT% 
   - cmake --build . --config Release
   - cmake --build . --config Release --target install
@@ -57,19 +67,21 @@ build_script:
   - cd kimageformats
   - mkdir build
   - cd build
-  - cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS_RELEASE="-s" -DCMAKE_MAKE_PROGRAM=mingw32-make -DQT_PLUGIN_INSTALL_DIR=%QTPATH%\plugins
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS_RELEASE="-s" -DQT_PLUGIN_INSTALL_DIR=%QTPATH%\plugins
   - cmake --build . --config Release
   - cmake --build . --config Release --target install
   - cd %APPVEYOR_BUILD_FOLDER%
 # finally...
   - mkdir build
   - cd build
-  - cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=mingw32-make -DCMAKE_INSTALL_PREFIX='%cd%' -DEXIV2_METADATA_SUPPORT=OFF
+  - cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS_RELEASE="-s" -DCMAKE_MAKE_PROGRAM=mingw32-make -DCMAKE_INSTALL_PREFIX='%cd%'
   - mingw32-make
   - mingw32-make install
 # fixme: I don't know how to NOT make the binary installed to the ./bin/ folder...
   - cd bin
   - copy %APPVEYOR_BUILD_FOLDER%\LICENSE .
+  - copy %CMAKE_INSTALL_ROOT%\bin\libexpat.dll
+  - copy %CMAKE_INSTALL_ROOT%\bin\libexiv2.dll
   - copy %ZLIB_ROOT%\zlib1.dll .
   - copy C:\projects\cmake\bin\libKF5Archive.dll .
   - windeployqt --verbose=2 --no-quick-import --no-translations --no-opengl-sw --no-angle --no-system-d3d-compiler --release .\ppic.exe
