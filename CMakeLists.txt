@@ -239,7 +239,7 @@ elseif (APPLE)
     # ...
 elseif (UNIX)
     set (CPACK_SYSTEM_NAME "${CMAKE_SYSTEM_NAME}-${CMAKE_SYSTEM_PROCESSOR}")
-    set (CPACK_DEBIAN_PACKAGE_DEPENDS "libqt5svg5, libexiv2-14")
+    set (CPACK_DEBIAN_PACKAGE_SHILIBDEPS ON)
     set (CPACK_DEBIAN_PACKAGE_RECOMMENDS "kimageformat-plugins")
 endif()
 
