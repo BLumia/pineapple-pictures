@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install Qt
-      uses: jurplel/install-qt-action@v2.2.1
+      uses: jurplel/install-qt-action@v2.10.0
     - name: Run a qt project
       run: |
         cmake ./
