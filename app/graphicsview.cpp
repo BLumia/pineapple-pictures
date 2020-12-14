@@ -52,11 +52,11 @@ void GraphicsView::showFileFromUrl(const QUrl &url, bool doRequestGallery)
         if (imageReader.format().isEmpty()) {
             showText(tr("File is not a valid image"));
         } else if (!imageReader.supportsAnimation() && !imageReader.canRead()) {
-            showText(tr("Image data is invalid or currently unsupported"));
+            showText(tr("Invalid or currently unsupported image data"));
         } else {
             const QPixmap & pixmap = QPixmap::fromImageReader(&imageReader);
             if (pixmap.isNull()) {
-                showText(tr("Image data is invalid or currently unsupported"));
+                showText(tr("Make sure the image is not damaged and that it has support"));
             } else {
                 showImage(pixmap);
             }
@@ -266,14 +266,14 @@ void GraphicsView::dropEvent(QDropEvent *event)
         QImage img = qvariant_cast<QImage>(mimeData->imageData());
         QPixmap pixmap = QPixmap::fromImage(img);
         if (pixmap.isNull()) {
-            showText(tr("Image data is invalid"));
+            showText(tr("Invalid image data"));
         } else {
             showImage(pixmap);
         }
     } else if (mimeData->hasText()) {
         showText(mimeData->text());
     } else {
-        showText(tr("Not supported mimedata: %1").arg(mimeData->formats().first()));
+        showText(tr("Unsupported media type: %1").arg(mimeData->formats().first()));
     }
 }
 
