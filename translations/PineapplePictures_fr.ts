@@ -11,7 +11,7 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="25"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation>Lancez l&apos;application avec le chemin du fichier image comme argument pour charger le fichier.</translation>
+        <translation>Lancer l&apos;application avec le chemin du fichier image comme argument pour charger le fichier.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="26"/>
@@ -26,12 +26,12 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="31"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation>Faites en sorte que la fenêtre reste au-dessus de toutes les autres fenêtres.</translation>
+        <translation>Faire en sorte que la fenêtre reste au-dessus de toutes les autres fenêtres.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="35"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation>Évitez de fermer la fenêtre accidentellement. (par exemple en cliquant deux fois sur la fenêtre)</translation>
+        <translation>Éviter de fermer la fenêtre accidentellement. (par exemple en cliquant deux fois sur la fenêtre)</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="44"/>
@@ -371,7 +371,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="75"/>
         <source>Date taken</source>
-        <translation>Date de prise</translation>
+        <translation>Date prise</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="77"/>
@@ -401,7 +401,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="89"/>
         <source>Camera maker</source>
-        <translation>Fabricant d&apos;appareils photo</translation>
+        <translation>Fabricant de l&apos;appareil photo</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="91"/>
@@ -529,12 +529,12 @@
     <message>
         <location filename="../app/settingsdialog.cpp" line="21"/>
         <source>Close the window</source>
-        <translation>Ferme la fenêtre</translation>
+        <translation>Fermer la fenêtre</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="22"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished">Activer/désactiver l&apos;agrandissement</translation>
+        <translation>Activer/désactiver l&apos;agrandissement</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="30"/>
