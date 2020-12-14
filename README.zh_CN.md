@@ -13,6 +13,11 @@
  - [GitHub Release 页面](https://github.com/BLumia/pineapple-pictures/releases) | [gitee 发布页面](https://gitee.com/blumia/pineapple-pictures/releases)
  - Archlinux AUR: [pineapple-pictures](https://aur.archlinux.org/packages/pineapple-pictures/) | [pineapple-pictures-git](https://aur.archlinux.org/packages/pineapple-pictures-git/)
  - Debian (sid / testing): `sudo apt install pineapple-pictures`
+ - [Itch.io 商店](https://blumia.itch.io/pineapple-pictures)
+
+## 帮助翻译!
+
+[在 Weblate 上帮助此项目翻译到更多语言!](https://hosted.weblate.org/projects/pineapple-pictures/)
 
 ## 手动构建步骤:
 
@@ -59,12 +64,6 @@ $ cmake --build . # 如果你使用 Makefile 作为 CMake 生成器，也可以�
 ### macOS
 
 由于我没有 mac 设备，故 macOS 暂时不受任何支持。不过我们目前有一个 GitHub Action 来执行 macOS 环境下的构建（见 `.github/workflows/macos.yml`）所以至少 macOS 下是可以顺利进行构建的。如果您想完善对 macOS 的支持，也欢迎您创建合并请求 ;P
-
-## 帮助翻译!
-
-[在 Transifex 上帮助此项目翻译到更多语言!](https://www.transifex.com/blumia/pineapple-pictures/)
-
-若 Transifex 上没有您所希望进行翻译的语言，请通过 Issue 的形式告诉我。
 
 ## 许可协议
 

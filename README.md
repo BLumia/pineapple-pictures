@@ -13,6 +13,11 @@ Yet another image viewer.
  - [GitHub Release Page](https://github.com/BLumia/pineapple-pictures/releases)
  - Archlinux AUR: [pineapple-pictures](https://aur.archlinux.org/packages/pineapple-pictures/) | [pineapple-pictures-git](https://aur.archlinux.org/packages/pineapple-pictures-git/)
  - Debian (sid / testing): `sudo apt install pineapple-pictures`
+ - [Itch.io Store](https://blumia.itch.io/pineapple-pictures)
+
+## Help Translation!
+
+[Translate this project on Weblate!](https://hosted.weblate.org/projects/pineapple-pictures/)
 
 ## Build it manually:
 
@@ -59,12 +64,6 @@ For the Windows binary I provided, kimageformats plugin is used (for formats lik
 ### macOS
 
 I don't have a mac, so no support at all. There is also a GitHub Action (see `.github/workflows/macos.yml`) running macOS build though so at least it can build. Feel free to submit a PR if you would like to give some love to the macOS build ;P
-
-## Help Translation!
-
-[Translate this project on Transifex!](https://www.transifex.com/blumia/pineapple-pictures/)
-
-Feel free to open up an issue to request a new language to translate.
 
 ## License
 
