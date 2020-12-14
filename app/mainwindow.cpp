@@ -175,7 +175,7 @@ void MainWindow::showUrls(const QList<QUrl> &urls)
             m_currentFileIndex = 0;
         }
     } else {
-        m_graphicsView->showText(tr("File url list is empty"));
+        m_graphicsView->showText(tr("The file URI list is empty"));
         return;
     }
 
@@ -246,8 +246,8 @@ void MainWindow::loadGalleryBySingleLocalFile(const QString &path)
         const QString & oneEntry = dir.absoluteFilePath(fileName);
         QUrl url = QUrl::fromLocalFile(oneEntry);
 #ifdef Q_OS_WIN
-        // TODO: remove this workaround when M$ change the "wsl$" hostname.
-        // Qt will convert path "\\wsl$\" to "//wsl$/"...
+        // TODO: remove this workaround when M$ changes the "wsl$" hostname.
+        // Qt will convert path the "\\wsl$\" to "//wsl$/"...
         if (Q_UNLIKELY(oneEntry.startsWith(R"(//wsl$/)"))) {
             url.clear();
             url.setScheme(QStringLiteral("qtbug-86277"));
@@ -388,7 +388,7 @@ void MainWindow::wheelEvent(QWheelEvent *event)
     bool needZoom = false, zoomIn = false;
 
     // NOTE: Only checking angleDelta since the QWheelEvent::pixelDelta() doc says
-    //       pixelDelta() value is driver specific and unreliable on X11...
+    //       pixelDelta() value is driver specific and unreliable on X11…
     //       We are not scrolling the canvas, just zoom in or out, so it probably
     //       doesn't matter here.
     if (!numDegrees.isNull() && numDegrees.y() != 0) {
@@ -475,7 +475,7 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     protectedMode->setCheckable(true);
     protectedMode->setChecked(m_protectedMode);
 
-    QAction * toggleSettings = new QAction(tr("Configure..."));
+    QAction * toggleSettings = new QAction(tr("Configure…"));
     connect(toggleSettings, &QAction::triggered, this, [ = ](){
         SettingsDialog * sd = new SettingsDialog(this);
         sd->exec();
