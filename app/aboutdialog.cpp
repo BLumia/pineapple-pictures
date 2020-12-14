@@ -79,7 +79,8 @@ AboutDialog::AboutDialog(QWidget *parent)
             tr("You can study how %1 works and change it"), // %5
             tr("You can distribute changed versions of %1") // %6
         ).arg(QStringLiteral("<i>%1</i>")),
-        QStringLiteral("<p>%1</p>").arg(tr("The MIT license grants you this freedom.")),
+        QStringLiteral("<p>%1</p>").arg(tr("The MIT license grants you these freedoms.")),
+
         QStringLiteral("<hr/><pre>%2</pre>")
     };
 
