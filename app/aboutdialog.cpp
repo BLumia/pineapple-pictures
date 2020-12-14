@@ -71,7 +71,8 @@ AboutDialog::AboutDialog(QWidget *parent)
     QStringList licenseStr {
         QStringLiteral("<h1 align='center'><b>%1</b></h1>").arg(tr("Your Rights")),
         QStringLiteral("<p>%1</p><p>%2</p><ul><li>%3</li><li>%4</li><li>%5</li><li>%6</li></ul>").arg(
-            tr("%1 is MIT Licensed."), // %1
+            tr("%1 is MIT licensed."), // %1
+
             tr("This license grants people a number of freedoms:"), // %2
             tr("You are free to use %1, for any purpose"), // %3
             tr("You are free to distribute %1"), // %4
