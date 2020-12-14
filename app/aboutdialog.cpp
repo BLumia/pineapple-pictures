@@ -22,9 +22,9 @@ AboutDialog::AboutDialog(QWidget *parent)
     this->setWindowTitle(tr("About"));
 
     QStringList helpStr {
-        QStringLiteral("<p>%1</p>").arg(tr("Launch application with image file path as argument to load the file.")),
-        QStringLiteral("<p>%1</p>").arg(tr("Drag and drop image file onto the window is also supported.")),
-        QStringLiteral("<p>%1</p>").arg(tr("Context menu option explanation:")),
+        QStringLiteral("<p>%1</p>").arg(tr("Launch the application using an image file path as an argument to load the file.")),
+        QStringLiteral("<p>%1</p>").arg(tr("Dragging and dropping image files onto the window is also supported.")),
+        QStringLiteral("<p>%1</p>").arg(tr("Explanation of context menu options:")),
         QStringLiteral("<ul>"),
         QStringLiteral("<li><b>%1</b>:<br/>%2</li>").arg(
             QCoreApplication::translate("MainWindow", "Stay on top"),
@@ -32,7 +32,7 @@ AboutDialog::AboutDialog(QWidget *parent)
         ),
         QStringLiteral("<li><b>%1</b>:<br/>%2</li>").arg(
             QCoreApplication::translate("MainWindow", "Protected mode"),
-            this->tr("Avoid close window accidentally. (eg. by double clicking the window)")
+            this->tr("Avoid close window accidentally. (e.g. by double-clicking the window)")
         ),
         QStringLiteral("</ul>")
     };
@@ -71,14 +71,14 @@ AboutDialog::AboutDialog(QWidget *parent)
     QStringList licenseStr {
         QStringLiteral("<h1 align='center'><b>%1</b></h1>").arg(tr("Your Rights")),
         QStringLiteral("<p>%1</p><p>%2</p><ul><li>%3</li><li>%4</li><li>%5</li><li>%6</li></ul>").arg(
-            tr("%1 is released under the MIT License."), // %1
+            tr("%1 is MIT Licensed."), // %1
             tr("This license grants people a number of freedoms:"), // %2
             tr("You are free to use %1, for any purpose"), // %3
             tr("You are free to distribute %1"), // %4
             tr("You can study how %1 works and change it"), // %5
             tr("You can distribute changed versions of %1") // %6
         ).arg(QStringLiteral("<i>%1</i>")),
-        QStringLiteral("<p>%1</p>").arg(tr("The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.")),
+        QStringLiteral("<p>%1</p>").arg(tr("The MIT license grants you this freedom.")),
         QStringLiteral("<hr/><pre>%2</pre>")
     };
 
@@ -106,8 +106,8 @@ SOFTWARE.
 )"));
 
     QStringList thirdPartyLibsStr {
-        QStringLiteral("<h1 align='center'><b>%1</b></h1>").arg(tr("Third-party Libraries used by %1")),
-        tr("%1 is built on the following free software libraries:"),
+        QStringLiteral("<h1 align='center'><b>%1</b></h1>").arg(tr("Third-party libraries used by %1")),
+        tr("%1 is built with the following libre software libraries:"),
         QStringLiteral("<ul>"),
 #ifdef HAVE_EXIV2_VERSION
         QStringLiteral("<li><a href='%1'>%2</a>: %3</li>").arg("https://www.exiv2.org/", "Exiv2", "GPLv2"),
