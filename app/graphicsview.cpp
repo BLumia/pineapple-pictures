@@ -258,7 +258,7 @@ void GraphicsView::dropEvent(QDropEvent *event)
     if (mimeData->hasUrls()) {
         const QList<QUrl> &urls = mimeData->urls();
         if (urls.isEmpty()) {
-            showText(tr("File url list is empty"));
+            showText(tr("The file URI list is empty"));
         } else {
             showFileFromUrl(urls.first(), true);
         }
