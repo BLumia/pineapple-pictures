@@ -50,7 +50,7 @@ void GraphicsView::showFileFromUrl(const QUrl &url, bool doRequestGallery)
         // So we cannot use imageFormat() and check if it returns QImage::Format_Invalid to detect if we support the file.
         // QImage::Format imageFormat = imageReader.imageFormat();
         if (imageReader.format().isEmpty()) {
-            showText(tr("File is not a valid image"));
+            showText(tr("The file is not a valid image"));
         } else if (!imageReader.supportsAnimation() && !imageReader.canRead()) {
             showText(tr("Invalid or currently unsupported image data"));
         } else {
