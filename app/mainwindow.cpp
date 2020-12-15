@@ -475,7 +475,8 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     protectedMode->setCheckable(true);
     protectedMode->setChecked(m_protectedMode);
 
-    QAction * toggleSettings = new QAction(tr("Configure…"));
+    QAction * toggleSettings = new QAction(tr("Configure..."));
+
     connect(toggleSettings, &QAction::triggered, this, [ = ](){
         SettingsDialog * sd = new SettingsDialog(this);
         sd->exec();

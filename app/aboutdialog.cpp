@@ -44,7 +44,8 @@ AboutDialog::AboutDialog(QWidget *parent)
         (QStringLiteral("<br/>") + tr("Version: %1").arg(GIT_DESCRIBE_VERSION_STRING)),
 #endif // GIT_DESCRIBE_VERSION_STRING
         QStringLiteral("<hr/>"),
-        tr("Copyright © 2020 %1").arg(QStringLiteral("<a href='https://github.com/BLumia'>@BLumia</a>")),
+        tr("Copyright (c) 2020 %1").arg(QStringLiteral("<a href='https://github.com/BLumia'>@BLumia</a>")),
+
         QStringLiteral("<br/>"),
         tr("Logo designed by %1").arg(QStringLiteral("<a href='https://github.com/Lovelyblack'>@Lovelyblack</a>")),
         QStringLiteral("<hr/>"),
@@ -108,7 +109,8 @@ SOFTWARE.
 )"));
 
     QStringList thirdPartyLibsStr {
-        QStringLiteral("<h1 align='center'><b>%1</b></h1>").arg(tr("Third-party libraries used by %1")),
+        QStringLiteral("<h1 align='center'><b>%1</b></h1>").arg(tr("Third-party Libraries Used by %1")),
+
         tr("%1 is built with the following libre software libraries:"),
         QStringLiteral("<ul>"),
 #ifdef HAVE_EXIV2_VERSION
