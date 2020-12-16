@@ -42,12 +42,12 @@ build_script:
   - cmake -G "Ninja" . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DEXPAT_BUILD_EXAMPLES=OFF -DEXPAT_BUILD_TESTS=OFF -DEXPAT_BUILD_TOOLS=OFF
   - cmake --build . --target install
   - cd %APPVEYOR_BUILD_FOLDER%
-# build libexiv2
+# build libexiv2 (-DEXIV2_ENABLE_XMP=ON will cause build failed on MinGW81_32)
   - cd %LIBEXIV2_ROOT%
   - curl -fsSL -o v0.27.3.zip https://github.com/Exiv2/exiv2/archive/v0.27.3.zip
   - 7z x v0.27.3.zip -y
   - cd exiv2-0.27.3
-  - cmake -G "Ninja" . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXIV2_BUILD_SAMPLES=OFF -DCMAKE_CXX_FLAGS_RELEASE="-s" -DZLIB_ROOT=%ZLIB_ROOT%
+  - cmake -G "Ninja" . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXIV2_BUILD_SAMPLES=OFF -DEXIV2_ENABLE_WIN_UNICODE=ON -DEXIV2_ENABLE_XMP=OFF -DCMAKE_CXX_FLAGS_RELEASE="-s" -DZLIB_ROOT=%ZLIB_ROOT%
   - cmake --build . --target install
   - cd %APPVEYOR_BUILD_FOLDER%
 # install KArchive for kra format support of KImageFormats
