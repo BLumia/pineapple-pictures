@@ -4,9 +4,9 @@ environment:
   LIBEXPAT: C:\projects\libexpat
   LIBEXIV2_ROOT: C:\projects\exiv2
   matrix:
-    - build_name: mingw73_32_qt5_12_6
-      QTPATH: C:\Qt\5.12.6\mingw73_32
-      MINGW32: C:\Qt\Tools\mingw730_32
+    - build_name: mingw81_32_qt5_15_2
+      QTPATH: C:\Qt\5.15.2\mingw81_32
+      MINGW32: C:\Qt\Tools\mingw810_32
 
 install:
   - mkdir %CMAKE_INSTALL_ROOT%
@@ -84,7 +84,7 @@ build_script:
   - copy %CMAKE_INSTALL_ROOT%\bin\libexiv2.dll
   - copy %ZLIB_ROOT%\zlib1.dll .
   - copy C:\projects\cmake\bin\libKF5Archive.dll .
-  - windeployqt --verbose=2 --no-quick-import --no-translations --no-opengl-sw --no-angle --no-system-d3d-compiler --release .\ppic.exe
+  - windeployqt --verbose=2 --no-quick-import --no-translations --no-opengl-sw --no-angle --no-system-d3d-compiler .\ppic.exe
 # for debug..
   - tree /f
 
