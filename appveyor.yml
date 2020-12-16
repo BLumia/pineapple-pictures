@@ -15,14 +15,11 @@ install:
   - mkdir %ZLIB_ROOT%
   - mkdir %LIBEXPAT%
   - mkdir %LIBEXIV2_ROOT%
-  - cd C:\Qt\Tools
-  - dir
-  - tree /f
   - cd %APPVEYOR_BUILD_FOLDER%
   - git submodule update --init --recursive
   - set PATH=%PATH%;%CMAKE_INSTALL_ROOT%;%QTPATH%\bin;%MINGW32%\bin
-  - set CC=%MINGW32%\bin\mingw32-gcc.exe
-  - set CXX=%MINGW32%\bin\mingw32-g++.exe
+  - set CC=%MINGW32%\bin\gcc.exe
+  - set CXX=%MINGW32%\bin\g++.exe
 
 build_script:
 # prepare
