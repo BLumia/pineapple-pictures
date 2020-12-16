@@ -16,8 +16,14 @@ install:
   - cd %APPVEYOR_BUILD_FOLDER%
   - git submodule update --init --recursive
   - set PATH=%PATH%;%CMAKE_INSTALL_ROOT%;%QTPATH%\bin;%MINGW32%\bin
+  - set CC=%MINGW32%\bin\mingw32-gcc.exe
+  - set CXX=%MINGW32%\bin\mingw32-g++.exe
 
 build_script:
+# debug
+  - cd C:\Qt\Tools\
+  - dir
+  - tree .
 # prepare
   - mkdir 3rdparty
   - cinst ninja
