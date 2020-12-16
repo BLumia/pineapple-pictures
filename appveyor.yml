@@ -1,3 +1,5 @@
+image:
+  - Visual Studio 2019
 environment:
   CMAKE_INSTALL_ROOT: C:\projects\cmake
   ZLIB_ROOT: C:\projects\zlib
@@ -18,6 +20,11 @@ install:
   - set PATH=%PATH%;%CMAKE_INSTALL_ROOT%;%QTPATH%\bin;%MINGW32%\bin
 
 build_script:
+  - cd C:\Qt\Tools\
+  - dir
+  - cd C:\Qt\5.15.2\
+  - dir
+  - tree /f
 # prepare
   - mkdir 3rdparty
   - cinst ninja
@@ -34,6 +41,17 @@ build_script:
   - curl -fsS -o zlib128-dll.zip http://zlib.net/zlib128-dll.zip
   - 7z x zlib128-dll.zip
   - cd %APPVEYOR_BUILD_FOLDER%
+# install KArchive for kra format support of KImageFormats
+  - cd 3rdparty
+  - git clone -q https://invent.kde.org/frameworks/karchive.git
+  - cd karchive
+  - mkdir build
+  - cd build
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DZLIB_ROOT=%ZLIB_ROOT%
+# -DCMAKE_PREFIX_PATH=%CMAKE_INSTALL_ROOT% 
+  - cmake --build . --config Release
+  - cmake --build . --config Release --target install
+  - cd %APPVEYOR_BUILD_FOLDER%
 # build libexpat for libexiv2
   - cd %LIBEXPAT_ROOT%
   - curl -fsSL -o R_2_2_10.zip https://github.com/libexpat/libexpat/archive/R_2_2_10.zip
@@ -49,17 +67,6 @@ build_script:
   - cd exiv2-0.27.3
   - cmake -G "Ninja" . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXIV2_BUILD_SAMPLES=OFF -DEXIV2_ENABLE_WIN_UNICODE=ON -DCMAKE_CXX_FLAGS_RELEASE="-s" -DZLIB_ROOT=%ZLIB_ROOT%
   - cmake --build . --target install
-  - cd %APPVEYOR_BUILD_FOLDER%
-# install KArchive for kra format support of KImageFormats
-  - cd 3rdparty
-  - git clone -q https://invent.kde.org/frameworks/karchive.git
-  - cd karchive
-  - mkdir build
-  - cd build
-  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DZLIB_ROOT=%ZLIB_ROOT%
-# -DCMAKE_PREFIX_PATH=%CMAKE_INSTALL_ROOT% 
-  - cmake --build . --config Release
-  - cmake --build . --config Release --target install
   - cd %APPVEYOR_BUILD_FOLDER%
 # install KImageFormats
   - cd 3rdparty
