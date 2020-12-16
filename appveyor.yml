@@ -6,9 +6,9 @@ environment:
   LIBEXPAT: C:\projects\libexpat
   LIBEXIV2_ROOT: C:\projects\exiv2
   matrix:
-    - build_name: mingw73_32_qt5_15_2
+    - build_name: mingw81_32_qt5_15_2
       QTPATH: C:\Qt\5.15.2\mingw81_32
-      MINGW32: C:\Qt\Tools\mingw730_32
+      MINGW32: C:\Qt\Tools\mingw810_32
 
 install:
   - mkdir %CMAKE_INSTALL_ROOT%
@@ -20,11 +20,6 @@ install:
   - set PATH=%PATH%;%CMAKE_INSTALL_ROOT%;%QTPATH%\bin;%MINGW32%\bin
 
 build_script:
-  - cd C:\Qt\Tools\
-  - dir
-  - cd C:\Qt\5.15.2\
-  - dir
-  - tree /f
 # prepare
   - mkdir 3rdparty
   - cinst ninja
@@ -47,8 +42,7 @@ build_script:
   - cd karchive
   - mkdir build
   - cd build
-  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DZLIB_ROOT=%ZLIB_ROOT%
-# -DCMAKE_PREFIX_PATH=%CMAKE_INSTALL_ROOT% 
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DZLIB_ROOT=%ZLIB_ROOT% 
   - cmake --build . --config Release
   - cmake --build . --config Release --target install
   - cd %APPVEYOR_BUILD_FOLDER%
