@@ -1,162 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr">
+<TS version="2.1" language="nb_NO">
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../app/aboutdialog.cpp" line="22"/>
         <source>About</source>
-        <translation>À propos</translation>
+        <translation>Om</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="25"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation>Lancer l&apos;application avec le chemin du fichier image comme argument pour charger le fichier.</translation>
+        <translation>Kjør programmer ved å angi en filsti som argument for å laste inn filen.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="26"/>
         <source>Drag and drop image file onto the window is also supported.</source>
-        <translation>Le glisser-déposer du fichier image sur la fenêtre est également pris en charge.</translation>
+        <translation>Å dra og slippe filen i vinduet støttes også.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="27"/>
         <source>Context menu option explanation:</source>
-        <translation>Explication des options du menu contextuel :</translation>
+        <translation>Forklaring av alternativer i bindeleddsmeny:</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="31"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation>Faire en sorte que la fenêtre reste au-dessus de toutes les autres fenêtres.</translation>
+        <translation>Få vinduet til å alltid ligge over andre vinduer.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="35"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation>Éviter de fermer la fenêtre accidentellement. (par exemple en cliquant deux fois sur la fenêtre)</translation>
+        <translation>Unngå lukking av vinduet ved feiltagelser (f.eks. ved dobbeltklikking av vinduet)</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="44"/>
         <source>Version: %1</source>
-        <translation>Version : %1</translation>
+        <translation>Versjon: %1</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="47"/>
         <source>Copyright (c) 2020 %1</source>
-        <translation>Copyright © 2020 %1</translation>
+        <translation>Opphavsrett © 2020 %1</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="49"/>
         <source>Logo designed by %1</source>
-        <translation>Logo conçu par %1</translation>
+        <translation>Logo designet av %1</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="51"/>
         <source>Built with Qt %1 (%2)</source>
-        <translation>Fait avec Qt %1 (%2)</translation>
+        <translation>Bygd med Qt %1 (%2)</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="52"/>
         <source>Source code</source>
-        <translation>Code source</translation>
+        <translation>Kildekode</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="58"/>
         <source>Contributors</source>
-        <translation>Contributeurs</translation>
+        <translation>Bidragsytere</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="60"/>
         <source>List of contributors on GitHub</source>
-        <translation>Liste des contributeurs sur GitHub</translation>
+        <translation>Liste over bidragsytere på GitHub</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="61"/>
         <source>Thanks to all people who contributed to this project.</source>
-        <translation>Merci à toutes les personnes qui ont contribué à ce projet.</translation>
+        <translation>Takk til alle som har bidratt til prosjektet.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="65"/>
         <source>Translators</source>
-        <translation>Traducteurs</translation>
+        <translation>Oversettere</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="66"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
-        <translation>Je tiens à remercier les personnes suivantes qui se sont portées volontaires pour traduire cette application.</translation>
+        <translation>Takk til følgende dugnadsoversettere.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="134"/>
         <source>&amp;Special Thanks</source>
-        <translation>&amp;Remerciement spécial</translation>
+        <translation>&amp;Spesiell takk til</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="136"/>
         <source>&amp;Third-party Libraries</source>
-        <translation>&amp;Bibliothèques tierces</translation>
+        <translation>&amp;Tredjepartslisenser</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="72"/>
         <source>Your Rights</source>
-        <translation>Vos droits</translation>
+        <translation>Dine rettigheter</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="74"/>
         <source>%1 is released under the MIT License.</source>
-        <translation>%1 est publié sous licence MIT.</translation>
+        <translation>%1 er MIT-lisensiert.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="75"/>
         <source>This license grants people a number of freedoms:</source>
-        <translation>Cette licence accorde aux personnes un certain nombre de libertés :</translation>
+        <translation>Lisensen gir den en rekke friheter:</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="76"/>
         <source>You are free to use %1, for any purpose</source>
-        <translation>Vous êtes libre d&apos;utiliser %1, dans n&apos;importe quel but</translation>
+        <translation>Du kan bruke %1 som du vil</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="77"/>
         <source>You are free to distribute %1</source>
-        <translation>Vous êtes libre de distribuer %1</translation>
+        <translation>Du kan dele %1</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="78"/>
         <source>You can study how %1 works and change it</source>
-        <translation>Vous pouvez étudier le fonctionnement de %1 et le modifier</translation>
+        <translation>Du kan se kildekoden til %1 og endre den</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="79"/>
         <source>You can distribute changed versions of %1</source>
-        <translation>Vous pouvez distribuer des versions modifiées de %1</translation>
+        <translation>Du kan distribuere endrede versjoner av %1</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="81"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
-        <translation>La licence MIT vous garantit cette liberté. Personne n&apos;est autorisé à l&apos;enlever.</translation>
+        <translation>MIT-lisensen garanterer deg disse frihetene.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="109"/>
         <source>Third-party Libraries used by %1</source>
-        <translation>Bibliothèques tierces utilisées par %1</translation>
+        <translation>Tredjepartsbibliotek brukt av %1</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="110"/>
         <source>%1 is built on the following free software libraries:</source>
-        <translation>%1 est basé sur les bibliothèques de logiciels libres suivantes :</translation>
+        <translation>%1 er bygd med følgende friprog-bibliotek:</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="132"/>
         <source>&amp;Help</source>
-        <translation>&amp;Aide</translation>
+        <translation>&amp;Hjelp</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="133"/>
         <source>&amp;About</source>
-        <translation>&amp;À propos</translation>
+        <translation>&amp;Om</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="135"/>
         <source>&amp;License</source>
-        <translation>&amp;Licence</translation>
+        <translation>&amp;Lisens</translation>
     </message>
 </context>
 <context>
@@ -164,7 +164,7 @@
     <message>
         <location filename="../app/graphicsscene.cpp" line="16"/>
         <source>Drag image here</source>
-        <translation>Faites glisser l&apos;image ici</translation>
+        <translation>Dra bilde hit</translation>
     </message>
 </context>
 <context>
@@ -172,28 +172,28 @@
     <message>
         <location filename="../app/graphicsview.cpp" line="261"/>
         <source>File url list is empty</source>
-        <translation>La liste des URL du fichier est vide</translation>
+        <translation>Listen over filnettadresser er tom</translation>
     </message>
     <message>
         <location filename="../app/graphicsview.cpp" line="53"/>
         <source>File is not a valid image</source>
-        <translation>Le fichier n&apos;est pas une image valide</translation>
+        <translation>Filen er ikke et gyldig bilde</translation>
     </message>
     <message>
         <location filename="../app/graphicsview.cpp" line="55"/>
         <location filename="../app/graphicsview.cpp" line="59"/>
         <source>Image data is invalid or currently unsupported</source>
-        <translation>Les données d&apos;image ne sont pas valides ou ne sont actuellement pas prises en charge</translation>
+        <translation>Ugyldig bildedata, eller for tiden ustøttet</translation>
     </message>
     <message>
         <location filename="../app/graphicsview.cpp" line="269"/>
         <source>Image data is invalid</source>
-        <translation>Les données d&apos;image ne sont pas valides</translation>
+        <translation>Ugyldig bildedata</translation>
     </message>
     <message>
         <location filename="../app/graphicsview.cpp" line="276"/>
         <source>Not supported mimedata: %1</source>
-        <translation>Mimedata non pris en charge : %1</translation>
+        <translation>Ustøttet MIME-data: %1</translation>
     </message>
 </context>
 <context>
@@ -201,59 +201,59 @@
     <message>
         <location filename="../app/mainwindow.cpp" line="178"/>
         <source>File url list is empty</source>
-        <translation>La liste des URL de fichiers est vide</translation>
+        <translation>Listen over filnettadresser er ugyldig</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="417"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Copier</translation>
+        <translation>&amp;Kopier</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="438"/>
         <source>Copy P&amp;ixmap</source>
-        <translation>Copier P&amp;ixmap</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="443"/>
         <source>Copy &amp;File Path</source>
-        <translation>Copier le &amp;chemin du fichier</translation>
+        <translation>Kopier %filsti</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="453"/>
         <source>&amp;Paste Image</source>
-        <translation>&amp;Coller l&apos;image</translation>
+        <translation>&amp;Lim inn bilde</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="459"/>
         <source>&amp;Paste Image File</source>
-        <translation>&amp;Coller le fichier d&apos;image</translation>
+        <translation>&amp;Lim inn bildefil</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="492"/>
         <source>Properties</source>
-        <translation>Propriétés</translation>
+        <translation>Egenskaper</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="30"/>
         <location filename="../app/mainwindow.cpp" line="464"/>
         <source>Stay on top</source>
-        <translation>Rester en-haut</translation>
+        <translation>Behold øverst</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="34"/>
         <location filename="../app/mainwindow.cpp" line="471"/>
         <source>Protected mode</source>
-        <translation>Mode protégé</translation>
+        <translation>Beskyttet modus</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="478"/>
         <source>Configure...</source>
-        <translation>Configurer…</translation>
+        <translation>Sett opp …</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="485"/>
         <source>Help</source>
-        <translation>Aide</translation>
+        <translation>Hjelp</translation>
     </message>
 </context>
 <context>
@@ -261,7 +261,7 @@
     <message>
         <location filename="../app/metadatadialog.cpp" line="75"/>
         <source>Image Metadata</source>
-        <translation>Métadonnées d&apos;image</translation>
+        <translation>Bilde-metadata</translation>
     </message>
 </context>
 <context>
@@ -270,42 +270,42 @@
         <location filename="../app/metadatamodel.cpp" line="36"/>
         <source>Origin</source>
         <comment>Section name.</comment>
-        <translation>Origine</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="37"/>
         <source>Image</source>
         <comment>Section name.</comment>
-        <translation>Image</translation>
+        <translation>Bilde</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="43"/>
         <source>File</source>
         <comment>Section name.</comment>
-        <translation>Fichier</translation>
+        <translation>Fil</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="38"/>
         <source>Camera</source>
         <comment>Section name.</comment>
-        <translation>Appareil photo</translation>
+        <translation>Kamera</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="28"/>
         <source>%1 File</source>
-        <translation>Fichier %1</translation>
+        <translation>%1-fil</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="35"/>
         <source>Description</source>
         <comment>Section name.</comment>
-        <translation>Description</translation>
+        <translation>Beskrivelse</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="39"/>
         <source>Advanced photo</source>
         <comment>Section name.</comment>
-        <translation>Photo avancée</translation>
+        <translation>Avansert bilde</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="41"/>
@@ -316,187 +316,187 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="46"/>
         <source>Dimensions</source>
-        <translation>Dimensions</translation>
+        <translation>Dimensjoner</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="48"/>
         <source>Aspect Ratio</source>
-        <translation>Rapport d&apos;aspect</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="51"/>
         <source>Name</source>
-        <translation>Nom</translation>
+        <translation>Navn</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="53"/>
         <source>Item type</source>
-        <translation>Type d&apos;élément</translation>
+        <translation>Elementstype</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="55"/>
         <source>Folder path</source>
-        <translation>Chemin du dossier</translation>
+        <translation>Mappesti</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="57"/>
         <source>Size</source>
-        <translation>Taille</translation>
+        <translation>Størrelse</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="59"/>
         <source>Date Created</source>
-        <translation>Date créée</translation>
+        <translation>Dato opprettet</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="61"/>
         <source>Date Modified</source>
-        <translation>Date modifiée</translation>
+        <translation>Dato endret</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="68"/>
         <source>Rating</source>
-        <translation>Évaluation</translation>
+        <translation>Vurdering</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="70"/>
         <source>Comments</source>
-        <translation>Commentaires</translation>
+        <translation>Kommentarer</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="73"/>
         <source>Authors</source>
-        <translation>Auteurs</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="75"/>
         <source>Date taken</source>
-        <translation>Date prise</translation>
+        <translation>Dato tatt</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="77"/>
         <source>Program name</source>
-        <translation>Nom du programme</translation>
+        <translation>Programnavn</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="80"/>
         <source>Horizontal resolution</source>
-        <translation>Résolution horizontale</translation>
+        <translation>Vannrett oppløsning</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="82"/>
         <source>Vertical resolution</source>
-        <translation>Résolution verticale</translation>
+        <translation>Loddrett oppløsning</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="84"/>
         <source>Resolution unit</source>
-        <translation>Unité de résolution</translation>
+        <translation>Oppløsningsenhet</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="86"/>
         <source>Colour representation</source>
-        <translation>Représentation des couleurs</translation>
+        <translation>Fargerepresentasjon</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="89"/>
         <source>Camera maker</source>
-        <translation>Fabricant de l&apos;appareil photo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="91"/>
         <source>Camera model</source>
-        <translation>Modèle d&apos;appareil photo</translation>
+        <translation>Kameramodell</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="93"/>
         <source>F-stop</source>
-        <translation>Nombre d&apos;ouverture</translation>
+        <translation>Blenderåpning</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="95"/>
         <source>Exposure time</source>
-        <translation>Temps d&apos;exposition</translation>
+        <translation>Eksponeringstid</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="97"/>
         <source>ISO speed</source>
-        <translation>Vitesse ISO</translation>
+        <translation>ISO-hastighet</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="99"/>
         <source>Exposure bias</source>
-        <translation>Biais d&apos;exposition</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="101"/>
         <source>Focal length</source>
-        <translation>Distance focale</translation>
+        <translation>Brennvidde</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="103"/>
         <source>Max aperture</source>
-        <translation>Ouverture maximale</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="105"/>
         <source>Metering mode</source>
-        <translation>Mode de mesure</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="107"/>
         <source>Flash mode</source>
-        <translation>Mode flash</translation>
+        <translation>Blitz-modus</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="109"/>
         <source>35mm focal length</source>
-        <translation>Distance focale de 35 mm</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="112"/>
         <source>Lens model</source>
-        <translation>Modèle d&apos;objectif</translation>
+        <translation>Linsemodell</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="114"/>
         <source>Brightness</source>
-        <translation>Luminosité</translation>
+        <translation>Lysstyrke</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="116"/>
         <source>Exposure program</source>
-        <translation>Programme d&apos;exposition</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="118"/>
         <source>Saturation</source>
-        <translation>Saturation</translation>
+        <translation>Metning</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="120"/>
         <source>Sharpness</source>
-        <translation>Netteté</translation>
+        <translation>Skarphet</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="122"/>
         <source>White balance</source>
-        <translation>Balance des blancs</translation>
+        <translation>Hvitbalanse</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="124"/>
         <source>Digital zoom</source>
-        <translation>Zoom numérique</translation>
+        <translation>Digital forstørrelse</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="126"/>
         <source>EXIF version</source>
-        <translation>Version EXIF</translation>
+        <translation>EXIF-versjon</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="135"/>
         <source>%1 x %2</source>
-        <translation>%1 × %2</translation>
+        <translation>%1 x %2</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="153"/>
@@ -506,12 +506,12 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="288"/>
         <source>Property</source>
-        <translation>Propriété</translation>
+        <translation>Egenskap</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="288"/>
         <source>Value</source>
-        <translation>Valeur</translation>
+        <translation>Verdi</translation>
     </message>
 </context>
 <context>
@@ -519,32 +519,32 @@
     <message>
         <location filename="../app/settingsdialog.cpp" line="15"/>
         <source>Settings</source>
-        <translation>Paramètres</translation>
+        <translation>Innstillinger</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="20"/>
         <source>Do nothing</source>
-        <translation>Ne rien faire</translation>
+        <translation>Ikke gjør noe</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="21"/>
         <source>Close the window</source>
-        <translation>Fermer la fenêtre</translation>
+        <translation>Lukk vinduet</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="22"/>
         <source>Toggle maximize</source>
-        <translation>Activer/désactiver l&apos;agrandissement</translation>
+        <translation>Veksle maksimering</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="30"/>
         <source>Stay on top when start-up</source>
-        <translation>Rester en-haut lors du démarrage</translation>
+        <translation>Behold i forgrunnen ved oppstart</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="31"/>
         <source>Double-click behavior</source>
-        <translation>Comportement du double-clic</translation>
+        <translation>Dobbeltklikksoppførsel</translation>
     </message>
 </context>
 <context>
@@ -552,12 +552,12 @@
     <message>
         <location filename="../app/main.cpp" line="27"/>
         <source>Pineapple Pictures</source>
-        <translation>Pineapple Pictures</translation>
+        <translation type="unfinished">Ananasbilder</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="31"/>
         <source>File list.</source>
-        <translation>Liste des fichiers.</translation>
+        <translation>Filliste.</translation>
     </message>
 </context>
 </TS>
