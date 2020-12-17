@@ -10,7 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Get build dept.
-      run: sudo apt install cmake qtbase5-dev libqt5svg5-dev qttools5-dev libexiv2-dev
+      run: |
+        sudo apt update
+        sudo apt install cmake qtbase5-dev libqt5svg5-dev qttools5-dev libexiv2-dev
     - name: Build it
       run: |
         mkdir build
