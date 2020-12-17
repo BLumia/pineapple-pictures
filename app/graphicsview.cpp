@@ -31,13 +31,6 @@ void GraphicsView::showFileFromUrl(const QUrl &url, bool doRequestGallery)
 
     QString filePath(url.toLocalFile());
 
-#ifdef Q_OS_WIN
-    // TODO: remove this workaround when M$ change the "wsl$" hostname.
-    if (Q_UNLIKELY(url.scheme() == QStringLiteral("qtbug-86277"))) {
-        filePath = url.path();
-    }
-#endif // Q_OS_WIN
-
     if (filePath.endsWith(".svg")) {
         showSvg(filePath);
     } else if (filePath.endsWith(".gif")) {
