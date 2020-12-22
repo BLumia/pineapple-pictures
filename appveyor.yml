@@ -4,7 +4,8 @@ environment:
   CMAKE_INSTALL_ROOT: C:\projects\cmake
   ZLIB_ROOT: C:\projects\zlib
   LIBEXPAT: C:\projects\libexpat
-  LIBEXIV2_ROOT: C:\projects\exiv2
+  LIBAVIF: C:\projects\libavif
+  LIBEXIV2: C:\projects\exiv2
   matrix:
     - build_name: mingw81_32_qt5_15_2
       QTPATH: C:\Qt\5.15.2\mingw81_32
@@ -14,7 +15,8 @@ install:
   - mkdir %CMAKE_INSTALL_ROOT%
   - mkdir %ZLIB_ROOT%
   - mkdir %LIBEXPAT%
-  - mkdir %LIBEXIV2_ROOT%
+  - mkdir %LIBAVIF%
+  - mkdir %LIBEXIV2%
   - cd %APPVEYOR_BUILD_FOLDER%
   - git submodule update --init --recursive
   - set PATH=%PATH%;%CMAKE_INSTALL_ROOT%;%QTPATH%\bin;%MINGW32%\bin
@@ -35,8 +37,19 @@ build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
 # download and install zlib for KArchive
   - cd %ZLIB_ROOT%
-  - curl -fsS -o zlib128-dll.zip http://zlib.net/zlib128-dll.zip
+  - curl -fsSL -o zlib128-dll.zip http://zlib.net/zlib128-dll.zip
   - 7z x zlib128-dll.zip
+  - cd %APPVEYOR_BUILD_FOLDER%
+# download and install libavif for avif format support of KImageFormats
+  - cd %LIBAVIF%
+  - curl -fsSL -o libavif-v0_8_4.zip https://github.com/AOMediaCodec/libavif/archive/v0.8.4.zip
+  - 7z x libavif-v0_8_4.zip -y
+  - cd libavif-0.8.4
+  - mkdir build
+  - cd build
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s"
+  - cmake --build . --config Release
+  - cmake --build . --config Release --target install
   - cd %APPVEYOR_BUILD_FOLDER%
 # install KArchive for kra format support of KImageFormats
   - cd 3rdparty
@@ -49,7 +62,7 @@ build_script:
   - cmake --build . --config Release --target install
   - cd %APPVEYOR_BUILD_FOLDER%
 # build libexpat for libexiv2
-  - cd %LIBEXPAT_ROOT%
+  - cd %LIBEXPAT%
   - curl -fsSL -o R_2_2_10.zip https://github.com/libexpat/libexpat/archive/R_2_2_10.zip
   - 7z x R_2_2_10.zip -y
   - cd libexpat-R_2_2_10/expat/
@@ -57,7 +70,7 @@ build_script:
   - cmake --build . --target install
   - cd %APPVEYOR_BUILD_FOLDER%
 # build libexiv2
-  - cd %LIBEXIV2_ROOT%
+  - cd %LIBEXIV2%
   - curl -fsSL -o v0.27.3.zip https://github.com/Exiv2/exiv2/archive/v0.27.3.zip
   - 7z x v0.27.3.zip -y
   - cd exiv2-0.27.3
@@ -85,9 +98,19 @@ build_script:
   - copy %APPVEYOR_BUILD_FOLDER%\LICENSE .
   - copy %CMAKE_INSTALL_ROOT%\bin\libexpat.dll
   - copy %CMAKE_INSTALL_ROOT%\bin\libexiv2.dll
+  - copy %CMAKE_INSTALL_ROOT%\bin\libavif.dll
   - copy %ZLIB_ROOT%\zlib1.dll .
   - copy C:\projects\cmake\bin\libKF5Archive.dll .
   - windeployqt --verbose=2 --no-quick-import --no-translations --no-opengl-sw --no-angle --no-system-d3d-compiler .\ppic.exe
+# copy 3rdparty licenses for the libs we vendored for windows...
+  - mkdir licenses
+  - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\karchive\LICENSES\LGPL-2.0-or-later.txt License.KArchive.txt
+  - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\kimageformats\LICENSES\LGPL-2.1-or-later.txt License.kimageformats.txt
+  - copy %LIBEXPAT%\libexpat-R_2_2_10\expat\COPYING License.expat.txt
+  - copy %LIBAVIF%\libavif-0.8.4\LICENSE License.libavif.txt
+  - copy %LIBEXIV2%\exiv2-0.27.3\COPYING License.exiv2.txt
+# TODO: Qt, zlib
+  - cd ..
 # for debug..
   - tree /f
 
