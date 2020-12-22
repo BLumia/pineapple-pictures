@@ -40,14 +40,24 @@ build_script:
   - curl -fsSL -o zlib128-dll.zip http://zlib.net/zlib128-dll.zip
   - 7z x zlib128-dll.zip
   - cd %APPVEYOR_BUILD_FOLDER%
-# download and install libavif for avif format support of KImageFormats
+# install AOM for libavif AV1 decoding support...
+  - cd 3rdparty
+  - git clone -b v2.0.1 --depth 1 https://aomedia.googlesource.com/aom
+  - cd aom
+  - mkdir build.libavif
+  - cd build.libavif
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DENABLE_DOCS=OFF -DBUILD_SHARED_LIBS=ON -DAOM_TARGET_CPU=generic -DENABLE_TESTS=OFF -DENABLE_TESTDATA=OFF -DENABLE_TOOLS=OFF -DENABLE_EXAMPLES=0
+  - cmake --build . --config Release
+  - cmake --build . --config Release --target install
+  - cd %APPVEYOR_BUILD_FOLDER%
+# install libavif for avif format support of KImageFormats
   - cd %LIBAVIF%
   - curl -fsSL -o libavif-v0_8_4.zip https://github.com/AOMediaCodec/libavif/archive/v0.8.4.zip
   - 7z x libavif-v0_8_4.zip -y
   - cd libavif-0.8.4
   - mkdir build
   - cd build
-  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s"
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DAVIF_CODEC_AOM=ON
   - cmake --build . --config Release
   - cmake --build . --config Release --target install
   - cd %APPVEYOR_BUILD_FOLDER%
@@ -96,6 +106,7 @@ build_script:
 # fixme: I don't know how to NOT make the binary installed to the ./bin/ folder...
   - cd bin
   - copy %APPVEYOR_BUILD_FOLDER%\LICENSE .
+  - copy %CMAKE_INSTALL_ROOT%\lib\libaom.dll
   - copy %CMAKE_INSTALL_ROOT%\bin\libexpat.dll
   - copy %CMAKE_INSTALL_ROOT%\bin\libexiv2.dll
   - copy %CMAKE_INSTALL_ROOT%\bin\libavif.dll
@@ -104,6 +115,8 @@ build_script:
   - windeployqt --verbose=2 --no-quick-import --no-translations --no-opengl-sw --no-angle --no-system-d3d-compiler .\ppic.exe
 # copy 3rdparty licenses for the libs we vendored for windows...
   - mkdir licenses
+  - cd licenses
+  - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\aom\LICENSE License.aom.txt
   - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\karchive\LICENSES\LGPL-2.0-or-later.txt License.KArchive.txt
   - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\kimageformats\LICENSES\LGPL-2.1-or-later.txt License.kimageformats.txt
   - copy %LIBEXPAT%\libexpat-R_2_2_10\expat\COPYING License.expat.txt
