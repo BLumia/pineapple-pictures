@@ -20,9 +20,13 @@ protected:
     {
         QTreeView::rowsInserted(parent, start, end);
         if (!parent.isValid()) {
+            // we are inserting a section group
             for (int row = start; row <= end; ++row) {
                 setupSection(row);
             }
+        } else {
+            // we are inserting a property
+            setRowHidden(parent.row(), QModelIndex(), false);
         }
     }
 
@@ -41,6 +45,7 @@ private:
     {
         expand(model()->index(row, 0));
         setFirstColumnSpanned(row, QModelIndex(), true);
+        setRowHidden(row, QModelIndex(), !model()->hasChildren(model()->index(row, 0)));
     }
 };
 
