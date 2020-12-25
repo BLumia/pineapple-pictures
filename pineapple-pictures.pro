@@ -49,7 +49,11 @@ HEADERS += \
 
 TRANSLATIONS = \
     translations/PineapplePictures.ts \
-    translations/PineapplePictures_zh_CN.ts
+    translations/PineapplePictures_zh_CN.ts \
+    translations/PineapplePictures_de.ts \
+    translations/PineapplePictures_fr.ts \
+    translations/PineapplePictures_nb_NO.ts \
+    translations/PineapplePictures_ru.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -182,7 +182,7 @@ elseif (UNIX)
 
     # install icon
     install (
-        FILES icons/app-icon.svg
+        FILES assets/icons/app-icon.svg
         DESTINATION "${CMAKE_INSTALL_DATADIR}/icons/hicolor/48x48/apps"
         RENAME pineapple-pictures.svg
     )
