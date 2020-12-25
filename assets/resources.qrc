@@ -10,5 +10,6 @@
         <file>icons/window-close.svg</file>
         <file>icons/go-next.svg</file>
         <file>icons/go-previous.svg</file>
+        <file>plain/translators.html</file>
     </qresource>
 </RCC>

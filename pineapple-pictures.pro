@@ -57,11 +57,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    resources.qrc
+    assets/resources.qrc
 
 # Generate from svg:
 # magick convert -background none app-icon.svg -define icon:auto-resize="16,32,48,64,128,256" app-icon.ico
-RC_ICONS = icons/app-icon.ico
+RC_ICONS = assets/icons/app-icon.ico
 
 # Windows only, for rc file (we're not going to use the .rc file in this repo)
 QMAKE_TARGET_PRODUCT = Pineapple Pictures

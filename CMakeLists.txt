@@ -60,7 +60,7 @@ set (PPIC_HEADER_FILES
 )
 
 set (PPIC_QRC_FILES
-    resources.qrc
+    assets/resources.qrc
 )
 
 set (PPIC_RC_FILES
@@ -76,7 +76,7 @@ set (PPIC_CPP_FILES_FOR_I18N ${PPIC_CPP_FILES})
 qt5_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})
 
 if (WIN32)
-    list(APPEND PPIC_RC_FILES pineapple-pictures.rc)
+    list(APPEND PPIC_RC_FILES assets/pineapple-pictures.rc)
 endif ()
 
 add_executable (${EXE_NAME}

@@ -8,6 +8,7 @@
 #include <QApplication>
 #include <QLabel>
 #include <QPushButton>
+#include <QFile>
 
 AboutDialog::AboutDialog(QWidget *parent)
     : QDialog(parent)
@@ -21,7 +22,7 @@ AboutDialog::AboutDialog(QWidget *parent)
 {
     this->setWindowTitle(tr("About"));
 
-    QStringList helpStr {
+    const QStringList helpStr {
         QStringLiteral("<p>%1</p>").arg(tr("Launch application with image file path as argument to load the file.")),
         QStringLiteral("<p>%1</p>").arg(tr("Drag and drop image file onto the window is also supported.")),
         QStringLiteral("<p>%1</p>").arg(tr("Context menu option explanation:")),
@@ -37,7 +38,7 @@ AboutDialog::AboutDialog(QWidget *parent)
         QStringLiteral("</ul>")
     };
 
-    QStringList aboutStr {
+    const QStringList aboutStr {
         QStringLiteral("<center><img width='128' height='128' src=':/icons/app-icon.svg'/><br/>"),
         qApp->applicationDisplayName(),
 #ifdef GIT_DESCRIBE_VERSION_STRING
@@ -53,22 +54,26 @@ AboutDialog::AboutDialog(QWidget *parent)
         QStringLiteral("</center>")
     };
 
-    QStringList specialThanksStr {
+    QFile translaterHtml(":/plain/translators.html");
+    bool canOpenFile = translaterHtml.open(QIODevice::ReadOnly);
+    const QByteArray & translatorList = canOpenFile ? translaterHtml.readAll() : "";
+
+    const QStringList specialThanksStr {
         QStringLiteral("<h1 align='center'>%1</h1><a href='%2'>%3</a><p>%4</p>").arg(
             tr("Contributors"),
             QStringLiteral("https://github.com/BLumia/pineapple-pictures/graphs/contributors"),
             tr("List of contributors on GitHub"),
             tr("Thanks to all people who contributed to this project.")
         ),
-#if 0
-        QStringLiteral("<h1 align='center'>%1</h1><p>%2</p>").arg(
+
+        QStringLiteral("<h1 align='center'>%1</h1><p>%2</p>%3").arg(
             tr("Translators"),
-            tr("I would like to thank the following people who volunteered to translate this application.")
-        ),
-#endif
+            tr("I would like to thank the following people who volunteered to translate this application."),
+            translatorList
+        )
     };
 
-    QStringList licenseStr {
+    const QStringList licenseStr {
         QStringLiteral("<h1 align='center'><b>%1</b></h1>").arg(tr("Your Rights")),
         QStringLiteral("<p>%1</p><p>%2</p><ul><li>%3</li><li>%4</li><li>%5</li><li>%6</li></ul>").arg(
             tr("%1 is released under the MIT License."), // %1
@@ -82,7 +87,7 @@ AboutDialog::AboutDialog(QWidget *parent)
         QStringLiteral("<hr/><pre>%2</pre>")
     };
 
-    QString mitLicense(QStringLiteral(R"(Expat/MIT License
+    const QString mitLicense(QStringLiteral(R"(Expat/MIT License
 
 Copyright (c) 2020 BLumia
 
@@ -105,9 +110,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 )"));
 
-    QStringList thirdPartyLibsStr {
+    const QStringList thirdPartyLibsStr {
         QStringLiteral("<h1 align='center'><b>%1</b></h1>").arg(tr("Third-party Libraries used by %1")),
-        tr("%1 is built on the following free software libraries:"),
+        tr("%1 is built on the following free software libraries:", "Free as in freedom"),
         QStringLiteral("<ul>"),
 #ifdef HAVE_EXIV2_VERSION
         QStringLiteral("<li><a href='%1'>%2</a>: %3</li>").arg("https://www.exiv2.org/", "Exiv2", "GPLv2"),
