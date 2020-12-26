@@ -6,93 +6,93 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="23"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="26"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lanza la aplicación con la ruta del archivo de imagen como argumento para cargar el archivo.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="27"/>
         <source>Drag and drop image file onto the window is also supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>También se admite la función de arrastrar y soltar el archivo de imagen en la ventana.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="28"/>
         <source>Context menu option explanation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Explicación de la opción del menú contextual:</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="32"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation type="unfinished"></translation>
+        <translation>Haz que la ventana se quede encima de todas las demás ventanas.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="36"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation type="unfinished"></translation>
+        <translation>Evita cerrar la ventana accidentalmente. (por ejemplo, haciendo doble clic en la ventana)</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="45"/>
         <source>Version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Versión: %1</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="48"/>
         <source>Copyright (c) 2020 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Derechos reservados (c) 2020 %1</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="50"/>
         <source>Logo designed by %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Logo diseñado por %1</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="52"/>
         <source>Built with Qt %1 (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Construido con Qt %1 (%2)</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="53"/>
         <source>Source code</source>
-        <translation type="unfinished"></translation>
+        <translation>Código fuente</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="63"/>
         <source>Contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>Colaboradores</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="65"/>
         <source>List of contributors on GitHub</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista de colaboradores en GitHub</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="66"/>
         <source>Thanks to all people who contributed to this project.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gracias a todas las personas que contibuyen a este proyecto.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="70"/>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Traductores</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="71"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
-        <translation type="unfinished"></translation>
+        <translation>Me gustaría dar las gracias a las siguientes personas que se ofrecieron a traducir esta solicitud.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="115"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 está construido sobre las siguientes bibliotecas de software libre:</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="139"/>
         <source>&amp;Special Thanks</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Agradecimiento especial</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="141"/>
