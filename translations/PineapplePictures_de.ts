@@ -87,7 +87,7 @@
         <location filename="../app/aboutdialog.cpp" line="115"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation type="unfinished">%1 basiert auf den folgenden freien Softwarebibliotheken:</translation>
+        <translation>%1 basiert auf den folgenden freien Softwarebibliotheken:</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="139"/>
@@ -253,7 +253,7 @@
     <message>
         <location filename="../app/mainwindow.cpp" line="469"/>
         <source>Configure...</source>
-        <translation>Konfigurieren&#xa0;…</translation>
+        <translation>Konfigurieren …</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="476"/>
@@ -456,7 +456,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="109"/>
         <source>35mm focal length</source>
-        <translation>35&#xa0;mm Brennweite</translation>
+        <translation>35 mm Brennweite</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="112"/>
