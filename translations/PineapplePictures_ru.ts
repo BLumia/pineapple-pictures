@@ -11,27 +11,27 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="26"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Запустите приложение, указав путь к файлу изображения в качестве аргумента для загрузки файла.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="27"/>
         <source>Drag and drop image file onto the window is also supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>Перетаскивание файла изображения в окно также поддерживается.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="28"/>
         <source>Context menu option explanation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Объяснение пункта контекстного меню:</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="32"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сделать окно поверх всех остальных окон.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="36"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation type="unfinished"></translation>
+        <translation>Избежать случайного закрытия окна (например, двойным щелчком по окну).</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="45"/>
@@ -71,7 +71,7 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="66"/>
         <source>Thanks to all people who contributed to this project.</source>
-        <translation>Спасибо всем, кто внес свой вклад в этот проект.</translation>
+        <translation>Спасибо всем, кто внёс свой вклад в этот проект.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="70"/>
@@ -81,13 +81,13 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="71"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
-        <translation type="unfinished"></translation>
+        <translation>Я хотел бы поблагодарить следующих людей, которые вызвались перевести это приложение.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="115"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 собран на следующих бесплатных библиотеках программного обеспечения:</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="139"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="77"/>
         <source>Your Rights</source>
-        <translation type="unfinished"></translation>
+        <translation>Ваши Права</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="79"/>
@@ -112,12 +112,12 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="80"/>
         <source>This license grants people a number of freedoms:</source>
-        <translation type="unfinished"></translation>
+        <translation>Эта лицензия дает людям ряд свобод:</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="81"/>
         <source>You are free to use %1, for any purpose</source>
-        <translation>Вы можете использовать %1, для любых целей</translation>
+        <translation>Вы можете свободно использовать %1 для любых целей</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="82"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="83"/>
         <source>You can study how %1 works and change it</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы можете изучать, как работает %1, и изменять его</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="84"/>
@@ -137,7 +137,7 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="86"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
-        <translation type="unfinished"></translation>
+        <translation>Лицензия MIT гарантирует вам эту свободу. Никому и никогда не разрешается забирать её.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="114"/>
@@ -173,28 +173,28 @@
     <message>
         <location filename="../app/graphicsview.cpp" line="254"/>
         <source>File url list is empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Список URL-адресов файлов пуст</translation>
     </message>
     <message>
         <location filename="../app/graphicsview.cpp" line="46"/>
         <source>File is not a valid image</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл не является действительным изображением</translation>
     </message>
     <message>
         <location filename="../app/graphicsview.cpp" line="48"/>
         <location filename="../app/graphicsview.cpp" line="52"/>
         <source>Image data is invalid or currently unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Данные изображения недействительны или в настоящее время не поддерживаются</translation>
     </message>
     <message>
         <location filename="../app/graphicsview.cpp" line="262"/>
         <source>Image data is invalid</source>
-        <translation type="unfinished"></translation>
+        <translation>Данные изображения недействительны</translation>
     </message>
     <message>
         <location filename="../app/graphicsview.cpp" line="269"/>
         <source>Not supported mimedata: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Неподдерживаемые mimedata: %1</translation>
     </message>
 </context>
 <context>
@@ -202,7 +202,7 @@
     <message>
         <location filename="../app/mainwindow.cpp" line="178"/>
         <source>File url list is empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Список URL-адресов файлов пуст</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="408"/>
@@ -212,12 +212,12 @@
     <message>
         <location filename="../app/mainwindow.cpp" line="429"/>
         <source>Copy P&amp;ixmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Копировать P&amp;ixmap</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="434"/>
         <source>Copy &amp;File Path</source>
-        <translation>Копировать &amp;Путь к файлу</translation>
+        <translation>Копировать &amp;путь к файлу</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="444"/>
@@ -238,18 +238,18 @@
         <location filename="../app/aboutdialog.cpp" line="31"/>
         <location filename="../app/mainwindow.cpp" line="455"/>
         <source>Stay on top</source>
-        <translation type="unfinished"></translation>
+        <translation>Поверх всех окон</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="35"/>
         <location filename="../app/mainwindow.cpp" line="462"/>
         <source>Protected mode</source>
-        <translation>Защищенный режим</translation>
+        <translation>Защищённый режим</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="469"/>
         <source>Configure...</source>
-        <translation type="unfinished"></translation>
+        <translation>Настроить...</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="476"/>
@@ -306,7 +306,7 @@
         <location filename="../app/metadatamodel.cpp" line="39"/>
         <source>Advanced photo</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Расширенное фото</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="41"/>
@@ -372,7 +372,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="75"/>
         <source>Date taken</source>
-        <translation type="unfinished"></translation>
+        <translation>Дата захвата</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="77"/>
@@ -397,7 +397,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="86"/>
         <source>Colour representation</source>
-        <translation type="unfinished"></translation>
+        <translation>Цветовое представление</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="89"/>
@@ -412,7 +412,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="93"/>
         <source>F-stop</source>
-        <translation type="unfinished"></translation>
+        <translation>F-stop</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="95"/>
@@ -442,12 +442,12 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="105"/>
         <source>Metering mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим замера</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="107"/>
         <source>Flash mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим вспышки</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="109"/>
@@ -477,7 +477,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="120"/>
         <source>Sharpness</source>
-        <translation>Четкость</translation>
+        <translation>Чёткость</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="122"/>
@@ -507,7 +507,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="288"/>
         <source>Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Свойство</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="288"/>
@@ -535,17 +535,17 @@
     <message>
         <location filename="../app/settingsdialog.cpp" line="22"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished"></translation>
+        <translation>Развернуть окно</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="30"/>
         <source>Stay on top when start-up</source>
-        <translation type="unfinished"></translation>
+        <translation>Поверх всех окон при запуске</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="31"/>
         <source>Double-click behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Поведение при двойном щелчке</translation>
     </message>
 </context>
 <context>
@@ -553,7 +553,7 @@
     <message>
         <location filename="../app/main.cpp" line="28"/>
         <source>Pineapple Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Pineapple Pictures</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="32"/>
