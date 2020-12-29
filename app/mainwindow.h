@@ -1,7 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
+#include "framelesswindow.h"
+
 #include <QParallelAnimationGroup>
 #include <QPropertyAnimation>
 #include <QPushButton>
@@ -15,7 +16,7 @@ class ToolButton;
 class GraphicsView;
 class NavigatorView;
 class BottomButtonGroup;
-class MainWindow : public QMainWindow
+class MainWindow : public FramelessWindow
 {
     Q_OBJECT
 

@@ -28,6 +28,7 @@ endif ()
 #LibExiv2_FOUND
 set (PPIC_CPP_FILES
     app/main.cpp
+    app/framelesswindow.cpp
     app/mainwindow.cpp
     app/graphicsview.cpp
     app/graphicsscene.cpp
@@ -44,6 +45,7 @@ set (PPIC_CPP_FILES
 )
 
 set (PPIC_HEADER_FILES
+    app/framelesswindow.h
     app/mainwindow.h
     app/graphicsview.h
     app/graphicsscene.h

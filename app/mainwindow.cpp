@@ -31,12 +31,10 @@
 #endif // _WIN32
 
 MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent)
+    FramelessWindow(parent)
 {
     if (Settings::instance()->stayOnTop()) {
-        this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint | Qt::WindowStaysOnTopHint);
-    } else {
-        this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint);
+        this->setWindowFlag(Qt::WindowStaysOnTopHint);
     }
 
     this->setAttribute(Qt::WA_TranslucentBackground, true);
@@ -55,7 +53,7 @@ MainWindow::MainWindow(QWidget *parent) :
     m_exitAnimationGroup->addAnimation(m_fadeOutAnimation);
     m_exitAnimationGroup->addAnimation(m_floatUpAnimation);
     connect(m_exitAnimationGroup, &QParallelAnimationGroup::finished,
-            this, &QMainWindow::close);
+            this, &QWidget::close);
 
     GraphicsScene * scene = new GraphicsScene(this);
 
@@ -290,7 +288,7 @@ void MainWindow::showEvent(QShowEvent *event)
 {
     updateWidgetsPosition();
 
-    return QMainWindow::showEvent(event);
+    return FramelessWindow::showEvent(event);
 }
 
 void MainWindow::enterEvent(QEvent *event)
@@ -302,7 +300,7 @@ void MainWindow::enterEvent(QEvent *event)
     m_prevButton->setOpacity(1);
     m_nextButton->setOpacity(1);
 
-    return QMainWindow::enterEvent(event);
+    return FramelessWindow::enterEvent(event);
 }
 
 void MainWindow::leaveEvent(QEvent *event)
@@ -314,7 +312,7 @@ void MainWindow::leaveEvent(QEvent *event)
     m_prevButton->setOpacity(0);
     m_nextButton->setOpacity(0);
 
-    return QMainWindow::leaveEvent(event);
+    return FramelessWindow::leaveEvent(event);
 }
 
 void MainWindow::mousePressEvent(QMouseEvent *event)
@@ -327,7 +325,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         event->accept();
     }
 
-    return QMainWindow::mousePressEvent(event);
+    return FramelessWindow::mousePressEvent(event);
 }
 
 void MainWindow::mouseMoveEvent(QMouseEvent *event)
@@ -343,14 +341,14 @@ void MainWindow::mouseMoveEvent(QMouseEvent *event)
         event->accept();
     }
 
-    return QMainWindow::mouseMoveEvent(event);
+    return FramelessWindow::mouseMoveEvent(event);
 }
 
 void MainWindow::mouseReleaseEvent(QMouseEvent *event)
 {
     m_clickedOnWindow = false;
 
-    return QMainWindow::mouseReleaseEvent(event);
+    return FramelessWindow::mouseReleaseEvent(event);
 }
 
 void MainWindow::mouseDoubleClickEvent(QMouseEvent *event)
@@ -391,7 +389,7 @@ void MainWindow::wheelEvent(QWheelEvent *event)
         m_graphicsView->zoomView(zoomIn ? 1.25 : 0.8);
         event->accept();
     } else {
-        QMainWindow::wheelEvent(event);
+        FramelessWindow::wheelEvent(event);
     }
 }
 
@@ -399,7 +397,7 @@ void MainWindow::resizeEvent(QResizeEvent *event)
 {
     updateWidgetsPosition();
 
-    return QMainWindow::resizeEvent(event);
+    return FramelessWindow::resizeEvent(event);
 }
 
 void MainWindow::contextMenuEvent(QContextMenuEvent *event)
@@ -514,7 +512,7 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     menu->exec(mapToGlobal(event->pos()));
     menu->deleteLater();
 
-    return QMainWindow::contextMenuEvent(event);
+    return FramelessWindow::contextMenuEvent(event);
 }
 
 bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, long *result)
@@ -600,7 +598,7 @@ bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, long *r
 
     return false;
 #else
-    return QMainWindow::nativeEvent(eventType, message, result);
+    return FramelessWindow::nativeEvent(eventType, message, result);
 #endif // _WIN32
 }
 
