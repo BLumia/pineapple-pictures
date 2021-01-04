@@ -204,59 +204,59 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../app/mainwindow.cpp" line="178"/>
+        <location filename="../app/mainwindow.cpp" line="176"/>
         <source>File url list is empty</source>
         <translation>Listen over filnettadresser er ugyldig</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="408"/>
+        <location filename="../app/mainwindow.cpp" line="406"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopier</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="429"/>
+        <location filename="../app/mainwindow.cpp" line="427"/>
         <source>Copy P&amp;ixmap</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="434"/>
+        <location filename="../app/mainwindow.cpp" line="432"/>
         <source>Copy &amp;File Path</source>
         <translation>Kopier %filsti</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="444"/>
+        <location filename="../app/mainwindow.cpp" line="442"/>
         <source>&amp;Paste Image</source>
         <translation>&amp;Lim inn bilde</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="450"/>
+        <location filename="../app/mainwindow.cpp" line="448"/>
         <source>&amp;Paste Image File</source>
         <translation>&amp;Lim inn bildefil</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="483"/>
+        <location filename="../app/mainwindow.cpp" line="481"/>
         <source>Properties</source>
         <translation>Egenskaper</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="31"/>
-        <location filename="../app/mainwindow.cpp" line="455"/>
+        <location filename="../app/mainwindow.cpp" line="453"/>
         <source>Stay on top</source>
         <translation>Behold øverst</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="35"/>
-        <location filename="../app/mainwindow.cpp" line="462"/>
+        <location filename="../app/mainwindow.cpp" line="460"/>
         <source>Protected mode</source>
         <translation>Beskyttet modus</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="469"/>
+        <location filename="../app/mainwindow.cpp" line="467"/>
         <source>Configure...</source>
         <translation>Sett opp …</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="476"/>
+        <location filename="../app/mainwindow.cpp" line="474"/>
         <source>Help</source>
         <translation>Hjelp</translation>
     </message>
@@ -284,7 +284,7 @@
         <translation>Bilde</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="43"/>
+        <location filename="../app/metadatamodel.cpp" line="41"/>
         <source>File</source>
         <comment>Section name.</comment>
         <translation>Fil</translation>
@@ -313,208 +313,238 @@
         <translation>Avansert bilde</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="41"/>
+        <location filename="../app/metadatamodel.cpp" line="40"/>
         <source>GPS</source>
         <comment>Section name.</comment>
         <translation>GPS</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="46"/>
+        <location filename="../app/metadatamodel.cpp" line="44"/>
         <source>Dimensions</source>
         <translation>Dimensjoner</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="48"/>
+        <location filename="../app/metadatamodel.cpp" line="46"/>
         <source>Aspect Ratio</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="51"/>
+        <location filename="../app/metadatamodel.cpp" line="49"/>
         <source>Name</source>
         <translation>Navn</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="53"/>
+        <location filename="../app/metadatamodel.cpp" line="51"/>
         <source>Item type</source>
         <translation>Elementstype</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="55"/>
+        <location filename="../app/metadatamodel.cpp" line="53"/>
         <source>Folder path</source>
         <translation>Mappesti</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="57"/>
+        <location filename="../app/metadatamodel.cpp" line="55"/>
         <source>Size</source>
         <translation>Størrelse</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="59"/>
+        <location filename="../app/metadatamodel.cpp" line="57"/>
         <source>Date Created</source>
         <translation>Dato opprettet</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="61"/>
+        <location filename="../app/metadatamodel.cpp" line="59"/>
         <source>Date Modified</source>
         <translation>Dato endret</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="68"/>
+        <location filename="../app/metadatamodel.cpp" line="66"/>
         <source>Rating</source>
         <translation>Vurdering</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="70"/>
+        <location filename="../app/metadatamodel.cpp" line="68"/>
         <source>Comments</source>
         <translation>Kommentarer</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="73"/>
+        <location filename="../app/metadatamodel.cpp" line="71"/>
         <source>Authors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="75"/>
+        <location filename="../app/metadatamodel.cpp" line="73"/>
         <source>Date taken</source>
         <translation>Dato tatt</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="77"/>
+        <location filename="../app/metadatamodel.cpp" line="75"/>
         <source>Program name</source>
         <translation>Programnavn</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="80"/>
+        <location filename="../app/metadatamodel.cpp" line="78"/>
         <source>Horizontal resolution</source>
         <translation>Vannrett oppløsning</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="82"/>
+        <location filename="../app/metadatamodel.cpp" line="80"/>
         <source>Vertical resolution</source>
         <translation>Loddrett oppløsning</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="84"/>
+        <location filename="../app/metadatamodel.cpp" line="82"/>
         <source>Resolution unit</source>
         <translation>Oppløsningsenhet</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="86"/>
+        <location filename="../app/metadatamodel.cpp" line="84"/>
         <source>Colour representation</source>
         <translation>Fargerepresentasjon</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="89"/>
+        <location filename="../app/metadatamodel.cpp" line="87"/>
         <source>Camera maker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="91"/>
+        <location filename="../app/metadatamodel.cpp" line="89"/>
         <source>Camera model</source>
         <translation>Kameramodell</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="93"/>
+        <location filename="../app/metadatamodel.cpp" line="91"/>
         <source>F-stop</source>
         <translation>Blenderåpning</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="95"/>
+        <location filename="../app/metadatamodel.cpp" line="93"/>
         <source>Exposure time</source>
         <translation>Eksponeringstid</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="97"/>
+        <location filename="../app/metadatamodel.cpp" line="95"/>
         <source>ISO speed</source>
         <translation>ISO-hastighet</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="99"/>
+        <location filename="../app/metadatamodel.cpp" line="97"/>
         <source>Exposure bias</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="101"/>
+        <location filename="../app/metadatamodel.cpp" line="99"/>
         <source>Focal length</source>
         <translation>Brennvidde</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="103"/>
+        <location filename="../app/metadatamodel.cpp" line="101"/>
         <source>Max aperture</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="105"/>
+        <location filename="../app/metadatamodel.cpp" line="103"/>
         <source>Metering mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="107"/>
+        <location filename="../app/metadatamodel.cpp" line="105"/>
         <source>Flash mode</source>
         <translation>Blitz-modus</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="109"/>
+        <location filename="../app/metadatamodel.cpp" line="107"/>
         <source>35mm focal length</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="112"/>
+        <location filename="../app/metadatamodel.cpp" line="110"/>
         <source>Lens model</source>
         <translation>Linsemodell</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="114"/>
+        <location filename="../app/metadatamodel.cpp" line="112"/>
         <source>Brightness</source>
         <translation>Lysstyrke</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="116"/>
+        <location filename="../app/metadatamodel.cpp" line="114"/>
         <source>Exposure program</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="118"/>
+        <location filename="../app/metadatamodel.cpp" line="116"/>
         <source>Saturation</source>
         <translation>Metning</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="120"/>
+        <location filename="../app/metadatamodel.cpp" line="118"/>
         <source>Sharpness</source>
         <translation>Skarphet</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="122"/>
+        <location filename="../app/metadatamodel.cpp" line="120"/>
         <source>White balance</source>
         <translation>Hvitbalanse</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="124"/>
+        <location filename="../app/metadatamodel.cpp" line="122"/>
         <source>Digital zoom</source>
         <translation>Digital forstørrelse</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="126"/>
+        <location filename="../app/metadatamodel.cpp" line="124"/>
         <source>EXIF version</source>
         <translation>EXIF-versjon</translation>
     </message>
     <message>
+        <location filename="../app/metadatamodel.cpp" line="127"/>
+        <source>Latitude reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="129"/>
+        <source>Latitude</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="131"/>
+        <source>Longitude reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="133"/>
+        <source>Longitude</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../app/metadatamodel.cpp" line="135"/>
+        <source>Altitude reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="137"/>
+        <source>Altitude</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/metadatamodel.cpp" line="147"/>
         <source>%1 x %2</source>
         <translation>%1 x %2</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="153"/>
+        <location filename="../app/metadatamodel.cpp" line="165"/>
         <source>%1 : %2</source>
         <translation>%1 : %2</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="288"/>
+        <location filename="../app/metadatamodel.cpp" line="300"/>
         <source>Property</source>
         <translation>Egenskap</translation>
     </message>
     <message>
-        <location filename="../app/metadatamodel.cpp" line="288"/>
+        <location filename="../app/metadatamodel.cpp" line="300"/>
         <source>Value</source>
         <translation>Verdi</translation>
     </message>

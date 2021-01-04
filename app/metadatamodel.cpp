@@ -37,9 +37,7 @@ void MetadataModel::setFile(const QString &imageFilePath)
     appendSection(QStringLiteral("Image"), tr("Image", "Section name."));
     appendSection(QStringLiteral("Camera"), tr("Camera", "Section name."));
     appendSection(QStringLiteral("AdvancedPhoto"), tr("Advanced photo", "Section name."));
-#if 0
     appendSection(QStringLiteral("GPS"), tr("GPS", "Section name."));
-#endif // 0
     appendSection(QStringLiteral("File"), tr("File", "Section name."));
 
     appendProperty(QStringLiteral("Image"), QStringLiteral("Image.Dimensions"),
@@ -124,6 +122,20 @@ void MetadataModel::setFile(const QString &imageFilePath)
                                   QStringLiteral("Exif.Photo.DigitalZoomRatio"), tr("Digital zoom"));
         appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
                                   QStringLiteral("Exif.Photo.ExifVersion"), tr("EXIF version"));
+
+        appendExivPropertyIfExist(wrapper, QStringLiteral("GPS"),
+                                  QStringLiteral("Exif.GPSInfo.GPSLatitudeRef"), tr("Latitude reference"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("GPS"),
+                                  QStringLiteral("Exif.GPSInfo.GPSLatitude"), tr("Latitude"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("GPS"),
+                                  QStringLiteral("Exif.GPSInfo.GPSLongitudeRef"), tr("Longitude reference"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("GPS"),
+                                  QStringLiteral("Exif.GPSInfo.GPSLongitude"), tr("Longitude"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("GPS"),
+                                  QStringLiteral("Exif.GPSInfo.GPSAltitudeRef"), tr("Altitude reference"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("GPS"),
+                                  QStringLiteral("Exif.GPSInfo.GPSAltitude"), tr("Altitude"));
+
     }
 }
 
