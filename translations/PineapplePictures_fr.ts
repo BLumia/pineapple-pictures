@@ -21,7 +21,7 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="28"/>
         <source>Context menu option explanation:</source>
-        <translation>Explication des options du menu contextuel&#xa0;:</translation>
+        <translation>Explication des options du menu contextuel :</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="32"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="45"/>
         <source>Version: %1</source>
-        <translation>Version&#xa0;: %1</translation>
+        <translation>Version : %1</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="48"/>
@@ -87,7 +87,7 @@
         <location filename="../app/aboutdialog.cpp" line="115"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation type="unfinished">%1 est basé sur les bibliothèques de logiciels libres suivantes&#xa0;:</translation>
+        <translation>%1 est basé sur les bibliothèques de logiciels libres suivantes :</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="139"/>
@@ -112,7 +112,7 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="80"/>
         <source>This license grants people a number of freedoms:</source>
-        <translation>Cette licence accorde aux personnes un certain nombre de libertés&#xa0;:</translation>
+        <translation>Cette licence accorde aux personnes un certain nombre de libertés :</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="81"/>
@@ -146,7 +146,7 @@
     </message>
     <message>
         <source>%1 is built on the following free software libraries:</source>
-        <translation type="vanished">%1 est basé sur les bibliothèques de logiciels libres suivantes&#xa0;:</translation>
+        <translation type="vanished">%1 est basé sur les bibliothèques de logiciels libres suivantes :</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="137"/>
@@ -198,7 +198,7 @@
     <message>
         <location filename="../app/graphicsview.cpp" line="269"/>
         <source>Not supported mimedata: %1</source>
-        <translation>Mimedata non pris en charge&#xa0;: %1</translation>
+        <translation>Mimedata non pris en charge : %1</translation>
     </message>
 </context>
 <context>
@@ -456,7 +456,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="109"/>
         <source>35mm focal length</source>
-        <translation>Distance focale de 35&#xa0;mm</translation>
+        <translation>Distance focale de 35 mm</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="112"/>
