@@ -426,7 +426,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="97"/>
         <source>ISO speed</source>
-        <translation>ISO 速度</translation>
+        <translation>ISO 感光度</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="99"/>
@@ -441,7 +441,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="103"/>
         <source>Max aperture</source>
-        <translation>最大光圈</translation>
+        <translation>镜头最大光圈</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="105"/>
@@ -456,7 +456,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="109"/>
         <source>35mm focal length</source>
-        <translation>35mm 焦距</translation>
+        <translation>换算至 35mm 焦距</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="112"/>
