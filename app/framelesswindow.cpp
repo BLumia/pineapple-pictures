@@ -1,6 +1,11 @@
 #include "framelesswindow.h"
 
+#include <QApplication>
 #include <QVBoxLayout>
+
+#ifdef _WIN32
+#include <windows.h>
+#endif // _WIN32
 
 FramelessWindow::FramelessWindow(QWidget *parent)
     : QWidget(parent)

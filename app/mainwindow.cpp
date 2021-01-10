@@ -26,10 +26,6 @@
 #include <QMimeData>
 #include <QWindow>
 
-#ifdef _WIN32
-#include <windows.h>
-#endif // _WIN32
-
 MainWindow::MainWindow(QWidget *parent) :
     FramelessWindow(parent)
 {
