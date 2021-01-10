@@ -131,7 +131,7 @@ SOFTWARE.
 
     m_licenseTextEdit->setText(licenseStr.join('\n').arg(qApp->applicationDisplayName(), mitLicense));
 
-    m_3rdPartyLibsTextEdit->setText(thirdPartyLibsStr.join('\n').arg(QStringLiteral("<i>%1</i>")).arg(qApp->applicationDisplayName()));
+    m_3rdPartyLibsTextEdit->setText(thirdPartyLibsStr.join('\n').arg(QStringLiteral("<i>%1</i>").arg(qApp->applicationDisplayName())));
     m_3rdPartyLibsTextEdit->setOpenExternalLinks(true);
 
     m_tabWidget->addTab(m_helpTextEdit, tr("&Help"));

@@ -15,7 +15,8 @@ public:
 
     void setCentralWidget(QWidget * widget);
 
-signals:
+protected:
+    bool nativeEvent(const QByteArray& eventType, void* message, long* result) override;
 
 private:
     QVBoxLayout * m_centralLayout = nullptr;

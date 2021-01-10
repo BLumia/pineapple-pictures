@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 
     QStringList urlStrList = parser.positionalArguments();
     QList<QUrl> urlList;
-    for (const QString & str : urlStrList) {
+    for (const QString & str : qAsConst(urlStrList)) {
         QUrl url = QUrl::fromLocalFile(str);
         if (url.isValid()) {
             urlList.append(url);

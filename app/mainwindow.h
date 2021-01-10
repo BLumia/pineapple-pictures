@@ -49,10 +49,6 @@ protected slots:
     void resizeEvent(QResizeEvent *event) override;
     void contextMenuEvent(QContextMenuEvent *event) override;
 
-    bool nativeEvent(const QByteArray& eventType, void* message, long* result) override;
-
-    QSize sizeHint() const override;
-
     void centerWindow();
     void closeWindow();
     void updateWidgetsPosition();
@@ -62,6 +58,9 @@ protected slots:
     void quitAppAction(bool force = false);
     void toggleFullscreen();
     void toggleMaximize();
+
+protected:
+    QSize sizeHint() const override;
 
 private:
     QPoint m_oldMousePos;
