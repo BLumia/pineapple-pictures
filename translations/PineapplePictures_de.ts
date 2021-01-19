@@ -253,7 +253,7 @@
     <message>
         <location filename="../app/mainwindow.cpp" line="467"/>
         <source>Configure...</source>
-        <translation>Konfigurieren&#xa0;…</translation>
+        <translation>Konfigurieren …</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="474"/>
@@ -456,7 +456,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="107"/>
         <source>35mm focal length</source>
-        <translation>35&#xa0;mm Brennweite</translation>
+        <translation>35 mm Brennweite</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="110"/>
@@ -506,7 +506,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="129"/>
         <source>Latitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Breitengrad</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="131"/>
@@ -516,7 +516,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="133"/>
         <source>Longitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Längengrad</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="135"/>
@@ -526,7 +526,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="137"/>
         <source>Altitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Höhe</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="147"/>

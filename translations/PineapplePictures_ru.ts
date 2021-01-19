@@ -497,32 +497,32 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="127"/>
         <source>Latitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Ссылка на широту</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="129"/>
         <source>Latitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Широта</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="131"/>
         <source>Longitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Ссылка на долготу</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="133"/>
         <source>Longitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Долгота</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="135"/>
         <source>Altitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Ссылка на высоту</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="137"/>
         <source>Altitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Высота</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="147"/>
