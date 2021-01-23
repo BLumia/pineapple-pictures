@@ -247,7 +247,7 @@
     <message>
         <location filename="../app/actionmanager.cpp" line="45"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Вставить</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="48"/>
@@ -262,7 +262,7 @@
     <message>
         <location filename="../app/actionmanager.cpp" line="51"/>
         <source>Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>Выход</translation>
     </message>
 </context>
 <context>
@@ -578,12 +578,12 @@
     <message>
         <location filename="../app/settingsdialog.cpp" line="27"/>
         <source>Zoom in and out</source>
-        <translation type="unfinished"></translation>
+        <translation>Увеличение и уменьшение</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="28"/>
         <source>View next or previous item</source>
-        <translation type="unfinished"></translation>
+        <translation>Просмотреть следующий или предыдущий элемент</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="41"/>
@@ -598,7 +598,7 @@
     <message>
         <location filename="../app/settingsdialog.cpp" line="43"/>
         <source>Mouse wheel behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Поведение колеса мыши</translation>
     </message>
 </context>
 <context>
