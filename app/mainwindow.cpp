@@ -10,6 +10,7 @@
 #include "aboutdialog.h"
 #include "metadatamodel.h"
 #include "metadatadialog.h"
+#include "actionmanager.h"
 
 #include <QMouseEvent>
 #include <QMovie>
@@ -25,9 +26,11 @@
 #include <QClipboard>
 #include <QMimeData>
 #include <QWindow>
+#include <QTimer>
 
-MainWindow::MainWindow(QWidget *parent) :
-    FramelessWindow(parent)
+MainWindow::MainWindow(QWidget *parent)
+    : FramelessWindow(parent)
+    , m_am(new ActionManager)
 {
     if (Settings::instance()->stayOnTop()) {
         this->setWindowFlag(Qt::WindowStaysOnTopHint);
@@ -110,7 +113,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(m_bottomButtonGroup, &BottomButtonGroup::zoomInBtnClicked,
             this, [ = ](){ m_graphicsView->zoomView(1.25); });
     connect(m_bottomButtonGroup, &BottomButtonGroup::zoomOutBtnClicked,
-            this, [ = ](){ m_graphicsView->zoomView(0.75); });
+            this, [ = ](){ m_graphicsView->zoomView(0.8); });
     connect(m_bottomButtonGroup, &BottomButtonGroup::toggleCheckerboardBtnClicked,
             this, [ = ](){ m_graphicsView->toggleCheckerboard(); });
     connect(m_bottomButtonGroup, &BottomButtonGroup::rotateRightBtnClicked,
@@ -130,14 +133,6 @@ MainWindow::MainWindow(QWidget *parent) :
         m_nextButton->setVisible(isGalleryAvailable());
     });
 
-    QShortcut * quitAppShorucut = new QShortcut(QKeySequence(Qt::Key_Space), this);
-    connect(quitAppShorucut, &QShortcut::activated,
-            std::bind(&MainWindow::quitAppAction, this, false));
-
-    QShortcut * quitAppShorucut2 = new QShortcut(QKeySequence(Qt::Key_Escape), this);
-    connect(quitAppShorucut2, &QShortcut::activated,
-            std::bind(&MainWindow::quitAppAction, this, false));
-
     QShortcut * prevPictureShorucut = new QShortcut(QKeySequence(Qt::Key_PageUp), this);
     connect(prevPictureShorucut, &QShortcut::activated,
             this, &MainWindow::galleryPrev);
@@ -150,7 +145,13 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(fullscreenShorucut, &QShortcut::activated,
             this, &MainWindow::toggleFullscreen);
 
+    m_am->setupAction(this);
+
     centerWindow();
+
+    QTimer::singleShot(0, this, [this](){
+        m_am->setupShortcuts();
+    });
 }
 
 MainWindow::~MainWindow()
@@ -370,19 +371,29 @@ void MainWindow::mouseDoubleClickEvent(QMouseEvent *event)
 void MainWindow::wheelEvent(QWheelEvent *event)
 {
     QPoint numDegrees = event->angleDelta() / 8;
-    bool needZoom = false, zoomIn = false;
+    bool needWeelEvent = false, wheelUp = false;
+    bool actionIsZoom = event->modifiers().testFlag(Qt::ControlModifier)
+            || Settings::instance()->mouseWheelBehavior() == ActionZoomImage;
 
     // NOTE: Only checking angleDelta since the QWheelEvent::pixelDelta() doc says
     //       pixelDelta() value is driver specific and unreliable on X11...
     //       We are not scrolling the canvas, just zoom in or out, so it probably
     //       doesn't matter here.
     if (!numDegrees.isNull() && numDegrees.y() != 0) {
-        needZoom = true;
-        zoomIn = numDegrees.y() > 0;
+        needWeelEvent = true;
+        wheelUp = numDegrees.y() > 0;
     }
 
-    if (needZoom) {
-        m_graphicsView->zoomView(zoomIn ? 1.25 : 0.8);
+    if (needWeelEvent) {
+        if (actionIsZoom) {
+            m_graphicsView->zoomView(wheelUp ? 1.25 : 0.8);
+        } else {
+            if (wheelUp) {
+                galleryPrev();
+            } else {
+                galleryNext();
+            }
+        }
         event->accept();
     } else {
         FramelessWindow::wheelEvent(event);
@@ -404,97 +415,38 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     QImage clipboardImage;
     QUrl clipboardFileUrl;
 
-    const QMimeData * clipboardData = QApplication::clipboard()->mimeData();
-    if (clipboardData->hasImage()) {
-        QVariant imageVariant(clipboardData->imageData());
-        if (imageVariant.isValid()) {
-            clipboardImage = qvariant_cast<QImage>(imageVariant);
-        }
-    } else if (clipboardData->hasText()) {
-        QString clipboardText(clipboardData->text());
-        if (clipboardText.startsWith("PICTURE:")) {
-            QString maybeFilename(clipboardText.mid(8));
-            if (QFile::exists(maybeFilename)) {
-                clipboardFileUrl = QUrl::fromLocalFile(maybeFilename);
-            }
-        }
-    }
+    QAction * copyPixmap = m_am->actionCopyPixmap;
+    QAction * copyFilePath = m_am->actionCopyFilePath;
 
-    QAction * copyPixmap = new QAction(tr("Copy P&ixmap"));
-    connect(copyPixmap, &QAction::triggered, this, [ = ](){
-        QClipboard *cb = QApplication::clipboard();
-        cb->setPixmap(m_graphicsView->scene()->renderToPixmap());
-    });
-    QAction * copyFilePath = new QAction(tr("Copy &File Path"));
-    connect(copyFilePath, &QAction::triggered, this, [ = ](){
-        QClipboard *cb = QApplication::clipboard();
-        cb->setText(currentFileUrl.toLocalFile());
-    });
     copyMenu->addAction(copyPixmap);
     if (currentFileUrl.isValid()) {
         copyMenu->addAction(copyFilePath);
     }
 
-    QAction * pasteImage = new QAction(tr("&Paste Image"));
-    connect(pasteImage, &QAction::triggered, this, [ = ](){
-        clearGallery();
-        m_graphicsView->showImage(clipboardImage);
-    });
+    QAction * paste = m_am->actionPaste;
 
-    QAction * pasteImageFile = new QAction(tr("&Paste Image File"));
-    connect(pasteImageFile, &QAction::triggered, this, [ = ](){
-        m_graphicsView->showFileFromUrl(clipboardFileUrl, true);
-    });
-
-    QAction * stayOnTopMode = new QAction(tr("Stay on top"));
-    connect(stayOnTopMode, &QAction::triggered, this, [ = ](){
-        toggleStayOnTop();
-    });
+    QAction * stayOnTopMode = m_am->actionToggleStayOnTop;
     stayOnTopMode->setCheckable(true);
     stayOnTopMode->setChecked(stayOnTop());
 
-    QAction * protectedMode = new QAction(tr("Protected mode"));
-    connect(protectedMode, &QAction::triggered, this, [ = ](){
-        toggleProtectedMode();
-    });
+    QAction * protectedMode = m_am->actionToggleProtectMode;
     protectedMode->setCheckable(true);
     protectedMode->setChecked(m_protectedMode);
 
-    QAction * toggleSettings = new QAction(tr("Configure..."));
-    connect(toggleSettings, &QAction::triggered, this, [ = ](){
-        SettingsDialog * sd = new SettingsDialog(this);
-        sd->exec();
-        sd->deleteLater();
-    });
-
-    QAction * helpAction = new QAction(tr("Help"));
-    connect(helpAction, &QAction::triggered, this, [ = ](){
-        AboutDialog * ad = new AboutDialog(this);
-        ad->exec();
-        ad->deleteLater();
-    });
-
-    QAction * propertiesAction = new QAction(tr("Properties"));
-    connect(propertiesAction, &QAction::triggered, this, [ = ](){
-        MetadataModel * md = new MetadataModel();
-        md->setFile(currentFileUrl.toLocalFile());
-
-        MetadataDialog * ad = new MetadataDialog(this);
-        ad->setMetadataModel(md);
-        ad->exec();
-        ad->deleteLater();
-    });
+    QAction * toggleSettings = m_am->actionSettings;
+    QAction * helpAction = m_am->actionHelp;
+    QAction * propertiesAction = m_am->actionProperties;
 
     if (copyMenu->actions().count() == 1) {
         menu->addActions(copyMenu->actions());
     } else {
         menu->addMenu(copyMenu);
     }
-    if (!clipboardImage.isNull()) {
-        menu->addAction(pasteImage);
-    } else if (clipboardFileUrl.isValid()) {
-        menu->addAction(pasteImageFile);
+
+    if (canPaste()) {
+        menu->addAction(paste);
     }
+
     menu->addSeparator();
     menu->addAction(stayOnTopMode);
     menu->addAction(protectedMode);
@@ -507,6 +459,7 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     }
     menu->exec(mapToGlobal(event->pos()));
     menu->deleteLater();
+    copyMenu->deleteLater();
 
     return FramelessWindow::contextMenuEvent(event);
 }
@@ -563,6 +516,22 @@ bool MainWindow::stayOnTop()
     return windowFlags().testFlag(Qt::WindowStaysOnTopHint);
 }
 
+bool MainWindow::canPaste()
+{
+    const QMimeData * clipboardData = QApplication::clipboard()->mimeData();
+    if (clipboardData->hasImage()) {
+        return true;
+    } else if (clipboardData->hasText()) {
+        QString clipboardText(clipboardData->text());
+        if (clipboardText.startsWith("PICTURE:")) {
+            QString maybeFilename(clipboardText.mid(8));
+            if (QFile::exists(maybeFilename)) {
+                return true;
+            }
+        }
+    }
+}
+
 void MainWindow::quitAppAction(bool force)
 {
     if (!m_protectedMode || force) {
@@ -591,4 +560,91 @@ void MainWindow::toggleMaximize()
 QSize MainWindow::sizeHint() const
 {
     return QSize(710, 530);
+}
+
+void MainWindow::on_actionCopyPixmap_triggered()
+{
+    QClipboard *cb = QApplication::clipboard();
+    cb->setPixmap(m_graphicsView->scene()->renderToPixmap());
+}
+
+void MainWindow::on_actionCopyFilePath_triggered()
+{
+    QUrl currentFileUrl(currentImageFileUrl());
+    if (currentFileUrl.isValid()) {
+        QClipboard *cb = QApplication::clipboard();
+        cb->setText(currentFileUrl.toLocalFile());
+    }
+}
+
+void MainWindow::on_actionPaste_triggered()
+{
+    QImage clipboardImage;
+    QUrl clipboardFileUrl;
+
+    const QMimeData * clipboardData = QApplication::clipboard()->mimeData();
+    if (clipboardData->hasImage()) {
+        QVariant imageVariant(clipboardData->imageData());
+        if (imageVariant.isValid()) {
+            clipboardImage = qvariant_cast<QImage>(imageVariant);
+        }
+    } else if (clipboardData->hasText()) {
+        QString clipboardText(clipboardData->text());
+        if (clipboardText.startsWith("PICTURE:")) {
+            QString maybeFilename(clipboardText.mid(8));
+            if (QFile::exists(maybeFilename)) {
+                clipboardFileUrl = QUrl::fromLocalFile(maybeFilename);
+            }
+        }
+    }
+
+    if (!clipboardImage.isNull()) {
+        clearGallery();
+        m_graphicsView->showImage(clipboardImage);
+    } else if (clipboardFileUrl.isValid()) {
+        m_graphicsView->showFileFromUrl(clipboardFileUrl, true);
+    }
+}
+
+void MainWindow::on_actionToggleStayOnTop_triggered()
+{
+    toggleStayOnTop();
+}
+
+void MainWindow::on_actionToggleProtectMode_triggered()
+{
+    toggleProtectedMode();
+}
+
+void MainWindow::on_actionSettings_triggered()
+{
+    SettingsDialog * sd = new SettingsDialog(this);
+    sd->exec();
+    sd->deleteLater();
+}
+
+void MainWindow::on_actionHelp_triggered()
+{
+    AboutDialog * ad = new AboutDialog(this);
+    ad->exec();
+    ad->deleteLater();
+}
+
+void MainWindow::on_actionProperties_triggered()
+{
+    QUrl currentFileUrl = currentImageFileUrl();
+    if (!currentFileUrl.isValid()) return;
+
+    MetadataModel * md = new MetadataModel();
+    md->setFile(currentFileUrl.toLocalFile());
+
+    MetadataDialog * ad = new MetadataDialog(this);
+    ad->setMetadataModel(md);
+    ad->exec();
+    ad->deleteLater();
+}
+
+void MainWindow::on_actionQuitApp_triggered()
+{
+    quitAppAction(false);
 }

@@ -28,6 +28,13 @@ DoubleClickBehavior Settings::doubleClickBehavior()
     return stringToDoubleClickBehavior(result);
 }
 
+MouseWheelBehavior Settings::mouseWheelBehavior()
+{
+    QString result = m_qsettings->value("mouse_wheel_behavior", "close").toString().toLower();
+
+    return stringToMouseWheelBehavior(result);
+}
+
 void Settings::setStayOnTop(bool on)
 {
     m_qsettings->setValue("stay_on_top", on);
@@ -37,6 +44,12 @@ void Settings::setStayOnTop(bool on)
 void Settings::setDoubleClickBehavior(DoubleClickBehavior dcb)
 {
     m_qsettings->setValue("double_click_behavior", doubleClickBehaviorToString(dcb));
+    m_qsettings->sync();
+}
+
+void Settings::setMouseWheelBehavior(MouseWheelBehavior mwb)
+{
+    m_qsettings->setValue("mouse_wheel_behavior", mouseWheelBehaviorToString(mwb));
     m_qsettings->sync();
 }
 
@@ -51,6 +64,16 @@ QString Settings::doubleClickBehaviorToString(DoubleClickBehavior dcb)
     return _map.value(dcb, "close");
 }
 
+QString Settings::mouseWheelBehaviorToString(MouseWheelBehavior mwb)
+{
+    static QMap<MouseWheelBehavior, QString> _map {
+        {ActionZoomImage, "zoom"},
+        {ActionPrevNextImage, "switch"}
+    };
+
+    return _map.value(mwb, "zoom");
+}
+
 DoubleClickBehavior Settings::stringToDoubleClickBehavior(QString str)
 {
     static QMap<QString, DoubleClickBehavior> _map {
@@ -60,6 +83,16 @@ DoubleClickBehavior Settings::stringToDoubleClickBehavior(QString str)
     };
 
     return _map.value(str, ActionCloseWindow);
+}
+
+MouseWheelBehavior Settings::stringToMouseWheelBehavior(QString str)
+{
+    static QMap<QString, MouseWheelBehavior> _map {
+        {"zoom", ActionZoomImage},
+        {"switch", ActionPrevNextImage}
+    };
+
+    return _map.value(str, ActionZoomImage);
 }
 
 Settings::Settings()

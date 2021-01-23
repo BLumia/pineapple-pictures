@@ -204,61 +204,69 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../app/mainwindow.cpp" line="176"/>
+        <location filename="../app/mainwindow.cpp" line="173"/>
         <source>File url list is empty</source>
         <translation>文件 URL 列表为空</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="406"/>
+        <location filename="../app/mainwindow.cpp" line="413"/>
         <source>&amp;Copy</source>
         <translation>复制(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="427"/>
+        <location filename="../app/actionmanager.cpp" line="43"/>
         <source>Copy P&amp;ixmap</source>
         <translation>复制位图(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="432"/>
+        <location filename="../app/actionmanager.cpp" line="44"/>
         <source>Copy &amp;File Path</source>
         <translation>复制文件路径(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="442"/>
         <source>&amp;Paste Image</source>
-        <translation>粘贴图像(&amp;P)</translation>
+        <translation type="vanished">粘贴图像(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="448"/>
         <source>&amp;Paste Image File</source>
-        <translation>粘贴图像文件(&amp;P)</translation>
+        <translation type="vanished">粘贴图像文件(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="481"/>
+        <location filename="../app/actionmanager.cpp" line="50"/>
         <source>Properties</source>
         <translation>属性</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="31"/>
-        <location filename="../app/mainwindow.cpp" line="453"/>
+        <location filename="../app/actionmanager.cpp" line="46"/>
         <source>Stay on top</source>
         <translation>总在最前</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="35"/>
-        <location filename="../app/mainwindow.cpp" line="460"/>
+        <location filename="../app/actionmanager.cpp" line="47"/>
         <source>Protected mode</source>
         <translation>保护模式</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="467"/>
+        <location filename="../app/actionmanager.cpp" line="45"/>
+        <source>&amp;Paste</source>
+        <translation>粘贴(&amp;P)</translation>
+    </message>
+    <message>
+        <location filename="../app/actionmanager.cpp" line="48"/>
         <source>Configure...</source>
         <translation>设置...</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="474"/>
+        <location filename="../app/actionmanager.cpp" line="49"/>
         <source>Help</source>
         <translation>帮助</translation>
+    </message>
+    <message>
+        <location filename="../app/actionmanager.cpp" line="51"/>
+        <source>Quit</source>
+        <translation>退出</translation>
     </message>
 </context>
 <context>
@@ -552,34 +560,49 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="15"/>
+        <location filename="../app/settingsdialog.cpp" line="16"/>
         <source>Settings</source>
         <translation>设定</translation>
     </message>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="20"/>
+        <location filename="../app/settingsdialog.cpp" line="21"/>
         <source>Do nothing</source>
         <translation>什么也不做</translation>
     </message>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="21"/>
+        <location filename="../app/settingsdialog.cpp" line="22"/>
         <source>Close the window</source>
         <translation>关闭窗口</translation>
     </message>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="22"/>
+        <location filename="../app/settingsdialog.cpp" line="23"/>
         <source>Toggle maximize</source>
         <translation>最大化窗口</translation>
     </message>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="30"/>
+        <location filename="../app/settingsdialog.cpp" line="27"/>
+        <source>Zoom in and out</source>
+        <translation>放大和缩小</translation>
+    </message>
+    <message>
+        <location filename="../app/settingsdialog.cpp" line="28"/>
+        <source>View next or previous item</source>
+        <translation>查看下一项或上一项</translation>
+    </message>
+    <message>
+        <location filename="../app/settingsdialog.cpp" line="41"/>
         <source>Stay on top when start-up</source>
         <translation>启动时保持窗口总在最前</translation>
     </message>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="31"/>
+        <location filename="../app/settingsdialog.cpp" line="42"/>
         <source>Double-click behavior</source>
         <translation>双击时的行为</translation>
+    </message>
+    <message>
+        <location filename="../app/settingsdialog.cpp" line="43"/>
+        <source>Mouse wheel behavior</source>
+        <translation>鼠标滚轮行为</translation>
     </message>
 </context>
 <context>

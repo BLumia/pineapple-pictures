@@ -20,6 +20,7 @@ public slots:
 private:
     QCheckBox * m_stayOnTop = nullptr;
     QComboBox * m_doubleClickBehavior = nullptr;
+    QComboBox * m_mouseWheelBehavior = nullptr;
 };
 
 #endif // SETTINGSDIALOG_H

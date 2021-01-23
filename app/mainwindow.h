@@ -12,6 +12,7 @@ class QGraphicsOpacityEffect;
 class QGraphicsView;
 QT_END_NAMESPACE
 
+class ActionManager;
 class ToolButton;
 class GraphicsView;
 class NavigatorView;
@@ -55,6 +56,7 @@ protected slots:
     void toggleProtectedMode();
     void toggleStayOnTop();
     bool stayOnTop();
+    bool canPaste();
     void quitAppAction(bool force = false);
     void toggleFullscreen();
     void toggleMaximize();
@@ -62,7 +64,20 @@ protected slots:
 protected:
     QSize sizeHint() const override;
 
+private slots:
+    void on_actionCopyPixmap_triggered();
+    void on_actionCopyFilePath_triggered();
+    void on_actionPaste_triggered();
+    void on_actionToggleStayOnTop_triggered();
+    void on_actionToggleProtectMode_triggered();
+    void on_actionSettings_triggered();
+    void on_actionHelp_triggered();
+    void on_actionProperties_triggered();
+    void on_actionQuitApp_triggered();
+
 private:
+    ActionManager *m_am;
+
     QPoint m_oldMousePos;
     QPropertyAnimation *m_fadeOutAnimation;
     QPropertyAnimation *m_floatUpAnimation;

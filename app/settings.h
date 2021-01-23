@@ -8,8 +8,16 @@ enum DoubleClickBehavior {
     ActionCloseWindow,
     ActionMaximizeWindow,
 
-    ActionStart = ActionDoNothing,
-    ActionEnd = ActionMaximizeWindow
+    DCActionStart = ActionDoNothing,
+    DCActionEnd = ActionMaximizeWindow
+};
+
+enum MouseWheelBehavior {
+    ActionZoomImage,
+    ActionPrevNextImage,
+
+    MWActionStart = ActionZoomImage,
+    MWActionEnd = ActionPrevNextImage
 };
 
 class Settings : public QObject
@@ -20,12 +28,16 @@ public:
 
     bool stayOnTop();
     DoubleClickBehavior doubleClickBehavior();
+    MouseWheelBehavior mouseWheelBehavior();
 
     void setStayOnTop(bool on);
     void setDoubleClickBehavior(DoubleClickBehavior dcb);
+    void setMouseWheelBehavior(MouseWheelBehavior mwb);
 
     static QString doubleClickBehaviorToString(DoubleClickBehavior dcb);
+    static QString mouseWheelBehaviorToString(MouseWheelBehavior mwb);
     static DoubleClickBehavior stringToDoubleClickBehavior(QString str);
+    static MouseWheelBehavior stringToMouseWheelBehavior(QString str);
 
 private:
     Settings();

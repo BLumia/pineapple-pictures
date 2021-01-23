@@ -200,61 +200,69 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../app/mainwindow.cpp" line="176"/>
+        <location filename="../app/mainwindow.cpp" line="173"/>
         <source>File url list is empty</source>
         <translation>Список URL-адресов файлов пуст</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="406"/>
+        <location filename="../app/mainwindow.cpp" line="413"/>
         <source>&amp;Copy</source>
         <translation>&amp;Копировать</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="427"/>
+        <location filename="../app/actionmanager.cpp" line="43"/>
         <source>Copy P&amp;ixmap</source>
         <translation>Копировать P&amp;ixmap</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="432"/>
+        <location filename="../app/actionmanager.cpp" line="44"/>
         <source>Copy &amp;File Path</source>
         <translation>Копировать &amp;путь к файлу</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="442"/>
         <source>&amp;Paste Image</source>
-        <translation>&amp;Вставить изображение</translation>
+        <translation type="vanished">&amp;Вставить изображение</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="448"/>
         <source>&amp;Paste Image File</source>
-        <translation>&amp;Вставить файл изображения</translation>
+        <translation type="vanished">&amp;Вставить файл изображения</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="481"/>
+        <location filename="../app/actionmanager.cpp" line="50"/>
         <source>Properties</source>
         <translation>Свойства</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="31"/>
-        <location filename="../app/mainwindow.cpp" line="453"/>
+        <location filename="../app/actionmanager.cpp" line="46"/>
         <source>Stay on top</source>
         <translation>Поверх всех окон</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="35"/>
-        <location filename="../app/mainwindow.cpp" line="460"/>
+        <location filename="../app/actionmanager.cpp" line="47"/>
         <source>Protected mode</source>
         <translation>Защищённый режим</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="467"/>
+        <location filename="../app/actionmanager.cpp" line="45"/>
+        <source>&amp;Paste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/actionmanager.cpp" line="48"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="474"/>
+        <location filename="../app/actionmanager.cpp" line="49"/>
         <source>Help</source>
         <translation>Помощь</translation>
+    </message>
+    <message>
+        <location filename="../app/actionmanager.cpp" line="51"/>
+        <source>Quit</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -548,34 +556,49 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="15"/>
+        <location filename="../app/settingsdialog.cpp" line="16"/>
         <source>Settings</source>
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="20"/>
+        <location filename="../app/settingsdialog.cpp" line="21"/>
         <source>Do nothing</source>
         <translation>Ничего не делать</translation>
     </message>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="21"/>
+        <location filename="../app/settingsdialog.cpp" line="22"/>
         <source>Close the window</source>
         <translation>Закрыть окно</translation>
     </message>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="22"/>
+        <location filename="../app/settingsdialog.cpp" line="23"/>
         <source>Toggle maximize</source>
         <translation>Развернуть окно</translation>
     </message>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="30"/>
+        <location filename="../app/settingsdialog.cpp" line="27"/>
+        <source>Zoom in and out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/settingsdialog.cpp" line="28"/>
+        <source>View next or previous item</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/settingsdialog.cpp" line="41"/>
         <source>Stay on top when start-up</source>
         <translation>Поверх всех окон при запуске</translation>
     </message>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="31"/>
+        <location filename="../app/settingsdialog.cpp" line="42"/>
         <source>Double-click behavior</source>
         <translation>Поведение при двойном щелчке</translation>
+    </message>
+    <message>
+        <location filename="../app/settingsdialog.cpp" line="43"/>
+        <source>Mouse wheel behavior</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -21,7 +21,7 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="28"/>
         <source>Context menu option explanation:</source>
-        <translation>Explication des options du menu contextuel :</translation>
+        <translation>Explication des options du menu contextuel&#xa0;:</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="32"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="45"/>
         <source>Version: %1</source>
-        <translation>Version : %1</translation>
+        <translation>Version&#xa0;: %1</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="48"/>
@@ -87,7 +87,7 @@
         <location filename="../app/aboutdialog.cpp" line="115"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation>%1 est basé sur les bibliothèques de logiciels libres suivantes :</translation>
+        <translation>%1 est basé sur les bibliothèques de logiciels libres suivantes&#xa0;:</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="139"/>
@@ -112,7 +112,7 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="80"/>
         <source>This license grants people a number of freedoms:</source>
-        <translation>Cette licence accorde aux personnes un certain nombre de libertés :</translation>
+        <translation>Cette licence accorde aux personnes un certain nombre de libertés&#xa0;:</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="81"/>
@@ -146,7 +146,7 @@
     </message>
     <message>
         <source>%1 is built on the following free software libraries:</source>
-        <translation type="vanished">%1 est basé sur les bibliothèques de logiciels libres suivantes :</translation>
+        <translation type="vanished">%1 est basé sur les bibliothèques de logiciels libres suivantes&#xa0;:</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="137"/>
@@ -198,67 +198,75 @@
     <message>
         <location filename="../app/graphicsview.cpp" line="269"/>
         <source>Not supported mimedata: %1</source>
-        <translation>Mimedata non pris en charge : %1</translation>
+        <translation>Mimedata non pris en charge&#xa0;: %1</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../app/mainwindow.cpp" line="176"/>
+        <location filename="../app/mainwindow.cpp" line="173"/>
         <source>File url list is empty</source>
         <translation>La liste des URL de fichiers est vide</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="406"/>
+        <location filename="../app/mainwindow.cpp" line="413"/>
         <source>&amp;Copy</source>
         <translation>&amp;Copier</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="427"/>
+        <location filename="../app/actionmanager.cpp" line="43"/>
         <source>Copy P&amp;ixmap</source>
         <translation>Copier P&amp;ixmap</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="432"/>
+        <location filename="../app/actionmanager.cpp" line="44"/>
         <source>Copy &amp;File Path</source>
         <translation>Copier le &amp;chemin du fichier</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="442"/>
         <source>&amp;Paste Image</source>
-        <translation>&amp;Coller l&apos;image</translation>
+        <translation type="vanished">&amp;Coller l&apos;image</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="448"/>
         <source>&amp;Paste Image File</source>
-        <translation>&amp;Coller le fichier d&apos;image</translation>
+        <translation type="vanished">&amp;Coller le fichier d&apos;image</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="481"/>
+        <location filename="../app/actionmanager.cpp" line="50"/>
         <source>Properties</source>
         <translation>Propriétés</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="31"/>
-        <location filename="../app/mainwindow.cpp" line="453"/>
+        <location filename="../app/actionmanager.cpp" line="46"/>
         <source>Stay on top</source>
         <translation>Rester en-haut</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="35"/>
-        <location filename="../app/mainwindow.cpp" line="460"/>
+        <location filename="../app/actionmanager.cpp" line="47"/>
         <source>Protected mode</source>
         <translation>Mode protégé</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="467"/>
+        <location filename="../app/actionmanager.cpp" line="45"/>
+        <source>&amp;Paste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/actionmanager.cpp" line="48"/>
         <source>Configure...</source>
         <translation>Configurer…</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="474"/>
+        <location filename="../app/actionmanager.cpp" line="49"/>
         <source>Help</source>
         <translation>Aide</translation>
+    </message>
+    <message>
+        <location filename="../app/actionmanager.cpp" line="51"/>
+        <source>Quit</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -456,7 +464,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="107"/>
         <source>35mm focal length</source>
-        <translation>Distance focale de 35 mm</translation>
+        <translation>Distance focale de 35&#xa0;mm</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="110"/>
@@ -552,34 +560,49 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="15"/>
+        <location filename="../app/settingsdialog.cpp" line="16"/>
         <source>Settings</source>
         <translation>Paramètres</translation>
     </message>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="20"/>
+        <location filename="../app/settingsdialog.cpp" line="21"/>
         <source>Do nothing</source>
         <translation>Ne rien faire</translation>
     </message>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="21"/>
+        <location filename="../app/settingsdialog.cpp" line="22"/>
         <source>Close the window</source>
         <translation>Fermer la fenêtre</translation>
     </message>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="22"/>
+        <location filename="../app/settingsdialog.cpp" line="23"/>
         <source>Toggle maximize</source>
         <translation>Activer/désactiver l&apos;agrandissement</translation>
     </message>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="30"/>
+        <location filename="../app/settingsdialog.cpp" line="27"/>
+        <source>Zoom in and out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/settingsdialog.cpp" line="28"/>
+        <source>View next or previous item</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/settingsdialog.cpp" line="41"/>
         <source>Stay on top when start-up</source>
         <translation>Rester en-haut lors du démarrage</translation>
     </message>
     <message>
-        <location filename="../app/settingsdialog.cpp" line="31"/>
+        <location filename="../app/settingsdialog.cpp" line="42"/>
         <source>Double-click behavior</source>
         <translation>Comportement du double-clic</translation>
+    </message>
+    <message>
+        <location filename="../app/settingsdialog.cpp" line="43"/>
+        <source>Mouse wheel behavior</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
