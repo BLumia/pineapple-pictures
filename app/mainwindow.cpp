@@ -530,6 +530,8 @@ bool MainWindow::canPaste()
             }
         }
     }
+
+    return false;
 }
 
 void MainWindow::quitAppAction(bool force)
