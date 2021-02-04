@@ -216,7 +216,7 @@
     <message>
         <location filename="../app/actionmanager.cpp" line="43"/>
         <source>Copy P&amp;ixmap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopier p&amp;ixmap</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="44"/>
@@ -251,7 +251,7 @@
     <message>
         <location filename="../app/actionmanager.cpp" line="45"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lim inn</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="48"/>
@@ -266,7 +266,7 @@
     <message>
         <location filename="../app/actionmanager.cpp" line="51"/>
         <source>Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>Avslutt</translation>
     </message>
 </context>
 <context>
@@ -283,7 +283,7 @@
         <location filename="../app/metadatamodel.cpp" line="36"/>
         <source>Origin</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Opprinnelse</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="37"/>
@@ -334,7 +334,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="46"/>
         <source>Aspect Ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Størrelsesforhold</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="49"/>
@@ -379,7 +379,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="71"/>
         <source>Authors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Opphavsmenn</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="73"/>
@@ -414,7 +414,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="87"/>
         <source>Camera maker</source>
-        <translation type="unfinished"></translation>
+        <translation>Kamerafabrikat</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="89"/>
@@ -439,7 +439,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="97"/>
         <source>Exposure bias</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eksponeringskorrigering</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="99"/>
@@ -449,12 +449,12 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="101"/>
         <source>Max aperture</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Maks. blenderåpning</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="103"/>
         <source>Metering mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Målingsmodus</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="105"/>
@@ -464,7 +464,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="107"/>
         <source>35mm focal length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">35 mm-brennvidde</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="110"/>
@@ -479,7 +479,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="114"/>
         <source>Exposure program</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eksponeringsprogram</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="116"/>
@@ -509,32 +509,32 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="127"/>
         <source>Latitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Breddegradsreferanse</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="129"/>
         <source>Latitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Breddegrad</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="131"/>
         <source>Longitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Lengdegradsreferanse</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="133"/>
         <source>Longitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Lengdegrad</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="135"/>
         <source>Altitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Høydereferanse</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="137"/>
         <source>Altitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Høyde</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="147"/>
@@ -582,12 +582,12 @@
     <message>
         <location filename="../app/settingsdialog.cpp" line="27"/>
         <source>Zoom in and out</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom inn og ut</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="28"/>
         <source>View next or previous item</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis neste eller forrige element</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="41"/>
@@ -602,7 +602,7 @@
     <message>
         <location filename="../app/settingsdialog.cpp" line="43"/>
         <source>Mouse wheel behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Musehjulsoppførsel</translation>
     </message>
 </context>
 <context>
