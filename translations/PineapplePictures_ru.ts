@@ -21,7 +21,7 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="28"/>
         <source>Context menu option explanation:</source>
-        <translation>Объяснение пункта контекстного меню:</translation>
+        <translation>Объяснение пунктов контекстного меню:</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="32"/>
@@ -578,7 +578,7 @@
     <message>
         <location filename="../app/settingsdialog.cpp" line="27"/>
         <source>Zoom in and out</source>
-        <translation>Увеличение и уменьшение</translation>
+        <translation>Увеличение или уменьшение изображения</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="28"/>
