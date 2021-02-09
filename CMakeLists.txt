@@ -43,6 +43,7 @@ set (PPIC_CPP_FILES
     app/metadatamodel.cpp
     app/metadatadialog.cpp
     app/exiv2wrapper.cpp
+    app/playlistmanager.cpp
 )
 
 set (PPIC_HEADER_FILES
@@ -61,6 +62,7 @@ set (PPIC_HEADER_FILES
     app/metadatamodel.h
     app/metadatadialog.h
     app/exiv2wrapper.h
+    app/playlistmanager.h
 )
 
 set (PPIC_QRC_FILES

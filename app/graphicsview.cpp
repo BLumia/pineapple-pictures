@@ -25,11 +25,9 @@ GraphicsView::GraphicsView(QWidget *parent)
     connect(verticalScrollBar(), &QScrollBar::valueChanged, this, &GraphicsView::viewportRectChanged);
 }
 
-void GraphicsView::showFileFromUrl(const QUrl &url, bool doRequestGallery)
+void GraphicsView::showFileFromPath(const QString &filePath, bool doRequestGallery)
 {
     emit navigatorViewRequired(false, 0);
-
-    QString filePath(url.toLocalFile());
 
     if (filePath.endsWith(".svg")) {
         showSvg(filePath);
@@ -43,12 +41,15 @@ void GraphicsView::showFileFromUrl(const QUrl &url, bool doRequestGallery)
         // So we cannot use imageFormat() and check if it returns QImage::Format_Invalid to detect if we support the file.
         // QImage::Format imageFormat = imageReader.imageFormat();
         if (imageReader.format().isEmpty()) {
+            doRequestGallery = false;
             showText(tr("File is not a valid image"));
         } else if (!imageReader.supportsAnimation() && !imageReader.canRead()) {
+            doRequestGallery = false;
             showText(tr("Image data is invalid or currently unsupported"));
         } else {
             const QPixmap & pixmap = QPixmap::fromImageReader(&imageReader);
             if (pixmap.isNull()) {
+                doRequestGallery = false;
                 showText(tr("Image data is invalid or currently unsupported"));
             } else {
                 showImage(pixmap);
@@ -253,7 +254,7 @@ void GraphicsView::dropEvent(QDropEvent *event)
         if (urls.isEmpty()) {
             showText(tr("File url list is empty"));
         } else {
-            showFileFromUrl(urls.first(), true);
+            showFileFromPath(urls.first().toLocalFile(), true);
         }
     } else if (mimeData->hasImage()) {
         QImage img = qvariant_cast<QImage>(mimeData->imageData());

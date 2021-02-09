@@ -13,6 +13,7 @@ class QGraphicsView;
 QT_END_NAMESPACE
 
 class ActionManager;
+class PlaylistManager;
 class ToolButton;
 class GraphicsView;
 class NavigatorView;
@@ -33,10 +34,6 @@ public:
     void loadGalleryBySingleLocalFile(const QString &path);
     void galleryPrev();
     void galleryNext();
-    bool isGalleryAvailable();
-
-signals:
-    void galleryLoaded();
 
 protected slots:
     void showEvent(QShowEvent *event) override;
@@ -77,6 +74,7 @@ private slots:
 
 private:
     ActionManager *m_am;
+    PlaylistManager *m_pm;
 
     QPoint m_oldMousePos;
     QPropertyAnimation *m_fadeOutAnimation;
@@ -90,9 +88,6 @@ private:
     BottomButtonGroup *m_bottomButtonGroup;
     bool m_protectedMode = false;
     bool m_clickedOnWindow = false;
-
-    QList<QUrl> m_files;
-    int m_currentFileIndex = -1;
 };
 
 #endif // MAINWINDOW_H

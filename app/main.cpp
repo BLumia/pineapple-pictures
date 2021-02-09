@@ -1,4 +1,7 @@
 #include "mainwindow.h"
+
+#include "playlistmanager.h"
+
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDir>
@@ -35,13 +38,7 @@ int main(int argc, char *argv[])
     parser.process(a);
 
     QStringList urlStrList = parser.positionalArguments();
-    QList<QUrl> urlList;
-    for (const QString & str : qAsConst(urlStrList)) {
-        QUrl url = QUrl::fromLocalFile(str);
-        if (url.isValid()) {
-            urlList.append(url);
-        }
-    }
+    QList<QUrl> && urlList = PlaylistManager::convertToUrlList(urlStrList);
 
     MainWindow w;
     w.show();

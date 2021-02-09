@@ -11,6 +11,7 @@
 #include "metadatamodel.h"
 #include "metadatadialog.h"
 #include "actionmanager.h"
+#include "playlistmanager.h"
 
 #include <QMouseEvent>
 #include <QMovie>
@@ -21,7 +22,6 @@
 #include <QScreen>
 #include <QMenu>
 #include <QShortcut>
-#include <QDir>
 #include <QCollator>
 #include <QClipboard>
 #include <QMimeData>
@@ -31,6 +31,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : FramelessWindow(parent)
     , m_am(new ActionManager)
+    , m_pm(new PlaylistManager(PlaylistManager::PL_SAMEFOLDER, this))
 {
     if (Settings::instance()->stayOnTop()) {
         this->setWindowFlag(Qt::WindowStaysOnTopHint);
@@ -128,9 +129,9 @@ MainWindow::MainWindow(QWidget *parent)
     m_gv->setOpacity(0, false);
     m_closeButton->setOpacity(0, false);
 
-    connect(this, &MainWindow::galleryLoaded, this, [this]() {
-        m_prevButton->setVisible(isGalleryAvailable());
-        m_nextButton->setVisible(isGalleryAvailable());
+    connect(m_pm, &PlaylistManager::loaded, this, [this](int galleryFileCount) {
+        m_prevButton->setVisible(galleryFileCount > 1);
+        m_nextButton->setVisible(galleryFileCount > 1);
     });
 
     QShortcut * prevPictureShorucut = new QShortcut(QKeySequence(Qt::Key_PageUp), this);
@@ -163,11 +164,11 @@ void MainWindow::showUrls(const QList<QUrl> &urls)
 {
     if (!urls.isEmpty()) {
         if (urls.count() == 1) {
-            m_graphicsView->showFileFromUrl(urls.first(), true);
+            m_graphicsView->showFileFromPath(urls.first().toLocalFile(), true);
         } else {
-            m_graphicsView->showFileFromUrl(urls.first(), false);
-            m_files = urls;
-            m_currentFileIndex = 0;
+            m_graphicsView->showFileFromPath(urls.first().toLocalFile(), false);
+            m_pm->setPlaylist(urls);
+            m_pm->setCurrentIndex(0);
         }
     } else {
         m_graphicsView->showText(tr("File url list is empty"));
@@ -208,77 +209,44 @@ void MainWindow::adjustWindowSizeBySceneRect()
 // can be empty if it is NOT from a local file.
 QUrl MainWindow::currentImageFileUrl() const
 {
-    if (m_currentFileIndex != -1) {
-        return m_files.value(m_currentFileIndex);
-    }
+    QUrl url;
+    std::tie(std::ignore, url) = m_pm->currentFileUrl();
 
-    return QUrl();
+    return url;
 }
 
 void MainWindow::clearGallery()
 {
-    m_currentFileIndex = -1;
-    m_files.clear();
+    m_pm->clear();
 }
 
 void MainWindow::loadGalleryBySingleLocalFile(const QString &path)
 {
-    QFileInfo info(path);
-    QDir dir(info.path());
-    QString currentFileName = info.fileName();
-    QStringList entryList = dir.entryList({"*.jpg", "*.jpeg", "*.jfif", "*.png", "*.gif", "*.svg", "*.bmp"},
-                                          QDir::Files | QDir::NoSymLinks, QDir::NoSort);
-
-    QCollator collator;
-    collator.setNumericMode(true);
-
-    std::sort(entryList.begin(), entryList.end(), collator);
-
-    clearGallery();
-
-    for (int i = 0; i < entryList.count(); i++) {
-        const QString & fileName = entryList.at(i);
-        const QString & oneEntry = dir.absoluteFilePath(fileName);
-        const QUrl & url = QUrl::fromLocalFile(oneEntry);
-        m_files.append(url);
-        if (fileName == currentFileName) {
-            m_currentFileIndex = i;
-        }
-    }
-
-    emit galleryLoaded();
+    m_pm->setCurrentFile(path);
 }
 
 void MainWindow::galleryPrev()
 {
-    int count = m_files.count();
-    if (!isGalleryAvailable()) {
-        return;
+    int index;
+    QString filePath;
+    std::tie(index, filePath) = m_pm->previousFile();
+
+    if (index >= 0) {
+        m_graphicsView->showFileFromPath(filePath, false);
+        m_pm->setCurrentIndex(index);
     }
-
-    m_currentFileIndex = m_currentFileIndex - 1 < 0 ? count - 1 : m_currentFileIndex - 1;
-
-    m_graphicsView->showFileFromUrl(m_files.at(m_currentFileIndex), false);
 }
 
 void MainWindow::galleryNext()
 {
-    int count = m_files.count();
-    if (!isGalleryAvailable()) {
-        return;
+    int index;
+    QString filePath;
+    std::tie(index, filePath) = m_pm->nextFile();
+
+    if (index >= 0) {
+        m_graphicsView->showFileFromPath(filePath, false);
+        m_pm->setCurrentIndex(index);
     }
-
-    m_currentFileIndex = m_currentFileIndex + 1 == count ? 0 : m_currentFileIndex + 1;
-
-    m_graphicsView->showFileFromUrl(m_files.at(m_currentFileIndex), false);
-}
-
-bool MainWindow::isGalleryAvailable()
-{
-    if (m_currentFileIndex < 0 || m_files.isEmpty() || m_currentFileIndex >= m_files.count()) {
-        return false;
-    }
-    return true;
 }
 
 void MainWindow::showEvent(QShowEvent *event)
@@ -601,10 +569,12 @@ void MainWindow::on_actionPaste_triggered()
     }
 
     if (!clipboardImage.isNull()) {
-        clearGallery();
         m_graphicsView->showImage(clipboardImage);
+        clearGallery();
     } else if (clipboardFileUrl.isValid()) {
-        m_graphicsView->showFileFromUrl(clipboardFileUrl, true);
+        QString localFile(clipboardFileUrl.toLocalFile());
+        m_graphicsView->showFileFromPath(localFile, true);
+        m_pm->setCurrentFile(localFile);
     }
 }
 

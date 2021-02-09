@@ -11,7 +11,7 @@ class GraphicsView : public QGraphicsView
 public:
     GraphicsView(QWidget *parent = nullptr);
 
-    void showFileFromUrl(const QUrl &url, bool requestGallery = false);
+    void showFileFromPath(const QString &filePath, bool requestGallery = false);
 
     void showImage(const QPixmap &pixmap);
     void showImage(const QImage &image);
