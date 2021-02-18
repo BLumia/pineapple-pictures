@@ -11,7 +11,10 @@ FramelessWindow::FramelessWindow(QWidget *parent)
     : QWidget(parent)
     , m_centralLayout(new QVBoxLayout(this))
 {
-    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint);
+    // A frameless window has the Qt::WindowTitleHint flag seems wrong,
+    // but it's a workaround of the following bug (also see the focused comment):
+    // https://bugreports.qt.io/browse/QTBUG-8361?focusedCommentId=542002#comment-542002
+    this->setWindowFlags(Qt::Window | Qt::WindowTitleHint | Qt::WindowMinMaxButtonsHint | Qt::FramelessWindowHint);
 
     m_centralLayout->setMargin(0);
 }

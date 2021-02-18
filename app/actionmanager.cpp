@@ -57,10 +57,11 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
 
 void ActionManager::setupShortcuts()
 {
+    actionZoomIn->setShortcut(QKeySequence(QKeySequence::ZoomIn));
+    actionZoomOut->setShortcut(QKeySequence(QKeySequence::ZoomOut));
     actionQuitApp->setShortcuts({
         QKeySequence(Qt::Key_Space),
         QKeySequence(Qt::Key_Escape)
     });
-    actionQuitApp->setShortcutContext(Qt::ApplicationShortcut);
 }
 
