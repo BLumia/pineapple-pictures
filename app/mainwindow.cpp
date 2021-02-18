@@ -22,7 +22,6 @@
 #include <QScreen>
 #include <QMenu>
 #include <QShortcut>
-#include <QCollator>
 #include <QClipboard>
 #include <QMimeData>
 #include <QWindow>
@@ -112,9 +111,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_bottomButtonGroup, &BottomButtonGroup::toggleWindowMaximum,
             this, &MainWindow::toggleMaximize);
     connect(m_bottomButtonGroup, &BottomButtonGroup::zoomInBtnClicked,
-            this, [ = ](){ m_graphicsView->zoomView(1.25); });
+            this, &MainWindow::on_actionZoomIn_triggered);
     connect(m_bottomButtonGroup, &BottomButtonGroup::zoomOutBtnClicked,
-            this, [ = ](){ m_graphicsView->zoomView(0.8); });
+            this, &MainWindow::on_actionZoomOut_triggered);
     connect(m_bottomButtonGroup, &BottomButtonGroup::toggleCheckerboardBtnClicked,
             this, [ = ](){ m_graphicsView->toggleCheckerboard(); });
     connect(m_bottomButtonGroup, &BottomButtonGroup::rotateRightBtnClicked,
@@ -354,7 +353,11 @@ void MainWindow::wheelEvent(QWheelEvent *event)
 
     if (needWeelEvent) {
         if (actionIsZoom) {
-            m_graphicsView->zoomView(wheelUp ? 1.25 : 0.8);
+            if (wheelUp) {
+                on_actionZoomIn_triggered();
+            } else {
+                on_actionZoomOut_triggered();
+            }
         } else {
             if (wheelUp) {
                 galleryPrev();
@@ -530,6 +533,18 @@ void MainWindow::toggleMaximize()
 QSize MainWindow::sizeHint() const
 {
     return QSize(710, 530);
+}
+
+void MainWindow::on_actionZoomIn_triggered()
+{
+    if (m_graphicsView->scaleFactor() < 1000) {
+        m_graphicsView->zoomView(1.25);
+    }
+}
+
+void MainWindow::on_actionZoomOut_triggered()
+{
+    m_graphicsView->zoomView(0.8);
 }
 
 void MainWindow::on_actionCopyPixmap_triggered()

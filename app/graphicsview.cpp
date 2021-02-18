@@ -7,6 +7,7 @@
 #include <QScrollBar>
 #include <QMimeData>
 #include <QImageReader>
+#include <QStyleOptionGraphicsItem>
 
 GraphicsView::GraphicsView(QWidget *parent)
     : QGraphicsView (parent)
@@ -109,12 +110,7 @@ void GraphicsView::setScene(GraphicsScene *scene)
 
 qreal GraphicsView::scaleFactor() const
 {
-    int angle = static_cast<int>(m_rotateAngle);
-    if (angle == 0 || angle == 180) {
-        return qAbs(transform().m11());
-    } else {
-        return qAbs(transform().m12());
-    }
+    return QStyleOptionGraphicsItem::levelOfDetailFromTransform(transform());
 }
 
 void GraphicsView::resetTransform()
@@ -209,10 +205,13 @@ void GraphicsView::resizeEvent(QResizeEvent *event)
     if (m_enableFitInView) {
         QTransform tf;
         tf.rotate(m_rotateAngle);
-        if (isThingSmallerThanWindowWith(tf) && scaleFactor() >= 1) {
+        bool originalSizeSmallerThanWindow = isThingSmallerThanWindowWith(tf);
+        if (originalSizeSmallerThanWindow && scaleFactor() >= 1) {
             // no longer need to do fitInView()
             // but we leave the m_enableFitInView value unchanged in case
             // user resize down the window again.
+        } else if (originalSizeSmallerThanWindow && scaleFactor() < 1) {
+            resetScale();
         } else {
             fitInView(sceneRect(), Qt::KeepAspectRatio);
         }

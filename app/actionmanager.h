@@ -16,6 +16,8 @@ public:
     void setupShortcuts();
 
 public:
+    QAction *actionZoomIn;
+    QAction *actionZoomOut;
     QAction *actionCopyPixmap;
     QAction *actionCopyFilePath;
     QAction *actionPaste;
