@@ -247,12 +247,12 @@
     <message>
         <location filename="../app/actionmanager.cpp" line="45"/>
         <source>Zoom in</source>
-        <translation type="unfinished"></translation>
+        <translation>Увеличить</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="46"/>
         <source>Zoom out</source>
-        <translation type="unfinished"></translation>
+        <translation>Уменьшить</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="49"/>
@@ -593,7 +593,7 @@
     <message>
         <location filename="../app/settingsdialog.cpp" line="28"/>
         <source>View next or previous item</source>
-        <translation>Просмотреть следующий или предыдущий элемент</translation>
+        <translation>Следующее или предыдущее изображение</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="41"/>
