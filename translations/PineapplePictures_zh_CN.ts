@@ -185,8 +185,8 @@
         <translation>文件不是有效的图片文件</translation>
     </message>
     <message>
-        <location filename="../app/graphicsview.cpp" line="48"/>
-        <location filename="../app/graphicsview.cpp" line="52"/>
+        <location filename="../app/graphicsview.cpp" line="49"/>
+        <location filename="../app/graphicsview.cpp" line="54"/>
         <source>Image data is invalid or currently unsupported</source>
         <translation>图像数据无效或暂未支持</translation>
     </message>
@@ -204,22 +204,22 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../app/mainwindow.cpp" line="173"/>
+        <location filename="../app/mainwindow.cpp" line="175"/>
         <source>File url list is empty</source>
         <translation>文件 URL 列表为空</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow.cpp" line="413"/>
+        <location filename="../app/mainwindow.cpp" line="386"/>
         <source>&amp;Copy</source>
         <translation>复制(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../app/actionmanager.cpp" line="43"/>
+        <location filename="../app/actionmanager.cpp" line="47"/>
         <source>Copy P&amp;ixmap</source>
         <translation>复制位图(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../app/actionmanager.cpp" line="44"/>
+        <location filename="../app/actionmanager.cpp" line="48"/>
         <source>Copy &amp;File Path</source>
         <translation>复制文件路径(&amp;F)</translation>
     </message>
@@ -232,39 +232,49 @@
         <translation type="vanished">粘贴图像文件(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../app/actionmanager.cpp" line="50"/>
+        <location filename="../app/actionmanager.cpp" line="54"/>
         <source>Properties</source>
         <translation>属性</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="31"/>
-        <location filename="../app/actionmanager.cpp" line="46"/>
+        <location filename="../app/actionmanager.cpp" line="50"/>
         <source>Stay on top</source>
         <translation>总在最前</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="35"/>
-        <location filename="../app/actionmanager.cpp" line="47"/>
+        <location filename="../app/actionmanager.cpp" line="51"/>
         <source>Protected mode</source>
         <translation>保护模式</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="45"/>
+        <source>Zoom in</source>
+        <translation>放大</translation>
+    </message>
+    <message>
+        <location filename="../app/actionmanager.cpp" line="46"/>
+        <source>Zoom out</source>
+        <translation>缩小</translation>
+    </message>
+    <message>
+        <location filename="../app/actionmanager.cpp" line="49"/>
         <source>&amp;Paste</source>
         <translation>粘贴(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../app/actionmanager.cpp" line="48"/>
+        <location filename="../app/actionmanager.cpp" line="52"/>
         <source>Configure...</source>
         <translation>设置...</translation>
     </message>
     <message>
-        <location filename="../app/actionmanager.cpp" line="49"/>
+        <location filename="../app/actionmanager.cpp" line="53"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="../app/actionmanager.cpp" line="51"/>
+        <location filename="../app/actionmanager.cpp" line="55"/>
         <source>Quit</source>
         <translation>退出</translation>
     </message>
@@ -608,12 +618,12 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../app/main.cpp" line="28"/>
+        <location filename="../app/main.cpp" line="31"/>
         <source>Pineapple Pictures</source>
         <translation>菠萝看图</translation>
     </message>
     <message>
-        <location filename="../app/main.cpp" line="32"/>
+        <location filename="../app/main.cpp" line="35"/>
         <source>File list.</source>
         <translation>文件列表。</translation>
     </message>
