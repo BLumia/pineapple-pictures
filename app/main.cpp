@@ -37,11 +37,11 @@ int main(int argc, char *argv[])
 
     parser.process(a);
 
-    QStringList urlStrList = parser.positionalArguments();
-    QList<QUrl> && urlList = PlaylistManager::convertToUrlList(urlStrList);
-
     MainWindow w;
     w.show();
+
+    QStringList urlStrList = parser.positionalArguments();
+    QList<QUrl> && urlList = PlaylistManager::convertToUrlList(urlStrList);
 
     if (!urlList.isEmpty()) {
         w.showUrls(urlList);

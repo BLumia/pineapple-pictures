@@ -27,6 +27,16 @@ PlaylistManager::PlaylistType PlaylistManager::playlistType() const
     return m_type;
 }
 
+QStringList PlaylistManager::autoLoadFilterSuffix() const
+{
+    return m_autoLoadSuffix;
+}
+
+void PlaylistManager::setAutoLoadFilterSuffix(const QStringList & nameFilters)
+{
+    m_autoLoadSuffix = nameFilters;
+}
+
 void PlaylistManager::clear()
 {
     m_currentIndex = -1;
@@ -50,8 +60,9 @@ void PlaylistManager::setCurrentFile(const QString & filePath)
             int index = indexOf(filePath);
             m_currentIndex = index == -1 ? appendFile(filePath) : index;
         } else {
-            QStringList entryList = dir.entryList({"*.jpg", "*.jpeg", "*.jfif", "*.png", "*.gif", "*.svg", "*.bmp"},
-                                                  QDir::Files | QDir::NoSymLinks, QDir::NoSort);
+            QStringList entryList = dir.entryList(
+                        m_autoLoadSuffix,
+                        QDir::Files | QDir::NoSymLinks, QDir::NoSort);
 
             QCollator collator;
             collator.setNumericMode(true);

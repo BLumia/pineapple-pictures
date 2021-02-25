@@ -17,6 +17,9 @@ public:
     void setPlaylistType(PlaylistType type);
     PlaylistType playlistType() const;
 
+    QStringList autoLoadFilterSuffix() const;
+    void setAutoLoadFilterSuffix(const QStringList &nameFilters);
+
     void clear();
 
     void setPlaylist(const QList<QUrl> & urls);
@@ -40,5 +43,6 @@ private:
     PlaylistType m_type;
     QString m_currentDir;
     int m_currentIndex = -1;
+    QStringList m_autoLoadSuffix = {};
 };
 
