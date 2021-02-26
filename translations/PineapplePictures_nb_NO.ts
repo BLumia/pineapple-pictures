@@ -251,12 +251,12 @@
     <message>
         <location filename="../app/actionmanager.cpp" line="45"/>
         <source>Zoom in</source>
-        <translation type="unfinished"></translation>
+        <translation>Førstørr</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="46"/>
         <source>Zoom out</source>
-        <translation type="unfinished"></translation>
+        <translation>Forminsk</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="49"/>
