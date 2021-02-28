@@ -158,9 +158,9 @@ void GraphicsView::checkAndDoFitInView(bool markItOnAnyway)
     }
 }
 
-void GraphicsView::toggleCheckerboard()
+void GraphicsView::toggleCheckerboard(bool invertCheckerboardColor)
 {
-    setCheckerboardEnabled(!m_checkerboardEnabled);
+    setCheckerboardEnabled(!m_checkerboardEnabled, invertCheckerboardColor);
 }
 
 void GraphicsView::mousePressEvent(QMouseEvent *event)
@@ -294,17 +294,19 @@ bool GraphicsView::shouldIgnoreMousePressMoveEvent(const QMouseEvent *event) con
     return false;
 }
 
-void GraphicsView::setCheckerboardEnabled(bool enabled)
+void GraphicsView::setCheckerboardEnabled(bool enabled, bool invertColor)
 {
     m_checkerboardEnabled = enabled;
+    m_isLastCheckerboardColorInverted = invertColor;
     if (m_checkerboardEnabled) {
         // Prepare background check-board pattern
         QPixmap tilePixmap(0x20, 0x20);
-        tilePixmap.fill(QColor(35, 35, 35, 170));
+        tilePixmap.fill(invertColor ? QColor(220, 220, 220, 170) : QColor(35, 35, 35, 170));
         QPainter tilePainter(&tilePixmap);
-        QColor color(45, 45, 45, 170);
-        tilePainter.fillRect(0, 0, 0x10, 0x10, color);
-        tilePainter.fillRect(0x10, 0x10, 0x10, 0x10, color);
+        constexpr QColor color(45, 45, 45, 170);
+        constexpr QColor invertedColor(210, 210, 210, 170);
+        tilePainter.fillRect(0, 0, 0x10, 0x10, invertColor ? invertedColor : color);
+        tilePainter.fillRect(0x10, 0x10, 0x10, 0x10, invertColor ? invertedColor : color);
         tilePainter.end();
 
         setBackgroundBrush(tilePixmap);

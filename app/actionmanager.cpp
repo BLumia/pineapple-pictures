@@ -26,6 +26,7 @@ void ActionManager::setupAction(MainWindow *mainWindow)
     CREATE_NEW_ACTION(mainWindow, actionCopyPixmap);
     CREATE_NEW_ACTION(mainWindow, actionCopyFilePath);
     CREATE_NEW_ACTION(mainWindow, actionPaste);
+    CREATE_NEW_ACTION(mainWindow, actionToggleCheckerboard);
     CREATE_NEW_ACTION(mainWindow, actionToggleStayOnTop);
     CREATE_NEW_ACTION(mainWindow, actionToggleProtectMode);
     CREATE_NEW_ACTION(mainWindow, actionSettings);
@@ -47,6 +48,7 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
     actionCopyPixmap->setText(QCoreApplication::translate("MainWindow", "Copy P&ixmap", nullptr));
     actionCopyFilePath->setText(QCoreApplication::translate("MainWindow", "Copy &File Path", nullptr));
     actionPaste->setText(QCoreApplication::translate("MainWindow", "&Paste", nullptr));
+    actionToggleCheckerboard->setText(QCoreApplication::translate("MainWindow", "Toggle Checkerboard", nullptr));
     actionToggleStayOnTop->setText(QCoreApplication::translate("MainWindow", "Stay on top", nullptr));
     actionToggleProtectMode->setText(QCoreApplication::translate("MainWindow", "Protected mode", nullptr));
     actionSettings->setText(QCoreApplication::translate("MainWindow", "Configure...", nullptr));

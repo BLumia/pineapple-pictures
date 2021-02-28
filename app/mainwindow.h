@@ -50,6 +50,7 @@ protected slots:
     void centerWindow();
     void closeWindow();
     void updateWidgetsPosition();
+    void toggleCheckerboard();
     void toggleProtectedMode();
     void toggleStayOnTop();
     bool stayOnTop();
@@ -67,6 +68,7 @@ private slots:
     void on_actionCopyPixmap_triggered();
     void on_actionCopyFilePath_triggered();
     void on_actionPaste_triggered();
+    void on_actionToggleCheckerboard_triggered();
     void on_actionToggleStayOnTop_triggered();
     void on_actionToggleProtectMode_triggered();
     void on_actionSettings_triggered();

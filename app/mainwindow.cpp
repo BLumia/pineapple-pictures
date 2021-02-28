@@ -117,7 +117,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_bottomButtonGroup, &BottomButtonGroup::zoomOutBtnClicked,
             this, &MainWindow::on_actionZoomOut_triggered);
     connect(m_bottomButtonGroup, &BottomButtonGroup::toggleCheckerboardBtnClicked,
-            this, [ = ](){ m_graphicsView->toggleCheckerboard(); });
+            this, &MainWindow::toggleCheckerboard);
     connect(m_bottomButtonGroup, &BottomButtonGroup::rotateRightBtnClicked,
             this, [ = ](){
         m_graphicsView->resetScale();
@@ -470,6 +470,11 @@ void MainWindow::updateWidgetsPosition()
     m_gv->move(width() - m_gv->width(), height() - m_gv->height());
 }
 
+void MainWindow::toggleCheckerboard()
+{
+    m_graphicsView->toggleCheckerboard(QGuiApplication::queryKeyboardModifiers().testFlag(Qt::ShiftModifier));
+}
+
 void MainWindow::toggleProtectedMode()
 {
     m_protectedMode = !m_protectedMode;
@@ -593,6 +598,11 @@ void MainWindow::on_actionPaste_triggered()
         m_graphicsView->showFileFromPath(localFile, true);
         m_pm->setCurrentFile(localFile);
     }
+}
+
+void MainWindow::on_actionToggleCheckerboard_triggered()
+{
+    m_graphicsView->toggleCheckerboard();
 }
 
 void MainWindow::on_actionToggleStayOnTop_triggered()

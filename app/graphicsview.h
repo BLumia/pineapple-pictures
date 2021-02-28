@@ -38,7 +38,7 @@ signals:
     void requestGallery(const QString &filePath);
 
 public slots:
-    void toggleCheckerboard();
+    void toggleCheckerboard(bool invertCheckerboardColor = false);
 
 private:
     void mousePressEvent(QMouseEvent * event) override;
@@ -53,13 +53,14 @@ private:
 
     bool isThingSmallerThanWindowWith(const QTransform &transform) const;
     bool shouldIgnoreMousePressMoveEvent(const QMouseEvent *event) const;
-    void setCheckerboardEnabled(bool enabled);
+    void setCheckerboardEnabled(bool enabled, bool invertColor = false);
     void applyTransformationModeByScaleFactor();
 
     void resetWithScaleAndRotate(qreal scaleFactor, qreal rotateAngle);
 
     bool m_enableFitInView = false;
     bool m_checkerboardEnabled = false;
+    bool m_isLastCheckerboardColorInverted = false;
     qreal m_rotateAngle = 0;
 };
 

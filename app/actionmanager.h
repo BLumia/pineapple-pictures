@@ -21,6 +21,7 @@ public:
     QAction *actionCopyPixmap;
     QAction *actionCopyFilePath;
     QAction *actionPaste;
+    QAction *actionToggleCheckerboard;
     QAction *actionToggleStayOnTop;
     QAction *actionToggleProtectMode;
     QAction *actionSettings;
