@@ -6,7 +6,7 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="23"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>පිළිබඳව</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="26"/>
@@ -537,7 +537,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="147"/>
         <source>%1 x %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="165"/>
