@@ -10,7 +10,7 @@
 #include <QStyleOptionGraphicsItem>
 
 // TODO: remove this once we drop older Qt support.
-#if QT_VERSION_CHECK(5, 13, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 13, 0)
 #define COMPAT_CONSTCOLOR constexpr
 #else
 #define COMPAT_CONSTCOLOR const
