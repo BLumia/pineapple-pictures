@@ -36,17 +36,17 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="45"/>
         <source>Version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>අනුවාදය: %1</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="48"/>
         <source>Copyright (c) 2020 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>ප්‍රකාශන හිමිකම (ඇ) 2020 %1</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="50"/>
         <source>Logo designed by %1</source>
-        <translation type="unfinished"></translation>
+        <translation>ලාංඡනය %1 විසින් නිර්මාණය කරන ලදි</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="52"/>
@@ -61,27 +61,27 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="63"/>
         <source>Contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>සහදායකයින්</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="65"/>
         <source>List of contributors on GitHub</source>
-        <translation type="unfinished"></translation>
+        <translation>ගිට්හබ් හි සහදායකයින්ගේ ලැයිස්තුව</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="66"/>
         <source>Thanks to all people who contributed to this project.</source>
-        <translation type="unfinished"></translation>
+        <translation>මෙම ව්යාපෘතියට දායක වූ සියලු දෙනාටම ස්තූතියි.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="70"/>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>පරිවර්තකයින්</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="71"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
-        <translation type="unfinished"></translation>
+        <translation>මෙම යෙදුම පරිවර්තනය කිරීමට ස්වේච්ඡාවෙන් ඉදිරිපත් වූ පහත සඳහන් පුද්ගලයින්ට මම ස්තූතිවන්ත වෙමි.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="115"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="77"/>
         <source>Your Rights</source>
-        <translation type="unfinished"></translation>
+        <translation>ඔබගේ අයිතිවාසිකම්</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="79"/>
@@ -117,22 +117,22 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="81"/>
         <source>You are free to use %1, for any purpose</source>
-        <translation type="unfinished"></translation>
+        <translation>ඕනෑම කටයුත්තක් සඳහා %1 භාවිතා කිරීමට ඔබට නිදහස තිබේ</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="82"/>
         <source>You are free to distribute %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 බෙදා හැරීමට ඔබට නිදහස තිබේ</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="83"/>
         <source>You can study how %1 works and change it</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 ක්‍රියා කරන ආකාරය අධ්‍යයනය කර එය වෙනස් කළ හැකිය</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="84"/>
         <source>You can distribute changed versions of %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 හි වෙනස් කළ අනුවාදයන් ඔබට බෙදා හැරීමට හැකිය</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="86"/>
@@ -147,17 +147,17 @@
     <message>
         <location filename="../app/aboutdialog.cpp" line="137"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;උපකාර</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="138"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;පිළිබඳව</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="140"/>
         <source>&amp;License</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;බලපත්‍රය</translation>
     </message>
 </context>
 <context>
@@ -178,7 +178,7 @@
     <message>
         <location filename="../app/graphicsview.cpp" line="46"/>
         <source>File is not a valid image</source>
-        <translation type="unfinished"></translation>
+        <translation>ගොනුව වලංගු නොවන රූපයකි</translation>
     </message>
     <message>
         <location filename="../app/graphicsview.cpp" line="49"/>
@@ -189,7 +189,7 @@
     <message>
         <location filename="../app/graphicsview.cpp" line="262"/>
         <source>Image data is invalid</source>
-        <translation type="unfinished"></translation>
+        <translation>රූපයේ දත්ත වලංගු නොවේ</translation>
     </message>
     <message>
         <location filename="../app/graphicsview.cpp" line="269"/>
@@ -202,12 +202,12 @@
     <message>
         <location filename="../app/mainwindow.cpp" line="175"/>
         <source>File url list is empty</source>
-        <translation type="unfinished"></translation>
+        <translation>ගොනු ඒ.ස.නි. (url) ලැයිස්තුව හිස් ය</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="386"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;පිටපත්</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="47"/>
@@ -239,32 +239,32 @@
     <message>
         <location filename="../app/actionmanager.cpp" line="45"/>
         <source>Zoom in</source>
-        <translation type="unfinished"></translation>
+        <translation>විශාලනය</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="46"/>
         <source>Zoom out</source>
-        <translation type="unfinished"></translation>
+        <translation>කුඩාලනය</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="49"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;අලවන්න</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="52"/>
         <source>Configure...</source>
-        <translation type="unfinished"></translation>
+        <translation>වින්‍යාසගත කරන්න...</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="53"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>උපකාර</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="55"/>
         <source>Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>ඉවත් වන්න</translation>
     </message>
 </context>
 <context>
@@ -287,13 +287,13 @@
         <location filename="../app/metadatamodel.cpp" line="37"/>
         <source>Image</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>පින්තූරය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="41"/>
         <source>File</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>ගොනුව</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="38"/>
@@ -304,13 +304,13 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="28"/>
         <source>%1 File</source>
-        <translation type="unfinished"></translation>
+        <translation>ගොනු %1</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="35"/>
         <source>Description</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>විස්තරය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="39"/>
@@ -327,17 +327,17 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="44"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>මාන</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="46"/>
         <source>Aspect Ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>දර්ශන අනුපාතය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="49"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>නම</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="51"/>
@@ -347,67 +347,67 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="53"/>
         <source>Folder path</source>
-        <translation type="unfinished"></translation>
+        <translation>ගොනුවේ මාර්ගය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="55"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>ප්‍රමාණය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="57"/>
         <source>Date Created</source>
-        <translation type="unfinished"></translation>
+        <translation>සෑදූ දිනය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="59"/>
         <source>Date Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>වෙනස් කළ දිනය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="66"/>
         <source>Rating</source>
-        <translation type="unfinished"></translation>
+        <translation>ශ්‍රේණිගත කිරීම</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="68"/>
         <source>Comments</source>
-        <translation type="unfinished"></translation>
+        <translation>අදහස්</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="71"/>
         <source>Authors</source>
-        <translation type="unfinished"></translation>
+        <translation>කතුවරුන්</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="73"/>
         <source>Date taken</source>
-        <translation type="unfinished"></translation>
+        <translation>ගත් දිනය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="75"/>
         <source>Program name</source>
-        <translation type="unfinished"></translation>
+        <translation>වැඩසටහනේ නම</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="78"/>
         <source>Horizontal resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>තිරස් විභේදනය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="80"/>
         <source>Vertical resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>සිරස් විභේදනය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="82"/>
         <source>Resolution unit</source>
-        <translation type="unfinished"></translation>
+        <translation>විභේදන ඒකකය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="84"/>
         <source>Colour representation</source>
-        <translation type="unfinished"></translation>
+        <translation>වර්ණ නිරූපණය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="87"/>
@@ -427,7 +427,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="93"/>
         <source>Exposure time</source>
-        <translation type="unfinished"></translation>
+        <translation>නිරාවරණ කාලය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="95"/>
@@ -437,7 +437,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="97"/>
         <source>Exposure bias</source>
-        <translation type="unfinished"></translation>
+        <translation>නිරාවරණ නැඹුරුව</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="99"/>
@@ -467,17 +467,17 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="110"/>
         <source>Lens model</source>
-        <translation type="unfinished"></translation>
+        <translation>කාච ආකෘතිය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="112"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>දීප්තිය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="114"/>
         <source>Exposure program</source>
-        <translation type="unfinished"></translation>
+        <translation>නිරාවරණ වැඩසටහන</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="116"/>
@@ -487,7 +487,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="118"/>
         <source>Sharpness</source>
-        <translation type="unfinished"></translation>
+        <translation>තියුණු බව</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="120"/>
@@ -497,7 +497,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="122"/>
         <source>Digital zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>සංඛ්‍යාංක විශාලනය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="124"/>
@@ -512,7 +512,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="129"/>
         <source>Latitude</source>
-        <translation type="unfinished"></translation>
+        <translation>අක්ෂාංශ</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="131"/>
@@ -522,7 +522,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="133"/>
         <source>Longitude</source>
-        <translation type="unfinished"></translation>
+        <translation>දේශාංශ</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="135"/>
@@ -532,7 +532,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="137"/>
         <source>Altitude</source>
-        <translation type="unfinished"></translation>
+        <translation>උන්නතාංශය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="147"/>
@@ -542,7 +542,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="165"/>
         <source>%1 : %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 : %2</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="300"/>
@@ -552,7 +552,7 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="300"/>
         <source>Value</source>
-        <translation type="unfinished"></translation>
+        <translation>අගය</translation>
     </message>
 </context>
 <context>
@@ -560,17 +560,17 @@
     <message>
         <location filename="../app/settingsdialog.cpp" line="16"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>සැකසුම්</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="21"/>
         <source>Do nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>කිසිවක් නොකරන්න</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="22"/>
         <source>Close the window</source>
-        <translation type="unfinished"></translation>
+        <translation>කවුළුව වහන්න</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="23"/>
@@ -608,12 +608,12 @@
     <message>
         <location filename="../app/main.cpp" line="31"/>
         <source>Pineapple Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>පයින්ඇපල් පික්චර්ස්</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="35"/>
         <source>File list.</source>
-        <translation type="unfinished"></translation>
+        <translation>ගොනු ලැයිස්තුව.</translation>
     </message>
 </context>
 </TS>
