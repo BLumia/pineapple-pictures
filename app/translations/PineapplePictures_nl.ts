@@ -239,12 +239,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="46"/>
         <source>Zoom in</source>
-        <translation type="unfinished"></translation>
+        <translation>Inzoomen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="47"/>
         <source>Zoom out</source>
-        <translation type="unfinished"></translation>
+        <translation>Uitzoomen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="50"/>
@@ -254,7 +254,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="51"/>
         <source>Toggle Checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Schaakbordpatroon aan/uit</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="54"/>
