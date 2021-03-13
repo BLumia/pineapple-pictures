@@ -19,6 +19,7 @@ CONFIG += c++11 lrelease embed_translations
 SOURCES += \
     app/aboutdialog.cpp \
     app/main.cpp \
+    app/framelesswindow.cpp \
     app/mainwindow.cpp \
     app/graphicsview.cpp \
     app/bottombuttongroup.cpp \
@@ -30,10 +31,13 @@ SOURCES += \
     app/settingsdialog.cpp \
     app/metadatamodel.cpp \
     app/metadatadialog.cpp \
-    app/exiv2wrapper.cpp
+    app/exiv2wrapper.cpp \
+    app/actionmanager.cpp \
+    app/playlistmanager.cpp
 
 HEADERS += \
     app/aboutdialog.h \
+    app/framelesswindow.h \
     app/mainwindow.h \
     app/graphicsview.h \
     app/bottombuttongroup.h \
@@ -45,7 +49,9 @@ HEADERS += \
     app/settingsdialog.h \
     app/metadatamodel.h \
     app/metadatadialog.h \
-    app/exiv2wrapper.h
+    app/exiv2wrapper.h \
+    app/actionmanager.h \
+    app/playlistmanager.h
 
 TRANSLATIONS = \
     app/translations/PineapplePictures.ts \

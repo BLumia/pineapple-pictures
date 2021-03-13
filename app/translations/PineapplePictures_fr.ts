@@ -210,14 +210,66 @@
         <translation>&amp;Copier</translation>
     </message>
     <message>
+        <location filename="../actionmanager.cpp" line="48"/>
+        <source>Copy P&amp;ixmap</source>
+        <translation>Copier P&amp;ixmap</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="49"/>
+        <source>Copy &amp;File Path</source>
+        <translation>Copier le &amp;chemin du fichier</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="56"/>
+        <source>Properties</source>
+        <translation>Propriétés</translation>
+    </message>
+    <message>
         <location filename="../aboutdialog.cpp" line="31"/>
+        <location filename="../actionmanager.cpp" line="52"/>
         <source>Stay on top</source>
         <translation>Rester en-haut</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="35"/>
+        <location filename="../actionmanager.cpp" line="53"/>
         <source>Protected mode</source>
         <translation>Mode protégé</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="46"/>
+        <source>Zoom in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="47"/>
+        <source>Zoom out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="50"/>
+        <source>&amp;Paste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="51"/>
+        <source>Toggle Checkerboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="54"/>
+        <source>Configure...</source>
+        <translation>Configurer…</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="55"/>
+        <source>Help</source>
+        <translation>Aide</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="57"/>
+        <source>Quit</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
