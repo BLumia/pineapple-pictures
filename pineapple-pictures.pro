@@ -48,12 +48,15 @@ HEADERS += \
     app/exiv2wrapper.h
 
 TRANSLATIONS = \
-    translations/PineapplePictures.ts \
-    translations/PineapplePictures_zh_CN.ts \
-    translations/PineapplePictures_de.ts \
-    translations/PineapplePictures_fr.ts \
-    translations/PineapplePictures_nb_NO.ts \
-    translations/PineapplePictures_ru.ts
+    app/translations/PineapplePictures.ts \
+    app/translations/PineapplePictures_zh_CN.ts \
+    app/translations/PineapplePictures_de.ts \
+    app/translations/PineapplePictures_es.ts \
+    app/translations/PineapplePictures_fr.ts \
+    app/translations/PineapplePictures_nb_NO.ts \
+    app/translations/PineapplePictures_nl.ts \
+    app/translations/PineapplePictures_ru.ts \
+    app/translations/PineapplePictures_si.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -64,7 +67,7 @@ RESOURCES += \
     assets/resources.qrc
 
 # Generate from svg:
-# magick convert -background none app-icon.svg -define icon:auto-resize="16,32,48,64,128,256" app-icon.ico
+# magick convert -density 512x512 -background none app-icon.svg -define icon:auto-resize app-icon.ico
 RC_ICONS = assets/icons/app-icon.ico
 
 # Windows only, for rc file (we're not going to use the .rc file in this repo)

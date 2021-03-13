@@ -76,7 +76,7 @@ set (PPIC_RC_FILES
 set (EXE_NAME ppic)
 
 # Translation
-file (GLOB PPIC_TS_FILES translations/*.ts)
+file (GLOB PPIC_TS_FILES app/translations/*.ts)
 set (PPIC_CPP_FILES_FOR_I18N ${PPIC_CPP_FILES})
 
 qt5_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})
