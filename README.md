@@ -8,9 +8,14 @@ Yet another image viewer.
 
 ![Pineapple Pictures - Main Window](https://repository-images.githubusercontent.com/211888654/21fb6300-269f-11ea-8e85-953e5d57da44)
 
+## Summary
+
+Pineapple Pictures is a lightweight image viewer that allows you view JPEG, PNG, GIF, SVG, PSD, KRA, XCF, TGA, AVIF and some other frequently used image formats files quickly and easily, and also provide a Stay-on-Top window setting that allows you pin the window so you can use it to pin a reference image at the top and then you can work with other software.
+
 ## Get it!
 
  - [GitHub Release Page](https://github.com/BLumia/pineapple-pictures/releases)
+ - [SourceForge](https://sourceforge.net/projects/pineapple-pictures/)
  - Archlinux AUR: [pineapple-pictures](https://aur.archlinux.org/packages/pineapple-pictures/) | [pineapple-pictures-git](https://aur.archlinux.org/packages/pineapple-pictures-git/)
  - Debian (sid / testing): `sudo apt install pineapple-pictures`
  - [Itch.io Store](https://blumia.itch.io/pineapple-pictures)

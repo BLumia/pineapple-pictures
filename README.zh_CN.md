@@ -8,9 +8,14 @@
 
 ![Pineapple Pictures - Main Window](https://repository-images.githubusercontent.com/211888654/21fb6300-269f-11ea-8e85-953e5d57da44)
 
+## 简介
+
+菠萝看图是一个轻量图像查看器，允许你简单快捷的查看 JPEG, PNG, GIF, SVG, PSD, KRA, XCF, TGA, AVIF 等常用格式的图像文件，并提供了置顶窗口的选项以便你在使用其它软件时也可以将参考图片固定在顶端。
+
 ## 立即获取!
 
  - [GitHub Release 页面](https://github.com/BLumia/pineapple-pictures/releases) | [gitee 发布页面](https://gitee.com/blumia/pineapple-pictures/releases)
+ - [SourceForge](https://sourceforge.net/projects/pineapple-pictures/)
  - Archlinux AUR: [pineapple-pictures](https://aur.archlinux.org/packages/pineapple-pictures/) | [pineapple-pictures-git](https://aur.archlinux.org/packages/pineapple-pictures-git/)
  - Debian (sid / testing): `sudo apt install pineapple-pictures`
  - [Itch.io 商店](https://blumia.itch.io/pineapple-pictures)
