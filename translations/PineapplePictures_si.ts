@@ -1,167 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nb_NO">
+<TS version="2.1" language="si">
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../app/aboutdialog.cpp" line="23"/>
         <source>About</source>
-        <translation>Om</translation>
+        <translation>පිළිබඳව</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="26"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation>Kjør programmer ved å angi en filsti som argument for å laste inn filen.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="27"/>
         <source>Drag and drop image file onto the window is also supported.</source>
-        <translation>Å dra og slippe filen i vinduet støttes også.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="28"/>
         <source>Context menu option explanation:</source>
-        <translation>Forklaring av alternativer i bindeleddsmeny:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="32"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation>Få vinduet til å alltid ligge over andre vinduer.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="36"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation>Unngå lukking av vinduet ved feiltagelser (f.eks. ved dobbeltklikking av vinduet)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="45"/>
         <source>Version: %1</source>
-        <translation>Versjon: %1</translation>
+        <translation>අනුවාදය: %1</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="48"/>
         <source>Copyright (c) 2020 %1</source>
-        <translation>Opphavsrett © 2020 %1</translation>
+        <translation>ප්‍රකාශන හිමිකම (ඇ) 2020 %1</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="50"/>
         <source>Logo designed by %1</source>
-        <translation>Logo designet av %1</translation>
+        <translation>ලාංඡනය %1 විසින් නිර්මාණය කරන ලදි</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="52"/>
         <source>Built with Qt %1 (%2)</source>
-        <translation>Bygd med Qt %1 (%2)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="53"/>
         <source>Source code</source>
-        <translation>Kildekode</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="63"/>
         <source>Contributors</source>
-        <translation>Bidragsytere</translation>
+        <translation>සහදායකයින්</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="65"/>
         <source>List of contributors on GitHub</source>
-        <translation>Liste over bidragsytere på GitHub</translation>
+        <translation>ගිට්හබ් හි සහදායකයින්ගේ ලැයිස්තුව</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="66"/>
         <source>Thanks to all people who contributed to this project.</source>
-        <translation>Takk til alle som har bidratt til prosjektet.</translation>
+        <translation>මෙම ව්යාපෘතියට දායක වූ සියලු දෙනාටම ස්තූතියි.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="70"/>
         <source>Translators</source>
-        <translation>Oversettere</translation>
+        <translation>පරිවර්තකයින්</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="71"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
-        <translation>Takk til følgende dugnadsoversettere.</translation>
+        <translation>මෙම යෙදුම පරිවර්තනය කිරීමට ස්වේච්ඡාවෙන් ඉදිරිපත් වූ පහත සඳහන් පුද්ගලයින්ට මම ස්තූතිවන්ත වෙමි.</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="115"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation type="unfinished">%1 er bygd med følgende friprog-bibliotek:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="139"/>
         <source>&amp;Special Thanks</source>
-        <translation>&amp;Spesiell takk til</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="141"/>
         <source>&amp;Third-party Libraries</source>
-        <translation>&amp;Tredjepartslisenser</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="77"/>
         <source>Your Rights</source>
-        <translation>Dine rettigheter</translation>
+        <translation>ඔබගේ අයිතිවාසිකම්</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="79"/>
         <source>%1 is released under the MIT License.</source>
-        <translation>%1 er MIT-lisensiert.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="80"/>
         <source>This license grants people a number of freedoms:</source>
-        <translation>Lisensen gir den en rekke friheter:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="81"/>
         <source>You are free to use %1, for any purpose</source>
-        <translation>Du kan bruke %1 som du vil</translation>
+        <translation>ඕනෑම කටයුත්තක් සඳහා %1 භාවිතා කිරීමට ඔබට නිදහස තිබේ</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="82"/>
         <source>You are free to distribute %1</source>
-        <translation>Du kan dele %1</translation>
+        <translation>%1 බෙදා හැරීමට ඔබට නිදහස තිබේ</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="83"/>
         <source>You can study how %1 works and change it</source>
-        <translation>Du kan se kildekoden til %1 og endre den</translation>
+        <translation>%1 ක්‍රියා කරන ආකාරය අධ්‍යයනය කර එය වෙනස් කළ හැකිය</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="84"/>
         <source>You can distribute changed versions of %1</source>
-        <translation>Du kan distribuere endrede versjoner av %1</translation>
+        <translation>%1 හි වෙනස් කළ අනුවාදයන් ඔබට බෙදා හැරීමට හැකිය</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="86"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
-        <translation>MIT-lisensen garanterer deg disse frihetene.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="114"/>
         <source>Third-party Libraries used by %1</source>
-        <translation>Tredjepartsbibliotek brukt av %1</translation>
-    </message>
-    <message>
-        <source>%1 is built on the following free software libraries:</source>
-        <translation type="vanished">%1 er bygd med følgende friprog-bibliotek:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="137"/>
         <source>&amp;Help</source>
-        <translation>&amp;Hjelp</translation>
+        <translation>&amp;උපකාර</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="138"/>
         <source>&amp;About</source>
-        <translation>&amp;Om</translation>
+        <translation>&amp;පිළිබඳව</translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="140"/>
         <source>&amp;License</source>
-        <translation>&amp;Lisens</translation>
+        <translation>&amp;බලපත්‍රය</translation>
     </message>
 </context>
 <context>
@@ -169,7 +165,7 @@
     <message>
         <location filename="../app/graphicsscene.cpp" line="16"/>
         <source>Drag image here</source>
-        <translation>Dra bilde hit</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -177,28 +173,28 @@
     <message>
         <location filename="../app/graphicsview.cpp" line="254"/>
         <source>File url list is empty</source>
-        <translation>Listen over filnettadresser er tom</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/graphicsview.cpp" line="46"/>
         <source>File is not a valid image</source>
-        <translation>Filen er ikke et gyldig bilde</translation>
+        <translation>ගොනුව වලංගු නොවන රූපයකි</translation>
     </message>
     <message>
         <location filename="../app/graphicsview.cpp" line="49"/>
         <location filename="../app/graphicsview.cpp" line="54"/>
         <source>Image data is invalid or currently unsupported</source>
-        <translation>Ugyldig bildedata, eller for tiden ustøttet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/graphicsview.cpp" line="262"/>
         <source>Image data is invalid</source>
-        <translation>Ugyldig bildedata</translation>
+        <translation>රූපයේ දත්ත වලංගු නොවේ</translation>
     </message>
     <message>
         <location filename="../app/graphicsview.cpp" line="269"/>
         <source>Not supported mimedata: %1</source>
-        <translation>Ustøttet MIME-data: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -206,77 +202,69 @@
     <message>
         <location filename="../app/mainwindow.cpp" line="175"/>
         <source>File url list is empty</source>
-        <translation>Listen over filnettadresser er ugyldig</translation>
+        <translation>ගොනු ඒ.ස.නි. (url) ලැයිස්තුව හිස් ය</translation>
     </message>
     <message>
         <location filename="../app/mainwindow.cpp" line="386"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Kopier</translation>
+        <translation>&amp;පිටපත්</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="47"/>
         <source>Copy P&amp;ixmap</source>
-        <translation type="unfinished">Kopier p&amp;ixmap</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="48"/>
         <source>Copy &amp;File Path</source>
-        <translation>Kopier %filsti</translation>
-    </message>
-    <message>
-        <source>&amp;Paste Image</source>
-        <translation type="vanished">&amp;Lim inn bilde</translation>
-    </message>
-    <message>
-        <source>&amp;Paste Image File</source>
-        <translation type="vanished">&amp;Lim inn bildefil</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="54"/>
         <source>Properties</source>
-        <translation>Egenskaper</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="31"/>
         <location filename="../app/actionmanager.cpp" line="50"/>
         <source>Stay on top</source>
-        <translation>Behold øverst</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/aboutdialog.cpp" line="35"/>
         <location filename="../app/actionmanager.cpp" line="51"/>
         <source>Protected mode</source>
-        <translation>Beskyttet modus</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="45"/>
         <source>Zoom in</source>
-        <translation>Førstørr</translation>
+        <translation>විශාලනය</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="46"/>
         <source>Zoom out</source>
-        <translation>Forminsk</translation>
+        <translation>කුඩාලනය</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="49"/>
         <source>&amp;Paste</source>
-        <translation>&amp;Lim inn</translation>
+        <translation>&amp;අලවන්න</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="52"/>
         <source>Configure...</source>
-        <translation>Sett opp …</translation>
+        <translation>වින්‍යාසගත කරන්න...</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="53"/>
         <source>Help</source>
-        <translation>Hjelp</translation>
+        <translation>උපකාර</translation>
     </message>
     <message>
         <location filename="../app/actionmanager.cpp" line="55"/>
         <source>Quit</source>
-        <translation>Avslutt</translation>
+        <translation>ඉවත් වන්න</translation>
     </message>
 </context>
 <context>
@@ -284,7 +272,7 @@
     <message>
         <location filename="../app/metadatadialog.cpp" line="80"/>
         <source>Image Metadata</source>
-        <translation>Bilde-metadata</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -293,258 +281,258 @@
         <location filename="../app/metadatamodel.cpp" line="36"/>
         <source>Origin</source>
         <comment>Section name.</comment>
-        <translation>Opprinnelse</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="37"/>
         <source>Image</source>
         <comment>Section name.</comment>
-        <translation>Bilde</translation>
+        <translation>පින්තූරය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="41"/>
         <source>File</source>
         <comment>Section name.</comment>
-        <translation>Fil</translation>
+        <translation>ගොනුව</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="38"/>
         <source>Camera</source>
         <comment>Section name.</comment>
-        <translation>Kamera</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="28"/>
         <source>%1 File</source>
-        <translation>%1-fil</translation>
+        <translation>ගොනු %1</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="35"/>
         <source>Description</source>
         <comment>Section name.</comment>
-        <translation>Beskrivelse</translation>
+        <translation>විස්තරය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="39"/>
         <source>Advanced photo</source>
         <comment>Section name.</comment>
-        <translation>Avansert bilde</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="40"/>
         <source>GPS</source>
         <comment>Section name.</comment>
-        <translation>GPS</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="44"/>
         <source>Dimensions</source>
-        <translation>Dimensjoner</translation>
+        <translation>මාන</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="46"/>
         <source>Aspect Ratio</source>
-        <translation>Størrelsesforhold</translation>
+        <translation>දර්ශන අනුපාතය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="49"/>
         <source>Name</source>
-        <translation>Navn</translation>
+        <translation>නම</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="51"/>
         <source>Item type</source>
-        <translation>Elementstype</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="53"/>
         <source>Folder path</source>
-        <translation>Mappesti</translation>
+        <translation>ගොනුවේ මාර්ගය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="55"/>
         <source>Size</source>
-        <translation>Størrelse</translation>
+        <translation>ප්‍රමාණය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="57"/>
         <source>Date Created</source>
-        <translation>Dato opprettet</translation>
+        <translation>සෑදූ දිනය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="59"/>
         <source>Date Modified</source>
-        <translation>Dato endret</translation>
+        <translation>වෙනස් කළ දිනය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="66"/>
         <source>Rating</source>
-        <translation>Vurdering</translation>
+        <translation>ශ්‍රේණිගත කිරීම</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="68"/>
         <source>Comments</source>
-        <translation>Kommentarer</translation>
+        <translation>අදහස්</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="71"/>
         <source>Authors</source>
-        <translation type="unfinished">Opphavsmenn</translation>
+        <translation>කතුවරුන්</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="73"/>
         <source>Date taken</source>
-        <translation>Dato tatt</translation>
+        <translation>ගත් දිනය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="75"/>
         <source>Program name</source>
-        <translation>Programnavn</translation>
+        <translation>වැඩසටහනේ නම</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="78"/>
         <source>Horizontal resolution</source>
-        <translation>Vannrett oppløsning</translation>
+        <translation>තිරස් විභේදනය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="80"/>
         <source>Vertical resolution</source>
-        <translation>Loddrett oppløsning</translation>
+        <translation>සිරස් විභේදනය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="82"/>
         <source>Resolution unit</source>
-        <translation>Oppløsningsenhet</translation>
+        <translation>විභේදන ඒකකය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="84"/>
         <source>Colour representation</source>
-        <translation>Fargerepresentasjon</translation>
+        <translation>වර්ණ නිරූපණය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="87"/>
         <source>Camera maker</source>
-        <translation>Kamerafabrikat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="89"/>
         <source>Camera model</source>
-        <translation>Kameramodell</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="91"/>
         <source>F-stop</source>
-        <translation>Blenderåpning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="93"/>
         <source>Exposure time</source>
-        <translation>Eksponeringstid</translation>
+        <translation>නිරාවරණ කාලය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="95"/>
         <source>ISO speed</source>
-        <translation>ISO-hastighet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="97"/>
         <source>Exposure bias</source>
-        <translation type="unfinished">Eksponeringskorrigering</translation>
+        <translation>නිරාවරණ නැඹුරුව</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="99"/>
         <source>Focal length</source>
-        <translation>Brennvidde</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="101"/>
         <source>Max aperture</source>
-        <translation type="unfinished">Maks. blenderåpning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="103"/>
         <source>Metering mode</source>
-        <translation type="unfinished">Målingsmodus</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="105"/>
         <source>Flash mode</source>
-        <translation>Blitz-modus</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="107"/>
         <source>35mm focal length</source>
-        <translation type="unfinished">35 mm-brennvidde</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="110"/>
         <source>Lens model</source>
-        <translation>Linsemodell</translation>
+        <translation>කාච ආකෘතිය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="112"/>
         <source>Brightness</source>
-        <translation>Lysstyrke</translation>
+        <translation>දීප්තිය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="114"/>
         <source>Exposure program</source>
-        <translation type="unfinished">Eksponeringsprogram</translation>
+        <translation>නිරාවරණ වැඩසටහන</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="116"/>
         <source>Saturation</source>
-        <translation>Metning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="118"/>
         <source>Sharpness</source>
-        <translation>Skarphet</translation>
+        <translation>තියුණු බව</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="120"/>
         <source>White balance</source>
-        <translation>Hvitbalanse</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="122"/>
         <source>Digital zoom</source>
-        <translation>Digital forstørrelse</translation>
+        <translation>සංඛ්‍යාංක විශාලනය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="124"/>
         <source>EXIF version</source>
-        <translation>EXIF-versjon</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="127"/>
         <source>Latitude reference</source>
-        <translation>Breddegradsreferanse</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="129"/>
         <source>Latitude</source>
-        <translation>Breddegrad</translation>
+        <translation>අක්ෂාංශ</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="131"/>
         <source>Longitude reference</source>
-        <translation>Lengdegradsreferanse</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="133"/>
         <source>Longitude</source>
-        <translation>Lengdegrad</translation>
+        <translation>දේශාංශ</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="135"/>
         <source>Altitude reference</source>
-        <translation>Høydereferanse</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="137"/>
         <source>Altitude</source>
-        <translation>Høyde</translation>
+        <translation>උන්නතාංශය</translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="147"/>
@@ -559,12 +547,12 @@
     <message>
         <location filename="../app/metadatamodel.cpp" line="300"/>
         <source>Property</source>
-        <translation>Egenskap</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/metadatamodel.cpp" line="300"/>
         <source>Value</source>
-        <translation>Verdi</translation>
+        <translation>අගය</translation>
     </message>
 </context>
 <context>
@@ -572,47 +560,47 @@
     <message>
         <location filename="../app/settingsdialog.cpp" line="16"/>
         <source>Settings</source>
-        <translation>Innstillinger</translation>
+        <translation>සැකසුම්</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="21"/>
         <source>Do nothing</source>
-        <translation>Ikke gjør noe</translation>
+        <translation>කිසිවක් නොකරන්න</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="22"/>
         <source>Close the window</source>
-        <translation>Lukk vinduet</translation>
+        <translation>කවුළුව වහන්න</translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="23"/>
         <source>Toggle maximize</source>
-        <translation>Veksle maksimering</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="27"/>
         <source>Zoom in and out</source>
-        <translation>Zoom inn og ut</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="28"/>
         <source>View next or previous item</source>
-        <translation>Vis neste eller forrige element</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="41"/>
         <source>Stay on top when start-up</source>
-        <translation>Behold i forgrunnen ved oppstart</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="42"/>
         <source>Double-click behavior</source>
-        <translation>Dobbeltklikksoppførsel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/settingsdialog.cpp" line="43"/>
         <source>Mouse wheel behavior</source>
-        <translation>Musehjulsoppførsel</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -620,12 +608,12 @@
     <message>
         <location filename="../app/main.cpp" line="31"/>
         <source>Pineapple Pictures</source>
-        <translation type="unfinished">Ananasbilder</translation>
+        <translation>පයින්ඇපල් පික්චර්ස්</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="35"/>
         <source>File list.</source>
-        <translation>Filliste.</translation>
+        <translation>ගොනු ලැයිස්තුව.</translation>
     </message>
 </context>
 </TS>
