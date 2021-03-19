@@ -26,6 +26,7 @@ public:
 
     void resetTransform();
     void zoomView(qreal scaleFactor);
+    void flipView(bool horizontal = true);
     void resetScale();
     void rotateView(qreal rotateAngel);
     void fitInView(const QRectF &rect, Qt::AspectRatioMode aspectRadioMode = Qt::IgnoreAspectRatio);

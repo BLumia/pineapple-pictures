@@ -65,6 +65,7 @@ protected:
 private slots:
     void on_actionZoomIn_triggered();
     void on_actionZoomOut_triggered();
+    void on_actionHorizontalFlip_triggered();
     void on_actionCopyPixmap_triggered();
     void on_actionCopyFilePath_triggered();
     void on_actionPaste_triggered();

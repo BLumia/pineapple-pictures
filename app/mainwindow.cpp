@@ -421,6 +421,10 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     }
 
     menu->addSeparator();
+
+    menu->addAction(m_am->actionHorizontalFlip);
+
+    menu->addSeparator();
     menu->addAction(stayOnTopMode);
     menu->addAction(protectedMode);
     menu->addSeparator();
@@ -552,6 +556,11 @@ void MainWindow::on_actionZoomIn_triggered()
 void MainWindow::on_actionZoomOut_triggered()
 {
     m_graphicsView->zoomView(0.8);
+}
+
+void MainWindow::on_actionHorizontalFlip_triggered()
+{
+    m_graphicsView->flipView();
 }
 
 void MainWindow::on_actionCopyPixmap_triggered()

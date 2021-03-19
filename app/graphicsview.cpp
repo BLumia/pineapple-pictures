@@ -134,6 +134,17 @@ void GraphicsView::zoomView(qreal scaleFactor)
     emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), m_rotateAngle);
 }
 
+void GraphicsView::flipView(bool horizontal)
+{
+    if (horizontal) {
+        scale(-1, 1);
+    } else {
+        scale(1, -1);
+    }
+    // I guess we don't need to check if we need to trigger navigator view here
+    // since fliping doesn't affact the image rectangle size.
+}
+
 void GraphicsView::resetScale()
 {
     resetWithScaleAndRotate(1, m_rotateAngle);
