@@ -2,43 +2,50 @@ image:
   - Visual Studio 2019
 environment:
   CMAKE_INSTALL_ROOT: C:\projects\cmake
-  ZLIB_ROOT: C:\projects\zlib
+  LIBZ: C:\projects\zlib
   LIBEXPAT: C:\projects\libexpat
   LIBAVIF: C:\projects\libavif
   LIBEXIV2: C:\projects\exiv2
   matrix:
-    - build_name: mingw81_32_qt5_15_2
-      QTPATH: C:\Qt\5.15.2\mingw81_32
-      MINGW32: C:\Qt\Tools\mingw810_32
+    - build_name: mingw81_64_qt5_15_2
+      QTPATH: C:\Qt\5.15.2\mingw81_64
+      MINGW64: C:\Qt\Tools\mingw810_64
 
 install:
   - mkdir %CMAKE_INSTALL_ROOT%
-  - mkdir %ZLIB_ROOT%
+  - mkdir %LIBZ%
   - mkdir %LIBEXPAT%
   - mkdir %LIBAVIF%
   - mkdir %LIBEXIV2%
   - cd %APPVEYOR_BUILD_FOLDER%
   - git submodule update --init --recursive
-  - set PATH=%PATH%;%CMAKE_INSTALL_ROOT%;%QTPATH%\bin;%MINGW32%\bin
-  - set CC=%MINGW32%\bin\gcc.exe
-  - set CXX=%MINGW32%\bin\g++.exe
+  - set PATH=%PATH%;%CMAKE_INSTALL_ROOT%;%QTPATH%\bin;%MINGW64%\bin
+  - set CC=%MINGW64%\bin\gcc.exe
+  - set CXX=%MINGW64%\bin\g++.exe
 
 build_script:
 # prepare
   - mkdir 3rdparty
   - cinst ninja
+# download and install zlib for KArchive
+  - cd %LIBZ%
+  - curl -fsSL -o zlib1211.zip https://zlib.net/zlib1211.zip
+  - 7z x zlib1211.zip -y
+  - cd zlib-1.2.11
+  - mkdir build
+  - cd build
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s"
+  - cmake --build . --config Release
+  - cmake --build . --config Release --target install
+  - cd %APPVEYOR_BUILD_FOLDER%
 # install ECM so we can build KImageFormats
   - cd 3rdparty
   - git clone -q https://invent.kde.org/frameworks/extra-cmake-modules.git
+  - git rev-parse HEAD
   - cd extra-cmake-modules
   - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DBUILD_TESTING=OFF
   - cmake --build .
   - cmake --build . --target install
-  - cd %APPVEYOR_BUILD_FOLDER%
-# download and install zlib for KArchive
-  - cd %ZLIB_ROOT%
-  - curl -fsSL -o zlib128-dll.zip http://zlib.net/zlib128-dll.zip
-  - 7z x zlib128-dll.zip
   - cd %APPVEYOR_BUILD_FOLDER%
 # install AOM for libavif AV1 decoding support...
   - cd 3rdparty
@@ -64,10 +71,11 @@ build_script:
 # install KArchive for kra format support of KImageFormats
   - cd 3rdparty
   - git clone -q https://invent.kde.org/frameworks/karchive.git
+  - git rev-parse HEAD
   - cd karchive
   - mkdir build
   - cd build
-  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DZLIB_ROOT=%ZLIB_ROOT% 
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s"
   - cmake --build . --config Release
   - cmake --build . --config Release --target install
   - cd %APPVEYOR_BUILD_FOLDER%
@@ -84,12 +92,13 @@ build_script:
   - curl -fsSL -o v0.27.3.zip https://github.com/Exiv2/exiv2/archive/v0.27.3.zip
   - 7z x v0.27.3.zip -y
   - cd exiv2-0.27.3
-  - cmake -G "Ninja" . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXIV2_BUILD_SAMPLES=OFF -DEXIV2_ENABLE_WIN_UNICODE=ON -DCMAKE_CXX_FLAGS_RELEASE="-s" -DZLIB_ROOT=%ZLIB_ROOT%
+  - cmake -G "Ninja" . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXIV2_BUILD_SAMPLES=OFF -DEXIV2_ENABLE_WIN_UNICODE=ON -DCMAKE_CXX_FLAGS_RELEASE="-s"
   - cmake --build . --target install
   - cd %APPVEYOR_BUILD_FOLDER%
 # install KImageFormats
   - cd 3rdparty
   - git clone -q https://invent.kde.org/frameworks/kimageformats.git
+  - git rev-parse HEAD
   - cd kimageformats
   - mkdir build
   - cd build
@@ -110,7 +119,7 @@ build_script:
   - copy %CMAKE_INSTALL_ROOT%\bin\libexpat.dll
   - copy %CMAKE_INSTALL_ROOT%\bin\libexiv2.dll
   - copy %CMAKE_INSTALL_ROOT%\bin\libavif.dll
-  - copy %ZLIB_ROOT%\zlib1.dll .
+  - copy %CMAKE_INSTALL_ROOT%\bin\libzlib.dll
   - copy C:\projects\cmake\bin\libKF5Archive.dll .
   - windeployqt --verbose=2 --no-quick-import --no-translations --no-opengl-sw --no-angle --no-system-d3d-compiler .\ppic.exe
 # copy 3rdparty licenses for the libs we vendored for windows...
