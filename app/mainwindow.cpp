@@ -69,9 +69,8 @@ MainWindow::MainWindow(QWidget *parent)
     m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
 
     connect(m_graphicsView, &GraphicsView::navigatorViewRequired,
-            this, [ = ](bool required, qreal angle){
-        m_gv->resetTransform();
-        m_gv->rotate(angle);
+            this, [ = ](bool required, QTransform tf){
+        m_gv->setTransform(GraphicsView::resetScale(tf));
         m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
         m_gv->setVisible(required);
         m_gv->updateMainViewportRegion();
@@ -120,7 +119,6 @@ MainWindow::MainWindow(QWidget *parent)
             this, &MainWindow::toggleCheckerboard);
     connect(m_bottomButtonGroup, &BottomButtonGroup::rotateRightBtnClicked,
             this, [ = ](){
-        m_graphicsView->resetScale();
         m_graphicsView->rotateView(90);
         m_graphicsView->checkAndDoFitInView();
         m_gv->setVisible(false);

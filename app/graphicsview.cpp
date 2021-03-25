@@ -35,7 +35,7 @@ GraphicsView::GraphicsView(QWidget *parent)
 
 void GraphicsView::showFileFromPath(const QString &filePath, bool doRequestGallery)
 {
-    emit navigatorViewRequired(false, 0);
+    emit navigatorViewRequired(false, transform());
 
     if (filePath.endsWith(".svg")) {
         showSvg(filePath);
@@ -122,7 +122,6 @@ qreal GraphicsView::scaleFactor() const
 
 void GraphicsView::resetTransform()
 {
-    m_rotateAngle = 0;
     QGraphicsView::resetTransform();
 }
 
@@ -131,7 +130,7 @@ void GraphicsView::zoomView(qreal scaleFactor)
     m_enableFitInView = false;
     scale(scaleFactor, scaleFactor);
     applyTransformationModeByScaleFactor();
-    emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), m_rotateAngle);
+    emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
 }
 
 void GraphicsView::flipView(bool horizontal)
@@ -141,21 +140,20 @@ void GraphicsView::flipView(bool horizontal)
     } else {
         scale(1, -1);
     }
-    // I guess we don't need to check if we need to trigger navigator view here
-    // since fliping doesn't affact the image rectangle size.
+    // Ensure the navigation view is also flipped.
+    emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
 }
 
 void GraphicsView::resetScale()
 {
-    resetWithScaleAndRotate(1, m_rotateAngle);
-    emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), m_rotateAngle);
+    setTransform(resetScale(transform()));
+    emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
 }
 
 void GraphicsView::rotateView(qreal rotateAngel)
 {
-    m_rotateAngle += rotateAngel;
-    m_rotateAngle = static_cast<int>(m_rotateAngle) % 360;
-    resetWithScaleAndRotate(1, m_rotateAngle);
+    resetScale();
+    rotate(rotateAngel);
 }
 
 void GraphicsView::fitInView(const QRectF &rect, Qt::AspectRatioMode aspectRadioMode)
@@ -174,6 +172,18 @@ void GraphicsView::checkAndDoFitInView(bool markItOnAnyway)
     if (markItOnAnyway) {
         m_enableFitInView = true;
     }
+}
+
+inline double zeroOrOne(double number)
+{
+    return qFuzzyIsNull(number) ? 0 : (number > 0 ? 1 : -1);
+}
+
+QTransform GraphicsView::resetScale(const QTransform & orig)
+{
+    return QTransform(zeroOrOne(orig.m11()), zeroOrOne(orig.m12()),
+                      zeroOrOne(orig.m21()), zeroOrOne(orig.m22()),
+                      orig.dx(),             orig.dy());
 }
 
 void GraphicsView::toggleCheckerboard(bool invertCheckerboardColor)
@@ -221,9 +231,7 @@ void GraphicsView::wheelEvent(QWheelEvent *event)
 void GraphicsView::resizeEvent(QResizeEvent *event)
 {
     if (m_enableFitInView) {
-        QTransform tf;
-        tf.rotate(m_rotateAngle);
-        bool originalSizeSmallerThanWindow = isThingSmallerThanWindowWith(tf);
+        bool originalSizeSmallerThanWindow = isThingSmallerThanWindowWith(resetScale(transform()));
         if (originalSizeSmallerThanWindow && scaleFactor() >= 1) {
             // no longer need to do fitInView()
             // but we leave the m_enableFitInView value unchanged in case
@@ -234,7 +242,7 @@ void GraphicsView::resizeEvent(QResizeEvent *event)
             fitInView(sceneRect(), Qt::KeepAspectRatio);
         }
     } else {
-        emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), m_rotateAngle);
+        emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
     }
     return QGraphicsView::resizeEvent(event);
 }

@@ -33,8 +33,10 @@ public:
 
     void checkAndDoFitInView(bool markItOnAnyway = true);
 
+    static QTransform resetScale(const QTransform & orig);
+
 signals:
-    void navigatorViewRequired(bool required, qreal angle);
+    void navigatorViewRequired(bool required, QTransform transform);
     void viewportRectChanged();
     void requestGallery(const QString &filePath);
 
@@ -62,7 +64,6 @@ private:
     bool m_enableFitInView = false;
     bool m_checkerboardEnabled = false;
     bool m_isLastCheckerboardColorInverted = false;
-    qreal m_rotateAngle = 0;
 };
 
 #endif // GRAPHICSVIEW_H
