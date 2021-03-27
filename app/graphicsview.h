@@ -59,8 +59,6 @@ private:
     void setCheckerboardEnabled(bool enabled, bool invertColor = false);
     void applyTransformationModeByScaleFactor();
 
-    void resetWithScaleAndRotate(qreal scaleFactor, qreal rotateAngle);
-
     bool m_enableFitInView = false;
     bool m_checkerboardEnabled = false;
     bool m_isLastCheckerboardColorInverted = false;

@@ -135,11 +135,12 @@ void GraphicsView::zoomView(qreal scaleFactor)
 
 void GraphicsView::flipView(bool horizontal)
 {
-    if (horizontal) {
-        scale(-1, 1);
-    } else {
-        scale(1, -1);
-    }
+    QTransform tf(horizontal ? -1 : 1, 0,                   0,
+                  0,                   horizontal ? 1 : -1, 0,
+                  0,                   0,                   1);
+    tf = transform() * tf;
+    setTransform(tf);
+
     // Ensure the navigation view is also flipped.
     emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
 }
@@ -179,6 +180,8 @@ inline double zeroOrOne(double number)
     return qFuzzyIsNull(number) ? 0 : (number > 0 ? 1 : -1);
 }
 
+// Note: this only works if we only have 90 degree based rotation
+//       and no shear/translate.
 QTransform GraphicsView::resetScale(const QTransform & orig)
 {
     return QTransform(zeroOrOne(orig.m11()), zeroOrOne(orig.m12()),
@@ -348,11 +351,4 @@ void GraphicsView::applyTransformationModeByScaleFactor()
     } else {
         scene()->trySetTransformationMode(Qt::FastTransformation);
     }
-}
-
-void GraphicsView::resetWithScaleAndRotate(qreal scaleFactor, qreal rotateAngle)
-{
-    QGraphicsView::resetTransform();
-    scale(scaleFactor, scaleFactor);
-    rotate(rotateAngle);
 }
