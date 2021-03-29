@@ -119,7 +119,7 @@ MainWindow::MainWindow(QWidget *parent)
             this, &MainWindow::toggleCheckerboard);
     connect(m_bottomButtonGroup, &BottomButtonGroup::rotateRightBtnClicked,
             this, [ = ](){
-        m_graphicsView->rotateView(90);
+        m_graphicsView->rotateView();
         m_graphicsView->checkAndDoFitInView();
         m_gv->setVisible(false);
     });

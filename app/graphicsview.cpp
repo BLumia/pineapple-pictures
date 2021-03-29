@@ -133,6 +133,19 @@ void GraphicsView::zoomView(qreal scaleFactor)
     emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
 }
 
+// This is always according to user's view.
+// the direction of the rotation will NOT be clockwise because the y-axis points downwards.
+void GraphicsView::rotateView(bool clockwise)
+{
+    resetScale();
+
+    QTransform tf(0,                  clockwise ? 1 : -1, 0,
+                  clockwise ? -1 : 1, 0,                  0,
+                  0,                  0,                  1);
+    tf = transform() * tf;
+    setTransform(tf);
+}
+
 void GraphicsView::flipView(bool horizontal)
 {
     QTransform tf(horizontal ? -1 : 1, 0,                   0,
@@ -149,12 +162,6 @@ void GraphicsView::resetScale()
 {
     setTransform(resetScale(transform()));
     emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
-}
-
-void GraphicsView::rotateView(qreal rotateAngel)
-{
-    resetScale();
-    rotate(rotateAngel);
 }
 
 void GraphicsView::fitInView(const QRectF &rect, Qt::AspectRatioMode aspectRadioMode)
