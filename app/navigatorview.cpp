@@ -44,7 +44,7 @@ void NavigatorView::mousePressEvent(QMouseEvent *event)
         update();
     }
 
-    return QGraphicsView::mousePressEvent(event);
+    event->accept();
 }
 
 void NavigatorView::mouseMoveEvent(QMouseEvent *event)
@@ -52,16 +52,17 @@ void NavigatorView::mouseMoveEvent(QMouseEvent *event)
     if (m_mouseDown && m_mainView) {
         m_mainView->centerOn(mapToScene(event->pos()));
         update();
+        event->accept();
+    } else {
+        event->ignore();
     }
-
-    return QGraphicsView::mouseMoveEvent(event);
 }
 
 void NavigatorView::mouseReleaseEvent(QMouseEvent *event)
 {
     m_mouseDown = false;
 
-    return QGraphicsView::mouseReleaseEvent(event);
+    event->accept();
 }
 
 void NavigatorView::wheelEvent(QWheelEvent *event)
