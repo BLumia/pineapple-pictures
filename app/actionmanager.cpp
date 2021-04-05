@@ -46,7 +46,7 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
 
     actionZoomIn->setText(QCoreApplication::translate("MainWindow", "Zoom in", nullptr));
     actionZoomOut->setText(QCoreApplication::translate("MainWindow", "Zoom out", nullptr));
-    actionHorizontalFlip->setText(QCoreApplication::translate("MainWindow", "Horizontal flip", nullptr));
+    actionHorizontalFlip->setText(QCoreApplication::translate("MainWindow", "Flip &Horizontally", nullptr));
     actionCopyPixmap->setText(QCoreApplication::translate("MainWindow", "Copy P&ixmap", nullptr));
     actionCopyFilePath->setText(QCoreApplication::translate("MainWindow", "Copy &File Path", nullptr));
     actionPaste->setText(QCoreApplication::translate("MainWindow", "&Paste", nullptr));
@@ -63,6 +63,12 @@ void ActionManager::setupShortcuts()
 {
     actionZoomIn->setShortcut(QKeySequence(QKeySequence::ZoomIn));
     actionZoomOut->setShortcut(QKeySequence(QKeySequence::ZoomOut));
+    actionHorizontalFlip->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_R));
+    actionCopyPixmap->setShortcut(QKeySequence(QKeySequence::Copy));
+    actionPaste->setShortcut(QKeySequence::Paste);
+    actionHelp->setShortcut(QKeySequence::HelpContents);
+    actionSettings->setShortcut(QKeySequence::Preferences);
+    actionProperties->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_I));
     actionQuitApp->setShortcuts({
         QKeySequence(Qt::Key_Space),
         QKeySequence(Qt::Key_Escape)
