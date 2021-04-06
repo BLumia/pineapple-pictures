@@ -29,11 +29,11 @@ AboutDialog::AboutDialog(QWidget *parent)
         QStringLiteral("<ul>"),
         QStringLiteral("<li><b>%1</b>:<br/>%2</li>").arg(
             QCoreApplication::translate("MainWindow", "Stay on top"),
-            this->tr("Make window stay on top of all other windows.")
+            tr("Make window stay on top of all other windows.")
         ),
         QStringLiteral("<li><b>%1</b>:<br/>%2</li>").arg(
             QCoreApplication::translate("MainWindow", "Protected mode"),
-            this->tr("Avoid close window accidentally. (eg. by double clicking the window)")
+            tr("Avoid close window accidentally. (eg. by double clicking the window)")
         ),
         QStringLiteral("</ul>")
     };
