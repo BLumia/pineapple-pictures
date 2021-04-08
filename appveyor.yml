@@ -34,9 +34,9 @@ build_script:
   - cd zlib-1.2.11
   - mkdir build
   - cd build
-  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s"
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT%
   - cmake --build . --config Release
-  - cmake --build . --config Release --target install
+  - cmake --build . --config Release --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
 # install ECM so we can build KImageFormats
   - cd 3rdparty
@@ -53,9 +53,9 @@ build_script:
   - cd aom
   - mkdir build.libavif
   - cd build.libavif
-  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DENABLE_DOCS=OFF -DBUILD_SHARED_LIBS=ON -DAOM_TARGET_CPU=generic -DENABLE_TESTS=OFF -DENABLE_TESTDATA=OFF -DENABLE_TOOLS=OFF -DENABLE_EXAMPLES=0
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DENABLE_DOCS=OFF -DBUILD_SHARED_LIBS=ON -DAOM_TARGET_CPU=generic -DENABLE_TESTS=OFF -DENABLE_TESTDATA=OFF -DENABLE_TOOLS=OFF -DENABLE_EXAMPLES=0
   - cmake --build . --config Release
-  - cmake --build . --config Release --target install
+  - cmake --build . --config Release --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
 # install libavif for avif format support of KImageFormats
   - cd %LIBAVIF%
@@ -64,9 +64,9 @@ build_script:
   - cd libavif-0.8.4
   - mkdir build
   - cd build
-  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DAVIF_CODEC_AOM=ON
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DAVIF_CODEC_AOM=ON
   - cmake --build . --config Release
-  - cmake --build . --config Release --target install
+  - cmake --build . --config Release --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
 # install KArchive for kra format support of KImageFormats
   - cd 3rdparty
@@ -75,25 +75,25 @@ build_script:
   - cd karchive
   - mkdir build
   - cd build
-  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s"
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT%
   - cmake --build . --config Release
-  - cmake --build . --config Release --target install
+  - cmake --build . --config Release --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
 # build libexpat for libexiv2
   - cd %LIBEXPAT%
   - curl -fsSL -o R_2_2_10.zip https://github.com/libexpat/libexpat/archive/R_2_2_10.zip
   - 7z x R_2_2_10.zip -y
   - cd libexpat-R_2_2_10/expat/
-  - cmake -G "Ninja" . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DCMAKE_CXX_FLAGS_RELEASE="-s" -DEXPAT_BUILD_EXAMPLES=OFF -DEXPAT_BUILD_TESTS=OFF -DEXPAT_BUILD_TOOLS=OFF
-  - cmake --build . --target install
+  - cmake -G "Ninja" . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXPAT_BUILD_EXAMPLES=OFF -DEXPAT_BUILD_TESTS=OFF -DEXPAT_BUILD_TOOLS=OFF
+  - cmake --build . --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
 # build libexiv2
   - cd %LIBEXIV2%
   - curl -fsSL -o v0.27.3.zip https://github.com/Exiv2/exiv2/archive/v0.27.3.zip
   - 7z x v0.27.3.zip -y
   - cd exiv2-0.27.3
-  - cmake -G "Ninja" . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXIV2_BUILD_SAMPLES=OFF -DEXIV2_ENABLE_WIN_UNICODE=ON -DCMAKE_CXX_FLAGS_RELEASE="-s"
-  - cmake --build . --target install
+  - cmake -G "Ninja" . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXIV2_BUILD_SAMPLES=OFF -DEXIV2_ENABLE_WIN_UNICODE=ON
+  - cmake --build . --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
 # install KImageFormats
   - cd 3rdparty
@@ -102,16 +102,16 @@ build_script:
   - cd kimageformats
   - mkdir build
   - cd build
-  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS_RELEASE="-s" -DQT_PLUGIN_INSTALL_DIR=%QTPATH%\plugins
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DQT_PLUGIN_INSTALL_DIR=%QTPATH%\plugins
   - cmake --build . --config Release
-  - cmake --build . --config Release --target install
+  - cmake --build . --config Release --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
 # finally...
   - mkdir build
   - cd build
-  - cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS_RELEASE="-s" -DCMAKE_MAKE_PROGRAM=mingw32-make -DCMAKE_INSTALL_PREFIX='%cd%'
-  - mingw32-make
-  - mingw32-make install
+  - cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=mingw32-make -DCMAKE_INSTALL_PREFIX='%cd%'
+  - cmake --build . --config Release
+  - cmake --build . --config Release --target install/strip
 # fixme: I don't know how to NOT make the binary installed to the ./bin/ folder...
   - cd bin
   - copy %APPVEYOR_BUILD_FOLDER%\LICENSE .
