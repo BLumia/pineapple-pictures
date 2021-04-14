@@ -39,19 +39,20 @@ void GraphicsView::showFileFromPath(const QString &filePath, bool doRequestGalle
 
     if (filePath.endsWith(".svg")) {
         showSvg(filePath);
-    } else if (filePath.endsWith(".gif")) {
-        showGif(filePath);
     } else {
         QImageReader imageReader(filePath);
         imageReader.setAutoTransform(true);
         imageReader.setDecideFormatFromContent(true);
+
         // Since if the image format / plugin does not support this feature, imageFormat() will returns an invalid format.
         // So we cannot use imageFormat() and check if it returns QImage::Format_Invalid to detect if we support the file.
         // QImage::Format imageFormat = imageReader.imageFormat();
         if (imageReader.format().isEmpty()) {
             doRequestGallery = false;
             showText(tr("File is not a valid image"));
-        } else if (!imageReader.supportsAnimation() && !imageReader.canRead()) {
+        } else if (imageReader.supportsAnimation() && imageReader.imageCount() > 1) {
+            showAnimated(filePath);
+        } else if (!imageReader.canRead()) {
             doRequestGallery = false;
             showText(tr("Image data is invalid or currently unsupported"));
         } else {
@@ -98,10 +99,10 @@ void GraphicsView::showSvg(const QString &filepath)
     checkAndDoFitInView();
 }
 
-void GraphicsView::showGif(const QString &filepath)
+void GraphicsView::showAnimated(const QString &filepath)
 {
     resetTransform();
-    scene()->showGif(filepath);
+    scene()->showAnimated(filepath);
     checkAndDoFitInView();
 }
 

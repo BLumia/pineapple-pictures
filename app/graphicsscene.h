@@ -13,7 +13,7 @@ public:
     void showImage(const QPixmap &pixmap);
     void showText(const QString &text);
     void showSvg(const QString &filepath);
-    void showGif(const QString &filepath);
+    void showAnimated(const QString &filepath);
 
     bool trySetTransformationMode(Qt::TransformationMode mode);
 

@@ -48,7 +48,7 @@ void GraphicsScene::showSvg(const QString &filepath)
     this->setSceneRect(m_theThing->boundingRect());
 }
 
-void GraphicsScene::showGif(const QString &filepath)
+void GraphicsScene::showAnimated(const QString &filepath)
 {
     this->clear();
     QMovie * movie = new QMovie(filepath);

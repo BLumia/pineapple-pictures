@@ -17,7 +17,7 @@ public:
     void showImage(const QImage &image);
     void showText(const QString &text);
     void showSvg(const QString &filepath);
-    void showGif(const QString &filepath);
+    void showAnimated(const QString &filepath);
 
     GraphicsScene * scene() const;
     void setScene(GraphicsScene *scene);
