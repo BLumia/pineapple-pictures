@@ -254,7 +254,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="51"/>
         <source>Toggle Checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Переключить шахматную доску</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="54"/>
@@ -600,12 +600,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="42"/>
         <source>Double-click behavior</source>
-        <translation>Поведение при двойном щелчке</translation>
+        <translation>Действие при двойном щелчке</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="43"/>
         <source>Mouse wheel behavior</source>
-        <translation>Поведение колеса мыши</translation>
+        <translation>Действие колеса мыши</translation>
     </message>
 </context>
 <context>

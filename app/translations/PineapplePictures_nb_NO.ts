@@ -254,7 +254,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="51"/>
         <source>Toggle Checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skru av/på rutemønster</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="54"/>
