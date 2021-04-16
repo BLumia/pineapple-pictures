@@ -25,16 +25,18 @@ AboutDialog::AboutDialog(QWidget *parent)
     const QStringList helpStr {
         QStringLiteral("<p>%1</p>").arg(tr("Launch application with image file path as argument to load the file.")),
         QStringLiteral("<p>%1</p>").arg(tr("Drag and drop image file onto the window is also supported.")),
+        QStringLiteral("<p>%1</p>").arg(tr("None of the operations in this application will alter the pictures on disk.")),
         QStringLiteral("<p>%1</p>").arg(tr("Context menu option explanation:")),
         QStringLiteral("<ul>"),
-        QStringLiteral("<li><b>%1</b>:<br/>%2</li>").arg(
-            QCoreApplication::translate("MainWindow", "Stay on top"),
-            tr("Make window stay on top of all other windows.")
-        ),
-        QStringLiteral("<li><b>%1</b>:<br/>%2</li>").arg(
-            QCoreApplication::translate("MainWindow", "Protected mode"),
-            tr("Avoid close window accidentally. (eg. by double clicking the window)")
-        ),
+        // blumia: Chain two arg() here since it seems lupdate will remove one of them if we use
+        //         the old `arg(QCoreApp::translate(), tr())` way, but it's worth to mention
+        //         `arg(QCoreApp::translate(), this->tr())` works, but lupdate will complain about the usage.
+        QStringLiteral("<li><b>%1</b>:<br/>%2</li>")
+                .arg(QCoreApplication::translate("MainWindow", "Stay on top"))
+                .arg(tr("Make window stay on top of all other windows.")),
+        QStringLiteral("<li><b>%1</b>:<br/>%2</li>")
+                .arg(QCoreApplication::translate("MainWindow", "Protected mode"))
+                .arg(tr("Avoid close window accidentally. (eg. by double clicking the window)")),
         QStringLiteral("</ul>")
     };
 

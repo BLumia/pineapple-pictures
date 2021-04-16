@@ -43,7 +43,11 @@ void MetadataModel::setFile(const QString &imageFilePath)
     appendProperty(QStringLiteral("Image"), QStringLiteral("Image.Dimensions"),
                    tr("Dimensions"), imageDimensionsString);
     appendProperty(QStringLiteral("Image"), QStringLiteral("Image.SizeRatio"),
-                   tr("Aspect Ratio"), imageRatioString);
+                   tr("Aspect ratio"), imageRatioString);
+    if (imgReader.supportsAnimation() && imgReader.imageCount() > 1) {
+        appendProperty(QStringLiteral("Image"), QStringLiteral("Image.FrameCount"),
+                       tr("Frame count"), QString::number(imgReader.imageCount()));
+    }
 
     appendProperty(QStringLiteral("File"), QStringLiteral("File.Name"),
                    tr("Name"), fileInfo.fileName());
@@ -54,9 +58,9 @@ void MetadataModel::setFile(const QString &imageFilePath)
     appendProperty(QStringLiteral("File"), QStringLiteral("File.Size"),
                    tr("Size"), sizeString);
     appendProperty(QStringLiteral("File"), QStringLiteral("File.CreatedTime"),
-                   tr("Date Created"), birthTimeString);
+                   tr("Date created"), birthTimeString);
     appendProperty(QStringLiteral("File"), QStringLiteral("File.LastModified"),
-                   tr("Date Modified"), lastModifiedTimeString);
+                   tr("Date modified"), lastModifiedTimeString);
 
     Exiv2Wrapper wrapper;
     if (wrapper.load(imageFilePath)) {
@@ -73,6 +77,8 @@ void MetadataModel::setFile(const QString &imageFilePath)
                                   QStringLiteral("Exif.Photo.DateTimeOriginal"), tr("Date taken"));
         appendExivPropertyIfExist(wrapper, QStringLiteral("Origin"),
                                   QStringLiteral("Exif.Image.Software"), tr("Program name"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("Origin"),
+                                  QStringLiteral("Exif.Image.Copyright"), tr("Copyright"));
 
         appendExivPropertyIfExist(wrapper, QStringLiteral("Image"),
                                   QStringLiteral("Exif.Image.XResolution"), tr("Horizontal resolution"));
