@@ -21,7 +21,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="28"/>
         <source>None of the operations in this application will alter the pictures on disk.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen av operasjonene i dette programmet vil endre bildet som det er lagret.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="29"/>
@@ -254,7 +254,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="49"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Vent &amp;vanrett</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="52"/>
@@ -352,7 +352,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="49"/>
         <source>Frame count</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rammeantall</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="53"/>
@@ -412,7 +412,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="81"/>
         <source>Copyright</source>
-        <translation type="unfinished"></translation>
+        <translation>Opphavsrett</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="84"/>
