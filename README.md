@@ -17,7 +17,7 @@ Pineapple Pictures is a lightweight image viewer that allows you view JPEG, PNG,
  - [GitHub Release Page](https://github.com/BLumia/pineapple-pictures/releases)
  - [SourceForge](https://sourceforge.net/projects/pineapple-pictures/)
  - Archlinux AUR: [pineapple-pictures](https://aur.archlinux.org/packages/pineapple-pictures/) | [pineapple-pictures-git](https://aur.archlinux.org/packages/pineapple-pictures-git/)
- - Debian (sid / testing): `sudo apt install pineapple-pictures`
+ - Debian (since bullseye) or Ubuntu (since 21.04): `sudo apt install pineapple-pictures`
  - [Itch.io Store](https://blumia.itch.io/pineapple-pictures)
 
 ## Help Translation!
