@@ -32,6 +32,7 @@ void NavigatorView::updateMainViewportRegion()
 {
     if (m_mainView != nullptr) {
         m_viewportRegion = mapFromScene(m_mainView->mapToScene(m_mainView->rect()));
+        update();
     }
 }
 
