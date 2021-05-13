@@ -30,6 +30,7 @@ public:
     void flipView(bool horizontal = true);
     void resetScale();
     void fitInView(const QRectF &rect, Qt::AspectRatioMode aspectRadioMode = Qt::IgnoreAspectRatio);
+    void fitByOrientation(Qt::Orientation ori = Qt::Horizontal, bool scaleDownOnly = false);
 
     void checkAndDoFitInView(bool markItOnAnyway = true);
 
