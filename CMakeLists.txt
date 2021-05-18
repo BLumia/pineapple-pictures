@@ -201,7 +201,7 @@ elseif (UNIX)
 
     # install app metadata file for appstream (and some other stuff using this metadata like snapcraft)
     install (
-        FILES dist/appstream/net.blumia.pineapple-pictures.appdata.xml
+        FILES dist/appstream/net.blumia.pineapple-pictures.metainfo.xml
         DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/metainfo"
     )
 endif()
