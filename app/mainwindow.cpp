@@ -50,7 +50,7 @@ MainWindow::MainWindow(QWidget *parent)
     m_floatUpAnimation = new QPropertyAnimation(this, "geometry");
     m_floatUpAnimation->setDuration(300);
     m_floatUpAnimation->setEasingCurve(QEasingCurve::OutCirc);
-    m_exitAnimationGroup = new QParallelAnimationGroup;
+    m_exitAnimationGroup = new QParallelAnimationGroup(this);
     m_exitAnimationGroup->addAnimation(m_fadeOutAnimation);
     m_exitAnimationGroup->addAnimation(m_floatUpAnimation);
     connect(m_exitAnimationGroup, &QParallelAnimationGroup::finished,

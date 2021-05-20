@@ -51,8 +51,8 @@ void GraphicsScene::showSvg(const QString &filepath)
 void GraphicsScene::showAnimated(const QString &filepath)
 {
     this->clear();
-    QMovie * movie = new QMovie(filepath);
     QLabel * label = new QLabel;
+    QMovie * movie = new QMovie(filepath, QByteArray(), label);
     label->setStyleSheet("background-color:rgba(225,255,255,0);");
     label->setMovie(movie);
     this->addWidget(label);
