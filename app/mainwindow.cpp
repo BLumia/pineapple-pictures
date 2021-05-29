@@ -421,7 +421,6 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     menu->addSeparator();
 
     menu->addAction(m_am->actionHorizontalFlip);
-    menu->addAction(m_am->actionFitByWidth);
 
     menu->addSeparator();
     menu->addAction(stayOnTopMode);
@@ -560,11 +559,6 @@ void MainWindow::on_actionZoomOut_triggered()
 void MainWindow::on_actionHorizontalFlip_triggered()
 {
     m_graphicsView->flipView();
-}
-
-void MainWindow::on_actionFitByWidth_triggered()
-{
-    m_graphicsView->fitByOrientation();
 }
 
 void MainWindow::on_actionCopyPixmap_triggered()

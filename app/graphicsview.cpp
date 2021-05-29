@@ -171,31 +171,6 @@ void GraphicsView::fitInView(const QRectF &rect, Qt::AspectRatioMode aspectRadio
     applyTransformationModeByScaleFactor();
 }
 
-void GraphicsView::fitByOrientation(Qt::Orientation ori, bool scaleDownOnly)
-{
-    resetScale();
-
-    QRectF viewRect = this->viewport()->rect().adjusted(2, 2, -2, -2);
-    QRectF imageRect = transform().mapRect(sceneRect());
-
-    qreal ratio;
-
-    if (ori == Qt::Horizontal) {
-        ratio = viewRect.width() / imageRect.width();
-    } else {
-        ratio = viewRect.height() / imageRect.height();
-    }
-
-    if (scaleDownOnly && ratio > 1) ratio = 1;
-
-    scale(ratio, ratio);
-    centerOn(imageRect.top(), 0);
-    m_enableFitInView = false;
-
-    applyTransformationModeByScaleFactor();
-    emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
-}
-
 void GraphicsView::checkAndDoFitInView(bool markItOnAnyway)
 {
     if (!isThingSmallerThanWindowWith(transform())) {
