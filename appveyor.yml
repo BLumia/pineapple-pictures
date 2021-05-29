@@ -102,7 +102,7 @@ build_script:
   - cd kimageformats
   - mkdir build
   - cd build
-  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DQT_PLUGIN_INSTALL_DIR=%QTPATH%\plugins
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_QTPLUGINDIR=%QTPATH%\plugins
   - cmake --build . --config Release
   - cmake --build . --config Release --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
