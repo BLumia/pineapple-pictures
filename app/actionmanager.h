@@ -19,6 +19,7 @@ public:
     QAction *actionZoomIn;
     QAction *actionZoomOut;
     QAction *actionHorizontalFlip;
+    QAction *actionFitInView;
     QAction *actionFitByWidth;
     QAction *actionCopyPixmap;
     QAction *actionCopyFilePath;

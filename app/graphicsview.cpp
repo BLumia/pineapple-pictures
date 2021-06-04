@@ -208,6 +208,12 @@ void GraphicsView::checkAndDoFitInView(bool markItOnAnyway)
     }
 }
 
+// Automately do fit in view when viewport(window) smaller than image original size.
+void GraphicsView::setEnableAutoFitInView(bool enable)
+{
+    m_enableFitInView = enable;
+}
+
 inline double zeroOrOne(double number)
 {
     return qFuzzyIsNull(number) ? 0 : (number > 0 ? 1 : -1);

@@ -421,6 +421,7 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     menu->addSeparator();
 
     menu->addAction(m_am->actionHorizontalFlip);
+    menu->addAction(m_am->actionFitInView);
     menu->addAction(m_am->actionFitByWidth);
 
     menu->addSeparator();
@@ -560,6 +561,14 @@ void MainWindow::on_actionZoomOut_triggered()
 void MainWindow::on_actionHorizontalFlip_triggered()
 {
     m_graphicsView->flipView();
+}
+
+void MainWindow::on_actionFitInView_triggered()
+{
+    // TODO: maybe do it if window is smaller than original image size?
+    m_graphicsView->setEnableAutoFitInView(false);
+
+    m_graphicsView->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
 }
 
 void MainWindow::on_actionFitByWidth_triggered()

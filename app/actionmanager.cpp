@@ -24,6 +24,7 @@ void ActionManager::setupAction(MainWindow *mainWindow)
     CREATE_NEW_ACTION(mainWindow, actionZoomIn);
     CREATE_NEW_ACTION(mainWindow, actionZoomOut);
     CREATE_NEW_ACTION(mainWindow, actionHorizontalFlip);
+    CREATE_NEW_ACTION(mainWindow, actionFitInView);
     CREATE_NEW_ACTION(mainWindow, actionFitByWidth);
     CREATE_NEW_ACTION(mainWindow, actionCopyPixmap);
     CREATE_NEW_ACTION(mainWindow, actionCopyFilePath);
@@ -48,6 +49,7 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
     actionZoomIn->setText(QCoreApplication::translate("MainWindow", "Zoom in", nullptr));
     actionZoomOut->setText(QCoreApplication::translate("MainWindow", "Zoom out", nullptr));
     actionHorizontalFlip->setText(QCoreApplication::translate("MainWindow", "Flip &Horizontally", nullptr));
+    actionFitInView->setText("Fit in view"); // TODO: what should it called?
     actionFitByWidth->setText("Fit by width"); // TODO: what should it called?
     actionCopyPixmap->setText(QCoreApplication::translate("MainWindow", "Copy P&ixmap", nullptr));
     actionCopyFilePath->setText(QCoreApplication::translate("MainWindow", "Copy &File Path", nullptr));

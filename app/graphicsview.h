@@ -33,6 +33,7 @@ public:
     void fitByOrientation(Qt::Orientation ori = Qt::Horizontal, bool scaleDownOnly = false);
 
     void checkAndDoFitInView(bool markItOnAnyway = true);
+    void setEnableAutoFitInView(bool enable = true);
 
     static QTransform resetScale(const QTransform & orig);
 
