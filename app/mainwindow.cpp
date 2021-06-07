@@ -120,7 +120,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_bottomButtonGroup, &BottomButtonGroup::rotateRightBtnClicked,
             this, [ = ](){
         m_graphicsView->rotateView();
-        m_graphicsView->checkAndDoFitInView();
+        m_graphicsView->displayScene();
         m_gv->setVisible(false);
     });
 
@@ -493,12 +493,12 @@ void MainWindow::toggleStayOnTop()
     show();
 }
 
-bool MainWindow::stayOnTop()
+bool MainWindow::stayOnTop() const
 {
     return windowFlags().testFlag(Qt::WindowStaysOnTopHint);
 }
 
-bool MainWindow::canPaste()
+bool MainWindow::canPaste() const
 {
     const QMimeData * clipboardData = QApplication::clipboard()->mimeData();
     if (clipboardData->hasImage()) {
@@ -565,10 +565,8 @@ void MainWindow::on_actionHorizontalFlip_triggered()
 
 void MainWindow::on_actionFitInView_triggered()
 {
-    // TODO: maybe do it if window is smaller than original image size?
-    m_graphicsView->setEnableAutoFitInView(false);
-
     m_graphicsView->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
+    m_graphicsView->setEnableAutoFitInView(m_graphicsView->scaleFactor() <= 1);
 }
 
 void MainWindow::on_actionFitByWidth_triggered()

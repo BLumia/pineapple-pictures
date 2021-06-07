@@ -32,7 +32,8 @@ public:
     void fitInView(const QRectF &rect, Qt::AspectRatioMode aspectRadioMode = Qt::IgnoreAspectRatio);
     void fitByOrientation(Qt::Orientation ori = Qt::Horizontal, bool scaleDownOnly = false);
 
-    void checkAndDoFitInView(bool markItOnAnyway = true);
+    void displayScene();
+    bool isSceneBiggerThanView() const;
     void setEnableAutoFitInView(bool enable = true);
 
     static QTransform resetScale(const QTransform & orig);
@@ -61,6 +62,9 @@ private:
     void setCheckerboardEnabled(bool enabled, bool invertColor = false);
     void applyTransformationModeByScaleFactor();
 
+    // Consider switch to 3 state for "no fit", "always fit" and "fit when view is smaller"?
+    // ... or even more? e.g. "fit/snap width" things...
+    // Currently it's "no fit" when it's false and "fit when view is smaller" when it's true.
     bool m_enableFitInView = false;
     bool m_checkerboardEnabled = false;
     bool m_isLastCheckerboardColorInverted = false;

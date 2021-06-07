@@ -53,8 +53,8 @@ protected slots:
     void toggleCheckerboard();
     void toggleProtectedMode();
     void toggleStayOnTop();
-    bool stayOnTop();
-    bool canPaste();
+    bool stayOnTop() const;
+    bool canPaste() const;
     void quitAppAction(bool force = false);
     void toggleFullscreen();
     void toggleMaximize();

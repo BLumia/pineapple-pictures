@@ -75,35 +75,35 @@ void GraphicsView::showImage(const QPixmap &pixmap)
 {
     resetTransform();
     scene()->showImage(pixmap);
-    checkAndDoFitInView();
+    displayScene();
 }
 
 void GraphicsView::showImage(const QImage &image)
 {
     resetTransform();
     scene()->showImage(QPixmap::fromImage(image));
-    checkAndDoFitInView();
+    displayScene();
 }
 
 void GraphicsView::showText(const QString &text)
 {
     resetTransform();
     scene()->showText(text);
-    checkAndDoFitInView();
+    displayScene();
 }
 
 void GraphicsView::showSvg(const QString &filepath)
 {
     resetTransform();
     scene()->showSvg(filepath);
-    checkAndDoFitInView();
+    displayScene();
 }
 
 void GraphicsView::showAnimated(const QString &filepath)
 {
     resetTransform();
     scene()->showAnimated(filepath);
-    checkAndDoFitInView();
+    displayScene();
 }
 
 GraphicsScene *GraphicsView::scene() const
@@ -196,15 +196,21 @@ void GraphicsView::fitByOrientation(Qt::Orientation ori, bool scaleDownOnly)
     emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
 }
 
-void GraphicsView::checkAndDoFitInView(bool markItOnAnyway)
+void GraphicsView::displayScene()
 {
-    if (!isThingSmallerThanWindowWith(transform())) {
-        m_enableFitInView = true;
+    if (isSceneBiggerThanView()) {
         fitInView(sceneRect(), Qt::KeepAspectRatio);
     }
 
-    if (markItOnAnyway) {
-        m_enableFitInView = true;
+    m_enableFitInView = true;
+}
+
+bool GraphicsView::isSceneBiggerThanView() const
+{
+    if (!isThingSmallerThanWindowWith(transform())) {
+        return true;
+    } else {
+        return false;
     }
 }
 
