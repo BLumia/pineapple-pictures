@@ -10,6 +10,38 @@
 #include <QLabel>
 #include <QPainter>
 
+class PGraphicsPixmapItem : public QGraphicsPixmapItem
+{
+public:
+    PGraphicsPixmapItem(const QPixmap &pixmap, QGraphicsItem *parent = nullptr)
+        : QGraphicsPixmapItem(pixmap, parent)
+    {}
+
+    void setScaleHint(float scaleHint) {
+        m_scaleHint = scaleHint;
+    }
+
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
+               QWidget *widget) override
+    {
+        if (transformationMode() == Qt::FastTransformation) {
+            return QGraphicsPixmapItem::paint(painter, option, widget);
+        } else {
+//            painter->setRenderHints(QPainter::Antialiasing);
+            QSizeF resizedScale(boundingRect().size());
+            resizedScale *= m_scaleHint;
+            painter->drawPixmap(QRectF(offset(), boundingRect().size()).toRect(),
+                                pixmap().scaled(resizedScale.toSize(),
+                                                Qt::KeepAspectRatio,
+                                                Qt::SmoothTransformation)
+                                );
+        }
+    }
+
+private:
+    float m_scaleHint = 1;
+};
+
 GraphicsScene::GraphicsScene(QObject *parent)
     : QGraphicsScene(parent)
 {
@@ -24,7 +56,8 @@ GraphicsScene::~GraphicsScene()
 void GraphicsScene::showImage(const QPixmap &pixmap)
 {
     this->clear();
-    QGraphicsPixmapItem * pixmapItem = this->addPixmap(pixmap);
+    PGraphicsPixmapItem * pixmapItem = new PGraphicsPixmapItem(pixmap);
+    this->addItem(pixmapItem);
     pixmapItem->setShapeMode(QGraphicsPixmapItem::BoundingRectShape);
     m_theThing = pixmapItem;
     this->setSceneRect(m_theThing->boundingRect());
@@ -62,11 +95,12 @@ void GraphicsScene::showAnimated(const QString &filepath)
     this->setSceneRect(m_theThing->boundingRect());
 }
 
-bool GraphicsScene::trySetTransformationMode(Qt::TransformationMode mode)
+bool GraphicsScene::trySetTransformationMode(Qt::TransformationMode mode, float scaleHint)
 {
-    QGraphicsPixmapItem * pixmapItem = qgraphicsitem_cast<QGraphicsPixmapItem *>(m_theThing);
+    PGraphicsPixmapItem * pixmapItem = qgraphicsitem_cast<PGraphicsPixmapItem *>(m_theThing);
     if (pixmapItem) {
         pixmapItem->setTransformationMode(mode);
+        pixmapItem->setScaleHint(scaleHint);
         return true;
     }
 

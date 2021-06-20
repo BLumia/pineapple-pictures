@@ -392,8 +392,8 @@ void GraphicsView::setCheckerboardEnabled(bool enabled, bool invertColor)
 void GraphicsView::applyTransformationModeByScaleFactor()
 {
     if (this->scaleFactor() < 1) {
-        scene()->trySetTransformationMode(Qt::SmoothTransformation);
+        scene()->trySetTransformationMode(Qt::SmoothTransformation, this->scaleFactor());
     } else {
-        scene()->trySetTransformationMode(Qt::FastTransformation);
+        scene()->trySetTransformationMode(Qt::FastTransformation, this->scaleFactor());
     }
 }

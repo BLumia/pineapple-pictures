@@ -15,7 +15,7 @@ public:
     void showSvg(const QString &filepath);
     void showAnimated(const QString &filepath);
 
-    bool trySetTransformationMode(Qt::TransformationMode mode);
+    bool trySetTransformationMode(Qt::TransformationMode mode, float scaleHint);
 
     QPixmap renderToPixmap();
 
