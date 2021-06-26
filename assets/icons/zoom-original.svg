@@ -1,71 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="32"
-   height="32"
-   viewBox="0 0 8.4666665 8.4666669"
-   version="1.1"
-   id="svg8"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="zoom-original-a.svg">
-  <defs
-     id="defs2" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#000000"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.69803922"
-     inkscape:pageshadow="2"
-     inkscape:zoom="15.839192"
-     inkscape:cx="22.610899"
-     inkscape:cy="17.020554"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     units="px"
-     inkscape:pagecheckerboard="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1001"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1" />
-  <metadata
-     id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-288.5333)">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.30979729px;line-height:6.44362354px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.25774494;"
-       x="1.0365982"
-       y="259.85211"
-       id="text819"
-       transform="scale(0.88039913,1.1358485)"><tspan
-         sodipodi:role="line"
-         id="tspan817"
-         x="1.0365982"
-         y="259.85211"
-         style="font-size:5.84221935px;stroke-width:0.25774494;fill:#ffffff;fill-opacity:1;">1:1</tspan></text>
-  </g>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:square;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-74,-37)">
+        <g id="zoom-original" transform="matrix(1,0,0,1,74,37)">
+            <rect x="0" y="0" width="32" height="32" style="fill:none;"/>
+            <g transform="matrix(1,0,0,1,-73,-37)">
+                <path d="M85,57L85,49L84,49" style="fill:none;stroke:white;stroke-width:2px;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,-74,-37)">
+                <rect x="89" y="50" width="2" height="2" style="fill:white;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,-74,-33)">
+                <rect x="89" y="50" width="2" height="2" style="fill:white;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,-64,-37)">
+                <path d="M85,57L85,49L84,49" style="fill:none;stroke:white;stroke-width:2px;"/>
+            </g>
+            <g transform="matrix(1,0,0,0.952381,-74,-34)">
+                <rect x="80" y="42" width="20" height="21" style="fill:none;stroke:white;stroke-width:2.05px;stroke-linecap:round;stroke-linejoin:round;"/>
+            </g>
+        </g>
+    </g>
 </svg>

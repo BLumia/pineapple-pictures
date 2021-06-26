@@ -1,70 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="32"
-   height="32"
-   viewBox="0 0 8.4666665 8.4666669"
-   version="1.1"
-   id="svg8"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="object-rorate-right.svg">
-  <defs
-     id="defs2" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#000000"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.69803922"
-     inkscape:pageshadow="2"
-     inkscape:zoom="22.4"
-     inkscape:cx="13.471207"
-     inkscape:cy="14.931415"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     units="px"
-     inkscape:pagecheckerboard="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1001"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1" />
-  <metadata
-     id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-288.5333)">
-    <path
-       style="fill:none;stroke:#ffffff;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 6.2474252,294.57784 c -1.6704347,1.43657 -3.1237125,0.51783 -3.1237125,0.51783 -0.650925,-0.38244 -0.9769945,-1.03846 -1.0690781,-1.42823 -0.032148,-0.5952 -0.1092884,-1.34357 0.3591432,-1.95439 0.5186761,-0.51984 0.9614825,-0.84964 1.4783346,-0.9271 l 1.302939,-0.0167"
-       id="path21"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccc" />
-    <path
-       style="fill:none;stroke:#ffffff;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 4.5352297,289.82545 c 0.6598217,0.9438 0.6598217,0.9438 0.6598217,0.9438 l -0.626413,0.94379 -0.033409,0.0334"
-       id="path25"
-       inkscape:connector-curvature="0" />
-  </g>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-74,-7.10543e-15)">
+        <g id="object-rotate-right" transform="matrix(1,0,0,1,74,7.10543e-15)">
+            <rect x="0" y="0" width="32" height="32" style="fill:none;"/>
+            <g transform="matrix(1,0,0,1,-1,-0.275147)">
+                <g transform="matrix(1,0,0,1,-74,-7.10543e-15)">
+                    <path d="M100,18C100,22.967 95.967,27 91,27C86.033,27 82,22.967 82,18C82,13.033 86.033,9 91,9" style="fill:none;stroke:white;stroke-width:2px;"/>
+                </g>
+                <g transform="matrix(0.984136,-0.177418,0.177418,0.984136,-74.2676,16.4198)">
+                    <path d="M89,13L93,9L89,5" style="fill:none;stroke:white;stroke-width:2px;"/>
+                </g>
+            </g>
+        </g>
+    </g>
 </svg>
