@@ -162,6 +162,7 @@ void GraphicsView::flipView(bool horizontal)
 void GraphicsView::resetScale()
 {
     setTransform(resetScale(transform()));
+    applyTransformationModeByScaleFactor();
     emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
 }
 
