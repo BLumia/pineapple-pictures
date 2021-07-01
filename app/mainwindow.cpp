@@ -466,9 +466,9 @@ void MainWindow::closeWindow()
 void MainWindow::updateWidgetsPosition()
 {
     m_closeButton->move(width() - m_closeButton->width(), 0);
-    m_prevButton->move(25, (height() - m_prevButton->height()) / 2);
-    m_nextButton->move(width() - m_nextButton->width() - 25,
-                       (height() - m_prevButton->height()) / 2);
+    m_prevButton->move(25, (height() - m_prevButton->sizeHint().height()) / 2);
+    m_nextButton->move(width() - m_nextButton->sizeHint().width() - 25,
+                       (height() - m_prevButton->sizeHint().height()) / 2);
     m_bottomButtonGroup->move((width() - m_bottomButtonGroup->width()) / 2,
                               height() - m_bottomButtonGroup->height());
     m_gv->move(width() - m_gv->width(), height() - m_gv->height());
