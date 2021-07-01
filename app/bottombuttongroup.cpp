@@ -4,11 +4,11 @@
 
 #include <functional>
 
-#include <QPushButton>
+#include <QToolButton>
 #include <QVBoxLayout>
 #include <QDebug>
 
-BottomButtonGroup::BottomButtonGroup(QWidget *parent)
+BottomButtonGroup::BottomButtonGroup(const std::vector<QAction *> &actionList, QWidget *parent)
     : QGroupBox (parent)
     , m_opacityHelper(new OpacityHelper(this))
 {
@@ -23,37 +23,23 @@ BottomButtonGroup::BottomButtonGroup(QWidget *parent)
                         "border-style: none;"
                         "background-color:rgba(0,0,0,120)"
                         "}"
-                        "QPushButton {"
+                        "QToolButton {"
                         "background-color:rgba(225,255,255,0);"
                         "color: white;"
                         "border-style: none;"
                         "}");
 
-    auto newBtn = [](QString text, std::function<void()> func) -> QPushButton * {
-        QPushButton * btn = new QPushButton(QIcon(QStringLiteral(":/icons/") + text), "");
+    auto newActionBtn = [this](QAction * action) -> QToolButton * {
+        QToolButton * btn = new QToolButton(this);
+        btn->setDefaultAction(action);
         btn->setIconSize(QSize(40, 40));
         btn->setFixedSize(40, 40);
-        QObject::connect(btn, &QAbstractButton::clicked, btn, func);
         return btn;
     };
-    addButton(newBtn("zoom-original", [this]() {
-        emit resetToOriginalBtnClicked();
-    }));
-    addButton(newBtn("view-fullscreen", [this]() {
-        emit toggleWindowMaximum();
-    }));
-    addButton(newBtn("zoom-in", [this]() {
-        emit zoomInBtnClicked();
-    }));
-    addButton(newBtn("zoom-out", [this]() {
-        emit zoomOutBtnClicked();
-    }));
-    addButton(newBtn("view-background-checkerboard", [this]() {
-        emit toggleCheckerboardBtnClicked();
-    }));
-    addButton(newBtn("object-rotate-right", [this]() {
-        emit rotateRightBtnClicked();
-    }));
+
+    for (QAction * action : actionList) {
+        addButton(newActionBtn(action));
+    }
 }
 
 void BottomButtonGroup::setOpacity(qreal opacity, bool animated)

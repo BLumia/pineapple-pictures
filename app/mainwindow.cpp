@@ -105,24 +105,16 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_nextButton, &QAbstractButton::clicked,
             this, &MainWindow::galleryNext);
 
-    m_bottomButtonGroup = new BottomButtonGroup(this);
+    m_am->setupAction(this);
 
-    connect(m_bottomButtonGroup, &BottomButtonGroup::resetToOriginalBtnClicked,
-            this, [ = ](){ m_graphicsView->resetScale(); });
-    connect(m_bottomButtonGroup, &BottomButtonGroup::toggleWindowMaximum,
-            this, &MainWindow::toggleMaximize);
-    connect(m_bottomButtonGroup, &BottomButtonGroup::zoomInBtnClicked,
-            this, &MainWindow::on_actionZoomIn_triggered);
-    connect(m_bottomButtonGroup, &BottomButtonGroup::zoomOutBtnClicked,
-            this, &MainWindow::on_actionZoomOut_triggered);
-    connect(m_bottomButtonGroup, &BottomButtonGroup::toggleCheckerboardBtnClicked,
-            this, &MainWindow::toggleCheckerboard);
-    connect(m_bottomButtonGroup, &BottomButtonGroup::rotateRightBtnClicked,
-            this, [ = ](){
-        m_graphicsView->rotateView();
-        m_graphicsView->displayScene();
-        m_gv->setVisible(false);
-    });
+    m_bottomButtonGroup = new BottomButtonGroup({
+        m_am->actionActualSize,
+        m_am->actionToggleMaximize,
+        m_am->actionZoomIn,
+        m_am->actionZoomOut,
+        m_am->actionToggleCheckerboard,
+        m_am->actionRotateClockwise
+    }, this);
 
     m_bottomButtonGroup->setOpacity(0, false);
     m_gv->setOpacity(0, false);
@@ -144,8 +136,6 @@ MainWindow::MainWindow(QWidget *parent)
     QShortcut * fullscreenShorucut = new QShortcut(QKeySequence(QKeySequence::FullScreen), this);
     connect(fullscreenShorucut, &QShortcut::activated,
             this, &MainWindow::toggleFullscreen);
-
-    m_am->setupAction(this);
 
     centerWindow();
 
@@ -474,11 +464,6 @@ void MainWindow::updateWidgetsPosition()
     m_gv->move(width() - m_gv->width(), height() - m_gv->height());
 }
 
-void MainWindow::toggleCheckerboard()
-{
-    m_graphicsView->toggleCheckerboard(QGuiApplication::queryKeyboardModifiers().testFlag(Qt::ShiftModifier));
-}
-
 void MainWindow::toggleProtectedMode()
 {
     m_protectedMode = !m_protectedMode;
@@ -544,6 +529,16 @@ void MainWindow::toggleMaximize()
 QSize MainWindow::sizeHint() const
 {
     return QSize(710, 530);
+}
+
+void MainWindow::on_actionActualSize_triggered()
+{
+    m_graphicsView->resetScale();
+}
+
+void MainWindow::on_actionToggleMaximize_triggered()
+{
+    toggleMaximize();
 }
 
 void MainWindow::on_actionZoomIn_triggered()
@@ -622,7 +617,15 @@ void MainWindow::on_actionPaste_triggered()
 
 void MainWindow::on_actionToggleCheckerboard_triggered()
 {
-    m_graphicsView->toggleCheckerboard();
+    // TODO: is that okay to do this since we plan to support custom shortcuts?
+    m_graphicsView->toggleCheckerboard(QGuiApplication::queryKeyboardModifiers().testFlag(Qt::ShiftModifier));
+}
+
+void MainWindow::on_actionRotateClockwise_triggered()
+{
+    m_graphicsView->rotateView();
+    m_graphicsView->displayScene();
+    m_gv->setVisible(false);
 }
 
 void MainWindow::on_actionToggleStayOnTop_triggered()

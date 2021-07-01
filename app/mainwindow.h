@@ -50,7 +50,6 @@ protected slots:
     void centerWindow();
     void closeWindow();
     void updateWidgetsPosition();
-    void toggleCheckerboard();
     void toggleProtectedMode();
     void toggleStayOnTop();
     bool stayOnTop() const;
@@ -63,15 +62,19 @@ protected:
     QSize sizeHint() const override;
 
 private slots:
+    void on_actionActualSize_triggered();
+    void on_actionToggleMaximize_triggered();
     void on_actionZoomIn_triggered();
     void on_actionZoomOut_triggered();
+    void on_actionToggleCheckerboard_triggered();
+    void on_actionRotateClockwise_triggered();
+
     void on_actionHorizontalFlip_triggered();
     void on_actionFitInView_triggered();
     void on_actionFitByWidth_triggered();
     void on_actionCopyPixmap_triggered();
     void on_actionCopyFilePath_triggered();
     void on_actionPaste_triggered();
-    void on_actionToggleCheckerboard_triggered();
     void on_actionToggleStayOnTop_triggered();
     void on_actionToggleProtectMode_triggered();
     void on_actionSettings_triggered();

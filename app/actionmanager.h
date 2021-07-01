@@ -16,15 +16,19 @@ public:
     void setupShortcuts();
 
 public:
+    QAction *actionActualSize;
+    QAction *actionToggleMaximize;
     QAction *actionZoomIn;
     QAction *actionZoomOut;
+    QAction *actionToggleCheckerboard;
+    QAction *actionRotateClockwise;
+
     QAction *actionHorizontalFlip;
     QAction *actionFitInView;
     QAction *actionFitByWidth;
     QAction *actionCopyPixmap;
     QAction *actionCopyFilePath;
     QAction *actionPaste;
-    QAction *actionToggleCheckerboard;
     QAction *actionToggleStayOnTop;
     QAction *actionToggleProtectMode;
     QAction *actionSettings;
