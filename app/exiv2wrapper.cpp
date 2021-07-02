@@ -34,7 +34,7 @@ void Exiv2Wrapper::cacheSection(Collection collection)
         QString label = QString::fromLocal8Bit(it->tagLabel().c_str());
         std::ostringstream stream;
         stream << *it;
-        QString value = QString::fromLocal8Bit(stream.str().c_str());
+        QString value = QString::fromUtf8(stream.str().c_str());
         m_metadataValue.insert(key, value);
         m_metadataLabel.insert(key, label);
 
