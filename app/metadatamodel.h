@@ -20,9 +20,9 @@ public:
                                   const QString & propertyDisplayName, const QString & propertyValue = QString());
     bool appendProperty(const QString & sectionKey, const QString & propertyKey,
                         const QString & propertyDisplayName, const QString & propertyValue = QString());
-    bool updateProperty(const QString & propertyKey, const QString & propertyValue);
     bool appendExivPropertyIfExist(const Exiv2Wrapper & wrapper, const QString & sectionKey,
-                                   const QString & exiv2propertyKey, const QString & propertyDisplayName = QString());
+                                   const QString & exiv2propertyKey, const QString & propertyDisplayName = QString(),
+                                   bool isXmpString = false);
 
 private:
     enum RowType : quintptr {

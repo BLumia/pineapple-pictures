@@ -99,3 +99,24 @@ QString Exiv2Wrapper::value(const QString &key) const
     return m_metadataValue.value(key);
 }
 
+QString Exiv2Wrapper::XmpValue(const QString &rawValue)
+{
+    QString ignored;
+    return Exiv2Wrapper::XmpValue(rawValue, ignored);
+}
+
+QString Exiv2Wrapper::XmpValue(const QString &rawValue, QString &language)
+{
+    if (rawValue.size() > 6 && rawValue.startsWith(QLatin1String("lang=\""))) {
+        int pos = rawValue.indexOf('"', 6);
+
+        if (pos != -1) {
+            language = rawValue.mid(6, pos - 6);
+            return (rawValue.mid(pos + 2));
+        }
+    }
+
+    language.clear();
+    return rawValue;
+}
+

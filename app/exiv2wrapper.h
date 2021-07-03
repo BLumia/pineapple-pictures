@@ -23,6 +23,9 @@ public:
     QString label(const QString & key) const;
     QString value(const QString & key) const;
 
+    static QString XmpValue(const QString &rawValue);
+    static QString XmpValue(const QString &rawValue, QString & language);
+
 private:
     std::unique_ptr<Exiv2::Image> m_exivImage;
     QMap<QString, QString> m_metadataValue;

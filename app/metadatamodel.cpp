@@ -67,7 +67,13 @@ void MetadataModel::setFile(const QString &imageFilePath)
         wrapper.cacheSections();
 
         appendExivPropertyIfExist(wrapper, QStringLiteral("Description"),
+                                  QStringLiteral("Xmp.dc.title"), tr("Title"), true);
+        appendExivPropertyIfExist(wrapper, QStringLiteral("Description"),
+                                  QStringLiteral("Exif.Image.ImageDescription"), tr("Subject"), true);
+        appendExivPropertyIfExist(wrapper, QStringLiteral("Description"),
                                   QStringLiteral("Exif.Image.Rating"), tr("Rating"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("Description"),
+                                  QStringLiteral("Xmp.dc.subject"), tr("Tags"));
         appendPropertyIfNotEmpty(QStringLiteral("Description"), QStringLiteral("Description.Comments"),
                                  tr("Comments"), wrapper.comment());
 
@@ -75,6 +81,10 @@ void MetadataModel::setFile(const QString &imageFilePath)
                                   QStringLiteral("Exif.Image.Artist"), tr("Authors"));
         appendExivPropertyIfExist(wrapper, QStringLiteral("Origin"),
                                   QStringLiteral("Exif.Photo.DateTimeOriginal"), tr("Date taken"));
+        // FIXME: We may fetch the same type of metadata from different metadata collection.
+        //        Current implementation is not pretty and may need to do a rework...
+        // appendExivPropertyIfExist(wrapper, QStringLiteral("Origin"),
+        //                                  QStringLiteral("Xmp.xmp.CreatorTool"), tr("Program name"));
         appendExivPropertyIfExist(wrapper, QStringLiteral("Origin"),
                                   QStringLiteral("Exif.Image.Software"), tr("Program name"));
         appendExivPropertyIfExist(wrapper, QStringLiteral("Origin"),
@@ -206,23 +216,13 @@ bool MetadataModel::appendProperty(const QString &sectionKey, const QString &pro
     return true;
 }
 
-bool MetadataModel::updateProperty(const QString &propertyKey, const QString &propertyValue)
-{
-    if (m_properties.contains(propertyKey)) {
-        m_properties[propertyKey].second = propertyValue;
-        return true;
-    }
-
-    return false;
-}
-
-bool MetadataModel::appendExivPropertyIfExist(const Exiv2Wrapper &wrapper, const QString &sectionKey, const QString &exiv2propertyKey, const QString &propertyDisplayName)
+bool MetadataModel::appendExivPropertyIfExist(const Exiv2Wrapper &wrapper, const QString &sectionKey, const QString &exiv2propertyKey, const QString &propertyDisplayName, bool isXmpString)
 {
     const QString & value = wrapper.value(exiv2propertyKey);
     if (!value.isEmpty()) {
         appendProperty(sectionKey, exiv2propertyKey,
                        propertyDisplayName.isEmpty() ? wrapper.label(exiv2propertyKey) : propertyDisplayName,
-                       value);
+                       isXmpString ? Exiv2Wrapper::XmpValue(value) : value);
         return true;
     }
     return false;
