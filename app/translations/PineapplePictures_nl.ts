@@ -168,7 +168,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../graphicsscene.cpp" line="16"/>
+        <location filename="../graphicsscene.cpp" line="48"/>
         <source>Drag image here</source>
         <translation>Sleep een afbeelding hierheen</translation>
     </message>
@@ -176,7 +176,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../graphicsview.cpp" line="291"/>
+        <location filename="../graphicsview.cpp" line="329"/>
         <source>File url list is empty</source>
         <translation>De bestandspadlijst is leeg</translation>
     </message>
@@ -192,12 +192,12 @@
         <translation>De afbeeldingsgegevens zijn beschadigd of worden niet ondersteund</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="299"/>
+        <location filename="../graphicsview.cpp" line="337"/>
         <source>Image data is invalid</source>
         <translation>Beschadigde afbeeldingsgegevens</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="306"/>
+        <location filename="../graphicsview.cpp" line="344"/>
         <source>Not supported mimedata: %1</source>
         <translation>Niet-ondersteunde mime-gegevens: %1</translation>
     </message>
@@ -205,79 +205,94 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="173"/>
+        <location filename="../mainwindow.cpp" line="163"/>
         <source>File url list is empty</source>
         <translation>De bestandspadlijst is leeg</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="384"/>
+        <location filename="../mainwindow.cpp" line="374"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopiëren</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="50"/>
+        <location filename="../actionmanager.cpp" line="73"/>
         <source>Copy P&amp;ixmap</source>
         <translation>P&amp;ixmap kopiëren</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="51"/>
+        <location filename="../actionmanager.cpp" line="74"/>
         <source>Copy &amp;File Path</source>
         <translation>&amp;Bestandspad kopiëren</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="58"/>
+        <location filename="../actionmanager.cpp" line="80"/>
         <source>Properties</source>
         <translation>Eigenschappen</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="35"/>
-        <location filename="../actionmanager.cpp" line="54"/>
+        <location filename="../actionmanager.cpp" line="76"/>
         <source>Stay on top</source>
         <translation>Altijd bovenop</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="38"/>
-        <location filename="../actionmanager.cpp" line="55"/>
+        <location filename="../actionmanager.cpp" line="77"/>
         <source>Protected mode</source>
         <translation>Beschermde modus</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="47"/>
+        <location filename="../actionmanager.cpp" line="65"/>
         <source>Zoom in</source>
         <translation>Inzoomen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="48"/>
+        <location filename="../actionmanager.cpp" line="66"/>
         <source>Zoom out</source>
         <translation>Uitzoomen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="49"/>
+        <location filename="../actionmanager.cpp" line="70"/>
         <source>Flip &amp;Horizontally</source>
         <translation>&amp;Horizontaal spiegelen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="52"/>
+        <location filename="../actionmanager.cpp" line="75"/>
         <source>&amp;Paste</source>
         <translation>&amp;Plakken</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="53"/>
+        <location filename="../actionmanager.cpp" line="67"/>
         <source>Toggle Checkerboard</source>
         <translation>Schaakbordpatroon aan/uit</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="56"/>
+        <location filename="../actionmanager.cpp" line="63"/>
+        <source>Actual size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="64"/>
+        <source>Toggle maximize</source>
+        <translation type="unfinished">Maximaliseren/Demaximaliseren</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="68"/>
+        <source>Rotate right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="78"/>
         <source>Configure...</source>
         <translation>Instellen...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="57"/>
+        <location filename="../actionmanager.cpp" line="79"/>
         <source>Help</source>
         <translation>Hulp</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="59"/>
+        <location filename="../actionmanager.cpp" line="81"/>
         <source>Quit</source>
         <translation>Afsluiten</translation>
     </message>
@@ -386,186 +401,201 @@
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="70"/>
+        <source>Title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="72"/>
+        <source>Subject</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="74"/>
         <source>Rating</source>
         <translation>Waardering</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="72"/>
+        <location filename="../metadatamodel.cpp" line="76"/>
+        <source>Tags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="78"/>
         <source>Comments</source>
         <translation>Opmerkingen</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="75"/>
+        <location filename="../metadatamodel.cpp" line="81"/>
         <source>Authors</source>
         <translation>Makers</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="77"/>
+        <location filename="../metadatamodel.cpp" line="83"/>
         <source>Date taken</source>
         <translation>Genomen op</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="79"/>
+        <location filename="../metadatamodel.cpp" line="89"/>
         <source>Program name</source>
         <translation>Programmanaam</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="81"/>
+        <location filename="../metadatamodel.cpp" line="91"/>
         <source>Copyright</source>
         <translation>Copyright</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="84"/>
+        <location filename="../metadatamodel.cpp" line="94"/>
         <source>Horizontal resolution</source>
         <translation>Horizontale resolutie</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="86"/>
+        <location filename="../metadatamodel.cpp" line="96"/>
         <source>Vertical resolution</source>
         <translation>Verticale resolutie</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="88"/>
+        <location filename="../metadatamodel.cpp" line="98"/>
         <source>Resolution unit</source>
         <translation>Resolutie-eenheid</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="90"/>
+        <location filename="../metadatamodel.cpp" line="100"/>
         <source>Colour representation</source>
         <translation>Kleurweergave</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="93"/>
+        <location filename="../metadatamodel.cpp" line="103"/>
         <source>Camera maker</source>
         <translation>Camerafabrikant</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="95"/>
+        <location filename="../metadatamodel.cpp" line="105"/>
         <source>Camera model</source>
         <translation>Cameramodel</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="97"/>
+        <location filename="../metadatamodel.cpp" line="107"/>
         <source>F-stop</source>
         <translation>Openingsverhouding</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="99"/>
+        <location filename="../metadatamodel.cpp" line="109"/>
         <source>Exposure time</source>
         <translation>Belichtingstijd</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="101"/>
+        <location filename="../metadatamodel.cpp" line="111"/>
         <source>ISO speed</source>
         <translation>ISO-snelheid</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="103"/>
+        <location filename="../metadatamodel.cpp" line="113"/>
         <source>Exposure bias</source>
         <translation>Belichtingsvertekening</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="105"/>
+        <location filename="../metadatamodel.cpp" line="115"/>
         <source>Focal length</source>
         <translation>Focale lengte</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="107"/>
+        <location filename="../metadatamodel.cpp" line="117"/>
         <source>Max aperture</source>
         <translation>Max. opening</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="109"/>
+        <location filename="../metadatamodel.cpp" line="119"/>
         <source>Metering mode</source>
         <translation>Metermodus</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="111"/>
+        <location filename="../metadatamodel.cpp" line="121"/>
         <source>Flash mode</source>
         <translation>Flitsmodus</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="113"/>
+        <location filename="../metadatamodel.cpp" line="123"/>
         <source>35mm focal length</source>
         <translation>35mm focale lengte</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="116"/>
+        <location filename="../metadatamodel.cpp" line="126"/>
         <source>Lens model</source>
         <translation>Lensmodel</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="118"/>
+        <location filename="../metadatamodel.cpp" line="128"/>
         <source>Brightness</source>
         <translation>Helderheid</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="120"/>
+        <location filename="../metadatamodel.cpp" line="130"/>
         <source>Exposure program</source>
         <translation>Belichtingsprogramma</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="122"/>
+        <location filename="../metadatamodel.cpp" line="132"/>
         <source>Saturation</source>
         <translation>Verzadiging</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="124"/>
+        <location filename="../metadatamodel.cpp" line="134"/>
         <source>Sharpness</source>
         <translation>Scherpte</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="126"/>
+        <location filename="../metadatamodel.cpp" line="136"/>
         <source>White balance</source>
         <translation>Witbalans</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="128"/>
+        <location filename="../metadatamodel.cpp" line="138"/>
         <source>Digital zoom</source>
         <translation>Digitale zoom</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="130"/>
+        <location filename="../metadatamodel.cpp" line="140"/>
         <source>EXIF version</source>
         <translation>EXIF-versie</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="133"/>
+        <location filename="../metadatamodel.cpp" line="143"/>
         <source>Latitude reference</source>
         <translation>Breedtegraadverwijzing</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="135"/>
+        <location filename="../metadatamodel.cpp" line="145"/>
         <source>Latitude</source>
         <translation>Breedtegraad</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="137"/>
+        <location filename="../metadatamodel.cpp" line="147"/>
         <source>Longitude reference</source>
         <translation>Lengtegraadverwijzing</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="139"/>
+        <location filename="../metadatamodel.cpp" line="149"/>
         <source>Longitude</source>
         <translation>Lengtegraad</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="141"/>
+        <location filename="../metadatamodel.cpp" line="151"/>
         <source>Altitude reference</source>
         <translation>Hoogteverwijzing</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="143"/>
+        <location filename="../metadatamodel.cpp" line="153"/>
         <source>Altitude</source>
         <translation>Hoogte</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="153"/>
+        <location filename="../metadatamodel.cpp" line="163"/>
         <source>%1 x %2</source>
         <translation>%1 x %2</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="171"/>
+        <location filename="../metadatamodel.cpp" line="181"/>
         <source>%1 : %2</source>
         <translation>%1 : %2</translation>
     </message>

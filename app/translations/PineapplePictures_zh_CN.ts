@@ -168,7 +168,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../graphicsscene.cpp" line="16"/>
+        <location filename="../graphicsscene.cpp" line="48"/>
         <source>Drag image here</source>
         <translation>拖放图片至此</translation>
     </message>
@@ -176,7 +176,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../graphicsview.cpp" line="291"/>
+        <location filename="../graphicsview.cpp" line="329"/>
         <source>File url list is empty</source>
         <translation>文件 URL 列表为空</translation>
     </message>
@@ -192,12 +192,12 @@
         <translation>图像数据无效或暂未支持</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="299"/>
+        <location filename="../graphicsview.cpp" line="337"/>
         <source>Image data is invalid</source>
         <translation>图片数据无效</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="306"/>
+        <location filename="../graphicsview.cpp" line="344"/>
         <source>Not supported mimedata: %1</source>
         <translation>不受支持的 MimeData 格式：%1</translation>
     </message>
@@ -205,79 +205,94 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="173"/>
+        <location filename="../mainwindow.cpp" line="163"/>
         <source>File url list is empty</source>
         <translation>文件 URL 列表为空</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="384"/>
+        <location filename="../mainwindow.cpp" line="374"/>
         <source>&amp;Copy</source>
         <translation>复制(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="50"/>
+        <location filename="../actionmanager.cpp" line="73"/>
         <source>Copy P&amp;ixmap</source>
         <translation>复制位图(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="51"/>
+        <location filename="../actionmanager.cpp" line="74"/>
         <source>Copy &amp;File Path</source>
         <translation>复制文件路径(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="58"/>
+        <location filename="../actionmanager.cpp" line="80"/>
         <source>Properties</source>
         <translation>属性</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="35"/>
-        <location filename="../actionmanager.cpp" line="54"/>
+        <location filename="../actionmanager.cpp" line="76"/>
         <source>Stay on top</source>
         <translation>总在最前</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="38"/>
-        <location filename="../actionmanager.cpp" line="55"/>
+        <location filename="../actionmanager.cpp" line="77"/>
         <source>Protected mode</source>
         <translation>保护模式</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="47"/>
+        <location filename="../actionmanager.cpp" line="65"/>
         <source>Zoom in</source>
         <translation>放大</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="48"/>
+        <location filename="../actionmanager.cpp" line="66"/>
         <source>Zoom out</source>
         <translation>缩小</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="49"/>
+        <location filename="../actionmanager.cpp" line="70"/>
         <source>Flip &amp;Horizontally</source>
         <translation>水平翻转(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="52"/>
+        <location filename="../actionmanager.cpp" line="75"/>
         <source>&amp;Paste</source>
         <translation>粘贴(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="53"/>
+        <location filename="../actionmanager.cpp" line="67"/>
         <source>Toggle Checkerboard</source>
         <translation>切换棋盘格</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="56"/>
+        <location filename="../actionmanager.cpp" line="63"/>
+        <source>Actual size</source>
+        <translation>实际大小</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="64"/>
+        <source>Toggle maximize</source>
+        <translation>最大化窗口</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="68"/>
+        <source>Rotate right</source>
+        <translation>向右旋转</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="78"/>
         <source>Configure...</source>
         <translation>设置...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="57"/>
+        <location filename="../actionmanager.cpp" line="79"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="59"/>
+        <location filename="../actionmanager.cpp" line="81"/>
         <source>Quit</source>
         <translation>退出</translation>
     </message>
@@ -386,186 +401,201 @@
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="70"/>
+        <source>Title</source>
+        <translation>标题</translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="72"/>
+        <source>Subject</source>
+        <translation>主题</translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="74"/>
         <source>Rating</source>
         <translation>分级</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="72"/>
+        <location filename="../metadatamodel.cpp" line="76"/>
+        <source>Tags</source>
+        <translation>标记</translation>
+    </message>
+    <message>
+        <location filename="../metadatamodel.cpp" line="78"/>
         <source>Comments</source>
         <translation>备注</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="75"/>
+        <location filename="../metadatamodel.cpp" line="81"/>
         <source>Authors</source>
         <translation>作者</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="77"/>
+        <location filename="../metadatamodel.cpp" line="83"/>
         <source>Date taken</source>
         <translation>拍摄日期</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="79"/>
+        <location filename="../metadatamodel.cpp" line="89"/>
         <source>Program name</source>
         <translation>程序名称</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="81"/>
+        <location filename="../metadatamodel.cpp" line="91"/>
         <source>Copyright</source>
         <translation>版权</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="84"/>
+        <location filename="../metadatamodel.cpp" line="94"/>
         <source>Horizontal resolution</source>
         <translation>水平分辨率</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="86"/>
+        <location filename="../metadatamodel.cpp" line="96"/>
         <source>Vertical resolution</source>
         <translation>垂直分辨率</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="88"/>
+        <location filename="../metadatamodel.cpp" line="98"/>
         <source>Resolution unit</source>
         <translation>分辨率单位</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="90"/>
+        <location filename="../metadatamodel.cpp" line="100"/>
         <source>Colour representation</source>
         <translation>颜色表示</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="93"/>
+        <location filename="../metadatamodel.cpp" line="103"/>
         <source>Camera maker</source>
         <translation>照相机制造商</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="95"/>
+        <location filename="../metadatamodel.cpp" line="105"/>
         <source>Camera model</source>
         <translation>照相机型号</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="97"/>
+        <location filename="../metadatamodel.cpp" line="107"/>
         <source>F-stop</source>
         <translation>光圈值</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="99"/>
+        <location filename="../metadatamodel.cpp" line="109"/>
         <source>Exposure time</source>
         <translation>曝光时间</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="101"/>
+        <location filename="../metadatamodel.cpp" line="111"/>
         <source>ISO speed</source>
         <translation>ISO 感光度</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="103"/>
+        <location filename="../metadatamodel.cpp" line="113"/>
         <source>Exposure bias</source>
         <translation>曝光补偿</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="105"/>
+        <location filename="../metadatamodel.cpp" line="115"/>
         <source>Focal length</source>
         <translation>焦距</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="107"/>
+        <location filename="../metadatamodel.cpp" line="117"/>
         <source>Max aperture</source>
         <translation>镜头最大光圈</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="109"/>
+        <location filename="../metadatamodel.cpp" line="119"/>
         <source>Metering mode</source>
         <translation>测光模式</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="111"/>
+        <location filename="../metadatamodel.cpp" line="121"/>
         <source>Flash mode</source>
         <translation>闪光灯模式</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="113"/>
+        <location filename="../metadatamodel.cpp" line="123"/>
         <source>35mm focal length</source>
         <translation>换算至 35mm 焦距</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="116"/>
+        <location filename="../metadatamodel.cpp" line="126"/>
         <source>Lens model</source>
         <translation>镜头型号</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="118"/>
+        <location filename="../metadatamodel.cpp" line="128"/>
         <source>Brightness</source>
         <translation>亮度</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="120"/>
+        <location filename="../metadatamodel.cpp" line="130"/>
         <source>Exposure program</source>
         <translation>曝光程序</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="122"/>
+        <location filename="../metadatamodel.cpp" line="132"/>
         <source>Saturation</source>
         <translation>饱和度</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="124"/>
+        <location filename="../metadatamodel.cpp" line="134"/>
         <source>Sharpness</source>
         <translation>清晰度</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="126"/>
+        <location filename="../metadatamodel.cpp" line="136"/>
         <source>White balance</source>
         <translation>白平衡</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="128"/>
+        <location filename="../metadatamodel.cpp" line="138"/>
         <source>Digital zoom</source>
         <translation>数字缩放</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="130"/>
+        <location filename="../metadatamodel.cpp" line="140"/>
         <source>EXIF version</source>
         <translation>EXIF 版本</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="133"/>
+        <location filename="../metadatamodel.cpp" line="143"/>
         <source>Latitude reference</source>
         <translation>纬度基准</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="135"/>
+        <location filename="../metadatamodel.cpp" line="145"/>
         <source>Latitude</source>
         <translation>纬度</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="137"/>
+        <location filename="../metadatamodel.cpp" line="147"/>
         <source>Longitude reference</source>
         <translation>经度基准</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="139"/>
+        <location filename="../metadatamodel.cpp" line="149"/>
         <source>Longitude</source>
         <translation>经度</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="141"/>
+        <location filename="../metadatamodel.cpp" line="151"/>
         <source>Altitude reference</source>
         <translation>海拔基准</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="143"/>
+        <location filename="../metadatamodel.cpp" line="153"/>
         <source>Altitude</source>
         <translation>海拔</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="153"/>
+        <location filename="../metadatamodel.cpp" line="163"/>
         <source>%1 x %2</source>
         <translation>%1 x %2</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="171"/>
+        <location filename="../metadatamodel.cpp" line="181"/>
         <source>%1 : %2</source>
         <translation>%1 : %2</translation>
     </message>
