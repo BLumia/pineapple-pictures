@@ -269,17 +269,17 @@
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
         <source>Actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>Ware grootte</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished">Maximaliseren/Demaximaliseren</translation>
+        <translation>Maximaliseren aan/uit</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>Rotate right</source>
-        <translation type="unfinished"></translation>
+        <translation>Naar rechts draaien</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
@@ -402,12 +402,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="70"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Naam</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="72"/>
         <source>Subject</source>
-        <translation type="unfinished"></translation>
+        <translation>Onderwerp</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="74"/>
@@ -417,7 +417,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="76"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Labels</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="78"/>
