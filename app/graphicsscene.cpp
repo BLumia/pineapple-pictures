@@ -109,6 +109,11 @@ bool GraphicsScene::trySetTransformationMode(Qt::TransformationMode mode, float 
 
 QPixmap GraphicsScene::renderToPixmap()
 {
+    PGraphicsPixmapItem * pixmapItem = qgraphicsitem_cast<PGraphicsPixmapItem *>(m_theThing);
+    if (pixmapItem) {
+        return pixmapItem->pixmap();
+    }
+
     QPixmap pixmap(sceneRect().toRect().size());
     pixmap.fill(Qt::transparent);
     QPainter p(&pixmap);
