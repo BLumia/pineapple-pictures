@@ -411,9 +411,10 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     menu->addSeparator();
 
     menu->addAction(m_am->actionHorizontalFlip);
+#if 0
     menu->addAction(m_am->actionFitInView);
     menu->addAction(m_am->actionFitByWidth);
-
+#endif // 0
     menu->addSeparator();
     menu->addAction(stayOnTopMode);
     menu->addAction(protectedMode);
