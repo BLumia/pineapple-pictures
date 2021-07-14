@@ -269,7 +269,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
         <source>Actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>Faktisk størrelse</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
@@ -279,7 +279,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>Rotate right</source>
-        <translation type="unfinished"></translation>
+        <translation>Roter til høyre</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
@@ -402,12 +402,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="70"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Tittel</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="72"/>
         <source>Subject</source>
-        <translation type="unfinished"></translation>
+        <translation>Emne</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="74"/>
@@ -417,7 +417,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="76"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiketter</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="78"/>

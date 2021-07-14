@@ -152,12 +152,12 @@
     <message>
         <location filename="../aboutdialog.cpp" line="139"/>
         <source>&amp;Help</source>
-        <translation>&amp;උපකාර</translation>
+        <translation>උපකාර</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="140"/>
         <source>&amp;About</source>
-        <translation>&amp;පිළිබඳව</translation>
+        <translation>පිළිබඳව</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="142"/>
