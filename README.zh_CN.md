@@ -6,7 +6,7 @@
 |macOS Build|![macOS CI](https://github.com/BLumia/pineapple-pictures/workflows/macOS%20CI/badge.svg)|
 |Ubuntu 20.04 Build|![Ubuntu 20.04 CI](https://github.com/BLumia/pineapple-pictures/workflows/Ubuntu%2020.04%20CI/badge.svg)|
 
-![Pineapple Pictures - Main Window](https://repository-images.githubusercontent.com/211888654/21fb6300-269f-11ea-8e85-953e5d57da44)
+![Pineapple Pictures - Main Window](https://repository-images.githubusercontent.com/211888654/e8697600-e370-11eb-9b2a-b71e05262954)
 
 ## 简介
 
