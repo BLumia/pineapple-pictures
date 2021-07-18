@@ -269,7 +269,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
         <source>Actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>Фактический размер</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
@@ -402,12 +402,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="70"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Название</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="72"/>
         <source>Subject</source>
-        <translation type="unfinished"></translation>
+        <translation>Тема</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="74"/>
@@ -417,7 +417,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="76"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Теги</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="78"/>
