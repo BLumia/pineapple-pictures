@@ -6,7 +6,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="23"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Tentang</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="26"/>
@@ -41,32 +41,32 @@
     <message>
         <location filename="../aboutdialog.cpp" line="47"/>
         <source>Version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Versi: %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="50"/>
         <source>Copyright (c) 2020 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Hak Cipta (c) 2020 %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="52"/>
         <source>Logo designed by %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Logo didesain oleh %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="54"/>
         <source>Built with Qt %1 (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Dibuat dengan Qt %1 (%2)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="55"/>
         <source>Source code</source>
-        <translation type="unfinished"></translation>
+        <translation>Kode sumber</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="65"/>
         <source>Contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontributor-kontributor</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="67"/>
