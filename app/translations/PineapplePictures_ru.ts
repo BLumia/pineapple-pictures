@@ -274,12 +274,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished">Развернуть окно</translation>
+        <translation>Развернуть окно</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>Rotate right</source>
-        <translation type="unfinished"></translation>
+        <translation>Повернуть вправо</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
