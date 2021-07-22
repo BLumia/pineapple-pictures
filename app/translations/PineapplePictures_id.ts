@@ -16,12 +16,12 @@
     <message>
         <location filename="../aboutdialog.cpp" line="27"/>
         <source>Drag and drop image file onto the window is also supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarik dan lepaskan gambar ke jendela juga didukung.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="28"/>
         <source>None of the operations in this application will alter the pictures on disk.</source>
-        <translation type="unfinished"></translation>
+        <translation>Semua operasi pada aplikasi ini tidak akan mengubah gambar pada diska.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="29"/>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../aboutdialog.cpp" line="36"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation type="unfinished"></translation>
+        <translation>Buat jendela tetap di atas semua jendela lainnya.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="39"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hindari penutupan jendela secara tidak sengaja (contoh dengan mengklik jendela dua kali)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="47"/>
@@ -71,22 +71,22 @@
     <message>
         <location filename="../aboutdialog.cpp" line="67"/>
         <source>List of contributors on GitHub</source>
-        <translation type="unfinished"></translation>
+        <translation>Daftar kontributor di GitHub</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="68"/>
         <source>Thanks to all people who contributed to this project.</source>
-        <translation type="unfinished"></translation>
+        <translation>Terima kasih kepada semua orang yang telah berkontribusi ke proyek ini.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="72"/>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Penerjemah</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="73"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
-        <translation type="unfinished"></translation>
+        <translation>Saya ingin berterima kasih orang-orang berikut yang secara sukarela menerjemahkan aplikasi ini.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="117"/>
@@ -112,32 +112,32 @@
     <message>
         <location filename="../aboutdialog.cpp" line="81"/>
         <source>%1 is released under the MIT License.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 diluncurkan di bawah lisensi MIT.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="82"/>
         <source>This license grants people a number of freedoms:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisensi ini memberikan orang-orang beberapa kebebasan:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="83"/>
         <source>You are free to use %1, for any purpose</source>
-        <translation type="unfinished"></translation>
+        <translation>Anda bebas menggunakan %1, untuk tujuan apapun</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="84"/>
         <source>You are free to distribute %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Anda bebas mendistribusikan %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="85"/>
         <source>You can study how %1 works and change it</source>
-        <translation type="unfinished"></translation>
+        <translation>Anda dapat mempelajari bagaimana cara %1 bekerja dan mengubahnya</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="86"/>
         <source>You can distribute changed versions of %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Anda dapat mendistribusikan versi %1 yang telah diubah</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="88"/>
@@ -152,17 +152,17 @@
     <message>
         <location filename="../aboutdialog.cpp" line="139"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dukungan</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="140"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>Tentan&amp;g</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="142"/>
         <source>&amp;License</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lisensi</translation>
     </message>
 </context>
 <context>
@@ -170,7 +170,7 @@
     <message>
         <location filename="../graphicsscene.cpp" line="48"/>
         <source>Drag image here</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarik gambar ke sini</translation>
     </message>
 </context>
 <context>
@@ -212,54 +212,54 @@
     <message>
         <location filename="../mainwindow.cpp" line="374"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Salin</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="73"/>
         <source>Copy P&amp;ixmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Salin P&amp;ixmap</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
         <source>Copy &amp;File Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Salin &amp;Path Berkas</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
         <source>Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Properti</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="35"/>
         <location filename="../actionmanager.cpp" line="76"/>
         <source>Stay on top</source>
-        <translation type="unfinished"></translation>
+        <translation>Tetap di atas</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="38"/>
         <location filename="../actionmanager.cpp" line="77"/>
         <source>Protected mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode Terlindungi</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="65"/>
         <source>Zoom in</source>
-        <translation type="unfinished"></translation>
+        <translation>Perbesar</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="66"/>
         <source>Zoom out</source>
-        <translation type="unfinished"></translation>
+        <translation>Perkecil</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Putar Secara &amp;Horizontal</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tempel</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="67"/>
@@ -269,7 +269,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
         <source>Actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukuran asli</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
@@ -279,22 +279,22 @@
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>Rotate right</source>
-        <translation type="unfinished"></translation>
+        <translation>Putar ke kanan</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Configure...</source>
-        <translation type="unfinished"></translation>
+        <translation>Konfigurasi...</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Dukungan</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="81"/>
         <source>Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>Keluar</translation>
     </message>
 </context>
 <context>
@@ -302,7 +302,7 @@
     <message>
         <location filename="../metadatadialog.cpp" line="80"/>
         <source>Image Metadata</source>
-        <translation type="unfinished"></translation>
+        <translation>Metadata Gambar</translation>
     </message>
 </context>
 <context>
@@ -317,30 +317,30 @@
         <location filename="../metadatamodel.cpp" line="37"/>
         <source>Image</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Gambar</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="41"/>
         <source>File</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Berkas</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="38"/>
         <source>Camera</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Kamera</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="28"/>
         <source>%1 File</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Berkas</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="35"/>
         <source>Description</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Keterangan</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="39"/>
@@ -352,12 +352,12 @@
         <location filename="../metadatamodel.cpp" line="40"/>
         <source>GPS</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>GPS</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="44"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensi</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="46"/>
@@ -372,42 +372,42 @@
     <message>
         <location filename="../metadatamodel.cpp" line="53"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nama</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="55"/>
         <source>Item type</source>
-        <translation type="unfinished"></translation>
+        <translation>Jenis item</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="57"/>
         <source>Folder path</source>
-        <translation type="unfinished"></translation>
+        <translation>Path folder</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="59"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukuran</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="61"/>
         <source>Date created</source>
-        <translation type="unfinished"></translation>
+        <translation>Tanggal dibuat</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="63"/>
         <source>Date modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Tanggal dimodifikasi</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="70"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Judul</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="72"/>
         <source>Subject</source>
-        <translation type="unfinished"></translation>
+        <translation>Subyek</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="74"/>
@@ -417,42 +417,42 @@
     <message>
         <location filename="../metadatamodel.cpp" line="76"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Tag</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="78"/>
         <source>Comments</source>
-        <translation type="unfinished"></translation>
+        <translation>Komentar</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="81"/>
         <source>Authors</source>
-        <translation type="unfinished"></translation>
+        <translation>Penulis</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="83"/>
         <source>Date taken</source>
-        <translation type="unfinished"></translation>
+        <translation>Tanggal diambil</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="89"/>
         <source>Program name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nama program</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="91"/>
         <source>Copyright</source>
-        <translation type="unfinished"></translation>
+        <translation>Hak cipta</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="94"/>
         <source>Horizontal resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>Resolusi horizontal</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="96"/>
         <source>Vertical resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>Resolusi vertikal</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="98"/>
@@ -462,17 +462,17 @@
     <message>
         <location filename="../metadatamodel.cpp" line="100"/>
         <source>Colour representation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Representasi warna</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="103"/>
         <source>Camera maker</source>
-        <translation type="unfinished"></translation>
+        <translation>Pembuat kamera</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="105"/>
         <source>Camera model</source>
-        <translation type="unfinished"></translation>
+        <translation>Model kamera</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="107"/>
@@ -522,12 +522,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="126"/>
         <source>Lens model</source>
-        <translation type="unfinished"></translation>
+        <translation>Model lensa</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="128"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Kecerahan</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="130"/>
@@ -542,7 +542,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="134"/>
         <source>Sharpness</source>
-        <translation type="unfinished"></translation>
+        <translation>Ketajaman</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="136"/>
@@ -557,7 +557,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="140"/>
         <source>EXIF version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versi EXIF</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="143"/>
@@ -602,12 +602,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="306"/>
         <source>Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Properti</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="306"/>
         <source>Value</source>
-        <translation type="unfinished"></translation>
+        <translation>Nilai</translation>
     </message>
 </context>
 <context>
@@ -615,17 +615,17 @@
     <message>
         <location filename="../settingsdialog.cpp" line="16"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Pengaturan</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="21"/>
         <source>Do nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>Jangan lakukan apapun</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="22"/>
         <source>Close the window</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutup jendela</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="23"/>
@@ -635,12 +635,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="27"/>
         <source>Zoom in and out</source>
-        <translation type="unfinished"></translation>
+        <translation>Perbesar dan perkecil</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="28"/>
         <source>View next or previous item</source>
-        <translation type="unfinished"></translation>
+        <translation>Lihat item berikutnya atau sebelumnya</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="41"/>
@@ -663,12 +663,12 @@
     <message>
         <location filename="../main.cpp" line="31"/>
         <source>Pineapple Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Pineapple Pictures</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="35"/>
         <source>File list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Daftar berkas.</translation>
     </message>
 </context>
 </TS>
