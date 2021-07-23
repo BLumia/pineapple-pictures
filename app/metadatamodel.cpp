@@ -40,10 +40,12 @@ void MetadataModel::setFile(const QString &imageFilePath)
     appendSection(QStringLiteral("GPS"), tr("GPS", "Section name."));
     appendSection(QStringLiteral("File"), tr("File", "Section name."));
 
-    appendProperty(QStringLiteral("Image"), QStringLiteral("Image.Dimensions"),
-                   tr("Dimensions"), imageDimensionsString);
-    appendProperty(QStringLiteral("Image"), QStringLiteral("Image.SizeRatio"),
-                   tr("Aspect ratio"), imageRatioString);
+    if (imgReader.supportsOption(QImageIOHandler::Size)) {
+        appendProperty(QStringLiteral("Image"), QStringLiteral("Image.Dimensions"),
+                       tr("Dimensions"), imageDimensionsString);
+        appendProperty(QStringLiteral("Image"), QStringLiteral("Image.SizeRatio"),
+                       tr("Aspect ratio"), imageRatioString);
+    }
     if (imgReader.supportsAnimation() && imgReader.imageCount() > 1) {
         appendProperty(QStringLiteral("Image"), QStringLiteral("Image.FrameCount"),
                        tr("Frame count"), QString::number(imgReader.imageCount()));
