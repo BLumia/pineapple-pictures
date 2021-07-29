@@ -16,7 +16,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="27"/>
         <source>Drag and drop image file onto the window is also supported.</source>
-        <translation>Перетаскивание файла изображения в окно также поддерживается.</translation>
+        <translation>Также поддерживается перетаскивание файла изображения в окно.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="28"/>
@@ -26,17 +26,17 @@
     <message>
         <location filename="../aboutdialog.cpp" line="29"/>
         <source>Context menu option explanation:</source>
-        <translation>Объяснение пунктов контекстного меню:</translation>
+        <translation>Пояснение к параметрам контекстного меню:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="36"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation>Сделать окно поверх всех остальных окон.</translation>
+        <translation>Расположить окно поверх всех остальных окон.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="39"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation>Избежать случайного закрытия окна (например, двойным щелчком по окну).</translation>
+        <translation>Избегать случайного закрытия окна. (например, двойным щелчком по окну)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="47"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="68"/>
         <source>Thanks to all people who contributed to this project.</source>
-        <translation>Спасибо всем, кто внёс свой вклад в этот проект.</translation>
+        <translation>Спасибо всем, кто внес свой вклад в этот проект.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="72"/>
@@ -86,13 +86,13 @@
     <message>
         <location filename="../aboutdialog.cpp" line="73"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
-        <translation>Я хотел бы поблагодарить следующих людей, которые вызвались перевести это приложение.</translation>
+        <translation>Я бы хотел поблагодарить следующих людей, которые приняли участие в переводе этого приложения.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="117"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation>%1 собран на следующих бесплатных библиотеках программного обеспечения:</translation>
+        <translation>%1 создан на следующих бесплатных библиотеках программного обеспечения:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="141"/>
@@ -142,7 +142,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="88"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
-        <translation>Лицензия MIT гарантирует вам эту свободу. Никому и никогда не разрешается забирать её.</translation>
+        <translation>Лицензия MIT гарантирует вам эту свободу. Никому и никогда не разрешается забирать ее.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="116"/>
@@ -183,18 +183,18 @@
     <message>
         <location filename="../graphicsview.cpp" line="52"/>
         <source>File is not a valid image</source>
-        <translation>Файл не является действительным изображением</translation>
+        <translation>Файл не является допустимым изображением</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="57"/>
         <location filename="../graphicsview.cpp" line="62"/>
         <source>Image data is invalid or currently unsupported</source>
-        <translation>Данные изображения недействительны или в настоящее время не поддерживаются</translation>
+        <translation>Параметры изображения недействительны или не поддерживаются в настоящее время</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="337"/>
         <source>Image data is invalid</source>
-        <translation>Данные изображения недействительны</translation>
+        <translation>Параметры изображения недействительны</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="344"/>
@@ -212,17 +212,17 @@
     <message>
         <location filename="../mainwindow.cpp" line="374"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Копировать</translation>
+        <translation>&amp;Скопировать</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="73"/>
         <source>Copy P&amp;ixmap</source>
-        <translation>Копировать P&amp;ixmap</translation>
+        <translation>Скопировать P&amp;ixmap</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
         <source>Copy &amp;File Path</source>
-        <translation>Копировать &amp;путь к файлу</translation>
+        <translation>Скопировать &amp;путь к файлу</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
@@ -239,7 +239,7 @@
         <location filename="../aboutdialog.cpp" line="38"/>
         <location filename="../actionmanager.cpp" line="77"/>
         <source>Protected mode</source>
-        <translation>Защищённый режим</translation>
+        <translation>Защищенный режим</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="65"/>
@@ -264,7 +264,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="67"/>
         <source>Toggle Checkerboard</source>
-        <translation>Переключить шахматную доску</translation>
+        <translation>Переключить фоновый рисунок</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
@@ -274,7 +274,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
         <source>Toggle maximize</source>
-        <translation>Развернуть окно</translation>
+        <translation>Переключить окно</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
@@ -284,7 +284,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Configure...</source>
-        <translation>Настроить...</translation>
+        <translation>Параметры...</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
@@ -402,7 +402,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="70"/>
         <source>Title</source>
-        <translation>Название</translation>
+        <translation>Заголовок</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="72"/>
@@ -432,7 +432,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="83"/>
         <source>Date taken</source>
-        <translation>Дата захвата</translation>
+        <translation>Дата съемки</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="89"/>
@@ -447,12 +447,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="94"/>
         <source>Horizontal resolution</source>
-        <translation>Горизонтальное разрешение</translation>
+        <translation>Разрешение по горизонтали</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="96"/>
         <source>Vertical resolution</source>
-        <translation>Вертикальное разрешение</translation>
+        <translation>Разрешение по вертикали</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="98"/>
@@ -462,7 +462,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="100"/>
         <source>Colour representation</source>
-        <translation>Цветовое представление</translation>
+        <translation>Цветопередача</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="103"/>
@@ -477,17 +477,17 @@
     <message>
         <location filename="../metadatamodel.cpp" line="107"/>
         <source>F-stop</source>
-        <translation>F-stop</translation>
+        <translation>Величина диафрагмы</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="109"/>
         <source>Exposure time</source>
-        <translation>Экспозиция</translation>
+        <translation>Время экспозиции</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="111"/>
         <source>ISO speed</source>
-        <translation>ISO</translation>
+        <translation>Чувствительность ISO</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="113"/>
@@ -507,7 +507,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="119"/>
         <source>Metering mode</source>
-        <translation>Режим замера</translation>
+        <translation>Режим измерения</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="121"/>
@@ -542,7 +542,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="134"/>
         <source>Sharpness</source>
-        <translation>Чёткость</translation>
+        <translation>Четкость</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="136"/>
@@ -552,7 +552,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="138"/>
         <source>Digital zoom</source>
-        <translation>Цифровой зум</translation>
+        <translation>Цифровое увеличение</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="140"/>
@@ -615,7 +615,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="16"/>
         <source>Settings</source>
-        <translation>Настройки</translation>
+        <translation>Параметры</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="21"/>
@@ -630,12 +630,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="23"/>
         <source>Toggle maximize</source>
-        <translation>Развернуть окно</translation>
+        <translation>Переключить окно</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="27"/>
         <source>Zoom in and out</source>
-        <translation>Увеличение или уменьшение изображения</translation>
+        <translation>Увеличение и уменьшение масштаба</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="28"/>
