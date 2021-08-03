@@ -1,168 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru">
+<TS version="2.1" language="id">
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../aboutdialog.cpp" line="23"/>
         <source>About</source>
-        <translation>О программе</translation>
+        <translation>Tentang</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="26"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation>Запустите приложение, указав путь к файлу изображения в качестве аргумента для загрузки файла.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="27"/>
         <source>Drag and drop image file onto the window is also supported.</source>
-        <translation>Также поддерживается перетаскивание файла изображения в окно.</translation>
+        <translation>Tarik dan lepaskan gambar ke jendela juga didukung.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="28"/>
         <source>None of the operations in this application will alter the pictures on disk.</source>
-        <translation>Ни одна из операций в этом приложении не изменит изображения на диске.</translation>
+        <translation>Semua operasi pada aplikasi ini tidak akan mengubah gambar pada diska.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="29"/>
         <source>Context menu option explanation:</source>
-        <translation>Пояснение к параметрам контекстного меню:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="36"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation>Расположить окно поверх всех остальных окон.</translation>
+        <translation>Buat jendela tetap di atas semua jendela lainnya.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="39"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation>Избегать случайного закрытия окна. (например, двойным щелчком по окну)</translation>
+        <translation>Hindari penutupan jendela secara tidak sengaja (contoh dengan mengklik jendela dua kali)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="47"/>
         <source>Version: %1</source>
-        <translation>Версия: %1</translation>
+        <translation>Versi: %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="50"/>
         <source>Copyright (c) 2020 %1</source>
-        <translation>Авторское право (c) 2020 %1</translation>
+        <translation>Hak Cipta (c) 2020 %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="52"/>
         <source>Logo designed by %1</source>
-        <translation>Логотип разработан %1</translation>
+        <translation>Logo didesain oleh %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="54"/>
         <source>Built with Qt %1 (%2)</source>
-        <translation>Создано с использованием Qt %1 (%2)</translation>
+        <translation>Dibuat dengan Qt %1 (%2)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="55"/>
         <source>Source code</source>
-        <translation>Исходный код</translation>
+        <translation>Kode sumber</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="65"/>
         <source>Contributors</source>
-        <translation>Участники</translation>
+        <translation>Kontributor-kontributor</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="67"/>
         <source>List of contributors on GitHub</source>
-        <translation>Список участников на GitHub</translation>
+        <translation>Daftar kontributor di GitHub</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="68"/>
         <source>Thanks to all people who contributed to this project.</source>
-        <translation>Спасибо всем, кто внес свой вклад в этот проект.</translation>
+        <translation>Terima kasih kepada semua orang yang telah berkontribusi ke proyek ini.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="72"/>
         <source>Translators</source>
-        <translation>Переводчики</translation>
+        <translation>Penerjemah</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="73"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
-        <translation>Я бы хотел поблагодарить следующих людей, которые приняли участие в переводе этого приложения.</translation>
+        <translation>Saya ingin berterima kasih orang-orang berikut yang secara sukarela menerjemahkan aplikasi ini.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="117"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation>%1 создан на следующих бесплатных библиотеках программного обеспечения:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="141"/>
         <source>&amp;Special Thanks</source>
-        <translation>&amp;Особая благодарность</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="143"/>
         <source>&amp;Third-party Libraries</source>
-        <translation>&amp;Сторонние библиотеки</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="79"/>
         <source>Your Rights</source>
-        <translation>Ваши Права</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="81"/>
         <source>%1 is released under the MIT License.</source>
-        <translation>%1 выпущен под лицензией MIT.</translation>
+        <translation>%1 diluncurkan di bawah lisensi MIT.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="82"/>
         <source>This license grants people a number of freedoms:</source>
-        <translation>Эта лицензия дает людям ряд свобод:</translation>
+        <translation>Lisensi ini memberikan orang-orang beberapa kebebasan:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="83"/>
         <source>You are free to use %1, for any purpose</source>
-        <translation>Вы можете свободно использовать %1 для любых целей</translation>
+        <translation>Anda bebas menggunakan %1, untuk tujuan apapun</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="84"/>
         <source>You are free to distribute %1</source>
-        <translation>Вы можете свободно распространять %1</translation>
+        <translation>Anda bebas mendistribusikan %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="85"/>
         <source>You can study how %1 works and change it</source>
-        <translation>Вы можете изучать, как работает %1, и изменять его</translation>
+        <translation>Anda dapat mempelajari bagaimana cara %1 bekerja dan mengubahnya</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="86"/>
         <source>You can distribute changed versions of %1</source>
-        <translation>Вы можете распространять измененные версии %1</translation>
+        <translation>Anda dapat mendistribusikan versi %1 yang telah diubah</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="88"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
-        <translation>Лицензия MIT гарантирует вам эту свободу. Никому и никогда не разрешается забирать ее.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="116"/>
         <source>Third-party Libraries used by %1</source>
-        <translation>Сторонние библиотеки, используемые %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="139"/>
         <source>&amp;Help</source>
-        <translation>&amp;Помощь</translation>
+        <translation>&amp;Dukungan</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="140"/>
         <source>&amp;About</source>
-        <translation>&amp;О программе</translation>
+        <translation>Tentan&amp;g</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="142"/>
         <source>&amp;License</source>
-        <translation>&amp;Лицензия</translation>
+        <translation>&amp;Lisensi</translation>
     </message>
 </context>
 <context>
@@ -170,7 +170,7 @@
     <message>
         <location filename="../graphicsscene.cpp" line="48"/>
         <source>Drag image here</source>
-        <translation>Перетащите изображение сюда</translation>
+        <translation>Tarik gambar ke sini</translation>
     </message>
 </context>
 <context>
@@ -178,28 +178,28 @@
     <message>
         <location filename="../graphicsview.cpp" line="329"/>
         <source>File url list is empty</source>
-        <translation>Список URL-адресов файлов пуст</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="52"/>
         <source>File is not a valid image</source>
-        <translation>Файл не является допустимым изображением</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="57"/>
         <location filename="../graphicsview.cpp" line="62"/>
         <source>Image data is invalid or currently unsupported</source>
-        <translation>Параметры изображения недействительны или не поддерживаются в настоящее время</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="337"/>
         <source>Image data is invalid</source>
-        <translation>Параметры изображения недействительны</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="344"/>
         <source>Not supported mimedata: %1</source>
-        <translation>Неподдерживаемые mimedata: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -207,94 +207,94 @@
     <message>
         <location filename="../mainwindow.cpp" line="163"/>
         <source>File url list is empty</source>
-        <translation>Список URL-адресов файлов пуст</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="374"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Скопировать</translation>
+        <translation>&amp;Salin</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="73"/>
         <source>Copy P&amp;ixmap</source>
-        <translation>Скопировать P&amp;ixmap</translation>
+        <translation>Salin P&amp;ixmap</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
         <source>Copy &amp;File Path</source>
-        <translation>Скопировать &amp;путь к файлу</translation>
+        <translation>Salin &amp;Path Berkas</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
         <source>Properties</source>
-        <translation>Свойства</translation>
+        <translation>Properti</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="35"/>
         <location filename="../actionmanager.cpp" line="76"/>
         <source>Stay on top</source>
-        <translation>Поверх всех окон</translation>
+        <translation>Tetap di atas</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="38"/>
         <location filename="../actionmanager.cpp" line="77"/>
         <source>Protected mode</source>
-        <translation>Защищенный режим</translation>
+        <translation>Mode Terlindungi</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="65"/>
         <source>Zoom in</source>
-        <translation>Увеличить</translation>
+        <translation>Perbesar</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="66"/>
         <source>Zoom out</source>
-        <translation>Уменьшить</translation>
+        <translation>Perkecil</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>Отразить по &amp;горизонтали</translation>
+        <translation>Putar Secara &amp;Horizontal</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
         <source>&amp;Paste</source>
-        <translation>&amp;Вставить</translation>
+        <translation>&amp;Tempel</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="67"/>
         <source>Toggle Checkerboard</source>
-        <translation>Переключить фоновый рисунок</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
         <source>Actual size</source>
-        <translation>Фактический размер</translation>
+        <translation>Ukuran asli</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
         <source>Toggle maximize</source>
-        <translation>Переключить окно</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>Rotate right</source>
-        <translation>Повернуть вправо</translation>
+        <translation>Putar ke kanan</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Configure...</source>
-        <translation>Параметры...</translation>
+        <translation>Konfigurasi...</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
         <source>Help</source>
-        <translation>Помощь</translation>
+        <translation>Dukungan</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="81"/>
         <source>Quit</source>
-        <translation>Выход</translation>
+        <translation>Keluar</translation>
     </message>
 </context>
 <context>
@@ -302,7 +302,7 @@
     <message>
         <location filename="../metadatadialog.cpp" line="80"/>
         <source>Image Metadata</source>
-        <translation>Метаданные изображения</translation>
+        <translation>Metadata Gambar</translation>
     </message>
 </context>
 <context>
@@ -311,42 +311,42 @@
         <location filename="../metadatamodel.cpp" line="36"/>
         <source>Origin</source>
         <comment>Section name.</comment>
-        <translation>Происхождение</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="37"/>
         <source>Image</source>
         <comment>Section name.</comment>
-        <translation>Изображение</translation>
+        <translation>Gambar</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="41"/>
         <source>File</source>
         <comment>Section name.</comment>
-        <translation>Файл</translation>
+        <translation>Berkas</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="38"/>
         <source>Camera</source>
         <comment>Section name.</comment>
-        <translation>Камера</translation>
+        <translation>Kamera</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="28"/>
         <source>%1 File</source>
-        <translation>%1 Файл</translation>
+        <translation>%1 Berkas</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="35"/>
         <source>Description</source>
         <comment>Section name.</comment>
-        <translation>Описание</translation>
+        <translation>Keterangan</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="39"/>
         <source>Advanced photo</source>
         <comment>Section name.</comment>
-        <translation>Расширенное фото</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="40"/>
@@ -357,257 +357,257 @@
     <message>
         <location filename="../metadatamodel.cpp" line="44"/>
         <source>Dimensions</source>
-        <translation>Размеры</translation>
+        <translation>Dimensi</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="46"/>
         <source>Aspect ratio</source>
-        <translation>Соотношение сторон</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="49"/>
         <source>Frame count</source>
-        <translation>Количество кадров</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="53"/>
         <source>Name</source>
-        <translation>Название</translation>
+        <translation>Nama</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="55"/>
         <source>Item type</source>
-        <translation>Тип элемента</translation>
+        <translation>Jenis item</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="57"/>
         <source>Folder path</source>
-        <translation>Путь к папке</translation>
+        <translation>Path folder</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="59"/>
         <source>Size</source>
-        <translation>Размер</translation>
+        <translation>Ukuran</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="61"/>
         <source>Date created</source>
-        <translation>Дата создания</translation>
+        <translation>Tanggal dibuat</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="63"/>
         <source>Date modified</source>
-        <translation>Дата изменения</translation>
+        <translation>Tanggal dimodifikasi</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="70"/>
         <source>Title</source>
-        <translation>Заголовок</translation>
+        <translation>Judul</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="72"/>
         <source>Subject</source>
-        <translation>Тема</translation>
+        <translation>Subyek</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="74"/>
         <source>Rating</source>
-        <translation>Рейтинг</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="76"/>
         <source>Tags</source>
-        <translation>Теги</translation>
+        <translation>Tag</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="78"/>
         <source>Comments</source>
-        <translation>Комментарии</translation>
+        <translation>Komentar</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="81"/>
         <source>Authors</source>
-        <translation>Авторы</translation>
+        <translation>Penulis</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="83"/>
         <source>Date taken</source>
-        <translation>Дата съемки</translation>
+        <translation>Tanggal diambil</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="89"/>
         <source>Program name</source>
-        <translation>Название программы</translation>
+        <translation>Nama program</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="91"/>
         <source>Copyright</source>
-        <translation>Авторские права</translation>
+        <translation>Hak cipta</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="94"/>
         <source>Horizontal resolution</source>
-        <translation>Разрешение по горизонтали</translation>
+        <translation>Resolusi horizontal</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="96"/>
         <source>Vertical resolution</source>
-        <translation>Разрешение по вертикали</translation>
+        <translation>Resolusi vertikal</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="98"/>
         <source>Resolution unit</source>
-        <translation>Единица разрешения</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="100"/>
         <source>Colour representation</source>
-        <translation>Цветопередача</translation>
+        <translation type="unfinished">Representasi warna</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="103"/>
         <source>Camera maker</source>
-        <translation>Производитель камеры</translation>
+        <translation>Pembuat kamera</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="105"/>
         <source>Camera model</source>
-        <translation>Модель камеры</translation>
+        <translation>Model kamera</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="107"/>
         <source>F-stop</source>
-        <translation>Величина диафрагмы</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="109"/>
         <source>Exposure time</source>
-        <translation>Время экспозиции</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="111"/>
         <source>ISO speed</source>
-        <translation>Чувствительность ISO</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="113"/>
         <source>Exposure bias</source>
-        <translation>Смещение экспозиции</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="115"/>
         <source>Focal length</source>
-        <translation>Фокусное расстояние</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="117"/>
         <source>Max aperture</source>
-        <translation>Максимальная апертура</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="119"/>
         <source>Metering mode</source>
-        <translation>Режим измерения</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="121"/>
         <source>Flash mode</source>
-        <translation>Режим вспышки</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="123"/>
         <source>35mm focal length</source>
-        <translation>Фокусное расстояние 35 мм</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="126"/>
         <source>Lens model</source>
-        <translation>Модель объектива</translation>
+        <translation>Model lensa</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="128"/>
         <source>Brightness</source>
-        <translation>Яркость</translation>
+        <translation>Kecerahan</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="130"/>
         <source>Exposure program</source>
-        <translation>Программа экспозиции</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="132"/>
         <source>Saturation</source>
-        <translation>Насыщенность</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="134"/>
         <source>Sharpness</source>
-        <translation>Четкость</translation>
+        <translation>Ketajaman</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="136"/>
         <source>White balance</source>
-        <translation>Баланс белого</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="138"/>
         <source>Digital zoom</source>
-        <translation>Цифровое увеличение</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="140"/>
         <source>EXIF version</source>
-        <translation>Версия EXIF</translation>
+        <translation>Versi EXIF</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="143"/>
         <source>Latitude reference</source>
-        <translation>Ссылка на широту</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="145"/>
         <source>Latitude</source>
-        <translation>Широта</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="147"/>
         <source>Longitude reference</source>
-        <translation>Ссылка на долготу</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="149"/>
         <source>Longitude</source>
-        <translation>Долгота</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="151"/>
         <source>Altitude reference</source>
-        <translation>Ссылка на высоту</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="153"/>
         <source>Altitude</source>
-        <translation>Высота</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="163"/>
         <source>%1 x %2</source>
-        <translation>%1 x %2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="181"/>
         <source>%1 : %2</source>
-        <translation>%1 : %2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="306"/>
         <source>Property</source>
-        <translation>Свойство</translation>
+        <translation>Properti</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="306"/>
         <source>Value</source>
-        <translation>Значение</translation>
+        <translation>Nilai</translation>
     </message>
 </context>
 <context>
@@ -615,47 +615,47 @@
     <message>
         <location filename="../settingsdialog.cpp" line="16"/>
         <source>Settings</source>
-        <translation>Параметры</translation>
+        <translation>Pengaturan</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="21"/>
         <source>Do nothing</source>
-        <translation>Ничего не делать</translation>
+        <translation>Jangan lakukan apapun</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="22"/>
         <source>Close the window</source>
-        <translation>Закрыть окно</translation>
+        <translation>Tutup jendela</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="23"/>
         <source>Toggle maximize</source>
-        <translation>Переключить окно</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="27"/>
         <source>Zoom in and out</source>
-        <translation>Увеличение и уменьшение масштаба</translation>
+        <translation>Perbesar dan perkecil</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="28"/>
         <source>View next or previous item</source>
-        <translation>Следующее или предыдущее изображение</translation>
+        <translation>Lihat item berikutnya atau sebelumnya</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="41"/>
         <source>Stay on top when start-up</source>
-        <translation>Поверх всех окон при запуске</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="42"/>
         <source>Double-click behavior</source>
-        <translation>Действие при двойном щелчке</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="43"/>
         <source>Mouse wheel behavior</source>
-        <translation>Действие колеса мыши</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -668,7 +668,7 @@
     <message>
         <location filename="../main.cpp" line="35"/>
         <source>File list.</source>
-        <translation>Список файлов.</translation>
+        <translation>Daftar berkas.</translation>
     </message>
 </context>
 </TS>
