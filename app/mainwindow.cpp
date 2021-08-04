@@ -535,6 +535,7 @@ QSize MainWindow::sizeHint() const
 void MainWindow::on_actionActualSize_triggered()
 {
     m_graphicsView->resetScale();
+    m_graphicsView->setEnableAutoFitInView(false);
 }
 
 void MainWindow::on_actionToggleMaximize_triggered()
