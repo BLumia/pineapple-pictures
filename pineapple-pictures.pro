@@ -62,7 +62,8 @@ TRANSLATIONS = \
     app/translations/PineapplePictures_nb_NO.ts \
     app/translations/PineapplePictures_nl.ts \
     app/translations/PineapplePictures_ru.ts \
-    app/translations/PineapplePictures_si.ts
+    app/translations/PineapplePictures_si.ts \
+    app/translations/PineapplePictures_id.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
