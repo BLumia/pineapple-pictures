@@ -49,7 +49,7 @@ build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
 # install AOM for libavif AV1 decoding support...
   - cd 3rdparty
-  - git clone -b v2.0.1 --depth 1 https://aomedia.googlesource.com/aom
+  - git clone -b v3.1.2 --depth 1 https://aomedia.googlesource.com/aom
   - cd aom
   - mkdir build.libavif
   - cd build.libavif
@@ -59,9 +59,9 @@ build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
 # install libavif for avif format support of KImageFormats
   - cd %LIBAVIF%
-  - curl -fsSL -o libavif-v0_8_4.zip https://github.com/AOMediaCodec/libavif/archive/v0.8.4.zip
-  - 7z x libavif-v0_8_4.zip -y
-  - cd libavif-0.8.4
+  - curl -fsSL -o libavif-v0_9_0.zip https://github.com/AOMediaCodec/libavif/archive/v0.9.0.zip
+  - 7z x libavif-v0_9_0.zip -y
+  - cd libavif-0.9.0
   - mkdir build
   - cd build
   - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DAVIF_CODEC_AOM=ON
@@ -81,17 +81,17 @@ build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
 # build libexpat for libexiv2
   - cd %LIBEXPAT%
-  - curl -fsSL -o R_2_2_10.zip https://github.com/libexpat/libexpat/archive/R_2_2_10.zip
-  - 7z x R_2_2_10.zip -y
-  - cd libexpat-R_2_2_10/expat/
+  - curl -fsSL -o R_2_4_1.zip https://github.com/libexpat/libexpat/archive/R_2_4_1.zip
+  - 7z x R_2_4_1.zip -y
+  - cd libexpat-R_2_4_1/expat/
   - cmake -G "Ninja" . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXPAT_BUILD_EXAMPLES=OFF -DEXPAT_BUILD_TESTS=OFF -DEXPAT_BUILD_TOOLS=OFF
   - cmake --build . --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
 # build libexiv2
   - cd %LIBEXIV2%
-  - curl -fsSL -o v0.27.3.zip https://github.com/Exiv2/exiv2/archive/v0.27.3.zip
-  - 7z x v0.27.3.zip -y
-  - cd exiv2-0.27.3
+  - curl -fsSL -o v0.27.4.zip https://github.com/Exiv2/exiv2/archive/v0.27.4.zip
+  - 7z x v0.27.4.zip -y
+  - cd exiv2-0.27.4
   - cmake -G "Ninja" . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_ROOT% -DEXIV2_BUILD_SAMPLES=OFF -DEXIV2_ENABLE_WIN_UNICODE=ON
   - cmake --build . --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
@@ -128,9 +128,9 @@ build_script:
   - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\aom\LICENSE License.aom.txt
   - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\karchive\LICENSES\LGPL-2.0-or-later.txt License.KArchive.txt
   - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\kimageformats\LICENSES\LGPL-2.1-or-later.txt License.kimageformats.txt
-  - copy %LIBEXPAT%\libexpat-R_2_2_10\expat\COPYING License.expat.txt
-  - copy %LIBAVIF%\libavif-0.8.4\LICENSE License.libavif.txt
-  - copy %LIBEXIV2%\exiv2-0.27.3\COPYING License.exiv2.txt
+  - copy %LIBEXPAT%\libexpat-R_2_4_1\expat\COPYING License.expat.txt
+  - copy %LIBAVIF%\libavif-0.9.0\LICENSE License.libavif.txt
+  - copy %LIBEXIV2%\exiv2-0.27.4\COPYING License.exiv2.txt
 # TODO: Qt, zlib
   - cd ..
 # for debug..
