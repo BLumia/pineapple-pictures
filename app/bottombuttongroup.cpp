@@ -25,6 +25,9 @@ BottomButtonGroup::BottomButtonGroup(const std::vector<QAction *> &actionList, Q
                         "}"
                         "QToolButton {"
                         "background:transparent;"
+                        "}"
+                        "QToolButton:!focus {"
+                        "border-style: none;"
                         "}");
 
     auto newActionBtn = [this](QAction * action) -> QToolButton * {
