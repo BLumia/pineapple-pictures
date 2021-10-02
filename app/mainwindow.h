@@ -7,6 +7,12 @@
 #include <QPropertyAnimation>
 #include <QPushButton>
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    typedef QEnterEvent QT_ENTER_EVENT;
+#else
+    typedef QEvent QT_ENTER_EVENT;
+#endif // QT_VERSION_CHECK(6, 0, 0)
+
 QT_BEGIN_NAMESPACE
 class QGraphicsOpacityEffect;
 class QGraphicsView;
@@ -37,7 +43,7 @@ public:
 
 protected slots:
     void showEvent(QShowEvent *event) override;
-    void enterEvent(QEvent *event) override;
+    void enterEvent(QT_ENTER_EVENT *event) override;
     void leaveEvent(QEvent *event) override;
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;

@@ -183,14 +183,14 @@ QString MetadataModel::imageSizeRatio(const QSize &size)
     return tr("%1 : %2").arg(QString::number(size.width() / gcd), QString::number(size.height() / gcd));
 }
 
-bool MetadataModel::appendSection(const QString &sectionKey, const QString &sectionDisplayName)
+bool MetadataModel::appendSection(const QString &sectionKey, QStringView sectionDisplayName)
 {
     if (m_sections.contains(sectionKey)) {
         return false;
     }
 
     m_sections.append(sectionKey);
-    m_sectionProperties[sectionKey] = qMakePair<QString, QList<QString> >(sectionDisplayName, {});
+    m_sectionProperties[sectionKey] = qMakePair<QString, QList<QString> >(sectionDisplayName.toString(), {});
 
     return true;
 }
@@ -202,7 +202,7 @@ bool MetadataModel::appendPropertyIfNotEmpty(const QString &sectionKey, const QS
     return appendProperty(sectionKey, propertyKey, propertyDisplayName, propertyValue);
 }
 
-bool MetadataModel::appendProperty(const QString &sectionKey, const QString &propertyKey, const QString &propertyDisplayName, const QString &propertyValue)
+bool MetadataModel::appendProperty(const QString &sectionKey, const QString &propertyKey, QStringView propertyDisplayName, QStringView propertyValue)
 {
     if (!m_sections.contains(sectionKey)) {
         return false;
@@ -213,7 +213,7 @@ bool MetadataModel::appendProperty(const QString &sectionKey, const QString &pro
         propertyList.append(propertyKey);
     }
 
-    m_properties[propertyKey] = qMakePair<QString, QString>(propertyDisplayName, propertyValue);
+    m_properties[propertyKey] = qMakePair<QString, QString>(propertyDisplayName.toString(), propertyValue.toString());
 
     return true;
 }

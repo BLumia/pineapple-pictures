@@ -25,6 +25,7 @@
 #include <QClipboard>
 #include <QMimeData>
 #include <QWindow>
+#include <QFile>
 #include <QTimer>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -245,7 +246,7 @@ void MainWindow::showEvent(QShowEvent *event)
     return FramelessWindow::showEvent(event);
 }
 
-void MainWindow::enterEvent(QEvent *event)
+void MainWindow::enterEvent(QT_ENTER_EVENT *event)
 {
     m_bottomButtonGroup->setOpacity(1);
     m_gv->setOpacity(1);

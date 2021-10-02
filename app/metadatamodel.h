@@ -15,11 +15,11 @@ public:
     void setFile(const QString & imageFilePath);
     static QString imageSize(const QSize &size);
     static QString imageSizeRatio(const QSize &size);
-    bool appendSection(const QString & sectionKey, const QString & sectionDisplayName);
+    bool appendSection(const QString & sectionKey, QStringView sectionDisplayName);
     bool appendPropertyIfNotEmpty(const QString & sectionKey, const QString & propertyKey,
                                   const QString & propertyDisplayName, const QString & propertyValue = QString());
     bool appendProperty(const QString & sectionKey, const QString & propertyKey,
-                        const QString & propertyDisplayName, const QString & propertyValue = QString());
+                        QStringView propertyDisplayName, QStringView propertyValue = QString());
     bool appendExivPropertyIfExist(const Exiv2Wrapper & wrapper, const QString & sectionKey,
                                    const QString & exiv2propertyKey, const QString & propertyDisplayName = QString(),
                                    bool isXmpString = false);

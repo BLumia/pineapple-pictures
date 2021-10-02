@@ -17,7 +17,7 @@ FramelessWindow::FramelessWindow(QWidget *parent)
     // https://bugreports.qt.io/browse/QTBUG-91226
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint);
 
-    m_centralLayout->setMargin(0);
+    m_centralLayout->setContentsMargins(QMargins());
 }
 
 void FramelessWindow::setCentralWidget(QWidget *widget)
@@ -31,7 +31,7 @@ void FramelessWindow::setCentralWidget(QWidget *widget)
     m_centralWidget = widget;
 }
 
-bool FramelessWindow::nativeEvent(const QByteArray &eventType, void *message, long *result)
+bool FramelessWindow::nativeEvent(const QByteArray &eventType, void *message, NATIVE_RESULT *result)
 {
 #ifdef _WIN32
     // https://stackoverflow.com/questions/43505580/qt-windows-resizable-frameless-window

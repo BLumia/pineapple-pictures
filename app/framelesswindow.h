@@ -3,6 +3,12 @@
 
 #include <QWidget>
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    typedef qintptr NATIVE_RESULT;
+#else
+    typedef long NATIVE_RESULT;
+#endif // QT_VERSION_CHECK(6, 0, 0)
+
 QT_BEGIN_NAMESPACE
 class QVBoxLayout;
 QT_END_NAMESPACE
@@ -16,7 +22,7 @@ public:
     void setCentralWidget(QWidget * widget);
 
 protected:
-    bool nativeEvent(const QByteArray& eventType, void* message, long* result) override;
+    bool nativeEvent(const QByteArray& eventType, void* message, NATIVE_RESULT* result) override;
 
 private:
     QVBoxLayout * m_centralLayout = nullptr;

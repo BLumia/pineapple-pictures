@@ -1,4 +1,5 @@
 QT       += core widgets gui svg
+greaterThan(QT_MAJOR_VERSION, 5): QT += svgwidgets
 
 TARGET = ppic
 TEMPLATE = app
