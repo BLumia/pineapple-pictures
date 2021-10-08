@@ -263,9 +263,13 @@ void GraphicsView::mouseMoveEvent(QMouseEvent *event)
 
 void GraphicsView::mouseReleaseEvent(QMouseEvent *event)
 {
-    QGraphicsItem *item = itemAt(event->pos());
-    if (!item) {
+    if (event->button() == Qt::ForwardButton || event->button() == Qt::BackButton) {
         event->ignore();
+    } else {
+        QGraphicsItem *item = itemAt(event->pos());
+        if (!item) {
+            event->ignore();
+        }
     }
 
     return QGraphicsView::mouseReleaseEvent(event);

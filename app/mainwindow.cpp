@@ -272,15 +272,6 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         event->accept();
     }
 
-    // It seems the forward/back mouse button won't generate a key event [1] so we can't use
-    // QShortcut or QKeySequence to indicate these shortcuts, so we do it here.
-    // Reference:
-    // [1]: https://codereview.qt-project.org/c/qt/qtbase/+/177475
-    if (event->buttons() & Qt::ForwardButton || event->buttons() & Qt::BackButton) {
-        event->buttons() & Qt::BackButton ? galleryNext() : galleryPrev();
-        event->accept();
-    }
-
     return FramelessWindow::mousePressEvent(event);
 }
 
@@ -303,6 +294,15 @@ void MainWindow::mouseMoveEvent(QMouseEvent *event)
 void MainWindow::mouseReleaseEvent(QMouseEvent *event)
 {
     m_clickedOnWindow = false;
+
+    // It seems the forward/back mouse button won't generate a key event [1] so we can't use
+    // QShortcut or QKeySequence to indicate these shortcuts, so we do it here.
+    // Reference:
+    // [1]: https://codereview.qt-project.org/c/qt/qtbase/+/177475
+    if (event->button() == Qt::ForwardButton || event->button() == Qt::BackButton) {
+        event->button() == Qt::BackButton ? galleryNext() : galleryPrev();
+        event->accept();
+    }
 
     return FramelessWindow::mouseReleaseEvent(event);
 }
