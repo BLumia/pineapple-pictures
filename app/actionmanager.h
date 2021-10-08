@@ -23,6 +23,9 @@ public:
     QAction *actionToggleCheckerboard;
     QAction *actionRotateClockwise;
 
+    QAction *actionPrevPicture;
+    QAction *actionNextPicture;
+
     QAction *actionHorizontalFlip;
     QAction *actionFitInView;
     QAction *actionFitByWidth;

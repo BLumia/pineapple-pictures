@@ -126,14 +126,6 @@ MainWindow::MainWindow(QWidget *parent)
         m_nextButton->setVisible(galleryFileCount > 1);
     });
 
-    QShortcut * prevPictureShorucut = new QShortcut(QKeySequence(Qt::Key_PageUp), this);
-    connect(prevPictureShorucut, &QShortcut::activated,
-            this, &MainWindow::galleryPrev);
-
-    QShortcut * nextPictureShorucut = new QShortcut(QKeySequence(Qt::Key_PageDown), this);
-    connect(nextPictureShorucut, &QShortcut::activated,
-            this, &MainWindow::galleryNext);
-
     QShortcut * fullscreenShorucut = new QShortcut(QKeySequence(QKeySequence::FullScreen), this);
     connect(fullscreenShorucut, &QShortcut::activated,
             this, &MainWindow::toggleFullscreen);
@@ -280,6 +272,15 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         event->accept();
     }
 
+    // It seems the forward/back mouse button won't generate a key event [1] so we can't use
+    // QShortcut or QKeySequence to indicate these shortcuts, so we do it here.
+    // Reference:
+    // [1]: https://codereview.qt-project.org/c/qt/qtbase/+/177475
+    if (event->buttons() & Qt::ForwardButton || event->buttons() & Qt::BackButton) {
+        event->buttons() & Qt::BackButton ? galleryNext() : galleryPrev();
+        event->accept();
+    }
+
     return FramelessWindow::mousePressEvent(event);
 }
 
@@ -308,6 +309,12 @@ void MainWindow::mouseReleaseEvent(QMouseEvent *event)
 
 void MainWindow::mouseDoubleClickEvent(QMouseEvent *event)
 {
+    // The forward/back mouse button can also used to trigger a mouse double-click event
+    // Since we use that for gallery navigation so we ignore these two buttons.
+    if (event->buttons() & Qt::ForwardButton || event->buttons() & Qt::BackButton) {
+        return;
+    }
+
     switch (Settings::instance()->doubleClickBehavior()) {
     case ActionCloseWindow:
         quitAppAction();
@@ -629,6 +636,16 @@ void MainWindow::on_actionRotateClockwise_triggered()
     m_graphicsView->rotateView();
     m_graphicsView->displayScene();
     m_gv->setVisible(false);
+}
+
+void MainWindow::on_actionPrevPicture_triggered()
+{
+    galleryPrev();
+}
+
+void MainWindow::on_actionNextPicture_triggered()
+{
+    galleryNext();
 }
 
 void MainWindow::on_actionToggleStayOnTop_triggered()

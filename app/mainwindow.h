@@ -75,6 +75,9 @@ private slots:
     void on_actionToggleCheckerboard_triggered();
     void on_actionRotateClockwise_triggered();
 
+    void on_actionPrevPicture_triggered();
+    void on_actionNextPicture_triggered();
+
     void on_actionHorizontalFlip_triggered();
     void on_actionFitInView_triggered();
     void on_actionFitByWidth_triggered();

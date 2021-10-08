@@ -38,6 +38,9 @@ void ActionManager::setupAction(MainWindow *mainWindow)
     CREATE_NEW_ICON_ACTION(mainWindow, actionToggleCheckerboard, view-background-checkerboard);
     CREATE_NEW_ICON_ACTION(mainWindow, actionRotateClockwise, object-rotate-right);
 
+    CREATE_NEW_ACTION(mainWindow, actionPrevPicture);
+    CREATE_NEW_ACTION(mainWindow, actionNextPicture);
+
     CREATE_NEW_ACTION(mainWindow, actionHorizontalFlip);
     CREATE_NEW_ACTION(mainWindow, actionFitInView);
     CREATE_NEW_ACTION(mainWindow, actionFitByWidth);
@@ -67,6 +70,9 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
     actionToggleCheckerboard->setText(QCoreApplication::translate("MainWindow", "Toggle Checkerboard", nullptr));
     actionRotateClockwise->setText(QCoreApplication::translate("MainWindow", "Rotate right", nullptr));
 
+    actionPrevPicture->setText(QCoreApplication::translate("MainWindow", "Previous image", nullptr));
+    actionNextPicture->setText(QCoreApplication::translate("MainWindow", "Next image", nullptr));
+
     actionHorizontalFlip->setText(QCoreApplication::translate("MainWindow", "Flip &Horizontally", nullptr));
     actionFitInView->setText("Fit in view"); // TODO: what should it called?
     actionFitByWidth->setText("Fit by width"); // TODO: what should it called?
@@ -83,15 +89,17 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
 
 void ActionManager::setupShortcuts()
 {
-    actionActualSize->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_0));
+    actionActualSize->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_0));
     actionZoomIn->setShortcut(QKeySequence(QKeySequence::ZoomIn));
     actionZoomOut->setShortcut(QKeySequence(QKeySequence::ZoomOut));
-    actionHorizontalFlip->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_R));
+    actionPrevPicture->setShortcut(QKeySequence(Qt::Key_PageUp));
+    actionNextPicture->setShortcut(QKeySequence(Qt::Key_PageDown));
+    actionHorizontalFlip->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_R));
     actionCopyPixmap->setShortcut(QKeySequence(QKeySequence::Copy));
     actionPaste->setShortcut(QKeySequence::Paste);
     actionHelp->setShortcut(QKeySequence::HelpContents);
     actionSettings->setShortcut(QKeySequence::Preferences);
-    actionProperties->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_I));
+    actionProperties->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_I));
     actionQuitApp->setShortcuts({
         QKeySequence(Qt::Key_Space),
         QKeySequence(Qt::Key_Escape)
