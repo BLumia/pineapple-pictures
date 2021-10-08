@@ -300,7 +300,7 @@ void MainWindow::mouseReleaseEvent(QMouseEvent *event)
     // Reference:
     // [1]: https://codereview.qt-project.org/c/qt/qtbase/+/177475
     if (event->button() == Qt::ForwardButton || event->button() == Qt::BackButton) {
-        event->button() == Qt::BackButton ? galleryNext() : galleryPrev();
+        event->button() == Qt::BackButton ? galleryPrev() : galleryNext();
         event->accept();
     }
 
