@@ -64,7 +64,7 @@ The normal build steps for Linux is also applied to Windows, but since Windows d
 
 For the Windows binary I provided, kimageformats plugin is used (for formats like kra, xcf, psd and etc.). You can take `appveyor.yml` as a reference to learn what I did when building the Windows binary.
 
-[KDE Craft](https://community.kde.org/Craft) environment also can be used to build and package this program. I did also created a blueprint for building this project, but since I don't have a CI to run KDE Craft build, the blueprint repo are not provided here. Maybe sometimes later.
+[KDE Craft](https://community.kde.org/Craft) environment also can be used to build and package this program. I did also created a blueprint for building this project that you can found it at [here](https://github.com/BearKidsTeam/craft-shmooprint-bkt). It's not the way I used to create the release binary, but still worth trying.
 
 ### macOS
 

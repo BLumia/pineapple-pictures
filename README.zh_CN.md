@@ -64,7 +64,7 @@ $ cmake --build . # 如果你使用 Makefile 作为 CMake 生成器，也可以�
 
 我们所提供的预编译好的 Windows 程序包含了 kimageformats 插件来提供额外（kra, xcf, psd 等）格式的支持。您可以参考 `appveyor.yml` 来查看我们是如何构建并打包 Windows 可执行程序的。
 
-[KDE Craft](https://community.kde.org/Craft) 环境也可以被用来构建此应用程序。我也创建了一个蓝图来进行此项目的构建和打包。但由于暂时并未配置 CI 部署此环境来进行 KDE Craft 环境下的构建，故对应的蓝图仓库也尚未公开提供，或许后续会开放出来。
+[KDE Craft](https://community.kde.org/Craft) 环境也可以被用来构建此应用程序。我也创建了一个蓝图来进行此项目的构建和打包，可参见[这里](https://github.com/BearKidsTeam/craft-shmooprint-bkt)。尽管这不是我用于构建发布二进制所使用的方案，但仍值得一试。
 
 ### macOS
 
