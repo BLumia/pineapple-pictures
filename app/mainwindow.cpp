@@ -27,6 +27,8 @@
 #include <QWindow>
 #include <QFile>
 #include <QTimer>
+#include <QFileDialog>
+#include <QStandardPaths>
 
 MainWindow::MainWindow(QWidget *parent)
     : FramelessWindow(parent)
@@ -406,6 +408,8 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     QAction * helpAction = m_am->actionHelp;
     QAction * propertiesAction = m_am->actionProperties;
 
+    menu->addAction(m_am->actionOpen);
+
     if (copyMenu->actions().count() == 1) {
         menu->addActions(copyMenu->actions());
     } else {
@@ -538,6 +542,17 @@ void MainWindow::toggleMaximize()
 QSize MainWindow::sizeHint() const
 {
     return QSize(710, 530);
+}
+
+void MainWindow::on_actionOpen_triggered()
+{
+    QStringList picturesLocations = QStandardPaths::standardLocations(QStandardPaths::PicturesLocation);
+    QUrl pictureUrl = picturesLocations.isEmpty() ? QUrl::fromLocalFile(picturesLocations.first())
+                                                  : QUrl::fromLocalFile(QDir::homePath());
+    QList<QUrl> urls(QFileDialog::getOpenFileUrls(this, QString(), pictureUrl));
+    if (!urls.isEmpty()) {
+        showUrls(urls);
+    }
 }
 
 void MainWindow::on_actionActualSize_triggered()

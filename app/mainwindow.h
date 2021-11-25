@@ -68,6 +68,8 @@ protected:
     QSize sizeHint() const override;
 
 private slots:
+    void on_actionOpen_triggered();
+
     void on_actionActualSize_triggered();
     void on_actionToggleMaximize_triggered();
     void on_actionZoomIn_triggered();

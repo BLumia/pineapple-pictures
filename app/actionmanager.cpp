@@ -41,6 +41,7 @@ void ActionManager::setupAction(MainWindow *mainWindow)
     CREATE_NEW_ACTION(mainWindow, actionPrevPicture);
     CREATE_NEW_ACTION(mainWindow, actionNextPicture);
 
+    CREATE_NEW_ACTION(mainWindow, actionOpen);
     CREATE_NEW_ACTION(mainWindow, actionHorizontalFlip);
     CREATE_NEW_ACTION(mainWindow, actionFitInView);
     CREATE_NEW_ACTION(mainWindow, actionFitByWidth);
@@ -62,6 +63,8 @@ void ActionManager::setupAction(MainWindow *mainWindow)
 void ActionManager::retranslateUi(MainWindow *mainWindow)
 {
     Q_UNUSED(mainWindow);
+
+    actionOpen->setText(QCoreApplication::translate("MainWindow", "&Open...", nullptr));
 
     actionActualSize->setText(QCoreApplication::translate("MainWindow", "Actual size", nullptr));
     actionToggleMaximize->setText(QCoreApplication::translate("MainWindow", "Toggle maximize", nullptr));
@@ -89,6 +92,7 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
 
 void ActionManager::setupShortcuts()
 {
+    actionOpen->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_O));
     actionActualSize->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_0));
     actionZoomIn->setShortcut(QKeySequence(QKeySequence::ZoomIn));
     actionZoomOut->setShortcut(QKeySequence(QKeySequence::ZoomOut));

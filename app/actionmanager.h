@@ -16,6 +16,8 @@ public:
     void setupShortcuts();
 
 public:
+    QAction *actionOpen;
+
     QAction *actionActualSize;
     QAction *actionToggleMaximize;
     QAction *actionZoomIn;
