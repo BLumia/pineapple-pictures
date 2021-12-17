@@ -408,7 +408,9 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     QAction * helpAction = m_am->actionHelp;
     QAction * propertiesAction = m_am->actionProperties;
 
+#if 0
     menu->addAction(m_am->actionOpen);
+#endif // 0
 
     if (copyMenu->actions().count() == 1) {
         menu->addActions(copyMenu->actions());

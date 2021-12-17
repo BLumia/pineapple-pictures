@@ -96,8 +96,14 @@ void ActionManager::setupShortcuts()
     actionActualSize->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_0));
     actionZoomIn->setShortcut(QKeySequence(QKeySequence::ZoomIn));
     actionZoomOut->setShortcut(QKeySequence(QKeySequence::ZoomOut));
-    actionPrevPicture->setShortcut(QKeySequence(Qt::Key_PageUp));
-    actionNextPicture->setShortcut(QKeySequence(Qt::Key_PageDown));
+    actionPrevPicture->setShortcuts({
+        QKeySequence(Qt::Key_PageUp),
+        QKeySequence(Qt::Key_Left),
+    });
+    actionNextPicture->setShortcuts({
+        QKeySequence(Qt::Key_PageDown),
+        QKeySequence(Qt::Key_Right),
+    });
     actionHorizontalFlip->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_R));
     actionCopyPixmap->setShortcut(QKeySequence(QKeySequence::Copy));
     actionPaste->setShortcut(QKeySequence::Paste);
