@@ -21,7 +21,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="28"/>
         <source>None of the operations in this application will alter the pictures on disk.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun opération dans cette application ne modifiera les fichiers image.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="29"/>
@@ -244,42 +244,42 @@
     <message>
         <location filename="../actionmanager.cpp" line="65"/>
         <source>Zoom in</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom avant</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="66"/>
         <source>Zoom out</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom arrière</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Retourner &amp;horizontalement</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Co&amp;ller</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="67"/>
         <source>Toggle Checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Dés/activer le damier</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
         <source>Actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille actuelle</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished">Activer/désactiver l&apos;agrandissement</translation>
+        <translation>Dés/activer l&apos;agrandissement</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>Rotate right</source>
-        <translation type="unfinished"></translation>
+        <translation>Pivoter vers la droite</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
@@ -294,7 +294,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="81"/>
         <source>Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>Quitter</translation>
     </message>
 </context>
 <context>
@@ -367,7 +367,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="49"/>
         <source>Frame count</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre d&apos;images</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="53"/>
@@ -402,12 +402,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="70"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Titre</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="72"/>
         <source>Subject</source>
-        <translation type="unfinished"></translation>
+        <translation>Sujet</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="74"/>
@@ -417,7 +417,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="76"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Étiquettes</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="78"/>
@@ -442,7 +442,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="91"/>
         <source>Copyright</source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="94"/>
@@ -635,12 +635,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="27"/>
         <source>Zoom in and out</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom avant et arrière</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="28"/>
         <source>View next or previous item</source>
-        <translation type="unfinished"></translation>
+        <translation>Voir l&apos;élément suivant ou précédent</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="41"/>
@@ -655,7 +655,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="43"/>
         <source>Mouse wheel behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Comportement de la molette de la souris</translation>
     </message>
 </context>
 <context>
