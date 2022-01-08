@@ -6,163 +6,163 @@
     <message>
         <location filename="../aboutdialog.cpp" line="23"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Hakkında</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="26"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosyayı yüklemek için değişken olarak resim dosyası yolu ile uygulamayı çalıştır.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="27"/>
         <source>Drag and drop image file onto the window is also supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pencere üzerine resim dosyası sürükle bırak ta destekleniyor.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="28"/>
         <source>None of the operations in this application will alter the pictures on disk.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu uygulamadaki işlemlerin hiçbiri diskteki resimleri değiştirmeyecektir.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="29"/>
         <source>Context menu option explanation:</source>
-        <translation type="unfinished"></translation>
+        <translation>İçerik menüsü seçeneği açıklaması:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="36"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pencereyi diğer tüm pencerelerin üzerinde tut.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="39"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation type="unfinished"></translation>
+        <translation>Pencereyi yanlışlıkla kapatmaktan kaçın. (örn. pencereye çift tıklayarak)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="47"/>
         <source>Version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sürüm: %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="50"/>
         <source>Copyright (c) 2020 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Telif hakkı (c) 2020 %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="52"/>
         <source>Logo designed by %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Logo tasarımcısı: %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="54"/>
         <source>Built with Qt %1 (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt %1 (%2) ile inşa edilmiştir</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="55"/>
         <source>Source code</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaynak kodu</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="65"/>
         <source>Contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>Katkıda bulunanlar</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="67"/>
         <source>List of contributors on GitHub</source>
-        <translation type="unfinished"></translation>
+        <translation>Github üzerindeki katkı sağlayıcıların listesi</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="68"/>
         <source>Thanks to all people who contributed to this project.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu projeye katkı sağlayan herkese teşekkürler.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="72"/>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Çevirmenler</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="73"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu uygulamayı çevirmeye gönüllü olan aşağıdaki kişilere teşekkür etmek istiyorum.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="117"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 aşağıdaki ücretsiz yazılım kitaplıkları üzerinde inşa edilmiştir:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="141"/>
         <source>&amp;Special Thanks</source>
-        <translation type="unfinished"></translation>
+        <translation>Özel %Teşekkürler</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="143"/>
         <source>&amp;Third-party Libraries</source>
-        <translation type="unfinished"></translation>
+        <translation>Üçüncü Par&amp;ti Kitaplıklar</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="79"/>
         <source>Your Rights</source>
-        <translation type="unfinished"></translation>
+        <translation>Haklarınız</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="81"/>
         <source>%1 is released under the MIT License.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1, MIT Lisansı altında sunulmuştur.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="82"/>
         <source>This license grants people a number of freedoms:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu lisans birkaç özgürlüğü kişilere veriyor:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="83"/>
         <source>You are free to use %1, for any purpose</source>
-        <translation type="unfinished"></translation>
+        <translation>%1&apos;i herhangi bir amaç için kullanmakta özgürsünüz</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="84"/>
         <source>You are free to distribute %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1&apos;i dağıtmakta özgürsünüz</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="85"/>
         <source>You can study how %1 works and change it</source>
-        <translation type="unfinished"></translation>
+        <translation>%1&apos;in nasıl çalıştığıyla ilgili çalışabilir ve onu değiştirebilirsiniz</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="86"/>
         <source>You can distribute changed versions of %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1&apos;in değiştirilmiş sürümünü dağıtabilirsiniz</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="88"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
-        <translation type="unfinished"></translation>
+        <translation>MIT lisansı özgürlüğünüzü garanti eder. Hiç kimsenin özgürlüğünüzü sizden almasına bile izin verilmez.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="116"/>
         <source>Third-party Libraries used by %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 tarafından kullanılan Üçüncü Parti Kitaplıklar</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="139"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yardım</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="140"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>H&amp;akkında</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="142"/>
         <source>&amp;License</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lisans</translation>
     </message>
 </context>
 <context>
@@ -170,7 +170,7 @@
     <message>
         <location filename="../graphicsscene.cpp" line="48"/>
         <source>Drag image here</source>
-        <translation type="unfinished"></translation>
+        <translation>Resmi buraya sürükleyin</translation>
     </message>
 </context>
 <context>
@@ -178,28 +178,28 @@
     <message>
         <location filename="../graphicsview.cpp" line="329"/>
         <source>File url list is empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya url listesi boş</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="52"/>
         <source>File is not a valid image</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya, geçerli bir resim değil</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="57"/>
         <location filename="../graphicsview.cpp" line="62"/>
         <source>Image data is invalid or currently unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Resim verisi geçersiz veya şuan desteklenmiyor</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="337"/>
         <source>Image data is invalid</source>
-        <translation type="unfinished"></translation>
+        <translation>Resim verisi geçersiz</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="344"/>
         <source>Not supported mimedata: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Desteklenmeyen dosya türü verisi: %1</translation>
     </message>
 </context>
 <context>
@@ -207,94 +207,94 @@
     <message>
         <location filename="../mainwindow.cpp" line="163"/>
         <source>File url list is empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya url listesi boş</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="374"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kopyala</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="73"/>
         <source>Copy P&amp;ixmap</source>
-        <translation type="unfinished"></translation>
+        <translation>P&amp;ixmap&apos;i Kopyala</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
         <source>Copy &amp;File Path</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dosya Yolunu Kopyala</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
         <source>Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Özellikler</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="35"/>
         <location filename="../actionmanager.cpp" line="76"/>
         <source>Stay on top</source>
-        <translation type="unfinished"></translation>
+        <translation>Üstte tut</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="38"/>
         <location filename="../actionmanager.cpp" line="77"/>
         <source>Protected mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Korumalı kip</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="65"/>
         <source>Zoom in</source>
-        <translation type="unfinished"></translation>
+        <translation>Yaklaştır</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="66"/>
         <source>Zoom out</source>
-        <translation type="unfinished"></translation>
+        <translation>Uzaklaştır</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yatay Çevir</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Ya&amp;pıştır</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="67"/>
         <source>Toggle Checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Damalı Ekrana Geç</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="63"/>
         <source>Actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>Mevcut boyut</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="64"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished"></translation>
+        <translation>Tam boyuta geç</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>Rotate right</source>
-        <translation type="unfinished"></translation>
+        <translation>Sağa döndür</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Configure...</source>
-        <translation type="unfinished"></translation>
+        <translation>Yapılandır...</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="79"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Yardım</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="81"/>
         <source>Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>Çıkış</translation>
     </message>
 </context>
 <context>
@@ -302,7 +302,7 @@
     <message>
         <location filename="../metadatadialog.cpp" line="80"/>
         <source>Image Metadata</source>
-        <translation type="unfinished"></translation>
+        <translation>Resim Üstverisi</translation>
     </message>
 </context>
 <context>
@@ -311,303 +311,303 @@
         <location filename="../metadatamodel.cpp" line="36"/>
         <source>Origin</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Köken</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="37"/>
         <source>Image</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Resim</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="41"/>
         <source>File</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Dosya</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="38"/>
         <source>Camera</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Kamera</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="28"/>
         <source>%1 File</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Dosya</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="35"/>
         <source>Description</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Açıklama</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="39"/>
         <source>Advanced photo</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Gelişmiş foto</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="40"/>
         <source>GPS</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>GPS</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="44"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Boyutlar</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="46"/>
         <source>Aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>En boy oranı</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="49"/>
         <source>Frame count</source>
-        <translation type="unfinished"></translation>
+        <translation>Kare sayısı</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="53"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Adı</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="55"/>
         <source>Item type</source>
-        <translation type="unfinished"></translation>
+        <translation>Öge türü</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="57"/>
         <source>Folder path</source>
-        <translation type="unfinished"></translation>
+        <translation>Klasör yolu</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="59"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Boyut</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="61"/>
         <source>Date created</source>
-        <translation type="unfinished"></translation>
+        <translation>Oluşturulma tarihi</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="63"/>
         <source>Date modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Değiştirilme tarihi</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="70"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Başlık</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="72"/>
         <source>Subject</source>
-        <translation type="unfinished"></translation>
+        <translation>Konu</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="74"/>
         <source>Rating</source>
-        <translation type="unfinished"></translation>
+        <translation>Değerlendirme</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="76"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiketler</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="78"/>
         <source>Comments</source>
-        <translation type="unfinished"></translation>
+        <translation>Yorumlar</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="81"/>
         <source>Authors</source>
-        <translation type="unfinished"></translation>
+        <translation>Sanatçılar</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="83"/>
         <source>Date taken</source>
-        <translation type="unfinished"></translation>
+        <translation>Çekilme tarihi</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="89"/>
         <source>Program name</source>
-        <translation type="unfinished"></translation>
+        <translation>Program adı</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="91"/>
         <source>Copyright</source>
-        <translation type="unfinished"></translation>
+        <translation>Telif Hakkı</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="94"/>
         <source>Horizontal resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>Yatay çözünürlük</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="96"/>
         <source>Vertical resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>Dikey çözünürlük</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="98"/>
         <source>Resolution unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Çözünürlük birimi</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="100"/>
         <source>Colour representation</source>
-        <translation type="unfinished"></translation>
+        <translation>Renk sunumu</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="103"/>
         <source>Camera maker</source>
-        <translation type="unfinished"></translation>
+        <translation>Kamera üreticisi</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="105"/>
         <source>Camera model</source>
-        <translation type="unfinished"></translation>
+        <translation>Kamera modeli</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="107"/>
         <source>F-stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Diyafram</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="109"/>
         <source>Exposure time</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozlama süresi</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="111"/>
         <source>ISO speed</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO hızı</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="113"/>
         <source>Exposure bias</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozlama sapması</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="115"/>
         <source>Focal length</source>
-        <translation type="unfinished"></translation>
+        <translation>Odak uzaklığı</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="117"/>
         <source>Max aperture</source>
-        <translation type="unfinished"></translation>
+        <translation>Maks. açıklık</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="119"/>
         <source>Metering mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Ölçme kipi</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="121"/>
         <source>Flash mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Flaş kipi</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="123"/>
         <source>35mm focal length</source>
-        <translation type="unfinished"></translation>
+        <translation>35mm odak uzaklığı</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="126"/>
         <source>Lens model</source>
-        <translation type="unfinished"></translation>
+        <translation>Mercek modeli</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="128"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Parlaklık</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="130"/>
         <source>Exposure program</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozlama programı</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="132"/>
         <source>Saturation</source>
-        <translation type="unfinished"></translation>
+        <translation>Doygunluk</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="134"/>
         <source>Sharpness</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskinlik</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="136"/>
         <source>White balance</source>
-        <translation type="unfinished"></translation>
+        <translation>Beyaz dengesi</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="138"/>
         <source>Digital zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Dijital yakınlaştırma</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="140"/>
         <source>EXIF version</source>
-        <translation type="unfinished"></translation>
+        <translation>EXIF sürümü</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="143"/>
         <source>Latitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlem kaynağı</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="145"/>
         <source>Latitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlem</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="147"/>
         <source>Longitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Boylam kaynağı</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="149"/>
         <source>Longitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Boylam</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="151"/>
         <source>Altitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Rakım kaynağı</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="153"/>
         <source>Altitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Rakım</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="163"/>
         <source>%1 x %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="181"/>
         <source>%1 : %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 : %2</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="306"/>
         <source>Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Özellik</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="306"/>
         <source>Value</source>
-        <translation type="unfinished"></translation>
+        <translation>Değer</translation>
     </message>
 </context>
 <context>
@@ -615,47 +615,47 @@
     <message>
         <location filename="../settingsdialog.cpp" line="16"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayarlar</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="21"/>
         <source>Do nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiçbir şey yapma</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="22"/>
         <source>Close the window</source>
-        <translation type="unfinished"></translation>
+        <translation>Pencereyi kapat</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="23"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished"></translation>
+        <translation>Tam boyuta geç</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="27"/>
         <source>Zoom in and out</source>
-        <translation type="unfinished"></translation>
+        <translation>Yaklaştır ve uzaklaştır</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="28"/>
         <source>View next or previous item</source>
-        <translation type="unfinished"></translation>
+        <translation>Sonraki veya önceki ögeyi görüntüle</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="41"/>
         <source>Stay on top when start-up</source>
-        <translation type="unfinished"></translation>
+        <translation>Açılışta pencerelerin üstünde kal</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="42"/>
         <source>Double-click behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Çift tıklama davranışı</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="43"/>
         <source>Mouse wheel behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Fare tekeri davranışı</translation>
     </message>
 </context>
 <context>
@@ -663,12 +663,12 @@
     <message>
         <location filename="../main.cpp" line="31"/>
         <source>Pineapple Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Ananas Resimler</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="35"/>
         <source>File list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya list.</translation>
     </message>
 </context>
 </TS>
