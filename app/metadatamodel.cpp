@@ -1,6 +1,7 @@
 #include "metadatamodel.h"
 #include "exiv2wrapper.h"
 
+#include <QDir>
 #include <QDebug>
 #include <QDateTime>
 #include <QFileInfo>
@@ -56,7 +57,7 @@ void MetadataModel::setFile(const QString &imageFilePath)
     appendProperty(QStringLiteral("File"), QStringLiteral("File.ItemType"),
                    tr("Item type"), itemTypeString);
     appendProperty(QStringLiteral("File"), QStringLiteral("File.Path"),
-                   tr("Folder path"), fileInfo.path());
+                   tr("Folder path"), QDir::toNativeSeparators(fileInfo.path()));
     appendProperty(QStringLiteral("File"), QStringLiteral("File.Size"),
                    tr("Size"), sizeString);
     appendProperty(QStringLiteral("File"), QStringLiteral("File.CreatedTime"),
