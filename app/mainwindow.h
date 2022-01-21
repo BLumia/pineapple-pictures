@@ -91,6 +91,7 @@ private slots:
     void on_actionSettings_triggered();
     void on_actionHelp_triggered();
     void on_actionProperties_triggered();
+    void on_actionLocateInFileManager_triggered();
     void on_actionQuitApp_triggered();
 
 private:

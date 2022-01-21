@@ -29,6 +29,8 @@
 #include <QTimer>
 #include <QFileDialog>
 #include <QStandardPaths>
+#include <QProcess>
+#include <QDesktopServices>
 
 MainWindow::MainWindow(QWidget *parent)
     : FramelessWindow(parent)
@@ -437,6 +439,9 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     menu->addAction(helpAction);
     if (currentFileUrl.isValid()) {
         menu->addSeparator();
+        if (currentFileUrl.isLocalFile()) {
+            menu->addAction(m_am->actionLocateInFileManager);
+        }
         menu->addAction(propertiesAction);
     }
     menu->exec(mapToGlobal(event->pos()));
@@ -701,6 +706,22 @@ void MainWindow::on_actionProperties_triggered()
     ad->setMetadataModel(md);
     ad->exec();
     ad->deleteLater();
+}
+
+void MainWindow::on_actionLocateInFileManager_triggered()
+{
+    QUrl currentFileUrl = currentImageFileUrl();
+    if (!currentFileUrl.isValid()) return;
+
+    QFileInfo fileInfo(currentFileUrl.toLocalFile());
+    if (!fileInfo.exists()) return;
+
+#ifdef Q_OS_WIN
+    QProcess::startDetached("explorer", QStringList() << "/select," << QDir::toNativeSeparators(fileInfo.absoluteFilePath()));
+#else
+    // maybe use https://www.freedesktop.org/wiki/Specifications/file-manager-interface/ for linux?
+    QDesktopServices::openUrl(QUrl::fromLocalFile(fileInfo.absolutePath()));
+#endif // Q_OS_WIN
 }
 
 void MainWindow::on_actionQuitApp_triggered()

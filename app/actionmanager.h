@@ -38,6 +38,7 @@ public:
     QAction *actionToggleProtectMode;
     QAction *actionSettings;
     QAction *actionHelp;
+    QAction *actionLocateInFileManager;
     QAction *actionProperties;
     QAction *actionQuitApp;
 };

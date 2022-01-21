@@ -52,6 +52,7 @@ void ActionManager::setupAction(MainWindow *mainWindow)
     CREATE_NEW_ACTION(mainWindow, actionToggleProtectMode);
     CREATE_NEW_ACTION(mainWindow, actionSettings);
     CREATE_NEW_ACTION(mainWindow, actionHelp);
+    CREATE_NEW_ACTION(mainWindow, actionLocateInFileManager);
     CREATE_NEW_ACTION(mainWindow, actionProperties);
     CREATE_NEW_ACTION(mainWindow, actionQuitApp);
 
@@ -86,6 +87,7 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
     actionToggleProtectMode->setText(QCoreApplication::translate("MainWindow", "Protected mode", nullptr));
     actionSettings->setText(QCoreApplication::translate("MainWindow", "Configure...", nullptr));
     actionHelp->setText(QCoreApplication::translate("MainWindow", "Help", nullptr));
+    actionLocateInFileManager->setText("Open Containing Folder"); // TODO: what should it called?
     actionProperties->setText(QCoreApplication::translate("MainWindow", "Properties", nullptr));
     actionQuitApp->setText(QCoreApplication::translate("MainWindow", "Quit", nullptr));
 }
