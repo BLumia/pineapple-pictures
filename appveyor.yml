@@ -56,6 +56,21 @@ build_script:
   - cmake --build . --config Release
   - cmake --build . --config Release --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
+# QtApng for APNG
+  - cd 3rdparty
+  - mkdir QtApng
+  - cd QtApng
+  - curl -fsSL -o ppkg-QtApng.zip https://sourceforge.net/projects/pineapple-package-manager/files/packages/mingw-w64-x86_64-windows/QtApng-qt5.15.2-gea53d73-1.zip
+  - ppkg ppkg-QtApng.zip
+  - 7z x ppkg-QtApng.zip LICENSE -y
+#  - git clone --branch detect-format-from-content --depth 1 https://github.com/BLumia/QtApng.git
+#  - cd QtApng
+#  - mkdir build
+#  - cd build
+#  - qmake "CONFIG+=libpng_static" ../
+#  - mingw32-make
+#  - mingw32-make install
+  - cd %APPVEYOR_BUILD_FOLDER%
 # install ECM so we can build KImageFormats
   - cd 3rdparty
   - git clone -b %KF_BRANCH% -q https://invent.kde.org/frameworks/extra-cmake-modules.git
@@ -64,6 +79,21 @@ build_script:
   - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_PREFIX% -DBUILD_TESTING=OFF
   - cmake --build .
   - cmake --build . --target install
+  - cd %APPVEYOR_BUILD_FOLDER%
+ # install openexr for EXR format plugin from KImageFormats
+  - cd 3rdparty
+  - mkdir openexr
+  - cd openexr
+#  - git clone -b v3.1.3 --depth 1 https://github.com/AcademySoftwareFoundation/openexr.git
+#  - cd openexr
+#  - mkdir build
+#  - cd build
+#  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS=-D__STDC_FORMAT_MACROS=1 -DOPENEXR_INSTALL_EXAMPLES=OFF -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_PREFIX%
+#  - cmake --build . --config Release
+#  - cmake --build . --config Release --target install/strip
+  - curl -fsSL -o ppkg-openexr.zip https://sourceforge.net/projects/pineapple-package-manager/files/packages/mingw-w64-x86_64-windows/openexr-3.1.3-1.zip
+  - ppkg ppkg-openexr.zip
+  - 7z x ppkg-openexr.zip LICENSE.md -y
   - cd %APPVEYOR_BUILD_FOLDER%
 # install AOM for libavif AV1 decoding support...
   - cd 3rdparty
@@ -143,14 +173,20 @@ build_script:
   - copy %CMAKE_INSTALL_PREFIX%\bin\libexiv2.dll
   - copy %CMAKE_INSTALL_PREFIX%\bin\libavif.dll
   - copy %CMAKE_INSTALL_PREFIX%\bin\libzlib.dll
+  - copy %CMAKE_INSTALL_PREFIX%\bin\libIex-3_1.dll
+  - copy %CMAKE_INSTALL_PREFIX%\bin\libImath-3_1.dll
+  - copy %CMAKE_INSTALL_PREFIX%\bin\libIlmThread-3_1.dll
+  - copy %CMAKE_INSTALL_PREFIX%\bin\libOpenEXR-3_1.dll
   - copy %CMAKE_INSTALL_PREFIX%\bin\libKF?Archive.dll
   - windeployqt %WINDEPLOYQT_ARGS% .\ppic.exe
 # copy 3rdparty licenses for the libs we vendored for windows...
   - mkdir licenses
   - cd licenses
   - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\aom\LICENSE License.aom.txt
+  - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\openexr\LICENSE.md License.openexr.txt
   - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\karchive\LICENSES\LGPL-2.0-or-later.txt License.KArchive.txt
   - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\kimageformats\LICENSES\LGPL-2.1-or-later.txt License.kimageformats.txt
+  - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\QtApng\LICENSE License.QtApng.txt
   - copy %LIBEXPAT%\libexpat-R_2_5_0\expat\COPYING License.expat.txt
   - copy %LIBAVIF%\libavif-0.11.1\LICENSE License.libavif.txt
   - copy %LIBEXIV2%\exiv2-%EXIV2_VERSION%\COPYING License.exiv2.txt
