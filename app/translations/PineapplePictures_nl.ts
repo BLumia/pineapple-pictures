@@ -112,7 +112,7 @@
         <location filename="../aboutdialog.cpp" line="50"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Copyright (c) %1 %2</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="82"/>
@@ -274,7 +274,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>&amp;Open...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Openen…</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
@@ -294,12 +294,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="77"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorige afbeelding</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>Volgende afbeelding</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
@@ -315,12 +315,12 @@
         <location filename="../actionmanager.cpp" line="92"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tonen in bestandsbeheer</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
         <source>Show in directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Tonen in map</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
