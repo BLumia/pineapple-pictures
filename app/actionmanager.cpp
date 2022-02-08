@@ -87,7 +87,16 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
     actionToggleProtectMode->setText(QCoreApplication::translate("MainWindow", "Protected mode", nullptr));
     actionSettings->setText(QCoreApplication::translate("MainWindow", "Configure...", nullptr));
     actionHelp->setText(QCoreApplication::translate("MainWindow", "Help", nullptr));
-    actionLocateInFileManager->setText("Open Containing Folder"); // TODO: what should it called?
+#ifdef Q_OS_WIN
+    actionLocateInFileManager->setText(
+        QCoreApplication::translate(
+            "MainWindow", "Show in File Explorer",
+            "File Explorer is the name of explorer.exe under Windows"
+        )
+    );
+#else
+    actionLocateInFileManager->setText(QCoreApplication::translate("MainWindow", "Show in directory", nullptr));
+#endif // Q_OS_WIN
     actionProperties->setText(QCoreApplication::translate("MainWindow", "Properties", nullptr));
     actionQuitApp->setText(QCoreApplication::translate("MainWindow", "Quit", nullptr));
 }
