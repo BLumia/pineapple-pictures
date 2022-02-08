@@ -47,7 +47,8 @@ AboutDialog::AboutDialog(QWidget *parent)
         (QStringLiteral("<br/>") + tr("Version: %1").arg(GIT_DESCRIBE_VERSION_STRING)),
 #endif // GIT_DESCRIBE_VERSION_STRING
         QStringLiteral("<hr/>"),
-        tr("Copyright (c) 2020 %1").arg(QStringLiteral("<a href='https://github.com/BLumia'>@BLumia</a>")),
+        tr("Copyright (c) %1 %2", "%1 is year, %2 is the name of copyright holder(s)")
+            .arg(QStringLiteral("2022"), QStringLiteral("<a href='https://github.com/BLumia'>@BLumia</a>")),
         QStringLiteral("<br/>"),
         tr("Logo designed by %1").arg(QStringLiteral("<a href='https://github.com/Lovelyblack'>@Lovelyblack</a>")),
         QStringLiteral("<hr/>"),
