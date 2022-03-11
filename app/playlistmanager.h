@@ -28,6 +28,8 @@ public:
     int appendFile(const QString & filePath);
     int indexOf(const QString & filePath);
 
+    int count() const;
+
     std::tuple<int, QString> previousFile() const;
     std::tuple<int, QString> nextFile() const;
     std::tuple<int, QString> currentFile() const;

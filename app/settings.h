@@ -20,6 +20,14 @@ enum MouseWheelBehavior {
     MWActionEnd = ActionPrevNextImage
 };
 
+enum WindowSizeBehavior {
+    ActionAutoSize,
+    ActionMaximize,
+
+    IWSActionStart = ActionAutoSize,
+    IWSActionEnd = ActionMaximize
+};
+
 class Settings : public QObject
 {
     Q_OBJECT
@@ -27,17 +35,21 @@ public:
     static Settings *instance();
 
     bool stayOnTop();
-    DoubleClickBehavior doubleClickBehavior();
-    MouseWheelBehavior mouseWheelBehavior();
+    DoubleClickBehavior doubleClickBehavior() const;
+    MouseWheelBehavior mouseWheelBehavior() const;
+    WindowSizeBehavior initWindowSizeBehavior() const;
 
     void setStayOnTop(bool on);
     void setDoubleClickBehavior(DoubleClickBehavior dcb);
     void setMouseWheelBehavior(MouseWheelBehavior mwb);
+    void setInitWindowSizeBehavior(WindowSizeBehavior wsb);
 
     static QString doubleClickBehaviorToString(DoubleClickBehavior dcb);
     static QString mouseWheelBehaviorToString(MouseWheelBehavior mwb);
+    static QString windowSizeBehaviorToString(WindowSizeBehavior wsb);
     static DoubleClickBehavior stringToDoubleClickBehavior(QString str);
     static MouseWheelBehavior stringToMouseWheelBehavior(QString str);
+    static WindowSizeBehavior stringToWindowSizeBehavior(QString str);
 
 private:
     Settings();

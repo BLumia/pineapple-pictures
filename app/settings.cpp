@@ -21,18 +21,25 @@ bool Settings::stayOnTop()
     return m_qsettings->value("stay_on_top", true).toBool();
 }
 
-DoubleClickBehavior Settings::doubleClickBehavior()
+DoubleClickBehavior Settings::doubleClickBehavior() const
 {
     QString result = m_qsettings->value("double_click_behavior", "close").toString().toLower();
 
     return stringToDoubleClickBehavior(result);
 }
 
-MouseWheelBehavior Settings::mouseWheelBehavior()
+MouseWheelBehavior Settings::mouseWheelBehavior() const
 {
     QString result = m_qsettings->value("mouse_wheel_behavior", "close").toString().toLower();
 
     return stringToMouseWheelBehavior(result);
+}
+
+WindowSizeBehavior Settings::initWindowSizeBehavior() const
+{
+    QString result = m_qsettings->value("init_window_size_behavior", "auto").toString().toLower();
+
+    return stringToWindowSizeBehavior(result);
 }
 
 void Settings::setStayOnTop(bool on)
@@ -50,6 +57,12 @@ void Settings::setDoubleClickBehavior(DoubleClickBehavior dcb)
 void Settings::setMouseWheelBehavior(MouseWheelBehavior mwb)
 {
     m_qsettings->setValue("mouse_wheel_behavior", mouseWheelBehaviorToString(mwb));
+    m_qsettings->sync();
+}
+
+void Settings::setInitWindowSizeBehavior(WindowSizeBehavior wsb)
+{
+    m_qsettings->setValue("init_window_size_behavior", windowSizeBehaviorToString(wsb));
     m_qsettings->sync();
 }
 
@@ -74,6 +87,16 @@ QString Settings::mouseWheelBehaviorToString(MouseWheelBehavior mwb)
     return _map.value(mwb, "zoom");
 }
 
+QString Settings::windowSizeBehaviorToString(WindowSizeBehavior wsb)
+{
+    static QMap<WindowSizeBehavior, QString> _map {
+        {ActionAutoSize, "auto"},
+        {ActionMaximize, "maximized"}
+    };
+
+    return _map.value(wsb, "zoom");
+}
+
 DoubleClickBehavior Settings::stringToDoubleClickBehavior(QString str)
 {
     static QMap<QString, DoubleClickBehavior> _map {
@@ -93,6 +116,16 @@ MouseWheelBehavior Settings::stringToMouseWheelBehavior(QString str)
     };
 
     return _map.value(str, ActionZoomImage);
+}
+
+WindowSizeBehavior Settings::stringToWindowSizeBehavior(QString str)
+{
+    static QMap<QString, WindowSizeBehavior> _map {
+        {"auto", ActionAutoSize},
+        {"maximized", ActionMaximize}
+    };
+
+    return _map.value(str, ActionAutoSize);
 }
 
 Settings::Settings()

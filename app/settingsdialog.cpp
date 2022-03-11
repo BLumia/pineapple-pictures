@@ -12,6 +12,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     , m_stayOnTop(new QCheckBox)
     , m_doubleClickBehavior(new QComboBox)
     , m_mouseWheelBehavior(new QComboBox)
+    , m_initWindowSizeBehavior(new QComboBox)
 {
     this->setWindowTitle(tr("Settings"));
 
@@ -28,6 +29,11 @@ SettingsDialog::SettingsDialog(QWidget *parent)
         { ActionPrevNextImage, tr("View next or previous item") }
     };
 
+    static QMap<WindowSizeBehavior, QString> _iws_map {
+        { ActionAutoSize, "Auto size" },
+        { ActionMaximize, "Maximize" }
+    };
+
     QStringList dcbDropDown;
     for (int dcb = DCActionStart; dcb <= DCActionEnd; dcb++) {
         dcbDropDown.append(_dc_map.value(static_cast<DoubleClickBehavior>(dcb)));
@@ -38,9 +44,15 @@ SettingsDialog::SettingsDialog(QWidget *parent)
         mwbDropDown.append(_mw_map.value(static_cast<MouseWheelBehavior>(mwb)));
     }
 
+    QStringList iwsbDropDown;
+    for (int iwsb = IWSActionStart; iwsb <= IWSActionEnd; iwsb++) {
+        iwsbDropDown.append(_iws_map.value(static_cast<WindowSizeBehavior>(iwsb)));
+    }
+
     settingsForm->addRow(tr("Stay on top when start-up"), m_stayOnTop);
     settingsForm->addRow(tr("Double-click behavior"), m_doubleClickBehavior);
     settingsForm->addRow(tr("Mouse wheel behavior"), m_mouseWheelBehavior);
+    settingsForm->addRow("Init window size behavior", m_initWindowSizeBehavior);
 
     m_stayOnTop->setChecked(Settings::instance()->stayOnTop());
     m_doubleClickBehavior->setModel(new QStringListModel(dcbDropDown));
@@ -49,6 +61,9 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     m_mouseWheelBehavior->setModel(new QStringListModel(mwbDropDown));
     MouseWheelBehavior mwb = Settings::instance()->mouseWheelBehavior();
     m_mouseWheelBehavior->setCurrentIndex(static_cast<int>(mwb));
+    m_initWindowSizeBehavior->setModel(new QStringListModel(iwsbDropDown));
+    WindowSizeBehavior iwsb = Settings::instance()->initWindowSizeBehavior();
+    m_initWindowSizeBehavior->setCurrentIndex(static_cast<int>(iwsb));
 
     connect(m_stayOnTop, &QCheckBox::stateChanged, this, [ = ](int state){
         Settings::instance()->setStayOnTop(state == Qt::Checked);
@@ -62,7 +77,11 @@ SettingsDialog::SettingsDialog(QWidget *parent)
         Settings::instance()->setMouseWheelBehavior(static_cast<MouseWheelBehavior>(index));
     });
 
-    this->setMinimumSize(300, 61); // not sure why it complain "Unable to set geometry"
+    connect(m_initWindowSizeBehavior, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [ = ](int index){
+        Settings::instance()->setInitWindowSizeBehavior(static_cast<WindowSizeBehavior>(index));
+    });
+
+    this->setMinimumSize(300, 90); // not sure why it complain "Unable to set geometry"
     setWindowFlag(Qt::WindowContextHelpButtonHint, false);
 }
 

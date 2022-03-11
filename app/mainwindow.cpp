@@ -164,8 +164,22 @@ void MainWindow::showUrls(const QList<QUrl> &urls)
     m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
 }
 
+void MainWindow::initWindowSize()
+{
+    switch (Settings::instance()->initWindowSizeBehavior()) {
+    case ActionAutoSize:
+        adjustWindowSizeBySceneRect();
+        break;
+    case ActionMaximize:
+        showMaximized();
+        break;
+    }
+}
+
 void MainWindow::adjustWindowSizeBySceneRect()
 {
+    if (m_pm->count() < 1) return;
+
     QSize sceneSize = m_graphicsView->sceneRect().toRect().size();
     QSize sceneSizeWithMargins = sceneSize + QSize(130, 125);
 

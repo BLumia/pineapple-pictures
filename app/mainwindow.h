@@ -33,6 +33,7 @@ public:
     ~MainWindow() override;
 
     void showUrls(const QList<QUrl> &urls);
+    void initWindowSize();
     void adjustWindowSizeBySceneRect();
     QUrl currentImageFileUrl() const;
 

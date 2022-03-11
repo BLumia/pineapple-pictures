@@ -118,6 +118,11 @@ int PlaylistManager::indexOf(const QString &filePath)
     return m_playlist.indexOf(url);
 }
 
+int PlaylistManager::count() const
+{
+    return m_playlist.count();
+}
+
 std::tuple<int, QString> PlaylistManager::previousFile() const
 {
     int count = m_playlist.count();
