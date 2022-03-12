@@ -167,11 +167,14 @@ void MainWindow::showUrls(const QList<QUrl> &urls)
 void MainWindow::initWindowSize()
 {
     switch (Settings::instance()->initWindowSizeBehavior()) {
-    case ActionAutoSize:
+    case Settings::WindowSizeBehavior::Auto:
         adjustWindowSizeBySceneRect();
         break;
-    case ActionMaximize:
+    case Settings::WindowSizeBehavior::Maximized:
         showMaximized();
+        break;
+    default:
+        adjustWindowSizeBySceneRect();
         break;
     }
 }
@@ -334,15 +337,15 @@ void MainWindow::mouseDoubleClickEvent(QMouseEvent *event)
     }
 
     switch (Settings::instance()->doubleClickBehavior()) {
-    case ActionCloseWindow:
+    case Settings::DoubleClickBehavior::Close:
         quitAppAction();
         event->accept();
         break;
-    case ActionMaximizeWindow:
+    case Settings::DoubleClickBehavior::Maximize:
         toggleMaximize();
         event->accept();
         break;
-    case ActionDoNothing:
+    case Settings::DoubleClickBehavior::Ignore:
         break;
     }
 
@@ -356,7 +359,7 @@ void MainWindow::wheelEvent(QWheelEvent *event)
     QPoint numDegrees = event->angleDelta() / 8;
     bool needWeelEvent = false, wheelUp = false;
     bool actionIsZoom = event->modifiers().testFlag(Qt::ControlModifier)
-            || Settings::instance()->mouseWheelBehavior() == ActionZoomImage;
+            || Settings::instance()->mouseWheelBehavior() == Settings::MouseWheelBehavior::Zoom;
 
     // NOTE: Only checking angleDelta since the QWheelEvent::pixelDelta() doc says
     //       pixelDelta() value is driver specific and unreliable on X11...

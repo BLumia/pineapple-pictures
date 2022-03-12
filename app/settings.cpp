@@ -4,6 +4,28 @@
 #include <QStandardPaths>
 #include <QDebug>
 #include <QDir>
+#include <QMetaEnum>
+
+namespace QEnumHelper
+{
+    template <typename E>
+    E fromString(const QString &text, const E defaultValue)
+    {
+        bool ok;
+        E result = static_cast<E>(QMetaEnum::fromType<E>().keyToValue(text.toUtf8(), &ok));
+        if (!ok) {
+            return defaultValue;
+        }
+        return result;
+    }
+
+    template <typename E>
+    QString toString(E value)
+    {
+        const int intValue = static_cast<int>(value);
+        return QString::fromUtf8(QMetaEnum::fromType<E>().valueToKey(intValue));
+    }
+}
 
 Settings *Settings::m_settings_instance = nullptr;
 
@@ -21,25 +43,25 @@ bool Settings::stayOnTop()
     return m_qsettings->value("stay_on_top", true).toBool();
 }
 
-DoubleClickBehavior Settings::doubleClickBehavior() const
+Settings::DoubleClickBehavior Settings::doubleClickBehavior() const
 {
-    QString result = m_qsettings->value("double_click_behavior", "close").toString().toLower();
+    QString result = m_qsettings->value("double_click_behavior", "Close").toString();
 
-    return stringToDoubleClickBehavior(result);
+    return QEnumHelper::fromString<DoubleClickBehavior>(result, DoubleClickBehavior::Close);
 }
 
-MouseWheelBehavior Settings::mouseWheelBehavior() const
+Settings::MouseWheelBehavior Settings::mouseWheelBehavior() const
 {
-    QString result = m_qsettings->value("mouse_wheel_behavior", "close").toString().toLower();
+    QString result = m_qsettings->value("mouse_wheel_behavior", "Zoom").toString();
 
-    return stringToMouseWheelBehavior(result);
+    return QEnumHelper::fromString<MouseWheelBehavior>(result, MouseWheelBehavior::Zoom);
 }
 
-WindowSizeBehavior Settings::initWindowSizeBehavior() const
+Settings::WindowSizeBehavior Settings::initWindowSizeBehavior() const
 {
-    QString result = m_qsettings->value("init_window_size_behavior", "auto").toString().toLower();
+    QString result = m_qsettings->value("init_window_size_behavior", "Auto").toString();
 
-    return stringToWindowSizeBehavior(result);
+    return QEnumHelper::fromString<WindowSizeBehavior>(result, WindowSizeBehavior::Auto);
 }
 
 void Settings::setStayOnTop(bool on)
@@ -50,82 +72,20 @@ void Settings::setStayOnTop(bool on)
 
 void Settings::setDoubleClickBehavior(DoubleClickBehavior dcb)
 {
-    m_qsettings->setValue("double_click_behavior", doubleClickBehaviorToString(dcb));
+    m_qsettings->setValue("double_click_behavior", QEnumHelper::toString(dcb));
     m_qsettings->sync();
 }
 
 void Settings::setMouseWheelBehavior(MouseWheelBehavior mwb)
 {
-    m_qsettings->setValue("mouse_wheel_behavior", mouseWheelBehaviorToString(mwb));
+    m_qsettings->setValue("mouse_wheel_behavior", QEnumHelper::toString(mwb));
     m_qsettings->sync();
 }
 
 void Settings::setInitWindowSizeBehavior(WindowSizeBehavior wsb)
 {
-    m_qsettings->setValue("init_window_size_behavior", windowSizeBehaviorToString(wsb));
+    m_qsettings->setValue("init_window_size_behavior", QEnumHelper::toString(wsb));
     m_qsettings->sync();
-}
-
-QString Settings::doubleClickBehaviorToString(DoubleClickBehavior dcb)
-{
-    static QMap<DoubleClickBehavior, QString> _map {
-        {ActionCloseWindow, "close"},
-        {ActionMaximizeWindow, "maximize"},
-        {ActionDoNothing, "ignore"}
-    };
-
-    return _map.value(dcb, "close");
-}
-
-QString Settings::mouseWheelBehaviorToString(MouseWheelBehavior mwb)
-{
-    static QMap<MouseWheelBehavior, QString> _map {
-        {ActionZoomImage, "zoom"},
-        {ActionPrevNextImage, "switch"}
-    };
-
-    return _map.value(mwb, "zoom");
-}
-
-QString Settings::windowSizeBehaviorToString(WindowSizeBehavior wsb)
-{
-    static QMap<WindowSizeBehavior, QString> _map {
-        {ActionAutoSize, "auto"},
-        {ActionMaximize, "maximized"}
-    };
-
-    return _map.value(wsb, "zoom");
-}
-
-DoubleClickBehavior Settings::stringToDoubleClickBehavior(QString str)
-{
-    static QMap<QString, DoubleClickBehavior> _map {
-        {"close", ActionCloseWindow},
-        {"maximize", ActionMaximizeWindow},
-        {"ignore", ActionDoNothing}
-    };
-
-    return _map.value(str, ActionCloseWindow);
-}
-
-MouseWheelBehavior Settings::stringToMouseWheelBehavior(QString str)
-{
-    static QMap<QString, MouseWheelBehavior> _map {
-        {"zoom", ActionZoomImage},
-        {"switch", ActionPrevNextImage}
-    };
-
-    return _map.value(str, ActionZoomImage);
-}
-
-WindowSizeBehavior Settings::stringToWindowSizeBehavior(QString str)
-{
-    static QMap<QString, WindowSizeBehavior> _map {
-        {"auto", ActionAutoSize},
-        {"maximized", ActionMaximize}
-    };
-
-    return _map.value(str, ActionAutoSize);
 }
 
 Settings::Settings()

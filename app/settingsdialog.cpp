@@ -18,35 +18,35 @@ SettingsDialog::SettingsDialog(QWidget *parent)
 
     QFormLayout * settingsForm = new QFormLayout(this);
 
-    static QMap<DoubleClickBehavior, QString> _dc_map {
-        { ActionDoNothing, tr("Do nothing") },
-        { ActionCloseWindow, tr("Close the window") },
-        { ActionMaximizeWindow, tr("Toggle maximize") }
+    static QList< QPair<Settings::DoubleClickBehavior, QString> > _dc_options {
+        { Settings::DoubleClickBehavior::Ignore, tr("Do nothing") },
+        { Settings::DoubleClickBehavior::Close, tr("Close the window") },
+        { Settings::DoubleClickBehavior::Maximize, tr("Toggle maximize") }
     };
 
-    static QMap<MouseWheelBehavior, QString> _mw_map {
-        { ActionZoomImage, tr("Zoom in and out") },
-        { ActionPrevNextImage, tr("View next or previous item") }
+    static QList< QPair<Settings::MouseWheelBehavior, QString> > _mw_options {
+        { Settings::MouseWheelBehavior::Zoom, tr("Zoom in and out") },
+        { Settings::MouseWheelBehavior::Switch, tr("View next or previous item") }
     };
 
-    static QMap<WindowSizeBehavior, QString> _iws_map {
-        { ActionAutoSize, "Auto size" },
-        { ActionMaximize, "Maximize" }
+    static QList< QPair<Settings::WindowSizeBehavior, QString> > _iws_options {
+        { Settings::WindowSizeBehavior::Auto, "Auto size" },
+        { Settings::WindowSizeBehavior::Maximized, "Maximize" }
     };
 
     QStringList dcbDropDown;
-    for (int dcb = DCActionStart; dcb <= DCActionEnd; dcb++) {
-        dcbDropDown.append(_dc_map.value(static_cast<DoubleClickBehavior>(dcb)));
+    for (const QPair<Settings::DoubleClickBehavior, QString> & dcOption : _dc_options) {
+        dcbDropDown.append(dcOption.second);
     }
 
     QStringList mwbDropDown;
-    for (int mwb = MWActionStart; mwb <= MWActionEnd; mwb++) {
-        mwbDropDown.append(_mw_map.value(static_cast<MouseWheelBehavior>(mwb)));
+    for (const QPair<Settings::MouseWheelBehavior, QString> & mwOption : _mw_options) {
+        mwbDropDown.append(mwOption.second);
     }
 
     QStringList iwsbDropDown;
-    for (int iwsb = IWSActionStart; iwsb <= IWSActionEnd; iwsb++) {
-        iwsbDropDown.append(_iws_map.value(static_cast<WindowSizeBehavior>(iwsb)));
+    for (const QPair<Settings::WindowSizeBehavior, QString> & iwsOption : _iws_options) {
+        iwsbDropDown.append(iwsOption.second);
     }
 
     settingsForm->addRow(tr("Stay on top when start-up"), m_stayOnTop);
@@ -56,13 +56,13 @@ SettingsDialog::SettingsDialog(QWidget *parent)
 
     m_stayOnTop->setChecked(Settings::instance()->stayOnTop());
     m_doubleClickBehavior->setModel(new QStringListModel(dcbDropDown));
-    DoubleClickBehavior dcb = Settings::instance()->doubleClickBehavior();
+    Settings::DoubleClickBehavior dcb = Settings::instance()->doubleClickBehavior();
     m_doubleClickBehavior->setCurrentIndex(static_cast<int>(dcb));
     m_mouseWheelBehavior->setModel(new QStringListModel(mwbDropDown));
-    MouseWheelBehavior mwb = Settings::instance()->mouseWheelBehavior();
+    Settings::MouseWheelBehavior mwb = Settings::instance()->mouseWheelBehavior();
     m_mouseWheelBehavior->setCurrentIndex(static_cast<int>(mwb));
     m_initWindowSizeBehavior->setModel(new QStringListModel(iwsbDropDown));
-    WindowSizeBehavior iwsb = Settings::instance()->initWindowSizeBehavior();
+    Settings::WindowSizeBehavior iwsb = Settings::instance()->initWindowSizeBehavior();
     m_initWindowSizeBehavior->setCurrentIndex(static_cast<int>(iwsb));
 
     connect(m_stayOnTop, &QCheckBox::stateChanged, this, [ = ](int state){
@@ -70,15 +70,15 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     });
 
     connect(m_doubleClickBehavior, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [ = ](int index){
-        Settings::instance()->setDoubleClickBehavior(static_cast<DoubleClickBehavior>(index));
+        Settings::instance()->setDoubleClickBehavior(_dc_options.at(index).first);
     });
 
     connect(m_mouseWheelBehavior, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [ = ](int index){
-        Settings::instance()->setMouseWheelBehavior(static_cast<MouseWheelBehavior>(index));
+        Settings::instance()->setMouseWheelBehavior(_mw_options.at(index).first);
     });
 
     connect(m_initWindowSizeBehavior, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [ = ](int index){
-        Settings::instance()->setInitWindowSizeBehavior(static_cast<WindowSizeBehavior>(index));
+        Settings::instance()->setInitWindowSizeBehavior(_iws_options.at(index).first);
     });
 
     this->setMinimumSize(300, 90); // not sure why it complain "Unable to set geometry"
