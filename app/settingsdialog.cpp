@@ -29,6 +29,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
         { Settings::MouseWheelBehavior::Switch, tr("View next or previous item") }
     };
 
+    // TODO: copywriting
     static QList< QPair<Settings::WindowSizeBehavior, QString> > _iws_options {
         { Settings::WindowSizeBehavior::Auto, "Auto size" },
         { Settings::WindowSizeBehavior::Maximized, "Maximize" }
@@ -52,7 +53,8 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     settingsForm->addRow(tr("Stay on top when start-up"), m_stayOnTop);
     settingsForm->addRow(tr("Double-click behavior"), m_doubleClickBehavior);
     settingsForm->addRow(tr("Mouse wheel behavior"), m_mouseWheelBehavior);
-    settingsForm->addRow("Init window size behavior", m_initWindowSizeBehavior);
+    // TODO: copywriting
+    // settingsForm->addRow("Init window size behavior", m_initWindowSizeBehavior);
 
     m_stayOnTop->setChecked(Settings::instance()->stayOnTop());
     m_doubleClickBehavior->setModel(new QStringListModel(dcbDropDown));
