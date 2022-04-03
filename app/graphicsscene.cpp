@@ -21,6 +21,18 @@ public:
         m_scaleHint = scaleHint;
     }
 
+    const QPixmap & scaledPixmap(float scaleHint) {
+        if (qFuzzyCompare(scaleHint, m_cachedScaleHint)) return m_cachedPixmap;
+        QSizeF resizedScale(boundingRect().size());
+        resizedScale *= scaleHint;
+        m_cachedPixmap = pixmap().scaled(
+             resizedScale.toSize(),
+             Qt::KeepAspectRatio,
+             Qt::SmoothTransformation);
+        m_cachedScaleHint = scaleHint;
+        return m_cachedPixmap;
+    }
+
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
                QWidget *widget) override
     {
@@ -28,18 +40,15 @@ public:
             return QGraphicsPixmapItem::paint(painter, option, widget);
         } else {
 //            painter->setRenderHints(QPainter::Antialiasing);
-            QSizeF resizedScale(boundingRect().size());
-            resizedScale *= m_scaleHint;
             painter->drawPixmap(QRectF(offset(), boundingRect().size()).toRect(),
-                                pixmap().scaled(resizedScale.toSize(),
-                                                Qt::KeepAspectRatio,
-                                                Qt::SmoothTransformation)
-                                );
+                                scaledPixmap(m_scaleHint));
         }
     }
 
 private:
     float m_scaleHint = 1;
+    float m_cachedScaleHint = -1;
+    QPixmap m_cachedPixmap;
 };
 
 GraphicsScene::GraphicsScene(QObject *parent)
