@@ -173,7 +173,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../graphicsscene.cpp" line="48"/>
+        <location filename="../graphicsscene.cpp" line="57"/>
         <source>Drag image here</source>
         <translation>拖放图片至此</translation>
     </message>
@@ -215,7 +215,7 @@
         <translation>文件 URL 列表为空</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="386"/>
+        <location filename="../mainwindow.cpp" line="403"/>
         <source>&amp;Copy</source>
         <translation>复制(&amp;C)</translation>
     </message>
@@ -644,49 +644,64 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="16"/>
+        <location filename="../settingsdialog.cpp" line="17"/>
         <source>Settings</source>
         <translation>设定</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="21"/>
+        <location filename="../settingsdialog.cpp" line="22"/>
         <source>Do nothing</source>
         <translation>什么也不做</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="22"/>
+        <location filename="../settingsdialog.cpp" line="23"/>
         <source>Close the window</source>
         <translation>关闭窗口</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="23"/>
+        <location filename="../settingsdialog.cpp" line="24"/>
         <source>Toggle maximize</source>
         <translation>最大化窗口</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="27"/>
+        <location filename="../settingsdialog.cpp" line="28"/>
         <source>Zoom in and out</source>
         <translation>放大和缩小</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="28"/>
+        <location filename="../settingsdialog.cpp" line="29"/>
         <source>View next or previous item</source>
         <translation>查看下一项或上一项</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="41"/>
+        <location filename="../settingsdialog.cpp" line="33"/>
+        <source>Auto size</source>
+        <translation>自动大小</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="34"/>
+        <source>Maximized</source>
+        <translation>最大化</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="52"/>
         <source>Stay on top when start-up</source>
         <translation>启动时保持窗口总在最前</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="42"/>
+        <location filename="../settingsdialog.cpp" line="53"/>
         <source>Double-click behavior</source>
         <translation>双击时的行为</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="43"/>
+        <location filename="../settingsdialog.cpp" line="54"/>
         <source>Mouse wheel behavior</source>
         <translation>鼠标滚轮行为</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="55"/>
+        <source>Default window size</source>
+        <translation>默认窗口大小</translation>
     </message>
 </context>
 <context>

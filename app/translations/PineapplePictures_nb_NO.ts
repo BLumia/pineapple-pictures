@@ -173,7 +173,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../graphicsscene.cpp" line="48"/>
+        <location filename="../graphicsscene.cpp" line="57"/>
         <source>Drag image here</source>
         <translation>Dra bilde hit</translation>
     </message>
@@ -215,7 +215,7 @@
         <translation>Listen over filnettadresser er ugyldig</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="386"/>
+        <location filename="../mainwindow.cpp" line="403"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopier</translation>
     </message>
@@ -644,49 +644,64 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="16"/>
+        <location filename="../settingsdialog.cpp" line="17"/>
         <source>Settings</source>
         <translation>Innstillinger</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="21"/>
+        <location filename="../settingsdialog.cpp" line="22"/>
         <source>Do nothing</source>
         <translation>Ikke gjør noe</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="22"/>
+        <location filename="../settingsdialog.cpp" line="23"/>
         <source>Close the window</source>
         <translation>Lukk vinduet</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="23"/>
+        <location filename="../settingsdialog.cpp" line="24"/>
         <source>Toggle maximize</source>
         <translation>Veksle maksimering</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="27"/>
+        <location filename="../settingsdialog.cpp" line="28"/>
         <source>Zoom in and out</source>
         <translation>Zoom inn og ut</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="28"/>
+        <location filename="../settingsdialog.cpp" line="29"/>
         <source>View next or previous item</source>
         <translation>Vis neste eller forrige element</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="41"/>
+        <location filename="../settingsdialog.cpp" line="33"/>
+        <source>Auto size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="34"/>
+        <source>Maximized</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="52"/>
         <source>Stay on top when start-up</source>
         <translation>Behold i forgrunnen ved oppstart</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="42"/>
+        <location filename="../settingsdialog.cpp" line="53"/>
         <source>Double-click behavior</source>
         <translation>Dobbeltklikksoppførsel</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="43"/>
+        <location filename="../settingsdialog.cpp" line="54"/>
         <source>Mouse wheel behavior</source>
         <translation>Musehjulsoppførsel</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="55"/>
+        <source>Default window size</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

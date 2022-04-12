@@ -173,7 +173,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../graphicsscene.cpp" line="48"/>
+        <location filename="../graphicsscene.cpp" line="57"/>
         <source>Drag image here</source>
         <translation>Перетащите изображение сюда</translation>
     </message>
@@ -215,7 +215,7 @@
         <translation>Список URL-адресов файлов пуст</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="386"/>
+        <location filename="../mainwindow.cpp" line="403"/>
         <source>&amp;Copy</source>
         <translation>&amp;Скопировать</translation>
     </message>
@@ -644,49 +644,64 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="16"/>
+        <location filename="../settingsdialog.cpp" line="17"/>
         <source>Settings</source>
         <translation>Параметры</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="21"/>
+        <location filename="../settingsdialog.cpp" line="22"/>
         <source>Do nothing</source>
         <translation>Ничего не делать</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="22"/>
+        <location filename="../settingsdialog.cpp" line="23"/>
         <source>Close the window</source>
         <translation>Закрыть окно</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="23"/>
+        <location filename="../settingsdialog.cpp" line="24"/>
         <source>Toggle maximize</source>
         <translation>Переключить окно</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="27"/>
+        <location filename="../settingsdialog.cpp" line="28"/>
         <source>Zoom in and out</source>
         <translation>Увеличение и уменьшение масштаба</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="28"/>
+        <location filename="../settingsdialog.cpp" line="29"/>
         <source>View next or previous item</source>
         <translation>Следующее или предыдущее изображение</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="41"/>
+        <location filename="../settingsdialog.cpp" line="33"/>
+        <source>Auto size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="34"/>
+        <source>Maximized</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="52"/>
         <source>Stay on top when start-up</source>
         <translation>Поверх всех окон при запуске</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="42"/>
+        <location filename="../settingsdialog.cpp" line="53"/>
         <source>Double-click behavior</source>
         <translation>Действие при двойном щелчке</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="43"/>
+        <location filename="../settingsdialog.cpp" line="54"/>
         <source>Mouse wheel behavior</source>
         <translation>Действие колеса мыши</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="55"/>
+        <source>Default window size</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
