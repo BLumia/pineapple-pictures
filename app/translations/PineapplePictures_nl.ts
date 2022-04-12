@@ -676,12 +676,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Auto size</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatische grootte</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>Maximized</source>
-        <translation type="unfinished"></translation>
+        <translation>Gemaximaliseerd</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="52"/>
@@ -701,7 +701,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="55"/>
         <source>Default window size</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaard vensterafmetingen</translation>
     </message>
 </context>
 <context>
