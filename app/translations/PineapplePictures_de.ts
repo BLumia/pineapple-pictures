@@ -21,7 +21,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="28"/>
         <source>None of the operations in this application will alter the pictures on disk.</source>
-        <translation type="unfinished"></translation>
+        <translation>Keine der Änderungen in dieser Anwendung modifizieren die abgespeicherten Bilder.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="29"/>
@@ -112,7 +112,7 @@
         <location filename="../aboutdialog.cpp" line="50"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Copyright (c) %1 %2</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="82"/>
@@ -249,57 +249,57 @@
     <message>
         <location filename="../actionmanager.cpp" line="72"/>
         <source>Zoom in</source>
-        <translation type="unfinished"></translation>
+        <translation>Hineinzoomen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="73"/>
         <source>Zoom out</source>
-        <translation type="unfinished"></translation>
+        <translation>Herauszoomen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Horizontal spiegeln</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="85"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>%Einfügen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
         <source>Toggle Checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Schachbrettmuster umschalten</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>&amp;Open...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Öffnen...</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>Actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tatsächliche Größe</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished">Maximieren umschalten</translation>
+        <translation>Maximieren umschalten</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
         <source>Rotate right</source>
-        <translation type="unfinished"></translation>
+        <translation>Nach rechts drehen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="77"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorheriges Bild</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>Nächstes Bild</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
@@ -315,17 +315,17 @@
         <location filename="../actionmanager.cpp" line="92"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
-        <translation type="unfinished"></translation>
+        <translation>Im Dateiexplorer zeigen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
         <source>Show in directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Im Verzeichnis zeigen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
         <source>Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>Beenden</translation>
     </message>
 </context>
 <context>
@@ -398,7 +398,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="52"/>
         <source>Frame count</source>
-        <translation type="unfinished"></translation>
+        <translation>Framezahl</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="56"/>
@@ -433,12 +433,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="73"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Titel</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="75"/>
         <source>Subject</source>
-        <translation type="unfinished"></translation>
+        <translation>Betreff</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="77"/>
@@ -448,7 +448,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="79"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Tags</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="81"/>
@@ -473,7 +473,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="94"/>
         <source>Copyright</source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="97"/>
@@ -593,7 +593,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="146"/>
         <source>Latitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Breitengradbezug</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="148"/>
@@ -603,7 +603,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="150"/>
         <source>Longitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Längengradbezug</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="152"/>
@@ -613,7 +613,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="154"/>
         <source>Altitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Höhenbezug</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="156"/>
@@ -666,22 +666,22 @@
     <message>
         <location filename="../settingsdialog.cpp" line="28"/>
         <source>Zoom in and out</source>
-        <translation type="unfinished"></translation>
+        <translation>Hinein- und Hinauszoomen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="29"/>
         <source>View next or previous item</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeige nächstes oder vorheriges Element</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Auto size</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatische Größe</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>Maximized</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximiert</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="52"/>
@@ -696,12 +696,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="54"/>
         <source>Mouse wheel behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Mausradverhalten</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="55"/>
         <source>Default window size</source>
-        <translation type="unfinished"></translation>
+        <translation>Standard-Fenstergröße</translation>
     </message>
 </context>
 <context>
