@@ -91,7 +91,7 @@
         <location filename="../aboutdialog.cpp" line="118"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation>%1 aşağıdaki ücretsiz yazılım kitaplıkları üzerinde inşa edilmiştir:</translation>
+        <translation>%1 aşağıdaki özgür yazılım kitaplıkları üzerinde inşa edilmiştir:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="142"/>
@@ -112,7 +112,7 @@
         <location filename="../aboutdialog.cpp" line="50"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Telif Hakkı (c) %1 %2</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="82"/>
@@ -183,7 +183,7 @@
     <message>
         <location filename="../graphicsview.cpp" line="333"/>
         <source>File url list is empty</source>
-        <translation>Dosya url listesi boş</translation>
+        <translation>Dosya URL listesi boş</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="52"/>
@@ -212,7 +212,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="160"/>
         <source>File url list is empty</source>
-        <translation>Dosya url listesi boş</translation>
+        <translation>Dosya URL listesi boş</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="403"/>
@@ -274,12 +274,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>&amp;Open...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aç...</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>Actual size</source>
-        <translation>Mevcut boyut</translation>
+        <translation>Gerçek boyut</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
@@ -294,12 +294,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="77"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>Önceki resim</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>Sonraki resim</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
@@ -315,12 +315,12 @@
         <location filename="../actionmanager.cpp" line="92"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Gezgini&apos;nde Göster</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
         <source>Show in directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Dizinde göster</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
@@ -533,7 +533,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="120"/>
         <source>Max aperture</source>
-        <translation>Maks. açıklık</translation>
+        <translation>Azami açıklık</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="122"/>
@@ -676,12 +676,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Auto size</source>
-        <translation type="unfinished"></translation>
+        <translation>Otomatik boyut</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>Maximized</source>
-        <translation type="unfinished"></translation>
+        <translation>Tam boyut</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="52"/>
@@ -701,7 +701,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="55"/>
         <source>Default window size</source>
-        <translation type="unfinished"></translation>
+        <translation>Öntanımlı pencere boyutu</translation>
     </message>
 </context>
 <context>
