@@ -1,30 +1,56 @@
-name: Ubuntu 20.04 CI
+name: Ubuntu CI
 
 on: [push, pull_request]
 
 jobs:
-  build:
+  ubuntu-20-04-build:
 
     runs-on: ubuntu-20.04
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Get build dept.
-      run: |
-        sudo apt update
-        sudo apt install cmake qtbase5-dev libqt5svg5-dev qttools5-dev libexiv2-dev
-    - name: Build it
-      run: |
-        mkdir build
-        cd build
-        cmake ../
-        make
-        cpack -G DEB
-    - name: Try install it
-      run: |
-        cd build
-        sudo apt install ./*.deb
-    - uses: actions/upload-artifact@v2
-      with:
-        name: ubuntu-20.04-deb-package
-        path: build/*.deb
+      - uses: actions/checkout@v1
+      - name: Get build dept.
+        run: |
+          sudo apt update
+          sudo apt install cmake qtbase5-dev libqt5svg5-dev qttools5-dev libexiv2-dev
+      - name: Build it
+        run: |
+          mkdir build
+          cd build
+          cmake ../
+          make
+          cpack -G DEB
+      - name: Try install it
+        run: |
+          cd build
+          sudo apt install ./*.deb
+      - uses: actions/upload-artifact@v2
+        with:
+          name: ubuntu-20.04-deb-package
+          path: build/*.deb
+
+  ubuntu-22-04-build:
+
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get build dept.
+        run: |
+          sudo apt update
+          sudo apt install cmake qtbase5-dev libqt5svg5-dev qttools5-dev libexiv2-dev
+      - name: Build it
+        run: |
+          mkdir build
+          cd build
+          cmake ../
+          make
+          cpack -G DEB
+      - name: Try install it
+        run: |
+          cd build
+          sudo apt install ./*.deb
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ubuntu-22.04-deb-package
+          path: build/*.deb
