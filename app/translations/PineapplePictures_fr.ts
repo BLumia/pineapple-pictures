@@ -676,12 +676,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Auto size</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille automatique</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>Maximized</source>
-        <translation type="unfinished"></translation>
+        <translation>Agrandi</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="52"/>
