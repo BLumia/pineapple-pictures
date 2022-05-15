@@ -3,8 +3,8 @@ Yet another image viewer.
 |CI|Build Status|
 |---|---|
 |Windows Build|[![Windows build status](https://ci.appveyor.com/api/projects/status/dbd8clww3cit6oa0/branch/master?svg=true)](https://ci.appveyor.com/project/BLumia/pineapplepictures/branch/master)|
-|macOS Build|![macOS CI](https://github.com/BLumia/pineapple-pictures/workflows/macOS%20CI/badge.svg)|
-|Ubuntu 20.04 Build|![Ubuntu 20.04 CI](https://github.com/BLumia/pineapple-pictures/workflows/Ubuntu%2020.04%20CI/badge.svg)|
+|macOS Build|[![macOS CI](https://github.com/BLumia/pineapple-pictures/actions/workflows/macos.yml/badge.svg)](https://github.com/BLumia/pineapple-pictures/actions/workflows/macos.yml)|
+|Ubuntu Build|[![Ubuntu CI](https://github.com/BLumia/pineapple-pictures/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/BLumia/pineapple-pictures/actions/workflows/ubuntu.yml)|
 
 ![Pineapple Pictures - Main Window](https://repository-images.githubusercontent.com/211888654/e8697600-e370-11eb-9b2a-b71e05262954)
 
