@@ -82,3 +82,8 @@ RC_ICONS = assets/icons/app-icon.ico
 QMAKE_TARGET_PRODUCT = Pineapple Pictures
 QMAKE_TARGET_DESCRIPTION = Pineapple Pictures - Image Viewer
 QMAKE_TARGET_COPYRIGHT = MIT/Expat License - Copyright (C) 2020 Gary Wang
+
+# MSVC only, since QMake doesn't have a CMAKE_CXX_STANDARD_LIBRARIES or cpp_winlibs similar thing
+win32-msvc* {
+    LIBS += -luser32
+}

@@ -1,0 +1,30 @@
+name: Windows CI
+
+on: [push, pull_request]
+
+jobs:
+  msvc-build:
+  
+    strategy:
+      matrix:
+        vs: ['2019']
+        msvc_arch: ['x64']
+
+    runs-on: windows-2019
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v2
+      with:
+        arch: 'win64_msvc2019_64'
+        version: '5.15.2'
+    - name: Build
+      shell: cmd
+      run: |
+        set VS=${{ matrix.vs }}
+        set VCVARS="C:\Program Files (x86)\Microsoft Visual Studio\%VS%\Enterprise\VC\Auxiliary\Build\vcvarsall.bat"
+        if not exist %VCVARS% set VCVARS="C:\Program Files\Microsoft Visual Studio\%VS%\Enterprise\VC\Auxiliary\Build\vcvarsall.bat"
+        call %VCVARS% ${{ matrix.msvc_arch }}
+        qmake pineapple-pictures.pro
+        nmake
