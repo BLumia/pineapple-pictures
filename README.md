@@ -48,6 +48,9 @@ The project will try to build with `exiv2` when it's available at build time, if
 
 Image formats supports rely on Qt's imageformats plugins, just get the plugins you need from your distro's package manager will be fine. For Windows user, you may need build and install the imageformats plugin manually, read the content below.
 
+> **Note**
+> Although there is a `pineapple-pictures.pro` file which can be used for QMake build, it's only for testing purpose and it doesn't have `exiv2` support included. Using QMake to build this project is NOT supported, please use CMake if possible.
+
 ### Linux
 
 Just normal build process as other program will be fine. Nothing special ;)
