@@ -74,7 +74,7 @@ MainWindow::MainWindow(QWidget *parent)
     m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
 
     connect(m_graphicsView, &GraphicsView::navigatorViewRequired,
-            this, [ = ](bool required, QTransform tf){
+            this, [ = ](bool required, const QTransform & tf){
         m_gv->setTransform(GraphicsView::resetScale(tf));
         m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
         m_gv->setVisible(required);
