@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2022 Gary Wang <wzc782970009@gmail.com>
+#
+# SPDX-License-Identifier: MIT
+
 QT       += core widgets gui svg
 greaterThan(QT_MAJOR_VERSION, 5): QT += svgwidgets
 

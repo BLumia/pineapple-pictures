@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2022 Gary Wang <wzc782970009@gmail.com>
+//
+// SPDX-License-Identifier: MIT
+
 #ifndef GRAPHICSSCENE_H
 #define GRAPHICSSCENE_H
 

@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2022 Gary Wang <wzc782970009@gmail.com>
+#
+# SPDX-License-Identifier: MIT
+
 project (pineapple-pictures)
 
 cmake_minimum_required (VERSION 3.9.5)

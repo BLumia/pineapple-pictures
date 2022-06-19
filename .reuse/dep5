@@ -1,0 +1,28 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Pineapple Pictures
+Source: https://github.com/BLumia/pineapple-pictures
+
+# Config files
+Files: .gitignore appveyor.yml .github/*
+Copyright: None
+License: CC0-1.0
+
+# README, resource files and Metadata files
+Files: README*.md assets/*.rc assets/*.qrc dist/*
+Copyright: None
+License: CC0-1.0
+
+# Translation files
+# See assets/plain/translators.html for a list of translators
+Files: app/translations/*.ts assets/plain/translators.html
+Copyright: Translators from hosted.weblate.org
+License: MIT
+
+# Assets
+Files: assets/icons/*.svg
+Copyright: 2022 Gary Wang
+License: MIT
+
+Files: assets/icons/app-icon.*
+Copyright: 2020 Lovelyblack
+License: MIT

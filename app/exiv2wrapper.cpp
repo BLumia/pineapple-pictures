@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2022 Gary Wang <wzc782970009@gmail.com>
+//
+// SPDX-License-Identifier: MIT
+
 #include "exiv2wrapper.h"
 
 #ifdef HAVE_EXIV2_VERSION

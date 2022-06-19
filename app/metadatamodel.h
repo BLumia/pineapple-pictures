@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2022 Gary Wang <wzc782970009@gmail.com>
+//
+// SPDX-License-Identifier: MIT
+
 #ifndef METADATAMODEL_H
 #define METADATAMODEL_H
 
