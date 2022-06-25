@@ -15,11 +15,15 @@ FramelessWindow::FramelessWindow(QWidget *parent)
     : QWidget(parent)
     , m_centralLayout(new QVBoxLayout(this))
 {
-    // We should use Qt::WindowMinMaxButtonsHint here but there is a bug in Qt
-    // that will make pressing Meta+Up cause the app fullscreen under Windows,
-    // so for now we only use the Qt::WindowMinimizeButtonHint flag here.
-    // https://bugreports.qt.io/browse/QTBUG-91226
+    // TODO: Remove the comment below when we switch to Qt 6 completely.
+    // There is a bug in Qt 5 that will make pressing Meta+Up cause the app
+    // fullscreen under Windows, see QTBUG-91226 to learn more.
+    // The bug seems no longer exists in Qt 6 (I only tested it under Qt 6.3.0).
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinMaxButtonsHint);
+#else
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint);
+#endif // QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 
     m_centralLayout->setContentsMargins(QMargins());
 }
