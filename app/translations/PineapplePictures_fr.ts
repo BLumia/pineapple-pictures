@@ -701,7 +701,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="55"/>
         <source>Default window size</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille de la fenêtre par défaut</translation>
     </message>
 </context>
 <context>
