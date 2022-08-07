@@ -213,7 +213,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="403"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>コピー(&amp;C)</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="83"/>
@@ -290,17 +290,17 @@
     <message>
         <location filename="../actionmanager.cpp" line="77"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>前の画像</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>次の画像</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
         <source>Configure...</source>
-        <translation type="unfinished"></translation>
+        <translation>設定...</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="89"/>
@@ -692,7 +692,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="54"/>
         <source>Mouse wheel behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>マウスホイールの挙動</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="55"/>
