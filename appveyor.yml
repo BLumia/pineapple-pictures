@@ -69,9 +69,9 @@ build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
 # install libavif for avif format support of KImageFormats
   - cd %LIBAVIF%
-  - curl -fsSL -o libavif-v0_9_0.zip https://github.com/AOMediaCodec/libavif/archive/v0.9.0.zip
-  - 7z x libavif-v0_9_0.zip -y
-  - cd libavif-0.9.0
+  - curl -fsSL -o libavif-v0_10_1.zip https://github.com/AOMediaCodec/libavif/archive/v0.10.1.zip
+  - 7z x libavif-v0_10_1.zip -y
+  - cd libavif-0.10.1
   - mkdir build
   - cd build
   - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_PREFIX% -DAVIF_CODEC_AOM=ON
@@ -91,9 +91,9 @@ build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
 # build libexpat for libexiv2
   - cd %LIBEXPAT%
-  - curl -fsSL -o R_2_4_1.zip https://github.com/libexpat/libexpat/archive/R_2_4_1.zip
-  - 7z x R_2_4_1.zip -y
-  - cd libexpat-R_2_4_1/expat/
+  - curl -fsSL -o R_2_4_8.zip https://github.com/libexpat/libexpat/archive/R_2_4_8.zip
+  - 7z x R_2_4_8.zip -y
+  - cd libexpat-R_2_4_8/expat/
   - cmake -G "Ninja" . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_PREFIX% -DEXPAT_BUILD_EXAMPLES=OFF -DEXPAT_BUILD_TESTS=OFF -DEXPAT_BUILD_TOOLS=OFF
   - cmake --build . --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
@@ -138,8 +138,8 @@ build_script:
   - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\aom\LICENSE License.aom.txt
   - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\karchive\LICENSES\LGPL-2.0-or-later.txt License.KArchive.txt
   - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\kimageformats\LICENSES\LGPL-2.1-or-later.txt License.kimageformats.txt
-  - copy %LIBEXPAT%\libexpat-R_2_4_1\expat\COPYING License.expat.txt
-  - copy %LIBAVIF%\libavif-0.9.0\LICENSE License.libavif.txt
+  - copy %LIBEXPAT%\libexpat-R_2_4_8\expat\COPYING License.expat.txt
+  - copy %LIBAVIF%\libavif-0.10.1\LICENSE License.libavif.txt
   - copy %LIBEXIV2%\exiv2-0.27.5\COPYING License.exiv2.txt
 # TODO: Qt, zlib
   - cd ..
