@@ -11,7 +11,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="26"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation>Lanza la aplicación con la ruta del archivo de imagen como argumento para cargar el archivo.</translation>
+        <translation>Inicia la aplicación con la ruta del archivo de imagen como argumento para cargar el archivo.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="27"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="28"/>
         <source>None of the operations in this application will alter the pictures on disk.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ninguna de las operaciones en esta aplicación alterará las imágenes en el disco.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="29"/>
@@ -101,73 +101,73 @@
     <message>
         <location filename="../aboutdialog.cpp" line="144"/>
         <source>&amp;Third-party Libraries</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bibliotecas de Terceros</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="80"/>
         <source>Your Rights</source>
-        <translation type="unfinished"></translation>
+        <translation>Tus Derechos</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="50"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Copyright (c) %1 %2</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="82"/>
         <source>%1 is released under the MIT License.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 se liberó bajo la MIT License.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="83"/>
         <source>This license grants people a number of freedoms:</source>
-        <translation type="unfinished"></translation>
+        <translation>Esta licencia otorga a las personas una serie de libertades:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="84"/>
         <source>You are free to use %1, for any purpose</source>
-        <translation type="unfinished"></translation>
+        <translation>Eres libre de usar %1, para cualquier propósito</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="85"/>
         <source>You are free to distribute %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Eres libre de distribuir %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="86"/>
         <source>You can study how %1 works and change it</source>
-        <translation type="unfinished"></translation>
+        <translation>Puedes estudiar cómo funciona %1 y modificarlo</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="87"/>
         <source>You can distribute changed versions of %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Puedes distribuir versiones modificadas de %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="89"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
-        <translation type="unfinished"></translation>
+        <translation>La MIT license te garantiza esta libertad. A nadie nunca se le permite quitártela.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="117"/>
         <source>Third-party Libraries used by %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Bibliotecas de terceros utilizadas por %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="140"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ayuda</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="141"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Acerca de</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="143"/>
         <source>&amp;License</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Licencia</translation>
     </message>
 </context>
 <context>
@@ -175,7 +175,7 @@
     <message>
         <location filename="../graphicsscene.cpp" line="57"/>
         <source>Drag image here</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrastra una imagen aquí</translation>
     </message>
 </context>
 <context>
@@ -183,28 +183,28 @@
     <message>
         <location filename="../graphicsview.cpp" line="333"/>
         <source>File url list is empty</source>
-        <translation type="unfinished"></translation>
+        <translation>La lista url de archivos está vacía</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="52"/>
         <source>File is not a valid image</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo no es una imagen válida</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="57"/>
         <location filename="../graphicsview.cpp" line="62"/>
         <source>Image data is invalid or currently unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Los datos de la imagen no son válidos o son actualmente incompatibles</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="341"/>
         <source>Image data is invalid</source>
-        <translation type="unfinished"></translation>
+        <translation>Los datos de la imagen no son válidos</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="348"/>
         <source>Not supported mimedata: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Mimedata no compatible: %1</translation>
     </message>
 </context>
 <context>
@@ -212,120 +212,120 @@
     <message>
         <location filename="../mainwindow.cpp" line="160"/>
         <source>File url list is empty</source>
-        <translation type="unfinished"></translation>
+        <translation>La lista url de archivos está vacía</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="403"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copiar</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="83"/>
         <source>Copy P&amp;ixmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar P&amp;ixmap</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
         <source>Copy &amp;File Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar &amp;Ruta de Archivo</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propiedades</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="35"/>
         <location filename="../actionmanager.cpp" line="86"/>
         <source>Stay on top</source>
-        <translation type="unfinished"></translation>
+        <translation>Mantener encima</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="38"/>
         <location filename="../actionmanager.cpp" line="87"/>
         <source>Protected mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo protegido</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="72"/>
         <source>Zoom in</source>
-        <translation type="unfinished"></translation>
+        <translation>Acercar</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="73"/>
         <source>Zoom out</source>
-        <translation type="unfinished"></translation>
+        <translation>Alejar</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Voltear &amp;Horizontalmente</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="85"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pegar</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
         <source>Toggle Checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Alternar Tablero de Ajedrez</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>&amp;Open...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abrir...</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>Actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño real</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished"></translation>
+        <translation>Alternar maximizar</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
         <source>Rotate right</source>
-        <translation type="unfinished"></translation>
+        <translation>Girar a la derecha</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="77"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>Imagen anterior</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>Imagen siguiente</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
         <source>Configure...</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurar...</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="89"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayuda</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar en el Explorador de Archivos</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
         <source>Show in directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar en el directorio</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
         <source>Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>Salir</translation>
     </message>
 </context>
 <context>
@@ -333,7 +333,7 @@
     <message>
         <location filename="../metadatadialog.cpp" line="80"/>
         <source>Image Metadata</source>
-        <translation type="unfinished"></translation>
+        <translation>Metadatos de Imagen</translation>
     </message>
 </context>
 <context>
@@ -342,58 +342,58 @@
         <location filename="../metadatamodel.cpp" line="37"/>
         <source>Origin</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Origen</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="38"/>
         <source>Image</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Imagen</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="42"/>
         <source>File</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Archivo</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="39"/>
         <source>Camera</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Cámara</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="29"/>
         <source>%1 File</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Archivo</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="36"/>
         <source>Description</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Descripción</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="40"/>
         <source>Advanced photo</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Foto avanzada</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="41"/>
         <source>GPS</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>GPS</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="46"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensiones</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="48"/>
         <source>Aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Relación de aspecto</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="52"/>
@@ -403,37 +403,37 @@
     <message>
         <location filename="../metadatamodel.cpp" line="56"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="58"/>
         <source>Item type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo de elemento</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="60"/>
         <source>Folder path</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruta de la carpeta</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="62"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="64"/>
         <source>Date created</source>
-        <translation type="unfinished"></translation>
+        <translation>Fecha de creación</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="66"/>
         <source>Date modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Fecha de modificación</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="73"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Título</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="75"/>
@@ -443,22 +443,22 @@
     <message>
         <location filename="../metadatamodel.cpp" line="77"/>
         <source>Rating</source>
-        <translation type="unfinished"></translation>
+        <translation>Clasificación</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="79"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiquetas</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="81"/>
         <source>Comments</source>
-        <translation type="unfinished"></translation>
+        <translation>Comentarios</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="84"/>
         <source>Authors</source>
-        <translation type="unfinished"></translation>
+        <translation>Autores</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="86"/>
@@ -473,17 +473,17 @@
     <message>
         <location filename="../metadatamodel.cpp" line="94"/>
         <source>Copyright</source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="97"/>
         <source>Horizontal resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>Resolución horizontal</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="99"/>
         <source>Vertical resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>Resolución vertical</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="101"/>
@@ -498,12 +498,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="106"/>
         <source>Camera maker</source>
-        <translation type="unfinished"></translation>
+        <translation>Fabricante de cámara</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="108"/>
         <source>Camera model</source>
-        <translation type="unfinished"></translation>
+        <translation>Modelo de cámara</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="110"/>
@@ -513,7 +513,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="112"/>
         <source>Exposure time</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiempo de exposición</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="114"/>
@@ -543,7 +543,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="124"/>
         <source>Flash mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo de flash</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="126"/>
@@ -553,12 +553,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="129"/>
         <source>Lens model</source>
-        <translation type="unfinished"></translation>
+        <translation>Modelo de lente</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="131"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Brillo</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="133"/>
@@ -568,22 +568,22 @@
     <message>
         <location filename="../metadatamodel.cpp" line="135"/>
         <source>Saturation</source>
-        <translation type="unfinished"></translation>
+        <translation>Saturación</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="137"/>
         <source>Sharpness</source>
-        <translation type="unfinished"></translation>
+        <translation>Nitidez</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="139"/>
         <source>White balance</source>
-        <translation type="unfinished"></translation>
+        <translation>Balance de blancos</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="141"/>
         <source>Digital zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom digital</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="143"/>
@@ -638,7 +638,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="309"/>
         <source>Value</source>
-        <translation type="unfinished"></translation>
+        <translation>Valor</translation>
     </message>
 </context>
 <context>
@@ -646,62 +646,62 @@
     <message>
         <location filename="../settingsdialog.cpp" line="17"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustes</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="22"/>
         <source>Do nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>No hacer nada</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="23"/>
         <source>Close the window</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerrar la ventana</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="24"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished"></translation>
+        <translation>Alternar maximizar</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="28"/>
         <source>Zoom in and out</source>
-        <translation type="unfinished"></translation>
+        <translation>Acercar y alejar</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="29"/>
         <source>View next or previous item</source>
-        <translation type="unfinished"></translation>
+        <translation>Ver elemento siguiente o anterior</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Auto size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño automático</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>Maximized</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximizado</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="52"/>
         <source>Stay on top when start-up</source>
-        <translation type="unfinished"></translation>
+        <translation>Mantener encima cuando inicie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="53"/>
         <source>Double-click behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Comportamiento de doble clic</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="54"/>
         <source>Mouse wheel behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Comportamiento de la rueda del mouse</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="55"/>
         <source>Default window size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño de la ventana por defecto</translation>
     </message>
 </context>
 <context>
