@@ -143,27 +143,27 @@
     <message>
         <location filename="../aboutdialog.cpp" line="89"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
-        <translation type="unfinished"></translation>
+        <translation>La llicència del MIT us garanteix aquesta llibertat. No és permès que ningú us la tregui.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="117"/>
         <source>Third-party Libraries used by %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Biblioteques de tercers que fa servir %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="140"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Aj&amp;uda</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="141"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Quant a</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="143"/>
         <source>&amp;License</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Llicència</translation>
     </message>
 </context>
 <context>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../graphicsscene.cpp" line="57"/>
         <source>Drag image here</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrossegueu una imatge aquí</translation>
     </message>
 </context>
 <context>
@@ -179,28 +179,28 @@
     <message>
         <location filename="../graphicsview.cpp" line="333"/>
         <source>File url list is empty</source>
-        <translation type="unfinished"></translation>
+        <translation>La llista d&apos;ubicacions de fitxer és buida</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="52"/>
         <source>File is not a valid image</source>
-        <translation type="unfinished"></translation>
+        <translation>El fitxer no és una imatge vàlida</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="57"/>
         <location filename="../graphicsview.cpp" line="62"/>
         <source>Image data is invalid or currently unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Les dades de la imatge no són vàlides o no són compatibles</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="341"/>
         <source>Image data is invalid</source>
-        <translation type="unfinished"></translation>
+        <translation>Les dades de la imatge no són vàlides</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="348"/>
         <source>Not supported mimedata: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>El tipus MIME no és compatible: %1</translation>
     </message>
 </context>
 <context>
@@ -208,120 +208,120 @@
     <message>
         <location filename="../mainwindow.cpp" line="160"/>
         <source>File url list is empty</source>
-        <translation type="unfinished"></translation>
+        <translation>La llista d&apos;ubicacions és buida</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="403"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copia</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="83"/>
         <source>Copy P&amp;ixmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Copia el &amp;mapa de píxels</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
         <source>Copy &amp;File Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Copia el camí del &amp;fitxer</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propietats</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="35"/>
         <location filename="../actionmanager.cpp" line="86"/>
         <source>Stay on top</source>
-        <translation type="unfinished"></translation>
+        <translation>Mantén a sobre</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="38"/>
         <location filename="../actionmanager.cpp" line="87"/>
         <source>Protected mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode protegit</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="72"/>
         <source>Zoom in</source>
-        <translation type="unfinished"></translation>
+        <translation>Amplia</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="73"/>
         <source>Zoom out</source>
-        <translation type="unfinished"></translation>
+        <translation>Redueix</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Inverteix &amp;horitzontalment</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="85"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Enganxa</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
         <source>Toggle Checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Commuta el tauler d&apos;escacs</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>&amp;Open...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Obre...</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>Actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>Mida real</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished"></translation>
+        <translation>Commuta la maximització</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
         <source>Rotate right</source>
-        <translation type="unfinished"></translation>
+        <translation>Commuta la maximització</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="77"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>Imatge anterior</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>Imatge següent</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
         <source>Configure...</source>
-        <translation type="unfinished"></translation>
+        <translation>Configura...</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="89"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajuda</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
-        <translation type="unfinished"></translation>
+        <translation>Mostra al navegador de fitxers</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
         <source>Show in directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra a la carpeta</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
         <source>Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>Surt</translation>
     </message>
 </context>
 <context>
@@ -329,7 +329,7 @@
     <message>
         <location filename="../metadatadialog.cpp" line="80"/>
         <source>Image Metadata</source>
-        <translation type="unfinished"></translation>
+        <translation>Metadades de la imatge</translation>
     </message>
 </context>
 <context>
@@ -338,303 +338,303 @@
         <location filename="../metadatamodel.cpp" line="37"/>
         <source>Origin</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Origen</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="38"/>
         <source>Image</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Imatge</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="42"/>
         <source>File</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Fitxer</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="39"/>
         <source>Camera</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Càmera</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="29"/>
         <source>%1 File</source>
-        <translation type="unfinished"></translation>
+        <translation>Fitxer %1</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="36"/>
         <source>Description</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Descripció</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="40"/>
         <source>Advanced photo</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>Foto avançada</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="41"/>
         <source>GPS</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>GPS</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="46"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensions</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="48"/>
         <source>Aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Relació d&apos;aspecte</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="52"/>
         <source>Frame count</source>
-        <translation type="unfinished"></translation>
+        <translation>Núm. d&apos;imatges</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="56"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="58"/>
         <source>Item type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipus d&apos;element</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="60"/>
         <source>Folder path</source>
-        <translation type="unfinished"></translation>
+        <translation>Camí de la carpeta</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="62"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Mida</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="64"/>
         <source>Date created</source>
-        <translation type="unfinished"></translation>
+        <translation>Data de creació</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="66"/>
         <source>Date modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Data de modificació</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="73"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Títol</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="75"/>
         <source>Subject</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="77"/>
         <source>Rating</source>
-        <translation type="unfinished"></translation>
+        <translation>Valoració</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="79"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiquetes</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="81"/>
         <source>Comments</source>
-        <translation type="unfinished"></translation>
+        <translation>Comentaris</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="84"/>
         <source>Authors</source>
-        <translation type="unfinished"></translation>
+        <translation>Autors</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="86"/>
         <source>Date taken</source>
-        <translation type="unfinished"></translation>
+        <translation>Data de la foto</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="92"/>
         <source>Program name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom del programa</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="94"/>
         <source>Copyright</source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="97"/>
         <source>Horizontal resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>Resolució horitzontal</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="99"/>
         <source>Vertical resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>Resolució vertical</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="101"/>
         <source>Resolution unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Unitat de resolució</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="103"/>
         <source>Colour representation</source>
-        <translation type="unfinished"></translation>
+        <translation>Representació del color</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="106"/>
         <source>Camera maker</source>
-        <translation type="unfinished"></translation>
+        <translation>Fabricant de la càmera</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="108"/>
         <source>Camera model</source>
-        <translation type="unfinished"></translation>
+        <translation>Model de la càmera</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="110"/>
         <source>F-stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Relació focal</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="112"/>
         <source>Exposure time</source>
-        <translation type="unfinished"></translation>
+        <translation>Temps d&apos;exposició</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="114"/>
         <source>ISO speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Sensibilitat ISO</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="116"/>
         <source>Exposure bias</source>
-        <translation type="unfinished"></translation>
+        <translation>Compensació d&apos;exposició</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="118"/>
         <source>Focal length</source>
-        <translation type="unfinished"></translation>
+        <translation>Distància focal</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="120"/>
         <source>Max aperture</source>
-        <translation type="unfinished"></translation>
+        <translation>Obertura màxima</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="122"/>
         <source>Metering mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode de mesura</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="124"/>
         <source>Flash mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode del flaix</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="126"/>
         <source>35mm focal length</source>
-        <translation type="unfinished"></translation>
+        <translation>Distància focal de 35 mm</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="129"/>
         <source>Lens model</source>
-        <translation type="unfinished"></translation>
+        <translation>Model de lent</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="131"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Brillantor</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="133"/>
         <source>Exposure program</source>
-        <translation type="unfinished"></translation>
+        <translation>Programa d&apos;exposició</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="135"/>
         <source>Saturation</source>
-        <translation type="unfinished"></translation>
+        <translation>Saturació</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="137"/>
         <source>Sharpness</source>
-        <translation type="unfinished"></translation>
+        <translation>Nitidesa</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="139"/>
         <source>White balance</source>
-        <translation type="unfinished"></translation>
+        <translation>Balanç de blancs</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="141"/>
         <source>Digital zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom digital</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="143"/>
         <source>EXIF version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versió de l&apos;EXIF</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="146"/>
         <source>Latitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Referència de la latitud</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="148"/>
         <source>Latitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Latitud</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="150"/>
         <source>Longitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Referència de la longitud</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="152"/>
         <source>Longitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Longitud</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="154"/>
         <source>Altitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Referència de l&apos;altitud</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="156"/>
         <source>Altitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Altitud</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="166"/>
         <source>%1 x %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="184"/>
         <source>%1 : %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 : %2</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="309"/>
         <source>Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Propietat</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="309"/>
         <source>Value</source>
-        <translation type="unfinished"></translation>
+        <translation>Valor</translation>
     </message>
 </context>
 <context>
@@ -642,62 +642,62 @@
     <message>
         <location filename="../settingsdialog.cpp" line="17"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Paràmetres</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="22"/>
         <source>Do nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>No facis res</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="23"/>
         <source>Close the window</source>
-        <translation type="unfinished"></translation>
+        <translation>Tanca la finestra</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="24"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished"></translation>
+        <translation>Commuta la maximització</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="28"/>
         <source>Zoom in and out</source>
-        <translation type="unfinished"></translation>
+        <translation>Amplia i redueix</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="29"/>
         <source>View next or previous item</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra l&apos;element següent o l&apos;anterior</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Auto size</source>
-        <translation type="unfinished"></translation>
+        <translation>Mida automàtica</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>Maximized</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximitza</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="52"/>
         <source>Stay on top when start-up</source>
-        <translation type="unfinished"></translation>
+        <translation>Mantingues a sobre a l&apos;inici</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="53"/>
         <source>Double-click behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Comportament del doble clic</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="54"/>
         <source>Mouse wheel behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Comportament de la roda del ratolí</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="55"/>
         <source>Default window size</source>
-        <translation type="unfinished"></translation>
+        <translation>Mida de la finestra per defecte</translation>
     </message>
 </context>
 <context>
@@ -705,12 +705,12 @@
     <message>
         <location filename="../main.cpp" line="31"/>
         <source>Pineapple Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Pineapple Pictures</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="35"/>
         <source>File list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Llista de fitxers.</translation>
     </message>
 </context>
 </TS>
