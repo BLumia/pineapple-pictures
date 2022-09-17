@@ -6,139 +6,139 @@
     <message>
         <location filename="../aboutdialog.cpp" line="23"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Quant a</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="26"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Inicia l&apos;aplicació amb el camí del fitxer de la imatge com a argument per carregar la imatge.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="27"/>
         <source>Drag and drop image file onto the window is also supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>També podeu arrossegar i deixar anar un fitxer d&apos;imatge a la finestra.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="28"/>
         <source>None of the operations in this application will alter the pictures on disk.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cap de les operacions en aquesta aplicació alterarà els fitxers d&apos;imatge.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="29"/>
         <source>Context menu option explanation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Explicació de les opcions del menú contextual:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="36"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation type="unfinished"></translation>
+        <translation>Manté la finestra a sobre de totes les altres finestres.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="39"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation type="unfinished"></translation>
+        <translation>Evita que es tanqui la finestra accidentalment (com ara en fer doble clic a la finestra)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="47"/>
         <source>Version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Versió: %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="53"/>
         <source>Logo designed by %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Logotip dissenyat por %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="55"/>
         <source>Built with Qt %1 (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Creat amb Qt %1 (%2)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="56"/>
         <source>Source code</source>
-        <translation type="unfinished"></translation>
+        <translation>Codi font</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="66"/>
         <source>Contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>Col·laboradors</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="68"/>
         <source>List of contributors on GitHub</source>
-        <translation type="unfinished"></translation>
+        <translation>Llista de col·laboradors al GitHub</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="69"/>
         <source>Thanks to all people who contributed to this project.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gràcies a totes les persones que han col·laborat en aquest projecte.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="73"/>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Traductors</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="74"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
-        <translation type="unfinished"></translation>
+        <translation>M&apos;agradaria donar les gràcies a les persones següents per oferir-se a traduir aquesta aplicació.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="118"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 està construït sobre les biblioteques de programari lliure següents:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="142"/>
         <source>&amp;Special Thanks</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Especial agraïment</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="144"/>
         <source>&amp;Third-party Libraries</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Biblioteques de tercers</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="80"/>
         <source>Your Rights</source>
-        <translation type="unfinished"></translation>
+        <translation>Els vostres drets</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="50"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Copyright (c) %1 %2</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="82"/>
         <source>%1 is released under the MIT License.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 es publica sota la llicència MIT.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="83"/>
         <source>This license grants people a number of freedoms:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aquesta llicència atorga a les persones diverses llibertats:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="84"/>
         <source>You are free to use %1, for any purpose</source>
-        <translation type="unfinished"></translation>
+        <translation>Sou lliure de fer servir %1 per a qualsevol propòsit</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="85"/>
         <source>You are free to distribute %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sou lliure de distribuir %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="86"/>
         <source>You can study how %1 works and change it</source>
-        <translation type="unfinished"></translation>
+        <translation>Podeu estudiar com funciona %1 i modificar-lo</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="87"/>
         <source>You can distribute changed versions of %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Podeu distribuir les versions modificades de %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="89"/>
