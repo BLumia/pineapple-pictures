@@ -11,32 +11,32 @@
     <message>
         <location filename="../aboutdialog.cpp" line="26"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation>Inicia la aplicación con la ruta del archivo de imagen como argumento para cargar el archivo.</translation>
+        <translation>Inicia la aplicación con la ruta del archivo de la imagen como argumento para cargar la imagen.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="27"/>
         <source>Drag and drop image file onto the window is also supported.</source>
-        <translation>También se admite la función de arrastrar y soltar el archivo de imagen en la ventana.</translation>
+        <translation>También es posible arrastrar y soltar un archivo de imagen en la ventana.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="28"/>
         <source>None of the operations in this application will alter the pictures on disk.</source>
-        <translation>Ninguna de las operaciones en esta aplicación alterará las imágenes en el disco.</translation>
+        <translation>Ninguna de las operaciones en esta aplicación alterará los archivos de imagen.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="29"/>
         <source>Context menu option explanation:</source>
-        <translation>Explicación de la opción del menú contextual:</translation>
+        <translation>Explicación de las opciones del menú contextual:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="36"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation>Haz que la ventana se quede encima de todas las demás ventanas.</translation>
+        <translation>Mantiene la ventana encima de todas las demás ventanas.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="39"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation>Evita cerrar la ventana accidentalmente. (por ejemplo, haciendo doble clic en la ventana)</translation>
+        <translation>Evita que se cierre la ventana accidentalmente (por ejemplo, al hacer doble clic en la ventana)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="47"/>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="55"/>
         <source>Built with Qt %1 (%2)</source>
-        <translation>Construido con Qt %1 (%2)</translation>
+        <translation>Creado con Qt %1 (%2)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="56"/>
@@ -75,7 +75,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="69"/>
         <source>Thanks to all people who contributed to this project.</source>
-        <translation>Gracias a todas las personas que contibuyen a este proyecto.</translation>
+        <translation>Gracias a todas las personas que han colaborado en este proyecto.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="73"/>
@@ -85,28 +85,28 @@
     <message>
         <location filename="../aboutdialog.cpp" line="74"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
-        <translation>Me gustaría dar las gracias a las siguientes personas que se ofrecieron a traducir esta solicitud.</translation>
+        <translation>Me gustaría dar las gracias a las personas siguientes por ofrecerse a traducir esta aplicación.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="118"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation>%1 está construido sobre las siguientes bibliotecas de software libre:</translation>
+        <translation>%1 está construido sobre las bibliotecas de software libre siguientes:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="142"/>
         <source>&amp;Special Thanks</source>
-        <translation>&amp;Agradecimiento especial</translation>
+        <translation>Agradecimiento &amp;especial</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="144"/>
         <source>&amp;Third-party Libraries</source>
-        <translation>&amp;Bibliotecas de Terceros</translation>
+        <translation>&amp;Bibliotecas de terceros</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="80"/>
         <source>Your Rights</source>
-        <translation>Tus Derechos</translation>
+        <translation>Sus derechos</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="50"/>
@@ -117,7 +117,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="82"/>
         <source>%1 is released under the MIT License.</source>
-        <translation>%1 se liberó bajo la MIT License.</translation>
+        <translation>%1 se publica bajo la licencia MIT.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="83"/>
@@ -127,37 +127,37 @@
     <message>
         <location filename="../aboutdialog.cpp" line="84"/>
         <source>You are free to use %1, for any purpose</source>
-        <translation>Eres libre de usar %1, para cualquier propósito</translation>
+        <translation>Es libre de usar %1 para cualquier propósito</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="85"/>
         <source>You are free to distribute %1</source>
-        <translation>Eres libre de distribuir %1</translation>
+        <translation>Es libre de distribuir %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="86"/>
         <source>You can study how %1 works and change it</source>
-        <translation>Puedes estudiar cómo funciona %1 y modificarlo</translation>
+        <translation>Puede estudiar cómo funciona %1 y modificarlo</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="87"/>
         <source>You can distribute changed versions of %1</source>
-        <translation>Puedes distribuir versiones modificadas de %1</translation>
+        <translation>Puede distribuir versiones modificadas de %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="89"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
-        <translation>La MIT license te garantiza esta libertad. A nadie nunca se le permite quitártela.</translation>
+        <translation>La licencia MIT le garantiza esta libertad. Nadie está autorizado a quitársela.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="117"/>
         <source>Third-party Libraries used by %1</source>
-        <translation>Bibliotecas de terceros utilizadas por %1</translation>
+        <translation>Bibliotecas de terceros usadas por %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="140"/>
         <source>&amp;Help</source>
-        <translation>&amp;Ayuda</translation>
+        <translation>Ay&amp;uda</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="141"/>
@@ -175,7 +175,7 @@
     <message>
         <location filename="../graphicsscene.cpp" line="57"/>
         <source>Drag image here</source>
-        <translation>Arrastra una imagen aquí</translation>
+        <translation>Arrastre una imagen aquí</translation>
     </message>
 </context>
 <context>
@@ -183,7 +183,7 @@
     <message>
         <location filename="../graphicsview.cpp" line="333"/>
         <source>File url list is empty</source>
-        <translation>La lista url de archivos está vacía</translation>
+        <translation>La lista de ubicaciones de archivos está vacía</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="52"/>
@@ -194,7 +194,7 @@
         <location filename="../graphicsview.cpp" line="57"/>
         <location filename="../graphicsview.cpp" line="62"/>
         <source>Image data is invalid or currently unsupported</source>
-        <translation>Los datos de la imagen no son válidos o son actualmente incompatibles</translation>
+        <translation>Los datos de la imagen no son válidos o no son compatibles actualmente</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="341"/>
@@ -204,7 +204,7 @@
     <message>
         <location filename="../graphicsview.cpp" line="348"/>
         <source>Not supported mimedata: %1</source>
-        <translation>Mimedata no compatible: %1</translation>
+        <translation>El tipo MIME no es compatible: %1</translation>
     </message>
 </context>
 <context>
@@ -212,7 +212,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="160"/>
         <source>File url list is empty</source>
-        <translation>La lista url de archivos está vacía</translation>
+        <translation>La lista de ubicaciones de archivos está vacía</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="403"/>
@@ -222,12 +222,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="83"/>
         <source>Copy P&amp;ixmap</source>
-        <translation>Copiar P&amp;ixmap</translation>
+        <translation>Copiar el &amp;mapa de píxeles</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
         <source>Copy &amp;File Path</source>
-        <translation>Copiar &amp;Ruta de Archivo</translation>
+        <translation>Copiar la &amp;ruta del archivo</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
@@ -249,17 +249,17 @@
     <message>
         <location filename="../actionmanager.cpp" line="72"/>
         <source>Zoom in</source>
-        <translation>Acercar</translation>
+        <translation>Ampliar</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="73"/>
         <source>Zoom out</source>
-        <translation>Alejar</translation>
+        <translation>Reducir</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>Voltear &amp;Horizontalmente</translation>
+        <translation>Voltear &amp;horizontalmente</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="85"/>
@@ -269,7 +269,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
         <source>Toggle Checkerboard</source>
-        <translation>Alternar Tablero de Ajedrez</translation>
+        <translation>Activar/desactivar el tablero de ajedrez</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
@@ -284,7 +284,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
         <source>Toggle maximize</source>
-        <translation>Alternar maximizar</translation>
+        <translation>Maximizar/desmaximizar</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
@@ -315,12 +315,12 @@
         <location filename="../actionmanager.cpp" line="92"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
-        <translation>Mostrar en el Explorador de Archivos</translation>
+        <translation>Mostrar en el gestor de archivos</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
         <source>Show in directory</source>
-        <translation>Mostrar en el directorio</translation>
+        <translation>Mostrar en la carpeta</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
@@ -333,7 +333,7 @@
     <message>
         <location filename="../metadatadialog.cpp" line="80"/>
         <source>Image Metadata</source>
-        <translation>Metadatos de Imagen</translation>
+        <translation>Metadatos de la imagen</translation>
     </message>
 </context>
 <context>
@@ -365,7 +365,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="29"/>
         <source>%1 File</source>
-        <translation>%1 Archivo</translation>
+        <translation>Archivo %1</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="36"/>
@@ -398,7 +398,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="52"/>
         <source>Frame count</source>
-        <translation type="unfinished"></translation>
+        <translation>Núm. de imágenes</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="56"/>
@@ -438,7 +438,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="75"/>
         <source>Subject</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="77"/>
@@ -463,12 +463,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="86"/>
         <source>Date taken</source>
-        <translation type="unfinished"></translation>
+        <translation>Fecha en que se tomó</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="92"/>
         <source>Program name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre del programa</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="94"/>
@@ -488,27 +488,27 @@
     <message>
         <location filename="../metadatamodel.cpp" line="101"/>
         <source>Resolution unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Unidad de resolución</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="103"/>
         <source>Colour representation</source>
-        <translation type="unfinished"></translation>
+        <translation>Representación del color</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="106"/>
         <source>Camera maker</source>
-        <translation>Fabricante de cámara</translation>
+        <translation>Fabricante de la cámara</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="108"/>
         <source>Camera model</source>
-        <translation>Modelo de cámara</translation>
+        <translation>Modelo de la cámara</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="110"/>
         <source>F-stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Relación focal</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="112"/>
@@ -518,42 +518,42 @@
     <message>
         <location filename="../metadatamodel.cpp" line="114"/>
         <source>ISO speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Sensibilidad ISO</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="116"/>
         <source>Exposure bias</source>
-        <translation type="unfinished"></translation>
+        <translation>Sesgo de exposición</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="118"/>
         <source>Focal length</source>
-        <translation type="unfinished"></translation>
+        <translation>Distancia focal</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="120"/>
         <source>Max aperture</source>
-        <translation type="unfinished"></translation>
+        <translation>Apertura máxima</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="122"/>
         <source>Metering mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo de medición</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="124"/>
         <source>Flash mode</source>
-        <translation>Modo de flash</translation>
+        <translation>Modo del flash</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="126"/>
         <source>35mm focal length</source>
-        <translation type="unfinished"></translation>
+        <translation>Distancia focal de 35 mm</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="129"/>
         <source>Lens model</source>
-        <translation>Modelo de lente</translation>
+        <translation>Modelo de la lente</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="131"/>
@@ -563,7 +563,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="133"/>
         <source>Exposure program</source>
-        <translation type="unfinished"></translation>
+        <translation>Programa de exposición</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="135"/>
@@ -583,57 +583,57 @@
     <message>
         <location filename="../metadatamodel.cpp" line="141"/>
         <source>Digital zoom</source>
-        <translation>Zoom digital</translation>
+        <translation>Zum digital</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="143"/>
         <source>EXIF version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versión de EXIF</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="146"/>
         <source>Latitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Referencia de la latitud</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="148"/>
         <source>Latitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Latitud</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="150"/>
         <source>Longitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Referencia de la longitud</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="152"/>
         <source>Longitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Longitud</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="154"/>
         <source>Altitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Referencia de la altitud</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="156"/>
         <source>Altitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Altitud</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="166"/>
         <source>%1 x %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="184"/>
         <source>%1 : %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 : %2</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="309"/>
         <source>Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Propiedad</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="309"/>
@@ -646,7 +646,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="17"/>
         <source>Settings</source>
-        <translation>Ajustes</translation>
+        <translation>Preferencias</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="22"/>
@@ -661,17 +661,17 @@
     <message>
         <location filename="../settingsdialog.cpp" line="24"/>
         <source>Toggle maximize</source>
-        <translation>Alternar maximizar</translation>
+        <translation>Maximizar/desmaximizar</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="28"/>
         <source>Zoom in and out</source>
-        <translation>Acercar y alejar</translation>
+        <translation>Ampliar y reducir</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="29"/>
         <source>View next or previous item</source>
-        <translation>Ver elemento siguiente o anterior</translation>
+        <translation>Mostrar el elemento siguiente/anterior</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
@@ -681,22 +681,22 @@
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>Maximized</source>
-        <translation>Maximizado</translation>
+        <translation>Maximizar</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="52"/>
         <source>Stay on top when start-up</source>
-        <translation>Mantener encima cuando inicie</translation>
+        <translation>Mantener encima al inicio</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="53"/>
         <source>Double-click behavior</source>
-        <translation>Comportamiento de doble clic</translation>
+        <translation>Comportamiento del doble clic</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="54"/>
         <source>Mouse wheel behavior</source>
-        <translation>Comportamiento de la rueda del mouse</translation>
+        <translation>Comportamiento de la rueda del ratón</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="55"/>
@@ -709,12 +709,12 @@
     <message>
         <location filename="../main.cpp" line="31"/>
         <source>Pineapple Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Pineapple Pictures</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="35"/>
         <source>File list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista de archivos.</translation>
     </message>
 </context>
 </TS>
