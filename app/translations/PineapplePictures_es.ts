@@ -183,7 +183,7 @@
     <message>
         <location filename="../graphicsview.cpp" line="333"/>
         <source>File url list is empty</source>
-        <translation>La lista de ubicaciones de archivos está vacía</translation>
+        <translation>La lista de ubicaciones está vacía</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="52"/>
@@ -194,7 +194,7 @@
         <location filename="../graphicsview.cpp" line="57"/>
         <location filename="../graphicsview.cpp" line="62"/>
         <source>Image data is invalid or currently unsupported</source>
-        <translation>Los datos de la imagen no son válidos o no son compatibles actualmente</translation>
+        <translation>Los datos de la imagen no son válidos o no son compatibles</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="341"/>
@@ -212,7 +212,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="160"/>
         <source>File url list is empty</source>
-        <translation>La lista de ubicaciones de archivos está vacía</translation>
+        <translation>La lista de ubicaciones está vacía</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="403"/>
@@ -443,7 +443,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="77"/>
         <source>Rating</source>
-        <translation>Clasificación</translation>
+        <translation>Valoración</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="79"/>
@@ -523,7 +523,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="116"/>
         <source>Exposure bias</source>
-        <translation>Sesgo de exposición</translation>
+        <translation>Compensación de exposición</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="118"/>
