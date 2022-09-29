@@ -60,11 +60,12 @@ void GraphicsView::showFileFromPath(const QString &filePath, bool doRequestGalle
             doRequestGallery = false;
             showText(tr("Image data is invalid or currently unsupported"));
         } else {
-            const QPixmap & pixmap = QPixmap::fromImageReader(&imageReader);
+            QPixmap && pixmap = QPixmap::fromImageReader(&imageReader);
             if (pixmap.isNull()) {
                 doRequestGallery = false;
                 showText(tr("Image data is invalid or currently unsupported"));
             } else {
+                pixmap.setDevicePixelRatio(devicePixelRatioF());
                 showImage(pixmap);
             }
         }
