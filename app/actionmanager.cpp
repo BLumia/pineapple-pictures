@@ -6,22 +6,15 @@
 
 #include "mainwindow.h"
 
-#include <QCoreApplication>
+#include <QGuiApplication>
+#include <QSvgRenderer>
+#include <QPainter>
 
 #define ICON_NAME(name)\
-    QStringLiteral(":/icons/" #name "")
+    QStringLiteral(":/icons/" #name ".svg")
 
-#define SETUP_NEW_ACTION(window, action)\
-    action->setObjectName(QString::fromUtf8( #action ));\
-    window->addAction(action);
-
-#define CREATE_NEW_ACTION(window, action)\
-    action = new QAction(window);\
-    SETUP_NEW_ACTION(window, action)
-
-#define CREATE_NEW_ICON_ACTION(window, action, iconname)\
-    action = new QAction(QIcon(ICON_NAME(iconname)), QString(), window);\
-    SETUP_NEW_ACTION(window, action)
+#define ACTION_NAME(s) QStringLiteral(STRIFY(s))
+#define STRIFY(s) #s
 
 ActionManager::ActionManager()
 {
@@ -33,15 +26,36 @@ ActionManager::~ActionManager()
 
 }
 
+QIcon ActionManager::loadHidpiIcon(const QString &resp, QSize sz)
+{
+    QSvgRenderer r(resp);
+    QPixmap pm = QPixmap(sz * qApp->devicePixelRatio());
+    pm.fill(Qt::transparent);
+    QPainter p(&pm);
+    r.render(&p);
+    pm.setDevicePixelRatio(qApp->devicePixelRatio());
+    return QIcon(pm);
+}
+
 void ActionManager::setupAction(MainWindow *mainWindow)
 {
+    auto create_action = [] (QWidget *w, QAction **a, QString i, QString an) {
+        *a = new QAction(w);
+        if (!i.isNull())
+            (*a)->setIcon(ActionManager::loadHidpiIcon(i));
+        (*a)->setObjectName(an);
+        w->addAction(*a);
+    };
+    #define CREATE_NEW_ICON_ACTION(w, a, i) create_action(w, &a, ICON_NAME(i), ACTION_NAME(a))
     CREATE_NEW_ICON_ACTION(mainWindow, actionActualSize, zoom-original);
     CREATE_NEW_ICON_ACTION(mainWindow, actionToggleMaximize, view-fullscreen);
     CREATE_NEW_ICON_ACTION(mainWindow, actionZoomIn, zoom-in);
     CREATE_NEW_ICON_ACTION(mainWindow, actionZoomOut, zoom-out);
     CREATE_NEW_ICON_ACTION(mainWindow, actionToggleCheckerboard, view-background-checkerboard);
     CREATE_NEW_ICON_ACTION(mainWindow, actionRotateClockwise, object-rotate-right);
+    #undef CREATE_NEW_ICON_ACTION
 
+    #define CREATE_NEW_ACTION(w, a) create_action(w, &a, QString(), ACTION_NAME(a))
     CREATE_NEW_ACTION(mainWindow, actionPrevPicture);
     CREATE_NEW_ACTION(mainWindow, actionNextPicture);
 
@@ -59,6 +73,7 @@ void ActionManager::setupAction(MainWindow *mainWindow)
     CREATE_NEW_ACTION(mainWindow, actionLocateInFileManager);
     CREATE_NEW_ACTION(mainWindow, actionProperties);
     CREATE_NEW_ACTION(mainWindow, actionQuitApp);
+    #undef CREATE_NEW_ACTION
 
     retranslateUi(mainWindow);
 

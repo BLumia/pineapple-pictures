@@ -92,20 +92,21 @@ MainWindow::MainWindow(QWidget *parent)
             this, &MainWindow::loadGalleryBySingleLocalFile);
 
     m_closeButton = new ToolButton(true, m_graphicsView);
-    m_closeButton->setIcon(QIcon(":/icons/window-close"));
-    m_closeButton->setIconSize(QSize(50, 50));
+    m_closeButton->setIconSize(QSize(32, 32));
+    m_closeButton->setFixedSize(QSize(50, 50));
+    m_closeButton->setIconResourcePath(":/icons/window-close.svg");
 
     connect(m_closeButton, &QAbstractButton::clicked,
             this, &MainWindow::closeWindow);
 
     m_prevButton = new ToolButton(false, m_graphicsView);
-    m_prevButton->setIcon(QIcon(":/icons/go-previous"));
     m_prevButton->setIconSize(QSize(75, 75));
+    m_prevButton->setIconResourcePath(":/icons/go-previous.svg");
     m_prevButton->setVisible(false);
     m_prevButton->setOpacity(0, false);
     m_nextButton = new ToolButton(false, m_graphicsView);
-    m_nextButton->setIcon(QIcon(":/icons/go-next"));
     m_nextButton->setIconSize(QSize(75, 75));
+    m_nextButton->setIconResourcePath(":/icons/go-next.svg");
     m_nextButton->setVisible(false);
     m_nextButton->setOpacity(0, false);
 
