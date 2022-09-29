@@ -13,6 +13,7 @@ class ToolButton : public QPushButton
     Q_OBJECT
 public:
     ToolButton(bool hoverColor = false, QWidget * parent = nullptr);
+    void setIconResourcePath(const QString &iconp);
 
 public slots:
     void setOpacity(qreal opacity, bool animated = true);
