@@ -29,8 +29,9 @@ public:
         if (qFuzzyCompare(scaleHint, m_cachedScaleHint)) return m_cachedPixmap;
         QSizeF resizedScale(boundingRect().size());
         resizedScale *= scaleHint;
-        m_cachedPixmap = pixmap().scaled(
-             resizedScale.toSize(),
+        QPixmap && sourcePixmap = pixmap();
+        m_cachedPixmap = sourcePixmap.scaled(
+             resizedScale.toSize() * sourcePixmap.devicePixelRatioF(),
              Qt::KeepAspectRatio,
              Qt::SmoothTransformation);
         m_cachedScaleHint = scaleHint;
