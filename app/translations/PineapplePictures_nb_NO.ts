@@ -112,7 +112,7 @@
         <location filename="../aboutdialog.cpp" line="50"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Opphavsrett © %1 %2</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="82"/>
@@ -274,7 +274,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>&amp;Open...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Åpne …</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
@@ -294,12 +294,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="77"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>Forrige bilde</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>Neste bilde</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
@@ -315,12 +315,12 @@
         <location filename="../actionmanager.cpp" line="92"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
-        <translation type="unfinished"></translation>
+        <translation>Vis i filutforsker</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
         <source>Show in directory</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vis i mappe</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
@@ -676,12 +676,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Auto size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Automatisk størrelse</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>Maximized</source>
-        <translation type="unfinished"></translation>
+        <translation>Maksimert</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="52"/>
@@ -701,7 +701,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="55"/>
         <source>Default window size</source>
-        <translation type="unfinished"></translation>
+        <translation>Forvalgt vindusstørrelse</translation>
     </message>
 </context>
 <context>
