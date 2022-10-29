@@ -36,6 +36,10 @@
 #include <QProcess>
 #include <QDesktopServices>
 
+#ifdef HAVE_QTDBUS
+#include <QDBusInterface>
+#endif // HAVE_QTDBUS
+
 MainWindow::MainWindow(QWidget *parent)
     : FramelessWindow(parent)
     , m_am(new ActionManager)
@@ -738,11 +742,25 @@ void MainWindow::on_actionLocateInFileManager_triggered()
     QFileInfo fileInfo(currentFileUrl.toLocalFile());
     if (!fileInfo.exists()) return;
 
+    QUrl && folderUrl = QUrl::fromLocalFile(fileInfo.absolutePath());
+
 #ifdef Q_OS_WIN
     QProcess::startDetached("explorer", QStringList() << "/select," << QDir::toNativeSeparators(fileInfo.absoluteFilePath()));
+#elif defined(Q_OS_LINUX) and defined(HAVE_QTDBUS)
+    // Use https://www.freedesktop.org/wiki/Specifications/file-manager-interface/ if possible
+    QDBusInterface fm1Iface(QStringLiteral("org.freedesktop.FileManager1"),
+                            QStringLiteral("/org/freedesktop/FileManager1"),
+                            QStringLiteral("org.freedesktop.FileManager1"));
+    if (!fm1Iface.isValid()) {
+        QDesktopServices::openUrl(folderUrl);
+        return;
+    }
+    fm1Iface.callWithArgumentList(QDBus::Block, "ShowItems", {
+                                      QStringList{currentFileUrl.toString()},
+                                      QString()
+                                  });
 #else
-    // maybe use https://www.freedesktop.org/wiki/Specifications/file-manager-interface/ for linux?
-    QDesktopServices::openUrl(QUrl::fromLocalFile(fileInfo.absolutePath()));
+    QDesktopServices::openUrl(folderUrl);
 #endif // Q_OS_WIN
 }
 

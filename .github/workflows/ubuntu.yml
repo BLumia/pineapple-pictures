@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Get build dept.
         run: |
           sudo apt update
@@ -24,7 +24,7 @@ jobs:
         run: |
           cd build
           sudo apt install ./*.deb
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: ubuntu-20.04-deb-package
           path: build/*.deb

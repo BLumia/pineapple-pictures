@@ -17,7 +17,10 @@ set (QT_MINIMUM_VERSION "5.10")
 
 option (EXIV2_METADATA_SUPPORT "Better image metadata support via libexiv2" ON)
 
-find_package(Qt5 ${QT_MINIMUM_VERSION} CONFIG REQUIRED Widgets Svg LinguistTools)
+find_package(Qt5 ${QT_MINIMUM_VERSION} REQUIRED
+    COMPONENTS Widgets Svg LinguistTools
+    OPTIONAL_COMPONENTS DBus
+)
 
 if (EXIV2_METADATA_SUPPORT)
     find_package(LibExiv2)
@@ -112,6 +115,15 @@ if (LibExiv2_FOUND)
         HAVE_EXIV2_VERSION="${LibExiv2_VERSION}"
     )
 endif ()
+
+if (Qt5DBus_FOUND)
+    target_link_libraries (${EXE_NAME}
+        Qt5::DBus
+    )
+    target_compile_definitions(${EXE_NAME} PRIVATE
+        HAVE_QTDBUS
+    )
+endif()
 
 # Extra build settings
 if (WIN32)
