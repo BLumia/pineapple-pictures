@@ -751,13 +751,10 @@ void MainWindow::on_actionLocateInFileManager_triggered()
     QDBusInterface fm1Iface(QStringLiteral("org.freedesktop.FileManager1"),
                             QStringLiteral("/org/freedesktop/FileManager1"),
                             QStringLiteral("org.freedesktop.FileManager1"));
-    if (!fm1Iface.isValid()) {
-        QDesktopServices::openUrl(folderUrl);
-        return;
-    }
+    fm1Iface.setTimeout(500);
     fm1Iface.callWithArgumentList(QDBus::Block, "ShowItems", {
                                       QStringList{currentFileUrl.toString()},
-                                      QString()
+                                      QString::number(QDateTime::currentSecsSinceEpoch())
                                   });
 #else
     QDesktopServices::openUrl(folderUrl);
