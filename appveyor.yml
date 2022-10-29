@@ -34,9 +34,9 @@ build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
 # download and install zlib for KArchive
   - cd %LIBZ%
-  - curl -fsSL -o zlib1212.zip https://zlib.net/zlib1212.zip
-  - 7z x zlib1212.zip -y
-  - cd zlib-1.2.12
+  - curl -fsSL -o zlib1213.zip https://zlib.net/zlib1213.zip
+  - 7z x zlib1213.zip -y
+  - cd zlib-1.2.13
   - mkdir build
   - cd build
   - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_PREFIX%
