@@ -756,6 +756,9 @@ void MainWindow::on_actionLocateInFileManager_triggered()
                                       QStringList{currentFileUrl.toString()},
                                       QString::number(QDateTime::currentSecsSinceEpoch())
                                   });
+    if (fm1Iface.lastError().isValid()) {
+        QDesktopServices::openUrl(folderUrl);
+    }
 #else
     QDesktopServices::openUrl(folderUrl);
 #endif // Q_OS_WIN
