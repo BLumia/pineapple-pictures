@@ -6,7 +6,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="23"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>بارے</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="26"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="56"/>
         <source>Source code</source>
-        <translation type="unfinished"></translation>
+        <translation>سروت دا کوڈ</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="66"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="73"/>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>ترجمے والے</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="74"/>
@@ -92,12 +92,12 @@
     <message>
         <location filename="../aboutdialog.cpp" line="142"/>
         <source>&amp;Special Thanks</source>
-        <translation type="unfinished"></translation>
+        <translation>شکریئے</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="144"/>
         <source>&amp;Third-party Libraries</source>
-        <translation type="unfinished"></translation>
+        <translation>تیجی پارٹی سوفٹویر</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="80"/>
@@ -153,17 +153,17 @@
     <message>
         <location filename="../aboutdialog.cpp" line="140"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>مدد</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="141"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>بارے</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="143"/>
         <source>&amp;License</source>
-        <translation type="unfinished"></translation>
+        <translation>لائیسنس</translation>
     </message>
 </context>
 <context>
@@ -213,12 +213,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="403"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>کاپی کرو</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="83"/>
         <source>Copy P&amp;ixmap</source>
-        <translation type="unfinished"></translation>
+        <translation>تصویر دا نقشہ کاپی کرو</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
@@ -228,7 +228,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>وشیشتاواں</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="35"/>
@@ -240,62 +240,62 @@
         <location filename="../aboutdialog.cpp" line="38"/>
         <location filename="../actionmanager.cpp" line="87"/>
         <source>Protected mode</source>
-        <translation type="unfinished"></translation>
+        <translation>سرکھیات سیٹنگ</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="72"/>
         <source>Zoom in</source>
-        <translation type="unfinished"></translation>
+        <translation>وڈا کرو</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="73"/>
         <source>Zoom out</source>
-        <translation type="unfinished"></translation>
+        <translation>چھوٹا کرو</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>لیٹویں اُلٹاؤ</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="85"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>پیسٹ کرو</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
         <source>Toggle Checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation>چیک‌بورڈ چالو بدلو</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>&amp;Open...</source>
-        <translation type="unfinished"></translation>
+        <translation>کھُلھو…</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>Actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>اصلی اکار</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished"></translation>
+        <translation>ودھو ودھ بدلو</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
         <source>Rotate right</source>
-        <translation type="unfinished"></translation>
+        <translation>سجے گھنماؤ</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="77"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>پچھلی تصویر</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="78"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>اگلی تصویر</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
@@ -305,7 +305,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="89"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>مدد</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
@@ -321,7 +321,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
         <source>Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>بند کرو</translation>
     </message>
 </context>
 <context>
@@ -329,7 +329,7 @@
     <message>
         <location filename="../metadatadialog.cpp" line="80"/>
         <source>Image Metadata</source>
-        <translation type="unfinished"></translation>
+        <translation>تصویر دا میٹاڈیٹا</translation>
     </message>
 </context>
 <context>
@@ -344,19 +344,19 @@
         <location filename="../metadatamodel.cpp" line="38"/>
         <source>Image</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>تصویر</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="42"/>
         <source>File</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>فائل</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="39"/>
         <source>Camera</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>کیمرہ</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="29"/>
@@ -367,7 +367,7 @@
         <location filename="../metadatamodel.cpp" line="36"/>
         <source>Description</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>تفصیل</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="40"/>
@@ -379,12 +379,12 @@
         <location filename="../metadatamodel.cpp" line="41"/>
         <source>GPS</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>گی‌پی‌ایس</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="46"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>ماپ</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="48"/>
@@ -399,27 +399,27 @@
     <message>
         <location filename="../metadatamodel.cpp" line="56"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>ناں</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="58"/>
         <source>Item type</source>
-        <translation type="unfinished"></translation>
+        <translation>قسم</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="60"/>
         <source>Folder path</source>
-        <translation type="unfinished"></translation>
+        <translation>فولڈر پاتھ</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="62"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>اکار</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="64"/>
         <source>Date created</source>
-        <translation type="unfinished"></translation>
+        <translation>بݨاوݨ دی تریخ</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="66"/>
@@ -429,12 +429,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="73"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>سرلیکھ</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="75"/>
         <source>Subject</source>
-        <translation type="unfinished"></translation>
+        <translation>وِشا</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="77"/>
@@ -444,17 +444,17 @@
     <message>
         <location filename="../metadatamodel.cpp" line="79"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>ٹیگ</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="81"/>
         <source>Comments</source>
-        <translation type="unfinished"></translation>
+        <translation>ٹپݨیاں</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="84"/>
         <source>Authors</source>
-        <translation type="unfinished"></translation>
+        <translation>لیکھک</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="86"/>
@@ -469,7 +469,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="94"/>
         <source>Copyright</source>
-        <translation type="unfinished"></translation>
+        <translation>لائیسنس</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="97"/>
@@ -504,7 +504,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="110"/>
         <source>F-stop</source>
-        <translation type="unfinished"></translation>
+        <translation>ایف سٹاپ</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="112"/>
@@ -554,7 +554,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="131"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>چمک</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="133"/>
@@ -564,12 +564,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="135"/>
         <source>Saturation</source>
-        <translation type="unfinished"></translation>
+        <translation>سنترپتہ</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="137"/>
         <source>Sharpness</source>
-        <translation type="unfinished"></translation>
+        <translation>تکھاپن</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="139"/>
@@ -594,7 +594,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="148"/>
         <source>Latitude</source>
-        <translation type="unfinished"></translation>
+        <translation>اکشانش</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="150"/>
@@ -604,7 +604,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="152"/>
         <source>Longitude</source>
-        <translation type="unfinished"></translation>
+        <translation>لمبکار</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="154"/>
@@ -614,7 +614,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="156"/>
         <source>Altitude</source>
-        <translation type="unfinished"></translation>
+        <translation>اُچائی</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="166"/>
@@ -629,12 +629,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="309"/>
         <source>Property</source>
-        <translation type="unfinished"></translation>
+        <translation>وشیشتا</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="309"/>
         <source>Value</source>
-        <translation type="unfinished"></translation>
+        <translation>مُل</translation>
     </message>
 </context>
 <context>
@@ -642,7 +642,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="17"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>سیٹنگاں</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="22"/>
@@ -677,7 +677,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>Maximized</source>
-        <translation type="unfinished"></translation>
+        <translation>ودھ توں ودھ</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="52"/>
