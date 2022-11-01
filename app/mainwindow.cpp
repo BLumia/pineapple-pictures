@@ -38,6 +38,7 @@
 
 #ifdef HAVE_QTDBUS
 #include <QDBusInterface>
+#include <QDBusConnectionInterface>
 #endif // HAVE_QTDBUS
 
 MainWindow::MainWindow(QWidget *parent)
@@ -748,13 +749,18 @@ void MainWindow::on_actionLocateInFileManager_triggered()
     QProcess::startDetached("explorer", QStringList() << "/select," << QDir::toNativeSeparators(fileInfo.absoluteFilePath()));
 #elif defined(Q_OS_LINUX) and defined(HAVE_QTDBUS)
     // Use https://www.freedesktop.org/wiki/Specifications/file-manager-interface/ if possible
+    const QDBusConnectionInterface * dbusIface = QDBusConnection::sessionBus().interface();
+    if (!dbusIface || !dbusIface->isServiceRegistered(QLatin1String("org.freedesktop.FileManager1"))) {
+        QDesktopServices::openUrl(folderUrl);
+        return;
+    }
     QDBusInterface fm1Iface(QStringLiteral("org.freedesktop.FileManager1"),
                             QStringLiteral("/org/freedesktop/FileManager1"),
                             QStringLiteral("org.freedesktop.FileManager1"));
-    fm1Iface.setTimeout(500);
+    fm1Iface.setTimeout(1000);
     fm1Iface.callWithArgumentList(QDBus::Block, "ShowItems", {
                                       QStringList{currentFileUrl.toString()},
-                                      QString::number(QDateTime::currentSecsSinceEpoch())
+                                      QString()
                                   });
     if (fm1Iface.lastError().isValid()) {
         QDesktopServices::openUrl(folderUrl);
