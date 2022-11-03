@@ -28,3 +28,40 @@ jobs:
         call %VCVARS% ${{ matrix.msvc_arch }}
         qmake pineapple-pictures.pro
         nmake
+
+  msys2-build:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: MINGW64
+          update: true
+          pacboy: >-
+            toolchain:p ninja:p cmake:p kimageformats-qt5:p
+            qt5-static:p exiv2:p
+      - name: Build
+        run: |
+          mkdir build && cd build
+          cmake .. -DCMAKE_INSTALL_PREFIX=${MINGW_PREFIX} -DCMAKE_PREFIX_PATH="${MINGW_PREFIX}/qt5-static" -G Ninja
+          cmake --build . -j
+          cd ..
+      - name: Prepare for package
+        continue-on-error: true
+        run: |
+          mkdir package_workspace && cd package_workspace
+          cp ../build/ppic.exe ./
+          strip -s ./ppic.exe
+          # windeployqt -winextras --no-quick-import --no-translations --no-opengl-sw --no-angle --no-system-d3d-compiler ./ppic.exe
+          ldd ./ppic.exe > deps.txt
+          bash -c 'while read -r line; do path=$(cut -d" " -f3 <<<$line); cp -v $path ./; done <<<$(grep ".*mingw.*bin" deps.txt); exit 0'
+          rm deps.txt
+          # done
+          cd ../
+      - uses: actions/upload-artifact@v3
+        with:
+          name: msys2-mingw-w64-x86_64-windows
+          path: package_workspace/*
