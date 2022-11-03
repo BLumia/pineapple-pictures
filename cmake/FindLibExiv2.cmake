@@ -89,6 +89,14 @@ if(LibExiv2_FOUND AND NOT TARGET LibExiv2::LibExiv2)
     )
 endif()
 
+if(LibExiv2_STATIC_FOUND AND NOT TARGET LibExiv2::LibExiv2Static)
+    add_library(LibExiv2::LibExiv2Static UNKNOWN IMPORTED)
+    set_target_properties(LibExiv2::LibExiv2Static PROPERTIES
+        IMPORTED_LOCATION "${LibExiv2_STATIC_LIBRARIES}"
+        INTERFACE_INCLUDE_DIRECTORIES "${LibExiv2_STATIC_INCLUDE_DIRS}"
+    )
+endif()
+
 include(FeatureSummary)
 set_package_properties(LibExiv2 PROPERTIES
     URL "https://www.exiv2.org"

@@ -102,17 +102,13 @@ add_executable (${EXE_NAME}
 
 target_link_libraries (${EXE_NAME} Qt5::Widgets Qt5::Svg)
 
-if (LibExiv2_FOUND)
+if (LibExiv2_STATIC_FOUND)
     message(INFO ${LibExiv2_INCLUDE_DIRS})
-    target_include_directories(${EXE_NAME}
-    PRIVATE
-        ${LibExiv2_INCLUDE_DIRS}
-    )
     target_link_libraries (${EXE_NAME}
-        LibExiv2::LibExiv2
+        LibExiv2::LibExiv2Static
     )
     target_compile_definitions(${EXE_NAME} PRIVATE
-        HAVE_EXIV2_VERSION="${LibExiv2_VERSION}"
+        HAVE_EXIV2_VERSION="${LibExiv2_STATIC_VERSION}"
     )
 endif ()
 
