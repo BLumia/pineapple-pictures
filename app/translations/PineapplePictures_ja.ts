@@ -41,7 +41,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="47"/>
         <source>Version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>パッジョン:%1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="53"/>
