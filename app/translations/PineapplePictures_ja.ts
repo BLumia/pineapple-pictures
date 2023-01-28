@@ -6,37 +6,37 @@
     <message>
         <location filename="../aboutdialog.cpp" line="23"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>情報</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="26"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>画像ファイルのパスを引数としてアプリケーションを起動し、ファイルを読み込む。</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="27"/>
         <source>Drag and drop image file onto the window is also supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>画像ファイルをウィンドウにドラッグ＆ドロップすることもできます。</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="28"/>
         <source>None of the operations in this application will alter the pictures on disk.</source>
-        <translation type="unfinished"></translation>
+        <translation>このアプリのどの操作も、ディスク上の写真に変更を加えることはありません。</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="29"/>
         <source>Context menu option explanation:</source>
-        <translation type="unfinished"></translation>
+        <translation>コンテキストメニューのオプションの説明:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="36"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation type="unfinished"></translation>
+        <translation>ウィンドウを最前面表示する。</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="39"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation type="unfinished"></translation>
+        <translation>誤ってウィンドウを閉じないようにする。(例：ウィンドウをダブルクリックする)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="47"/>
@@ -46,124 +46,124 @@
     <message>
         <location filename="../aboutdialog.cpp" line="53"/>
         <source>Logo designed by %1</source>
-        <translation type="unfinished"></translation>
+        <translation>ロゴデザイナー%1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="55"/>
         <source>Built with Qt %1 (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt %1 (%2) でビルドされました</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="56"/>
         <source>Source code</source>
-        <translation type="unfinished"></translation>
+        <translation>ソースコード</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="66"/>
         <source>Contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>貢献者</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="68"/>
         <source>List of contributors on GitHub</source>
-        <translation type="unfinished"></translation>
+        <translation>GitHubでの貢献者リスト</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="69"/>
         <source>Thanks to all people who contributed to this project.</source>
-        <translation type="unfinished"></translation>
+        <translation>このプロジェクトに貢献したすべての人に感謝します。</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="73"/>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>訳者</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="74"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
-        <translation type="unfinished"></translation>
+        <translation>このアプリケーションの翻訳にボランティアで参加してくださった以下の方々に感謝します。</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="118"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1は以下のフリーソフトウェア・ライブラリで構築されています。</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="142"/>
         <source>&amp;Special Thanks</source>
-        <translation type="unfinished"></translation>
+        <translation>＆スペシャルサンクス</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="144"/>
         <source>&amp;Third-party Libraries</source>
-        <translation type="unfinished"></translation>
+        <translation>＆サードパーティライブラリ</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="80"/>
         <source>Your Rights</source>
-        <translation type="unfinished"></translation>
+        <translation>利用者の権利</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="50"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
-        <translation type="unfinished"></translation>
+        <translation>コピーライト(c)%1%2</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="82"/>
         <source>%1 is released under the MIT License.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1は、MITライセンスのもとで公開されています。</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="83"/>
         <source>This license grants people a number of freedoms:</source>
-        <translation type="unfinished"></translation>
+        <translation>このライセンスは人々に多くの自由を与えます。</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="84"/>
         <source>You are free to use %1, for any purpose</source>
-        <translation type="unfinished"></translation>
+        <translation>%1は、どのような目的にも自由に使用するできます</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="85"/>
         <source>You are free to distribute %1</source>
-        <translation type="unfinished"></translation>
+        <translation>自由に配布することができます%1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="86"/>
         <source>You can study how %1 works and change it</source>
-        <translation type="unfinished"></translation>
+        <translation>%1がどのように作動するかを研究し、それを変更することができます</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="87"/>
         <source>You can distribute changed versions of %1</source>
-        <translation type="unfinished"></translation>
+        <translation>変更されたバージョンの %1を配布することができます</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="89"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
-        <translation type="unfinished"></translation>
+        <translation>MITライセンスは、この自由を保証しています。誰もそれを奪うことは許されていません。</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="117"/>
         <source>Third-party Libraries used by %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1が使用されるサードパーティライブラリ</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="140"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;へルプ</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="141"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;情報</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="143"/>
         <source>&amp;License</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ライセンス</translation>
     </message>
 </context>
 <context>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../graphicsscene.cpp" line="57"/>
         <source>Drag image here</source>
-        <translation type="unfinished"></translation>
+        <translation>ここに画像をドラッグしてください</translation>
     </message>
 </context>
 <context>
@@ -179,28 +179,28 @@
     <message>
         <location filename="../graphicsview.cpp" line="333"/>
         <source>File url list is empty</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルURLリストがエンプティーです</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="52"/>
         <source>File is not a valid image</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルが有効な画像ではありません</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="57"/>
         <location filename="../graphicsview.cpp" line="62"/>
         <source>Image data is invalid or currently unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>無効またはサポートされていない画像データ</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="341"/>
         <source>Image data is invalid</source>
-        <translation type="unfinished"></translation>
+        <translation>画像のデータが無効です</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="348"/>
         <source>Not supported mimedata: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>無効なmimedata: %1</translation>
     </message>
 </context>
 <context>
@@ -208,7 +208,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="160"/>
         <source>File url list is empty</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルurlリストがエンプティーです</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="403"/>
@@ -218,44 +218,44 @@
     <message>
         <location filename="../actionmanager.cpp" line="83"/>
         <source>Copy P&amp;ixmap</source>
-        <translation type="unfinished"></translation>
+        <translation>ビットマップをコピーする</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
         <source>Copy &amp;File Path</source>
-        <translation type="unfinished"></translation>
+        <translation>コピー&amp;ファイルパス</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>プロパティ</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="35"/>
         <location filename="../actionmanager.cpp" line="86"/>
         <source>Stay on top</source>
-        <translation type="unfinished"></translation>
+        <translation>最前面表示する</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="38"/>
         <location filename="../actionmanager.cpp" line="87"/>
         <source>Protected mode</source>
-        <translation type="unfinished"></translation>
+        <translation>プロテクトモード</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="72"/>
         <source>Zoom in</source>
-        <translation type="unfinished"></translation>
+        <translation>ズームイン</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="73"/>
         <source>Zoom out</source>
-        <translation type="unfinished"></translation>
+        <translation>ズームアウト</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>フリップ＆ホリゾンタル</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="85"/>
@@ -265,22 +265,22 @@
     <message>
         <location filename="../actionmanager.cpp" line="74"/>
         <source>Toggle Checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation>トグルチェッカーボード</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="68"/>
         <source>&amp;Open...</source>
-        <translation>開く(&amp;O)</translation>
+        <translation>＆開く…</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="70"/>
         <source>Actual size</source>
-        <translation type="unfinished"></translation>
+        <translation>実サイズ</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="71"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished"></translation>
+        <translation>トグル最大化</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="75"/>
@@ -305,18 +305,18 @@
     <message>
         <location filename="../actionmanager.cpp" line="89"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>ヘルプ</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
-        <translation type="unfinished"></translation>
+        <translation>ファイルエクスプローラに表示する</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
         <source>Show in directory</source>
-        <translation type="unfinished"></translation>
+        <translation>ディレクトリに表示する</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="101"/>
@@ -329,7 +329,7 @@
     <message>
         <location filename="../metadatadialog.cpp" line="80"/>
         <source>Image Metadata</source>
-        <translation type="unfinished"></translation>
+        <translation>画像メタデータ</translation>
     </message>
 </context>
 <context>
@@ -361,7 +361,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="29"/>
         <source>%1 File</source>
-        <translation type="unfinished"></translation>
+        <translation>%1ファイル</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="36"/>
@@ -373,18 +373,18 @@
         <location filename="../metadatamodel.cpp" line="40"/>
         <source>Advanced photo</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>アドバンストフォト</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="41"/>
         <source>GPS</source>
         <comment>Section name.</comment>
-        <translation type="unfinished"></translation>
+        <translation>GPS</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="46"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>解像度</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="48"/>
@@ -394,22 +394,22 @@
     <message>
         <location filename="../metadatamodel.cpp" line="52"/>
         <source>Frame count</source>
-        <translation type="unfinished"></translation>
+        <translation>フレームカウント</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="56"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>画像名</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="58"/>
         <source>Item type</source>
-        <translation type="unfinished"></translation>
+        <translation>項目タイプ</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="60"/>
         <source>Folder path</source>
-        <translation type="unfinished"></translation>
+        <translation>フォルダパス</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="62"/>
@@ -419,22 +419,22 @@
     <message>
         <location filename="../metadatamodel.cpp" line="64"/>
         <source>Date created</source>
-        <translation type="unfinished"></translation>
+        <translation>作成日</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="66"/>
         <source>Date modified</source>
-        <translation type="unfinished"></translation>
+        <translation>修正日</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="73"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>タイトル</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="75"/>
         <source>Subject</source>
-        <translation type="unfinished"></translation>
+        <translation>サブジェクト</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="77"/>
@@ -474,17 +474,17 @@
     <message>
         <location filename="../metadatamodel.cpp" line="97"/>
         <source>Horizontal resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>水平解像度</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="99"/>
         <source>Vertical resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>垂直方向の解像度</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="101"/>
         <source>Resolution unit</source>
-        <translation type="unfinished"></translation>
+        <translation>解像度単位</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="103"/>
@@ -494,137 +494,137 @@
     <message>
         <location filename="../metadatamodel.cpp" line="106"/>
         <source>Camera maker</source>
-        <translation type="unfinished"></translation>
+        <translation>カメラメーカー</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="108"/>
         <source>Camera model</source>
-        <translation type="unfinished"></translation>
+        <translation>カメラ機種</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="110"/>
         <source>F-stop</source>
-        <translation type="unfinished"></translation>
+        <translation>F-ストップ</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="112"/>
         <source>Exposure time</source>
-        <translation type="unfinished"></translation>
+        <translation>露光時間</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="114"/>
         <source>ISO speed</source>
-        <translation type="unfinished"></translation>
+        <translation>ISOスピード</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="116"/>
         <source>Exposure bias</source>
-        <translation type="unfinished"></translation>
+        <translation>露光バイアス</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="118"/>
         <source>Focal length</source>
-        <translation type="unfinished"></translation>
+        <translation>焦点距離</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="120"/>
         <source>Max aperture</source>
-        <translation type="unfinished"></translation>
+        <translation>最大口径</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="122"/>
         <source>Metering mode</source>
-        <translation type="unfinished"></translation>
+        <translation>測光モード</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="124"/>
         <source>Flash mode</source>
-        <translation type="unfinished"></translation>
+        <translation>フラッシュモード</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="126"/>
         <source>35mm focal length</source>
-        <translation type="unfinished"></translation>
+        <translation>35mmの焦点距離</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="129"/>
         <source>Lens model</source>
-        <translation type="unfinished"></translation>
+        <translation>レンズモデル</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="131"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>輝度</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="133"/>
         <source>Exposure program</source>
-        <translation type="unfinished"></translation>
+        <translation>露光プログラム</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="135"/>
         <source>Saturation</source>
-        <translation type="unfinished"></translation>
+        <translation>彩度</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="137"/>
         <source>Sharpness</source>
-        <translation type="unfinished"></translation>
+        <translation>シャープネス</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="139"/>
         <source>White balance</source>
-        <translation type="unfinished"></translation>
+        <translation>ホワイトバランス</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="141"/>
         <source>Digital zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>デジタルズーム</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="143"/>
         <source>EXIF version</source>
-        <translation type="unfinished"></translation>
+        <translation>EXIFバージョン</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="146"/>
         <source>Latitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>緯度基準</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="148"/>
         <source>Latitude</source>
-        <translation type="unfinished"></translation>
+        <translation>緯度</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="150"/>
         <source>Longitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>経度基準</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="152"/>
         <source>Longitude</source>
-        <translation type="unfinished"></translation>
+        <translation>経度</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="154"/>
         <source>Altitude reference</source>
-        <translation type="unfinished"></translation>
+        <translation>高度基準</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="156"/>
         <source>Altitude</source>
-        <translation type="unfinished"></translation>
+        <translation>高度</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="166"/>
         <source>%1 x %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1×%2</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="184"/>
         <source>%1 : %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1:%2</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="309"/>
@@ -647,57 +647,57 @@
     <message>
         <location filename="../settingsdialog.cpp" line="22"/>
         <source>Do nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>何もしない</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="23"/>
         <source>Close the window</source>
-        <translation type="unfinished"></translation>
+        <translation>ウィンドウを終了する</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="24"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished"></translation>
+        <translation>トグル最大化</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="28"/>
         <source>Zoom in and out</source>
-        <translation type="unfinished"></translation>
+        <translation>拡大・縮小</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="29"/>
         <source>View next or previous item</source>
-        <translation type="unfinished"></translation>
+        <translation>次の項目または前の項目を表示</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Auto size</source>
-        <translation type="unfinished"></translation>
+        <translation>オートサイズ</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>Maximized</source>
-        <translation type="unfinished"></translation>
+        <translation>最大化された</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="52"/>
         <source>Stay on top when start-up</source>
-        <translation type="unfinished"></translation>
+        <translation>スタートアップ時最前面を表示する</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="53"/>
         <source>Double-click behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>ダブルクリックの動作</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="54"/>
         <source>Mouse wheel behavior</source>
-        <translation>マウスホイールの挙動</translation>
+        <translation>マウスホイールの動作</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="55"/>
         <source>Default window size</source>
-        <translation type="unfinished"></translation>
+        <translation>既定のウィンドウサイズ</translation>
     </message>
 </context>
 <context>
@@ -705,12 +705,12 @@
     <message>
         <location filename="../main.cpp" line="31"/>
         <source>Pineapple Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>パイナップル画像ビューアー</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="35"/>
         <source>File list.</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルリスト。</translation>
     </message>
 </context>
 </TS>
