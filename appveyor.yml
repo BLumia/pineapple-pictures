@@ -45,7 +45,7 @@ build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
 # install ECM so we can build KImageFormats
   - cd 3rdparty
-  - git clone -q https://invent.kde.org/frameworks/extra-cmake-modules.git
+  - git clone -b kf5 -q https://invent.kde.org/frameworks/extra-cmake-modules.git
   - git rev-parse HEAD
   - cd extra-cmake-modules
   - cmake -G "Ninja" . -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_PREFIX% -DBUILD_TESTING=OFF
@@ -80,7 +80,7 @@ build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
 # install KArchive for kra format support of KImageFormats
   - cd 3rdparty
-  - git clone -q https://invent.kde.org/frameworks/karchive.git
+  - git clone -b kf5 -q https://invent.kde.org/frameworks/karchive.git
   - git rev-parse HEAD
   - cd karchive
   - mkdir build
@@ -107,7 +107,7 @@ build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
 # install KImageFormats
   - cd 3rdparty
-  - git clone -q https://invent.kde.org/frameworks/kimageformats.git
+  - git clone -b kf5 -q https://invent.kde.org/frameworks/kimageformats.git
   - git rev-parse HEAD
   - cd kimageformats
   - mkdir build
