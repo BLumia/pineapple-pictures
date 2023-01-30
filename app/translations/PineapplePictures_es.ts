@@ -222,12 +222,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="83"/>
         <source>Copy P&amp;ixmap</source>
-        <translation>Copiar el &amp;mapa de píxeles</translation>
+        <translation>Copiar &amp;mapa de píxeles</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
         <source>Copy &amp;File Path</source>
-        <translation>Copiar la &amp;ruta del archivo</translation>
+        <translation>Copiar &amp;ruta de archivo</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
