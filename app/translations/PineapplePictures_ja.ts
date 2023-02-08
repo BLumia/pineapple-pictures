@@ -6,7 +6,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="23"/>
         <source>About</source>
-        <translation>情報</translation>
+        <translation>情報（&amp;A）</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="26"/>
@@ -92,12 +92,12 @@
     <message>
         <location filename="../aboutdialog.cpp" line="142"/>
         <source>&amp;Special Thanks</source>
-        <translation>＆スペシャルサンクス</translation>
+        <translation>スペシャルサンクス(&amp;S)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="144"/>
         <source>&amp;Third-party Libraries</source>
-        <translation>＆サードパーティライブラリ</translation>
+        <translation>サードパーティライブラリ(&amp;T)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="80"/>
@@ -153,7 +153,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="140"/>
         <source>&amp;Help</source>
-        <translation>&amp;へルプ</translation>
+        <translation>へルプ(&amp;H)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="141"/>
@@ -163,7 +163,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="143"/>
         <source>&amp;License</source>
-        <translation>&amp;ライセンス</translation>
+        <translation>ライセンス(&amp;L)</translation>
     </message>
 </context>
 <context>
@@ -218,12 +218,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="83"/>
         <source>Copy P&amp;ixmap</source>
-        <translation>ビットマップをコピーする</translation>
+        <translation>ビットマップをコピーする(&amp;I)</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="84"/>
         <source>Copy &amp;File Path</source>
-        <translation>コピー&amp;ファイルパス</translation>
+        <translation>ファイルパスのコピー(&amp;F)</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
@@ -255,7 +255,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="80"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>フリップ＆ホリゾンタル</translation>
+        <translation>ホリゾンタルフリップ（&amp;H）</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="85"/>
@@ -677,12 +677,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>Maximized</source>
-        <translation>最大化された</translation>
+        <translation>最大化</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="52"/>
         <source>Stay on top when start-up</source>
-        <translation>スタートアップ時最前面を表示する</translation>
+        <translation>スタートアップ時最前面に表示する</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="53"/>
