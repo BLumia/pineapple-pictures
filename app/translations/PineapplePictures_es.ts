@@ -315,7 +315,7 @@
         <location filename="../actionmanager.cpp" line="92"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
-        <translation>Mostrar en el gestor de archivos</translation>
+        <translation>Mostrar en el Explorador de archivos</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
