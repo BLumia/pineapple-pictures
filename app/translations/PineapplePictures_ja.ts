@@ -158,7 +158,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="141"/>
         <source>&amp;About</source>
-        <translation>&amp;情報</translation>
+        <translation>情報(&amp;A)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="143"/>
