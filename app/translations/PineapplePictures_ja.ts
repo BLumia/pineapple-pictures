@@ -6,12 +6,12 @@
     <message>
         <location filename="../aboutdialog.cpp" line="23"/>
         <source>About</source>
-        <translation>情報（&amp;A）</translation>
+        <translation>情報</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="26"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation>画像ファイルのパスを引数としてアプリケーションを起動し、ファイルを読み込む。</translation>
+        <translation>画像ファイルのパスをパラメータとしてアプリケーションを起動し、ファイルを読み込みます。</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="27"/>
