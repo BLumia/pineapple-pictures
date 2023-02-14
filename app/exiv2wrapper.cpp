@@ -35,14 +35,20 @@ void Exiv2Wrapper::cacheSection(Collection collection)
     for (; it != end; ++it) {
         QString key = QString::fromUtf8(it->key().c_str());
         if (it->tagName().substr(0, 2) == "0x") continue;
-        QString label = QString::fromLocal8Bit(it->tagLabel().c_str());
-        std::ostringstream stream;
-        stream << *it;
-        QString value = QString::fromUtf8(stream.str().c_str());
-        m_metadataValue.insert(key, value);
-        m_metadataLabel.insert(key, label);
-
-        qDebug() << key << label << value;
+        // We might get exceptions like "No namespace info available for XMP prefix `Item'"
+        // when trying to get tagLabel() data from a Xmpdatum if the tag is not common-used.
+        // We don't care for those rare tags so let's just use a try-cache...
+        try {
+            QString label = QString::fromLocal8Bit(it->tagLabel().c_str());
+            std::ostringstream stream;
+            stream << *it;
+            QString value = QString::fromUtf8(stream.str().c_str());
+            m_metadataValue.insert(key, value);
+            m_metadataLabel.insert(key, label);
+            qDebug() << key << label << value;
+        } catch (Exiv2::BasicError<char> & err) {
+            qWarning() << "Error loading key" << key << ":" << err.code() << err.what();
+        }
     }
 }
 
