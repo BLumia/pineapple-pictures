@@ -27,6 +27,7 @@ Exiv2Wrapper::~Exiv2Wrapper()
 
 }
 
+#ifdef HAVE_EXIV2_VERSION // stupid AppleClang...
 template<typename Collection, typename Iterator>
 void Exiv2Wrapper::cacheSection(Collection collection)
 {
@@ -51,6 +52,7 @@ void Exiv2Wrapper::cacheSection(Collection collection)
         }
     }
 }
+#endif // HAVE_EXIV2_VERSION
 
 bool Exiv2Wrapper::load(const QString &filePath)
 {
