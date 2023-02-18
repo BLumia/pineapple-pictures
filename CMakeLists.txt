@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2022 Gary Wang <wzc782970009@gmail.com>
+# SPDX-FileCopyrightText: 2022 - 2023 Gary Wang <git@blumia.net>
 #
 # SPDX-License-Identifier: MIT
 
@@ -11,16 +11,32 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
 include (GNUInstallDirs)
 include (FeatureSummary)
 
+option (EXIV2_METADATA_SUPPORT "Better image metadata support via libexiv2" ON)
+option (PREFER_QT_5 "Prefer to use Qt 5 even if we have Qt 6" ON)
+
 set (CMAKE_AUTOMOC ON)
 set (CMAKE_AUTORCC ON)
-set (QT_MINIMUM_VERSION "5.10")
 
-option (EXIV2_METADATA_SUPPORT "Better image metadata support via libexiv2" ON)
+if (PREFER_QT_5)
+    find_package(QT NAMES Qt5 REQUIRED COMPONENTS Core)
+else ()
+    find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core)
+endif ()
 
-find_package(Qt5 ${QT_MINIMUM_VERSION} REQUIRED
+if (${QT_VERSION_MAJOR} EQUAL "5")
+    set (QT_MINIMUM_VERSION "5.10")
+else ()
+    set (QT_MINIMUM_VERSION "6.4")
+endif ()
+
+find_package(Qt${QT_VERSION_MAJOR} ${QT_MINIMUM_VERSION} REQUIRED
     COMPONENTS Widgets Svg LinguistTools
     OPTIONAL_COMPONENTS DBus
 )
+
+if (${QT_VERSION_MAJOR} EQUAL "6")
+    find_package(Qt${QT_DEFAULT_MAJOR_VERSION} ${QT_MINIMUM_VERSION} CONFIG REQUIRED SvgWidgets)
+endif ()
 
 if (EXIV2_METADATA_SUPPORT)
     find_package(LibExiv2)
@@ -86,7 +102,12 @@ set (EXE_NAME ppic)
 file (GLOB PPIC_TS_FILES app/translations/*.ts)
 set (PPIC_CPP_FILES_FOR_I18N ${PPIC_CPP_FILES})
 
-qt5_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})
+if (${QT_VERSION_MAJOR} EQUAL "5")
+    # TODO: remove this when we lift our Qt5 minimum version to Qt 5.15
+    qt5_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})
+else ()
+    qt_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})
+endif ()
 
 if (WIN32)
     list(APPEND PPIC_RC_FILES assets/pineapple-pictures.rc)
@@ -100,7 +121,10 @@ add_executable (${EXE_NAME}
     ${PPIC_QM_FILES}
 )
 
-target_link_libraries (${EXE_NAME} Qt5::Widgets Qt5::Svg)
+target_link_libraries (${EXE_NAME} Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Svg)
+if (${QT_VERSION_MAJOR} EQUAL "6")
+    target_link_libraries (${EXE_NAME} Qt::SvgWidgets)
+endif ()
 
 if (LibExiv2_FOUND)
     message(INFO ${LibExiv2_INCLUDE_DIRS})
