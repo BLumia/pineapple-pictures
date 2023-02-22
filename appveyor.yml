@@ -54,16 +54,16 @@ build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
 # install AOM for libavif AV1 decoding support...
   - cd 3rdparty
-  #- git clone -b v3.2.0 --depth 1 https://aomedia.googlesource.com/aom
+  #- git clone -b v3.6.0 --depth 1 https://aomedia.googlesource.com/aom
   #- cd aom
-  #- mkdir build.libavif
-  #- cd build.libavif
+  #- mkdir build.aom
+  #- cd build.aom
   #- cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_PREFIX% -DENABLE_DOCS=OFF -DBUILD_SHARED_LIBS=ON -DAOM_TARGET_CPU=generic -DENABLE_TESTS=OFF -DENABLE_TESTDATA=OFF -DENABLE_TOOLS=OFF -DENABLE_EXAMPLES=0
   #- cmake --build . --config Release
   #- cmake --build . --config Release --target install/strip
   - mkdir aom
   - cd aom
-  - curl -fsSL -o ppkg-aom.zip https://sourceforge.net/projects/pineapple-package-manager/files/packages/mingw-w64-x86_64-windows/aom-3.2.0-2.zip
+  - curl -fsSL -o ppkg-aom.zip https://sourceforge.net/projects/pineapple-package-manager/files/packages/mingw-w64-x86_64-windows/aom-3.6.0-1.zip
   - ppkg ppkg-aom.zip
   - 7z x ppkg-aom.zip LICENSE -y
   - cd %APPVEYOR_BUILD_FOLDER%
@@ -145,6 +145,9 @@ build_script:
   - cd ..
 # for debug..
   - tree /f
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - xcopy %CMAKE_INSTALL_PREFIX% .\cmake-prefix-copy /E /H /C /I
 
 artifacts:
   - path: build\bin
+  - path: cmake-prefix-copy
