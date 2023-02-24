@@ -479,12 +479,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="103"/>
         <source>Vertical resolution</source>
-        <translation>垂直方向の解像度</translation>
+        <translation>垂直解像度</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="105"/>
         <source>Resolution unit</source>
-        <translation>解像度単位</translation>
+        <translation>解像度の単位</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="107"/>
@@ -504,7 +504,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="114"/>
         <source>F-stop</source>
-        <translation>F-ストップ</translation>
+        <translation>エフストップ</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="116"/>
@@ -519,7 +519,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="120"/>
         <source>Exposure bias</source>
-        <translation>露光バイアス</translation>
+        <translation>露出バイアス</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="122"/>
