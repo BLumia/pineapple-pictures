@@ -125,12 +125,16 @@ void MetadataModel::setFile(const QString &imageFilePath)
         appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
                                   QStringLiteral("Exif.Photo.MeteringMode"), tr("Metering mode"));
         appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
+                                  QStringLiteral("Exif.Photo.SubjectDistance"), tr("Subject distance"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
                                   QStringLiteral("Exif.Photo.Flash"), tr("Flash mode"));
         appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
                                   QStringLiteral("Exif.Photo.FocalLengthIn35mmFilm"), tr("35mm focal length"));
 
         appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
                                   QStringLiteral("Exif.Photo.LensModel"), tr("Lens model"));
+        appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
+                                  QStringLiteral("Exif.Photo.Contrast"), tr("Contrast"));
         appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
                                   QStringLiteral("Exif.Photo.BrightnessValue"), tr("Brightness"));
         appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
