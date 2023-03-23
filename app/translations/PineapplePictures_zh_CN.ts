@@ -493,7 +493,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="107"/>
         <source>Colour representation</source>
-        <translation>颜色表示</translation>
+        <translation>色彩空间</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="110"/>
@@ -593,7 +593,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="149"/>
         <source>Digital zoom</source>
-        <translation>数码变焦</translation>
+        <translation>数码变焦倍率</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="151"/>
