@@ -443,7 +443,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="81"/>
         <source>Rating</source>
-        <translation>分级</translation>
+        <translation>评分</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="83"/>
@@ -583,7 +583,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="145"/>
         <source>Sharpness</source>
-        <translation>清晰度</translation>
+        <translation>锐度</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="147"/>
@@ -593,7 +593,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="149"/>
         <source>Digital zoom</source>
-        <translation>数字缩放</translation>
+        <translation>数码变焦</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="151"/>
