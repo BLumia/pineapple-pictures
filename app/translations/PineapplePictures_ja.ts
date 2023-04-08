@@ -479,17 +479,17 @@
     <message>
         <location filename="../metadatamodel.cpp" line="103"/>
         <source>Vertical resolution</source>
-        <translation>垂直方向の解像度</translation>
+        <translation>垂直解像度</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="105"/>
         <source>Resolution unit</source>
-        <translation>解像度単位</translation>
+        <translation>解像度の単位</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="107"/>
         <source>Colour representation</source>
-        <translation>色の表現</translation>
+        <translation>色空間</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="110"/>
@@ -504,7 +504,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="114"/>
         <source>F-stop</source>
-        <translation>F-ストップ</translation>
+        <translation>エフストップ</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="116"/>
@@ -519,7 +519,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="120"/>
         <source>Exposure bias</source>
-        <translation>露光バイアス</translation>
+        <translation>露光補正値</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="122"/>
@@ -539,7 +539,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="128"/>
         <source>Subject distance</source>
-        <translation type="unfinished"></translation>
+        <translation>被写体距離</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="130"/>
@@ -559,7 +559,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="137"/>
         <source>Contrast</source>
-        <translation type="unfinished"></translation>
+        <translation>コントラスト</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="139"/>
@@ -589,7 +589,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="149"/>
         <source>Digital zoom</source>
-        <translation>デジタルズーム</translation>
+        <translation>デジタルズーム倍率</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="151"/>

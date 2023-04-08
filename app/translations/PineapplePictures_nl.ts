@@ -543,7 +543,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="128"/>
         <source>Subject distance</source>
-        <translation type="unfinished"></translation>
+        <translation>Onderwerpafstand</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="130"/>
@@ -563,7 +563,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="137"/>
         <source>Contrast</source>
-        <translation type="unfinished"></translation>
+        <translation>Contrast</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="139"/>
