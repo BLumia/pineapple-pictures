@@ -15,13 +15,17 @@ FramelessWindow::FramelessWindow(QWidget *parent)
     : QWidget(parent)
     , m_centralLayout(new QVBoxLayout(this))
 {
-    // TODO: Remove the comment below when we switch to Qt 6 completely.
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    // The Qt::WindowMinMaxButtonsHint or Qt::WindowMinimizeButtonHint here is to
+    // provide the ability to use Winkey + Up/Down to toggle minimize/maximize.
+    // But a bug introduced in Qt6 that this flag will break the WM_NCHITTEST event.
+    // See: QTBUG-112356 and discussion in https://github.com/BLumia/pineapple-pictures/pull/81
+    // Thanks @yyc12345 for finding out the source of the issue.
+    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+#else
     // There is a bug in Qt 5 that will make pressing Meta+Up cause the app
     // fullscreen under Windows, see QTBUG-91226 to learn more.
     // The bug seems no longer exists in Qt 6 (I only tested it under Qt 6.3.0).
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinMaxButtonsHint);
-#else
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint);
 #endif // QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 
