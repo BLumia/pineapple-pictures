@@ -11,7 +11,6 @@
 #include <QUrl>
 #include <QGraphicsSvgItem>
 #include <QMovie>
-#include <QLabel>
 #include <QPainter>
 
 class PGraphicsPixmapItem : public QGraphicsPixmapItem
@@ -56,6 +55,34 @@ private:
     QPixmap m_cachedPixmap;
 };
 
+class PGraphicsMovieItem : public QGraphicsItem
+{
+public:
+    PGraphicsMovieItem(QGraphicsItem *parent = nullptr) : QGraphicsItem(parent) {}
+
+    void setMovie(QMovie* movie) {
+        if (m_movie) m_movie->disconnect();
+        m_movie.reset(movie);
+        m_movie->connect(m_movie.data(), &QMovie::updated, [this](){
+            this->update();
+        });
+    }
+
+    QRectF boundingRect() const override {
+        if (m_movie) { return m_movie->frameRect(); }
+        else { return QRectF(); }
+    }
+
+    void paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) override {
+        if (m_movie) {
+            painter->drawPixmap(m_movie->frameRect(), m_movie->currentPixmap(), m_movie->frameRect());
+        }
+    }
+
+private:
+    QScopedPointer<QMovie> m_movie;
+};
+
 GraphicsScene::GraphicsScene(QObject *parent)
     : QGraphicsScene(parent)
 {
@@ -98,14 +125,14 @@ void GraphicsScene::showSvg(const QString &filepath)
 void GraphicsScene::showAnimated(const QString &filepath)
 {
     this->clear();
-    QLabel * label = new QLabel;
-    QMovie * movie = new QMovie(filepath, QByteArray(), label);
-    label->setStyleSheet("background-color:rgba(225,255,255,0);");
-    label->setMovie(movie);
-    this->addWidget(label);
+
+    PGraphicsMovieItem * animatedItem = new PGraphicsMovieItem();
+    QMovie * movie = new QMovie(filepath);
     movie->start();
-    m_theThing = this->addRect(QRect(QPoint(0, 0), label->sizeHint()),
-                               QPen(Qt::transparent));
+    animatedItem->setMovie(movie);
+    this->addItem(animatedItem);
+    m_theThing = animatedItem;
+
     this->setSceneRect(m_theThing->boundingRect());
 }
 
