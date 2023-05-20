@@ -13,13 +13,6 @@
 #include <QImageReader>
 #include <QStyleOptionGraphicsItem>
 
-// TODO: remove this once we drop older Qt support.
-#if QT_VERSION >= QT_VERSION_CHECK(5, 13, 0)
-#define COMPAT_CONSTCOLOR constexpr
-#else
-#define COMPAT_CONSTCOLOR const
-#endif
-
 GraphicsView::GraphicsView(QWidget *parent)
     : QGraphicsView (parent)
 {
@@ -387,8 +380,8 @@ void GraphicsView::setCheckerboardEnabled(bool enabled, bool invertColor)
         QPixmap tilePixmap(0x20, 0x20);
         tilePixmap.fill(invertColor ? QColor(220, 220, 220, 170) : QColor(35, 35, 35, 170));
         QPainter tilePainter(&tilePixmap);
-        COMPAT_CONSTCOLOR QColor color(45, 45, 45, 170);
-        COMPAT_CONSTCOLOR QColor invertedColor(210, 210, 210, 170);
+        constexpr QColor color(45, 45, 45, 170);
+        constexpr QColor invertedColor(210, 210, 210, 170);
         tilePainter.fillRect(0, 0, 0x10, 0x10, invertColor ? invertedColor : color);
         tilePainter.fillRect(0x10, 0x10, 0x10, 0x10, invertColor ? invertedColor : color);
         tilePainter.end();

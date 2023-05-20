@@ -24,7 +24,7 @@ else ()
 endif ()
 
 if (${QT_VERSION_MAJOR} EQUAL "5")
-    set (QT_MINIMUM_VERSION "5.10")
+    set (QT_MINIMUM_VERSION "5.15.2")
 else ()
     set (QT_MINIMUM_VERSION "6.4")
 endif ()
@@ -102,12 +102,7 @@ set (EXE_NAME ppic)
 file (GLOB PPIC_TS_FILES app/translations/*.ts)
 set (PPIC_CPP_FILES_FOR_I18N ${PPIC_CPP_FILES})
 
-if (${QT_VERSION_MAJOR} EQUAL "5")
-    # TODO: remove this when we lift our Qt5 minimum version to Qt 5.15
-    qt5_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})
-else ()
-    qt_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})
-endif ()
+qt_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})
 
 if (WIN32)
     list(APPEND PPIC_RC_FILES assets/pineapple-pictures.rc)
@@ -140,9 +135,9 @@ if (LibExiv2_FOUND)
     )
 endif ()
 
-if (Qt5DBus_FOUND)
+if (Qt5DBus_FOUND OR Qt6DBus_FOUND)
     target_link_libraries (${EXE_NAME}
-        Qt5::DBus
+        Qt${QT_VERSION_MAJOR}::DBus
     )
     target_compile_definitions(${EXE_NAME} PRIVATE
         HAVE_QTDBUS

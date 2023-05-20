@@ -309,13 +309,9 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 void MainWindow::mouseMoveEvent(QMouseEvent *event)
 {
     if (event->buttons() & Qt::LeftButton && m_clickedOnWindow && !isMaximized()) {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
         if (!window()->windowHandle()->startSystemMove()) {
             move(event->globalPos() - m_oldMousePos);
         }
-#else
-        move(event->globalPos() - m_oldMousePos);
-#endif // QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
         event->accept();
     }
 
