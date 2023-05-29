@@ -10,6 +10,8 @@ class PlaylistManager : public QObject
 {
     Q_OBJECT
 public:
+    Q_PROPERTY(int currentIndex MEMBER m_currentIndex NOTIFY currentIndexChanged)
+
     enum PlaylistType {
         PL_USERPLAYLIST, // Regular playlist, managed by user.
         PL_SAMEFOLDER // PlaylistManager managed playlist, loaded from files from same folder.
@@ -43,6 +45,7 @@ public:
 
 signals:
     void loaded(int length);
+    void currentIndexChanged(int index);
 
 private:
     QList<QUrl> m_playlist;

@@ -140,6 +140,15 @@ MainWindow::MainWindow(QWidget *parent)
         m_nextButton->setVisible(galleryFileCount > 1);
     });
 
+    connect(m_pm, &PlaylistManager::currentIndexChanged, this, [this]() {
+        int index;
+        QUrl url;
+        std::tie(index, url) = m_pm->currentFileUrl();
+        if (index != -1) {
+            this->setWindowTitle(url.fileName());
+        }
+    });
+
     QShortcut * fullscreenShorucut = new QShortcut(QKeySequence(QKeySequence::FullScreen), this);
     connect(fullscreenShorucut, &QShortcut::activated,
             this, &MainWindow::toggleFullscreen);

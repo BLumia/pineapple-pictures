@@ -99,6 +99,7 @@ void PlaylistManager::setCurrentFile(const QString & filePath)
         break;
     }
 
+    emit currentIndexChanged(m_currentIndex);
     emit loaded(m_playlist.count());
 }
 
@@ -106,6 +107,7 @@ void PlaylistManager::setCurrentIndex(int index)
 {
     if (index < 0 || index >= m_playlist.count()) return;
     m_currentIndex = index;
+    emit currentIndexChanged(m_currentIndex);
 }
 
 int PlaylistManager::appendFile(const QString &filePath)
