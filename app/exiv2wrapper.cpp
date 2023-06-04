@@ -47,8 +47,12 @@ void Exiv2Wrapper::cacheSection(Collection collection)
             m_metadataValue.insert(key, value);
             m_metadataLabel.insert(key, label);
             qDebug() << key << label << value;
-        } catch (Exiv2::BasicError<char> & err) {
-            qWarning() << "Error loading key" << key << ":" << err.code() << err.what();
+#if EXIV2_TEST_VERSION(0, 28, 0)
+        } catch (Exiv2::Error & err) {
+#else // 0.27.x
+        } catch (Exiv2::AnyError & err) {
+#endif // EXIV2_TEST_VERSION(0, 28, 0)
+            qWarning() << "Error loading key" << key << ":" << err.what();
         }
     }
 }
