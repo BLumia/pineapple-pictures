@@ -85,7 +85,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
         Settings::instance()->setInitWindowSizeBehavior(_iws_options.at(index).first);
     });
 
-    this->setMinimumSize(300, 120); // not sure why it complain "Unable to set geometry"
+    adjustSize();
     setWindowFlag(Qt::WindowContextHelpButtonHint, false);
 }
 
