@@ -25,10 +25,25 @@ public:
 
     void setCentralWidget(QWidget * widget);
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 protected:
-    bool nativeEvent(const QByteArray& eventType, void* message, NATIVE_RESULT* result) override;
+    bool event(QEvent* e) override;
+
+protected slots:
+    void mousePressEvent(QMouseEvent *event) override;
+#endif
 
 private:
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    Qt::Edges m_oldEdges;
+    Qt::CursorShape m_oldCursorShape;
+
+    void hoverMove(QHoverEvent* event);
+
+    Qt::CursorShape getCursorByEdge(const Qt::Edges& edges, Qt::CursorShape default_cursor);
+    Qt::Edges getEdgesByPos(const QPoint pos, const QRect& winrect);
+#endif
+
     QVBoxLayout * m_centralLayout = nullptr;
     QWidget * m_centralWidget = nullptr; // just a pointer, doesn't take the ownership.
 };

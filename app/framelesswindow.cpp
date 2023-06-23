@@ -4,8 +4,11 @@
 
 #include "framelesswindow.h"
 
+#include <QMouseEvent>
+#include <QHoverEvent>
 #include <QApplication>
 #include <QVBoxLayout>
+#include <QWindow>
 
 #ifdef _WIN32
 #include <windows.h>
@@ -14,6 +17,10 @@
 FramelessWindow::FramelessWindow(QWidget *parent)
     : QWidget(parent)
     , m_centralLayout(new QVBoxLayout(this))
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    , m_oldCursorShape(Qt::ArrowCursor)
+    , m_oldEdges()
+#endif
 {
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     // The Qt::WindowMinMaxButtonsHint or Qt::WindowMinimizeButtonHint here is to
@@ -21,7 +28,8 @@ FramelessWindow::FramelessWindow(QWidget *parent)
     // But a bug introduced in Qt6 that this flag will break the WM_NCHITTEST event.
     // See: QTBUG-112356 and discussion in https://github.com/BLumia/pineapple-pictures/pull/81
     // Thanks @yyc12345 for finding out the source of the issue.
-    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint);
+    this->setAttribute(Qt::WA_Hover, true);
 #else
     // There is a bug in Qt 5 that will make pressing Meta+Up cause the app
     // fullscreen under Windows, see QTBUG-91226 to learn more.
@@ -43,89 +51,86 @@ void FramelessWindow::setCentralWidget(QWidget *widget)
     m_centralWidget = widget;
 }
 
-bool FramelessWindow::nativeEvent(const QByteArray &eventType, void *message, NATIVE_RESULT *result)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+
+/*
+ * References
+ * https://stackoverflow.com/questions/411823/how-do-i-implement-qhoverevent-in-qt
+ * https://stackoverflow.com/questions/74155493/how-can-i-resize-frameless-window-in-qml
+*/
+
+bool FramelessWindow::event(QEvent* e)
 {
-#ifdef _WIN32
-    // https://stackoverflow.com/questions/43505580/qt-windows-resizable-frameless-window
-    // Too lazy to do this now.. just stackoverflow it and did a copy and paste..
-    Q_UNUSED(eventType)
-    MSG* msg = static_cast<MSG*>(message);
+    switch(e->type())
+    {
+    case QEvent::HoverMove:
+        hoverMove(static_cast<QHoverEvent*>(e));
+        return true;
+    default:
+        return QWidget::event(e);
+    }
+}
 
-    if (msg->message == WM_NCHITTEST) {
-        if (isMaximized()) {
-            return false;
-        }
+void FramelessWindow::hoverMove(QHoverEvent* event)
+{
+    QWindow* win = window()->windowHandle();
+    Qt::Edges edges = this->getEdgesByPos(event->oldPos(), win->frameGeometry());
 
-        *result = 0;
-        const LONG borderWidth = 8;
-        RECT winrect;
-        GetWindowRect(reinterpret_cast<HWND>(winId()), &winrect);
+    // backup & restore cursor shape
+    if (edges && !m_oldEdges)
+    {
+        // entering the edge. backup cursor shape
+        m_oldCursorShape = win->cursor().shape();
+    }
+    if (!edges && m_oldEdges)
+    {
+        // leaving the edge. restore cursor shape
+        win->setCursor(m_oldCursorShape);
+    }
+    m_oldEdges = edges;
 
-        // must be short to correctly work with multiple monitors (negative coordinates)
-        short x = msg->lParam & 0x0000FFFF;
-        short y = (msg->lParam & 0xFFFF0000) >> 16;
+    // show resize cursor shape if cursor is within border
+    if (edges)
+    {
+        win->setCursor(this->getCursorByEdge(edges, Qt::ArrowCursor));
+        event->accept();
+    }
+}
 
-        bool resizeWidth = minimumWidth() != maximumWidth();
-        bool resizeHeight = minimumHeight() != maximumHeight();
-        if (resizeWidth) {
-            //left border
-            if (x >= winrect.left && x < winrect.left + borderWidth) {
-                *result = HTLEFT;
-            }
-            //right border
-            if (x < winrect.right && x >= winrect.right - borderWidth) {
-                *result = HTRIGHT;
-            }
-        }
-        if (resizeHeight) {
-            //bottom border
-            if (y < winrect.bottom && y >= winrect.bottom - borderWidth) {
-                *result = HTBOTTOM;
-            }
-            //top border
-            if (y >= winrect.top && y < winrect.top + borderWidth) {
-                *result = HTTOP;
-            }
-        }
-        if (resizeWidth && resizeHeight) {
-            //bottom left corner
-            if (x >= winrect.left && x < winrect.left + borderWidth &&
-                    y < winrect.bottom && y >= winrect.bottom - borderWidth)
-            {
-                *result = HTBOTTOMLEFT;
-            }
-            //bottom right corner
-            if (x < winrect.right && x >= winrect.right - borderWidth &&
-                    y < winrect.bottom && y >= winrect.bottom - borderWidth)
-            {
-                *result = HTBOTTOMRIGHT;
-            }
-            //top left corner
-            if (x >= winrect.left && x < winrect.left + borderWidth &&
-                    y >= winrect.top && y < winrect.top + borderWidth)
-            {
-                *result = HTTOPLEFT;
-            }
-            //top right corner
-            if (x < winrect.right && x >= winrect.right - borderWidth &&
-                    y >= winrect.top && y < winrect.top + borderWidth)
-            {
-                *result = HTTOPRIGHT;
-            }
-        }
-
-        if (*result != 0)
-            return true;
-
-        QWidget *action = QApplication::widgetAt(QCursor::pos());
-        if (action == this) {
-            *result = HTCAPTION;
-            return true;
+void FramelessWindow::mousePressEvent(QMouseEvent *event)
+{
+    if (event->buttons() & Qt::LeftButton && !isMaximized())
+    {
+        QWindow* win = window()->windowHandle();
+        Qt::Edges edges = this->getEdgesByPos(event->pos(), win->frameGeometry());
+        if (edges)
+        {
+            win->startSystemResize(edges);
+            event->accept();
         }
     }
-
-    return false;
-#else
-    return QWidget::nativeEvent(eventType, message, result);
-#endif // _WIN32
+    return QWidget::mousePressEvent(event);
 }
+
+Qt::CursorShape FramelessWindow::getCursorByEdge(const Qt::Edges& edges, Qt::CursorShape default_cursor)
+{
+    if ((edges == (Qt::TopEdge | Qt::LeftEdge)) || (edges == (Qt::RightEdge | Qt::BottomEdge))) return Qt::SizeFDiagCursor;
+    else if ((edges == (Qt::TopEdge | Qt::RightEdge)) || (edges == (Qt::LeftEdge | Qt::BottomEdge))) return Qt::SizeBDiagCursor;
+    else if (edges & (Qt::TopEdge | Qt::BottomEdge)) return Qt::SizeVerCursor;
+    else if (edges & (Qt::LeftEdge | Qt::RightEdge)) return Qt::SizeHorCursor;
+    else return default_cursor;
+}
+
+Qt::Edges FramelessWindow::getEdgesByPos(const QPoint pos, const QRect& winrect)
+{
+    const int borderWidth = 8;
+    Qt::Edges edges;
+
+    if (pos.x() < borderWidth) edges |= Qt::LeftEdge;
+    if (pos.x() > (winrect.width() - borderWidth)) edges |= Qt::RightEdge;
+    if (pos.y() < borderWidth) edges |= Qt::TopEdge;
+    if (pos.y() > (winrect.height() - borderWidth)) edges |= Qt::BottomEdge;
+
+    return edges;
+}
+#endif
