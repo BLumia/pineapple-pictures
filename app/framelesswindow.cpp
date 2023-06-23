@@ -119,7 +119,11 @@ bool FramelessWindow::mousePress(QMouseEvent* event)
     if (event->buttons() & Qt::LeftButton && !isMaximized())
     {
         QWindow* win = window()->windowHandle();
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
         Qt::Edges edges = this->getEdgesByPos(event->globalPosition().toPoint(), win->frameGeometry());
+#else
+        Qt::Edges edges = this->getEdgesByPos(event->globalPos(), win->frameGeometry());
+#endif // QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
         if (edges)
         {
             win->startSystemResize(edges);
