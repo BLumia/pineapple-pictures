@@ -71,16 +71,12 @@ bool FramelessWindow::eventFilter(QObject* o, QEvent* e)
     {
         QWidget* wg = qobject_cast<QWidget*>(o);
         if (wg != nullptr)
-        {
             return mouseHover(static_cast<QHoverEvent*>(e), wg);
-        }
+
         break;
     }
     case QEvent::MouseButtonPress:
-    {
         return mousePress(static_cast<QMouseEvent*>(e));
-        break;
-    }
     }
 
     return QWidget::eventFilter(o, e);
@@ -93,20 +89,17 @@ bool FramelessWindow::mouseHover(QHoverEvent* event, QWidget* wg)
 
     // backup & restore cursor shape
     if (edges && !m_oldEdges)
-    {
         // entering the edge. backup cursor shape
         m_oldCursorShape = win->cursor().shape();
-    }
     if (!edges && m_oldEdges)
-    {
         // leaving the edge. restore cursor shape
         win->setCursor(m_oldCursorShape);
-    }
+
+    // save the latest edges status
     m_oldEdges = edges;
 
     // show resize cursor shape if cursor is within border
-    if (edges)
-    {
+    if (edges) {
         win->setCursor(this->getCursorByEdge(edges, Qt::ArrowCursor));
         return true;
     }
@@ -116,16 +109,14 @@ bool FramelessWindow::mouseHover(QHoverEvent* event, QWidget* wg)
 
 bool FramelessWindow::mousePress(QMouseEvent* event)
 {
-    if (event->buttons() & Qt::LeftButton && !isMaximized())
-    {
+    if (event->buttons() & Qt::LeftButton && !isMaximized()) {
         QWindow* win = window()->windowHandle();
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
         Qt::Edges edges = this->getEdgesByPos(event->globalPosition().toPoint(), win->frameGeometry());
 #else
         Qt::Edges edges = this->getEdgesByPos(event->globalPos(), win->frameGeometry());
 #endif // QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-        if (edges)
-        {
+        if (edges) {
             win->startSystemResize(edges);
             return true;
         }
@@ -136,11 +127,16 @@ bool FramelessWindow::mousePress(QMouseEvent* event)
 
 Qt::CursorShape FramelessWindow::getCursorByEdge(const Qt::Edges& edges, Qt::CursorShape default_cursor)
 {
-    if ((edges == (Qt::TopEdge | Qt::LeftEdge)) || (edges == (Qt::RightEdge | Qt::BottomEdge))) return Qt::SizeFDiagCursor;
-    else if ((edges == (Qt::TopEdge | Qt::RightEdge)) || (edges == (Qt::LeftEdge | Qt::BottomEdge))) return Qt::SizeBDiagCursor;
-    else if (edges & (Qt::TopEdge | Qt::BottomEdge)) return Qt::SizeVerCursor;
-    else if (edges & (Qt::LeftEdge | Qt::RightEdge)) return Qt::SizeHorCursor;
-    else return default_cursor;
+    if ((edges == (Qt::TopEdge | Qt::LeftEdge)) || (edges == (Qt::RightEdge | Qt::BottomEdge)))
+        return Qt::SizeFDiagCursor;
+    else if ((edges == (Qt::TopEdge | Qt::RightEdge)) || (edges == (Qt::LeftEdge | Qt::BottomEdge)))
+        return Qt::SizeBDiagCursor;
+    else if (edges & (Qt::TopEdge | Qt::BottomEdge))
+        return Qt::SizeVerCursor;
+    else if (edges & (Qt::LeftEdge | Qt::RightEdge))
+        return Qt::SizeHorCursor;
+    else
+        return default_cursor;
 }
 
 Qt::Edges FramelessWindow::getEdgesByPos(const QPoint gpos, const QRect& winrect)
@@ -151,10 +147,14 @@ Qt::Edges FramelessWindow::getEdgesByPos(const QPoint gpos, const QRect& winrect
     int x = gpos.x() - winrect.x();
     int y = gpos.y() - winrect.y();
 
-    if (x < borderWidth) edges |= Qt::LeftEdge;
-    if (x > (winrect.width() - borderWidth)) edges |= Qt::RightEdge;
-    if (y < borderWidth) edges |= Qt::TopEdge;
-    if (y > (winrect.height() - borderWidth)) edges |= Qt::BottomEdge;
+    if (x < borderWidth)
+        edges |= Qt::LeftEdge;
+    if (x > (winrect.width() - borderWidth))
+        edges |= Qt::RightEdge;
+    if (y < borderWidth)
+        edges |= Qt::TopEdge;
+    if (y > (winrect.height() - borderWidth))
+        edges |= Qt::BottomEdge;
 
     return edges;
 }
