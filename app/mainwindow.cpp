@@ -162,6 +162,13 @@ MainWindow::MainWindow(QWidget *parent)
     QTimer::singleShot(0, this, [this](){
         m_am->setupShortcuts();
     });
+
+    // allow some mouse events can go through these widgets for resizing window.
+    installResizeCapture(m_closeButton);
+    installResizeCapture(m_graphicsView);
+    installResizeCapture(m_graphicsView->viewport());
+    installResizeCapture(m_gv);
+    installResizeCapture(m_gv->viewport());
 }
 
 MainWindow::~MainWindow()
