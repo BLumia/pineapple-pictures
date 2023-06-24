@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2022 Gary Wang <wzc782970009@gmail.com>
+// SPDX-FileCopyrightText: 2023 Tad Young <yyc12321@outlook.com>
 //
 // SPDX-License-Identifier: MIT
 
@@ -10,10 +11,6 @@
 #include <QVBoxLayout>
 #include <QWindow>
 
-#ifdef _WIN32
-#include <windows.h>
-#endif // _WIN32
-
 FramelessWindow::FramelessWindow(QWidget *parent)
     : QWidget(parent)
     , m_centralLayout(new QVBoxLayout(this))
@@ -21,11 +18,6 @@ FramelessWindow::FramelessWindow(QWidget *parent)
     , m_oldEdges()
 {
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-    // The Qt::WindowMinMaxButtonsHint or Qt::WindowMinimizeButtonHint here is to
-    // provide the ability to use Winkey + Up/Down to toggle minimize/maximize.
-    // But a bug introduced in Qt6 that this flag will break the WM_NCHITTEST event.
-    // See: QTBUG-112356 and discussion in https://github.com/BLumia/pineapple-pictures/pull/81
-    // Thanks @yyc12345 for finding out the source of the issue.
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinMaxButtonsHint);
 #else
     // There is a bug in Qt 5 that will make pressing Meta+Up cause the app
@@ -50,14 +42,6 @@ void FramelessWindow::setCentralWidget(QWidget *widget)
     m_centralLayout->addWidget(widget);
     m_centralWidget = widget;
 }
-
-/*
- * The references of following functions
- * https://stackoverflow.com/questions/411823/how-do-i-implement-qhoverevent-in-qt
- * https://stackoverflow.com/questions/74155493/how-can-i-resize-frameless-window-in-qml
- * https://gist.github.com/Nico-Duduf/b8c799f1f2a694732abd1238843b1d70
- * https://stackoverflow.com/questions/2445997/qgraphicsview-and-eventfilter
-*/
 
 void FramelessWindow::installResizeCapture(QObject* widget)
 {
