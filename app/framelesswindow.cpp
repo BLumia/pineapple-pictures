@@ -68,24 +68,26 @@ bool FramelessWindow::eventFilter(QObject* o, QEvent* e)
 
 bool FramelessWindow::mouseHover(QHoverEvent* event, QWidget* wg)
 {
-    QWindow* win = window()->windowHandle();
-    Qt::Edges edges = this->getEdgesByPos(wg->mapToGlobal(event->oldPos()), win->frameGeometry());
+    if (!isMaximized() && !isFullScreen()) {
+        QWindow* win = window()->windowHandle();
+        Qt::Edges edges = this->getEdgesByPos(wg->mapToGlobal(event->oldPos()), win->frameGeometry());
 
-    // backup & restore cursor shape
-    if (edges && !m_oldEdges)
-        // entering the edge. backup cursor shape
-        m_oldCursorShape = win->cursor().shape();
-    if (!edges && m_oldEdges)
-        // leaving the edge. restore cursor shape
-        win->setCursor(m_oldCursorShape);
+        // backup & restore cursor shape
+        if (edges && !m_oldEdges)
+            // entering the edge. backup cursor shape
+            m_oldCursorShape = win->cursor().shape();
+        if (!edges && m_oldEdges)
+            // leaving the edge. restore cursor shape
+            win->setCursor(m_oldCursorShape);
 
-    // save the latest edges status
-    m_oldEdges = edges;
+        // save the latest edges status
+        m_oldEdges = edges;
 
-    // show resize cursor shape if cursor is within border
-    if (edges) {
-        win->setCursor(this->getCursorByEdge(edges, Qt::ArrowCursor));
-        return true;
+        // show resize cursor shape if cursor is within border
+        if (edges) {
+            win->setCursor(this->getCursorByEdge(edges, Qt::ArrowCursor));
+            return true;
+        }
     }
 
     return false;
@@ -93,7 +95,7 @@ bool FramelessWindow::mouseHover(QHoverEvent* event, QWidget* wg)
 
 bool FramelessWindow::mousePress(QMouseEvent* event)
 {
-    if (event->buttons() & Qt::LeftButton && !isMaximized()) {
+    if (event->buttons() & Qt::LeftButton && !isMaximized() && !isFullScreen()) {
         QWindow* win = window()->windowHandle();
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
         Qt::Edges edges = this->getEdgesByPos(event->globalPosition().toPoint(), win->frameGeometry());
