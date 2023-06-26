@@ -106,9 +106,9 @@ Settings::Settings()
     }
 #endif // FLAG_PORTABLE_MODE_SUPPORT
 
-    // %LOCALAPPDATA% under Windows.
     if (configPath.isEmpty()) {
-        configPath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation);
+        // %LOCALAPPDATA%\<APPNAME> under Windows, ~/.config/<APPNAME> under Linux.
+        configPath = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
     }
 
     m_qsettings = new QSettings(QDir(configPath).absoluteFilePath("config.ini"), QSettings::IniFormat, this);
