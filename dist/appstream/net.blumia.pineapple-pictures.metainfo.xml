@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component type="desktop-application">
   <id>net.blumia.pineapple-pictures</id>
+  <launchable type="desktop-id">net.blumia.pineapple-pictures.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT</project_license>
   <name>Pineapple Pictures</name>
@@ -13,6 +14,7 @@
   </description>
   <url type="homepage">https://github.com/BLumia/pineapple-pictures</url>
   <url type="bugtracker">https://github.com/BLumia/pineapple-pictures/issues</url>
+  <developer_name>Gary (BLumia) Wang et al.</developer_name>
   <provides>
     <binary>ppic</binary>
   </provides>
