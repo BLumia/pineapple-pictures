@@ -5,6 +5,7 @@
 #include "mainwindow.h"
 
 #include "playlistmanager.h"
+#include "settings.h"
 
 #include <QApplication>
 #include <QCommandLineParser>
@@ -19,6 +20,8 @@
 
 int main(int argc, char *argv[])
 {
+    QGuiApplication::setHighDpiScaleFactorRoundingPolicy(Settings::instance()->hiDpiScaleFactorBehavior());
+
     QApplication a(argc, argv);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     a.setAttribute(Qt::ApplicationAttribute::AA_UseHighDpiPixmaps);

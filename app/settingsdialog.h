@@ -26,6 +26,7 @@ private:
     QComboBox * m_doubleClickBehavior = nullptr;
     QComboBox * m_mouseWheelBehavior = nullptr;
     QComboBox * m_initWindowSizeBehavior = nullptr;
+    QComboBox * m_hiDpiRoundingPolicyBehavior = nullptr;
 };
 
 #endif // SETTINGSDIALOG_H

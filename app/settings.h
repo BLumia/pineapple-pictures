@@ -16,19 +16,19 @@ public:
         Close,
         Maximize,
     };
-    Q_ENUM(DoubleClickBehavior);
+    Q_ENUM(DoubleClickBehavior)
 
     enum MouseWheelBehavior {
         Zoom,
         Switch,
     };
-    Q_ENUM(MouseWheelBehavior);
+    Q_ENUM(MouseWheelBehavior)
 
     enum WindowSizeBehavior {
         Auto,
         Maximized,
     };
-    Q_ENUM(WindowSizeBehavior);
+    Q_ENUM(WindowSizeBehavior)
 
     static Settings *instance();
 
@@ -36,11 +36,13 @@ public:
     DoubleClickBehavior doubleClickBehavior() const;
     MouseWheelBehavior mouseWheelBehavior() const;
     WindowSizeBehavior initWindowSizeBehavior() const;
+    Qt::HighDpiScaleFactorRoundingPolicy hiDpiScaleFactorBehavior() const;
 
     void setStayOnTop(bool on);
     void setDoubleClickBehavior(DoubleClickBehavior dcb);
     void setMouseWheelBehavior(MouseWheelBehavior mwb);
     void setInitWindowSizeBehavior(WindowSizeBehavior wsb);
+    void setHiDpiScaleFactorBehavior(Qt::HighDpiScaleFactorRoundingPolicy hidpi);
 
 private:
     Settings();

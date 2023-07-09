@@ -68,6 +68,13 @@ Settings::WindowSizeBehavior Settings::initWindowSizeBehavior() const
     return QEnumHelper::fromString<WindowSizeBehavior>(result, WindowSizeBehavior::Auto);
 }
 
+Qt::HighDpiScaleFactorRoundingPolicy Settings::hiDpiScaleFactorBehavior() const
+{
+    QString result = m_qsettings->value("hidpi_scale_factor_behavior", "PassThrough").toString();
+
+    return QEnumHelper::fromString<Qt::HighDpiScaleFactorRoundingPolicy>(result, Qt::HighDpiScaleFactorRoundingPolicy::PassThrough);
+}
+
 void Settings::setStayOnTop(bool on)
 {
     m_qsettings->setValue("stay_on_top", on);
@@ -89,6 +96,12 @@ void Settings::setMouseWheelBehavior(MouseWheelBehavior mwb)
 void Settings::setInitWindowSizeBehavior(WindowSizeBehavior wsb)
 {
     m_qsettings->setValue("init_window_size_behavior", QEnumHelper::toString(wsb));
+    m_qsettings->sync();
+}
+
+void Settings::setHiDpiScaleFactorBehavior(Qt::HighDpiScaleFactorRoundingPolicy hidpi)
+{
+    m_qsettings->setValue("hidpi_scale_factor_behavior", QEnumHelper::toString(hidpi));
     m_qsettings->sync();
 }
 
