@@ -453,6 +453,10 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     protectedMode->setCheckable(true);
     protectedMode->setChecked(m_protectedMode);
 
+    QAction * avoidResetTransform = m_am->actionToggleAvoidResetTransform;
+    avoidResetTransform->setCheckable(true);
+    avoidResetTransform->setChecked(m_graphicsView->avoidResetTransform());
+
     QAction * toggleSettings = m_am->actionSettings;
     QAction * helpAction = m_am->actionHelp;
     QAction * propertiesAction = m_am->actionProperties;
@@ -481,6 +485,9 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     menu->addSeparator();
     menu->addAction(stayOnTopMode);
     menu->addAction(protectedMode);
+#if 0
+    menu->addAction(avoidResetTransform);
+#endif // 0
     menu->addSeparator();
     menu->addAction(toggleSettings);
     menu->addAction(helpAction);
@@ -543,6 +550,11 @@ void MainWindow::toggleStayOnTop()
 {
     setWindowFlag(Qt::WindowStaysOnTopHint, !stayOnTop());
     show();
+}
+
+void MainWindow::toggleAvoidResetTransform()
+{
+    m_graphicsView->setAvoidResetTransform(!m_graphicsView->avoidResetTransform());
 }
 
 bool MainWindow::stayOnTop() const
@@ -725,6 +737,11 @@ void MainWindow::on_actionToggleStayOnTop_triggered()
 void MainWindow::on_actionToggleProtectMode_triggered()
 {
     toggleProtectedMode();
+}
+
+void MainWindow::on_actionToggleAvoidResetTransform_triggered()
+{
+    toggleAvoidResetTransform();
 }
 
 void MainWindow::on_actionSettings_triggered()

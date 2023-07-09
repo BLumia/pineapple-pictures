@@ -121,7 +121,9 @@ qreal GraphicsView::scaleFactor() const
 
 void GraphicsView::resetTransform()
 {
-    QGraphicsView::resetTransform();
+    if (!m_avoidResetTransform) {
+        QGraphicsView::resetTransform();
+    }
 }
 
 void GraphicsView::zoomView(qreal scaleFactor)
@@ -197,6 +199,11 @@ void GraphicsView::fitByOrientation(Qt::Orientation ori, bool scaleDownOnly)
 
 void GraphicsView::displayScene()
 {
+    if (m_avoidResetTransform) {
+        emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
+        return;
+    }
+
     if (isSceneBiggerThanView()) {
         fitInView(sceneRect(), Qt::KeepAspectRatio);
     }
@@ -217,6 +224,16 @@ bool GraphicsView::isSceneBiggerThanView() const
 void GraphicsView::setEnableAutoFitInView(bool enable)
 {
     m_enableFitInView = enable;
+}
+
+bool GraphicsView::avoidResetTransform() const
+{
+    return m_avoidResetTransform;
+}
+
+void GraphicsView::setAvoidResetTransform(bool avoidReset)
+{
+    m_avoidResetTransform = avoidReset;
 }
 
 inline double zeroOrOne(double number)

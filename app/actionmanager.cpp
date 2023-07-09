@@ -68,6 +68,7 @@ void ActionManager::setupAction(MainWindow *mainWindow)
     CREATE_NEW_ACTION(mainWindow, actionPaste);
     CREATE_NEW_ACTION(mainWindow, actionToggleStayOnTop);
     CREATE_NEW_ACTION(mainWindow, actionToggleProtectMode);
+    CREATE_NEW_ACTION(mainWindow, actionToggleAvoidResetTransform);
     CREATE_NEW_ACTION(mainWindow, actionSettings);
     CREATE_NEW_ACTION(mainWindow, actionHelp);
     CREATE_NEW_ACTION(mainWindow, actionLocateInFileManager);
@@ -104,6 +105,7 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
     actionPaste->setText(QCoreApplication::translate("MainWindow", "&Paste", nullptr));
     actionToggleStayOnTop->setText(QCoreApplication::translate("MainWindow", "Stay on top", nullptr));
     actionToggleProtectMode->setText(QCoreApplication::translate("MainWindow", "Protected mode", nullptr));
+    actionToggleAvoidResetTransform->setText("Avoid reset transform"); // TODO: what should it called?
     actionSettings->setText(QCoreApplication::translate("MainWindow", "Configure...", nullptr));
     actionHelp->setText(QCoreApplication::translate("MainWindow", "Help", nullptr));
 #ifdef Q_OS_WIN

@@ -42,6 +42,7 @@ public:
     QAction *actionPaste;
     QAction *actionToggleStayOnTop;
     QAction *actionToggleProtectMode;
+    QAction *actionToggleAvoidResetTransform;
     QAction *actionSettings;
     QAction *actionHelp;
     QAction *actionLocateInFileManager;

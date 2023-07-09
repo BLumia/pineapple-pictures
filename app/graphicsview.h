@@ -40,6 +40,9 @@ public:
     bool isSceneBiggerThanView() const;
     void setEnableAutoFitInView(bool enable = true);
 
+    bool avoidResetTransform() const;
+    void setAvoidResetTransform(bool avoidReset);
+
     static QTransform resetScale(const QTransform & orig);
 
 signals:
@@ -70,6 +73,7 @@ private:
     // ... or even more? e.g. "fit/snap width" things...
     // Currently it's "no fit" when it's false and "fit when view is smaller" when it's true.
     bool m_enableFitInView = false;
+    bool m_avoidResetTransform = false;
     bool m_checkerboardEnabled = false;
     bool m_isLastCheckerboardColorInverted = false;
 };
