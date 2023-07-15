@@ -173,7 +173,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../graphicsscene.cpp" line="90"/>
+        <location filename="../graphicsscene.cpp" line="89"/>
         <source>Drag image here</source>
         <translation>拖放图片至此</translation>
     </message>
@@ -181,28 +181,28 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../graphicsview.cpp" line="338"/>
+        <location filename="../graphicsview.cpp" line="348"/>
         <source>File url list is empty</source>
         <translation>文件 URL 列表为空</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="56"/>
+        <location filename="../graphicsview.cpp" line="49"/>
         <source>File is not a valid image</source>
         <translation>文件不是有效的图片文件</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="61"/>
-        <location filename="../graphicsview.cpp" line="66"/>
+        <location filename="../graphicsview.cpp" line="54"/>
+        <location filename="../graphicsview.cpp" line="59"/>
         <source>Image data is invalid or currently unsupported</source>
         <translation>图像数据无效或暂未支持</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="346"/>
+        <location filename="../graphicsview.cpp" line="356"/>
         <source>Image data is invalid</source>
         <translation>图片数据无效</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="353"/>
+        <location filename="../graphicsview.cpp" line="363"/>
         <source>Not supported mimedata: %1</source>
         <translation>不受支持的 MimeData 格式：%1</translation>
     </message>
@@ -210,120 +210,120 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="170"/>
+        <location filename="../mainwindow.cpp" line="190"/>
         <source>File url list is empty</source>
         <translation>文件 URL 列表为空</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="413"/>
+        <location filename="../mainwindow.cpp" line="433"/>
         <source>&amp;Copy</source>
         <translation>复制(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="102"/>
+        <location filename="../actionmanager.cpp" line="103"/>
         <source>Copy P&amp;ixmap</source>
         <translation>复制位图(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="103"/>
+        <location filename="../actionmanager.cpp" line="104"/>
         <source>Copy &amp;File Path</source>
         <translation>复制文件路径(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="119"/>
+        <location filename="../actionmanager.cpp" line="121"/>
         <source>Properties</source>
         <translation>属性</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="39"/>
-        <location filename="../actionmanager.cpp" line="105"/>
+        <location filename="../actionmanager.cpp" line="106"/>
         <source>Stay on top</source>
         <translation>总在最前</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="42"/>
-        <location filename="../actionmanager.cpp" line="106"/>
+        <location filename="../actionmanager.cpp" line="107"/>
         <source>Protected mode</source>
         <translation>保护模式</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="91"/>
+        <location filename="../actionmanager.cpp" line="92"/>
         <source>Zoom in</source>
         <translation>放大</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="92"/>
+        <location filename="../actionmanager.cpp" line="93"/>
         <source>Zoom out</source>
         <translation>缩小</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="99"/>
+        <location filename="../actionmanager.cpp" line="100"/>
         <source>Flip &amp;Horizontally</source>
         <translation>水平翻转(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="104"/>
+        <location filename="../actionmanager.cpp" line="105"/>
         <source>&amp;Paste</source>
         <translation>粘贴(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="93"/>
+        <location filename="../actionmanager.cpp" line="94"/>
         <source>Toggle Checkerboard</source>
         <translation>切换棋盘格</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="87"/>
+        <location filename="../actionmanager.cpp" line="88"/>
         <source>&amp;Open...</source>
         <translation>打开(&amp;O)...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="89"/>
+        <location filename="../actionmanager.cpp" line="90"/>
         <source>Actual size</source>
         <translation>实际大小</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="90"/>
+        <location filename="../actionmanager.cpp" line="91"/>
         <source>Toggle maximize</source>
         <translation>最大化窗口</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="94"/>
+        <location filename="../actionmanager.cpp" line="95"/>
         <source>Rotate right</source>
         <translation>向右旋转</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="96"/>
+        <location filename="../actionmanager.cpp" line="97"/>
         <source>Previous image</source>
         <translation>上一个图像</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="97"/>
+        <location filename="../actionmanager.cpp" line="98"/>
         <source>Next image</source>
         <translation>下一个图像</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="107"/>
+        <location filename="../actionmanager.cpp" line="109"/>
         <source>Configure...</source>
         <translation>设置...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="108"/>
+        <location filename="../actionmanager.cpp" line="110"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="111"/>
+        <location filename="../actionmanager.cpp" line="113"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
         <translation>在文件资源管理器中显示</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="117"/>
+        <location filename="../actionmanager.cpp" line="119"/>
         <source>Show in directory</source>
         <translation>在文件夹中显示</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="120"/>
+        <location filename="../actionmanager.cpp" line="122"/>
         <source>Quit</source>
         <translation>退出</translation>
     </message>
@@ -654,75 +654,104 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="21"/>
+        <location filename="../settingsdialog.cpp" line="22"/>
         <source>Settings</source>
         <translation>设定</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="26"/>
+        <location filename="../settingsdialog.cpp" line="27"/>
         <source>Do nothing</source>
         <translation>什么也不做</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="27"/>
+        <location filename="../settingsdialog.cpp" line="28"/>
         <source>Close the window</source>
         <translation>关闭窗口</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="28"/>
+        <location filename="../settingsdialog.cpp" line="29"/>
         <source>Toggle maximize</source>
         <translation>最大化窗口</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="32"/>
+        <location filename="../settingsdialog.cpp" line="33"/>
         <source>Zoom in and out</source>
         <translation>放大和缩小</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="33"/>
+        <location filename="../settingsdialog.cpp" line="34"/>
         <source>View next or previous item</source>
         <translation>查看下一项或上一项</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="37"/>
+        <location filename="../settingsdialog.cpp" line="38"/>
         <source>Auto size</source>
         <translation>自动大小</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="38"/>
+        <location filename="../settingsdialog.cpp" line="39"/>
         <source>Maximized</source>
         <translation>最大化</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="56"/>
+        <location filename="../settingsdialog.cpp" line="43"/>
+        <source>Round (Integer scaling)</source>
+        <comment>This option means round up for .5 and above</comment>
+        <translation>四舍五入（整数缩放）</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="44"/>
+        <source>Ceil (Integer scaling)</source>
+        <comment>This option means always round up</comment>
+        <translation>向上取整（整数缩放）</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="45"/>
+        <source>Floor (Integer scaling)</source>
+        <comment>This option means always round down</comment>
+        <translation>向下取整（整数缩放）</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="46"/>
+        <source>Follow system (Fractional scaling)</source>
+        <comment>This option means don&apos;t round</comment>
+        <translation>跟随系统（小数缩放）</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="69"/>
         <source>Stay on top when start-up</source>
         <translation>启动时保持窗口总在最前</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="57"/>
+        <location filename="../settingsdialog.cpp" line="70"/>
         <source>Double-click behavior</source>
         <translation>双击时的行为</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="58"/>
+        <location filename="../settingsdialog.cpp" line="71"/>
         <source>Mouse wheel behavior</source>
         <translation>鼠标滚轮行为</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="59"/>
+        <location filename="../settingsdialog.cpp" line="72"/>
         <source>Default window size</source>
         <translation>默认窗口大小</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="73"/>
+        <source>HiDPI scale factor rounding policy</source>
+        <translation>HiDPI 高分屏缩放策略</translation>
     </message>
 </context>
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.cpp" line="38"/>
+        <location filename="../main.cpp" line="41"/>
         <source>Pineapple Pictures</source>
         <translation>菠萝看图</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="42"/>
+        <location filename="../main.cpp" line="45"/>
         <source>File list.</source>
         <translation>文件列表。</translation>
     </message>

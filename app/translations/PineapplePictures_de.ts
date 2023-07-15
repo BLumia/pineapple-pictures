@@ -173,7 +173,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../graphicsscene.cpp" line="90"/>
+        <location filename="../graphicsscene.cpp" line="89"/>
         <source>Drag image here</source>
         <translation>Ziehen Sie das Bild hierher</translation>
     </message>
@@ -181,28 +181,28 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../graphicsview.cpp" line="338"/>
+        <location filename="../graphicsview.cpp" line="348"/>
         <source>File url list is empty</source>
         <translation>Die Datei-URL-Liste ist leer</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="56"/>
+        <location filename="../graphicsview.cpp" line="49"/>
         <source>File is not a valid image</source>
         <translation>Datei ist kein gültiges Bild</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="61"/>
-        <location filename="../graphicsview.cpp" line="66"/>
+        <location filename="../graphicsview.cpp" line="54"/>
+        <location filename="../graphicsview.cpp" line="59"/>
         <source>Image data is invalid or currently unsupported</source>
         <translation>Bilddaten sind ungültig oder werden derzeit nicht unterstützt</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="346"/>
+        <location filename="../graphicsview.cpp" line="356"/>
         <source>Image data is invalid</source>
         <translation>Bilddaten sind ungültig</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="353"/>
+        <location filename="../graphicsview.cpp" line="363"/>
         <source>Not supported mimedata: %1</source>
         <translation>Nicht unterstützte Mimedaten: %1</translation>
     </message>
@@ -210,120 +210,120 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="170"/>
+        <location filename="../mainwindow.cpp" line="190"/>
         <source>File url list is empty</source>
         <translation>Die Datei-URL-Liste ist leer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="413"/>
+        <location filename="../mainwindow.cpp" line="433"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopieren</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="102"/>
+        <location filename="../actionmanager.cpp" line="103"/>
         <source>Copy P&amp;ixmap</source>
         <translation>P&amp;ixmap kopieren</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="103"/>
+        <location filename="../actionmanager.cpp" line="104"/>
         <source>Copy &amp;File Path</source>
         <translation>&amp;Dateipfad kopieren</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="119"/>
+        <location filename="../actionmanager.cpp" line="121"/>
         <source>Properties</source>
         <translation>Eigenschaften</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="39"/>
-        <location filename="../actionmanager.cpp" line="105"/>
+        <location filename="../actionmanager.cpp" line="106"/>
         <source>Stay on top</source>
         <translation>Oben bleiben</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="42"/>
-        <location filename="../actionmanager.cpp" line="106"/>
+        <location filename="../actionmanager.cpp" line="107"/>
         <source>Protected mode</source>
         <translation>Geschützter Modus</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="91"/>
+        <location filename="../actionmanager.cpp" line="92"/>
         <source>Zoom in</source>
         <translation>Hineinzoomen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="92"/>
+        <location filename="../actionmanager.cpp" line="93"/>
         <source>Zoom out</source>
         <translation>Herauszoomen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="99"/>
+        <location filename="../actionmanager.cpp" line="100"/>
         <source>Flip &amp;Horizontally</source>
         <translation>&amp;Horizontal spiegeln</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="104"/>
+        <location filename="../actionmanager.cpp" line="105"/>
         <source>&amp;Paste</source>
         <translation>%Einfügen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="93"/>
+        <location filename="../actionmanager.cpp" line="94"/>
         <source>Toggle Checkerboard</source>
         <translation>Schachbrettmuster umschalten</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="87"/>
+        <location filename="../actionmanager.cpp" line="88"/>
         <source>&amp;Open...</source>
         <translation>&amp;Öffnen...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="89"/>
+        <location filename="../actionmanager.cpp" line="90"/>
         <source>Actual size</source>
         <translation>Tatsächliche Größe</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="90"/>
+        <location filename="../actionmanager.cpp" line="91"/>
         <source>Toggle maximize</source>
         <translation>Maximieren umschalten</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="94"/>
+        <location filename="../actionmanager.cpp" line="95"/>
         <source>Rotate right</source>
         <translation>Nach rechts drehen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="96"/>
+        <location filename="../actionmanager.cpp" line="97"/>
         <source>Previous image</source>
         <translation>Vorheriges Bild</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="97"/>
+        <location filename="../actionmanager.cpp" line="98"/>
         <source>Next image</source>
         <translation>Nächstes Bild</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="107"/>
+        <location filename="../actionmanager.cpp" line="109"/>
         <source>Configure...</source>
         <translation>Konfigurieren&#xa0;…</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="108"/>
+        <location filename="../actionmanager.cpp" line="110"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="111"/>
+        <location filename="../actionmanager.cpp" line="113"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
         <translation>Im Dateiexplorer zeigen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="117"/>
+        <location filename="../actionmanager.cpp" line="119"/>
         <source>Show in directory</source>
         <translation>Im Verzeichnis zeigen</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="120"/>
+        <location filename="../actionmanager.cpp" line="122"/>
         <source>Quit</source>
         <translation>Beenden</translation>
     </message>
@@ -654,75 +654,104 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="21"/>
+        <location filename="../settingsdialog.cpp" line="22"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="26"/>
+        <location filename="../settingsdialog.cpp" line="27"/>
         <source>Do nothing</source>
         <translation>Nichts tun</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="27"/>
+        <location filename="../settingsdialog.cpp" line="28"/>
         <source>Close the window</source>
         <translation>Fenster schließen</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="28"/>
+        <location filename="../settingsdialog.cpp" line="29"/>
         <source>Toggle maximize</source>
         <translation>Maximieren umschalten</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="32"/>
+        <location filename="../settingsdialog.cpp" line="33"/>
         <source>Zoom in and out</source>
         <translation>Hinein- und Hinauszoomen</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="33"/>
+        <location filename="../settingsdialog.cpp" line="34"/>
         <source>View next or previous item</source>
         <translation>Zeige nächstes oder vorheriges Element</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="37"/>
+        <location filename="../settingsdialog.cpp" line="38"/>
         <source>Auto size</source>
         <translation>Automatische Größe</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="38"/>
+        <location filename="../settingsdialog.cpp" line="39"/>
         <source>Maximized</source>
         <translation>Maximiert</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="56"/>
+        <location filename="../settingsdialog.cpp" line="43"/>
+        <source>Round (Integer scaling)</source>
+        <comment>This option means round up for .5 and above</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="44"/>
+        <source>Ceil (Integer scaling)</source>
+        <comment>This option means always round up</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="45"/>
+        <source>Floor (Integer scaling)</source>
+        <comment>This option means always round down</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="46"/>
+        <source>Follow system (Fractional scaling)</source>
+        <comment>This option means don&apos;t round</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="69"/>
         <source>Stay on top when start-up</source>
         <translation>Beim Start oben bleiben</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="57"/>
+        <location filename="../settingsdialog.cpp" line="70"/>
         <source>Double-click behavior</source>
         <translation>Doppelklickverhalten</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="58"/>
+        <location filename="../settingsdialog.cpp" line="71"/>
         <source>Mouse wheel behavior</source>
         <translation>Mausradverhalten</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="59"/>
+        <location filename="../settingsdialog.cpp" line="72"/>
         <source>Default window size</source>
         <translation>Standard-Fenstergröße</translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="73"/>
+        <source>HiDPI scale factor rounding policy</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.cpp" line="38"/>
+        <location filename="../main.cpp" line="41"/>
         <source>Pineapple Pictures</source>
         <translation>Pineapple Pictures</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="42"/>
+        <location filename="../main.cpp" line="45"/>
         <source>File list.</source>
         <translation>Dateiliste.</translation>
     </message>
