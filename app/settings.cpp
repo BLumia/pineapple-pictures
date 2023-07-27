@@ -105,19 +105,37 @@ void Settings::setHiDpiScaleFactorBehavior(Qt::HighDpiScaleFactorRoundingPolicy 
     m_qsettings->sync();
 }
 
+#if defined(FLAG_PORTABLE_MODE_SUPPORT) && defined(Q_OS_WIN)
+#include <windows.h>
+// QCoreApplication::applicationDirPath() parses the "applicationDirPath" from arg0, which...
+// 1. rely on a QApplication object instance
+//    but we need to call QGuiApplication::setHighDpiScaleFactorRoundingPolicy() before QApplication get created
+// 2. arg0 is NOT garanteed to be the path of execution
+//    see also: https://stackoverflow.com/questions/383973/is-args0-guaranteed-to-be-the-path-of-execution
+// This function is here mainly for #1.
+QString getApplicationDirPath()
+{
+    WCHAR buffer[MAX_PATH];
+    GetModuleFileNameW(NULL, buffer, MAX_PATH);
+    QString appPath = QString::fromWCharArray(buffer);
+
+    return appPath.left(appPath.lastIndexOf('\\'));
+}
+#endif // defined(FLAG_PORTABLE_MODE_SUPPORT) && defined(Q_OS_WIN)
+
 Settings::Settings()
     : QObject(qApp)
 {
     QString configPath;
 
-#ifdef FLAG_PORTABLE_MODE_SUPPORT
-    QString portableConfigDirPath = QDir(QCoreApplication::applicationDirPath()).absoluteFilePath("data");
+#if defined(FLAG_PORTABLE_MODE_SUPPORT) && defined(Q_OS_WIN)
+    QString portableConfigDirPath = QDir(getApplicationDirPath()).absoluteFilePath("data");
     QFileInfo portableConfigDirInfo(portableConfigDirPath);
     if (portableConfigDirInfo.exists() && portableConfigDirInfo.isDir() && portableConfigDirInfo.isWritable()) {
         // we can use it.
         configPath = portableConfigDirPath;
     }
-#endif // FLAG_PORTABLE_MODE_SUPPORT
+#endif // defined(FLAG_PORTABLE_MODE_SUPPORT) && defined(Q_OS_WIN)
 
     if (configPath.isEmpty()) {
         // %LOCALAPPDATA%\<APPNAME> under Windows, ~/.config/<APPNAME> under Linux.
