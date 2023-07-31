@@ -210,8 +210,8 @@ elseif (UNIX)
     # install icon
     install (
         FILES assets/icons/app-icon.svg
-        DESTINATION "${CMAKE_INSTALL_DATADIR}/icons/hicolor/48x48/apps"
-        RENAME pineapple-pictures.svg
+        DESTINATION "${CMAKE_INSTALL_DATADIR}/icons/hicolor/scalable/apps"
+        RENAME net.blumia.pineapple-pictures.svg
     )
 
     # install shortcut
