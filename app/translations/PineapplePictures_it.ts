@@ -6,32 +6,32 @@
     <message>
         <location filename="../aboutdialog.cpp" line="27"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="30"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Avvia l&apos;applicazione con il percorso del file immagine come argomento per caricare il file.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="31"/>
         <source>Drag and drop image file onto the window is also supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>È supportato anche il trascinamento del file immagine sulla finestra.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="32"/>
         <source>None of the operations in this application will alter the pictures on disk.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna delle operazioni in questa applicazione altererà le immagini sul disco.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="33"/>
         <source>Context menu option explanation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Spiegazione delle opzioni del menu contestuale:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="40"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fai in modo che la finestra rimanga in cima a tutte le altre finestre.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="43"/>
