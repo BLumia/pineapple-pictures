@@ -543,7 +543,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="128"/>
         <source>Subject distance</source>
-        <translation type="unfinished"></translation>
+        <translation>Konu mesafesi</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="130"/>
@@ -563,7 +563,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="137"/>
         <source>Contrast</source>
-        <translation type="unfinished"></translation>
+        <translation>Karşıtlık</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="139"/>
@@ -697,25 +697,25 @@
         <location filename="../settingsdialog.cpp" line="43"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
-        <translation type="unfinished"></translation>
+        <translation>Yuvarlak (Tamsayı ölçekleme)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="44"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tavan (Tamsayı ölçekleme)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="45"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
-        <translation type="unfinished"></translation>
+        <translation>Kat (Tamsayı ölçekleme)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="46"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
-        <translation type="unfinished"></translation>
+        <translation>Sistemi takip et (Kesirli ölçekleme)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
@@ -740,7 +740,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="73"/>
         <source>HiDPI scale factor rounding policy</source>
-        <translation type="unfinished"></translation>
+        <translation>HiDPI ölçek katsayısı yuvarlama ilkesi</translation>
     </message>
 </context>
 <context>
