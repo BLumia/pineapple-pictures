@@ -40,6 +40,9 @@ void GraphicsView::showFileFromPath(const QString &filePath, bool doRequestGalle
         QImageReader imageReader(filePath);
         imageReader.setAutoTransform(true);
         imageReader.setDecideFormatFromContent(true);
+#if QT_VERSION > QT_VERSION_CHECK(6, 0, 0)
+        imageReader.setAllocationLimit(0);
+#endif //QT_VERSION > QT_VERSION_CHECK(6, 0, 0)
 
         // Since if the image format / plugin does not support this feature, imageFormat() will returns an invalid format.
         // So we cannot use imageFormat() and check if it returns QImage::Format_Invalid to detect if we support the file.
