@@ -697,25 +697,25 @@
         <location filename="../settingsdialog.cpp" line="43"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
-        <translation type="unfinished"></translation>
+        <translation>Round (целочисленное масштабирование)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="44"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ceil (целочисленное масштабирование)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="45"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
-        <translation type="unfinished"></translation>
+        <translation>Floor (целочисленное масштабирование)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="46"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
-        <translation type="unfinished"></translation>
+        <translation>Следовать системе (дробное масштабирование)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
@@ -740,7 +740,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="73"/>
         <source>HiDPI scale factor rounding policy</source>
-        <translation type="unfinished"></translation>
+        <translation>Политика округления коэффициента масштабирования HiDPI</translation>
     </message>
 </context>
 <context>

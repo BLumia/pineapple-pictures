@@ -1,112 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl">
+<TS version="2.1" language="it">
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../aboutdialog.cpp" line="27"/>
         <source>About</source>
-        <translation>Over</translation>
+        <translation>Informazioni</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="30"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation>Start het programma met het opgegeven afbeeldingsbestandspad.</translation>
+        <translation>Avvia l&apos;applicazione con il percorso del file immagine come argomento per caricare il file.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="31"/>
         <source>Drag and drop image file onto the window is also supported.</source>
-        <translation>U kunt tevens afbeeldingen naar het venster slepen.</translation>
+        <translation>È supportato anche il trascinamento del file immagine sulla finestra.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="32"/>
         <source>None of the operations in this application will alter the pictures on disk.</source>
-        <translation>Geen van de handelingen in dit programma veranderen de afbeeldingen op de schijf.</translation>
+        <translation>Nessuna delle operazioni in questa applicazione altererà le immagini sul disco.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="33"/>
         <source>Context menu option explanation:</source>
-        <translation>Rechtermuisknopmenu-uitleg:</translation>
+        <translation>Spiegazione delle opzioni del menu contestuale:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="40"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation>Houdt het venster boven andere vensters.</translation>
+        <translation>Fai in modo che la finestra rimanga in cima a tutte le altre finestre.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="43"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation>Voorkomt per ongeluk sluiten (bijv. door te dubbelklikken op het venster).</translation>
+        <translation>Evitare di chiudere accidentalmente la finestra. (es. facendo doppio clic sulla finestra)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="51"/>
         <source>Version: %1</source>
-        <translation>Versie: %1</translation>
-    </message>
-    <message>
-        <source>Copyright (c) 2020 %1</source>
-        <translation type="vanished">Copyright (c) 2020 %1</translation>
+        <translation>Versione: %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="57"/>
         <source>Logo designed by %1</source>
-        <translation>Logo gemaakt door %1</translation>
+        <translation>Logo disegnato da %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="59"/>
         <source>Built with Qt %1 (%2)</source>
-        <translation>Gebouwd met Qt %1 (%2)</translation>
+        <translation>Costruito con Qt %1 (%2)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="60"/>
         <source>Source code</source>
-        <translation>Broncode</translation>
+        <translation>Codice sorgente</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="70"/>
         <source>Contributors</source>
-        <translation>Bijdragers</translation>
+        <translation>Contributori</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="72"/>
         <source>List of contributors on GitHub</source>
-        <translation>Lijst met bijdragers op GitHub</translation>
+        <translation>Elenco dei contributori su GitHub</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="73"/>
         <source>Thanks to all people who contributed to this project.</source>
-        <translation>Met dank aan alle personen die hebben bijgedragen aan dit project.</translation>
+        <translation>Grazie a tutte le persone che hanno contribuito a questo progetto.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="77"/>
         <source>Translators</source>
-        <translation>Vertalers</translation>
+        <translation>Traduttori</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="78"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
-        <translation>Ik wil graag de volgende mensen bedanken die vrijwillig hebben bijgedragen aan vertalingen.</translation>
+        <translation>Vorrei ringraziare le seguenti persone che si sono offerte volontarie per tradurre questa applicazione.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="122"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation>%1 is gebouwd met de volgende vrijesoftwarebibliotheken:</translation>
+        <translation>%1 si basa sulle seguenti librerie di software libero:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="146"/>
         <source>&amp;Special Thanks</source>
-        <translation>&amp;Met dank aan</translation>
+        <translation>&amp;Ringraziamenti speciali</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="148"/>
         <source>&amp;Third-party Libraries</source>
-        <translation>Ex&amp;terne bibliotheken</translation>
+        <translation>&amp;Librerie di terze parti</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="84"/>
         <source>Your Rights</source>
-        <translation>Uw rechten</translation>
+        <translation>I tuoi diritti</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="54"/>
@@ -117,57 +113,57 @@
     <message>
         <location filename="../aboutdialog.cpp" line="86"/>
         <source>%1 is released under the MIT License.</source>
-        <translation>%1 is uitgebracht onder de MIT-licentie.</translation>
+        <translation>%1 è rilasciato sotto licenza MIT.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="87"/>
         <source>This license grants people a number of freedoms:</source>
-        <translation>Deze licentie biedt een hoop vrijheden:</translation>
+        <translation>Questa licenza garantisce alle persone una serie di libertà:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="88"/>
         <source>You are free to use %1, for any purpose</source>
-        <translation>U mag %1 gratis gebruiken, voor welk doeleinde dan ook</translation>
+        <translation>Sei libero di usare %1, per qualsiasi scopo</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="89"/>
         <source>You are free to distribute %1</source>
-        <translation>U mag %1 vrij verspreiden</translation>
+        <translation>Sei libero di distribuire %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="90"/>
         <source>You can study how %1 works and change it</source>
-        <translation>U kunt bekijken hoe %1 werkt en aanpassingen doen</translation>
+        <translation>Puoi studiare come funziona %1 e cambiarlo</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="91"/>
         <source>You can distribute changed versions of %1</source>
-        <translation>U mag aangepaste versie van %1 vrij verspreiden</translation>
+        <translation>Puoi distribuire versioni modificate di %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="93"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
-        <translation>De MIT-licentie garandeert u deze vrijheid, en niemand mag deze vrijheid wegnemen.</translation>
+        <translation>La licenza MIT ti garantisce questa libertà. A nessuno è mai permesso portarlo via.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="121"/>
         <source>Third-party Libraries used by %1</source>
-        <translation>Door %1 gebruikte externe bibliotheken</translation>
+        <translation>Librerie di terze parti utilizzate da %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="144"/>
         <source>&amp;Help</source>
-        <translation>&amp;Hulp</translation>
+        <translation>&amp;Aiuto</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="145"/>
         <source>&amp;About</source>
-        <translation>&amp;Over</translation>
+        <translation>&amp;Informazioni</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="147"/>
         <source>&amp;License</source>
-        <translation>&amp;Licentie</translation>
+        <translation>&amp;Licenza</translation>
     </message>
 </context>
 <context>
@@ -175,7 +171,7 @@
     <message>
         <location filename="../graphicsscene.cpp" line="89"/>
         <source>Drag image here</source>
-        <translation>Sleep een afbeelding hierheen</translation>
+        <translation>Trascina qui l&apos;immagine</translation>
     </message>
 </context>
 <context>
@@ -183,28 +179,28 @@
     <message>
         <location filename="../graphicsview.cpp" line="348"/>
         <source>File url list is empty</source>
-        <translation>De bestandspadlijst is leeg</translation>
+        <translation>L&apos;elenco degli URL dei file è vuoto</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="49"/>
         <source>File is not a valid image</source>
-        <translation>Het bestand is geen afbeelding</translation>
+        <translation>Il file non è un&apos;immagine valida</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="54"/>
         <location filename="../graphicsview.cpp" line="59"/>
         <source>Image data is invalid or currently unsupported</source>
-        <translation>De afbeeldingsgegevens zijn beschadigd of worden niet ondersteund</translation>
+        <translation>I dati dell&apos;immagine non sono validi o non sono attualmente supportati</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="356"/>
         <source>Image data is invalid</source>
-        <translation>Beschadigde afbeeldingsgegevens</translation>
+        <translation>I dati dell&apos;immagine non sono validi</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="363"/>
         <source>Not supported mimedata: %1</source>
-        <translation>Niet-ondersteunde mime-gegevens: %1</translation>
+        <translation>Dati mime non supportati: %1</translation>
     </message>
 </context>
 <context>
@@ -212,120 +208,120 @@
     <message>
         <location filename="../mainwindow.cpp" line="190"/>
         <source>File url list is empty</source>
-        <translation>De bestandspadlijst is leeg</translation>
+        <translation>L&apos;elenco degli URL dei file è vuoto</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="433"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Kopiëren</translation>
+        <translation>&amp;Copia</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="103"/>
         <source>Copy P&amp;ixmap</source>
-        <translation>P&amp;ixmap kopiëren</translation>
+        <translation>Copia P&amp;ixmap</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="104"/>
         <source>Copy &amp;File Path</source>
-        <translation>&amp;Bestandspad kopiëren</translation>
+        <translation>Copia &amp;Percorso file</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="121"/>
         <source>Properties</source>
-        <translation>Eigenschappen</translation>
+        <translation>Proprietà</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="39"/>
         <location filename="../actionmanager.cpp" line="106"/>
         <source>Stay on top</source>
-        <translation>Altijd bovenop</translation>
+        <translation>Rimani in cima</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="42"/>
         <location filename="../actionmanager.cpp" line="107"/>
         <source>Protected mode</source>
-        <translation>Beschermde modus</translation>
+        <translation>Modalità protetta</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
         <source>Zoom in</source>
-        <translation>Inzoomen</translation>
+        <translation>Zoom avanti</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
         <source>Zoom out</source>
-        <translation>Uitzoomen</translation>
+        <translation>Zoom indietro</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>&amp;Horizontaal spiegelen</translation>
+        <translation>Capovolgi &amp;Orizzontalmente</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="105"/>
         <source>&amp;Paste</source>
-        <translation>&amp;Plakken</translation>
+        <translation>&amp;Incolla</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="94"/>
         <source>Toggle Checkerboard</source>
-        <translation>Schaakbordpatroon aan/uit</translation>
+        <translation>Attiva/disattiva scacchiera</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
         <source>&amp;Open...</source>
-        <translation>&amp;Openen…</translation>
+        <translation>&amp;Apri...</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>Actual size</source>
-        <translation>Ware grootte</translation>
+        <translation>Dimensione reale</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
         <source>Toggle maximize</source>
-        <translation>Maximaliseren aan/uit</translation>
+        <translation>Attiva massimizzazione</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="95"/>
         <source>Rotate right</source>
-        <translation>Naar rechts draaien</translation>
+        <translation>Ruota a destra</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="97"/>
         <source>Previous image</source>
-        <translation>Vorige afbeelding</translation>
+        <translation>Immagine precedente</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
         <source>Next image</source>
-        <translation>Volgende afbeelding</translation>
+        <translation>Immagine successiva</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="109"/>
         <source>Configure...</source>
-        <translation>Instellen...</translation>
+        <translation>Configura...</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="110"/>
         <source>Help</source>
-        <translation>Hulp</translation>
+        <translation>Aiuto</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="113"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
-        <translation>Tonen in bestandsbeheer</translation>
+        <translation>Mostra in Esplora file</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="119"/>
         <source>Show in directory</source>
-        <translation>Tonen in map</translation>
+        <translation>Mostra nella directory</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="122"/>
         <source>Quit</source>
-        <translation>Afsluiten</translation>
+        <translation>Esci</translation>
     </message>
 </context>
 <context>
@@ -333,7 +329,7 @@
     <message>
         <location filename="../metadatadialog.cpp" line="84"/>
         <source>Image Metadata</source>
-        <translation>Afbeeldingsmetagegevens</translation>
+        <translation>Metadati dell&apos;immagine</translation>
     </message>
 </context>
 <context>
@@ -342,19 +338,19 @@
         <location filename="../metadatamodel.cpp" line="41"/>
         <source>Origin</source>
         <comment>Section name.</comment>
-        <translation>Oorsprong</translation>
+        <translation>Origine</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="42"/>
         <source>Image</source>
         <comment>Section name.</comment>
-        <translation>Afbeelding</translation>
+        <translation>Immagine</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="46"/>
         <source>File</source>
         <comment>Section name.</comment>
-        <translation>Bestand</translation>
+        <translation>File</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="43"/>
@@ -365,19 +361,19 @@
     <message>
         <location filename="../metadatamodel.cpp" line="33"/>
         <source>%1 File</source>
-        <translation>%1-bestand</translation>
+        <translation>%1 File</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="40"/>
         <source>Description</source>
         <comment>Section name.</comment>
-        <translation>Omschrijving</translation>
+        <translation>Descrizione</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="44"/>
         <source>Advanced photo</source>
         <comment>Section name.</comment>
-        <translation>Uitgebreide foto</translation>
+        <translation>Foto avanzata</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="45"/>
@@ -388,87 +384,87 @@
     <message>
         <location filename="../metadatamodel.cpp" line="50"/>
         <source>Dimensions</source>
-        <translation>Afmetingen</translation>
+        <translation>Dimensioni</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="52"/>
         <source>Aspect ratio</source>
-        <translation>Beeldverhouding</translation>
+        <translation>Proporzioni</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="56"/>
         <source>Frame count</source>
-        <translation>Aantal frames</translation>
+        <translation>Conteggio fotogrammi</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="60"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Nome</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="62"/>
         <source>Item type</source>
-        <translation>Soort item</translation>
+        <translation>Tipo di elemento</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="64"/>
         <source>Folder path</source>
-        <translation>Bestandspad</translation>
+        <translation>Percorso cartella</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="66"/>
         <source>Size</source>
-        <translation>Grootte</translation>
+        <translation>Dimensione</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="68"/>
         <source>Date created</source>
-        <translation>Gemaakt op</translation>
+        <translation>Data di creazione</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="70"/>
         <source>Date modified</source>
-        <translation>Bewerkt op</translation>
+        <translation>Data di modifica</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="77"/>
         <source>Title</source>
-        <translation>Naam</translation>
+        <translation>Titolo</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="79"/>
         <source>Subject</source>
-        <translation>Onderwerp</translation>
+        <translation>Soggetto</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="81"/>
         <source>Rating</source>
-        <translation>Waardering</translation>
+        <translation>Valutazione</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="83"/>
         <source>Tags</source>
-        <translation>Labels</translation>
+        <translation>Tag</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="85"/>
         <source>Comments</source>
-        <translation>Opmerkingen</translation>
+        <translation>Commenti</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="88"/>
         <source>Authors</source>
-        <translation>Makers</translation>
+        <translation>Autori</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="90"/>
         <source>Date taken</source>
-        <translation>Genomen op</translation>
+        <translation>Data scatto</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="96"/>
         <source>Program name</source>
-        <translation>Programmanaam</translation>
+        <translation>Nome programma</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="98"/>
@@ -478,157 +474,157 @@
     <message>
         <location filename="../metadatamodel.cpp" line="101"/>
         <source>Horizontal resolution</source>
-        <translation>Horizontale resolutie</translation>
+        <translation>Risoluzione orizzontale</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="103"/>
         <source>Vertical resolution</source>
-        <translation>Verticale resolutie</translation>
+        <translation>Risoluzione verticale</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="105"/>
         <source>Resolution unit</source>
-        <translation>Resolutie-eenheid</translation>
+        <translation>Unità di risoluzione</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="107"/>
         <source>Colour representation</source>
-        <translation>Kleurweergave</translation>
+        <translation>Rappresentazione del colore</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="110"/>
         <source>Camera maker</source>
-        <translation>Camerafabrikant</translation>
+        <translation>Produttore macchina fotografica</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="112"/>
         <source>Camera model</source>
-        <translation>Cameramodel</translation>
+        <translation>Modello camera</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="114"/>
         <source>F-stop</source>
-        <translation>Openingsverhouding</translation>
+        <translation>F-stop</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="116"/>
         <source>Exposure time</source>
-        <translation>Belichtingstijd</translation>
+        <translation>Tempo di esposizione</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="118"/>
         <source>ISO speed</source>
-        <translation>ISO-snelheid</translation>
+        <translation>Velocità ISO</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="120"/>
         <source>Exposure bias</source>
-        <translation>Belichtingsvertekening</translation>
+        <translation>Bias d&apos;esposizione</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="122"/>
         <source>Focal length</source>
-        <translation>Focale lengte</translation>
+        <translation>Lunghezza focale</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="124"/>
         <source>Max aperture</source>
-        <translation>Max. opening</translation>
+        <translation>Massima apertura</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="126"/>
         <source>Metering mode</source>
-        <translation>Metermodus</translation>
+        <translation>Modalità di misurazione</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="128"/>
         <source>Subject distance</source>
-        <translation>Onderwerpafstand</translation>
+        <translation>Distanza del soggetto</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="130"/>
         <source>Flash mode</source>
-        <translation>Flitsmodus</translation>
+        <translation>Modalità flash</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="132"/>
         <source>35mm focal length</source>
-        <translation>35mm focale lengte</translation>
+        <translation>Lunghezza focale 35 mm</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="135"/>
         <source>Lens model</source>
-        <translation>Lensmodel</translation>
+        <translation>Modello di lente</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="137"/>
         <source>Contrast</source>
-        <translation>Contrast</translation>
+        <translation>Contrasto</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="139"/>
         <source>Brightness</source>
-        <translation>Helderheid</translation>
+        <translation>Luminosità</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="141"/>
         <source>Exposure program</source>
-        <translation>Belichtingsprogramma</translation>
+        <translation>Programma di esposizione</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="143"/>
         <source>Saturation</source>
-        <translation>Verzadiging</translation>
+        <translation>Saturazione</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="145"/>
         <source>Sharpness</source>
-        <translation>Scherpte</translation>
+        <translation>Nitidezza</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="147"/>
         <source>White balance</source>
-        <translation>Witbalans</translation>
+        <translation>Bilanciamento del bianco</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="149"/>
         <source>Digital zoom</source>
-        <translation>Digitale zoom</translation>
+        <translation>Zoom digitale</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="151"/>
         <source>EXIF version</source>
-        <translation>EXIF-versie</translation>
+        <translation>Versione EXIF</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="154"/>
         <source>Latitude reference</source>
-        <translation>Breedtegraadverwijzing</translation>
+        <translation>Riferimento di latitudine</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="156"/>
         <source>Latitude</source>
-        <translation>Breedtegraad</translation>
+        <translation>Latitudine</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="158"/>
         <source>Longitude reference</source>
-        <translation>Lengtegraadverwijzing</translation>
+        <translation>Riferimento di longitudine</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="160"/>
         <source>Longitude</source>
-        <translation>Lengtegraad</translation>
+        <translation>Longitudine</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="162"/>
         <source>Altitude reference</source>
-        <translation>Hoogteverwijzing</translation>
+        <translation>Riferimento altimetrico</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="164"/>
         <source>Altitude</source>
-        <translation>Hoogte</translation>
+        <translation>Altitudine</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="174"/>
@@ -643,12 +639,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="317"/>
         <source>Property</source>
-        <translation>Eigenschap</translation>
+        <translation>Proprietà</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="317"/>
         <source>Value</source>
-        <translation>Waarde</translation>
+        <translation>Valore</translation>
     </message>
 </context>
 <context>
@@ -656,91 +652,91 @@
     <message>
         <location filename="../settingsdialog.cpp" line="22"/>
         <source>Settings</source>
-        <translation>Instellingen</translation>
+        <translation>Impostazioni</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="27"/>
         <source>Do nothing</source>
-        <translation>Niets doen</translation>
+        <translation>Non fare nulla</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="28"/>
         <source>Close the window</source>
-        <translation>Venster sluiten</translation>
+        <translation>Chiudi la finestra</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="29"/>
         <source>Toggle maximize</source>
-        <translation>Maximaliseren/Demaximaliseren</translation>
+        <translation>Attiva massimizzazione</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
         <source>Zoom in and out</source>
-        <translation>In-/Uitzoomen</translation>
+        <translation>Zoom avanti e indietro</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="34"/>
         <source>View next or previous item</source>
-        <translation>Ga naar volgende of vorige item</translation>
+        <translation>Visualizza l&apos;elemento successivo o precedente</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="38"/>
         <source>Auto size</source>
-        <translation>Automatische grootte</translation>
+        <translation>Dimensione automatica</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="39"/>
         <source>Maximized</source>
-        <translation>Gemaximaliseerd</translation>
+        <translation>Massimizzato</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="43"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
-        <translation>Rond (geheel getal)</translation>
+        <translation>Round (ridimensionamento intero)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="44"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
-        <translation>Keil (geheel getal)</translation>
+        <translation>Ceil (ridimensionamento intero)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="45"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
-        <translation>Grond (geheel getal)</translation>
+        <translation>Floor (ridimensionamento intero)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="46"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
-        <translation>Systeeminstelling (fractionele schaal)</translation>
+        <translation>Segui il sistema (scala frazionaria)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
         <source>Stay on top when start-up</source>
-        <translation>Automatisch altijd bovenop</translation>
+        <translation>Rimani in cima quando si avvia</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="70"/>
         <source>Double-click behavior</source>
-        <translation>Dubbelklikgedrag</translation>
+        <translation>Comportamento del doppio clic</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="71"/>
         <source>Mouse wheel behavior</source>
-        <translation>Scrollwielgedrag</translation>
+        <translation>Comportamento della rotellina del mouse</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="72"/>
         <source>Default window size</source>
-        <translation>Standaard vensterafmetingen</translation>
+        <translation>Dimensioni predefinite della finestra</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="73"/>
         <source>HiDPI scale factor rounding policy</source>
-        <translation>HiDPI-schaalfactor - afrondbeleid</translation>
+        <translation>Politica di arrotondamento del fattore di scala HiDPI</translation>
     </message>
 </context>
 <context>
@@ -748,12 +744,12 @@
     <message>
         <location filename="../main.cpp" line="41"/>
         <source>Pineapple Pictures</source>
-        <translation>Pineapple Afbeeldingen</translation>
+        <translation>Immagini di Pineapple</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="45"/>
         <source>File list.</source>
-        <translation>Bestandslijst.</translation>
+        <translation>Elenco file.</translation>
     </message>
 </context>
 </TS>
