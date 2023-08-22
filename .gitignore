@@ -4,6 +4,7 @@
 
 # Translation files
 *.qm
+*.mo
 
 # Generic Build Dir
 [Bb]uild/
