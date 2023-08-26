@@ -25,7 +25,10 @@ msgstr "Afbeeldingsweergave"
 
 #. (itstool) path: description/p
 #: net.blumia.pineapple-pictures.metainfo.xml:12
-msgid "Pineapple Pictures is a lightweight and easy-to-use image viewer that comes with a handy navigation thumbnail when zoom-in, and doesn't contain any image management support."
+msgid ""
+"Pineapple Pictures is a lightweight and easy-to-use image viewer that comes "
+"with a handy navigation thumbnail when zoom-in, and doesn't contain any "
+"image management support."
 msgstr ""
 "Pineapple Afbeeldingen is een licht en eenvoudig te gebruiken "
 "afbeeldingsweergaveprogramma met miniatuurnavigatie na inzoomen. Het "
