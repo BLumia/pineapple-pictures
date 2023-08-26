@@ -259,7 +259,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>Vent &amp;vanrett</translation>
+        <translation>Speilvend &amp;horisontalt</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="105"/>
@@ -393,7 +393,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="52"/>
         <source>Aspect ratio</source>
-        <translation>Størrelsesforhold</translation>
+        <translation>Sideforhold</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="56"/>
@@ -458,7 +458,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="88"/>
         <source>Authors</source>
-        <translation type="unfinished">Opphavsmenn</translation>
+        <translation>Utviklere</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="90"/>
@@ -563,7 +563,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="137"/>
         <source>Contrast</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontrast</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="139"/>
@@ -748,7 +748,7 @@
     <message>
         <location filename="../main.cpp" line="41"/>
         <source>Pineapple Pictures</source>
-        <translation type="unfinished">Ananasbilder</translation>
+        <translation>Pineapple Pictures</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="45"/>
