@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 #else
     qmDir = QT_STRINGIFY(QM_FILE_INSTALL_DIR);
 #endif
-    if (translator.load(QString("PineapplePictures_%1").arg(QLocale::system().name()), qmDir)) {
+    if (translator.load(QLocale(), QLatin1String("PineapplePictures"), QLatin1String("_"), qmDir)) {
         a.installTranslator(&translator);
     }
     a.setApplicationName("Pineapple Pictures");
