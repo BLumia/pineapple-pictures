@@ -5,31 +5,37 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT</project_license>
   <name>Pineapple Pictures</name>
+  <name xml:lang="nl">Pineapple Afbeeldingen</name>
   <name xml:lang="ru">Pineapple Pictures</name>
   <name xml:lang="zh-CN">菠萝看图</name>
   <summary>Image Viewer</summary>
+  <summary xml:lang="nl">Afbeeldingsweergave</summary>
   <summary xml:lang="ru">Просмотр изображений</summary>
   <summary xml:lang="zh-CN">图像查看器</summary>
   <description>
     <p>Pineapple Pictures is a lightweight and easy-to-use image viewer that comes with a handy navigation thumbnail when zoom-in, and doesn't contain any image management support.</p>
+    <p xml:lang="nl">Pineapple Afbeeldingen is een licht en eenvoudig te gebruiken afbeeldingsweergaveprogramma met miniatuurnavigatie na inzoomen. Het programma heeft echter geen fotobeheermogelĳkheid.</p>
     <p xml:lang="ru">Pineapple Pictures - это легкий и простой в использовании просмотрщик изображений, оснащенный удобной навигацией по миниатюрам при увеличении масштаба и не содержащий никакой поддержки управления изображениями.</p>
     <p xml:lang="zh-CN">菠萝看图是一个轻量级易用的图像查看器，在图片放大时提供了方便的鸟瞰导航功能，且不包含任何图片管理功能。</p>
   </description>
   <screenshots>
     <screenshot type="default">
       <caption>Main window when an image file is loaded</caption>
+      <caption xml:lang="nl">Hoofdvenster na het laden van een afbeelding</caption>
       <caption xml:lang="ru">Основное окно после загрузки файла изображения</caption>
       <caption xml:lang="zh-CN">加载图片后的主窗口</caption>
       <image type="source" width="1503" height="640">https://pineapple-pictures.sourceforge.io/ppic-gui-static.png</image>
     </screenshot>
     <screenshot>
       <caption>Zooming in a raster image</caption>
+      <caption xml:lang="nl">Inzoomen op een roosterafbeelding</caption>
       <caption xml:lang="ru">Масштабирование растрового изображения</caption>
       <caption xml:lang="zh-CN">放大浏览位图</caption>
       <image type="source" width="771" height="553">https://pineapple-pictures.sourceforge.io/ppic-zoom-raster.png</image>
     </screenshot>
     <screenshot>
       <caption>Zooming in a vector image</caption>
+      <caption xml:lang="nl">Inzoomen op een vectorafbeelding</caption>
       <caption xml:lang="ru">Масштабирование векторного изображения</caption>
       <caption xml:lang="zh-CN">放大浏览矢量图</caption>
       <image type="source" width="771" height="553">https://pineapple-pictures.sourceforge.io/ppic-zoom-svg.png</image>
@@ -38,7 +44,9 @@
   <url type="homepage">https://github.com/BLumia/pineapple-pictures</url>
   <url type="bugtracker">https://github.com/BLumia/pineapple-pictures/issues</url>
   <developer_name>Gary (BLumia) Wang et al.</developer_name>
+  <developer_name xml:lang="nl">Gary (BLumia) Wang e.a.</developer_name>
   <developer_name xml:lang="ru">Gary (BLumia) Wang et al.</developer_name>
+  <developer_name xml:lang="zh-CN">Gary (BLumia) Wang 等人</developer_name>
   <provides>
     <binary>ppic</binary>
   </provides>
