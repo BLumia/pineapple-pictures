@@ -43,6 +43,7 @@
   </screenshots>
   <url type="homepage">https://github.com/BLumia/pineapple-pictures</url>
   <url type="bugtracker">https://github.com/BLumia/pineapple-pictures/issues</url>
+  <url type="translate">https://hosted.weblate.org/projects/pineapple-pictures/</url>
   <developer_name>Gary (BLumia) Wang et al.</developer_name>
   <developer_name xml:lang="nl">Gary (BLumia) Wang e.a.</developer_name>
   <developer_name xml:lang="ru">Gary (BLumia) Wang et al.</developer_name>
@@ -52,6 +53,7 @@
   </provides>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="0.7.2" date="2023-08-27"/>
     <release version="0.7.1" date="2023-07-08"/>
   </releases>
 </component>
