@@ -485,9 +485,7 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     menu->addSeparator();
     menu->addAction(stayOnTopMode);
     menu->addAction(protectedMode);
-#if 0
     menu->addAction(avoidResetTransform);
-#endif // 0
     menu->addSeparator();
     menu->addAction(toggleSettings);
     menu->addAction(helpAction);
