@@ -42,7 +42,7 @@ AboutDialog::AboutDialog(QWidget *parent)
                 .arg(QCoreApplication::translate("MainWindow", "Protected mode"))
                 .arg(tr("Avoid close window accidentally. (eg. by double clicking the window)")),
         QStringLiteral("<li><b>%1</b>:<br/>%2</li>")
-                .arg(QCoreApplication::translate("MainWindow", "Keep transformation"))
+                .arg(QCoreApplication::translate("MainWindow", "Keep transformation", "The 'transformation' means the flip/rotation status that currently applied to the image view"))
                 .arg(tr("Avoid resetting the zoom/rotation/flip state that was applied to the image view when switching between images.")),
         QStringLiteral("</ul>")
     };

@@ -39,7 +39,7 @@
         <translation>避免窗口意外关闭。（如：不小心双击了窗口触发了关闭窗口行为）</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="51"/>
+        <location filename="../aboutdialog.cpp" line="54"/>
         <source>Version: %1</source>
         <translation>版本: %1</translation>
     </message>
@@ -48,124 +48,129 @@
         <translation type="vanished">版权所有 (c) 2020 %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="57"/>
+        <location filename="../aboutdialog.cpp" line="60"/>
         <source>Logo designed by %1</source>
         <translation>Logo 由 %1 设计</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="59"/>
+        <location filename="../aboutdialog.cpp" line="62"/>
         <source>Built with Qt %1 (%2)</source>
         <translation>使用 Qt %1 (%2) 进行构建</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="60"/>
+        <location filename="../aboutdialog.cpp" line="63"/>
         <source>Source code</source>
         <translation>源代码</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="70"/>
+        <location filename="../aboutdialog.cpp" line="73"/>
         <source>Contributors</source>
         <translation>贡献者</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="72"/>
+        <location filename="../aboutdialog.cpp" line="75"/>
         <source>List of contributors on GitHub</source>
         <translation>GitHub 上的贡献者列表</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="73"/>
+        <location filename="../aboutdialog.cpp" line="76"/>
         <source>Thanks to all people who contributed to this project.</source>
         <translation>感谢所有参与此项目的朋友。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="77"/>
+        <location filename="../aboutdialog.cpp" line="80"/>
         <source>Translators</source>
         <translation>翻译者</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="78"/>
+        <location filename="../aboutdialog.cpp" line="81"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
         <translation>我想要感谢下列自愿参与翻译此应用程序的朋友。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="122"/>
+        <location filename="../aboutdialog.cpp" line="125"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
         <translation>%1 采用了下列自由软件程序库进行构建：</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="146"/>
+        <location filename="../aboutdialog.cpp" line="149"/>
         <source>&amp;Special Thanks</source>
         <translation>致谢(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="148"/>
+        <location filename="../aboutdialog.cpp" line="151"/>
         <source>&amp;Third-party Libraries</source>
         <translation>第三方程序库(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="84"/>
+        <location filename="../aboutdialog.cpp" line="87"/>
         <source>Your Rights</source>
         <translation>用户的权利</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="54"/>
+        <location filename="../aboutdialog.cpp" line="46"/>
+        <source>Avoid resetting the zoom/rotation/flip state that was applied to the image view when switching between images.</source>
+        <translation>切换图片时，防止重置当前视图的缩放/旋转/翻转状态。</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="57"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
         <translation>版权所有 © %1 %2</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="86"/>
+        <location filename="../aboutdialog.cpp" line="89"/>
         <source>%1 is released under the MIT License.</source>
         <translation>%1 是在 MIT 许可协议下发布的。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="87"/>
+        <location filename="../aboutdialog.cpp" line="90"/>
         <source>This license grants people a number of freedoms:</source>
         <translation>此许可证赋予人们以下自由的权利：</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="88"/>
+        <location filename="../aboutdialog.cpp" line="91"/>
         <source>You are free to use %1, for any purpose</source>
         <translation>任何人都可以为了任何目的自由地使用 %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="89"/>
+        <location filename="../aboutdialog.cpp" line="92"/>
         <source>You are free to distribute %1</source>
         <translation>任何人都可以自由地分发 %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="90"/>
+        <location filename="../aboutdialog.cpp" line="93"/>
         <source>You can study how %1 works and change it</source>
         <translation>任何人都可以自由地研究 %1 的工作原理并对其进行修改</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="91"/>
+        <location filename="../aboutdialog.cpp" line="94"/>
         <source>You can distribute changed versions of %1</source>
         <translation>任何人都可以自由地分发修改过的 %1 版本</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="93"/>
+        <location filename="../aboutdialog.cpp" line="96"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
         <translation>此软件通过 MIT 许可证赋予用户上述自由，任何人无权剥夺。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="121"/>
+        <location filename="../aboutdialog.cpp" line="124"/>
         <source>Third-party Libraries used by %1</source>
         <translation>%1 使用的第三方程序库</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="144"/>
+        <location filename="../aboutdialog.cpp" line="147"/>
         <source>&amp;Help</source>
         <translation>帮助(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="145"/>
+        <location filename="../aboutdialog.cpp" line="148"/>
         <source>&amp;About</source>
         <translation>关于(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="147"/>
+        <location filename="../aboutdialog.cpp" line="150"/>
         <source>&amp;License</source>
         <translation>软件许可证(&amp;L)</translation>
     </message>
@@ -181,28 +186,28 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../graphicsview.cpp" line="348"/>
+        <location filename="../graphicsview.cpp" line="351"/>
         <source>File url list is empty</source>
         <translation>文件 URL 列表为空</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="49"/>
+        <location filename="../graphicsview.cpp" line="52"/>
         <source>File is not a valid image</source>
         <translation>文件不是有效的图片文件</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="54"/>
-        <location filename="../graphicsview.cpp" line="59"/>
+        <location filename="../graphicsview.cpp" line="57"/>
+        <location filename="../graphicsview.cpp" line="62"/>
         <source>Image data is invalid or currently unsupported</source>
         <translation>图像数据无效或暂未支持</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="356"/>
+        <location filename="../graphicsview.cpp" line="359"/>
         <source>Image data is invalid</source>
         <translation>图片数据无效</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="363"/>
+        <location filename="../graphicsview.cpp" line="366"/>
         <source>Not supported mimedata: %1</source>
         <translation>不受支持的 MimeData 格式：%1</translation>
     </message>
@@ -245,6 +250,13 @@
         <location filename="../actionmanager.cpp" line="107"/>
         <source>Protected mode</source>
         <translation>保护模式</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="45"/>
+        <location filename="../actionmanager.cpp" line="108"/>
+        <source>Keep transformation</source>
+        <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
+        <translation>保持视图变换</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="92"/>

@@ -39,129 +39,134 @@
         <translation>Evita que es tanqui la finestra accidentalment (com ara en fer doble clic a la finestra)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="51"/>
+        <location filename="../aboutdialog.cpp" line="46"/>
+        <source>Avoid resetting the zoom/rotation/flip state that was applied to the image view when switching between images.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="54"/>
         <source>Version: %1</source>
         <translation>Versió: %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="57"/>
+        <location filename="../aboutdialog.cpp" line="60"/>
         <source>Logo designed by %1</source>
         <translation>Logotip dissenyat por %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="59"/>
+        <location filename="../aboutdialog.cpp" line="62"/>
         <source>Built with Qt %1 (%2)</source>
         <translation>Creat amb Qt %1 (%2)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="60"/>
+        <location filename="../aboutdialog.cpp" line="63"/>
         <source>Source code</source>
         <translation>Codi font</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="70"/>
+        <location filename="../aboutdialog.cpp" line="73"/>
         <source>Contributors</source>
         <translation>Col·laboradors</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="72"/>
+        <location filename="../aboutdialog.cpp" line="75"/>
         <source>List of contributors on GitHub</source>
         <translation>Llista de col·laboradors al GitHub</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="73"/>
+        <location filename="../aboutdialog.cpp" line="76"/>
         <source>Thanks to all people who contributed to this project.</source>
         <translation>Gràcies a totes les persones que han col·laborat en aquest projecte.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="77"/>
+        <location filename="../aboutdialog.cpp" line="80"/>
         <source>Translators</source>
         <translation>Traductors</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="78"/>
+        <location filename="../aboutdialog.cpp" line="81"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
         <translation>M&apos;agradaria donar les gràcies a les persones següents per oferir-se a traduir aquesta aplicació.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="122"/>
+        <location filename="../aboutdialog.cpp" line="125"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
         <translation>%1 està construït sobre les biblioteques de programari lliure següents:</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="146"/>
+        <location filename="../aboutdialog.cpp" line="149"/>
         <source>&amp;Special Thanks</source>
         <translation>&amp;Especial agraïment</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="148"/>
+        <location filename="../aboutdialog.cpp" line="151"/>
         <source>&amp;Third-party Libraries</source>
         <translation>&amp;Biblioteques de tercers</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="84"/>
+        <location filename="../aboutdialog.cpp" line="87"/>
         <source>Your Rights</source>
         <translation>Els vostres drets</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="54"/>
+        <location filename="../aboutdialog.cpp" line="57"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
         <translation>Copyright (c) %1 %2</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="86"/>
+        <location filename="../aboutdialog.cpp" line="89"/>
         <source>%1 is released under the MIT License.</source>
         <translation>%1 es publica sota la llicència MIT.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="87"/>
+        <location filename="../aboutdialog.cpp" line="90"/>
         <source>This license grants people a number of freedoms:</source>
         <translation>Aquesta llicència atorga a les persones diverses llibertats:</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="88"/>
+        <location filename="../aboutdialog.cpp" line="91"/>
         <source>You are free to use %1, for any purpose</source>
         <translation>Sou lliure de fer servir %1 per a qualsevol propòsit</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="89"/>
+        <location filename="../aboutdialog.cpp" line="92"/>
         <source>You are free to distribute %1</source>
         <translation>Sou lliure de distribuir %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="90"/>
+        <location filename="../aboutdialog.cpp" line="93"/>
         <source>You can study how %1 works and change it</source>
         <translation>Podeu estudiar com funciona %1 i modificar-lo</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="91"/>
+        <location filename="../aboutdialog.cpp" line="94"/>
         <source>You can distribute changed versions of %1</source>
         <translation>Podeu distribuir les versions modificades de %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="93"/>
+        <location filename="../aboutdialog.cpp" line="96"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
         <translation>La llicència del MIT us garanteix aquesta llibertat. No és permès que ningú us la tregui.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="121"/>
+        <location filename="../aboutdialog.cpp" line="124"/>
         <source>Third-party Libraries used by %1</source>
         <translation>Biblioteques de tercers que fa servir %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="144"/>
+        <location filename="../aboutdialog.cpp" line="147"/>
         <source>&amp;Help</source>
         <translation>Aj&amp;uda</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="145"/>
+        <location filename="../aboutdialog.cpp" line="148"/>
         <source>&amp;About</source>
         <translation>&amp;Quant a</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="147"/>
+        <location filename="../aboutdialog.cpp" line="150"/>
         <source>&amp;License</source>
         <translation>&amp;Llicència</translation>
     </message>
@@ -177,28 +182,28 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../graphicsview.cpp" line="348"/>
+        <location filename="../graphicsview.cpp" line="351"/>
         <source>File url list is empty</source>
         <translation>La llista d&apos;ubicacions de fitxer és buida</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="49"/>
+        <location filename="../graphicsview.cpp" line="52"/>
         <source>File is not a valid image</source>
         <translation>El fitxer no és una imatge vàlida</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="54"/>
-        <location filename="../graphicsview.cpp" line="59"/>
+        <location filename="../graphicsview.cpp" line="57"/>
+        <location filename="../graphicsview.cpp" line="62"/>
         <source>Image data is invalid or currently unsupported</source>
         <translation>Les dades de la imatge no són vàlides o no són compatibles</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="356"/>
+        <location filename="../graphicsview.cpp" line="359"/>
         <source>Image data is invalid</source>
         <translation>Les dades de la imatge no són vàlides</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="363"/>
+        <location filename="../graphicsview.cpp" line="366"/>
         <source>Not supported mimedata: %1</source>
         <translation>El tipus MIME no és compatible: %1</translation>
     </message>
@@ -241,6 +246,13 @@
         <location filename="../actionmanager.cpp" line="107"/>
         <source>Protected mode</source>
         <translation>Mode protegit</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="45"/>
+        <location filename="../actionmanager.cpp" line="108"/>
+        <source>Keep transformation</source>
+        <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="92"/>

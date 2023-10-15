@@ -39,7 +39,7 @@
         <translation>Pencereyi yanlışlıkla kapatmaktan kaçın. (örn. pencereye çift tıklayarak)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="51"/>
+        <location filename="../aboutdialog.cpp" line="54"/>
         <source>Version: %1</source>
         <translation>Sürüm: %1</translation>
     </message>
@@ -48,124 +48,129 @@
         <translation type="vanished">Telif hakkı (c) 2020 %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="57"/>
+        <location filename="../aboutdialog.cpp" line="60"/>
         <source>Logo designed by %1</source>
         <translation>Logo tasarımcısı: %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="59"/>
+        <location filename="../aboutdialog.cpp" line="62"/>
         <source>Built with Qt %1 (%2)</source>
         <translation>Qt %1 (%2) ile inşa edilmiştir</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="60"/>
+        <location filename="../aboutdialog.cpp" line="63"/>
         <source>Source code</source>
         <translation>Kaynak kodu</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="70"/>
+        <location filename="../aboutdialog.cpp" line="73"/>
         <source>Contributors</source>
         <translation>Katkıda bulunanlar</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="72"/>
+        <location filename="../aboutdialog.cpp" line="75"/>
         <source>List of contributors on GitHub</source>
         <translation>Github üzerindeki katkı sağlayıcıların listesi</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="73"/>
+        <location filename="../aboutdialog.cpp" line="76"/>
         <source>Thanks to all people who contributed to this project.</source>
         <translation>Bu projeye katkı sağlayan herkese teşekkürler.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="77"/>
+        <location filename="../aboutdialog.cpp" line="80"/>
         <source>Translators</source>
         <translation>Çevirmenler</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="78"/>
+        <location filename="../aboutdialog.cpp" line="81"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
         <translation>Bu uygulamayı çevirmeye gönüllü olan aşağıdaki kişilere teşekkür etmek istiyorum.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="122"/>
+        <location filename="../aboutdialog.cpp" line="125"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
         <translation>%1 aşağıdaki özgür yazılım kitaplıkları üzerinde inşa edilmiştir:</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="146"/>
+        <location filename="../aboutdialog.cpp" line="149"/>
         <source>&amp;Special Thanks</source>
         <translation>Özel %Teşekkürler</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="148"/>
+        <location filename="../aboutdialog.cpp" line="151"/>
         <source>&amp;Third-party Libraries</source>
         <translation>Üçüncü Par&amp;ti Kitaplıklar</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="84"/>
+        <location filename="../aboutdialog.cpp" line="87"/>
         <source>Your Rights</source>
         <translation>Haklarınız</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="54"/>
+        <location filename="../aboutdialog.cpp" line="46"/>
+        <source>Avoid resetting the zoom/rotation/flip state that was applied to the image view when switching between images.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="57"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
         <translation>Telif Hakkı (c) %1 %2</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="86"/>
+        <location filename="../aboutdialog.cpp" line="89"/>
         <source>%1 is released under the MIT License.</source>
         <translation>%1, MIT Lisansı altında sunulmuştur.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="87"/>
+        <location filename="../aboutdialog.cpp" line="90"/>
         <source>This license grants people a number of freedoms:</source>
         <translation>Bu lisans birkaç özgürlüğü kişilere veriyor:</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="88"/>
+        <location filename="../aboutdialog.cpp" line="91"/>
         <source>You are free to use %1, for any purpose</source>
         <translation>%1&apos;i herhangi bir amaç için kullanmakta özgürsünüz</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="89"/>
+        <location filename="../aboutdialog.cpp" line="92"/>
         <source>You are free to distribute %1</source>
         <translation>%1&apos;i dağıtmakta özgürsünüz</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="90"/>
+        <location filename="../aboutdialog.cpp" line="93"/>
         <source>You can study how %1 works and change it</source>
         <translation>%1&apos;in nasıl çalıştığıyla ilgili çalışabilir ve onu değiştirebilirsiniz</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="91"/>
+        <location filename="../aboutdialog.cpp" line="94"/>
         <source>You can distribute changed versions of %1</source>
         <translation>%1&apos;in değiştirilmiş sürümünü dağıtabilirsiniz</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="93"/>
+        <location filename="../aboutdialog.cpp" line="96"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
         <translation>MIT lisansı özgürlüğünüzü garanti eder. Hiç kimsenin özgürlüğünüzü sizden almasına bile izin verilmez.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="121"/>
+        <location filename="../aboutdialog.cpp" line="124"/>
         <source>Third-party Libraries used by %1</source>
         <translation>%1 tarafından kullanılan Üçüncü Parti Kitaplıklar</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="144"/>
+        <location filename="../aboutdialog.cpp" line="147"/>
         <source>&amp;Help</source>
         <translation>&amp;Yardım</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="145"/>
+        <location filename="../aboutdialog.cpp" line="148"/>
         <source>&amp;About</source>
         <translation>H&amp;akkında</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="147"/>
+        <location filename="../aboutdialog.cpp" line="150"/>
         <source>&amp;License</source>
         <translation>&amp;Lisans</translation>
     </message>
@@ -181,28 +186,28 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../graphicsview.cpp" line="348"/>
+        <location filename="../graphicsview.cpp" line="351"/>
         <source>File url list is empty</source>
         <translation>Dosya URL listesi boş</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="49"/>
+        <location filename="../graphicsview.cpp" line="52"/>
         <source>File is not a valid image</source>
         <translation>Dosya, geçerli bir resim değil</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="54"/>
-        <location filename="../graphicsview.cpp" line="59"/>
+        <location filename="../graphicsview.cpp" line="57"/>
+        <location filename="../graphicsview.cpp" line="62"/>
         <source>Image data is invalid or currently unsupported</source>
         <translation>Resim verisi geçersiz veya şuan desteklenmiyor</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="356"/>
+        <location filename="../graphicsview.cpp" line="359"/>
         <source>Image data is invalid</source>
         <translation>Resim verisi geçersiz</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="363"/>
+        <location filename="../graphicsview.cpp" line="366"/>
         <source>Not supported mimedata: %1</source>
         <translation>Desteklenmeyen dosya türü verisi: %1</translation>
     </message>
@@ -245,6 +250,13 @@
         <location filename="../actionmanager.cpp" line="107"/>
         <source>Protected mode</source>
         <translation>Korumalı kip</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="45"/>
+        <location filename="../actionmanager.cpp" line="108"/>
+        <source>Keep transformation</source>
+        <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
