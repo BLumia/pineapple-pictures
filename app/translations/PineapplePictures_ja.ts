@@ -31,7 +31,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="40"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation>ウィンドウを最前面表示する。</translation>
+        <translation>ウィンドウを最前面に表示する。</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="43"/>
@@ -41,12 +41,12 @@
     <message>
         <location filename="../aboutdialog.cpp" line="51"/>
         <source>Version: %1</source>
-        <translation>パッジョン:%1</translation>
+        <translation>バージョン: %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="57"/>
         <source>Logo designed by %1</source>
-        <translation>ロゴデザイナー%1</translation>
+        <translation>ロゴデザイン: %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="59"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="77"/>
         <source>Translators</source>
-        <translation>訳者</translation>
+        <translation>翻訳者</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="78"/>
@@ -108,7 +108,7 @@
         <location filename="../aboutdialog.cpp" line="54"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
-        <translation>コピーライト(c)%1%2</translation>
+        <translation>Copyright (c) %1 %2</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="86"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="121"/>
         <source>Third-party Libraries used by %1</source>
-        <translation>%1が使用されるサードパーティライブラリ</translation>
+        <translation>%1が使用するサードパーティライブラリ</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="144"/>
@@ -218,12 +218,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="103"/>
         <source>Copy P&amp;ixmap</source>
-        <translation>ビットマップをコピーする(&amp;I)</translation>
+        <translation>画像をコピー(&amp;I)</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="104"/>
         <source>Copy &amp;File Path</source>
-        <translation>ファイルパスのコピー(&amp;F)</translation>
+        <translation>ファイルパスをコピー(&amp;F)</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="121"/>
@@ -234,7 +234,7 @@
         <location filename="../aboutdialog.cpp" line="39"/>
         <location filename="../actionmanager.cpp" line="106"/>
         <source>Stay on top</source>
-        <translation>最前面表示する</translation>
+        <translation>最前面に表示する</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="42"/>
@@ -245,17 +245,17 @@
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
         <source>Zoom in</source>
-        <translation>ズームイン</translation>
+        <translation>拡大</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
         <source>Zoom out</source>
-        <translation>ズームアウト</translation>
+        <translation>縮小</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>ホリゾンタルフリップ（&amp;H）</translation>
+        <translation>画像を左右反転する(&amp;H)</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="105"/>
@@ -265,22 +265,22 @@
     <message>
         <location filename="../actionmanager.cpp" line="94"/>
         <source>Toggle Checkerboard</source>
-        <translation>トグルチェッカーボード</translation>
+        <translation>背景を格子模様に切り替え</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
         <source>&amp;Open...</source>
-        <translation>＆開く…</translation>
+        <translation>開く(&amp;O)…</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
         <source>Actual size</source>
-        <translation>実サイズ</translation>
+        <translation>実際のサイズ</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
         <source>Toggle maximize</source>
-        <translation>トグル最大化</translation>
+        <translation>最大化を切り替える</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="95"/>
@@ -311,7 +311,7 @@
         <location filename="../actionmanager.cpp" line="113"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
-        <translation>ファイルエクスプローラに表示する</translation>
+        <translation>エクスプローラーで表示する</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="119"/>
@@ -404,7 +404,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="62"/>
         <source>Item type</source>
-        <translation>項目タイプ</translation>
+        <translation>項目の種類</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="64"/>
@@ -419,12 +419,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="68"/>
         <source>Date created</source>
-        <translation>作成日</translation>
+        <translation>作成日時</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="70"/>
         <source>Date modified</source>
-        <translation>修正日</translation>
+        <translation>更新日時</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="77"/>
@@ -494,17 +494,17 @@
     <message>
         <location filename="../metadatamodel.cpp" line="110"/>
         <source>Camera maker</source>
-        <translation>カメラメーカー</translation>
+        <translation>カメラの製造元</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="112"/>
         <source>Camera model</source>
-        <translation>カメラ機種</translation>
+        <translation>カメラのモデル</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="114"/>
         <source>F-stop</source>
-        <translation>エフストップ</translation>
+        <translation>絞り値</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="116"/>
@@ -514,12 +514,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="118"/>
         <source>ISO speed</source>
-        <translation>ISOスピード</translation>
+        <translation>ISO速度</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="120"/>
         <source>Exposure bias</source>
-        <translation>露光補正値</translation>
+        <translation>露光補正</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="122"/>
@@ -549,7 +549,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="132"/>
         <source>35mm focal length</source>
-        <translation>35mmの焦点距離</translation>
+        <translation>35mm 焦点距離</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="135"/>
@@ -629,12 +629,12 @@
     <message>
         <location filename="../metadatamodel.cpp" line="174"/>
         <source>%1 x %2</source>
-        <translation>%1×%2</translation>
+        <translation>%1 × %2</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="192"/>
         <source>%1 : %2</source>
-        <translation>%1:%2</translation>
+        <translation>%1 : %2</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="317"/>
@@ -667,7 +667,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="29"/>
         <source>Toggle maximize</source>
-        <translation>トグル最大化</translation>
+        <translation>最大サイズに切り替える</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
@@ -693,30 +693,30 @@
         <location filename="../settingsdialog.cpp" line="43"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
-        <translation type="unfinished"></translation>
+        <translation>四捨五入 (整数スケーリング)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="44"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
-        <translation type="unfinished"></translation>
+        <translation>切り上げ (整数スケーリング)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="45"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
-        <translation type="unfinished"></translation>
+        <translation>切り捨て (整数スケーリング)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="46"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
-        <translation type="unfinished"></translation>
+        <translation>システム設定に従う (小数スケーリング)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
         <source>Stay on top when start-up</source>
-        <translation>スタートアップ時最前面に表示する</translation>
+        <translation>起動時に最前面に表示する</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="70"/>
@@ -736,7 +736,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="73"/>
         <source>HiDPI scale factor rounding policy</source>
-        <translation type="unfinished"></translation>
+        <translation>高DPIスケーリングの四捨五入方法</translation>
     </message>
 </context>
 <context>
@@ -744,12 +744,12 @@
     <message>
         <location filename="../main.cpp" line="41"/>
         <source>Pineapple Pictures</source>
-        <translation>パイナップル画像ビューアー</translation>
+        <translation>Pineapple Pictures</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="45"/>
         <source>File list.</source>
-        <translation>ファイルリスト。</translation>
+        <translation>ファイルリスト</translation>
     </message>
 </context>
 </TS>

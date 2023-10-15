@@ -693,25 +693,25 @@
         <location filename="../settingsdialog.cpp" line="43"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
-        <translation type="unfinished"></translation>
+        <translation>라운드 (정수 스케일링)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="44"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
-        <translation type="unfinished"></translation>
+        <translation>셰일 (정수 스케일링)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="45"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
-        <translation type="unfinished"></translation>
+        <translation>바닥 (정수 스케일링)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="46"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
-        <translation type="unfinished"></translation>
+        <translation>팔로우 시스템 (부분 스케일링)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
@@ -736,7 +736,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="73"/>
         <source>HiDPI scale factor rounding policy</source>
-        <translation type="unfinished"></translation>
+        <translation>HiDPI 배율 반올림 정책</translation>
     </message>
 </context>
 <context>
