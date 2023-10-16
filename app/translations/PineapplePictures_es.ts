@@ -111,7 +111,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="46"/>
         <source>Avoid resetting the zoom/rotation/flip state that was applied to the image view when switching between images.</source>
-        <translation type="unfinished"></translation>
+        <translation>Evita restablecer el estado de zoom/rotación/inversión que se aplicó a la vista de la imagen al cambiar entre las imágenes.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="57"/>
@@ -256,7 +256,7 @@
         <location filename="../actionmanager.cpp" line="108"/>
         <source>Keep transformation</source>
         <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
-        <translation type="unfinished"></translation>
+        <translation>Conservar la transformación</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
