@@ -1,0 +1,39 @@
+Version 0.7.3
+~~~~~~~~~~~~~
+Released: 2023-10-24
+
+Features:
+ * Add "Keep transformation" to menu
+
+Contributors:
+ mmahhi, VenusGirl, albanobattistella, gallegonovato, Heimen Stoffels
+
+Version 0.7.2
+~~~~~~~~~~~~~
+Released: 2023-08-27
+
+Features:
+ * Add an option in setting dialog to tweak the High-DPI scaling rounding policy (might only works in Qt 6 build)
+
+Bugfixes:
+ * Remove image size limit for Qt 6 build
+ * Fix application icon install location under Linux
+
+Contributors:
+ Heimen Stoffels, Andrey, Dan, gallegonovato, albanobattistella, Sabri Ünal
+
+Version 0.7.1
+~~~~~~~~~~~~~
+Released: 2023-07-08
+
+Features:
+ * TIF and TIFF format files in the same folder will now be automatedly added to the gallery
+ * Built-in window resizing now also supports Linux desktop. (macOS might also works as well)
+
+Bugfixes:
+ * Settings dialog will automatedly use a suitable size instead of a hard-coded one
+ * Fix default configuration file location under Linux. (was `~/.config/config.ini`, now it's `~/.config/Pineapple Pictures/config.ini`)
+
+Contributors:
+ yyc12345
+
