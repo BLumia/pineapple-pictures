@@ -6,12 +6,12 @@
     <message>
         <location filename="../aboutdialog.cpp" line="27"/>
         <source>About</source>
-        <translation>Про застосунок</translation>
+        <translation>Про додаток</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="30"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation>Запустіть застосунок, вказавши шлях до файлу зображення як аргумент для завантаження файлу.</translation>
+        <translation>Запустіть додаток, вказавши шлях до файлу зображення у якості аргументу для завантаження файлу.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="31"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="32"/>
         <source>None of the operations in this application will alter the pictures on disk.</source>
-        <translation>Жодна з операцій у цьому застосунку не змінить зображення на диску.</translation>
+        <translation>Жодна з операцій у цьому додатку не змінить зображення на диску.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="33"/>
@@ -31,17 +31,17 @@
     <message>
         <location filename="../aboutdialog.cpp" line="40"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation>Зробіть так, щоб вікно залишалося поверх усіх інших вікон.</translation>
+        <translation>Зробити так, щоб вікно залишалося поверх усіх інших вікон.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="43"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation>Уникайте випадкового закриття вікна. (наприклад, подвійним клацанням вікна)</translation>
+        <translation>Уникати випадкового закривання вікна. (Наприклад, подвійним клацанням по вікну.)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="46"/>
         <source>Avoid resetting the zoom/rotation/flip state that was applied to the image view when switching between images.</source>
-        <translation type="unfinished"></translation>
+        <translation>Уникати скидання стану масштабування/обертання/гортання яке було застосовано до перегляду зображення при перемиканні зображень.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="54"/>
@@ -61,7 +61,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="63"/>
         <source>Source code</source>
-        <translation>Вихідний код</translation>
+        <translation>Джерельний код</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="73"/>
@@ -86,13 +86,13 @@
     <message>
         <location filename="../aboutdialog.cpp" line="81"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
-        <translation>Я хотів би подякувати наступним людям, які зголосилися перекласти цей застосунок.</translation>
+        <translation>Я хотів би подякувати наступним людям, які прийняли участь у перекладі цього додатку.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="125"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation>%1 побудовано на основі наступних бібліотек вільного програмного забезпечення:</translation>
+        <translation>%1 побудовано на наступних вільних бібліотеках:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="149"/>
@@ -163,7 +163,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="148"/>
         <source>&amp;About</source>
-        <translation>&amp;Про застосунок</translation>
+        <translation>&amp;Про додаток</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="150"/>
@@ -184,7 +184,7 @@
     <message>
         <location filename="../graphicsview.cpp" line="351"/>
         <source>File url list is empty</source>
-        <translation>Список url файлів порожній</translation>
+        <translation>Список URL-адрес файлів порожній</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="52"/>
@@ -213,12 +213,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="190"/>
         <source>File url list is empty</source>
-        <translation>Список url файлів порожній</translation>
+        <translation>Список URL-адрес файлів порожній</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="433"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Копіювати</translation>
+        <translation>&amp;Скопіювати</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="103"/>
@@ -228,7 +228,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="104"/>
         <source>Copy &amp;File Path</source>
-        <translation>Копіювати &amp;Шлях до файлу</translation>
+        <translation>Скопіювати &amp;шлях до файлу</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="121"/>
@@ -252,7 +252,7 @@
         <location filename="../actionmanager.cpp" line="108"/>
         <source>Keep transformation</source>
         <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
-        <translation type="unfinished"></translation>
+        <translation>Зберігати трансформацію</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
@@ -267,7 +267,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>Перевернути &amp;Горизонтально</translation>
+        <translation>Перевернути по &amp;горизонталі</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="105"/>
@@ -297,7 +297,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="95"/>
         <source>Rotate right</source>
-        <translation>Повернути праворуч</translation>
+        <translation>Перегорнути праворуч</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="97"/>
@@ -323,12 +323,12 @@
         <location filename="../actionmanager.cpp" line="113"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
-        <translation>Показати у Файловому провіднику</translation>
+        <translation>Показати у файловому провіднику</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="119"/>
         <source>Show in directory</source>
-        <translation>Показати в каталозі</translation>
+        <translation>Показати у теці</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="122"/>
@@ -373,7 +373,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="33"/>
         <source>%1 File</source>
-        <translation>%1 Файл</translation>
+        <translation>%1 файл</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="40"/>
@@ -421,7 +421,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="64"/>
         <source>Folder path</source>
-        <translation>Шлях до папки</translation>
+        <translation>Шлях до теки</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="66"/>
