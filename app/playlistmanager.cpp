@@ -164,7 +164,7 @@ std::tuple<int, QUrl> PlaylistManager::currentFileUrl() const
 QList<QUrl> PlaylistManager::convertToUrlList(const QStringList &files)
 {
     QList<QUrl> urlList;
-    for (const QString & str : qAsConst(files)) {
+    for (const QString & str : std::as_const(files)) {
         QUrl url = QUrl::fromLocalFile(str);
         if (url.isValid()) {
             urlList.append(url);

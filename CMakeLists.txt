@@ -14,6 +14,8 @@ include (FeatureSummary)
 option (EXIV2_METADATA_SUPPORT "Better image metadata support via libexiv2" ON)
 option (PREFER_QT_5 "Prefer to use Qt 5 even if we have Qt 6" ON)
 
+set (CMAKE_CXX_STANDARD 17)
+set (CMAKE_CXX_STANDARD_REQUIRED ON)
 set (CMAKE_AUTOMOC ON)
 set (CMAKE_AUTORCC ON)
 
