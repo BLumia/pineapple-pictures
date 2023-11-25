@@ -11,7 +11,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="30"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Luncurkan aplikasi dengan lokasi file gambar sebagai argumen untuk memuat file.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="31"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="33"/>
         <source>Context menu option explanation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Penjelasan opsi menu Context:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="40"/>
@@ -91,33 +91,33 @@
         <location filename="../aboutdialog.cpp" line="125"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 dibangun dengan perpustakaan perangkat lunak bebas berikut:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="149"/>
         <source>&amp;Special Thanks</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Terima kasih</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="151"/>
         <source>&amp;Third-party Libraries</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp; Perpustakaan pihak ketiga</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="87"/>
         <source>Your Rights</source>
-        <translation type="unfinished"></translation>
+        <translation>Hak Anda</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="46"/>
         <source>Avoid resetting the zoom/rotation/flip state that was applied to the image view when switching between images.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hindari mengatur ulang keadaan zoom/rotasi/flip yang diterapkan pada tampilan gambar saat beralih antara gambar.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="57"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Hak Cipta (c) %1 %2</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="89"/>
@@ -152,12 +152,12 @@
     <message>
         <location filename="../aboutdialog.cpp" line="96"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisensi MIT menjamin kebebasan ini. Tidak ada yang pernah diizinkan untuk mengambilnya.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="124"/>
         <source>Third-party Libraries used by %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Perpustakaan pihak ketiga yang digunakan oleh %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="147"/>
@@ -188,28 +188,28 @@
     <message>
         <location filename="../graphicsview.cpp" line="351"/>
         <source>File url list is empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Daftar url file kosong</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="52"/>
         <source>File is not a valid image</source>
-        <translation type="unfinished"></translation>
+        <translation>File bukan gambar yang valid</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="57"/>
         <location filename="../graphicsview.cpp" line="62"/>
         <source>Image data is invalid or currently unsupported</source>
-        <translation type="unfinished"></translation>
+        <translation>Data gambar tidak valid atau belum didukung</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="359"/>
         <source>Image data is invalid</source>
-        <translation type="unfinished"></translation>
+        <translation>Data gambar tidak valid</translation>
     </message>
     <message>
         <location filename="../graphicsview.cpp" line="366"/>
         <source>Not supported mimedata: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tidak didukung mimedata: %1</translation>
     </message>
 </context>
 <context>
@@ -217,7 +217,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="190"/>
         <source>File url list is empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Daftar url file kosong</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="433"/>
@@ -256,7 +256,7 @@
         <location filename="../actionmanager.cpp" line="108"/>
         <source>Keep transformation</source>
         <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
-        <translation type="unfinished"></translation>
+        <translation>Simpan transformasi</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
