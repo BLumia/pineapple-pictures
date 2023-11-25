@@ -98,7 +98,7 @@ build_script:
   - cd karchive
   - mkdir build
   - cd build
-  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_PREFIX%
+  - cmake .. -G "Ninja" -DWITH_LIBZSTD=OFF -DWITH_BZIP2=OFF -DWITH_LIBLZMA=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_PREFIX%
   - cmake --build . --config Release
   - cmake --build . --config Release --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
