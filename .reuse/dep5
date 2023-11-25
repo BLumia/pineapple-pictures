@@ -8,7 +8,7 @@ Copyright: None
 License: CC0-1.0
 
 # README, resource files and Metadata files
-Files: README*.md assets/*.rc assets/*.qrc dist/*
+Files: README*.md NEWS assets/*.rc assets/*.qrc dist/*
 Copyright: None
 License: CC0-1.0
 
