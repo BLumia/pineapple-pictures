@@ -55,7 +55,7 @@ AboutDialog::AboutDialog(QWidget *parent)
 #endif // GIT_DESCRIBE_VERSION_STRING
         QStringLiteral("<hr/>"),
         tr("Copyright (c) %1 %2", "%1 is year, %2 is the name of copyright holder(s)")
-            .arg(QStringLiteral("2023"), QStringLiteral("<a href='https://github.com/BLumia'>@BLumia</a>")),
+            .arg(QStringLiteral("2024"), QStringLiteral("<a href='https://github.com/BLumia'>@BLumia</a>")),
         QStringLiteral("<br/>"),
         tr("Logo designed by %1").arg(QStringLiteral("<a href='https://github.com/Lovelyblack'>@Lovelyblack</a>")),
         QStringLiteral("<hr/>"),
@@ -99,7 +99,7 @@ AboutDialog::AboutDialog(QWidget *parent)
 
     const QString mitLicense(QStringLiteral(R"(Expat/MIT License
 
-Copyright (c) 2023 BLumia
+Copyright (c) 2024 BLumia
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
