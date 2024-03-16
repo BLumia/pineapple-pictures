@@ -26,6 +26,7 @@
     <p xml:lang="ja">Pineapple Picturesは、ズームイン時に便利なナビゲーションサムネイルを備えた軽量で使いやすい画像ビューアです。画像管理のサポートは含まれていません。</p>
     <p xml:lang="nl">Pineapple Afbeeldingen is een licht en eenvoudig te gebruiken afbeeldingsweergaveprogramma met miniatuurnavigatie na inzoomen. Het programma heeft echter geen fotobeheermogelĳkheid.</p>
     <p xml:lang="ru">Pineapple Pictures - это легкий и простой в использовании просмотрщик изображений, оснащенный удобной навигацией по миниатюрам при увеличении масштаба и не содержащий никакой поддержки управления изображениями.</p>
+    <p xml:lang="uk">Pineapple Pictures – це легкий і простий у використанні переглядач зображень, який постачається зі зручною навігаційною мініатюрою при збільшенні масштабу і не містить жодної підтримки керування зображеннями.</p>
     <p xml:lang="zh-CN">菠萝看图是一个轻量级易用的图像查看器，在图片放大时提供了方便的鸟瞰导航功能，且不包含任何图片管理功能。</p>
   </description>
   <launchable type="desktop-id">net.blumia.pineapple-pictures.desktop</launchable>
@@ -41,6 +42,7 @@
       <caption xml:lang="ja">画像ファイル読み込み時のメインウィンドウ</caption>
       <caption xml:lang="nl">Hoofdvenster na het laden van een afbeelding</caption>
       <caption xml:lang="ru">Основное окно после загрузки файла изображения</caption>
+      <caption xml:lang="uk">Головне вікно після завантаження файлу зображення</caption>
       <caption xml:lang="zh-CN">加载图片后的主窗口</caption>
       <image type="source" width="1503" height="640">https://pineapple-pictures.sourceforge.io/ppic-gui-static.png</image>
     </screenshot>
