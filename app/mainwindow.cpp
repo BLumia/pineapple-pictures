@@ -438,6 +438,7 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     QAction * copyPixmap = m_am->actionCopyPixmap;
     QAction * copyFilePath = m_am->actionCopyFilePath;
 
+    copyMenu->setIcon(QIcon::fromTheme(QLatin1String("edit-copy")));
     copyMenu->addAction(copyPixmap);
     if (currentFileUrl.isValid()) {
         copyMenu->addAction(copyFilePath);

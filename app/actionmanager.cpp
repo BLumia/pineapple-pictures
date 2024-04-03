@@ -39,10 +39,10 @@ QIcon ActionManager::loadHidpiIcon(const QString &resp, QSize sz)
 
 void ActionManager::setupAction(MainWindow *mainWindow)
 {
-    auto create_action = [] (QWidget *w, QAction **a, QString i, QString an) {
+    auto create_action = [] (QWidget *w, QAction **a, QString i, QString an, bool iconFromTheme = false) {
         *a = new QAction(w);
         if (!i.isNull())
-            (*a)->setIcon(ActionManager::loadHidpiIcon(i));
+            (*a)->setIcon(iconFromTheme ? QIcon::fromTheme(i) : ActionManager::loadHidpiIcon(i));
         (*a)->setObjectName(an);
         w->addAction(*a);
     };
@@ -56,25 +56,27 @@ void ActionManager::setupAction(MainWindow *mainWindow)
     #undef CREATE_NEW_ICON_ACTION
 
     #define CREATE_NEW_ACTION(w, a) create_action(w, &a, QString(), ACTION_NAME(a))
+    #define CREATE_NEW_THEMEICON_ACTION(w, a, i) create_action(w, &a, QLatin1String(STRIFY(i)), ACTION_NAME(a), true)
     CREATE_NEW_ACTION(mainWindow, actionPrevPicture);
     CREATE_NEW_ACTION(mainWindow, actionNextPicture);
 
-    CREATE_NEW_ACTION(mainWindow, actionOpen);
+    CREATE_NEW_THEMEICON_ACTION(mainWindow, actionOpen, document-open);
     CREATE_NEW_ACTION(mainWindow, actionHorizontalFlip);
     CREATE_NEW_ACTION(mainWindow, actionFitInView);
     CREATE_NEW_ACTION(mainWindow, actionFitByWidth);
-    CREATE_NEW_ACTION(mainWindow, actionCopyPixmap);
+    CREATE_NEW_THEMEICON_ACTION(mainWindow, actionCopyPixmap, edit-copy);
     CREATE_NEW_ACTION(mainWindow, actionCopyFilePath);
-    CREATE_NEW_ACTION(mainWindow, actionPaste);
+    CREATE_NEW_THEMEICON_ACTION(mainWindow, actionPaste, edit-paste);
     CREATE_NEW_ACTION(mainWindow, actionToggleStayOnTop);
     CREATE_NEW_ACTION(mainWindow, actionToggleProtectMode);
     CREATE_NEW_ACTION(mainWindow, actionToggleAvoidResetTransform);
     CREATE_NEW_ACTION(mainWindow, actionSettings);
-    CREATE_NEW_ACTION(mainWindow, actionHelp);
-    CREATE_NEW_ACTION(mainWindow, actionLocateInFileManager);
+    CREATE_NEW_THEMEICON_ACTION(mainWindow, actionHelp, system-help);
+    CREATE_NEW_THEMEICON_ACTION(mainWindow, actionLocateInFileManager, system-file-manager);
     CREATE_NEW_ACTION(mainWindow, actionProperties);
     CREATE_NEW_ACTION(mainWindow, actionQuitApp);
     #undef CREATE_NEW_ACTION
+    #undef CREATE_NEW_THEMEICON_ACTION
 
     retranslateUi(mainWindow);
 
