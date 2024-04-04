@@ -22,7 +22,7 @@ environment:
       KF_BRANCH: kf5
       EXIV2_VERSION: "0.27.7"
       EXIV2_CMAKE_OPTIONS: "-DEXIV2_BUILD_SAMPLES=OFF -DEXIV2_ENABLE_WIN_UNICODE=ON -DEXIV2_BUILD_EXIV2_COMMAND=OFF"
-      PPIC_CMAKE_OPTIONS: ""
+      PPIC_CMAKE_OPTIONS: "-DPREFER_QT_5=ON"
       WINDEPLOYQT_ARGS: "--verbose=2 --no-quick-import --no-translations --no-opengl-sw --no-angle --no-system-d3d-compiler"
 
 install:
@@ -132,7 +132,7 @@ build_script:
 # finally...
   - mkdir build
   - cd build
-  - cmake .. -G "Unix Makefiles" %PPIC_CMAKE_OPTIONS% -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=mingw32-make -DCMAKE_INSTALL_PREFIX='%cd%'
+  - cmake .. -G "Ninja" %PPIC_CMAKE_OPTIONS% -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX='%cd%'
   - cmake --build . --config Release
   - cmake --build . --config Release --target install/strip
 # fixme: I don't know how to NOT make the binary installed to the ./bin/ folder...

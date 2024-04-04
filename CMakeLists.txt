@@ -1,10 +1,10 @@
-# SPDX-FileCopyrightText: 2022 - 2023 Gary Wang <git@blumia.net>
+# SPDX-FileCopyrightText: 2022 - 2024 Gary Wang <git@blumia.net>
 #
 # SPDX-License-Identifier: MIT
 
-project (pineapple-pictures)
-
 cmake_minimum_required (VERSION 3.9.5)
+
+project (pineapple-pictures)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
 
@@ -12,7 +12,7 @@ include (GNUInstallDirs)
 include (FeatureSummary)
 
 option (EXIV2_METADATA_SUPPORT "Better image metadata support via libexiv2" ON)
-option (PREFER_QT_5 "Prefer to use Qt 5 even if we have Qt 6" ON)
+option (PREFER_QT_5 "Prefer to use Qt 5" OFF)
 
 set (CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -22,7 +22,7 @@ set (CMAKE_AUTORCC ON)
 if (PREFER_QT_5)
     find_package(QT NAMES Qt5 REQUIRED COMPONENTS Core)
 else ()
-    find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core)
+    find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core)
 endif ()
 
 if (${QT_VERSION_MAJOR} EQUAL "5")
@@ -104,19 +104,20 @@ set (EXE_NAME ppic)
 file (GLOB PPIC_TS_FILES app/translations/*.ts)
 set (PPIC_CPP_FILES_FOR_I18N ${PPIC_CPP_FILES})
 
-qt_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})
-
 if (WIN32)
     list(APPEND PPIC_RC_FILES assets/pineapple-pictures.rc)
 endif ()
 
-add_executable (${EXE_NAME}
+add_executable (${EXE_NAME} WIN32
     ${PPIC_HEADER_FILES}
     ${PPIC_CPP_FILES}
     ${PPIC_QRC_FILES}
     ${PPIC_RC_FILES}
-    ${PPIC_QM_FILES}
 )
+
+qt_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})
+
+target_sources(${EXE_NAME} PRIVATE ${PPIC_QM_FILES})
 
 target_link_libraries (${EXE_NAME} Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Svg)
 if (${QT_VERSION_MAJOR} EQUAL "6")
@@ -137,7 +138,7 @@ if (LibExiv2_FOUND)
     )
 endif ()
 
-if (Qt5DBus_FOUND OR Qt6DBus_FOUND)
+if (TARGET Qt5::DBus OR TARGET Qt6::DBus)
     target_link_libraries (${EXE_NAME}
         Qt${QT_VERSION_MAJOR}::DBus
     )
@@ -148,11 +149,6 @@ endif()
 
 # Extra build settings
 if (WIN32)
-    set_property (
-        TARGET ${EXE_NAME}
-        PROPERTY WIN32_EXECUTABLE true
-    )
-
     target_compile_definitions(${EXE_NAME} PRIVATE
         FLAG_PORTABLE_MODE_SUPPORT=1
     )
