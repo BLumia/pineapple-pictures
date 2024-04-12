@@ -15,12 +15,6 @@
   <summary xml:lang="zh-CN">图像查看器</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT</project_license>
-  <developer_name>Gary (BLumia) Wang et al.</developer_name>
-  <developer_name xml:lang="ja">Gary (BLumia) Wang など</developer_name>
-  <developer_name xml:lang="nl">Gary (BLumia) Wang e.a.</developer_name>
-  <developer_name xml:lang="ru">Gary (BLumia) Wang et al.</developer_name>
-  <developer_name xml:lang="uk">Gary (BLumia) Wang.</developer_name>
-  <developer_name xml:lang="zh-CN">Gary (BLumia) Wang 等人</developer_name>
   <description>
     <p>Pineapple Pictures is a lightweight and easy-to-use image viewer that comes with a handy navigation thumbnail when zoom-in, and doesn't contain any image management support.</p>
     <p xml:lang="ja">Pineapple Picturesは、ズームイン時に便利なナビゲーションサムネイルを備えた軽量で使いやすい画像ビューアです。画像管理のサポートは含まれていません。</p>
@@ -29,6 +23,14 @@
     <p xml:lang="uk">Pineapple Pictures – це легкий і простий у використанні переглядач зображень, який постачається зі зручною навігаційною мініатюрою при збільшенні масштабу і не містить жодної підтримки керування зображеннями.</p>
     <p xml:lang="zh-CN">菠萝看图是一个轻量级易用的图像查看器，在图片放大时提供了方便的鸟瞰导航功能，且不包含任何图片管理功能。</p>
   </description>
+  <developer>
+    <name>Gary (BLumia) Wang et al.</name>
+    <name xml:lang="ja">Gary (BLumia) Wang など</name>
+    <name xml:lang="nl">Gary (BLumia) Wang e.a.</name>
+    <name xml:lang="ru">Gary (BLumia) Wang et al.</name>
+    <name xml:lang="uk">Gary (BLumia) Wang.</name>
+    <name xml:lang="zh-CN">Gary (BLumia) Wang 等人</name>
+  </developer>
   <launchable type="desktop-id">net.blumia.pineapple-pictures.desktop</launchable>
   <url type="homepage">https://github.com/BLumia/pineapple-pictures</url>
   <url type="bugtracker">https://github.com/BLumia/pineapple-pictures/issues</url>
@@ -66,6 +68,16 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" version="0.7.4" date="2024-04-04T00:00:00Z">
+      <description>
+        <p>This release adds the following feature:</p>
+        <ul>
+          <li>Add some icons for corresponding menu actions</li>
+        </ul>
+        <p>With contributions from:</p>
+        <p>Reza Almanda, mmahhi, Oğuz Ersen, volkov, Сергій</p>
+      </description>
+    </release>
     <release type="stable" version="0.7.3" date="2023-10-24T00:00:00Z">
       <description>
         <p>This release adds the following feature:</p>
@@ -80,13 +92,15 @@
       <description>
         <p>This release adds the following feature:</p>
         <ul>
-          <li>Add an option in setting dialog to tweak the High-DPI scaling rounding policy</li>
+          <li>Add an option in setting dialog to tweak the High-DPI scaling rounding policy (might only works in Qt 6 build)</li>
         </ul>
         <p>This release fixes the following bugs:</p>
         <ul>
           <li>Remove image size limit for Qt 6 build</li>
           <li>Fix application icon install location under Linux</li>
         </ul>
+        <p>With contributions from:</p>
+        <p>Heimen Stoffels, Andrey, Dan, gallegonovato, albanobattistella, Sabri Ünal</p>
       </description>
     </release>
     <release type="stable" version="0.7.1" date="2023-07-08T00:00:00Z">
@@ -94,13 +108,15 @@
         <p>This release adds the following features:</p>
         <ul>
           <li>TIF and TIFF format files in the same folder will now be automatedly added to the gallery</li>
-          <li>Built-in window resizing now also supports Linux desktop.</li>
+          <li>Built-in window resizing now also supports Linux desktop. (macOS might also works as well)</li>
         </ul>
         <p>This release fixes the following bugs:</p>
         <ul>
           <li>Settings dialog will automatedly use a suitable size instead of a hard-coded one</li>
-          <li>Fix default configuration file location under Linux.</li>
+          <li>Fix default configuration file location under Linux. (was `~/.config/config.ini`, now it's `~/.config/Pineapple Pictures/config.ini`)</li>
         </ul>
+        <p>With contributions from:</p>
+        <p>yyc12345</p>
       </description>
     </release>
   </releases>
