@@ -11,7 +11,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="30"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation>画像ファイルのパスをパラメータとしてアプリケーションを起動し、ファイルを読み込みます。</translation>
+        <translation>画像ファイルのパスをパラメータとしてアプリケーションを起動すると、ファイルを読み込みます。</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="31"/>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../aboutdialog.cpp" line="40"/>
         <source>Make window stay on top of all other windows.</source>
-        <translation>ウィンドウを最前面に表示する。</translation>
+        <translation>ウィンドウを最前面に表示します。</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="43"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation>誤ってウィンドウを閉じないようにする。(例：ウィンドウをダブルクリックする)</translation>
+        <translation>誤ってウィンドウを閉じないようにします。(例：ウィンドウをダブルクリックする)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="46"/>
@@ -133,7 +133,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="92"/>
         <source>You are free to distribute %1</source>
-        <translation>自由に配布することができます%1</translation>
+        <translation>%1を自由に配布することができます</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="93"/>
@@ -373,7 +373,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="33"/>
         <source>%1 File</source>
-        <translation>%1ファイル</translation>
+        <translation>%1 ファイル</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="40"/>
