@@ -224,12 +224,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="737"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
-        <translation type="unfinished"></translation>
+        <translation>Sei sicuro di voler spostare &quot;%1&quot; nel cestino?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="742"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lo spostamento nel cestino non è riuscito, potrebbe essere causato da un problema di autorizzazione del file, da una limitazione del file system o da una limitazione della piattaforma.</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="106"/>
@@ -324,7 +324,7 @@
         <location filename="../actionmanager.cpp" line="109"/>
         <location filename="../mainwindow.cpp" line="736"/>
         <source>Move to Trash</source>
-        <translation type="unfinished"></translation>
+        <translation>Sposta nel cestino</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="113"/>
