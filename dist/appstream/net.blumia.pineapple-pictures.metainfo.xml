@@ -23,7 +23,7 @@
     <p xml:lang="uk">Pineapple Pictures – це легкий і простий у використанні переглядач зображень, який постачається зі зручною навігаційною мініатюрою при збільшенні масштабу і не містить жодної підтримки керування зображеннями.</p>
     <p xml:lang="zh-CN">菠萝看图是一个轻量级易用的图像查看器，在图片放大时提供了方便的鸟瞰导航功能，且不包含任何图片管理功能。</p>
   </description>
-  <developer>
+  <developer id="net.blumia">
     <name>Gary (BLumia) Wang et al.</name>
     <name xml:lang="ja">Gary (BLumia) Wang など</name>
     <name xml:lang="nl">Gary (BLumia) Wang e.a.</name>
