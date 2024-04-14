@@ -179,6 +179,7 @@
     <name>GraphicsScene</name>
     <message>
         <location filename="../graphicsscene.cpp" line="89"/>
+        <location filename="../mainwindow.cpp" line="296"/>
         <source>Drag image here</source>
         <translation>拖放图片至此</translation>
     </message>
@@ -215,127 +216,143 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="190"/>
+        <location filename="../mainwindow.cpp" line="191"/>
         <source>File url list is empty</source>
         <translation>文件 URL 列表为空</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="433"/>
+        <location filename="../mainwindow.cpp" line="448"/>
         <source>&amp;Copy</source>
         <translation>复制(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="103"/>
+        <location filename="../mainwindow.cpp" line="737"/>
+        <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
+        <translation>您确认要将“%1”移动到回收站吗？</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="742"/>
+        <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
+        <translation>移至回收站失败，这可能由文件权限、文件系统或平台限制导致。</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="106"/>
         <source>Copy P&amp;ixmap</source>
         <translation>复制位图(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="104"/>
+        <location filename="../actionmanager.cpp" line="107"/>
         <source>Copy &amp;File Path</source>
         <translation>复制文件路径(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="121"/>
+        <location filename="../actionmanager.cpp" line="125"/>
         <source>Properties</source>
         <translation>属性</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="39"/>
-        <location filename="../actionmanager.cpp" line="106"/>
+        <location filename="../actionmanager.cpp" line="110"/>
         <source>Stay on top</source>
         <translation>总在最前</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="42"/>
-        <location filename="../actionmanager.cpp" line="107"/>
+        <location filename="../actionmanager.cpp" line="111"/>
         <source>Protected mode</source>
         <translation>保护模式</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="45"/>
-        <location filename="../actionmanager.cpp" line="108"/>
+        <location filename="../actionmanager.cpp" line="112"/>
         <source>Keep transformation</source>
         <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
         <translation>保持视图变换</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="92"/>
+        <location filename="../actionmanager.cpp" line="95"/>
         <source>Zoom in</source>
         <translation>放大</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="93"/>
+        <location filename="../actionmanager.cpp" line="96"/>
         <source>Zoom out</source>
         <translation>缩小</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="100"/>
+        <location filename="../actionmanager.cpp" line="103"/>
         <source>Flip &amp;Horizontally</source>
         <translation>水平翻转(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="105"/>
+        <location filename="../actionmanager.cpp" line="108"/>
         <source>&amp;Paste</source>
         <translation>粘贴(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="94"/>
+        <location filename="../actionmanager.cpp" line="97"/>
         <source>Toggle Checkerboard</source>
         <translation>切换棋盘格</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="88"/>
+        <location filename="../actionmanager.cpp" line="91"/>
         <source>&amp;Open...</source>
         <translation>打开(&amp;O)...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="90"/>
+        <location filename="../actionmanager.cpp" line="93"/>
         <source>Actual size</source>
         <translation>实际大小</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="91"/>
+        <location filename="../actionmanager.cpp" line="94"/>
         <source>Toggle maximize</source>
         <translation>最大化窗口</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="95"/>
+        <location filename="../actionmanager.cpp" line="98"/>
         <source>Rotate right</source>
         <translation>向右旋转</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="97"/>
+        <location filename="../actionmanager.cpp" line="100"/>
         <source>Previous image</source>
         <translation>上一个图像</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="98"/>
+        <location filename="../actionmanager.cpp" line="101"/>
         <source>Next image</source>
         <translation>下一个图像</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="109"/>
+        <location filename="../mainwindow.cpp" line="736"/>
+        <source>Move to Trash</source>
+        <translation>移至回收站</translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="113"/>
         <source>Configure...</source>
         <translation>设置...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="110"/>
+        <location filename="../actionmanager.cpp" line="114"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="113"/>
+        <location filename="../actionmanager.cpp" line="117"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
         <translation>在文件资源管理器中显示</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="119"/>
+        <location filename="../actionmanager.cpp" line="123"/>
         <source>Show in directory</source>
         <translation>在文件夹中显示</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="122"/>
+        <location filename="../actionmanager.cpp" line="126"/>
         <source>Quit</source>
         <translation>退出</translation>
     </message>

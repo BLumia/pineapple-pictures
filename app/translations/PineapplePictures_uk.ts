@@ -175,6 +175,7 @@
     <name>GraphicsScene</name>
     <message>
         <location filename="../graphicsscene.cpp" line="89"/>
+        <location filename="../mainwindow.cpp" line="296"/>
         <source>Drag image here</source>
         <translation>Перетягніть зображення сюди</translation>
     </message>
@@ -211,127 +212,143 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="190"/>
+        <location filename="../mainwindow.cpp" line="191"/>
         <source>File url list is empty</source>
         <translation>Список URL-адрес файлів порожній</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="433"/>
+        <location filename="../mainwindow.cpp" line="448"/>
         <source>&amp;Copy</source>
         <translation>&amp;Скопіювати</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="103"/>
+        <location filename="../mainwindow.cpp" line="737"/>
+        <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="742"/>
+        <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="106"/>
         <source>Copy P&amp;ixmap</source>
         <translation>Скопіювати P&amp;ixmap</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="104"/>
+        <location filename="../actionmanager.cpp" line="107"/>
         <source>Copy &amp;File Path</source>
         <translation>Скопіювати &amp;шлях до файлу</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="121"/>
+        <location filename="../actionmanager.cpp" line="125"/>
         <source>Properties</source>
         <translation>Властивості</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="39"/>
-        <location filename="../actionmanager.cpp" line="106"/>
+        <location filename="../actionmanager.cpp" line="110"/>
         <source>Stay on top</source>
         <translation>Поверх всіх вікон</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="42"/>
-        <location filename="../actionmanager.cpp" line="107"/>
+        <location filename="../actionmanager.cpp" line="111"/>
         <source>Protected mode</source>
         <translation>Захищений режим</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="45"/>
-        <location filename="../actionmanager.cpp" line="108"/>
+        <location filename="../actionmanager.cpp" line="112"/>
         <source>Keep transformation</source>
         <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
         <translation>Зберігати трансформацію</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="92"/>
+        <location filename="../actionmanager.cpp" line="95"/>
         <source>Zoom in</source>
         <translation>Збільшити</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="93"/>
+        <location filename="../actionmanager.cpp" line="96"/>
         <source>Zoom out</source>
         <translation>Зменшити</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="100"/>
+        <location filename="../actionmanager.cpp" line="103"/>
         <source>Flip &amp;Horizontally</source>
         <translation>Перевернути по &amp;горизонталі</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="105"/>
+        <location filename="../actionmanager.cpp" line="108"/>
         <source>&amp;Paste</source>
         <translation>&amp;Вставити</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="94"/>
+        <location filename="../actionmanager.cpp" line="97"/>
         <source>Toggle Checkerboard</source>
         <translation>Перемкнути шахову дошку</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="88"/>
+        <location filename="../actionmanager.cpp" line="91"/>
         <source>&amp;Open...</source>
         <translation>&amp;Відкрити...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="90"/>
+        <location filename="../actionmanager.cpp" line="93"/>
         <source>Actual size</source>
         <translation>Фактичний розмір</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="91"/>
+        <location filename="../actionmanager.cpp" line="94"/>
         <source>Toggle maximize</source>
         <translation>Перемкнути на максимум</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="95"/>
+        <location filename="../actionmanager.cpp" line="98"/>
         <source>Rotate right</source>
         <translation>Перегорнути праворуч</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="97"/>
+        <location filename="../actionmanager.cpp" line="100"/>
         <source>Previous image</source>
         <translation>Попереднє зображення</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="98"/>
+        <location filename="../actionmanager.cpp" line="101"/>
         <source>Next image</source>
         <translation>Наступне зображення</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="109"/>
+        <location filename="../mainwindow.cpp" line="736"/>
+        <source>Move to Trash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="113"/>
         <source>Configure...</source>
         <translation>Налаштувати...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="110"/>
+        <location filename="../actionmanager.cpp" line="114"/>
         <source>Help</source>
         <translation>Допомога</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="113"/>
+        <location filename="../actionmanager.cpp" line="117"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
         <translation>Показати у файловому провіднику</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="119"/>
+        <location filename="../actionmanager.cpp" line="123"/>
         <source>Show in directory</source>
         <translation>Показати у теці</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="122"/>
+        <location filename="../actionmanager.cpp" line="126"/>
         <source>Quit</source>
         <translation>Вийти</translation>
     </message>

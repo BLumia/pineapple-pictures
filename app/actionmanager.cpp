@@ -67,6 +67,7 @@ void ActionManager::setupAction(MainWindow *mainWindow)
     CREATE_NEW_THEMEICON_ACTION(mainWindow, actionCopyPixmap, edit-copy);
     CREATE_NEW_ACTION(mainWindow, actionCopyFilePath);
     CREATE_NEW_THEMEICON_ACTION(mainWindow, actionPaste, edit-paste);
+    CREATE_NEW_THEMEICON_ACTION(mainWindow, actionTrash, edit-delete);
     CREATE_NEW_ACTION(mainWindow, actionToggleStayOnTop);
     CREATE_NEW_ACTION(mainWindow, actionToggleProtectMode);
     CREATE_NEW_ACTION(mainWindow, actionToggleAvoidResetTransform);
@@ -105,6 +106,7 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
     actionCopyPixmap->setText(QCoreApplication::translate("MainWindow", "Copy P&ixmap", nullptr));
     actionCopyFilePath->setText(QCoreApplication::translate("MainWindow", "Copy &File Path", nullptr));
     actionPaste->setText(QCoreApplication::translate("MainWindow", "&Paste", nullptr));
+    actionTrash->setText(QCoreApplication::translate("MainWindow", "Move to Trash", nullptr));
     actionToggleStayOnTop->setText(QCoreApplication::translate("MainWindow", "Stay on top", nullptr));
     actionToggleProtectMode->setText(QCoreApplication::translate("MainWindow", "Protected mode", nullptr));
     actionToggleAvoidResetTransform->setText(QCoreApplication::translate("MainWindow", "Keep transformation", "The 'transformation' means the flip/rotation status that currently applied to the image view"));
@@ -141,6 +143,7 @@ void ActionManager::setupShortcuts()
     actionHorizontalFlip->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_R));
     actionCopyPixmap->setShortcut(QKeySequence(QKeySequence::Copy));
     actionPaste->setShortcut(QKeySequence::Paste);
+    actionTrash->setShortcut(QKeySequence::Delete);
     actionHelp->setShortcut(QKeySequence::HelpContents);
     actionSettings->setShortcut(QKeySequence::Preferences);
     actionProperties->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_I));

@@ -45,6 +45,7 @@ public:
     void loadGalleryBySingleLocalFile(const QString &path);
     void galleryPrev();
     void galleryNext();
+    void galleryCurrent();
 
 protected slots:
     void showEvent(QShowEvent *event) override;
@@ -92,6 +93,7 @@ private slots:
     void on_actionCopyPixmap_triggered();
     void on_actionCopyFilePath_triggered();
     void on_actionPaste_triggered();
+    void on_actionTrash_triggered();
     void on_actionToggleStayOnTop_triggered();
     void on_actionToggleProtectMode_triggered();
     void on_actionToggleAvoidResetTransform_triggered();

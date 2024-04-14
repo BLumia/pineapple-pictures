@@ -179,6 +179,7 @@
     <name>GraphicsScene</name>
     <message>
         <location filename="../graphicsscene.cpp" line="89"/>
+        <location filename="../mainwindow.cpp" line="296"/>
         <source>Drag image here</source>
         <translation>Arrastre una imagen aquí</translation>
     </message>
@@ -215,127 +216,143 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="190"/>
+        <location filename="../mainwindow.cpp" line="191"/>
         <source>File url list is empty</source>
         <translation>La lista de ubicaciones está vacía</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="433"/>
+        <location filename="../mainwindow.cpp" line="448"/>
         <source>&amp;Copy</source>
         <translation>&amp;Copiar</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="103"/>
+        <location filename="../mainwindow.cpp" line="737"/>
+        <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="742"/>
+        <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="106"/>
         <source>Copy P&amp;ixmap</source>
         <translation>Copiar &amp;mapa de píxeles</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="104"/>
+        <location filename="../actionmanager.cpp" line="107"/>
         <source>Copy &amp;File Path</source>
         <translation>Copiar &amp;ruta de archivo</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="121"/>
+        <location filename="../actionmanager.cpp" line="125"/>
         <source>Properties</source>
         <translation>Propiedades</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="39"/>
-        <location filename="../actionmanager.cpp" line="106"/>
+        <location filename="../actionmanager.cpp" line="110"/>
         <source>Stay on top</source>
         <translation>Mantener encima</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="42"/>
-        <location filename="../actionmanager.cpp" line="107"/>
+        <location filename="../actionmanager.cpp" line="111"/>
         <source>Protected mode</source>
         <translation>Modo protegido</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="45"/>
-        <location filename="../actionmanager.cpp" line="108"/>
+        <location filename="../actionmanager.cpp" line="112"/>
         <source>Keep transformation</source>
         <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
         <translation>Conservar la transformación</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="92"/>
+        <location filename="../actionmanager.cpp" line="95"/>
         <source>Zoom in</source>
         <translation>Ampliar</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="93"/>
+        <location filename="../actionmanager.cpp" line="96"/>
         <source>Zoom out</source>
         <translation>Reducir</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="100"/>
+        <location filename="../actionmanager.cpp" line="103"/>
         <source>Flip &amp;Horizontally</source>
         <translation>Voltear &amp;horizontalmente</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="105"/>
+        <location filename="../actionmanager.cpp" line="108"/>
         <source>&amp;Paste</source>
         <translation>&amp;Pegar</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="94"/>
+        <location filename="../actionmanager.cpp" line="97"/>
         <source>Toggle Checkerboard</source>
         <translation>Activar/desactivar el tablero de ajedrez</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="88"/>
+        <location filename="../actionmanager.cpp" line="91"/>
         <source>&amp;Open...</source>
         <translation>&amp;Abrir...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="90"/>
+        <location filename="../actionmanager.cpp" line="93"/>
         <source>Actual size</source>
         <translation>Tamaño real</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="91"/>
+        <location filename="../actionmanager.cpp" line="94"/>
         <source>Toggle maximize</source>
         <translation>Maximizar/desmaximizar</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="95"/>
+        <location filename="../actionmanager.cpp" line="98"/>
         <source>Rotate right</source>
         <translation>Girar a la derecha</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="97"/>
+        <location filename="../actionmanager.cpp" line="100"/>
         <source>Previous image</source>
         <translation>Imagen anterior</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="98"/>
+        <location filename="../actionmanager.cpp" line="101"/>
         <source>Next image</source>
         <translation>Imagen siguiente</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="109"/>
+        <location filename="../mainwindow.cpp" line="736"/>
+        <source>Move to Trash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="113"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="110"/>
+        <location filename="../actionmanager.cpp" line="114"/>
         <source>Help</source>
         <translation>Ayuda</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="113"/>
+        <location filename="../actionmanager.cpp" line="117"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
         <translation>Mostrar en el Explorador de archivos</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="119"/>
+        <location filename="../actionmanager.cpp" line="123"/>
         <source>Show in directory</source>
         <translation>Mostrar en la carpeta</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="122"/>
+        <location filename="../actionmanager.cpp" line="126"/>
         <source>Quit</source>
         <translation>Salir</translation>
     </message>

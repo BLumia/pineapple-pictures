@@ -39,6 +39,7 @@
 #ifdef HAVE_QTDBUS
 #include <QDBusInterface>
 #include <QDBusConnectionInterface>
+#include <QMessageBox>
 #endif // HAVE_QTDBUS
 
 MainWindow::MainWindow(QWidget *parent)
@@ -282,6 +283,20 @@ void MainWindow::galleryNext()
     }
 }
 
+// If playlist (or its index) get changed, use this method to "reload" the current file.
+void MainWindow::galleryCurrent()
+{
+    int index;
+    QString filePath;
+    std::tie(index, filePath) = m_pm->currentFile();
+
+    if (index >= 0) {
+        m_graphicsView->showFileFromPath(filePath, false);
+    } else {
+        m_graphicsView->showText(QCoreApplication::translate("GraphicsScene", "Drag image here"));
+    }
+}
+
 void MainWindow::showEvent(QShowEvent *event)
 {
     updateWidgetsPosition();
@@ -446,6 +461,8 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
 
     QAction * paste = m_am->actionPaste;
 
+    QAction * trash = m_am->actionTrash;
+
     QAction * stayOnTopMode = m_am->actionToggleStayOnTop;
     stayOnTopMode->setCheckable(true);
     stayOnTopMode->setChecked(stayOnTop());
@@ -493,6 +510,7 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     if (currentFileUrl.isValid()) {
         menu->addSeparator();
         if (currentFileUrl.isLocalFile()) {
+            menu->addAction(trash);
             menu->addAction(m_am->actionLocateInFileManager);
         }
         menu->addAction(propertiesAction);
@@ -702,6 +720,30 @@ void MainWindow::on_actionPaste_triggered()
         QString localFile(clipboardFileUrl.toLocalFile());
         m_graphicsView->showFileFromPath(localFile, true);
         m_pm->setCurrentFile(localFile);
+    }
+}
+
+void MainWindow::on_actionTrash_triggered()
+{
+    int currentFileIndex;
+    QUrl currentFileUrl;
+    std::tie(currentFileIndex, currentFileUrl) = m_pm->currentFileUrl();
+    if (!currentFileUrl.isLocalFile()) return;
+
+    QFile file(currentFileUrl.toLocalFile());
+    QFileInfo fileInfo(file.fileName());
+
+    QMessageBox::StandardButton result = QMessageBox::question(this, tr("Move to Trash"),
+                                                               tr("Are you sure you want to move \"%1\" to recycle bin?").arg(fileInfo.fileName()));
+    if (result == QMessageBox::Yes) {
+        bool succ = file.moveToTrash();
+        if (!succ) {
+            QMessageBox::warning(this, "Failed to move file to trash",
+                                 tr("Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation."));
+        } else {
+            m_pm->removeFileAt(currentFileIndex);
+            galleryCurrent();
+        }
     }
 }
 

@@ -32,6 +32,7 @@ public:
     void setCurrentFile(const QString & filePath);
     void setCurrentIndex(int index);
     int appendFile(const QString & filePath);
+    void removeFileAt(int index);
     int indexOf(const QString & filePath);
 
     int count() const;

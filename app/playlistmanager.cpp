@@ -118,6 +118,16 @@ int PlaylistManager::appendFile(const QString &filePath)
     return index;
 }
 
+// Note: this will only remove file out of the list, this will NOT delete the file
+void PlaylistManager::removeFileAt(int index)
+{
+    m_playlist.removeAt(index);
+
+    if (m_playlist.count() <= m_currentIndex) {
+        m_currentIndex--;
+    }
+}
+
 int PlaylistManager::indexOf(const QString &filePath)
 {
     const QUrl & url = QUrl::fromLocalFile(filePath);
