@@ -35,11 +35,11 @@
 #include <QStandardPaths>
 #include <QProcess>
 #include <QDesktopServices>
+#include <QMessageBox>
 
 #ifdef HAVE_QTDBUS
 #include <QDBusInterface>
 #include <QDBusConnectionInterface>
-#include <QMessageBox>
 #endif // HAVE_QTDBUS
 
 MainWindow::MainWindow(QWidget *parent)
