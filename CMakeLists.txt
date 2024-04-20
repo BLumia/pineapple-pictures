@@ -115,7 +115,11 @@ add_executable (${EXE_NAME} WIN32
     ${PPIC_RC_FILES}
 )
 
-qt_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})
+if (${QT_VERSION_MAJOR} EQUAL "6")
+    qt_add_translations(${EXE_NAME} TS_FILES ${PPIC_TS_FILES} QM_FILES_OUTPUT_VARIABLE PPIC_QM_FILES)
+else()
+    qt_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})
+endif()
 
 target_sources(${EXE_NAME} PRIVATE ${PPIC_QM_FILES})
 
