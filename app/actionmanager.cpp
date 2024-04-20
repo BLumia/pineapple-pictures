@@ -74,7 +74,7 @@ void ActionManager::setupAction(MainWindow *mainWindow)
     CREATE_NEW_ACTION(mainWindow, actionSettings);
     CREATE_NEW_THEMEICON_ACTION(mainWindow, actionHelp, system-help);
     CREATE_NEW_THEMEICON_ACTION(mainWindow, actionLocateInFileManager, system-file-manager);
-    CREATE_NEW_ACTION(mainWindow, actionProperties);
+    CREATE_NEW_THEMEICON_ACTION(mainWindow, actionProperties, document-properties);
     CREATE_NEW_ACTION(mainWindow, actionQuitApp);
     #undef CREATE_NEW_ACTION
     #undef CREATE_NEW_THEMEICON_ACTION
