@@ -15,7 +15,7 @@ environment:
       EXIV2_VERSION: "0.28.2"
       EXIV2_CMAKE_OPTIONS: "-DEXIV2_ENABLE_BROTLI=OFF -DEXIV2_ENABLE_INIH=OFF -DEXIV2_BUILD_EXIV2_COMMAND=OFF"
       PPIC_CMAKE_OPTIONS: "-DPREFER_QT_5=OFF"
-      WINDEPLOYQT_ARGS: "--verbose=2 --no-quick-import --no-translations --no-opengl-sw --no-system-d3d-compiler"
+      WINDEPLOYQT_ARGS: "--verbose=2 --no-quick-import --no-translations --no-opengl-sw --no-system-d3d-compiler --skip-plugin-types tls,networkinformation"
     - job_name: mingw81_64_qt5_15_2
       QTDIR: C:\Qt\5.15.2\mingw81_64
       MINGW64: C:\Qt\Tools\mingw810_64
