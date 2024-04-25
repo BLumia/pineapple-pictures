@@ -10,15 +10,21 @@ Yet another image viewer.
 
 ## Summary
 
-Pineapple Pictures is a lightweight image viewer that allows you view JPEG, PNG, GIF, SVG, PSD, KRA, XCF, TGA, AVIF and some other frequently used image formats files quickly and easily, and also provide a Stay-on-Top window setting that allows you pin the window so you can use it to pin a reference image at the top and then you can work with other software.
+Pineapple Pictures is a lightweight image viewer that allows you view JPEG, PNG, GIF, SVG, PSD, KRA, XCF, TGA, HDR, AVIF and some other frequently used image formats files quickly and easily, and also provide a Stay-on-Top window setting that allows you pin the window so you can use it to pin a reference image at the top and then you can work with other software.
 
 ## Get it!
 
- - [GitHub Release Page](https://github.com/BLumia/pineapple-pictures/releases)
- - [SourceForge](https://sourceforge.net/projects/pineapple-pictures/)
- - Archlinux AUR: [pineapple-pictures](https://aur.archlinux.org/packages/pineapple-pictures/) | [pineapple-pictures-git](https://aur.archlinux.org/packages/pineapple-pictures-git/)
- - Debian (since bullseye) or Ubuntu (since 21.04): `sudo apt install pineapple-pictures`
- - [Itch.io Store](https://blumia.itch.io/pineapple-pictures)
+### Maintained by the original author
+
+- [GitHub Release Page](https://github.com/BLumia/pineapple-pictures/releases)
+- [SourceForge](https://sourceforge.net/projects/pineapple-pictures/)
+- Archlinux AUR: [pineapple-pictures](https://aur.archlinux.org/packages/pineapple-pictures/) | [pineapple-pictures-git](https://aur.archlinux.org/packages/pineapple-pictures-git/)
+- [Itch.io Store](https://blumia.itch.io/pineapple-pictures)
+
+### Maintained by contributors / curtain distro's package maintainers
+
+- Debian (since bullseye) or Ubuntu (since 21.04): `sudo apt install pineapple-pictures`
+- Nix / NixOS: [pineapple-pictures](https://search.nixos.org/packages?channel=unstable&show=pineapple-pictures&from=0&size=50&sort=relevance&type=packages&query=pineapple-pictures) (maintained by @wineee)
 
 ## Help Translation!
 
@@ -48,7 +54,7 @@ The project will try to build with `exiv2` when it's available at build time, if
 
 Image formats supports rely on Qt's imageformats plugins, just get the plugins you need from your distro's package manager will be fine. For Windows user, you may need build and install the imageformats plugin manually, read the content below.
 
-> **Note**
+> [!NOTE]
 > Although there is a `pineapple-pictures.pro` file which can be used for QMake build, it's only for testing purpose and it doesn't have `exiv2` support included. Using QMake to build this project is NOT supported, please use CMake if possible.
 
 ### Linux

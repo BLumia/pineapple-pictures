@@ -10,15 +10,22 @@
 
 ## 简介
 
-菠萝看图是一个轻量图像查看器，允许你简单快捷的查看 JPEG, PNG, GIF, SVG, PSD, KRA, XCF, TGA, AVIF 等常用格式的图像文件，并提供了置顶窗口的选项以便你在使用其它软件时也可以将参考图片固定在顶端。
+菠萝看图是一个轻量图像查看器，允许你简单快捷的查看 JPEG, PNG, GIF, SVG, PSD, KRA, XCF, TGA, HDR, AVIF 等常用格式的图像文件，并提供了置顶窗口的选项以便你在使用其它软件时也可以将参考图片固定在顶端。
 
 ## 立即获取!
 
- - [GitHub Release 页面](https://github.com/BLumia/pineapple-pictures/releases) | [gitee 发布页面](https://gitee.com/blumia/pineapple-pictures/releases)
- - [SourceForge](https://sourceforge.net/projects/pineapple-pictures/)
- - Archlinux AUR: [pineapple-pictures](https://aur.archlinux.org/packages/pineapple-pictures/) | [pineapple-pictures-git](https://aur.archlinux.org/packages/pineapple-pictures-git/)
- - Debian (自 bullseye 起) 或 Ubuntu (自 21.04 起): `sudo apt install pineapple-pictures`
- - [Itch.io 商店](https://blumia.itch.io/pineapple-pictures)
+### 由原作者维护
+
+- [GitHub Release 页面](https://github.com/BLumia/pineapple-pictures/releases) | [gitee 发布页面](https://gitee.com/blumia/pineapple-pictures/releases)
+- [SourceForge](https://sourceforge.net/projects/pineapple-pictures/)
+- Archlinux AUR: [pineapple-pictures](https://aur.archlinux.org/packages/pineapple-pictures/) | [pineapple-pictures-git](https://aur.archlinux.org/packages/pineapple-pictures-git/)
+- [Itch.io 商店](https://blumia.itch.io/pineapple-pictures)
+- Flatpak (于 FlatHub): [net.blumia.pineapple-pictures](https://flathub.org/apps/net.blumia.pineapple-pictures) *([我应当使用 flatpak 版吗？](https://github.com/BLumia/pineapple-pictures/wiki/Container%E2%80%90based-Packaging-Solutions-Support))*
+
+### 由贡献者/对应发行版的打包人员维护
+
+- Debian (自 bullseye 起) 或 Ubuntu (自 21.04 起): `sudo apt install pineapple-pictures`
+- Nix / NixOS: [pineapple-pictures](https://search.nixos.org/packages?channel=unstable&show=pineapple-pictures&from=0&size=50&sort=relevance&type=packages&query=pineapple-pictures) (由 [@wineee](https://github.com/wineee) 维护)
 
 ## 帮助翻译!
 
@@ -48,7 +55,7 @@ $ cmake --build . # 如果你使用 Makefile 作为 CMake 生成器，也可以�
 
 此应用的图片格式支持依赖于 Qt 的 imageformats 插件，直接从您所用的发行版获取对应的图像格式插件即可。对于 Windows 用户，您可能需要手动构建和使用图像格式插件。下方给出了进一步的说明。
 
-> **Note**
+> [!NOTE]
 > 尽管存在一个可用于 QMake 构建的 `pineapple-pictures.pro` 文件，但其仅供简单测试所用且其并不包含 `exiv2` 支持。使用 QMake 构建此项目是 **不受支持** 的，请尽可能考虑使用 CMake。
 
 ### Linux
