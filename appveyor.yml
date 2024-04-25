@@ -2,10 +2,13 @@ image:
   - Visual Studio 2022
 environment:
   CMAKE_INSTALL_PREFIX: C:\projects\cmake
+  PKG_CONFIG_PATH: C:\projects\cmake\lib\pkgconfig
   LIBZ: C:\projects\zlib
   LIBEXPAT: C:\projects\libexpat
   LIBAVIF: C:\projects\libavif
   LIBEXIV2: C:\projects\exiv2
+  LIBJPEGTURBO: C:\projects\libjpegturbo
+  LIBHEIF: C:\projects\libheif
   PPKG: C:\projects\ppkg
   matrix:
     - job_name: mingw_64_qt6_5
@@ -31,6 +34,8 @@ install:
   - mkdir %LIBEXPAT%
   - mkdir %LIBAVIF%
   - mkdir %LIBEXIV2%
+  - mkdir %LIBJPEGTURBO%
+  - mkdir %LIBHEIF%
   - mkdir %PPKG%
   - cd %APPVEYOR_BUILD_FOLDER%
   - git submodule update --init --recursive
@@ -42,6 +47,7 @@ build_script:
 # prepare
   - mkdir 3rdparty
   - cinst ninja
+  - cinst pkgconfiglite
   - cd %PPKG%
   - curl -fsSL -o ppkg.exe https://github.com/BLumia/pineapple-package-manager/releases/latest/download/ppkg.exe
   - cd %APPVEYOR_BUILD_FOLDER%
@@ -110,6 +116,15 @@ build_script:
   - ppkg ppkg-aom.zip
   - 7z x ppkg-aom.zip LICENSE -y
   - cd %APPVEYOR_BUILD_FOLDER%
+# install libjpeg-turbo for libheif
+  - cd %LIBJPEGTURBO%
+  - curl -fsSL -o libjpegturbo-src.zip https://github.com/libjpeg-turbo/libjpeg-turbo/archive/3.0.2.zip
+  - 7z x libjpegturbo-src.zip -y
+  - cd libjpeg-turbo-3.0.2
+  - cmake . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_PREFIX% -DWITH_JPEG8=ON
+  - cmake --build build --config Release
+  - cmake --build build --config Release --target install/strip
+  - cd %APPVEYOR_BUILD_FOLDER%
 # install libavif for avif format support of KImageFormats
   - cd %LIBAVIF%
   - curl -fsSL -o libavif-v0_11_1.zip https://github.com/AOMediaCodec/libavif/archive/v0.11.1.zip
@@ -120,6 +135,15 @@ build_script:
   - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_PREFIX% -DAVIF_CODEC_AOM=ON
   - cmake --build . --config Release
   - cmake --build . --config Release --target install/strip
+  - cd %APPVEYOR_BUILD_FOLDER%
+# install libheif for heif format support of KImageFormats
+  - cd %LIBHEIF%
+  - curl -fsSL -o libheif-v1.17.6.zip https://github.com/strukturag/libheif/archive/v1.17.6.zip
+  - 7z x libheif-v1.17.6.zip -y
+  - cd libheif-1.17.6
+  - cmake . -B build -G Ninja -DENABLE_PLUGIN_LOADING=OFF -DWITH_JPEG_DECODER=ON -DWITH_JPEG_ENCODER=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%CMAKE_INSTALL_PREFIX%
+  - cmake --build build --config Release
+  - cmake --build build --config Release --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
 # install KArchive for kra format support of KImageFormats
   - cd 3rdparty
@@ -155,7 +179,7 @@ build_script:
   - cd kimageformats
   - mkdir build
   - cd build
-  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_QTPLUGINDIR=%QTDIR%\plugins
+  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DKIMAGEFORMATS_HEIF=ON -DKDE_INSTALL_QTPLUGINDIR=%QTDIR%\plugins
   - cmake --build . --config Release
   - cmake --build . --config Release --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
@@ -172,6 +196,7 @@ build_script:
   - copy %CMAKE_INSTALL_PREFIX%\bin\libexpat-1.dll
   - copy %CMAKE_INSTALL_PREFIX%\bin\libexiv2.dll
   - copy %CMAKE_INSTALL_PREFIX%\bin\libavif.dll
+  - copy %CMAKE_INSTALL_PREFIX%\bin\libheif.dll
   - copy %CMAKE_INSTALL_PREFIX%\bin\libzlib.dll
   - copy %CMAKE_INSTALL_PREFIX%\bin\libIex-3_1.dll
   - copy %CMAKE_INSTALL_PREFIX%\bin\libImath-3_1.dll
@@ -189,6 +214,7 @@ build_script:
   - copy %APPVEYOR_BUILD_FOLDER%\3rdparty\QtApng\LICENSE License.QtApng.txt
   - copy %LIBEXPAT%\libexpat-R_2_5_0\expat\COPYING License.expat.txt
   - copy %LIBAVIF%\libavif-0.11.1\LICENSE License.libavif.txt
+  - copy %LIBHEIF%\libheif-1.17.6\COPYING License.libheif.txt
   - copy %LIBEXIV2%\exiv2-%EXIV2_VERSION%\COPYING License.exiv2.txt
 # TODO: Qt, zlib
   - cd ..
