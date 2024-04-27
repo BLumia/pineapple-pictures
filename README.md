@@ -35,7 +35,7 @@ Pineapple Pictures is a lightweight image viewer that allows you view JPEG, PNG,
 Current state, we need:
 
  - `cmake`: as the build system.
- - `qt5` with `qt5-svg` and `qt5-tools`: since the app is using Qt.
+ - `qt6` with `qt6-svg` and `qt6-tools`: since the app is using Qt.
  - `libexiv2`: able to display more image metadata. (optional, but recommended)
 
 Then we can build it with any proper c++ compiler like g++ or msvc.
