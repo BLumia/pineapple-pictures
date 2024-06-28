@@ -228,12 +228,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="737"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Estás seguro de que quieres mover &quot;%1&quot; a la papelera de reciclaje?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="742"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover a la papelera ha fallado, puede deberse a un problema con los permisos de los archivos, una limitación del sistema de archivos o una limitación de la plataforma.</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="106"/>
@@ -328,7 +328,7 @@
         <location filename="../actionmanager.cpp" line="109"/>
         <location filename="../mainwindow.cpp" line="736"/>
         <source>Move to Trash</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover a la papelera</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="113"/>
