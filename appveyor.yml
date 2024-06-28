@@ -8,8 +8,8 @@ environment:
   LIBEXIV2: C:\projects\exiv2
   PPKG: C:\projects\ppkg
   matrix:
-    - job_name: mingw_64_qt6_5
-      QTDIR: C:\Qt\6.5\mingw_64
+    - job_name: mingw_64_qt6_7
+      QTDIR: C:\Qt\6.7\mingw_64
       MINGW64: C:\Qt\Tools\mingw1120_64
       KF_BRANCH: master
       EXIV2_VERSION: "0.28.2"
@@ -41,7 +41,7 @@ install:
 build_script:
 # prepare
   - mkdir 3rdparty
-  - cinst ninja
+  - choco install ninja
   - cd %PPKG%
   - curl -fsSL -o ppkg.exe https://github.com/BLumia/pineapple-package-manager/releases/latest/download/ppkg.exe
   - cd %APPVEYOR_BUILD_FOLDER%
