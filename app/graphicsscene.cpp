@@ -10,6 +10,7 @@
 #include <QGraphicsItem>
 #include <QUrl>
 #include <QGraphicsSvgItem>
+#include <QSvgRenderer>
 #include <QMovie>
 #include <QPainter>
 
@@ -116,7 +117,16 @@ void GraphicsScene::showText(const QString &text)
 void GraphicsScene::showSvg(const QString &filepath)
 {
     this->clear();
-    QGraphicsSvgItem * svgItem = new QGraphicsSvgItem(filepath);
+    QGraphicsSvgItem * svgItem = new QGraphicsSvgItem();
+    QSvgRenderer * render = new QSvgRenderer(svgItem);
+#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    // Qt 6.7.0's SVG support is terrible caused by huge memory usage, see QTBUG-124287
+    // Qt 6.7.1's is somewhat better, memory issue seems fixed, but still laggy when zoom in
+    // Anyway let's disable it for now.
+    render->setOptions(QtSvg::Tiny12FeaturesOnly);
+#endif // QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    render->load(filepath);
+    svgItem->setSharedRenderer(render);
     this->addItem(svgItem);
     m_theThing = svgItem;
     this->setSceneRect(m_theThing->boundingRect());
