@@ -2,12 +2,14 @@
 <component type="desktop-application">
   <id>net.blumia.pineapple-pictures</id>
   <name>Pineapple Pictures</name>
+  <name xml:lang="es">Pineapple Pictures</name>
   <name xml:lang="ja">Pineapple Pictures</name>
   <name xml:lang="nl">Pineapple Afbeeldingen</name>
   <name xml:lang="ru">Pineapple Pictures</name>
   <name xml:lang="uk">Pineapple Pictures</name>
   <name xml:lang="zh-CN">菠萝看图</name>
   <summary>Image Viewer</summary>
+  <summary xml:lang="es">Visor de imágenes</summary>
   <summary xml:lang="ja">画像ビューアー</summary>
   <summary xml:lang="nl">Afbeeldingsweergave</summary>
   <summary xml:lang="ru">Просмотр изображений</summary>
@@ -17,6 +19,7 @@
   <project_license>MIT</project_license>
   <description>
     <p>Pineapple Pictures is a lightweight and easy-to-use image viewer that comes with a handy navigation thumbnail when zoom-in, and doesn't contain any image management support.</p>
+    <p xml:lang="es">Pineapple Pictures es un visor de imágenes ligero y fácil de usar que viene con una práctica miniatura de navegación al hacer zoom, y no contiene ningún soporte de gestión de imágenes.</p>
     <p xml:lang="ja">Pineapple Picturesは、ズームイン時に便利なナビゲーションサムネイルを備えた軽量で使いやすい画像ビューアです。画像管理のサポートは含まれていません。</p>
     <p xml:lang="nl">Pineapple Afbeeldingen is een licht en eenvoudig te gebruiken afbeeldingsweergaveprogramma met miniatuurnavigatie na inzoomen. Het programma heeft echter geen fotobeheermogelĳkheid.</p>
     <p xml:lang="ru">Pineapple Pictures - это легкий и простой в использовании просмотрщик изображений, оснащенный удобной навигацией по миниатюрам при увеличении масштаба и не содержащий никакой поддержки управления изображениями.</p>
@@ -41,6 +44,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Main window when an image file is loaded</caption>
+      <caption xml:lang="es">Ventana principal cuando se carga un archivo de imagen</caption>
       <caption xml:lang="ja">画像ファイル読み込み時のメインウィンドウ</caption>
       <caption xml:lang="nl">Hoofdvenster na het laden van een afbeelding</caption>
       <caption xml:lang="ru">Основное окно после загрузки файла изображения</caption>
@@ -50,6 +54,7 @@
     </screenshot>
     <screenshot>
       <caption>Zooming in a raster image</caption>
+      <caption xml:lang="es">Ampliar una imagen rasterizada</caption>
       <caption xml:lang="ja">ラスター画像の拡大</caption>
       <caption xml:lang="nl">Inzoomen op een roosterafbeelding</caption>
       <caption xml:lang="ru">Масштабирование растрового изображения</caption>
@@ -59,6 +64,7 @@
     </screenshot>
     <screenshot>
       <caption>Zooming in a vector image</caption>
+      <caption xml:lang="es">Ampliar una imagen vectorial</caption>
       <caption xml:lang="ja">ベクター画像の拡大</caption>
       <caption xml:lang="nl">Inzoomen op een vectorafbeelding</caption>
       <caption xml:lang="ru">Масштабирование векторного изображения</caption>
@@ -68,6 +74,16 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" version="0.8.0" date="2024-06-29T00:00:00Z">
+      <description>
+        <p>This release adds the following feature:</p>
+        <ul>
+          <li>Support move image file to trash</li>
+        </ul>
+        <p>With contributions from:</p>
+        <p>albanobattistella, mmahhi, gallegonovato, Oğuz Ersen</p>
+      </description>
+    </release>
     <release type="stable" version="0.7.4" date="2024-04-04T00:00:00Z">
       <description>
         <p>This release adds the following feature:</p>
