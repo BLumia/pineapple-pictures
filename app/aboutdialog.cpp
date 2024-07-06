@@ -66,7 +66,7 @@ AboutDialog::AboutDialog(QWidget *parent)
 
     QFile translaterHtml(":/plain/translators.html");
     bool canOpenFile = translaterHtml.open(QIODevice::ReadOnly);
-    const QByteArray & translatorList = canOpenFile ? translaterHtml.readAll() : "";
+    const QByteArray & translatorList = canOpenFile ? translaterHtml.readAll() : QByteArrayLiteral("");
 
     const QStringList specialThanksStr {
         QStringLiteral("<h1 align='center'>%1</h1><a href='%2'>%3</a><p>%4</p>").arg(
