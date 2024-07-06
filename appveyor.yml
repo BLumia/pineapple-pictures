@@ -132,7 +132,7 @@ build_script:
 # finally...
   - mkdir build
   - cd build
-  - cmake .. -G "Ninja" %PPIC_CMAKE_OPTIONS% -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX='%cd%'
+  - cmake .. -G "Ninja" %PPIC_CMAKE_OPTIONS% -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=%CMAKE_INSTALL_PREFIX% -DCMAKE_INSTALL_PREFIX='%cd%'
   - cmake --build . --config Release
   - cmake --build . --config Release --target install/strip
 # fixme: I don't know how to NOT make the binary installed to the ./bin/ folder...

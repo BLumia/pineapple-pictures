@@ -6,8 +6,6 @@ cmake_minimum_required (VERSION 3.9.5)
 
 project (pineapple-pictures)
 
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
-
 include (GNUInstallDirs)
 include (FeatureSummary)
 
@@ -41,8 +39,8 @@ if (${QT_VERSION_MAJOR} EQUAL "6")
 endif ()
 
 if (EXIV2_METADATA_SUPPORT)
-    find_package(LibExiv2)
-    set_package_properties(LibExiv2 PROPERTIES
+    find_package(Exiv2)
+    set_package_properties(Exiv2 PROPERTIES
         URL "https://www.exiv2.org"
         DESCRIPTION "image metadata support"
         TYPE OPTIONAL
@@ -50,7 +48,6 @@ if (EXIV2_METADATA_SUPPORT)
     )
 endif ()
 
-#LibExiv2_FOUND
 set (PPIC_CPP_FILES
     app/main.cpp
     app/framelesswindow.cpp
@@ -128,17 +125,16 @@ if (${QT_VERSION_MAJOR} EQUAL "6")
     target_link_libraries (${EXE_NAME} Qt::SvgWidgets)
 endif ()
 
-if (LibExiv2_FOUND)
-    message(INFO ${LibExiv2_INCLUDE_DIRS})
-    target_include_directories(${EXE_NAME}
-    PRIVATE
-        ${LibExiv2_INCLUDE_DIRS}
-    )
+if (Exiv2_FOUND)
+    if(NOT TARGET Exiv2::exiv2lib AND TARGET exiv2lib)
+        # for exiv2 0.27.x
+        add_library(Exiv2::exiv2lib ALIAS exiv2lib)
+    endif()
     target_link_libraries (${EXE_NAME}
-        LibExiv2::LibExiv2
+        Exiv2::exiv2lib
     )
     target_compile_definitions(${EXE_NAME} PRIVATE
-        HAVE_EXIV2_VERSION="${LibExiv2_VERSION}"
+        HAVE_EXIV2_VERSION="${Exiv2_VERSION}"
     )
 endif ()
 
