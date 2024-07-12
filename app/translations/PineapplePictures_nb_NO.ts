@@ -111,7 +111,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="46"/>
         <source>Avoid resetting the zoom/rotation/flip state that was applied to the image view when switching between images.</source>
-        <translation type="unfinished"></translation>
+        <translation>Unngå å tilbakestille tilstanden for zoom/rotasjon/speilvending som ble brukt på bildevisningen, når det skiftes mellom bilder.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="57"/>
@@ -228,12 +228,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="737"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
-        <translation type="unfinished"></translation>
+        <translation>Er du sikker på at du vil flytte &quot;%1&quot; til papirkurven?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="742"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Flytt til papirkurven mislyktes, det kan skyldes filtillatelsesproblem, filsystembegrensning eller plattformbegrensning.</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="106"/>
@@ -243,7 +243,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="107"/>
         <source>Copy &amp;File Path</source>
-        <translation>Kopier %filsti</translation>
+        <translation>Kopier &amp;filbane</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="125"/>
@@ -267,7 +267,7 @@
         <location filename="../actionmanager.cpp" line="112"/>
         <source>Keep transformation</source>
         <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
-        <translation type="unfinished"></translation>
+        <translation>Behold transformasjon</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="95"/>
@@ -307,7 +307,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="94"/>
         <source>Toggle maximize</source>
-        <translation type="unfinished">Veksle maksimering</translation>
+        <translation>Maksimering av/på</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
@@ -328,7 +328,7 @@
         <location filename="../actionmanager.cpp" line="109"/>
         <location filename="../mainwindow.cpp" line="736"/>
         <source>Move to Trash</source>
-        <translation type="unfinished"></translation>
+        <translation>Flytt til papirkurven</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="113"/>
@@ -700,7 +700,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="29"/>
         <source>Toggle maximize</source>
-        <translation>Veksle maksimering</translation>
+        <translation>Maksimering av/på</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="33"/>
