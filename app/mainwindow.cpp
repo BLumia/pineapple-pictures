@@ -33,6 +33,7 @@
 #include <QTimer>
 #include <QFileDialog>
 #include <QStandardPaths>
+#include <QStringBuilder>
 #include <QProcess>
 #include <QDesktopServices>
 #include <QMessageBox>
@@ -56,11 +57,12 @@ MainWindow::MainWindow(QWidget *parent)
     this->setWindowIcon(QIcon(":/icons/app-icon.svg"));
     this->setMouseTracking(true);
 
-    m_pm->setAutoLoadFilterSuffix({
-        "*.jpg", "*.jpeg", "*.jfif",
-        "*.png", "*.gif", "*.svg", "*.bmp", "*.webp",
-        "*.tif", "*.tiff"
-    });
+    
+    QStringList formatFilters;
+    for (const QByteArray &item : QImageReader::supportedImageFormats()) {
+        formatFilters.append(QStringLiteral("*.") % QString::fromLocal8Bit(item));
+    }
+    m_pm->setAutoLoadFilterSuffix(formatFilters);
 
     m_fadeOutAnimation = new QPropertyAnimation(this, "windowOpacity");
     m_fadeOutAnimation->setDuration(300);
