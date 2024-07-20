@@ -1,10 +1,47 @@
-// SPDX-FileCopyrightText: 2022 Gary Wang <wzc782970009@gmail.com>
+// SPDX-FileCopyrightText: 2024 Gary Wang <git@blumia.net>
 //
 // SPDX-License-Identifier: MIT
 
 #pragma once
 
-#include <QObject>
+#include <QAbstractListModel>
+
+class PlaylistModel : public QAbstractListModel
+{
+    Q_OBJECT
+public:
+    enum PlaylistRole {
+        UrlRole = Qt::UserRole
+    };
+    Q_ENUM(PlaylistRole)
+    Q_PROPERTY(QStringList autoLoadFilterSuffixes MEMBER m_autoLoadSuffixes NOTIFY autoLoadFilterSuffixesChanged)
+
+    explicit PlaylistModel(QObject *parent = nullptr);
+    ~PlaylistModel();
+
+    void setPlaylist(const QList<QUrl> & urls);
+    QModelIndex loadPlaylist(const QList<QUrl> & urls);
+    QModelIndex loadPlaylist(const QUrl & url);
+    QModelIndex appendToPlaylist(const QUrl & url);
+    bool removeAt(int index);
+    int indexOf(const QUrl & url) const;
+    QStringList autoLoadFilterSuffixes() const;
+
+    QModelIndex createIndex(int row) const;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+
+signals:
+    void autoLoadFilterSuffixesChanged(QStringList suffixes);
+
+private:
+    // model data
+    QList<QUrl> m_playlist;
+    // properties
+    QStringList m_autoLoadSuffixes = {};
+    // internal
+    QString m_currentDir;
+};
 
 class PlaylistManager : public QObject
 {
@@ -12,47 +49,32 @@ class PlaylistManager : public QObject
 public:
     Q_PROPERTY(int currentIndex MEMBER m_currentIndex NOTIFY currentIndexChanged)
 
-    enum PlaylistType {
-        PL_USERPLAYLIST, // Regular playlist, managed by user.
-        PL_SAMEFOLDER // PlaylistManager managed playlist, loaded from files from same folder.
-    };
-
-    explicit PlaylistManager(PlaylistType type = PL_USERPLAYLIST, QObject *parent = nullptr);
+    explicit PlaylistManager(QObject *parent = nullptr);
     ~PlaylistManager();
 
-    void setPlaylistType(PlaylistType type);
-    PlaylistType playlistType() const;
+    const PlaylistModel * model() const;
 
-    QStringList autoLoadFilterSuffix() const;
-    void setAutoLoadFilterSuffix(const QStringList &nameFilters);
+    void setPlaylist(const QList<QUrl> & url);
+    QModelIndex loadPlaylist(const QList<QUrl> & urls);
 
-    void clear();
+    int totalCount() const;
+    QModelIndex previousIndex() const;
+    QModelIndex nextIndex() const;
+    QModelIndex curIndex() const;
+    void setCurrentIndex(const QModelIndex & index);
+    QUrl urlByIndex(const QModelIndex & index);
+    QString localFileByIndex(const QModelIndex & index);
+    bool removeAt(const QModelIndex & index);
 
-    void setPlaylist(const QList<QUrl> & urls);
-    void setCurrentFile(const QString & filePath);
-    void setCurrentIndex(int index);
-    int appendFile(const QString & filePath);
-    void removeFileAt(int index);
-    int indexOf(const QString & filePath);
-
-    int count() const;
-
-    std::tuple<int, QString> previousFile() const;
-    std::tuple<int, QString> nextFile() const;
-    std::tuple<int, QString> currentFile() const;
-    std::tuple<int, QUrl> currentFileUrl() const;
+    void setAutoLoadFilterSuffixes(const QStringList &nameFilters);
 
     static QList<QUrl> convertToUrlList(const QStringList & files);
 
 signals:
-    void loaded(int length);
     void currentIndexChanged(int index);
+    void totalCountChanged(int count);
 
 private:
-    QList<QUrl> m_playlist;
-    PlaylistType m_type;
-    QString m_currentDir;
-    int m_currentIndex = -1;
-    QStringList m_autoLoadSuffix = {};
+    int m_currentIndex;
+    PlaylistModel m_model;
 };
-

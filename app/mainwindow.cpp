@@ -46,7 +46,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : FramelessWindow(parent)
     , m_am(new ActionManager)
-    , m_pm(new PlaylistManager(PlaylistManager::PL_SAMEFOLDER, this))
+    , m_pm(new PlaylistManager(this))
 {
     if (Settings::instance()->stayOnTop()) {
         this->setWindowFlag(Qt::WindowStaysOnTopHint);
@@ -62,7 +62,7 @@ MainWindow::MainWindow(QWidget *parent)
     for (const QByteArray &item : QImageReader::supportedImageFormats()) {
         formatFilters.append(QStringLiteral("*.") % QString::fromLocal8Bit(item));
     }
-    m_pm->setAutoLoadFilterSuffix(formatFilters);
+    m_pm->setAutoLoadFilterSuffixes(formatFilters);
 
     m_fadeOutAnimation = new QPropertyAnimation(this, "windowOpacity");
     m_fadeOutAnimation->setDuration(300);
@@ -142,19 +142,12 @@ MainWindow::MainWindow(QWidget *parent)
     m_gv->setOpacity(0, false);
     m_closeButton->setOpacity(0, false);
 
-    connect(m_pm, &PlaylistManager::loaded, this, [this](int galleryFileCount) {
+    connect(m_pm, &PlaylistManager::totalCountChanged, this, [this](int galleryFileCount) {
         m_prevButton->setVisible(galleryFileCount > 1);
         m_nextButton->setVisible(galleryFileCount > 1);
     });
 
-    connect(m_pm, &PlaylistManager::currentIndexChanged, this, [this]() {
-        int index;
-        QUrl url;
-        std::tie(index, url) = m_pm->currentFileUrl();
-        if (index != -1) {
-            this->setWindowTitle(url.fileName());
-        }
-    });
+    connect(m_pm, &PlaylistManager::currentIndexChanged, this, &MainWindow::galleryCurrent);
 
     QShortcut * fullscreenShorucut = new QShortcut(QKeySequence(QKeySequence::FullScreen), this);
     connect(fullscreenShorucut, &QShortcut::activated,
@@ -187,7 +180,6 @@ void MainWindow::showUrls(const QList<QUrl> &urls)
         } else {
             m_graphicsView->showFileFromPath(urls.first().toLocalFile(), false);
             m_pm->setPlaylist(urls);
-            m_pm->setCurrentIndex(0);
         }
     } else {
         m_graphicsView->showText(tr("File url list is empty"));
@@ -214,7 +206,7 @@ void MainWindow::initWindowSize()
 
 void MainWindow::adjustWindowSizeBySceneRect()
 {
-    if (m_pm->count() < 1) return;
+    if (m_pm->totalCount() < 1) return;
 
     QSize sceneSize = m_graphicsView->sceneRect().toRect().size();
     QSize sceneSizeWithMargins = sceneSize + QSize(130, 125);
@@ -245,42 +237,31 @@ void MainWindow::adjustWindowSizeBySceneRect()
 // can be empty if it is NOT from a local file.
 QUrl MainWindow::currentImageFileUrl() const
 {
-    QUrl url;
-    std::tie(std::ignore, url) = m_pm->currentFileUrl();
-
-    return url;
+    return m_pm->urlByIndex(m_pm->curIndex());
 }
 
 void MainWindow::clearGallery()
 {
-    m_pm->clear();
+    m_pm->setPlaylist({});
 }
 
 void MainWindow::loadGalleryBySingleLocalFile(const QString &path)
 {
-    m_pm->setCurrentFile(path);
+    m_pm->loadPlaylist({QUrl::fromLocalFile(path)});
 }
 
 void MainWindow::galleryPrev()
 {
-    int index;
-    QString filePath;
-    std::tie(index, filePath) = m_pm->previousFile();
-
-    if (index >= 0) {
-        m_graphicsView->showFileFromPath(filePath, false);
+    QModelIndex index = m_pm->previousIndex();
+    if (index.isValid()) {
         m_pm->setCurrentIndex(index);
     }
 }
 
 void MainWindow::galleryNext()
 {
-    int index;
-    QString filePath;
-    std::tie(index, filePath) = m_pm->nextFile();
-
-    if (index >= 0) {
-        m_graphicsView->showFileFromPath(filePath, false);
+    QModelIndex index = m_pm->nextIndex();
+    if (index.isValid()) {
         m_pm->setCurrentIndex(index);
     }
 }
@@ -288,12 +269,10 @@ void MainWindow::galleryNext()
 // If playlist (or its index) get changed, use this method to "reload" the current file.
 void MainWindow::galleryCurrent()
 {
-    int index;
-    QString filePath;
-    std::tie(index, filePath) = m_pm->currentFile();
-
-    if (index >= 0) {
-        m_graphicsView->showFileFromPath(filePath, false);
+    QModelIndex index = m_pm->curIndex();
+    if (index.isValid()) {
+        setWindowTitle(m_pm->urlByIndex(index).fileName());
+        m_graphicsView->showFileFromPath(m_pm->localFileByIndex(index), false);
     } else {
         m_graphicsView->showText(QCoreApplication::translate("GraphicsScene", "Drag image here"));
     }
@@ -721,18 +700,16 @@ void MainWindow::on_actionPaste_triggered()
     } else if (clipboardFileUrl.isValid()) {
         QString localFile(clipboardFileUrl.toLocalFile());
         m_graphicsView->showFileFromPath(localFile, true);
-        m_pm->setCurrentFile(localFile);
+        m_pm->loadPlaylist({clipboardFileUrl});
     }
 }
 
 void MainWindow::on_actionTrash_triggered()
 {
-    int currentFileIndex;
-    QUrl currentFileUrl;
-    std::tie(currentFileIndex, currentFileUrl) = m_pm->currentFileUrl();
-    if (!currentFileUrl.isLocalFile()) return;
+    QModelIndex index = m_pm->curIndex();
+    if (!m_pm->urlByIndex(index).isLocalFile()) return;
 
-    QFile file(currentFileUrl.toLocalFile());
+    QFile file(m_pm->localFileByIndex(index));
     QFileInfo fileInfo(file.fileName());
 
     QMessageBox::StandardButton result = QMessageBox::question(this, tr("Move to Trash"),
@@ -743,7 +720,7 @@ void MainWindow::on_actionTrash_triggered()
             QMessageBox::warning(this, "Failed to move file to trash",
                                  tr("Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation."));
         } else {
-            m_pm->removeFileAt(currentFileIndex);
+            m_pm->removeAt(index);
             galleryCurrent();
         }
     }
