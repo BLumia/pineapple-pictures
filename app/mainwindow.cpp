@@ -57,8 +57,8 @@ MainWindow::MainWindow(QWidget *parent)
     this->setWindowIcon(QIcon(":/icons/app-icon.svg"));
     this->setMouseTracking(true);
 
-    
-    QStringList formatFilters;
+    // related to jfif: https://codereview.qt-project.org/c/qt/qtbase/+/577730
+    QStringList formatFilters{ QStringLiteral("*.jfif") };
     for (const QByteArray &item : QImageReader::supportedImageFormats()) {
         formatFilters.append(QStringLiteral("*.") % QString::fromLocal8Bit(item));
     }
