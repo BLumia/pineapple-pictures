@@ -224,12 +224,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="737"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
-        <translation type="unfinished"></translation>
+        <translation>「%1」をゴミ箱に移動しますか？</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="742"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
-        <translation type="unfinished"></translation>
+        <translation>ゴミ箱への移動に失敗しました。ファイルのアクセス許可や、ファイルシステムの制限、プラットフォームの制限などを確認してください。</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="106"/>
@@ -324,7 +324,7 @@
         <location filename="../actionmanager.cpp" line="109"/>
         <location filename="../mainwindow.cpp" line="736"/>
         <source>Move to Trash</source>
-        <translation type="unfinished"></translation>
+        <translation>ゴミ箱へ移動する</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="113"/>
