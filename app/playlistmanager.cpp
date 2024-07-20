@@ -104,6 +104,11 @@ int PlaylistModel::indexOf(const QUrl &url) const
     return m_playlist.indexOf(url);
 }
 
+QUrl PlaylistModel::urlByIndex(int index) const
+{
+    return m_playlist.value(index);
+}
+
 QStringList PlaylistModel::autoLoadFilterSuffixes() const
 {
     return m_autoLoadSuffixes;
@@ -157,7 +162,7 @@ PlaylistManager::~PlaylistManager()
 
 }
 
-const PlaylistModel *PlaylistManager::model() const
+PlaylistModel *PlaylistManager::model()
 {
     return &m_model;
 }
@@ -170,6 +175,13 @@ void PlaylistManager::setPlaylist(const QList<QUrl> &urls)
 QModelIndex PlaylistManager::loadPlaylist(const QList<QUrl> &urls)
 {
     QModelIndex idx = m_model.loadPlaylist(urls);
+    setProperty("currentIndex", idx.row());
+    return idx;
+}
+
+QModelIndex PlaylistManager::loadPlaylist(const QUrl &url)
+{
+    QModelIndex idx = m_model.loadPlaylist(url);
     setProperty("currentIndex", idx.row());
     return idx;
 }
@@ -209,7 +221,7 @@ void PlaylistManager::setCurrentIndex(const QModelIndex &index)
 
 QUrl PlaylistManager::urlByIndex(const QModelIndex &index)
 {
-    return m_model.data(index, PlaylistModel::UrlRole).toUrl();
+    return m_model.urlByIndex(index.row());
 }
 
 QString PlaylistManager::localFileByIndex(const QModelIndex &index)

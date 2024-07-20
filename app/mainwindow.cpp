@@ -247,7 +247,7 @@ void MainWindow::clearGallery()
 
 void MainWindow::loadGalleryBySingleLocalFile(const QString &path)
 {
-    m_pm->loadPlaylist({QUrl::fromLocalFile(path)});
+    m_pm->loadPlaylist(QUrl::fromLocalFile(path));
 }
 
 void MainWindow::galleryPrev()
@@ -700,7 +700,7 @@ void MainWindow::on_actionPaste_triggered()
     } else if (clipboardFileUrl.isValid()) {
         QString localFile(clipboardFileUrl.toLocalFile());
         m_graphicsView->showFileFromPath(localFile, true);
-        m_pm->loadPlaylist({clipboardFileUrl});
+        m_pm->loadPlaylist(clipboardFileUrl);
     }
 }
 

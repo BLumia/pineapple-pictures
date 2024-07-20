@@ -25,6 +25,7 @@ public:
     QModelIndex appendToPlaylist(const QUrl & url);
     bool removeAt(int index);
     int indexOf(const QUrl & url) const;
+    QUrl urlByIndex(int index) const;
     QStringList autoLoadFilterSuffixes() const;
 
     QModelIndex createIndex(int row) const;
@@ -52,10 +53,11 @@ public:
     explicit PlaylistManager(QObject *parent = nullptr);
     ~PlaylistManager();
 
-    const PlaylistModel * model() const;
+    PlaylistModel * model();
 
     void setPlaylist(const QList<QUrl> & url);
     QModelIndex loadPlaylist(const QList<QUrl> & urls);
+    QModelIndex loadPlaylist(const QUrl & url);
 
     int totalCount() const;
     QModelIndex previousIndex() const;
