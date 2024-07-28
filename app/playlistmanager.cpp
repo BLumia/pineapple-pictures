@@ -34,7 +34,7 @@ QModelIndex PlaylistModel::loadPlaylist(const QList<QUrl> & urls)
         return loadPlaylist(urls.constFirst());
     } else {
         setPlaylist(urls);
-        return createIndex(0);
+        return index(0);
     }
 }
 
@@ -45,8 +45,8 @@ QModelIndex PlaylistModel::loadPlaylist(const QUrl &url)
     QString && currentFileName = info.fileName();
 
     if (dir.path() == m_currentDir) {
-        int index = indexOf(url);
-        return index == -1 ? appendToPlaylist(url) : createIndex(index);
+        int idx = indexOf(url);
+        return idx == -1 ? appendToPlaylist(url) : index(idx);
     }
 
     QStringList entryList = dir.entryList(
@@ -60,25 +60,25 @@ QModelIndex PlaylistModel::loadPlaylist(const QUrl &url)
 
     QList<QUrl> playlist;
 
-    int index = -1;
+    int idx = -1;
     for (int i = 0; i < entryList.count(); i++) {
         const QString & fileName = entryList.at(i);
         const QString & oneEntry = dir.absoluteFilePath(fileName);
         const QUrl & url = QUrl::fromLocalFile(oneEntry);
         playlist.append(url);
         if (fileName == currentFileName) {
-            index = i;
+            idx = i;
         }
     }
-    if (index == -1) {
-        index = playlist.count();
+    if (idx == -1) {
+        idx = playlist.count();
         playlist.append(url);
     }
     m_currentDir = dir.path();
 
     setPlaylist(playlist);
 
-    return createIndex(index);
+    return index(idx);
 }
 
 QModelIndex PlaylistModel::appendToPlaylist(const QUrl &url)
@@ -87,7 +87,7 @@ QModelIndex PlaylistModel::appendToPlaylist(const QUrl &url)
     beginInsertRows(QModelIndex(), lastIndex, lastIndex);
     m_playlist.append(url);
     endInsertRows();
-    return createIndex(lastIndex);
+    return index(lastIndex);
 }
 
 bool PlaylistModel::removeAt(int index)
@@ -114,9 +114,11 @@ QStringList PlaylistModel::autoLoadFilterSuffixes() const
     return m_autoLoadSuffixes;
 }
 
-QModelIndex PlaylistModel::createIndex(int row) const
+QHash<int, QByteArray> PlaylistModel::roleNames() const
 {
-    return QAbstractItemModel::createIndex(row, 0, nullptr);
+    QHash<int, QByteArray> result = QAbstractListModel::roleNames();
+    result.insert(UrlRole, "url");
+    return result;
 }
 
 int PlaylistModel::rowCount(const QModelIndex &parent) const
@@ -196,7 +198,7 @@ QModelIndex PlaylistManager::previousIndex() const
     int count = totalCount();
     if (count == 0) return QModelIndex();
 
-    return m_model.createIndex(m_currentIndex - 1 < 0 ? count - 1 : m_currentIndex - 1);
+    return m_model.index(m_currentIndex - 1 < 0 ? count - 1 : m_currentIndex - 1);
 }
 
 QModelIndex PlaylistManager::nextIndex() const
@@ -204,12 +206,12 @@ QModelIndex PlaylistManager::nextIndex() const
     int count = totalCount();
     if (count == 0) return QModelIndex();
 
-    return m_model.createIndex(m_currentIndex + 1 == count ? 0 : m_currentIndex + 1);
+    return m_model.index(m_currentIndex + 1 == count ? 0 : m_currentIndex + 1);
 }
 
 QModelIndex PlaylistManager::curIndex() const
 {
-    return m_model.createIndex(m_currentIndex);
+    return m_model.index(m_currentIndex);
 }
 
 void PlaylistManager::setCurrentIndex(const QModelIndex &index)

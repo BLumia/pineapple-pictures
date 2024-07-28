@@ -4,6 +4,7 @@
 
 #pragma once
 
+#include <QUrl>
 #include <QAbstractListModel>
 
 class PlaylistModel : public QAbstractListModel
@@ -28,7 +29,7 @@ public:
     QUrl urlByIndex(int index) const;
     QStringList autoLoadFilterSuffixes() const;
 
-    QModelIndex createIndex(int row) const;
+    QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
@@ -49,6 +50,8 @@ class PlaylistManager : public QObject
     Q_OBJECT
 public:
     Q_PROPERTY(int currentIndex MEMBER m_currentIndex NOTIFY currentIndexChanged)
+    Q_PROPERTY(QStringList autoLoadFilterSuffixes WRITE setAutoLoadFilterSuffixes)
+    Q_PROPERTY(PlaylistModel * model READ model CONSTANT)
 
     explicit PlaylistManager(QObject *parent = nullptr);
     ~PlaylistManager();
@@ -56,8 +59,8 @@ public:
     PlaylistModel * model();
 
     void setPlaylist(const QList<QUrl> & url);
-    QModelIndex loadPlaylist(const QList<QUrl> & urls);
-    QModelIndex loadPlaylist(const QUrl & url);
+    Q_INVOKABLE QModelIndex loadPlaylist(const QList<QUrl> & urls);
+    Q_INVOKABLE QModelIndex loadPlaylist(const QUrl & url);
 
     int totalCount() const;
     QModelIndex previousIndex() const;
