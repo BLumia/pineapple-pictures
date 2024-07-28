@@ -40,12 +40,19 @@ int main(int argc, char *argv[])
     a.setApplicationName("Pineapple Pictures");
     a.setApplicationDisplayName(QCoreApplication::translate("main", "Pineapple Pictures"));
 
+    // commandline options
+    QCommandLineOption supportedImageFormats(QStringLiteral("supported-image-formats"), QCoreApplication::translate("main", "List supported image format suffixes, and quit program."));
     // parse commandline arguments
     QCommandLineParser parser;
+    parser.addOption(supportedImageFormats);
     parser.addPositionalArgument("File list", QCoreApplication::translate("main", "File list."));
     parser.addHelpOption();
-
     parser.process(a);
+
+    if (parser.isSet(supportedImageFormats)) {
+        fputs(qPrintable(MainWindow::supportedImageFormats().join(QChar('\n'))), stdout);
+        ::exit(EXIT_SUCCESS);
+    }
 
     MainWindow w;
     w.show();

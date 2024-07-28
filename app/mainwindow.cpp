@@ -57,12 +57,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->setWindowIcon(QIcon(":/icons/app-icon.svg"));
     this->setMouseTracking(true);
 
-    // related to jfif: https://codereview.qt-project.org/c/qt/qtbase/+/577730
-    QStringList formatFilters{ QStringLiteral("*.jfif") };
-    for (const QByteArray &item : QImageReader::supportedImageFormats()) {
-        formatFilters.append(QStringLiteral("*.") % QString::fromLocal8Bit(item));
-    }
-    m_pm->setAutoLoadFilterSuffixes(formatFilters);
+    m_pm->setAutoLoadFilterSuffixes(supportedImageFormats());
 
     m_fadeOutAnimation = new QPropertyAnimation(this, "windowOpacity");
     m_fadeOutAnimation->setDuration(300);
@@ -276,6 +271,19 @@ void MainWindow::galleryCurrent()
     } else {
         m_graphicsView->showText(QCoreApplication::translate("GraphicsScene", "Drag image here"));
     }
+}
+
+QStringList MainWindow::supportedImageFormats()
+{
+    QStringList formatFilters {
+#if QT_VERSION < QT_VERSION_CHECK(6, 8, 0)
+        QStringLiteral("*.jfif")
+#endif // QT_VERSION < QT_VERSION_CHECK(6, 8, 0)
+    };
+    for (const QByteArray &item : QImageReader::supportedImageFormats()) {
+        formatFilters.append(QStringLiteral("*.") % QString::fromLocal8Bit(item));
+    }
+    return formatFilters;
 }
 
 void MainWindow::showEvent(QShowEvent *event)

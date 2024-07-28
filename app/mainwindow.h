@@ -47,6 +47,8 @@ public:
     void galleryNext();
     void galleryCurrent();
 
+    static QStringList supportedImageFormats();
+
 protected slots:
     void showEvent(QShowEvent *event) override;
     void enterEvent(QT_ENTER_EVENT *event) override;
