@@ -15,7 +15,7 @@ class GraphicsView : public QGraphicsView
 public:
     GraphicsView(QWidget *parent = nullptr);
 
-    void showFileFromPath(const QString &filePath, bool requestGallery = false);
+    void showFileFromPath(const QString &filePath);
 
     void showImage(const QPixmap &pixmap);
     void showImage(const QImage &image);
@@ -48,7 +48,6 @@ public:
 signals:
     void navigatorViewRequired(bool required, QTransform transform);
     void viewportRectChanged();
-    void requestGallery(const QString &filePath);
 
 public slots:
     void toggleCheckerboard(bool invertCheckerboardColor = false);
@@ -59,10 +58,6 @@ private:
     void mouseReleaseEvent(QMouseEvent * event) override;
     void wheelEvent(QWheelEvent *event) override;
     void resizeEvent(QResizeEvent *event) override;
-
-    void dragEnterEvent(QDragEnterEvent *event) override;
-    void dragMoveEvent(QDragMoveEvent *event) override;
-    void dropEvent(QDropEvent *event) override;
 
     bool isThingSmallerThanWindowWith(const QTransform &transform) const;
     bool shouldIgnoreMousePressMoveEvent(const QMouseEvent *event) const;

@@ -23,14 +23,14 @@ GraphicsView::GraphicsView(QWidget *parent)
     setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
     setStyleSheet("background-color: rgba(0, 0, 0, 220);"
                   "border-radius: 3px;");
-    setAcceptDrops(true);
+    setAcceptDrops(false);
     setCheckerboardEnabled(false);
 
     connect(horizontalScrollBar(), &QScrollBar::valueChanged, this, &GraphicsView::viewportRectChanged);
     connect(verticalScrollBar(), &QScrollBar::valueChanged, this, &GraphicsView::viewportRectChanged);
 }
 
-void GraphicsView::showFileFromPath(const QString &filePath, bool doRequestGallery)
+void GraphicsView::showFileFromPath(const QString &filePath)
 {
     emit navigatorViewRequired(false, transform());
 
@@ -48,27 +48,20 @@ void GraphicsView::showFileFromPath(const QString &filePath, bool doRequestGalle
         // So we cannot use imageFormat() and check if it returns QImage::Format_Invalid to detect if we support the file.
         // QImage::Format imageFormat = imageReader.imageFormat();
         if (imageReader.format().isEmpty()) {
-            doRequestGallery = false;
             showText(tr("File is not a valid image"));
         } else if (imageReader.supportsAnimation() && imageReader.imageCount() > 1) {
             showAnimated(filePath);
         } else if (!imageReader.canRead()) {
-            doRequestGallery = false;
             showText(tr("Image data is invalid or currently unsupported"));
         } else {
             QPixmap && pixmap = QPixmap::fromImageReader(&imageReader);
             if (pixmap.isNull()) {
-                doRequestGallery = false;
                 showText(tr("Image data is invalid or currently unsupported"));
             } else {
                 pixmap.setDevicePixelRatio(devicePixelRatioF());
                 showImage(pixmap);
             }
         }
-    }
-
-    if (doRequestGallery) {
-        emit requestGallery(filePath);
     }
 }
 
@@ -316,55 +309,6 @@ void GraphicsView::resizeEvent(QResizeEvent *event)
         emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
     }
     return QGraphicsView::resizeEvent(event);
-}
-
-void GraphicsView::dragEnterEvent(QDragEnterEvent *event)
-{
-    if (event->mimeData()->hasUrls() || event->mimeData()->hasImage() || event->mimeData()->hasText()) {
-        event->acceptProposedAction();
-    } else {
-        event->ignore();
-    }
-//    qDebug() << event->mimeData() << "Drag Enter Event"
-//             << event->mimeData()->hasUrls() << event->mimeData()->hasImage()
-//             << event->mimeData()->formats() << event->mimeData()->hasFormat("text/uri-list");
-
-    return QGraphicsView::dragEnterEvent(event);
-}
-
-void GraphicsView::dragMoveEvent(QDragMoveEvent *event)
-{
-    Q_UNUSED(event)
-    // by default, QGraphicsView/Scene will ignore the action if there are no QGraphicsItem under cursor.
-    // We actually doesn't care and would like to keep the drag event as-is, so just do nothing here.
-}
-
-void GraphicsView::dropEvent(QDropEvent *event)
-{
-    event->acceptProposedAction();
-
-    const QMimeData * mimeData = event->mimeData();
-
-    if (mimeData->hasUrls()) {
-        const QList<QUrl> &urls = mimeData->urls();
-        if (urls.isEmpty()) {
-            showText(tr("File url list is empty"));
-        } else {
-            showFileFromPath(urls.first().toLocalFile(), true);
-        }
-    } else if (mimeData->hasImage()) {
-        QImage img = qvariant_cast<QImage>(mimeData->imageData());
-        QPixmap pixmap = QPixmap::fromImage(img);
-        if (pixmap.isNull()) {
-            showText(tr("Image data is invalid"));
-        } else {
-            showImage(pixmap);
-        }
-    } else if (mimeData->hasText()) {
-        showText(mimeData->text());
-    } else {
-        showText(tr("Not supported mimedata: %1").arg(mimeData->formats().first()));
-    }
 }
 
 bool GraphicsView::isThingSmallerThanWindowWith(const QTransform &transform) const

@@ -56,6 +56,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->setMinimumSize(350, 330);
     this->setWindowIcon(QIcon(":/icons/app-icon.svg"));
     this->setMouseTracking(true);
+    this->setAcceptDrops(true);
 
     m_pm->setAutoLoadFilterSuffixes(supportedImageFormats());
 
@@ -94,9 +95,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(m_graphicsView, &GraphicsView::viewportRectChanged,
             m_gv, &NavigatorView::updateMainViewportRegion);
-
-    connect(m_graphicsView, &GraphicsView::requestGallery,
-            this, &MainWindow::loadGalleryBySingleLocalFile);
 
     m_closeButton = new ToolButton(true, m_graphicsView);
     m_closeButton->setIconSize(QSize(32, 32));
@@ -142,7 +140,8 @@ MainWindow::MainWindow(QWidget *parent)
         m_nextButton->setVisible(galleryFileCount > 1);
     });
 
-    connect(m_pm, &PlaylistManager::currentIndexChanged, this, &MainWindow::galleryCurrent);
+    connect(m_pm->model(), &PlaylistModel::modelReset, this, std::bind(&MainWindow::galleryCurrent, this, false));
+    connect(m_pm, &PlaylistManager::currentIndexChanged, this, std::bind(&MainWindow::galleryCurrent, this, true));
 
     QShortcut * fullscreenShorucut = new QShortcut(QKeySequence(QKeySequence::FullScreen), this);
     connect(fullscreenShorucut, &QShortcut::activated,
@@ -170,12 +169,8 @@ MainWindow::~MainWindow()
 void MainWindow::showUrls(const QList<QUrl> &urls)
 {
     if (!urls.isEmpty()) {
-        if (urls.count() == 1) {
-            m_graphicsView->showFileFromPath(urls.first().toLocalFile(), true);
-        } else {
-            m_graphicsView->showFileFromPath(urls.first().toLocalFile(), false);
-            m_pm->setPlaylist(urls);
-        }
+        m_graphicsView->showFileFromPath(urls.first().toLocalFile());
+        m_pm->loadPlaylist(urls);
     } else {
         m_graphicsView->showText(tr("File url list is empty"));
         return;
@@ -240,16 +235,12 @@ void MainWindow::clearGallery()
     m_pm->setPlaylist({});
 }
 
-void MainWindow::loadGalleryBySingleLocalFile(const QString &path)
-{
-    m_pm->loadPlaylist(QUrl::fromLocalFile(path));
-}
-
 void MainWindow::galleryPrev()
 {
     QModelIndex index = m_pm->previousIndex();
     if (index.isValid()) {
         m_pm->setCurrentIndex(index);
+        m_graphicsView->showFileFromPath(m_pm->localFileByIndex(index));
     }
 }
 
@@ -258,17 +249,18 @@ void MainWindow::galleryNext()
     QModelIndex index = m_pm->nextIndex();
     if (index.isValid()) {
         m_pm->setCurrentIndex(index);
+        m_graphicsView->showFileFromPath(m_pm->localFileByIndex(index));
     }
 }
 
-// If playlist (or its index) get changed, use this method to "reload" the current file.
-void MainWindow::galleryCurrent()
+// Only use this to update minor information. Do NOT use this to load image
+// because it might cause an image gets loaded multiple times.
+void MainWindow::galleryCurrent(bool showLoadImageHintWhenEmpty)
 {
     QModelIndex index = m_pm->curIndex();
     if (index.isValid()) {
         setWindowTitle(m_pm->urlByIndex(index).fileName());
-        m_graphicsView->showFileFromPath(m_pm->localFileByIndex(index), false);
-    } else {
+    } else if (showLoadImageHintWhenEmpty && m_pm->totalCount() <= 0) {
         m_graphicsView->showText(QCoreApplication::translate("GraphicsScene", "Drag image here"));
     }
 }
@@ -511,6 +503,50 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     return FramelessWindow::contextMenuEvent(event);
 }
 
+void MainWindow::dragEnterEvent(QDragEnterEvent *event)
+{
+    if (event->mimeData()->hasUrls() || event->mimeData()->hasImage() || event->mimeData()->hasText()) {
+        event->acceptProposedAction();
+    } else {
+        event->ignore();
+    }
+
+    return FramelessWindow::dragEnterEvent(event);
+}
+
+void MainWindow::dragMoveEvent(QDragMoveEvent *event)
+{
+    Q_UNUSED(event)
+}
+
+void MainWindow::dropEvent(QDropEvent *event)
+{
+    event->acceptProposedAction();
+
+    const QMimeData * mimeData = event->mimeData();
+
+    if (mimeData->hasUrls()) {
+        const QList<QUrl> &urls = mimeData->urls();
+        if (urls.isEmpty()) {
+            m_graphicsView->showText(tr("File url list is empty"));
+        } else {
+            showUrls(urls);
+        }
+    } else if (mimeData->hasImage()) {
+        QImage img = qvariant_cast<QImage>(mimeData->imageData());
+        QPixmap pixmap = QPixmap::fromImage(img);
+        if (pixmap.isNull()) {
+            m_graphicsView->showText(tr("Image data is invalid"));
+        } else {
+            m_graphicsView->showImage(pixmap);
+        }
+    } else if (mimeData->hasText()) {
+        m_graphicsView->showText(mimeData->text());
+    } else {
+        m_graphicsView->showText(tr("Not supported mimedata: %1").arg(mimeData->formats().first()));
+    }
+}
+
 void MainWindow::centerWindow()
 {
     this->setGeometry(
@@ -703,11 +739,11 @@ void MainWindow::on_actionPaste_triggered()
     }
 
     if (!clipboardImage.isNull()) {
+        setWindowTitle(tr("Image From Clipboard"));
         m_graphicsView->showImage(clipboardImage);
         clearGallery();
     } else if (clipboardFileUrl.isValid()) {
-        QString localFile(clipboardFileUrl.toLocalFile());
-        m_graphicsView->showFileFromPath(localFile, true);
+        m_graphicsView->showFileFromPath(clipboardFileUrl.toLocalFile());
         m_pm->loadPlaylist(clipboardFileUrl);
     }
 }
@@ -729,7 +765,7 @@ void MainWindow::on_actionTrash_triggered()
                                  tr("Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation."));
         } else {
             m_pm->removeAt(index);
-            galleryCurrent();
+            galleryCurrent(true);
         }
     }
 }

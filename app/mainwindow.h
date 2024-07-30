@@ -42,10 +42,9 @@ public:
     QUrl currentImageFileUrl() const;
 
     void clearGallery();
-    void loadGalleryBySingleLocalFile(const QString &path);
     void galleryPrev();
     void galleryNext();
-    void galleryCurrent();
+    void galleryCurrent(bool showLoadImageHintWhenEmpty);
 
     static QStringList supportedImageFormats();
 
@@ -60,6 +59,9 @@ protected slots:
     void wheelEvent(QWheelEvent *event) override;
     void resizeEvent(QResizeEvent *event) override;
     void contextMenuEvent(QContextMenuEvent *event) override;
+    void dragEnterEvent(QDragEnterEvent *event) override;
+    void dragMoveEvent(QDragMoveEvent *event) override;
+    void dropEvent(QDropEvent *event) override;
 
     void centerWindow();
     void closeWindow();

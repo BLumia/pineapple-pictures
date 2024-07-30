@@ -80,6 +80,6 @@ signals:
     void totalCountChanged(int count);
 
 private:
-    int m_currentIndex;
+    int m_currentIndex = -1;
     PlaylistModel m_model;
 };
