@@ -30,6 +30,7 @@ public:
     QAction *actionZoomOut;
     QAction *actionToggleCheckerboard;
     QAction *actionRotateClockwise;
+    QAction *actionRotateCounterClockwise;
 
     QAction *actionPrevPicture;
     QAction *actionNextPicture;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<TS version="2.1" language="ja_JP">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -174,8 +174,8 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../graphicsscene.cpp" line="89"/>
-        <location filename="../mainwindow.cpp" line="296"/>
+        <location filename="../mainwindow.cpp" line="264"/>
+        <location filename="../graphicsscene.cpp" line="90"/>
         <source>Drag image here</source>
         <translation>ここに画像をドラッグしてください</translation>
     </message>
@@ -183,172 +183,200 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../graphicsview.cpp" line="351"/>
         <source>File url list is empty</source>
-        <translation>ファイルURLリストがエンプティーです</translation>
+        <translation type="vanished">ファイルURLリストがエンプティーです</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="52"/>
+        <location filename="../graphicsview.cpp" line="51"/>
         <source>File is not a valid image</source>
         <translation>ファイルが有効な画像ではありません</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="57"/>
-        <location filename="../graphicsview.cpp" line="62"/>
+        <location filename="../graphicsview.cpp" line="55"/>
+        <location filename="../graphicsview.cpp" line="59"/>
         <source>Image data is invalid or currently unsupported</source>
         <translation>無効またはサポートされていない画像データ</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="359"/>
         <source>Image data is invalid</source>
-        <translation>画像のデータが無効です</translation>
+        <translation type="vanished">画像のデータが無効です</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="366"/>
         <source>Not supported mimedata: %1</source>
-        <translation>無効なmimedata: %1</translation>
+        <translation type="vanished">無効なmimedata: %1</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="191"/>
+        <location filename="../mainwindow.cpp" line="175"/>
+        <location filename="../mainwindow.cpp" line="531"/>
         <source>File url list is empty</source>
         <translation>ファイルurlリストがエンプティーです</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="448"/>
+        <location filename="../mainwindow.cpp" line="429"/>
         <source>&amp;Copy</source>
         <translation>コピー(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="737"/>
+        <location filename="../mainwindow.cpp" line="539"/>
+        <source>Image data is invalid</source>
+        <translation>画像のデータが無効です</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="546"/>
+        <source>Not supported mimedata: %1</source>
+        <translation>無効なmimedata: %1</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="742"/>
+        <source>Image From Clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="760"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
         <translation>「%1」をゴミ箱に移動しますか？</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="742"/>
+        <location filename="../mainwindow.cpp" line="765"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
         <translation>ゴミ箱への移動に失敗しました。ファイルのアクセス許可や、ファイルシステムの制限、プラットフォームの制限などを確認してください。</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="106"/>
+        <location filename="../actionmanager.cpp" line="108"/>
         <source>Copy P&amp;ixmap</source>
         <translation>画像をコピー(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="107"/>
+        <location filename="../actionmanager.cpp" line="109"/>
         <source>Copy &amp;File Path</source>
         <translation>ファイルパスをコピー(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="125"/>
+        <location filename="../actionmanager.cpp" line="127"/>
         <source>Properties</source>
         <translation>プロパティ</translation>
     </message>
     <message>
+        <location filename="../actionmanager.cpp" line="112"/>
         <location filename="../aboutdialog.cpp" line="39"/>
-        <location filename="../actionmanager.cpp" line="110"/>
         <source>Stay on top</source>
         <translation>最前面に表示する</translation>
     </message>
     <message>
+        <location filename="../actionmanager.cpp" line="113"/>
         <location filename="../aboutdialog.cpp" line="42"/>
-        <location filename="../actionmanager.cpp" line="111"/>
         <source>Protected mode</source>
         <translation>プロテクトモード</translation>
     </message>
     <message>
+        <location filename="../actionmanager.cpp" line="114"/>
         <location filename="../aboutdialog.cpp" line="45"/>
-        <location filename="../actionmanager.cpp" line="112"/>
         <source>Keep transformation</source>
         <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
         <translation>表示状態を維持する</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="95"/>
+        <location filename="../actionmanager.cpp" line="96"/>
         <source>Zoom in</source>
         <translation>拡大</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="96"/>
+        <location filename="../actionmanager.cpp" line="97"/>
         <source>Zoom out</source>
         <translation>縮小</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="103"/>
+        <location filename="../actionmanager.cpp" line="105"/>
         <source>Flip &amp;Horizontally</source>
         <translation>画像を左右反転する(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="108"/>
+        <location filename="../actionmanager.cpp" line="106"/>
+        <source>Fit to view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="107"/>
+        <source>Fit to width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="110"/>
         <source>&amp;Paste</source>
         <translation>貼り付け(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="97"/>
+        <location filename="../actionmanager.cpp" line="98"/>
         <source>Toggle Checkerboard</source>
         <translation>背景を格子模様に切り替え</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="91"/>
+        <location filename="../actionmanager.cpp" line="92"/>
         <source>&amp;Open...</source>
         <translation>開く(&amp;O)…</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="93"/>
+        <location filename="../actionmanager.cpp" line="94"/>
         <source>Actual size</source>
         <translation>実際のサイズ</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="94"/>
+        <location filename="../actionmanager.cpp" line="95"/>
         <source>Toggle maximize</source>
         <translation>最大化を切り替える</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="98"/>
+        <location filename="../actionmanager.cpp" line="99"/>
         <source>Rotate right</source>
         <translation>右に回転</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
+        <source>Rotate left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="102"/>
         <source>Previous image</source>
         <translation>前の画像</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="101"/>
+        <location filename="../actionmanager.cpp" line="103"/>
         <source>Next image</source>
         <translation>次の画像</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="109"/>
-        <location filename="../mainwindow.cpp" line="736"/>
+        <location filename="../mainwindow.cpp" line="759"/>
+        <location filename="../actionmanager.cpp" line="111"/>
         <source>Move to Trash</source>
         <translation>ゴミ箱へ移動する</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="113"/>
+        <location filename="../actionmanager.cpp" line="115"/>
         <source>Configure...</source>
         <translation>設定...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="114"/>
+        <location filename="../actionmanager.cpp" line="116"/>
         <source>Help</source>
         <translation>ヘルプ</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="117"/>
+        <location filename="../actionmanager.cpp" line="119"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
         <translation>エクスプローラーで表示する</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="123"/>
+        <location filename="../actionmanager.cpp" line="125"/>
         <source>Show in directory</source>
         <translation>ディレクトリに表示する</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="126"/>
+        <location filename="../actionmanager.cpp" line="128"/>
         <source>Quit</source>
         <translation>終了</translation>
     </message>
@@ -776,7 +804,12 @@
         <translation>Pineapple Pictures</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="45"/>
+        <location filename="../main.cpp" line="44"/>
+        <source>List supported image format suffixes, and quit program.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="48"/>
         <source>File list.</source>
         <translation>ファイルリスト</translation>
     </message>

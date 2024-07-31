@@ -87,6 +87,7 @@ private slots:
     void on_actionZoomOut_triggered();
     void on_actionToggleCheckerboard_triggered();
     void on_actionRotateClockwise_triggered();
+    void on_actionRotateCounterClockwise_triggered();
 
     void on_actionPrevPicture_triggered();
     void on_actionNextPicture_triggered();

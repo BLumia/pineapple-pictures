@@ -783,6 +783,13 @@ void MainWindow::on_actionRotateClockwise_triggered()
     m_gv->setVisible(false);
 }
 
+void MainWindow::on_actionRotateCounterClockwise_triggered()
+{
+    m_graphicsView->rotateView(false);
+    m_graphicsView->displayScene();
+    m_gv->setVisible(false);
+}
+
 void MainWindow::on_actionPrevPicture_triggered()
 {
     galleryPrev();

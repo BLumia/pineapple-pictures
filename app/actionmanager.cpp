@@ -57,6 +57,7 @@ void ActionManager::setupAction(MainWindow *mainWindow)
 
     #define CREATE_NEW_ACTION(w, a) create_action(w, &a, QString(), ACTION_NAME(a))
     #define CREATE_NEW_THEMEICON_ACTION(w, a, i) create_action(w, &a, QLatin1String(STRIFY(i)), ACTION_NAME(a), true)
+    CREATE_NEW_ACTION(mainWindow, actionRotateCounterClockwise);
     CREATE_NEW_ACTION(mainWindow, actionPrevPicture);
     CREATE_NEW_ACTION(mainWindow, actionNextPicture);
 
@@ -96,13 +97,14 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
     actionZoomOut->setText(QCoreApplication::translate("MainWindow", "Zoom out", nullptr));
     actionToggleCheckerboard->setText(QCoreApplication::translate("MainWindow", "Toggle Checkerboard", nullptr));
     actionRotateClockwise->setText(QCoreApplication::translate("MainWindow", "Rotate right", nullptr));
+    actionRotateCounterClockwise->setText(QCoreApplication::translate("MainWindow", "Rotate left", nullptr));
 
     actionPrevPicture->setText(QCoreApplication::translate("MainWindow", "Previous image", nullptr));
     actionNextPicture->setText(QCoreApplication::translate("MainWindow", "Next image", nullptr));
 
     actionHorizontalFlip->setText(QCoreApplication::translate("MainWindow", "Flip &Horizontally", nullptr));
-    actionFitInView->setText("Fit in view"); // TODO: what should it called?
-    actionFitByWidth->setText("Fit by width"); // TODO: what should it called?
+    actionFitInView->setText(QCoreApplication::translate("MainWindow", "Fit to view", nullptr));
+    actionFitByWidth->setText(QCoreApplication::translate("MainWindow", "Fit to width", nullptr));
     actionCopyPixmap->setText(QCoreApplication::translate("MainWindow", "Copy P&ixmap", nullptr));
     actionCopyFilePath->setText(QCoreApplication::translate("MainWindow", "Copy &File Path", nullptr));
     actionPaste->setText(QCoreApplication::translate("MainWindow", "&Paste", nullptr));

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ko">
+<TS version="2.1" language="ko_KR">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -174,8 +174,8 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../graphicsscene.cpp" line="89"/>
-        <location filename="../mainwindow.cpp" line="296"/>
+        <location filename="../mainwindow.cpp" line="264"/>
+        <location filename="../graphicsscene.cpp" line="90"/>
         <source>Drag image here</source>
         <translation>이미지를 여기로 끌기</translation>
     </message>
@@ -183,172 +183,200 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../graphicsview.cpp" line="351"/>
         <source>File url list is empty</source>
-        <translation>파일 URL 목록이 비어 있습니다</translation>
+        <translation type="vanished">파일 URL 목록이 비어 있습니다</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="52"/>
+        <location filename="../graphicsview.cpp" line="51"/>
         <source>File is not a valid image</source>
         <translation>파일이 올바른 이미지가 아닙니다</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="57"/>
-        <location filename="../graphicsview.cpp" line="62"/>
+        <location filename="../graphicsview.cpp" line="55"/>
+        <location filename="../graphicsview.cpp" line="59"/>
         <source>Image data is invalid or currently unsupported</source>
         <translation>이미지 데이터가 잘못되었거나 현재 지원되지 않습니다</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="359"/>
         <source>Image data is invalid</source>
-        <translation>이미지 데이터가 잘못되었습니다</translation>
+        <translation type="vanished">이미지 데이터가 잘못되었습니다</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="366"/>
         <source>Not supported mimedata: %1</source>
-        <translation>지원되지 않는 mimedata: %1</translation>
+        <translation type="vanished">지원되지 않는 mimedata: %1</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="191"/>
+        <location filename="../mainwindow.cpp" line="175"/>
+        <location filename="../mainwindow.cpp" line="531"/>
         <source>File url list is empty</source>
         <translation>파일 URL 목록이 비어 있습니다</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="448"/>
+        <location filename="../mainwindow.cpp" line="429"/>
         <source>&amp;Copy</source>
         <translation>복사(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="737"/>
+        <location filename="../mainwindow.cpp" line="539"/>
+        <source>Image data is invalid</source>
+        <translation>이미지 데이터가 잘못되었습니다</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="546"/>
+        <source>Not supported mimedata: %1</source>
+        <translation>지원되지 않는 mimedata: %1</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="742"/>
+        <source>Image From Clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="760"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="742"/>
+        <location filename="../mainwindow.cpp" line="765"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="106"/>
+        <location filename="../actionmanager.cpp" line="108"/>
         <source>Copy P&amp;ixmap</source>
         <translation>Pixmap 복사(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="107"/>
+        <location filename="../actionmanager.cpp" line="109"/>
         <source>Copy &amp;File Path</source>
         <translation>파일 경로 복사(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="125"/>
+        <location filename="../actionmanager.cpp" line="127"/>
         <source>Properties</source>
         <translation>속성</translation>
     </message>
     <message>
+        <location filename="../actionmanager.cpp" line="112"/>
         <location filename="../aboutdialog.cpp" line="39"/>
-        <location filename="../actionmanager.cpp" line="110"/>
         <source>Stay on top</source>
         <translation>맨 위에 유지</translation>
     </message>
     <message>
+        <location filename="../actionmanager.cpp" line="113"/>
         <location filename="../aboutdialog.cpp" line="42"/>
-        <location filename="../actionmanager.cpp" line="111"/>
         <source>Protected mode</source>
         <translation>보호 모드</translation>
     </message>
     <message>
+        <location filename="../actionmanager.cpp" line="114"/>
         <location filename="../aboutdialog.cpp" line="45"/>
-        <location filename="../actionmanager.cpp" line="112"/>
         <source>Keep transformation</source>
         <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="95"/>
+        <location filename="../actionmanager.cpp" line="96"/>
         <source>Zoom in</source>
         <translation>확대</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="96"/>
+        <location filename="../actionmanager.cpp" line="97"/>
         <source>Zoom out</source>
         <translation>축소</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="103"/>
+        <location filename="../actionmanager.cpp" line="105"/>
         <source>Flip &amp;Horizontally</source>
         <translation>수평으로 뒤집기(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="108"/>
+        <location filename="../actionmanager.cpp" line="106"/>
+        <source>Fit to view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="107"/>
+        <source>Fit to width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="110"/>
         <source>&amp;Paste</source>
         <translation>붙여넣기(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="97"/>
+        <location filename="../actionmanager.cpp" line="98"/>
         <source>Toggle Checkerboard</source>
         <translation>바둑판 전환</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="91"/>
+        <location filename="../actionmanager.cpp" line="92"/>
         <source>&amp;Open...</source>
         <translation>열기(&amp;O)...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="93"/>
+        <location filename="../actionmanager.cpp" line="94"/>
         <source>Actual size</source>
         <translation>실제 크기</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="94"/>
+        <location filename="../actionmanager.cpp" line="95"/>
         <source>Toggle maximize</source>
         <translation>최대화 전환</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="98"/>
+        <location filename="../actionmanager.cpp" line="99"/>
         <source>Rotate right</source>
         <translation>오른쪽으로 회전</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
+        <source>Rotate left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../actionmanager.cpp" line="102"/>
         <source>Previous image</source>
         <translation>이전 이미지</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="101"/>
+        <location filename="../actionmanager.cpp" line="103"/>
         <source>Next image</source>
         <translation>다음 이미지</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="109"/>
-        <location filename="../mainwindow.cpp" line="736"/>
+        <location filename="../mainwindow.cpp" line="759"/>
+        <location filename="../actionmanager.cpp" line="111"/>
         <source>Move to Trash</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="113"/>
+        <location filename="../actionmanager.cpp" line="115"/>
         <source>Configure...</source>
         <translation>구성...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="114"/>
+        <location filename="../actionmanager.cpp" line="116"/>
         <source>Help</source>
         <translation>도움말</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="117"/>
+        <location filename="../actionmanager.cpp" line="119"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
         <translation>파일 탐색기에 표시</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="123"/>
+        <location filename="../actionmanager.cpp" line="125"/>
         <source>Show in directory</source>
         <translation>디렉터리에 표시</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="126"/>
+        <location filename="../actionmanager.cpp" line="128"/>
         <source>Quit</source>
         <translation>종료</translation>
     </message>
@@ -776,7 +804,12 @@
         <translation>파인애플 픽처스</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="45"/>
+        <location filename="../main.cpp" line="44"/>
+        <source>List supported image format suffixes, and quit program.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="48"/>
         <source>File list.</source>
         <translation>파일 목록.</translation>
     </message>
