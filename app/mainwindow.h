@@ -44,7 +44,7 @@ public:
     void clearGallery();
     void galleryPrev();
     void galleryNext();
-    void galleryCurrent(bool showLoadImageHintWhenEmpty);
+    void galleryCurrent(bool showLoadImageHintWhenEmpty, bool reloadImage);
 
     static QStringList supportedImageFormats();
 

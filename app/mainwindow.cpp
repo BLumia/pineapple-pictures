@@ -140,8 +140,8 @@ MainWindow::MainWindow(QWidget *parent)
         m_nextButton->setVisible(galleryFileCount > 1);
     });
 
-    connect(m_pm->model(), &PlaylistModel::modelReset, this, std::bind(&MainWindow::galleryCurrent, this, false));
-    connect(m_pm, &PlaylistManager::currentIndexChanged, this, std::bind(&MainWindow::galleryCurrent, this, true));
+    connect(m_pm->model(), &PlaylistModel::modelReset, this, std::bind(&MainWindow::galleryCurrent, this, false, false));
+    connect(m_pm, &PlaylistManager::currentIndexChanged, this, std::bind(&MainWindow::galleryCurrent, this, true, false));
 
     QShortcut * fullscreenShorucut = new QShortcut(QKeySequence(QKeySequence::FullScreen), this);
     connect(fullscreenShorucut, &QShortcut::activated,
@@ -253,12 +253,12 @@ void MainWindow::galleryNext()
     }
 }
 
-// Only use this to update minor information. Do NOT use this to load image
-// because it might cause an image gets loaded multiple times.
-void MainWindow::galleryCurrent(bool showLoadImageHintWhenEmpty)
+// Only use this to update minor information.
+void MainWindow::galleryCurrent(bool showLoadImageHintWhenEmpty, bool reloadImage)
 {
     QModelIndex index = m_pm->curIndex();
     if (index.isValid()) {
+        if (reloadImage) m_graphicsView->showFileFromPath(m_pm->localFileByIndex(index));
         setWindowTitle(m_pm->urlByIndex(index).fileName());
     } else if (showLoadImageHintWhenEmpty && m_pm->totalCount() <= 0) {
         m_graphicsView->showText(QCoreApplication::translate("GraphicsScene", "Drag image here"));
@@ -765,7 +765,7 @@ void MainWindow::on_actionTrash_triggered()
                                  tr("Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation."));
         } else {
             m_pm->removeAt(index);
-            galleryCurrent(true);
+            galleryCurrent(true, true);
         }
     }
 }
