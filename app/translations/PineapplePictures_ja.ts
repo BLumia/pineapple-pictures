@@ -232,7 +232,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="742"/>
         <source>Image From Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>クリップボードからの画像</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="760"/>
@@ -301,7 +301,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="107"/>
         <source>Fit to width</source>
-        <translation type="unfinished"></translation>
+        <translation>横幅に合わせる</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="110"/>
@@ -336,7 +336,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Rotate left</source>
-        <translation type="unfinished"></translation>
+        <translation>左向きに回転する</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="102"/>
@@ -806,7 +806,7 @@
     <message>
         <location filename="../main.cpp" line="44"/>
         <source>List supported image format suffixes, and quit program.</source>
-        <translation type="unfinished"></translation>
+        <translation>サポートされている画像形式の拡張子を一覧表示し、プログラムを終了します。</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="48"/>
