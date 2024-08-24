@@ -67,19 +67,34 @@ jobs:
         :: ------ dep ------
         set CMAKE_PREFIX_PATH=%PWD%/dependencies_bin
         mkdir dependencies_src
+        :: ===== exiv2 =====
         curl -fsSL -o exiv2_bin.zip https://github.com/Exiv2/exiv2/releases/download/v0.28.3/exiv2-0.28.3-2019msvc64.zip
         7z x exiv2_bin.zip -y
         ren .\exiv2-0.28.3-2019msvc64 dependencies_bin
+        :: ===== zlib =====
         curl -fsSL -o zlib_src.zip https://zlib.net/zlib131.zip
         7z x zlib_src.zip -y -o"dependencies_src"
         ren .\dependencies_src\zlib-1.3.1 zlib || goto :error
         cmake ./dependencies_src/zlib -Bbuild_dependencies/zlib -DCMAKE_INSTALL_PREFIX="dependencies_bin" || goto :error
         cmake --build build_dependencies/zlib --config Release --target=install || goto :error
         curl -fsSL -o expat_src.zip https://github.com/libexpat/libexpat/archive/R_2_6_2.zip
+        :: ===== expat =====
         7z x expat_src.zip -y -o"dependencies_src"
         ren .\dependencies_src\libexpat-R_2_6_2 expat || goto :error
         cmake ./dependencies_src/expat/expat -Bbuild_dependencies/expat -DCMAKE_INSTALL_PREFIX="dependencies_bin" || goto :error
         cmake --build build_dependencies/expat --config Release --target=install || goto :error
+        :: ===== ECM =====
+        git clone -q https://invent.kde.org/frameworks/extra-cmake-modules.git dependencies_src/extra-cmake-modules
+        cmake .\dependencies_src\extra-cmake-modules -Bbuild_dependencies/extra-cmake-modules -DCMAKE_INSTALL_PREFIX="dependencies_bin" -DBUILD_TESTING=OFF || goto :error
+        cmake --build build_dependencies/extra-cmake-modules --config Release --target=install || goto :error
+        :: ===== KArchive =====
+        git clone -q https://invent.kde.org/frameworks/karchive.git dependencies_src/karchive
+        cmake .\dependencies_src\karchive -Bbuild_dependencies/karchive -DWITH_LIBZSTD=OFF -DWITH_BZIP2=OFF -DWITH_LIBLZMA=OFF -DCMAKE_INSTALL_PREFIX="dependencies_bin" || goto :error
+        cmake --build build_dependencies/karchive --config Release --target=install || goto :error
+        :: ===== KImageFormats =====
+        git clone -q https://invent.kde.org/frameworks/kimageformats.git dependencies_src/kimageformats
+        cmake .\dependencies_src\kimageformats -Bbuild_dependencies/kimageformats -DKDE_INSTALL_QTPLUGINDIR=%QT_ROOT_DIR%\plugins || goto :error
+        cmake --build build_dependencies/kimageformats --config Release --target=install || goto :error
         :: ------ app ------
         cmake -Bbuild . -DCMAKE_INSTALL_PREFIX="%PWD%\build\"
         cmake --build build --config Release
