@@ -236,7 +236,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="742"/>
         <source>Image From Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Imagen del portapapeles</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="760"/>
@@ -300,12 +300,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="106"/>
         <source>Fit to view</source>
-        <translation type="unfinished"></translation>
+        <translation>Para visualizar</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="107"/>
         <source>Fit to width</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustar al ancho</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="110"/>
@@ -340,7 +340,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Rotate left</source>
-        <translation type="unfinished"></translation>
+        <translation>Girar a la izquierda</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="102"/>
@@ -810,7 +810,7 @@
     <message>
         <location filename="../main.cpp" line="44"/>
         <source>List supported image format suffixes, and quit program.</source>
-        <translation type="unfinished"></translation>
+        <translation>Enumere las extensiones de formato de imagen admitidas y sal del programa.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="48"/>
