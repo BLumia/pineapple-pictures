@@ -74,6 +74,16 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" version="0.8.1" date="2024-08-25T00:00:00Z">
+      <description>
+        <p>This release adds the following feature:</p>
+        <ul>
+          <li>New command line option to list all supported formats</li>
+        </ul>
+        <p>With contributions from:</p>
+        <p>albanobattistella, mmahhi, ovl-1, gallegonovato, Oğuz Ersen</p>
+      </description>
+    </release>
     <release type="stable" version="0.8.0" date="2024-06-29T00:00:00Z">
       <description>
         <p>This release adds the following feature:</p>
