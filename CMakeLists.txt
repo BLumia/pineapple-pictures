@@ -4,7 +4,7 @@
 
 cmake_minimum_required (VERSION 3.9.5)
 
-project (pineapple-pictures)
+project(pineapple-pictures VERSION 0.8.1) # don't forget to update NEWS file and AppStream metadata.
 
 include (GNUInstallDirs)
 include (FeatureSummary)
@@ -179,6 +179,7 @@ macro (ppic_set_version_via_describe _describe_long)
 endmacro ()
 
 # Version setup
+target_compile_definitions(${EXE_NAME} PRIVATE PPIC_VERSION_STRING="${CMAKE_PROJECT_VERSION}")
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
     find_package(Git)
     set_package_properties(Git PROPERTIES TYPE OPTIONAL PURPOSE "Determine exact build version.")

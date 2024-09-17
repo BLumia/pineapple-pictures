@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
     }
     a.setApplicationName("Pineapple Pictures");
     a.setApplicationDisplayName(QCoreApplication::translate("main", "Pineapple Pictures"));
+    a.setApplicationVersion(PPIC_VERSION_STRING);
 
     // commandline options
     QCommandLineOption supportedImageFormats(QStringLiteral("supported-image-formats"), QCoreApplication::translate("main", "List supported image format suffixes, and quit program."));

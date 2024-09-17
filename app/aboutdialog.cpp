@@ -50,9 +50,13 @@ AboutDialog::AboutDialog(QWidget *parent)
     const QStringList aboutStr {
         QStringLiteral("<center><img width='128' height='128' src=':/icons/app-icon.svg'/><br/>"),
         qApp->applicationDisplayName(),
+        (QStringLiteral("<br/>") + tr("Version: %1").arg(
 #ifdef GIT_DESCRIBE_VERSION_STRING
-        (QStringLiteral("<br/>") + tr("Version: %1").arg(GIT_DESCRIBE_VERSION_STRING)),
+            GIT_DESCRIBE_VERSION_STRING
+#else
+            qApp->applicationVersion()
 #endif // GIT_DESCRIBE_VERSION_STRING
+        )),
         QStringLiteral("<hr/>"),
         tr("Copyright (c) %1 %2", "%1 is year, %2 is the name of copyright holder(s)")
             .arg(QStringLiteral("2024"), QStringLiteral("<a href='https://github.com/BLumia'>@BLumia</a>")),
