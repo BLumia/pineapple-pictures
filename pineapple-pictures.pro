@@ -7,6 +7,7 @@ greaterThan(QT_MAJOR_VERSION, 5): QT += svgwidgets
 
 TARGET = ppic
 TEMPLATE = app
+DEFINES += PPIC_VERSION_STRING=\\\"x.y.z\\\"
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
