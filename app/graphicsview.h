@@ -70,7 +70,7 @@ private:
     bool m_enableFitInView = false;
     bool m_avoidResetTransform = false;
     bool m_checkerboardEnabled = false;
-    bool m_isLastCheckerboardColorInverted = false;
+    bool m_useLightCheckerboard = false;
 };
 
 #endif // GRAPHICSVIEW_H

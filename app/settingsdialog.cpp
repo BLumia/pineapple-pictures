@@ -14,6 +14,7 @@
 SettingsDialog::SettingsDialog(QWidget *parent)
     : QDialog(parent)
     , m_stayOnTop(new QCheckBox)
+    , m_useLightCheckerboard(new QCheckBox)
     , m_doubleClickBehavior(new QComboBox)
     , m_mouseWheelBehavior(new QComboBox)
     , m_initWindowSizeBehavior(new QComboBox)
@@ -67,12 +68,14 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     }
 
     settingsForm->addRow(tr("Stay on top when start-up"), m_stayOnTop);
+    settingsForm->addRow(tr("Use light-color checkerboard"), m_useLightCheckerboard);
     settingsForm->addRow(tr("Double-click behavior"), m_doubleClickBehavior);
     settingsForm->addRow(tr("Mouse wheel behavior"), m_mouseWheelBehavior);
     settingsForm->addRow(tr("Default window size"), m_initWindowSizeBehavior);
     settingsForm->addRow(tr("HiDPI scale factor rounding policy"), m_hiDpiRoundingPolicyBehavior);
 
     m_stayOnTop->setChecked(Settings::instance()->stayOnTop());
+    m_useLightCheckerboard->setChecked(Settings::instance()->useLightCheckerboard());
     m_doubleClickBehavior->setModel(new QStringListModel(dcbDropDown));
     Settings::DoubleClickBehavior dcb = Settings::instance()->doubleClickBehavior();
     m_doubleClickBehavior->setCurrentIndex(static_cast<int>(dcb));
@@ -93,6 +96,10 @@ SettingsDialog::SettingsDialog(QWidget *parent)
 
     connect(m_stayOnTop, &QCheckBox::stateChanged, this, [ = ](int state){
         Settings::instance()->setStayOnTop(state == Qt::Checked);
+    });
+
+    connect(m_useLightCheckerboard, &QCheckBox::stateChanged, this, [ = ](int state){
+        Settings::instance()->setUseLightCheckerboard(state == Qt::Checked);
     });
 
     connect(m_doubleClickBehavior, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [ = ](int index){

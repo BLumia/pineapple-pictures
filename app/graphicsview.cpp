@@ -5,6 +5,7 @@
 #include "graphicsview.h"
 
 #include "graphicsscene.h"
+#include "settings.h"
 
 #include <QDebug>
 #include <QMouseEvent>
@@ -338,16 +339,16 @@ bool GraphicsView::shouldIgnoreMousePressMoveEvent(const QMouseEvent *event) con
 void GraphicsView::setCheckerboardEnabled(bool enabled, bool invertColor)
 {
     m_checkerboardEnabled = enabled;
-    m_isLastCheckerboardColorInverted = invertColor;
+    bool isLightCheckerboard = Settings::instance()->useLightCheckerboard() ^ invertColor;
     if (m_checkerboardEnabled) {
         // Prepare background check-board pattern
         QPixmap tilePixmap(0x20, 0x20);
-        tilePixmap.fill(invertColor ? QColor(220, 220, 220, 170) : QColor(35, 35, 35, 170));
+        tilePixmap.fill(isLightCheckerboard ? QColor(220, 220, 220, 170) : QColor(35, 35, 35, 170));
         QPainter tilePainter(&tilePixmap);
         constexpr QColor color(45, 45, 45, 170);
         constexpr QColor invertedColor(210, 210, 210, 170);
-        tilePainter.fillRect(0, 0, 0x10, 0x10, invertColor ? invertedColor : color);
-        tilePainter.fillRect(0x10, 0x10, 0x10, 0x10, invertColor ? invertedColor : color);
+        tilePainter.fillRect(0, 0, 0x10, 0x10, isLightCheckerboard ? invertedColor : color);
+        tilePainter.fillRect(0x10, 0x10, 0x10, 0x10, isLightCheckerboard ? invertedColor : color);
         tilePainter.end();
 
         setBackgroundBrush(tilePixmap);

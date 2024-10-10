@@ -23,6 +23,7 @@ public slots:
 
 private:
     QCheckBox * m_stayOnTop = nullptr;
+    QCheckBox * m_useLightCheckerboard = nullptr;
     QComboBox * m_doubleClickBehavior = nullptr;
     QComboBox * m_mouseWheelBehavior = nullptr;
     QComboBox * m_initWindowSizeBehavior = nullptr;

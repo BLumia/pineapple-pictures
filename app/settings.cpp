@@ -47,6 +47,11 @@ bool Settings::stayOnTop()
     return m_qsettings->value("stay_on_top", true).toBool();
 }
 
+bool Settings::useLightCheckerboard()
+{
+    return m_qsettings->value("use_light_checkerboard", false).toBool();
+}
+
 Settings::DoubleClickBehavior Settings::doubleClickBehavior() const
 {
     QString result = m_qsettings->value("double_click_behavior", "Close").toString();
@@ -78,6 +83,12 @@ Qt::HighDpiScaleFactorRoundingPolicy Settings::hiDpiScaleFactorBehavior() const
 void Settings::setStayOnTop(bool on)
 {
     m_qsettings->setValue("stay_on_top", on);
+    m_qsettings->sync();
+}
+
+void Settings::setUseLightCheckerboard(bool light)
+{
+    m_qsettings->setValue("use_light_checkerboard", light);
     m_qsettings->sync();
 }
 
