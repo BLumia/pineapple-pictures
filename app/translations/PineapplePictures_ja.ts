@@ -44,129 +44,129 @@
         <translation>画像を切り替える時に、画像表示に適用されているズーム、回転、反転の状態を維持します。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="54"/>
+        <location filename="../aboutdialog.cpp" line="53"/>
         <source>Version: %1</source>
         <translation>バージョン: %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="60"/>
+        <location filename="../aboutdialog.cpp" line="64"/>
         <source>Logo designed by %1</source>
         <translation>ロゴデザイン: %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="62"/>
+        <location filename="../aboutdialog.cpp" line="66"/>
         <source>Built with Qt %1 (%2)</source>
         <translation>Qt %1 (%2) でビルドされました</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="63"/>
+        <location filename="../aboutdialog.cpp" line="67"/>
         <source>Source code</source>
         <translation>ソースコード</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="73"/>
+        <location filename="../aboutdialog.cpp" line="77"/>
         <source>Contributors</source>
         <translation>貢献者</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="75"/>
+        <location filename="../aboutdialog.cpp" line="79"/>
         <source>List of contributors on GitHub</source>
         <translation>GitHubでの貢献者リスト</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="76"/>
+        <location filename="../aboutdialog.cpp" line="80"/>
         <source>Thanks to all people who contributed to this project.</source>
         <translation>このプロジェクトに貢献したすべての人に感謝します。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="80"/>
+        <location filename="../aboutdialog.cpp" line="84"/>
         <source>Translators</source>
         <translation>翻訳者</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="81"/>
+        <location filename="../aboutdialog.cpp" line="85"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
         <translation>このアプリケーションの翻訳にボランティアで参加してくださった以下の方々に感謝します。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="125"/>
+        <location filename="../aboutdialog.cpp" line="129"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
         <translation>%1は以下のフリーソフトウェア・ライブラリで構築されています。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="149"/>
+        <location filename="../aboutdialog.cpp" line="153"/>
         <source>&amp;Special Thanks</source>
         <translation>スペシャルサンクス(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="151"/>
+        <location filename="../aboutdialog.cpp" line="155"/>
         <source>&amp;Third-party Libraries</source>
         <translation>サードパーティライブラリ(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="87"/>
+        <location filename="../aboutdialog.cpp" line="91"/>
         <source>Your Rights</source>
         <translation>利用者の権利</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="57"/>
+        <location filename="../aboutdialog.cpp" line="61"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
         <translation>Copyright (c) %1 %2</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="89"/>
+        <location filename="../aboutdialog.cpp" line="93"/>
         <source>%1 is released under the MIT License.</source>
         <translation>%1は、MITライセンスのもとで公開されています。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="90"/>
+        <location filename="../aboutdialog.cpp" line="94"/>
         <source>This license grants people a number of freedoms:</source>
         <translation>このライセンスは人々に多くの自由を与えます。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="91"/>
+        <location filename="../aboutdialog.cpp" line="95"/>
         <source>You are free to use %1, for any purpose</source>
         <translation>%1は、どのような目的にも自由に使用するできます</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="92"/>
+        <location filename="../aboutdialog.cpp" line="96"/>
         <source>You are free to distribute %1</source>
         <translation>%1を自由に配布することができます</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="93"/>
+        <location filename="../aboutdialog.cpp" line="97"/>
         <source>You can study how %1 works and change it</source>
         <translation>%1がどのように作動するかを研究し、それを変更することができます</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="94"/>
+        <location filename="../aboutdialog.cpp" line="98"/>
         <source>You can distribute changed versions of %1</source>
         <translation>変更されたバージョンの %1を配布することができます</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="96"/>
+        <location filename="../aboutdialog.cpp" line="100"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
         <translation>MITライセンスは、この自由を保証しています。誰もそれを奪うことは許されていません。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="124"/>
+        <location filename="../aboutdialog.cpp" line="128"/>
         <source>Third-party Libraries used by %1</source>
         <translation>%1が使用するサードパーティライブラリ</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="147"/>
+        <location filename="../aboutdialog.cpp" line="151"/>
         <source>&amp;Help</source>
         <translation>へルプ(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="148"/>
+        <location filename="../aboutdialog.cpp" line="152"/>
         <source>&amp;About</source>
         <translation>情報(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="150"/>
+        <location filename="../aboutdialog.cpp" line="154"/>
         <source>&amp;License</source>
         <translation>ライセンス(&amp;L)</translation>
     </message>
@@ -187,13 +187,13 @@
         <translation type="vanished">ファイルURLリストがエンプティーです</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="51"/>
+        <location filename="../graphicsview.cpp" line="52"/>
         <source>File is not a valid image</source>
         <translation>ファイルが有効な画像ではありません</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="55"/>
-        <location filename="../graphicsview.cpp" line="59"/>
+        <location filename="../graphicsview.cpp" line="56"/>
+        <location filename="../graphicsview.cpp" line="60"/>
         <source>Image data is invalid or currently unsupported</source>
         <translation>無効またはサポートされていない画像データ</translation>
     </message>
@@ -707,91 +707,96 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="22"/>
+        <location filename="../settingsdialog.cpp" line="23"/>
         <source>Settings</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="27"/>
+        <location filename="../settingsdialog.cpp" line="28"/>
         <source>Do nothing</source>
         <translation>何もしない</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="28"/>
+        <location filename="../settingsdialog.cpp" line="29"/>
         <source>Close the window</source>
         <translation>ウィンドウを終了する</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="29"/>
+        <location filename="../settingsdialog.cpp" line="30"/>
         <source>Toggle maximize</source>
         <translation>最大サイズに切り替える</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="33"/>
+        <location filename="../settingsdialog.cpp" line="34"/>
         <source>Zoom in and out</source>
         <translation>拡大・縮小</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="34"/>
+        <location filename="../settingsdialog.cpp" line="35"/>
         <source>View next or previous item</source>
         <translation>次の項目または前の項目を表示</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="38"/>
+        <location filename="../settingsdialog.cpp" line="39"/>
         <source>Auto size</source>
         <translation>オートサイズ</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="39"/>
+        <location filename="../settingsdialog.cpp" line="40"/>
         <source>Maximized</source>
         <translation>最大化</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="43"/>
+        <location filename="../settingsdialog.cpp" line="44"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
         <translation>四捨五入 (整数スケーリング)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="44"/>
+        <location filename="../settingsdialog.cpp" line="45"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
         <translation>切り上げ (整数スケーリング)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="45"/>
+        <location filename="../settingsdialog.cpp" line="46"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
         <translation>切り捨て (整数スケーリング)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="46"/>
+        <location filename="../settingsdialog.cpp" line="47"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
         <translation>システム設定に従う (小数スケーリング)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="69"/>
+        <location filename="../settingsdialog.cpp" line="70"/>
         <source>Stay on top when start-up</source>
         <translation>起動時に最前面に表示する</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="70"/>
+        <location filename="../settingsdialog.cpp" line="71"/>
+        <source>Use light-color checkerboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="72"/>
         <source>Double-click behavior</source>
         <translation>ダブルクリックの動作</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="71"/>
+        <location filename="../settingsdialog.cpp" line="73"/>
         <source>Mouse wheel behavior</source>
         <translation>マウスホイールの動作</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="72"/>
+        <location filename="../settingsdialog.cpp" line="74"/>
         <source>Default window size</source>
         <translation>既定のウィンドウサイズ</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="73"/>
+        <location filename="../settingsdialog.cpp" line="75"/>
         <source>HiDPI scale factor rounding policy</source>
         <translation>高DPIスケーリングの四捨五入方法</translation>
     </message>
@@ -804,12 +809,12 @@
         <translation>Pineapple Pictures</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="44"/>
+        <location filename="../main.cpp" line="45"/>
         <source>List supported image format suffixes, and quit program.</source>
         <translation>サポートされている画像形式の拡張子を一覧表示し、プログラムを終了します。</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="48"/>
+        <location filename="../main.cpp" line="49"/>
         <source>File list.</source>
         <translation>ファイルリスト</translation>
     </message>

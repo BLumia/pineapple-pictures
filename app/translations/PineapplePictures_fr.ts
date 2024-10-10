@@ -39,7 +39,7 @@
         <translation>Éviter de fermer la fenêtre accidentellement. (par exemple en cliquant deux fois sur la fenêtre)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="54"/>
+        <location filename="../aboutdialog.cpp" line="53"/>
         <source>Version: %1</source>
         <translation>Version&#xa0;: %1</translation>
     </message>
@@ -48,63 +48,63 @@
         <translation type="vanished">Copyright © 2020 %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="60"/>
+        <location filename="../aboutdialog.cpp" line="64"/>
         <source>Logo designed by %1</source>
         <translation>Logo conçu par %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="62"/>
+        <location filename="../aboutdialog.cpp" line="66"/>
         <source>Built with Qt %1 (%2)</source>
         <translation>Fait avec Qt %1 (%2)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="63"/>
+        <location filename="../aboutdialog.cpp" line="67"/>
         <source>Source code</source>
         <translation>Code source</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="73"/>
+        <location filename="../aboutdialog.cpp" line="77"/>
         <source>Contributors</source>
         <translation>Contributeurs</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="75"/>
+        <location filename="../aboutdialog.cpp" line="79"/>
         <source>List of contributors on GitHub</source>
         <translation>Liste des contributeurs sur GitHub</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="76"/>
+        <location filename="../aboutdialog.cpp" line="80"/>
         <source>Thanks to all people who contributed to this project.</source>
         <translation>Merci à toutes les personnes qui ont contribué à ce projet.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="80"/>
+        <location filename="../aboutdialog.cpp" line="84"/>
         <source>Translators</source>
         <translation>Traducteurs</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="81"/>
+        <location filename="../aboutdialog.cpp" line="85"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
         <translation>Je tiens à remercier les personnes suivantes qui se sont portées volontaires pour traduire cette application.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="125"/>
+        <location filename="../aboutdialog.cpp" line="129"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
         <translation>%1 est basé sur les bibliothèques de logiciels libres suivantes&#xa0;:</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="149"/>
+        <location filename="../aboutdialog.cpp" line="153"/>
         <source>&amp;Special Thanks</source>
         <translation>&amp;Remerciement spécial</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="151"/>
+        <location filename="../aboutdialog.cpp" line="155"/>
         <source>&amp;Third-party Libraries</source>
         <translation>&amp;Bibliothèques tierces</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="87"/>
+        <location filename="../aboutdialog.cpp" line="91"/>
         <source>Your Rights</source>
         <translation>Vos droits</translation>
     </message>
@@ -114,63 +114,63 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="57"/>
+        <location filename="../aboutdialog.cpp" line="61"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
         <translation>Copyright (c) %1 %2</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="89"/>
+        <location filename="../aboutdialog.cpp" line="93"/>
         <source>%1 is released under the MIT License.</source>
         <translation>%1 est publié sous licence MIT.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="90"/>
+        <location filename="../aboutdialog.cpp" line="94"/>
         <source>This license grants people a number of freedoms:</source>
         <translation>Cette licence accorde aux personnes un certain nombre de libertés&#xa0;:</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="91"/>
+        <location filename="../aboutdialog.cpp" line="95"/>
         <source>You are free to use %1, for any purpose</source>
         <translation>Vous êtes libre d&apos;utiliser %1, dans n&apos;importe quel but</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="92"/>
+        <location filename="../aboutdialog.cpp" line="96"/>
         <source>You are free to distribute %1</source>
         <translation>Vous êtes libre de distribuer %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="93"/>
+        <location filename="../aboutdialog.cpp" line="97"/>
         <source>You can study how %1 works and change it</source>
         <translation>Vous pouvez étudier le fonctionnement de %1 et le modifier</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="94"/>
+        <location filename="../aboutdialog.cpp" line="98"/>
         <source>You can distribute changed versions of %1</source>
         <translation>Vous pouvez distribuer des versions modifiées de %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="96"/>
+        <location filename="../aboutdialog.cpp" line="100"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
         <translation>La licence MIT vous garantit cette liberté. Personne n&apos;est autorisé à l&apos;enlever.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="124"/>
+        <location filename="../aboutdialog.cpp" line="128"/>
         <source>Third-party Libraries used by %1</source>
         <translation>Bibliothèques tierces utilisées par %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="147"/>
+        <location filename="../aboutdialog.cpp" line="151"/>
         <source>&amp;Help</source>
         <translation>&amp;Aide</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="148"/>
+        <location filename="../aboutdialog.cpp" line="152"/>
         <source>&amp;About</source>
         <translation>&amp;À propos</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="150"/>
+        <location filename="../aboutdialog.cpp" line="154"/>
         <source>&amp;License</source>
         <translation>&amp;Licence</translation>
     </message>
@@ -191,13 +191,13 @@
         <translation type="vanished">La liste des URL du fichier est vide</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="51"/>
+        <location filename="../graphicsview.cpp" line="52"/>
         <source>File is not a valid image</source>
         <translation>Le fichier n&apos;est pas une image valide</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="55"/>
-        <location filename="../graphicsview.cpp" line="59"/>
+        <location filename="../graphicsview.cpp" line="56"/>
+        <location filename="../graphicsview.cpp" line="60"/>
         <source>Image data is invalid or currently unsupported</source>
         <translation>Les données d&apos;image ne sont pas valides ou ne sont actuellement pas prises en charge</translation>
     </message>
@@ -711,91 +711,96 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="22"/>
+        <location filename="../settingsdialog.cpp" line="23"/>
         <source>Settings</source>
         <translation>Paramètres</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="27"/>
+        <location filename="../settingsdialog.cpp" line="28"/>
         <source>Do nothing</source>
         <translation>Ne rien faire</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="28"/>
+        <location filename="../settingsdialog.cpp" line="29"/>
         <source>Close the window</source>
         <translation>Fermer la fenêtre</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="29"/>
+        <location filename="../settingsdialog.cpp" line="30"/>
         <source>Toggle maximize</source>
         <translation>Activer/désactiver l&apos;agrandissement</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="33"/>
+        <location filename="../settingsdialog.cpp" line="34"/>
         <source>Zoom in and out</source>
         <translation>Zoom avant et arrière</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="34"/>
+        <location filename="../settingsdialog.cpp" line="35"/>
         <source>View next or previous item</source>
         <translation>Voir l&apos;élément suivant ou précédent</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="38"/>
+        <location filename="../settingsdialog.cpp" line="39"/>
         <source>Auto size</source>
         <translation>Taille automatique</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="39"/>
+        <location filename="../settingsdialog.cpp" line="40"/>
         <source>Maximized</source>
         <translation>Agrandi</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="43"/>
+        <location filename="../settingsdialog.cpp" line="44"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="44"/>
+        <location filename="../settingsdialog.cpp" line="45"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="45"/>
+        <location filename="../settingsdialog.cpp" line="46"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="46"/>
+        <location filename="../settingsdialog.cpp" line="47"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="69"/>
+        <location filename="../settingsdialog.cpp" line="70"/>
         <source>Stay on top when start-up</source>
         <translation>Rester en-haut lors du démarrage</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="70"/>
+        <location filename="../settingsdialog.cpp" line="71"/>
+        <source>Use light-color checkerboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="72"/>
         <source>Double-click behavior</source>
         <translation>Comportement du double-clic</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="71"/>
+        <location filename="../settingsdialog.cpp" line="73"/>
         <source>Mouse wheel behavior</source>
         <translation>Comportement de la molette de la souris</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="72"/>
+        <location filename="../settingsdialog.cpp" line="74"/>
         <source>Default window size</source>
         <translation>Taille de la fenêtre par défaut</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="73"/>
+        <location filename="../settingsdialog.cpp" line="75"/>
         <source>HiDPI scale factor rounding policy</source>
         <translation type="unfinished"></translation>
     </message>
@@ -808,12 +813,12 @@
         <translation>Pineapple Pictures</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="44"/>
+        <location filename="../main.cpp" line="45"/>
         <source>List supported image format suffixes, and quit program.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="48"/>
+        <location filename="../main.cpp" line="49"/>
         <source>File list.</source>
         <translation>Liste des fichiers.</translation>
     </message>
