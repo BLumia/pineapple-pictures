@@ -7,9 +7,11 @@ jobs:
   
     strategy:
       matrix:
-        vs: ['2022']
-        msvc_arch: ['x64']
-        qt_ver: ['6.7.2']
+        include:
+          - qt_ver: '6.8.0'
+            vs: '2022'
+            aqt_arch: 'win64_msvc2022_64'
+            msvc_arch: 'x64'
 
     runs-on: windows-2022
 
@@ -18,7 +20,7 @@ jobs:
     - name: Install Qt
       uses: jurplel/install-qt-action@v4
       with:
-        arch: 'win64_msvc2019_64'
+        arch: ${{ matrix.aqt_arch }}
         version: ${{ matrix.qt_ver }}
         modules: 'qtimageformats'
     - name: Build
@@ -41,9 +43,11 @@ jobs:
   
     strategy:
       matrix:
-        vs: ['2022']
-        msvc_arch: ['x64']
-        qt_ver: ['6.7.2']
+        include:
+          - qt_ver: '6.8.0'
+            vs: '2022'
+            aqt_arch: 'win64_msvc2022_64'
+            msvc_arch: 'x64'
 
     runs-on: windows-2022
 
@@ -52,7 +56,7 @@ jobs:
     - name: Install Qt
       uses: jurplel/install-qt-action@v4
       with:
-        arch: 'win64_msvc2019_64'
+        arch: ${{ matrix.aqt_arch }}
         version: ${{ matrix.qt_ver }}
         modules: 'qtimageformats'
     - name: Build
