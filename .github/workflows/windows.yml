@@ -1,6 +1,6 @@
 name: Windows CI
 
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   msvc-qmake-build:
@@ -103,7 +103,7 @@ jobs:
         windeployqt --verbose=2 --no-quick-import --no-translations --no-opengl-sw --no-system-d3d-compiler --no-system-dxc-compiler --skip-plugin-types tls,networkinformation build\bin\ppic.exe
         robocopy ./dependencies_bin/bin build/bin *.dll
         if ErrorLevel 8 (exit /B 1)
-        copy LICENSE build/bin/
+        copy LICENSE build\bin
         exit /B 0
     - uses: actions/upload-artifact@v4
       with:
