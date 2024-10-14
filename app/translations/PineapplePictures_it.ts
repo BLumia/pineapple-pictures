@@ -778,7 +778,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="71"/>
         <source>Use light-color checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizzare scacchiera di colore chiaro</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="72"/>
