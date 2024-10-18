@@ -782,7 +782,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="71"/>
         <source>Use light-color checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilice un tablero de ajedrez de color claro</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="72"/>
