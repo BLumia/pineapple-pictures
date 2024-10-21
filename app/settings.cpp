@@ -6,6 +6,7 @@
 
 #include <QApplication>
 #include <QStandardPaths>
+#include <QStringBuilder>
 #include <QDebug>
 #include <QDir>
 #include <QMetaEnum>
@@ -149,8 +150,11 @@ Settings::Settings()
 #endif // defined(FLAG_PORTABLE_MODE_SUPPORT) && defined(Q_OS_WIN)
 
     if (configPath.isEmpty()) {
-        // %LOCALAPPDATA%\<APPNAME> under Windows, ~/.config/<APPNAME> under Linux.
-        configPath = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
+        // Should be %LOCALAPPDATA%\<APPNAME> under Windows, ~/.config/<APPNAME> under Linux.
+        // Sadly <APPNAME> is unknown when Settings object is created (it's before the creation
+        // of QApplication), so we'll need to append the app name manually.
+        configPath = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) %
+                     QDir::separator() % QLatin1String("Pineapple Pictures");
     }
 
     m_qsettings = new QSettings(QDir(configPath).absoluteFilePath("config.ini"), QSettings::IniFormat, this);
