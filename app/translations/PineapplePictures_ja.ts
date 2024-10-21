@@ -301,7 +301,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="107"/>
         <source>Fit to width</source>
-        <translation>横幅に合わせる</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="110"/>
@@ -336,7 +336,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Rotate left</source>
-        <translation>左向きに回転する</translation>
+        <translation>左に回転</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="102"/>
