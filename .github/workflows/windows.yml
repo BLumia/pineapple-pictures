@@ -82,6 +82,16 @@ jobs:
         cmake ./dependencies_src/zlib -Bbuild_dependencies/zlib -DCMAKE_INSTALL_PREFIX="dependencies_bin" || goto :error
         cmake --build build_dependencies/zlib --config Release --target=install || goto :error
         curl -fsSL -o expat_src.zip https://github.com/libexpat/libexpat/archive/R_2_6_2.zip
+        :: ===== AOM for libavif AVI decoding support =====
+        git clone -q -b v3.10.0 --depth 1 https://aomedia.googlesource.com/aom dependencies_src/aom
+        cmake ./dependencies_src/aom -Bbuild_dependencies/aom -DCMAKE_INSTALL_PREFIX="dependencies_bin" -DENABLE_DOCS=OFF -DBUILD_SHARED_LIBS=ON -DAOM_TARGET_CPU=generic -DENABLE_TESTS=OFF -DENABLE_TESTDATA=OFF -DENABLE_TOOLS=OFF -DENABLE_EXAMPLES=0 || goto :error
+        cmake --build build_dependencies/aom --config Release --target=install || goto :error
+        :: ===== libavif =====
+        curl -fsSL -o libavif-v1_1_1.zip https://github.com/AOMediaCodec/libavif/archive/v1.1.1.zip
+        7z x libavif-v1_1_1.zip -y -o"dependencies_src"
+        ren .\dependencies_src\libavif-1.1.1 libavif || goto :error
+        cmake ./dependencies_src/libavif -Bbuild_dependencies/libavif -DCMAKE_INSTALL_PREFIX="dependencies_bin" -DAVIF_CODEC_AOM=ON -DAVIF_LOCAL_LIBYUV=ON
+        cmake --build build_dependencies/libavif --config Release --target=install || goto :error
         :: ===== expat =====
         7z x expat_src.zip -y -o"dependencies_src"
         ren .\dependencies_src\libexpat-R_2_6_2 expat || goto :error
