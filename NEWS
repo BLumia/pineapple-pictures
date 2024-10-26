@@ -1,3 +1,13 @@
+Version 0.8.2
+~~~~~~~~~~~~~
+Released: 2024-10-26
+
+Features:
+ * New option to allow use light-color checkerboard by default
+
+Contributors:
+ albanobattistella, mmahhi, gallegonovato
+
 Version 0.8.1
 ~~~~~~~~~~~~~
 Released: 2024-08-25

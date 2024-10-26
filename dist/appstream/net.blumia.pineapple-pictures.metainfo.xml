@@ -74,6 +74,16 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" version="0.8.2" date="2024-10-26T00:00:00Z">
+      <description>
+        <p>This release adds the following feature:</p>
+        <ul>
+          <li>New option to allow use light-color checkerboard by default</li>
+        </ul>
+        <p>With contributions from:</p>
+        <p>albanobattistella, mmahhi, gallegonovato</p>
+      </description>
+    </release>
     <release type="stable" version="0.8.1" date="2024-08-25T00:00:00Z">
       <description>
         <p>This release adds the following feature:</p>
