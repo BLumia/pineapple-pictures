@@ -22,6 +22,12 @@ int main(int argc, char *argv[])
 {
     QCoreApplication::setApplicationName("Pineapple Pictures");
     QCoreApplication::setApplicationVersion(PPIC_VERSION_STRING);
+    QGuiApplication::setHighDpiScaleFactorRoundingPolicy(Settings::instance()->hiDpiScaleFactorBehavior());
+
+    QApplication a(argc, argv);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    a.setAttribute(Qt::ApplicationAttribute::AA_UseHighDpiPixmaps);
+#endif
 
     QTranslator translator;
     QString qmDir;
@@ -35,12 +41,6 @@ int main(int argc, char *argv[])
     }
 
     QGuiApplication::setApplicationDisplayName(QCoreApplication::translate("main", "Pineapple Pictures"));
-    QGuiApplication::setHighDpiScaleFactorRoundingPolicy(Settings::instance()->hiDpiScaleFactorBehavior());
-
-    QApplication a(argc, argv);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    a.setAttribute(Qt::ApplicationAttribute::AA_UseHighDpiPixmaps);
-#endif
 
     // commandline options
     QCommandLineOption supportedImageFormats(QStringLiteral("supported-image-formats"), QCoreApplication::translate("main", "List supported image format suffixes, and quit program."));

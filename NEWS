@@ -1,3 +1,10 @@
+Version 0.8.2.1
+~~~~~~~~~~~~~
+Released: 2024-10-27
+
+Bugfixes:
+ * Cannot load translations caused by a change in 0.8.2
+
 Version 0.8.2
 ~~~~~~~~~~~~~
 Released: 2024-10-26

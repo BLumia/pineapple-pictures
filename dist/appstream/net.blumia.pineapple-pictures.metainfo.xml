@@ -74,6 +74,14 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" version="0.8.2.1" date="2024-10-27T00:00:00Z">
+      <description>
+        <p>This release fixes the following bug:</p>
+        <ul>
+          <li>Cannot load translations caused by a change in 0.8.2</li>
+        </ul>
+      </description>
+    </release>
     <release type="stable" version="0.8.2" date="2024-10-26T00:00:00Z">
       <description>
         <p>This release adds the following feature:</p>
