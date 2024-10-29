@@ -7,6 +7,7 @@
 #include "settings.h"
 #include "shortcutedit.h"
 
+#include <QAction>
 #include <QCheckBox>
 #include <QComboBox>
 #include <QFormLayout>
