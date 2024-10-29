@@ -8,6 +8,7 @@
 #include <QStandardPaths>
 #include <QDebug>
 #include <QDir>
+#include <QAction>
 #include <QWidget>
 #include <QKeySequence>
 #include <QMetaEnum>
