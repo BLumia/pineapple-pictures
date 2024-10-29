@@ -151,6 +151,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     QTimer::singleShot(0, this, [this](){
         m_am->setupShortcuts();
+        Settings::instance()->applyUserShortcuts(this);
     });
 
     // allow some mouse events can go through these widgets for resizing window.

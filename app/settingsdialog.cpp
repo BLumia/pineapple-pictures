@@ -5,10 +5,14 @@
 #include "settingsdialog.h"
 
 #include "settings.h"
+#include "shortcutedit.h"
 
 #include <QCheckBox>
 #include <QComboBox>
 #include <QFormLayout>
+#include <QKeySequenceEdit>
+#include <QScrollArea>
+#include <QSplitter>
 #include <QStringListModel>
 
 SettingsDialog::SettingsDialog(QWidget *parent)
@@ -22,7 +26,44 @@ SettingsDialog::SettingsDialog(QWidget *parent)
 {
     this->setWindowTitle(tr("Settings"));
 
-    QFormLayout * settingsForm = new QFormLayout(this);
+    QHBoxLayout * mainLayout = new QHBoxLayout(this);
+    QTabWidget * settingsTabs = new QTabWidget(this);
+    mainLayout->addWidget(settingsTabs);
+
+    QWidget * settingsFormHolder = new QWidget;
+    QFormLayout * settingsForm = new QFormLayout(settingsFormHolder);
+    settingsTabs->addTab(settingsFormHolder, tr("Options"));
+
+    QSplitter * shortcutEditorSplitter = new QSplitter;
+    shortcutEditorSplitter->setOrientation(Qt::Vertical);
+    shortcutEditorSplitter->setChildrenCollapsible(false);
+    QScrollArea * shortcutScrollArea = new QScrollArea;
+    shortcutEditorSplitter->addWidget(shortcutScrollArea);
+    shortcutScrollArea->setWidgetResizable(true);
+    shortcutScrollArea->setMinimumHeight(200);
+    QWidget * shortcutsFormHolder = new QWidget;
+    QFormLayout * shortcutsForm = new QFormLayout(shortcutsFormHolder);
+    shortcutScrollArea->setWidget(shortcutsFormHolder);
+    settingsTabs->addTab(shortcutEditorSplitter, tr("Shortcuts"));
+
+    for (const QAction * action : parent->actions()) {
+        ShortcutEdit * shortcutEdit = new ShortcutEdit;
+        shortcutEdit->setObjectName(QLatin1String("shortcut_") + action->objectName());
+        shortcutEdit->setShortcuts(action->shortcuts());
+        shortcutsForm->addRow(action->text(), shortcutEdit);
+        connect(shortcutEdit, &ShortcutEdit::editButtonClicked, this, [=](){
+            if (shortcutEditorSplitter->count() == 1) shortcutEditorSplitter->addWidget(new QWidget);
+            ShortcutEditor * shortcutEditor = new ShortcutEditor(shortcutEdit);
+            shortcutEditor->setDescription(tr("Editing shortcuts for action \"%1\":").arg(action->text()));
+            QWidget * oldEditor = shortcutEditorSplitter->replaceWidget(1, shortcutEditor);
+            shortcutEditorSplitter->setSizes({shortcutEditorSplitter->height(), 1});
+            oldEditor->deleteLater();
+        });
+        connect(shortcutEdit, &ShortcutEdit::shortcutsChanged, this, [=](){
+            Settings::instance()->setShortcutsForAction(parent, shortcutEdit->objectName().mid(9),
+                                                        shortcutEdit->shortcuts());
+        });
+    }
 
     static QList< QPair<Settings::DoubleClickBehavior, QString> > _dc_options {
         { Settings::DoubleClickBehavior::Ignore, tr("Do nothing") },

@@ -8,6 +8,8 @@
 #include <QStandardPaths>
 #include <QDebug>
 #include <QDir>
+#include <QWidget>
+#include <QKeySequence>
 #include <QMetaEnum>
 
 namespace QEnumHelper
@@ -116,6 +118,39 @@ void Settings::setHiDpiScaleFactorBehavior(Qt::HighDpiScaleFactorRoundingPolicy 
     m_qsettings->sync();
 }
 
+void Settings::applyUserShortcuts(QWidget *widget)
+{
+    m_qsettings->beginGroup("shortcuts");
+    const QStringList shortcutNames = m_qsettings->allKeys();
+    for (const QString & name : shortcutNames) {
+        QList<QKeySequence> shortcuts = m_qsettings->value(name).value<QList<QKeySequence>>();
+        setShortcutsForAction(widget, name, shortcuts, false);
+    }
+    m_qsettings->endGroup();
+}
+
+bool Settings::setShortcutsForAction(QWidget *widget, const QString &objectName,
+                                     QList<QKeySequence> shortcuts, bool writeConfig)
+{
+    bool result = false;
+    for (QAction * action : widget->actions()) {
+        if (action->objectName() == objectName) {
+            action->setShortcuts(shortcuts);
+            result = true;
+            break;
+        }
+    }
+
+    if (result && writeConfig) {
+        m_qsettings->beginGroup("shortcuts");
+        m_qsettings->setValue(objectName, QVariant::fromValue(shortcuts));
+        m_qsettings->endGroup();
+        m_qsettings->sync();
+    }
+
+    return result;
+}
+
 #if defined(FLAG_PORTABLE_MODE_SUPPORT) && defined(Q_OS_WIN)
 #include <windows.h>
 // QCoreApplication::applicationDirPath() parses the "applicationDirPath" from arg0, which...
@@ -154,5 +189,7 @@ Settings::Settings()
     }
 
     m_qsettings = new QSettings(QDir(configPath).absoluteFilePath("config.ini"), QSettings::IniFormat, this);
+
+    qRegisterMetaType<QList<QKeySequence>>();
 }
 
