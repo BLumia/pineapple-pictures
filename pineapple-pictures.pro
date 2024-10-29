@@ -39,7 +39,8 @@ SOURCES += \
     app/metadatadialog.cpp \
     app/exiv2wrapper.cpp \
     app/actionmanager.cpp \
-    app/playlistmanager.cpp
+    app/playlistmanager.cpp \
+    app/shortcutedit.cpp
 
 HEADERS += \
     app/aboutdialog.h \
@@ -57,7 +58,8 @@ HEADERS += \
     app/metadatadialog.h \
     app/exiv2wrapper.h \
     app/actionmanager.h \
-    app/playlistmanager.h
+    app/playlistmanager.h \
+    app/shortcutedit.h
 
 TRANSLATIONS = \
     app/translations/PineapplePictures.ts \
