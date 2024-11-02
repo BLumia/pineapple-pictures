@@ -718,17 +718,17 @@
     <message>
         <location filename="../settingsdialog.cpp" line="36"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçenekler</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="48"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Kısayollar</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="58"/>
         <source>Editing shortcuts for action &quot;%1&quot;:</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;%1&quot; için kısayol düzenleniyor:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="70"/>
@@ -797,7 +797,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="113"/>
         <source>Use light-color checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Açık renk dama tahtası kullan</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="114"/>
@@ -825,7 +825,7 @@
     <message>
         <location filename="../shortcutedit.cpp" line="111"/>
         <source>No shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Kısayol yok</translation>
     </message>
 </context>
 <context>
@@ -833,7 +833,7 @@
     <message>
         <location filename="../shortcutedit.cpp" line="76"/>
         <source>Shortcut #%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Kısayol #%1</translation>
     </message>
 </context>
 <context>
