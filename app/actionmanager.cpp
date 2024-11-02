@@ -130,10 +130,10 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
 
 void ActionManager::setupShortcuts()
 {
-    actionOpen->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_O));
+    actionOpen->setShortcut(QKeySequence::Open);
     actionActualSize->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_0));
-    actionZoomIn->setShortcut(QKeySequence(QKeySequence::ZoomIn));
-    actionZoomOut->setShortcut(QKeySequence(QKeySequence::ZoomOut));
+    actionZoomIn->setShortcut(QKeySequence::ZoomIn);
+    actionZoomOut->setShortcut(QKeySequence::ZoomOut);
     actionPrevPicture->setShortcuts({
         QKeySequence(Qt::Key_PageUp),
         QKeySequence(Qt::Key_Left),
@@ -143,7 +143,7 @@ void ActionManager::setupShortcuts()
         QKeySequence(Qt::Key_Right),
     });
     actionHorizontalFlip->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_R));
-    actionCopyPixmap->setShortcut(QKeySequence(QKeySequence::Copy));
+    actionCopyPixmap->setShortcut(QKeySequence::Copy);
     actionPaste->setShortcut(QKeySequence::Paste);
     actionTrash->setShortcut(QKeySequence::Delete);
     actionHelp->setShortcut(QKeySequence::HelpContents);
