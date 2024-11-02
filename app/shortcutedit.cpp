@@ -33,6 +33,7 @@ ShortcutEditor::ShortcutEditor(ShortcutEdit * shortcutEdit, QWidget * parent)
             reloadShortcuts();
         }
     });
+    connect(shortcutEdit, &ShortcutEdit::shortcutsChanged, this, &ShortcutEditor::reloadShortcuts);
 
     setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum);
 
@@ -81,12 +82,11 @@ void ShortcutEditor::applyShortcuts()
 {
     QList<QKeySequence> shortcuts;
     for (const QKeySequenceEdit * keyseqEdit : m_keySequenceEdits) {
-        if (!keyseqEdit->keySequence().isEmpty()) {
+        if (!keyseqEdit->keySequence().isEmpty() && !shortcuts.contains(keyseqEdit->keySequence())) {
             shortcuts.append(keyseqEdit->keySequence());
         }
     }
-    m_shortcutEdit->setShortcuts(shortcuts);
-    reloadShortcuts();
+    emit m_shortcutEdit->applyShortcutsRequested(shortcuts);
 }
 
 // ----------------------------------------

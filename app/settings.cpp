@@ -133,23 +133,31 @@ void Settings::applyUserShortcuts(QWidget *widget)
 bool Settings::setShortcutsForAction(QWidget *widget, const QString &objectName,
                                      QList<QKeySequence> shortcuts, bool writeConfig)
 {
-    bool result = false;
+    QAction * targetAction = nullptr;
     for (QAction * action : widget->actions()) {
         if (action->objectName() == objectName) {
-            action->setShortcuts(shortcuts);
-            result = true;
-            break;
+            targetAction = action;
+        } else {
+            for (const QKeySequence & shortcut : std::as_const(shortcuts)) {
+                if (action->shortcuts().contains(shortcut)) {
+                    return false;
+                }
+            }
         }
     }
 
-    if (result && writeConfig) {
+    if (targetAction) {
+        targetAction->setShortcuts(shortcuts);
+    }
+
+    if (targetAction && writeConfig) {
         m_qsettings->beginGroup("shortcuts");
         m_qsettings->setValue(objectName, QVariant::fromValue(shortcuts));
         m_qsettings->endGroup();
         m_qsettings->sync();
     }
 
-    return result;
+    return true;
 }
 
 #if defined(FLAG_PORTABLE_MODE_SUPPORT) && defined(Q_OS_WIN)

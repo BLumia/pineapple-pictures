@@ -15,6 +15,7 @@
 #include <QScrollArea>
 #include <QSplitter>
 #include <QStringListModel>
+#include <QMessageBox>
 
 SettingsDialog::SettingsDialog(QWidget *parent)
     : QDialog(parent)
@@ -60,9 +61,14 @@ SettingsDialog::SettingsDialog(QWidget *parent)
             shortcutEditorSplitter->setSizes({shortcutEditorSplitter->height(), 1});
             oldEditor->deleteLater();
         });
-        connect(shortcutEdit, &ShortcutEdit::shortcutsChanged, this, [=](){
-            Settings::instance()->setShortcutsForAction(parent, shortcutEdit->objectName().mid(9),
-                                                        shortcutEdit->shortcuts());
+        connect(shortcutEdit, &ShortcutEdit::applyShortcutsRequested, this, [=](QList<QKeySequence> newShortcuts){
+            bool succ = Settings::instance()->setShortcutsForAction(parent, shortcutEdit->objectName().mid(9),
+                                                                    newShortcuts);
+            if (!succ) {
+                QMessageBox::warning(this, tr("Failed to set shortcuts"),
+                                     tr("Please check if shortcuts are duplicated with existing shortcuts."));
+            }
+            shortcutEdit->setShortcuts(action->shortcuts());
         });
     }
 

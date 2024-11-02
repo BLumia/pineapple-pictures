@@ -46,6 +46,7 @@ public:
 signals:
     void shortcutsChanged();
     void editButtonClicked();
+    void applyShortcutsRequested(QList<QKeySequence> newShortcuts);
 
 private:
     QList<QKeySequence> m_shortcuts;
