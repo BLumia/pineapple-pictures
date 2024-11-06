@@ -714,17 +714,17 @@
     <message>
         <location filename="../settingsdialog.cpp" line="36"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opzioni</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="48"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Scorciatoie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="58"/>
         <source>Editing shortcuts for action &quot;%1&quot;:</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica delle scorciatoie per l&apos;azione &quot;%1&quot;:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="70"/>
@@ -821,7 +821,7 @@
     <message>
         <location filename="../shortcutedit.cpp" line="111"/>
         <source>No shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna scorciatoia</translation>
     </message>
 </context>
 <context>
@@ -829,7 +829,7 @@
     <message>
         <location filename="../shortcutedit.cpp" line="76"/>
         <source>Shortcut #%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Scorciatoia #%1</translation>
     </message>
 </context>
 <context>

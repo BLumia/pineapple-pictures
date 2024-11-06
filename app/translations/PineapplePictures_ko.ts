@@ -41,7 +41,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="46"/>
         <source>Avoid resetting the zoom/rotation/flip state that was applied to the image view when switching between images.</source>
-        <translation type="unfinished"></translation>
+        <translation>이미지 간 전환 시 이미지 보기에 적용되었던 줌/회전/플립 상태를 재설정하지 마세요.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="53"/>
@@ -232,17 +232,17 @@
     <message>
         <location filename="../mainwindow.cpp" line="743"/>
         <source>Image From Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>클립보드에서 이미지</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="761"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;%1&quot;을 휴지통으로 옮기시겠습니까?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="766"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
-        <translation type="unfinished"></translation>
+        <translation>휴지통으로 이동하지 못했습니다. 파일 권한 문제, 파일 시스템 제한 또는 플랫폼 제한으로 인해 발생할 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="108"/>
@@ -276,7 +276,7 @@
         <location filename="../aboutdialog.cpp" line="45"/>
         <source>Keep transformation</source>
         <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
-        <translation type="unfinished"></translation>
+        <translation>변형 유지</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="96"/>
@@ -296,12 +296,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="106"/>
         <source>Fit to view</source>
-        <translation type="unfinished"></translation>
+        <translation>보기에 맞춤</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="107"/>
         <source>Fit to width</source>
-        <translation type="unfinished"></translation>
+        <translation>너비에 맞춤</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="110"/>
@@ -336,7 +336,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="100"/>
         <source>Rotate left</source>
-        <translation type="unfinished"></translation>
+        <translation>왼쪽으로 회전</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="102"/>
@@ -352,7 +352,7 @@
         <location filename="../mainwindow.cpp" line="760"/>
         <location filename="../actionmanager.cpp" line="111"/>
         <source>Move to Trash</source>
-        <translation type="unfinished"></translation>
+        <translation>휴지통으로 이동</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="115"/>
@@ -793,7 +793,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="113"/>
         <source>Use light-color checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation>밝은 색상의 바둑판 사용</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="114"/>
@@ -842,7 +842,7 @@
     <message>
         <location filename="../main.cpp" line="46"/>
         <source>List supported image format suffixes, and quit program.</source>
-        <translation type="unfinished"></translation>
+        <translation>지원되는 이미지 형식 접미사를 나열하고 프로그램을 종료합니다.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="50"/>
