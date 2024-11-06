@@ -35,6 +35,9 @@ public:
     QAction *actionPrevPicture;
     QAction *actionNextPicture;
 
+    QAction *actionTogglePauseAnimation;
+    QAction *actionAnimationNextFrame;
+
     QAction *actionHorizontalFlip;
     QAction *actionFitInView;
     QAction *actionFitByWidth;

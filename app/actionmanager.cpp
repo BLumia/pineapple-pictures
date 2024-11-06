@@ -61,6 +61,9 @@ void ActionManager::setupAction(MainWindow *mainWindow)
     CREATE_NEW_ACTION(mainWindow, actionPrevPicture);
     CREATE_NEW_ACTION(mainWindow, actionNextPicture);
 
+    CREATE_NEW_ACTION(mainWindow, actionTogglePauseAnimation);
+    CREATE_NEW_ACTION(mainWindow, actionAnimationNextFrame);
+
     CREATE_NEW_THEMEICON_ACTION(mainWindow, actionOpen, document-open);
     CREATE_NEW_ACTION(mainWindow, actionHorizontalFlip);
     CREATE_NEW_ACTION(mainWindow, actionFitInView);
@@ -101,6 +104,9 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
 
     actionPrevPicture->setText(QCoreApplication::translate("MainWindow", "Previous image", nullptr));
     actionNextPicture->setText(QCoreApplication::translate("MainWindow", "Next image", nullptr));
+
+    actionTogglePauseAnimation->setText(QCoreApplication::translate("MainWindow", "Pause/Resume Animation", nullptr));
+    actionAnimationNextFrame->setText(QCoreApplication::translate("MainWindow", "Animation Go to Next Frame", nullptr));
 
     actionHorizontalFlip->setText(QCoreApplication::translate("MainWindow", "Flip &Horizontally", nullptr));
     actionFitInView->setText(QCoreApplication::translate("MainWindow", "Fit to view", nullptr));

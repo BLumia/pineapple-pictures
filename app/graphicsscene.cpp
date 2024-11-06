@@ -21,6 +21,9 @@ public:
         : QGraphicsPixmapItem(pixmap, parent)
     {}
 
+    enum { Type = UserType + 1 };
+    int type() const override { return Type; }
+
     void setScaleHint(float scaleHint) {
         m_scaleHint = scaleHint;
     }
@@ -61,6 +64,9 @@ class PGraphicsMovieItem : public QGraphicsItem
 public:
     PGraphicsMovieItem(QGraphicsItem *parent = nullptr) : QGraphicsItem(parent) {}
 
+    enum { Type = UserType + 2 };
+    int type() const override { return Type; }
+
     void setMovie(QMovie* movie) {
         if (m_movie) m_movie->disconnect();
         m_movie.reset(movie);
@@ -78,6 +84,10 @@ public:
         if (m_movie) {
             painter->drawPixmap(m_movie->frameRect(), m_movie->currentPixmap(), m_movie->frameRect());
         }
+    }
+
+    inline QMovie * movie() const {
+        return m_movie.data();
     }
 
 private:
@@ -155,6 +165,29 @@ bool GraphicsScene::trySetTransformationMode(Qt::TransformationMode mode, float 
         return true;
     }
 
+    return false;
+}
+
+bool GraphicsScene::togglePauseAnimation()
+{
+    PGraphicsMovieItem * animatedItem = qgraphicsitem_cast<PGraphicsMovieItem *>(m_theThing);
+    if (animatedItem) {
+        animatedItem->movie()->setPaused(animatedItem->movie()->state() != QMovie::Paused);
+        return true;
+    }
+    return false;
+}
+
+bool GraphicsScene::skipAnimationFrame(int delta)
+{
+    PGraphicsMovieItem * animatedItem = qgraphicsitem_cast<PGraphicsMovieItem *>(m_theThing);
+    if (animatedItem) {
+        const int frameCount = animatedItem->movie()->frameCount();
+        const int currentFrame = animatedItem->movie()->currentFrameNumber();
+        const int targetFrame = (currentFrame + delta) % frameCount;
+        animatedItem->movie()->setPaused(true);
+        return animatedItem->movie()->jumpToFrame(targetFrame);
+    }
     return false;
 }
 

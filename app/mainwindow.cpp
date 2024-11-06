@@ -801,6 +801,16 @@ void MainWindow::on_actionNextPicture_triggered()
     galleryNext();
 }
 
+void MainWindow::on_actionTogglePauseAnimation_triggered()
+{
+    m_graphicsView->scene()->togglePauseAnimation();
+}
+
+void MainWindow::on_actionAnimationNextFrame_triggered()
+{
+    m_graphicsView->scene()->skipAnimationFrame(1);
+}
+
 void MainWindow::on_actionToggleStayOnTop_triggered()
 {
     toggleStayOnTop();
