@@ -295,12 +295,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="108"/>
         <source>Pause/Resume Animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Pausar/Reanudar animación</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="109"/>
         <source>Animation Go to Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Ir al siguiente fotograma</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="111"/>
@@ -743,12 +743,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="68"/>
         <source>Failed to set shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>No se pudieron establecer accesos directos</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
         <source>Please check if shortcuts are duplicated with existing shortcuts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor, verifique si los accesos directos están duplicados.</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="76"/>
