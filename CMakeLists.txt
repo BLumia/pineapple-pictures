@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-cmake_minimum_required (VERSION 3.9.5)
+cmake_minimum_required(VERSION 3.16)
 
 project(pineapple-pictures VERSION 0.8.2.1) # don't forget to update NEWS file and AppStream metadata.
 
