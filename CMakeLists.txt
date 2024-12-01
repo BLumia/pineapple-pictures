@@ -107,7 +107,7 @@ if (WIN32)
     list(APPEND PPIC_RC_FILES assets/pineapple-pictures.rc)
 endif ()
 
-add_executable (${EXE_NAME} WIN32
+add_executable (${EXE_NAME}
     ${PPIC_HEADER_FILES}
     ${PPIC_CPP_FILES}
     ${PPIC_QRC_FILES}
@@ -201,8 +201,24 @@ endif ()
 
 # Install settings
 if (WIN32)
-    # TODO: try to avoid install to a "bin" subfolder under windows...
-    #       when fixed, don't forget to update the CI config file...
+    set_target_properties(${EXE_NAME} PROPERTIES
+        WIN32_EXECUTABLE TRUE
+    )
+elseif (APPLE)
+    set_source_files_properties(assets/icons/app-icon.icns PROPERTIES
+        MACOSX_PACKAGE_LOCATION "Resources"
+    )
+    target_sources(${EXE_NAME} PUBLIC assets/icons/app-icon.icns)
+    # See https://cmake.org/cmake/help/v3.15/prop_tgt/MACOSX_BUNDLE_INFO_PLIST.html
+    set_target_properties(${EXE_NAME} PROPERTIES
+        MACOSX_BUNDLE TRUE
+        MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/dist/MacOSXBundleInfo.plist.in
+        MACOSX_BUNDLE_BUNDLE_NAME "Pineapple Pictures"
+        MACOSX_BUNDLE_GUI_IDENTIFIER net.blumia.pineapple-pictures
+        MACOSX_BUNDLE_ICON_FILE app-icon.icns # contains the .icns file name, *without* the path.
+        MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
+        MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
+    )
 elseif (UNIX)
     if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
         set(CMAKE_INSTALL_PREFIX /usr)
@@ -229,6 +245,7 @@ elseif (UNIX)
 endif()
 
 set (INSTALL_TARGETS_DEFAULT_ARGS
+    BUNDLE DESTINATION .
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR} COMPONENT Devel

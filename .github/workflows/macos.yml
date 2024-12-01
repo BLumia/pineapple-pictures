@@ -1,6 +1,6 @@
 name: macOS CI
 
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
@@ -10,10 +10,19 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Install Qt
-      uses: jurplel/install-qt-action@v3
+      uses: jurplel/install-qt-action@v4
       with:
-        version: '6.4.2'
+        version: '6.8.1'
+        modules: 'qtimageformats'
     - name: Run a qt project
       run: |
-        cmake ./ -DPREFER_QT_5=OFF
-        make
+        cmake . -Bbuild
+        cmake --build build
+    - name: Deploy
+      run: |
+        macdeployqt ./build/ppic.app -dmg
+        ls
+    - uses: actions/upload-artifact@v4
+      with:
+        name: "macos-bundle"
+        path: build/*.dmg
