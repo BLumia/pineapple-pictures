@@ -2,7 +2,7 @@ Yet another image viewer.
 
 |CI|Build Status|
 |---|---|
-|Windows Build|[![Windows build status](https://ci.appveyor.com/api/projects/status/dbd8clww3cit6oa0/branch/master?svg=true)](https://ci.appveyor.com/project/BLumia/pineapplepictures/branch/master)|
+|Windows Build|[![Windows CI](https://github.com/BLumia/pineapple-pictures/actions/workflows/windows.yml/badge.svg)](https://github.com/BLumia/pineapple-pictures/actions/workflows/windows.yml)|
 |macOS Build|[![macOS CI](https://github.com/BLumia/pineapple-pictures/actions/workflows/macos.yml/badge.svg)](https://github.com/BLumia/pineapple-pictures/actions/workflows/macos.yml)|
 |Ubuntu Build|[![Ubuntu CI](https://github.com/BLumia/pineapple-pictures/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/BLumia/pineapple-pictures/actions/workflows/ubuntu.yml)|
 
@@ -54,30 +54,10 @@ The project will try to build with `exiv2` when it's available at build time, if
 
 Image formats supports rely on Qt's imageformats plugins, just get the plugins you need from your distro's package manager will be fine. For Windows user, you may need build and install the imageformats plugin manually, read the content below.
 
+It's possible to build it under Windows, Linux, macOS, and maybe other desktop platforms that Qt is ported to. For platform specific build instructions, please read the [related wiki page](https://github.com/BLumia/pineapple-pictures/wiki/Platform-Specific-Build-Instructions).
+
 > [!NOTE]
 > Although there is a `pineapple-pictures.pro` file which can be used for QMake build, it's only for testing purpose and it doesn't have `exiv2` support included. Using QMake to build this project is NOT supported, please use CMake if possible.
-
-### Linux
-
-Just normal build process as other program will be fine. Nothing special ;)
-
-For Archlinux there are also a [PKGBUILD](https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=pineapple-pictures-git) you can use.
-
-For packaging to debian-based distro, the `CMakeLists.txt` provides some cpack configurations for generating a `.deb` package. After the build process, use `cpack -G DEB` to generate the package. You can also take `.github/workflows/ubuntu.yml` as a reference.
-
-For this project, `DEB` is the only supported cpack generator in current state, feel free to submit a PR if you like improving `cpack` support for this project.
-
-### Windows
-
-The normal build steps for Linux is also applied to Windows, but since Windows doesn't have a decent package manager, so if you need any other image formats support other than the supported formats which Qt provided, you need to get and build these imageformats plugins manually and vendor it. It's optional and can be skipped if you don't need extra image formats support.
-
-For the Windows binary I provided, kimageformats plugin is used (for formats like kra, xcf, psd and etc.). You can take `appveyor.yml` as a reference to learn what I did when building the Windows binary.
-
-[KDE Craft](https://community.kde.org/Craft) environment also can be used to build and package this program. I did also created a blueprint for building this project that you can found it at [here](https://github.com/BearKidsTeam/craft-shmooprint-bkt). It's not the way I used to create the release binary, but still worth trying.
-
-### macOS
-
-I don't have a mac, so no support at all. There is also a GitHub Action (see `.github/workflows/macos.yml`) running macOS build though so at least it can build. Feel free to submit a PR if you would like to give some love to the macOS build ;P
 
 ## License
 

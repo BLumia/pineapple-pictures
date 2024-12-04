@@ -74,6 +74,23 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" version="0.9.0" date="2024-12-08T00:00:00Z">
+      <description>
+        <p>This release adds the following features:</p>
+        <ul>
+          <li>Support custom shortcuts for existing actions</li>
+          <li>Actions for frame-by-frame animated image playback support</li>
+        </ul>
+        <p>This release includes the following changes:</p>
+        <ul>
+          <li>Initial macOS bundle support</li>
+          <li>bump minimum required CMake version to 3.16</li>
+          <li>Update translations</li>
+        </ul>
+        <p>With contributions from:</p>
+        <p>albanobattistella, VenusGirl, gallegonovato, Sabri Ünal</p>
+      </description>
+    </release>
     <release type="stable" version="0.8.2.1" date="2024-10-27T00:00:00Z">
       <description>
         <p>This release fixes the following bug:</p>

@@ -131,8 +131,8 @@ void GraphicsScene::showSvg(const QString &filepath)
     QSvgRenderer * render = new QSvgRenderer(svgItem);
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
     // Qt 6.7.0's SVG support is terrible caused by huge memory usage, see QTBUG-124287
-    // Qt 6.7.1's is somewhat better, memory issue seems fixed, but still laggy when zoom in
-    // Anyway let's disable it for now.
+    // Qt 6.7.1's is somewhat better, memory issue seems fixed, but still laggy when zoom in,
+    // see QTBUG-126771. Anyway let's disable it for now.
     render->setOptions(QtSvg::Tiny12FeaturesOnly);
 #endif // QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
     render->load(filepath);
