@@ -8,9 +8,9 @@ environment:
   LIBEXIV2: C:\projects\exiv2
   PPKG: C:\projects\ppkg
   matrix:
-    - job_name: mingw_64_qt6_7
-      QTDIR: C:\Qt\6.7\mingw_64
-      MINGW64: C:\Qt\Tools\mingw1120_64
+    - job_name: mingw_64_qt6_8
+      QTDIR: C:\Qt\6.8\mingw_64
+      MINGW64: C:\Qt\Tools\mingw1310_64
       KF_BRANCH: master
       EXIV2_VERSION: "0.28.3"
       EXIV2_CMAKE_OPTIONS: "-DEXIV2_ENABLE_BROTLI=OFF -DEXIV2_ENABLE_INIH=OFF -DEXIV2_BUILD_EXIV2_COMMAND=OFF"
@@ -125,7 +125,7 @@ build_script:
   - cd kimageformats
   - mkdir build
   - cd build
-  - cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_QTPLUGINDIR=%QTDIR%\plugins
+  - cmake .. -G "Ninja" -DBUILD_TESTING=OFF -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_QTPLUGINDIR=%QTDIR%\plugins
   - cmake --build . --config Release
   - cmake --build . --config Release --target install/strip
   - cd %APPVEYOR_BUILD_FOLDER%
