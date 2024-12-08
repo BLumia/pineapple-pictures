@@ -291,12 +291,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="108"/>
         <source>Pause/Resume Animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Pausa/Riprendi animazione</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="109"/>
         <source>Animation Go to Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Animazione Vai al fotogramma successivo</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="111"/>
@@ -739,12 +739,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="68"/>
         <source>Failed to set shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile impostare le scorciatoie</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
         <source>Please check if shortcuts are duplicated with existing shortcuts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Controlla se i collegamenti sono duplicati con collegamenti esistenti.</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="76"/>
