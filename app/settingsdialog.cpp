@@ -75,7 +75,8 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     static QList< QPair<Settings::DoubleClickBehavior, QString> > _dc_options {
         { Settings::DoubleClickBehavior::Ignore, tr("Do nothing") },
         { Settings::DoubleClickBehavior::Close, tr("Close the window") },
-        { Settings::DoubleClickBehavior::Maximize, tr("Toggle maximize") }
+        { Settings::DoubleClickBehavior::Maximize, tr("Toggle maximize") },
+        { Settings::DoubleClickBehavior::FullScreen, tr("Toggle fullscreen") }
     };
 
     static QList< QPair<Settings::MouseWheelBehavior, QString> > _mw_options {

@@ -15,6 +15,7 @@ public:
         Ignore,
         Close,
         Maximize,
+        FullScreen,
     };
     Q_ENUM(DoubleClickBehavior)
 

@@ -376,6 +376,10 @@ void MainWindow::mouseDoubleClickEvent(QMouseEvent *event)
         toggleMaximize();
         event->accept();
         break;
+    case Settings::DoubleClickBehavior::FullScreen:
+        toggleFullscreen();
+        event->accept();
+        break;
     case Settings::DoubleClickBehavior::Ignore:
         break;
     }
