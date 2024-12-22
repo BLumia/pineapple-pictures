@@ -668,6 +668,7 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event)
     if (event->type() == QEvent::FileOpen) {
         QFileOpenEvent *fileOpenEvent = static_cast<QFileOpenEvent *>(event);
         showUrls({fileOpenEvent->url()});
+        initWindowSize();
         return true;
     }
     return false;
