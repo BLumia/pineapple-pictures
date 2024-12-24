@@ -11,6 +11,7 @@ include (FeatureSummary)
 
 option (EXIV2_METADATA_SUPPORT "Better image metadata support via libexiv2" ON)
 option (PREFER_QT_5 "Prefer to use Qt 5" OFF)
+option (TRANSLATION_RESOURCE_EMBEDDING "Embedding .qm translation files inside resource" OFF)
 
 set (CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -115,7 +116,11 @@ add_executable (${EXE_NAME}
 )
 
 if (${QT_VERSION_MAJOR} EQUAL "6")
-    qt_add_translations(${EXE_NAME} TS_FILES ${PPIC_TS_FILES} QM_FILES_OUTPUT_VARIABLE PPIC_QM_FILES)
+    if (TRANSLATION_RESOURCE_EMBEDDING)
+        qt_add_translations(${EXE_NAME} TS_FILES ${PPIC_TS_FILES})
+    else()
+        qt_add_translations(${EXE_NAME} TS_FILES ${PPIC_TS_FILES} QM_FILES_OUTPUT_VARIABLE PPIC_QM_FILES)
+    endif()
 else()
     qt_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})
 endif()
@@ -256,19 +261,25 @@ install (
     ${INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
-if (WIN32)
+if (TRANSLATION_RESOURCE_EMBEDDING)
+    target_compile_definitions(${EXE_NAME}
+        PRIVATE TRANSLATION_RESOURCE_EMBEDDING
+    )
+elseif (WIN32)
     set (QM_FILE_INSTALL_DIR "${CMAKE_INSTALL_BINDIR}/translations")
-else ()
+else()
     set (QM_FILE_INSTALL_DIR "${CMAKE_INSTALL_FULL_DATADIR}/pineapple-pictures/translations")
     target_compile_definitions(${EXE_NAME}
-        PRIVATE QM_FILE_INSTALL_DIR=${QM_FILE_INSTALL_DIR}
+        PRIVATE QM_FILE_INSTALL_ABSOLUTE_DIR=${QM_FILE_INSTALL_DIR}
     )
-endif ()
+endif()
 
-install (
-    FILES ${PPIC_QM_FILES}
-    DESTINATION ${QM_FILE_INSTALL_DIR}
-)
+if (DEFINED QM_FILE_INSTALL_DIR)
+    install(
+        FILES ${PPIC_QM_FILES}
+        DESTINATION ${QM_FILE_INSTALL_DIR}
+    )
+endif()
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 

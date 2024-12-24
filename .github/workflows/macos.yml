@@ -16,7 +16,7 @@ jobs:
         modules: 'qtimageformats'
     - name: Run a qt project
       run: |
-        cmake . -Bbuild
+        cmake . -Bbuild -DTRANSLATION_RESOURCE_EMBEDDING=ON
         cmake --build build
     - name: Deploy
       run: |

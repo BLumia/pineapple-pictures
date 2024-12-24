@@ -13,11 +13,6 @@
 #include <QTranslator>
 #include <QUrl>
 
-// QM_FILE_INSTALL_DIR should be defined from the CMakeLists file.
-#ifndef QM_FILE_INSTALL_DIR
-#define QM_FILE_INSTALL_DIR ":/i18n/"
-#endif // QM_FILE_INSTALL_DIR
-
 int main(int argc, char *argv[])
 {
     QCoreApplication::setApplicationName("Pineapple Pictures");
@@ -30,11 +25,12 @@ int main(int argc, char *argv[])
 #endif
 
     QTranslator translator;
-    QString qmDir;
-#ifdef _WIN32
-    qmDir = QDir(QCoreApplication::applicationDirPath()).absoluteFilePath("translations");
+#if defined(TRANSLATION_RESOURCE_EMBEDDING)
+    const QString qmDir = QLatin1String(":/i18n/");
+#elif defined(QM_FILE_INSTALL_ABSOLUTE_DIR)
+    const QString qmDir = QT_STRINGIFY(QM_FILE_INSTALL_ABSOLUTE_DIR);
 #else
-    qmDir = QT_STRINGIFY(QM_FILE_INSTALL_DIR);
+    const QString qmDir = QDir(QCoreApplication::applicationDirPath()).absoluteFilePath("translations");
 #endif
     if (translator.load(QLocale(), QLatin1String("PineapplePictures"), QLatin1String("_"), qmDir)) {
         QCoreApplication::installTranslator(&translator);
