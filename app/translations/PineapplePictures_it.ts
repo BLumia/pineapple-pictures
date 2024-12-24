@@ -764,7 +764,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="79"/>
         <source>Toggle fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Attiva schermo intero</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="83"/>
