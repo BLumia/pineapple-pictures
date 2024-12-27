@@ -295,12 +295,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="108"/>
         <source>Pause/Resume Animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Canlandırmayı Duraklat/Sürdür</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="109"/>
         <source>Animation Go to Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Canlandırma Sonraki Kareye Git</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="111"/>
@@ -743,7 +743,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="68"/>
         <source>Failed to set shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Kısayollar ayarlanamadı</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
@@ -768,7 +768,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="79"/>
         <source>Toggle fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Tam ekranı aç/kapat</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="83"/>
