@@ -14,15 +14,25 @@ jobs:
       with:
         version: '6.8.1'
         modules: 'qtimageformats'
-    - name: Run a qt project
+    - name: Install Conan and Dependencies
+      id: conan
+      working-directory: ./
+      shell: bash
       run: |
-        cmake . -Bbuild -DTRANSLATION_RESOURCE_EMBEDDING=ON
-        cmake --build build
+        pip3 install wheel setuptools
+        pip3 install conan --upgrade
+        conan --version
+        conan profile detect
+        conan install --requires=exiv2/0.28.3 --generator CMakeDeps --generator CMakeToolchain --build=missing
+    - name: Build
+      run: |
+        cmake . -DTRANSLATION_RESOURCE_EMBEDDING=ON --preset conan-release
+        cmake --build --preset conan-release
     - name: Deploy
       run: |
-        macdeployqt ./build/ppic.app -dmg
+        macdeployqt ./ppic.app -dmg
         ls
     - uses: actions/upload-artifact@v4
       with:
         name: "macos-bundle"
-        path: build/*.dmg
+        path: "*.dmg"
