@@ -77,9 +77,6 @@ protected slots:
 
 protected:
     QSize sizeHint() const override;
-#ifdef Q_OS_MACOS
-    bool eventFilter(QObject *obj, QEvent *event) override;
-#endif // Q_OS_MACOS
 
 private slots:
     void on_actionOpen_triggered();

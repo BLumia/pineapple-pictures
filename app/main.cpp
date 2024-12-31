@@ -7,6 +7,10 @@
 #include "playlistmanager.h"
 #include "settings.h"
 
+#ifdef Q_OS_MACOS
+#include "fileopeneventhandler.h"
+#endif // Q_OS_MACOS
+
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDir>
@@ -54,6 +58,16 @@ int main(int argc, char *argv[])
 
     MainWindow w;
     w.show();
+
+#ifdef Q_OS_MACOS
+    FileOpenEventHandler * fileOpenEventHandler = new FileOpenEventHandler(&a);
+    a.installEventFilter(fileOpenEventHandler);
+    a.connect(fileOpenEventHandler, &FileOpenEventHandler::fileOpen, [&w](const QUrl & url){
+        if (w.isHidden()) w.showNormal();
+        w.showUrls({url});
+        w.initWindowSize();
+    });
+#endif // Q_OS_MACOS
 
     QStringList urlStrList = parser.positionalArguments();
     QList<QUrl> && urlList = PlaylistManager::convertToUrlList(urlStrList);

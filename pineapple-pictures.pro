@@ -40,7 +40,8 @@ SOURCES += \
     app/exiv2wrapper.cpp \
     app/actionmanager.cpp \
     app/playlistmanager.cpp \
-    app/shortcutedit.cpp
+    app/shortcutedit.cpp \
+    app/fileopeneventhandler.cpp
 
 HEADERS += \
     app/aboutdialog.h \
@@ -59,7 +60,8 @@ HEADERS += \
     app/exiv2wrapper.h \
     app/actionmanager.h \
     app/playlistmanager.h \
-    app/shortcutedit.h
+    app/shortcutedit.h \
+    app/fileopeneventhandler.h
 
 TRANSLATIONS = \
     app/translations/PineapplePictures.ts \

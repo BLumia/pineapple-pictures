@@ -160,10 +160,6 @@ MainWindow::MainWindow(QWidget *parent)
     installResizeCapture(m_graphicsView->viewport());
     installResizeCapture(m_gv);
     installResizeCapture(m_gv->viewport());
-
-#ifdef Q_OS_MACOS
-    qApp->installEventFilter(this);
-#endif // Q_OS_MACOS
 }
 
 MainWindow::~MainWindow()
@@ -660,20 +656,6 @@ QSize MainWindow::sizeHint() const
 {
     return QSize(710, 530);
 }
-
-#ifdef Q_OS_MACOS
-bool MainWindow::eventFilter(QObject *obj, QEvent *event)
-{
-    Q_UNUSED(obj);
-    if (event->type() == QEvent::FileOpen) {
-        QFileOpenEvent *fileOpenEvent = static_cast<QFileOpenEvent *>(event);
-        showUrls({fileOpenEvent->url()});
-        initWindowSize();
-        return true;
-    }
-    return false;
-}
-#endif // Q_OS_MACOS
 
 void MainWindow::on_actionOpen_triggered()
 {
