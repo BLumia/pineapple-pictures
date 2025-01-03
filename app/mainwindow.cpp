@@ -71,7 +71,11 @@ MainWindow::MainWindow(QWidget *parent)
     m_exitAnimationGroup->addAnimation(m_fadeOutAnimation);
     m_exitAnimationGroup->addAnimation(m_floatUpAnimation);
     connect(m_exitAnimationGroup, &QParallelAnimationGroup::finished,
+#ifdef Q_OS_MAC
+            this, &QWidget::hide);
+#else
             this, &QWidget::close);
+#endif
 
     GraphicsScene * scene = new GraphicsScene(this);
 

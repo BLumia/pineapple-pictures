@@ -63,7 +63,12 @@ int main(int argc, char *argv[])
     FileOpenEventHandler * fileOpenEventHandler = new FileOpenEventHandler(&a);
     a.installEventFilter(fileOpenEventHandler);
     a.connect(fileOpenEventHandler, &FileOpenEventHandler::fileOpen, [&w](const QUrl & url){
-        if (w.isHidden()) w.showNormal();
+        if (w.isHidden()) {
+            w.setWindowOpacity(1);
+            w.showNormal();
+        } else {
+            w.activateWindow();
+        }
         w.showUrls({url});
         w.initWindowSize();
     });
