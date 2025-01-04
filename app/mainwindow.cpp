@@ -563,7 +563,7 @@ void MainWindow::centerWindow()
             Qt::LeftToRight,
             Qt::AlignCenter,
             this->size(),
-            qApp->screenAt(QCursor::pos())->geometry()
+            qApp->screenAt(QCursor::pos())->availableGeometry()
         )
     );
 }
