@@ -2,45 +2,51 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2023-08-22 18:49中国标准时间\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-01-28 09:01+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/pineapple-pictures/"
+"appstream-metadata/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #. (itstool) path: component/name
 #: net.blumia.pineapple-pictures.metainfo.xml:7
 msgid "Pineapple Pictures"
-msgstr ""
+msgstr "அன்னாசி படங்கள்"
 
 #. (itstool) path: component/summary
 #: net.blumia.pineapple-pictures.metainfo.xml:9
 msgid "Image Viewer"
-msgstr ""
+msgstr "பட பார்வையாளர்"
 
 #. (itstool) path: description/p
 #: net.blumia.pineapple-pictures.metainfo.xml:12
 msgid "Pineapple Pictures is a lightweight and easy-to-use image viewer that comes with a handy navigation thumbnail when zoom-in, and doesn't contain any image management support."
 msgstr ""
+"அன்னாசி படங்கள் ஒரு இலகுரக மற்றும் பயன்படுத்த எளிதான பட பார்வையாளராகும், இது "
+"பெரிதாக்கும்போது ஒரு எளிமையான வழிசெலுத்தல் சிறுபடத்துடன் வருகிறது, மேலும் எந்த பட "
+"மேலாண்மை ஆதரவையும் கொண்டிருக்கவில்லை."
 
 #. (itstool) path: screenshot/caption
 #: net.blumia.pineapple-pictures.metainfo.xml:17
 msgid "Main window when an image file is loaded"
-msgstr ""
+msgstr "ஒரு படக் கோப்பு ஏற்றப்படும் போது முதன்மையான சாளரம்"
 
 #. (itstool) path: screenshot/caption
 #: net.blumia.pineapple-pictures.metainfo.xml:22
 msgid "Zooming in a raster image"
-msgstr ""
+msgstr "ராச்டர் படத்தில் பெரிதாக்குதல்"
 
 #. (itstool) path: screenshot/caption
 #: net.blumia.pineapple-pictures.metainfo.xml:27
 msgid "Zooming in a vector image"
-msgstr ""
+msgstr "ஒரு திசையன் படத்தில் பெரிதாக்குதல்"
 
 #. (itstool) path: component/developer_name
 #: net.blumia.pineapple-pictures.metainfo.xml:34
 msgid "Gary (BLumia) Wang et al."
-msgstr ""
+msgstr "கேரி (ப்ளூமியா) வாங் மற்றும் பலர்."
