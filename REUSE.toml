@@ -1,0 +1,33 @@
+version = 1
+SPDX-PackageName = "Pineapple Pictures"
+SPDX-PackageDownloadLocation = "https://github.com/BLumia/pineapple-pictures"
+
+[[annotations]]
+path = [".gitignore", "appveyor.yml", ".github/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "None"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = ["README**.md", "NEWS", "assets/**.rc", "assets/**.qrc", "dist/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "None"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = ["app/translations/**.ts", "assets/plain/translators.html"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Translators from hosted.weblate.org"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = "assets/icons/**.svg"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2022 Gary Wang"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = "assets/icons/app-icon.**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2020 Lovelyblack"
+SPDX-License-Identifier = "MIT"
