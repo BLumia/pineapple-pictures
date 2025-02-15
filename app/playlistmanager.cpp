@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Gary Wang <git@blumia.net>
+// SPDX-FileCopyrightText: 2025 Gary Wang <git@blumia.net>
 //
 // SPDX-License-Identifier: MIT
 
@@ -16,9 +16,7 @@ PlaylistModel::PlaylistModel(QObject *parent)
 }
 
 PlaylistModel::~PlaylistModel()
-{
-
-}
+= default;
 
 void PlaylistModel::setPlaylist(const QList<QUrl> &urls)
 {
@@ -29,7 +27,7 @@ void PlaylistModel::setPlaylist(const QList<QUrl> &urls)
 
 QModelIndex PlaylistModel::loadPlaylist(const QList<QUrl> & urls)
 {
-    if (urls.isEmpty()) return QModelIndex();
+    if (urls.isEmpty()) return {};
     if (urls.count() == 1) {
         return loadPlaylist(urls.constFirst());
     } else {
@@ -128,7 +126,7 @@ int PlaylistModel::rowCount(const QModelIndex &parent) const
 
 QVariant PlaylistModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid()) return QVariant();
+    if (!index.isValid()) return {};
 
     switch (role) {
     case Qt::DisplayRole:
@@ -137,7 +135,7 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
         return m_playlist.at(index.row());
     }
 
-    return QVariant();
+    return {};
 }
 
 PlaylistManager::PlaylistManager(QObject *parent)
@@ -196,7 +194,7 @@ int PlaylistManager::totalCount() const
 QModelIndex PlaylistManager::previousIndex() const
 {
     int count = totalCount();
-    if (count == 0) return QModelIndex();
+    if (count == 0) return {};
 
     return m_model.index(m_currentIndex - 1 < 0 ? count - 1 : m_currentIndex - 1);
 }
@@ -204,7 +202,7 @@ QModelIndex PlaylistManager::previousIndex() const
 QModelIndex PlaylistManager::nextIndex() const
 {
     int count = totalCount();
-    if (count == 0) return QModelIndex();
+    if (count == 0) return {};
 
     return m_model.index(m_currentIndex + 1 == count ? 0 : m_currentIndex + 1);
 }

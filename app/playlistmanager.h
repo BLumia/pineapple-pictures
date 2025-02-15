@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Gary Wang <git@blumia.net>
+// SPDX-FileCopyrightText: 2025 Gary Wang <git@blumia.net>
 //
 // SPDX-License-Identifier: MIT
 
@@ -18,7 +18,7 @@ public:
     Q_PROPERTY(QStringList autoLoadFilterSuffixes MEMBER m_autoLoadSuffixes NOTIFY autoLoadFilterSuffixesChanged)
 
     explicit PlaylistModel(QObject *parent = nullptr);
-    ~PlaylistModel();
+    ~PlaylistModel() override;
 
     void setPlaylist(const QList<QUrl> & urls);
     QModelIndex loadPlaylist(const QList<QUrl> & urls);
