@@ -6,6 +6,7 @@
   <name xml:lang="ja">Pineapple Pictures</name>
   <name xml:lang="nl">Pineapple Afbeeldingen</name>
   <name xml:lang="ru">Pineapple Pictures</name>
+  <name xml:lang="ta">அன்னாசி படங்கள்</name>
   <name xml:lang="uk">Pineapple Pictures</name>
   <name xml:lang="zh-CN">菠萝看图</name>
   <summary>Image Viewer</summary>
@@ -13,6 +14,7 @@
   <summary xml:lang="ja">画像ビューアー</summary>
   <summary xml:lang="nl">Afbeeldingsweergave</summary>
   <summary xml:lang="ru">Просмотр изображений</summary>
+  <summary xml:lang="ta">பட பார்வையாளர்</summary>
   <summary xml:lang="uk">Переглядач зображень</summary>
   <summary xml:lang="zh-CN">图像查看器</summary>
   <metadata_license>CC0-1.0</metadata_license>
@@ -23,6 +25,7 @@
     <p xml:lang="ja">Pineapple Picturesは、ズームイン時に便利なナビゲーションサムネイルを備えた軽量で使いやすい画像ビューアです。画像管理のサポートは含まれていません。</p>
     <p xml:lang="nl">Pineapple Afbeeldingen is een licht en eenvoudig te gebruiken afbeeldingsweergaveprogramma met miniatuurnavigatie na inzoomen. Het programma heeft echter geen fotobeheermogelĳkheid.</p>
     <p xml:lang="ru">Pineapple Pictures - это легкий и простой в использовании просмотрщик изображений, оснащенный удобной навигацией по миниатюрам при увеличении масштаба и не содержащий никакой поддержки управления изображениями.</p>
+    <p xml:lang="ta">அன்னாசி படங்கள் ஒரு இலகுரக மற்றும் பயன்படுத்த எளிதான பட பார்வையாளராகும், இது பெரிதாக்கும்போது ஒரு எளிமையான வழிசெலுத்தல் சிறுபடத்துடன் வருகிறது, மேலும் எந்த பட மேலாண்மை ஆதரவையும் கொண்டிருக்கவில்லை.</p>
     <p xml:lang="uk">Pineapple Pictures – це легкий і простий у використанні переглядач зображень, який постачається зі зручною навігаційною мініатюрою при збільшенні масштабу і не містить жодної підтримки керування зображеннями.</p>
     <p xml:lang="zh-CN">菠萝看图是一个轻量级易用的图像查看器，在图片放大时提供了方便的鸟瞰导航功能，且不包含任何图片管理功能。</p>
   </description>
@@ -48,6 +51,7 @@
       <caption xml:lang="ja">画像ファイル読み込み時のメインウィンドウ</caption>
       <caption xml:lang="nl">Hoofdvenster na het laden van een afbeelding</caption>
       <caption xml:lang="ru">Основное окно после загрузки файла изображения</caption>
+      <caption xml:lang="ta">ஒரு படக் கோப்பு ஏற்றப்படும் போது முதன்மையான சாளரம்</caption>
       <caption xml:lang="uk">Головне вікно після завантаження файлу зображення</caption>
       <caption xml:lang="zh-CN">加载图片后的主窗口</caption>
       <image type="source" width="1503" height="640">https://pineapple-pictures.sourceforge.io/ppic-gui-static.png</image>
@@ -58,6 +62,7 @@
       <caption xml:lang="ja">ラスター画像の拡大</caption>
       <caption xml:lang="nl">Inzoomen op een roosterafbeelding</caption>
       <caption xml:lang="ru">Масштабирование растрового изображения</caption>
+      <caption xml:lang="ta">ராச்டர் படத்தில் பெரிதாக்குதல்</caption>
       <caption xml:lang="uk">Масштабування растрового зображення</caption>
       <caption xml:lang="zh-CN">放大浏览位图</caption>
       <image type="source" width="771" height="553">https://pineapple-pictures.sourceforge.io/ppic-zoom-raster.png</image>
@@ -68,6 +73,7 @@
       <caption xml:lang="ja">ベクター画像の拡大</caption>
       <caption xml:lang="nl">Inzoomen op een vectorafbeelding</caption>
       <caption xml:lang="ru">Масштабирование векторного изображения</caption>
+      <caption xml:lang="ta">ஒரு திசையன் படத்தில் பெரிதாக்குதல்</caption>
       <caption xml:lang="uk">Масштабування векторного зображення</caption>
       <caption xml:lang="zh-CN">放大浏览矢量图</caption>
       <image type="source" width="771" height="553">https://pineapple-pictures.sourceforge.io/ppic-zoom-svg.png</image>
