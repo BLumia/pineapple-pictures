@@ -40,8 +40,8 @@ if (${QT_VERSION_MAJOR} EQUAL "6")
 endif ()
 
 if (EXIV2_METADATA_SUPPORT)
-    find_package(Exiv2)
-    set_package_properties(Exiv2 PROPERTIES
+    find_package(exiv2)
+    set_package_properties(exiv2 PROPERTIES
         URL "https://www.exiv2.org"
         DESCRIPTION "image metadata support"
         TYPE OPTIONAL
@@ -134,7 +134,7 @@ if (${QT_VERSION_MAJOR} EQUAL "6")
     target_link_libraries (${EXE_NAME} Qt::SvgWidgets)
 endif ()
 
-if (Exiv2_FOUND)
+if (exiv2_FOUND)
     if(NOT TARGET Exiv2::exiv2lib AND TARGET exiv2lib)
         # for exiv2 0.27.x
         add_library(Exiv2::exiv2lib ALIAS exiv2lib)
@@ -143,7 +143,7 @@ if (Exiv2_FOUND)
         Exiv2::exiv2lib
     )
     target_compile_definitions(${EXE_NAME} PRIVATE
-        HAVE_EXIV2_VERSION="${Exiv2_VERSION}"
+        HAVE_EXIV2_VERSION="${exiv2_VERSION}"
     )
 endif ()
 
