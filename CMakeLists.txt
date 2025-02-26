@@ -1,13 +1,13 @@
-# SPDX-FileCopyrightText: 2022 - 2024 Gary Wang <git@blumia.net>
+# SPDX-FileCopyrightText: 2022 - 2025 Gary Wang <git@blumia.net>
 #
 # SPDX-License-Identifier: MIT
 
 cmake_minimum_required(VERSION 3.16)
 
-project(pineapple-pictures VERSION 0.9.1) # don't forget to update NEWS file and AppStream metadata.
+project(pineapple-pictures VERSION 0.9.2) # don't forget to update NEWS file and AppStream metadata.
 
-include (GNUInstallDirs)
-include (FeatureSummary)
+include(GNUInstallDirs)
+include(FeatureSummary)
 
 option (EXIV2_METADATA_SUPPORT "Better image metadata support via libexiv2" ON)
 option (PREFER_QT_5 "Prefer to use Qt 5" OFF)
@@ -44,7 +44,7 @@ if (EXIV2_METADATA_SUPPORT)
     set_package_properties(exiv2 PROPERTIES
         URL "https://www.exiv2.org"
         DESCRIPTION "image metadata support"
-        TYPE OPTIONAL
+        TYPE RECOMMENDED
         PURPOSE "Bring better image metadata support"
     )
 endif ()

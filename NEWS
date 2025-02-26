@@ -1,3 +1,17 @@
+Version 0.9.2
+~~~~~~~~~~~~~
+Released: 2025-03-05
+
+Bugfixes:
+ * Refer to the right exiv2 CMake module so it can be found on Linux
+
+Miscellaneous:
+ * Convert DEP5 to REUSE.toml for better REUSE compliance
+ * Update translations
+
+Contributors:
+ Pino Toscano, TamilNeram
+
 Version 0.9.1
 ~~~~~~~~~~~~~
 Released: 2025-01-25

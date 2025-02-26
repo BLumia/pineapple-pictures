@@ -80,6 +80,21 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" version="0.9.2" date="2025-03-05T00:00:00Z">
+      <description>
+        <p>This release fixes the following bug:</p>
+        <ul>
+          <li>Refer to the right exiv2 CMake module so it can be found on Linux</li>
+        </ul>
+        <p>This release includes the following changes:</p>
+        <ul>
+          <li>Convert DEP5 to REUSE.toml for better REUSE compliance</li>
+          <li>Update translations</li>
+        </ul>
+        <p>With contributions from:</p>
+        <p>Pino Toscano, TamilNeram</p>
+      </description>
+    </release>
     <release type="stable" version="0.9.1" date="2025-01-25T00:00:00Z">
       <description>
         <p>This release adds the following features:</p>
