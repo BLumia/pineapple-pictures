@@ -105,8 +105,8 @@ ShortcutEdit::ShortcutEdit(QWidget *parent)
 
     connect(this, &ShortcutEdit::shortcutsChanged, this, [=](){
         QStringList shortcutTexts;
-        for (const QKeySequence & shortcut : m_shortcuts) {
-            shortcutTexts.append(shortcut.toString());
+        for (const QKeySequence & shortcut : std::as_const(m_shortcuts)) {
+            shortcutTexts.append(shortcut.toString(QKeySequence::NativeText));
         }
         m_shortcutsLabel->setText(shortcutTexts.isEmpty() ? tr("No shortcuts") : shortcutTexts.join(", "));
         m_shortcutsLabel->setDisabled(shortcutTexts.isEmpty());
