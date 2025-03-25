@@ -291,12 +291,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="108"/>
         <source>Pause/Resume Animation</source>
-        <translation type="unfinished"></translation>
+        <translation>一時停止 / 再開のアニメーション</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="109"/>
         <source>Animation Go to Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>次のフレームへ移動するアニメーション</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="111"/>
@@ -306,12 +306,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="112"/>
         <source>Fit to view</source>
-        <translation type="unfinished"></translation>
+        <translation>表示に合わせる</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="113"/>
         <source>Fit to width</source>
-        <translation type="unfinished"></translation>
+        <translation>横幅に合わせる</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="116"/>
@@ -724,27 +724,27 @@
     <message>
         <location filename="../settingsdialog.cpp" line="37"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>オプション</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="49"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>ショートカット</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="59"/>
         <source>Editing shortcuts for action &quot;%1&quot;:</source>
-        <translation type="unfinished"></translation>
+        <translation>「%1」のショートカットを編集します:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="68"/>
         <source>Failed to set shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>ショートカットの設定に失敗しました</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
         <source>Please check if shortcuts are duplicated with existing shortcuts.</source>
-        <translation type="unfinished"></translation>
+        <translation>既存のショートカットと重複していないことを確認してください。</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="76"/>
@@ -764,7 +764,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="79"/>
         <source>Toggle fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>フルスクリーン表示に切り替える</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="83"/>
@@ -818,7 +818,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="120"/>
         <source>Use light-color checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation>明るい色の格子模様を使用する</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="121"/>
@@ -846,7 +846,7 @@
     <message>
         <location filename="../shortcutedit.cpp" line="111"/>
         <source>No shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>ショートカットなし</translation>
     </message>
 </context>
 <context>
@@ -854,7 +854,7 @@
     <message>
         <location filename="../shortcutedit.cpp" line="77"/>
         <source>Shortcut #%1</source>
-        <translation type="unfinished"></translation>
+        <translation>ショートカット #%1</translation>
     </message>
 </context>
 <context>
