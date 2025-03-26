@@ -28,6 +28,7 @@ public:
     enum WindowSizeBehavior {
         Auto,
         Maximized,
+        Windowed,
     };
     Q_ENUM(WindowSizeBehavior)
 

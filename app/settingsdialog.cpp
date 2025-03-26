@@ -86,7 +86,8 @@ SettingsDialog::SettingsDialog(QWidget *parent)
 
     static QList< QPair<Settings::WindowSizeBehavior, QString> > _iws_options {
         { Settings::WindowSizeBehavior::Auto, tr("Auto size") },
-        { Settings::WindowSizeBehavior::Maximized, tr("Maximized") }
+        { Settings::WindowSizeBehavior::Maximized, tr("Maximized") },
+        { Settings::WindowSizeBehavior::Windowed, tr("Windowed") }
     };
 
     static QList< QPair<Qt::HighDpiScaleFactorRoundingPolicy, QString> > _hidpi_options {

@@ -193,6 +193,9 @@ void MainWindow::initWindowSize()
     case Settings::WindowSizeBehavior::Maximized:
         showMaximized();
         break;
+    case Settings::WindowSizeBehavior::Windowed:
+        showNormal();
+        break;
     default:
         adjustWindowSizeBySceneRect();
         break;
