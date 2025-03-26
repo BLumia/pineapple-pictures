@@ -174,7 +174,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../mainwindow.cpp" line="269"/>
+        <location filename="../mainwindow.cpp" line="272"/>
         <location filename="../graphicsscene.cpp" line="100"/>
         <source>Drag image here</source>
         <translation>படத்தை இங்கே இழுக்கவும்</translation>
@@ -198,37 +198,37 @@
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.cpp" line="180"/>
-        <location filename="../mainwindow.cpp" line="540"/>
+        <location filename="../mainwindow.cpp" line="543"/>
         <source>File url list is empty</source>
         <translation>கோப்பு முகவரி பட்டியல் காலியாக உள்ளது</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="438"/>
+        <location filename="../mainwindow.cpp" line="441"/>
         <source>&amp;Copy</source>
         <translation>நகலெடு (&amp;c)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="548"/>
+        <location filename="../mainwindow.cpp" line="551"/>
         <source>Image data is invalid</source>
         <translation>படத் தரவு தவறானது</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="555"/>
+        <location filename="../mainwindow.cpp" line="558"/>
         <source>Not supported mimedata: %1</source>
         <translation>மைமெடாட்டாவை ஆதரிக்கவில்லை: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="764"/>
+        <location filename="../mainwindow.cpp" line="754"/>
         <source>Image From Clipboard</source>
         <translation>கிளிப்போர்டிலிருந்து படம்</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="782"/>
+        <location filename="../mainwindow.cpp" line="772"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
         <translation>பின் மறுசுழற்சி செய்ய &quot;%1&quot; ஐ நகர்த்த விரும்புகிறீர்களா?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="787"/>
+        <location filename="../mainwindow.cpp" line="777"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
         <translation>குப்பைக்கு நகர்வது தோல்வியுற்றது, இது கோப்பு இசைவு சிக்கல், கோப்பு முறைமை வரம்பு அல்லது இயங்குதள வரம்பு ஆகியவற்றால் ஏற்படலாம்.</translation>
     </message>
@@ -347,7 +347,7 @@
         <translation>அடுத்த படம்</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="781"/>
+        <location filename="../mainwindow.cpp" line="771"/>
         <location filename="../actionmanager.cpp" line="117"/>
         <source>Move to Trash</source>
         <translation>குப்பைக்கு நகர்த்தவும்</translation>
@@ -775,56 +775,61 @@
         <translation>அதிகபட்சம்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="93"/>
+        <location filename="../settingsdialog.cpp" line="90"/>
+        <source>Windowed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="94"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
         <translation>சுற்று (முழு எண் அளவிடுதல்)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="94"/>
+        <location filename="../settingsdialog.cpp" line="95"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
         <translation>சீல் (முழு எண் அளவிடுதல்)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="95"/>
+        <location filename="../settingsdialog.cpp" line="96"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
         <translation>மாடி (முழு எண் அளவிடுதல்)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="96"/>
+        <location filename="../settingsdialog.cpp" line="97"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
         <translation>கணினியைப் பின்பற்றவும் (பகுதியளவு அளவிடுதல்)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="119"/>
+        <location filename="../settingsdialog.cpp" line="120"/>
         <source>Stay on top when start-up</source>
         <translation>தொடக்கத்தில் இருக்கும்போது மேலே இருங்கள்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="120"/>
+        <location filename="../settingsdialog.cpp" line="121"/>
         <source>Use light-color checkerboard</source>
         <translation>ஒளி-வண்ண செக்கர்போர்டைப் பயன்படுத்தவும்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="121"/>
+        <location filename="../settingsdialog.cpp" line="122"/>
         <source>Double-click behavior</source>
         <translation>நடத்தை இருமுறை சொடுக்கு செய்யவும்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="122"/>
+        <location filename="../settingsdialog.cpp" line="123"/>
         <source>Mouse wheel behavior</source>
         <translation>சுட்டி சக்கர நடத்தை</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="123"/>
+        <location filename="../settingsdialog.cpp" line="124"/>
         <source>Default window size</source>
         <translation>இயல்புநிலை சாளர அளவு</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="124"/>
+        <location filename="../settingsdialog.cpp" line="125"/>
         <source>HiDPI scale factor rounding policy</source>
         <translation>HIDPI அளவிலான காரணி ரவுண்டிங் கொள்கை</translation>
     </message>

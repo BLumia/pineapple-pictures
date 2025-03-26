@@ -174,7 +174,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../mainwindow.cpp" line="269"/>
+        <location filename="../mainwindow.cpp" line="272"/>
         <location filename="../graphicsscene.cpp" line="100"/>
         <source>Drag image here</source>
         <translation>ここに画像をドラッグしてください</translation>
@@ -210,37 +210,37 @@
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.cpp" line="180"/>
-        <location filename="../mainwindow.cpp" line="540"/>
+        <location filename="../mainwindow.cpp" line="543"/>
         <source>File url list is empty</source>
         <translation>ファイルurlリストがエンプティーです</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="438"/>
+        <location filename="../mainwindow.cpp" line="441"/>
         <source>&amp;Copy</source>
         <translation>コピー(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="548"/>
+        <location filename="../mainwindow.cpp" line="551"/>
         <source>Image data is invalid</source>
         <translation>画像のデータが無効です</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="555"/>
+        <location filename="../mainwindow.cpp" line="558"/>
         <source>Not supported mimedata: %1</source>
         <translation>無効なmimedata: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="764"/>
+        <location filename="../mainwindow.cpp" line="754"/>
         <source>Image From Clipboard</source>
         <translation>クリップボードからの画像</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="782"/>
+        <location filename="../mainwindow.cpp" line="772"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
         <translation>「%1」をゴミ箱に移動しますか？</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="787"/>
+        <location filename="../mainwindow.cpp" line="777"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
         <translation>ゴミ箱への移動に失敗しました。ファイルのアクセス許可や、ファイルシステムの制限、プラットフォームの制限などを確認してください。</translation>
     </message>
@@ -359,7 +359,7 @@
         <translation>次の画像</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="781"/>
+        <location filename="../mainwindow.cpp" line="771"/>
         <location filename="../actionmanager.cpp" line="117"/>
         <source>Move to Trash</source>
         <translation>ゴミ箱へ移動する</translation>
@@ -787,56 +787,61 @@
         <translation>最大化</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="93"/>
+        <location filename="../settingsdialog.cpp" line="90"/>
+        <source>Windowed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="94"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
         <translation>四捨五入 (整数スケーリング)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="94"/>
+        <location filename="../settingsdialog.cpp" line="95"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
         <translation>切り上げ (整数スケーリング)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="95"/>
+        <location filename="../settingsdialog.cpp" line="96"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
         <translation>切り捨て (整数スケーリング)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="96"/>
+        <location filename="../settingsdialog.cpp" line="97"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
         <translation>システム設定に従う (小数スケーリング)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="119"/>
+        <location filename="../settingsdialog.cpp" line="120"/>
         <source>Stay on top when start-up</source>
         <translation>起動時に最前面に表示する</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="120"/>
+        <location filename="../settingsdialog.cpp" line="121"/>
         <source>Use light-color checkerboard</source>
         <translation>明るい色の格子模様を使用する</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="121"/>
+        <location filename="../settingsdialog.cpp" line="122"/>
         <source>Double-click behavior</source>
         <translation>ダブルクリックの動作</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="122"/>
+        <location filename="../settingsdialog.cpp" line="123"/>
         <source>Mouse wheel behavior</source>
         <translation>マウスホイールの動作</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="123"/>
+        <location filename="../settingsdialog.cpp" line="124"/>
         <source>Default window size</source>
         <translation>既定のウィンドウサイズ</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="124"/>
+        <location filename="../settingsdialog.cpp" line="125"/>
         <source>HiDPI scale factor rounding policy</source>
         <translation>高DPIスケーリングの四捨五入方法</translation>
     </message>

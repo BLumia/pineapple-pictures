@@ -178,7 +178,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../mainwindow.cpp" line="269"/>
+        <location filename="../mainwindow.cpp" line="272"/>
         <location filename="../graphicsscene.cpp" line="100"/>
         <source>Drag image here</source>
         <translation>Arrastre una imagen aquí</translation>
@@ -214,37 +214,37 @@
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.cpp" line="180"/>
-        <location filename="../mainwindow.cpp" line="540"/>
+        <location filename="../mainwindow.cpp" line="543"/>
         <source>File url list is empty</source>
         <translation>La lista de ubicaciones está vacía</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="438"/>
+        <location filename="../mainwindow.cpp" line="441"/>
         <source>&amp;Copy</source>
         <translation>&amp;Copiar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="548"/>
+        <location filename="../mainwindow.cpp" line="551"/>
         <source>Image data is invalid</source>
         <translation>Los datos de la imagen no son válidos</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="555"/>
+        <location filename="../mainwindow.cpp" line="558"/>
         <source>Not supported mimedata: %1</source>
         <translation>El tipo MIME no es compatible: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="764"/>
+        <location filename="../mainwindow.cpp" line="754"/>
         <source>Image From Clipboard</source>
         <translation>Imagen del portapapeles</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="782"/>
+        <location filename="../mainwindow.cpp" line="772"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
         <translation>¿Estás seguro de que quieres mover &quot;%1&quot; a la papelera de reciclaje?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="787"/>
+        <location filename="../mainwindow.cpp" line="777"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
         <translation>Mover a la papelera ha fallado, puede deberse a un problema con los permisos de los archivos, una limitación del sistema de archivos o una limitación de la plataforma.</translation>
     </message>
@@ -363,7 +363,7 @@
         <translation>Imagen siguiente</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="781"/>
+        <location filename="../mainwindow.cpp" line="771"/>
         <location filename="../actionmanager.cpp" line="117"/>
         <source>Move to Trash</source>
         <translation>Mover a la papelera</translation>
@@ -791,56 +791,61 @@
         <translation>Maximizar</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="93"/>
+        <location filename="../settingsdialog.cpp" line="90"/>
+        <source>Windowed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="94"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
         <translation>Redondeo (escala de enteros)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="94"/>
+        <location filename="../settingsdialog.cpp" line="95"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
         <translation>Ceil (redondear enteros hacia arriba)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="95"/>
+        <location filename="../settingsdialog.cpp" line="96"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
         <translation>Floor (redondear enteros hacia abajo)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="96"/>
+        <location filename="../settingsdialog.cpp" line="97"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
         <translation>Redondeo (redondear los enteros)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="119"/>
+        <location filename="../settingsdialog.cpp" line="120"/>
         <source>Stay on top when start-up</source>
         <translation>Mantener encima al inicio</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="120"/>
+        <location filename="../settingsdialog.cpp" line="121"/>
         <source>Use light-color checkerboard</source>
         <translation>Utilice un tablero de ajedrez de color claro</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="121"/>
+        <location filename="../settingsdialog.cpp" line="122"/>
         <source>Double-click behavior</source>
         <translation>Comportamiento del doble clic</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="122"/>
+        <location filename="../settingsdialog.cpp" line="123"/>
         <source>Mouse wheel behavior</source>
         <translation>Comportamiento de la rueda del ratón</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="123"/>
+        <location filename="../settingsdialog.cpp" line="124"/>
         <source>Default window size</source>
         <translation>Tamaño de la ventana por defecto</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="124"/>
+        <location filename="../settingsdialog.cpp" line="125"/>
         <source>HiDPI scale factor rounding policy</source>
         <translation>Política de redondeo del factor de escala HiDPI</translation>
     </message>

@@ -174,7 +174,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../mainwindow.cpp" line="269"/>
+        <location filename="../mainwindow.cpp" line="272"/>
         <location filename="../graphicsscene.cpp" line="100"/>
         <source>Drag image here</source>
         <translation>Arrossegueu una imatge aquí</translation>
@@ -210,37 +210,37 @@
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.cpp" line="180"/>
-        <location filename="../mainwindow.cpp" line="540"/>
+        <location filename="../mainwindow.cpp" line="543"/>
         <source>File url list is empty</source>
         <translation>La llista d&apos;ubicacions és buida</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="438"/>
+        <location filename="../mainwindow.cpp" line="441"/>
         <source>&amp;Copy</source>
         <translation>&amp;Copia</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="548"/>
+        <location filename="../mainwindow.cpp" line="551"/>
         <source>Image data is invalid</source>
         <translation>Les dades de la imatge no són vàlides</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="555"/>
+        <location filename="../mainwindow.cpp" line="558"/>
         <source>Not supported mimedata: %1</source>
         <translation>El tipus MIME no és compatible: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="764"/>
+        <location filename="../mainwindow.cpp" line="754"/>
         <source>Image From Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="782"/>
+        <location filename="../mainwindow.cpp" line="772"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="787"/>
+        <location filename="../mainwindow.cpp" line="777"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -359,7 +359,7 @@
         <translation>Imatge següent</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="781"/>
+        <location filename="../mainwindow.cpp" line="771"/>
         <location filename="../actionmanager.cpp" line="117"/>
         <source>Move to Trash</source>
         <translation type="unfinished"></translation>
@@ -787,56 +787,61 @@
         <translation>Maximitza</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="93"/>
+        <location filename="../settingsdialog.cpp" line="90"/>
+        <source>Windowed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="94"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="94"/>
+        <location filename="../settingsdialog.cpp" line="95"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="95"/>
+        <location filename="../settingsdialog.cpp" line="96"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="96"/>
+        <location filename="../settingsdialog.cpp" line="97"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="119"/>
+        <location filename="../settingsdialog.cpp" line="120"/>
         <source>Stay on top when start-up</source>
         <translation>Mantingues a sobre a l&apos;inici</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="120"/>
+        <location filename="../settingsdialog.cpp" line="121"/>
         <source>Use light-color checkerboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="121"/>
+        <location filename="../settingsdialog.cpp" line="122"/>
         <source>Double-click behavior</source>
         <translation>Comportament del doble clic</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="122"/>
+        <location filename="../settingsdialog.cpp" line="123"/>
         <source>Mouse wheel behavior</source>
         <translation>Comportament de la roda del ratolí</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="123"/>
+        <location filename="../settingsdialog.cpp" line="124"/>
         <source>Default window size</source>
         <translation>Mida de la finestra per defecte</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="124"/>
+        <location filename="../settingsdialog.cpp" line="125"/>
         <source>HiDPI scale factor rounding policy</source>
         <translation type="unfinished"></translation>
     </message>
