@@ -236,17 +236,17 @@
     <message>
         <location filename="../mainwindow.cpp" line="754"/>
         <source>Image From Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Afbeelding van klembord</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="772"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
-        <translation type="unfinished"></translation>
+        <translation>Weet u zeker dat u “%1” naar de prullenbak wilt verplaatsen?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="777"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Het bestand kan niet naar de prullenbak worden verplaatst, mogelijk door een rechtenprobleem of systeembeperking.</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="114"/>
@@ -295,12 +295,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="108"/>
         <source>Pause/Resume Animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Animatie pauzeren/hervatten</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="109"/>
         <source>Animation Go to Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Ga naar volgend animatieframe</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="111"/>
@@ -310,12 +310,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="112"/>
         <source>Fit to view</source>
-        <translation type="unfinished"></translation>
+        <translation>Inpassen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="113"/>
         <source>Fit to width</source>
-        <translation type="unfinished"></translation>
+        <translation>Aanpassen aan breedte</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="116"/>
@@ -350,7 +350,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="103"/>
         <source>Rotate left</source>
-        <translation type="unfinished"></translation>
+        <translation>Naar links draaien</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="105"/>
@@ -366,7 +366,7 @@
         <location filename="../mainwindow.cpp" line="771"/>
         <location filename="../actionmanager.cpp" line="117"/>
         <source>Move to Trash</source>
-        <translation type="unfinished"></translation>
+        <translation>Verplaatsen naar prullenbak</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="121"/>
@@ -728,27 +728,27 @@
     <message>
         <location filename="../settingsdialog.cpp" line="37"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opties</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="49"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Sneltoetsen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="59"/>
         <source>Editing shortcuts for action &quot;%1&quot;:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bewerken van sneltoetsen voor actie ‘%1’:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="68"/>
         <source>Failed to set shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Instellen mislukt</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="69"/>
         <source>Please check if shortcuts are duplicated with existing shortcuts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Controleer of de gekozen sneltoetsen niet al in gebruik zijn.</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="76"/>
@@ -768,7 +768,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="79"/>
         <source>Toggle fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Schermvullende weergave aan/uit</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="83"/>
@@ -793,7 +793,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="90"/>
         <source>Windowed</source>
-        <translation type="unfinished"></translation>
+        <translation>Venster</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="94"/>
@@ -827,7 +827,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="121"/>
         <source>Use light-color checkerboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Licht schaakbordpatroon gebruiken</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="122"/>
@@ -855,7 +855,7 @@
     <message>
         <location filename="../shortcutedit.cpp" line="111"/>
         <source>No shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen sneltoetsen</translation>
     </message>
 </context>
 <context>
@@ -863,7 +863,7 @@
     <message>
         <location filename="../shortcutedit.cpp" line="77"/>
         <source>Shortcut #%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sneltoets #%1</translation>
     </message>
 </context>
 <context>
@@ -876,7 +876,7 @@
     <message>
         <location filename="../main.cpp" line="46"/>
         <source>List supported image format suffixes, and quit program.</source>
-        <translation type="unfinished"></translation>
+        <translation>Toon een lijst met ondersteunde afbeeldingsformaten en sluit af.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="50"/>
