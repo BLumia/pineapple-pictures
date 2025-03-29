@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2022 Gary Wang <wzc782970009@gmail.com>
+// SPDX-FileCopyrightText: 2025 Gary Wang <git@blumia.net>
 //
 // SPDX-License-Identifier: MIT
 
@@ -20,6 +20,7 @@
 QT_BEGIN_NAMESPACE
 class QGraphicsOpacityEffect;
 class QGraphicsView;
+class QFileSystemWatcher;
 QT_END_NAMESPACE
 
 class ActionManager;
@@ -112,6 +113,9 @@ private slots:
     void on_actionQuitApp_triggered();
 
 private:
+    bool updateFileWatcher(const QString & basePath = QString());
+
+private:
     ActionManager *m_am;
     PlaylistManager *m_pm;
 
@@ -119,6 +123,7 @@ private:
     QPropertyAnimation *m_fadeOutAnimation;
     QPropertyAnimation *m_floatUpAnimation;
     QParallelAnimationGroup *m_exitAnimationGroup;
+    QFileSystemWatcher *m_fileSystemWatcher;
     ToolButton *m_closeButton;
     ToolButton *m_prevButton;
     ToolButton *m_nextButton;

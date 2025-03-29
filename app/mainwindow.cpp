@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2022 Gary Wang <wzc782970009@gmail.com>
+// SPDX-FileCopyrightText: 2025 Gary Wang <git@blumia.net>
 //
 // SPDX-License-Identifier: MIT
 
@@ -32,6 +32,7 @@
 #include <QFile>
 #include <QTimer>
 #include <QFileDialog>
+#include <QFileSystemWatcher>
 #include <QStandardPaths>
 #include <QStringBuilder>
 #include <QProcess>
@@ -47,6 +48,7 @@ MainWindow::MainWindow(QWidget *parent)
     : FramelessWindow(parent)
     , m_am(new ActionManager)
     , m_pm(new PlaylistManager(this))
+    , m_fileSystemWatcher(new QFileSystemWatcher(this))
 {
     if (Settings::instance()->stayOnTop()) {
         this->setWindowFlag(Qt::WindowStaysOnTopHint);
@@ -146,6 +148,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(m_pm->model(), &PlaylistModel::modelReset, this, std::bind(&MainWindow::galleryCurrent, this, false, false));
     connect(m_pm, &PlaylistManager::currentIndexChanged, this, std::bind(&MainWindow::galleryCurrent, this, true, false));
+
+    connect(m_fileSystemWatcher, &QFileSystemWatcher::fileChanged, this, std::bind(&MainWindow::galleryCurrent, this, false, true));
 
     QShortcut * fullscreenShorucut = new QShortcut(QKeySequence(QKeySequence::FullScreen), this);
     connect(fullscreenShorucut, &QShortcut::activated,
@@ -265,12 +269,17 @@ void MainWindow::galleryNext()
 void MainWindow::galleryCurrent(bool showLoadImageHintWhenEmpty, bool reloadImage)
 {
     QModelIndex index = m_pm->curIndex();
+    bool shouldResetfileWatcher = true;
     if (index.isValid()) {
-        if (reloadImage) m_graphicsView->showFileFromPath(m_pm->localFileByIndex(index));
+        const QString & localFilePath(m_pm->localFileByIndex(index));
+        if (reloadImage) m_graphicsView->showFileFromPath(localFilePath);
+        shouldResetfileWatcher = !updateFileWatcher(localFilePath);
         setWindowTitle(m_pm->urlByIndex(index).fileName());
     } else if (showLoadImageHintWhenEmpty && m_pm->totalCount() <= 0) {
         m_graphicsView->showText(QCoreApplication::translate("GraphicsScene", "Drag image here"));
     }
+
+    if (shouldResetfileWatcher) updateFileWatcher();
 }
 
 QStringList MainWindow::supportedImageFormats()
@@ -903,4 +912,11 @@ void MainWindow::on_actionLocateInFileManager_triggered()
 void MainWindow::on_actionQuitApp_triggered()
 {
     quitAppAction(false);
+}
+
+bool MainWindow::updateFileWatcher(const QString &basePath)
+{
+    m_fileSystemWatcher->removePaths(m_fileSystemWatcher->files());
+    if (!basePath.isEmpty()) return m_fileSystemWatcher->addPath(basePath);
+    return false;
 }
