@@ -149,7 +149,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_pm->model(), &PlaylistModel::modelReset, this, std::bind(&MainWindow::galleryCurrent, this, false, false));
     connect(m_pm, &PlaylistManager::currentIndexChanged, this, std::bind(&MainWindow::galleryCurrent, this, true, false));
 
-    connect(m_fileSystemWatcher, &QFileSystemWatcher::fileChanged, this, std::bind(&MainWindow::galleryCurrent, this, false, true));
+    connect(m_fileSystemWatcher, &QFileSystemWatcher::fileChanged, this, [this](){
+        QTimer::singleShot(500, this, std::bind(&MainWindow::galleryCurrent, this, false, true));
+    });
 
     QShortcut * fullscreenShorucut = new QShortcut(QKeySequence(QKeySequence::FullScreen), this);
     connect(fullscreenShorucut, &QShortcut::activated,
