@@ -789,7 +789,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="90"/>
         <source>Windowed</source>
-        <translation type="unfinished"></translation>
+        <translation>Finestrato</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="94"/>
