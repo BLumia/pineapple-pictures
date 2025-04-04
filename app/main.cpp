@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
     QList<QUrl> && urlList = PlaylistManager::convertToUrlList(urlStrList);
 
     if (!urlList.isEmpty()) {
-        w.showUrls(urlList);
+        w.showUrls(urlList, true);
     }
 
     w.initWindowSize();

@@ -31,7 +31,7 @@ GraphicsView::GraphicsView(QWidget *parent)
     connect(verticalScrollBar(), &QScrollBar::valueChanged, this, &GraphicsView::viewportRectChanged);
 }
 
-void GraphicsView::showFileFromPath(const QString &filePath)
+void GraphicsView::showFileFromPath(const QString &filePath, bool forceResetTransform)
 {
     emit navigatorViewRequired(false, transform());
 
@@ -60,17 +60,17 @@ void GraphicsView::showFileFromPath(const QString &filePath)
                 showText(tr("Image data is invalid or currently unsupported"));
             } else {
                 pixmap.setDevicePixelRatio(devicePixelRatioF());
-                showImage(pixmap);
+                showImage(pixmap, forceResetTransform);
             }
         }
     }
 }
 
-void GraphicsView::showImage(const QPixmap &pixmap)
+void GraphicsView::showImage(const QPixmap &pixmap, bool forceResetTransform)
 {
     resetTransform();
     scene()->showImage(pixmap);
-    displayScene();
+    displayScene(forceResetTransform);
 }
 
 void GraphicsView::showImage(const QImage &image)
@@ -194,9 +194,9 @@ void GraphicsView::fitByOrientation(Qt::Orientation ori, bool scaleDownOnly)
     emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
 }
 
-void GraphicsView::displayScene()
+void GraphicsView::displayScene(bool forceResetTransform)
 {
-    if (m_avoidResetTransform) {
+    if (m_avoidResetTransform && !forceResetTransform) {
         emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
         return;
     }

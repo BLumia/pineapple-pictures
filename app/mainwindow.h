@@ -37,7 +37,7 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow() override;
 
-    void showUrls(const QList<QUrl> &urls);
+    void showUrls(const QList<QUrl> &urls, bool forceResetTransform = false);
     void initWindowSize();
     void adjustWindowSizeBySceneRect();
     QUrl currentImageFileUrl() const;

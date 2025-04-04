@@ -177,10 +177,10 @@ MainWindow::~MainWindow()
 
 }
 
-void MainWindow::showUrls(const QList<QUrl> &urls)
+void MainWindow::showUrls(const QList<QUrl> &urls, bool forceResetTransform)
 {
     if (!urls.isEmpty()) {
-        m_graphicsView->showFileFromPath(urls.first().toLocalFile());
+        m_graphicsView->showFileFromPath(urls.first().toLocalFile(), forceResetTransform);
         m_pm->loadPlaylist(urls);
     } else {
         m_graphicsView->showText(tr("File url list is empty"));

@@ -15,9 +15,9 @@ class GraphicsView : public QGraphicsView
 public:
     GraphicsView(QWidget *parent = nullptr);
 
-    void showFileFromPath(const QString &filePath);
+    void showFileFromPath(const QString &filePath, bool forceResetTransform = false);
 
-    void showImage(const QPixmap &pixmap);
+    void showImage(const QPixmap &pixmap, bool forceResetTransform = false);
     void showImage(const QImage &image);
     void showText(const QString &text);
     void showSvg(const QString &filepath);
@@ -36,7 +36,7 @@ public:
     void fitInView(const QRectF &rect, Qt::AspectRatioMode aspectRadioMode = Qt::IgnoreAspectRatio);
     void fitByOrientation(Qt::Orientation ori = Qt::Horizontal, bool scaleDownOnly = false);
 
-    void displayScene();
+    void displayScene(bool forceResetTransform = false);
     bool isSceneBiggerThanView() const;
     void setEnableAutoFitInView(bool enable = true);
 
@@ -68,7 +68,7 @@ private:
     // ... or even more? e.g. "fit/snap width" things...
     // Currently it's "no fit" when it's false and "fit when view is smaller" when it's true.
     bool m_enableFitInView = false;
-    bool m_avoidResetTransform = false;
+    bool m_avoidResetTransform = true;
     bool m_checkerboardEnabled = false;
     bool m_useLightCheckerboard = false;
 };
