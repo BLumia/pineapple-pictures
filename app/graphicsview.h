@@ -64,6 +64,8 @@ private:
     void setCheckerboardEnabled(bool enabled, bool invertColor = false);
     void applyTransformationModeByScaleFactor();
 
+    inline bool shouldAvoidTransform() const;
+
     // Consider switch to 3 state for "no fit", "always fit" and "fit when view is smaller"?
     // ... or even more? e.g. "fit/snap width" things...
     // Currently it's "no fit" when it's false and "fit when view is smaller" when it's true.
@@ -71,6 +73,7 @@ private:
     bool m_avoidResetTransform = false;
     bool m_checkerboardEnabled = false;
     bool m_useLightCheckerboard = false;
+    bool m_firstUserMediaLoaded = false;
 };
 
 #endif // GRAPHICSVIEW_H

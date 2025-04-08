@@ -118,7 +118,7 @@ qreal GraphicsView::scaleFactor() const
 
 void GraphicsView::resetTransform()
 {
-    if (!m_avoidResetTransform) {
+    if (!shouldAvoidTransform()) {
         QGraphicsView::resetTransform();
     }
 }
@@ -196,7 +196,7 @@ void GraphicsView::fitByOrientation(Qt::Orientation ori, bool scaleDownOnly)
 
 void GraphicsView::displayScene()
 {
-    if (m_avoidResetTransform) {
+    if (shouldAvoidTransform()) {
         emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
         return;
     }
@@ -206,6 +206,7 @@ void GraphicsView::displayScene()
     }
 
     m_enableFitInView = true;
+    m_firstUserMediaLoaded = true;
 }
 
 bool GraphicsView::isSceneBiggerThanView() const
@@ -364,4 +365,9 @@ void GraphicsView::applyTransformationModeByScaleFactor()
     } else {
         scene()->trySetTransformationMode(Qt::FastTransformation, this->scaleFactor());
     }
+}
+
+bool GraphicsView::shouldAvoidTransform() const
+{
+    return m_firstUserMediaLoaded && m_avoidResetTransform;
 }
