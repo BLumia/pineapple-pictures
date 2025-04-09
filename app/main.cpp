@@ -52,8 +52,13 @@ int main(int argc, char *argv[])
     parser.process(a);
 
     if (parser.isSet(supportedImageFormats)) {
+#if QT_VERSION < QT_VERSION_CHECK(6, 9, 0)
         fputs(qPrintable(MainWindow::supportedImageFormats().join(QChar('\n'))), stdout);
         ::exit(EXIT_SUCCESS);
+#else
+        QCommandLineParser::showMessageAndExit(QCommandLineParser::MessageType::Information,
+                                               MainWindow::supportedImageFormats().join(QChar('\n')));
+#endif
     }
 
     MainWindow w;
