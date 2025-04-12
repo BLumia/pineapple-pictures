@@ -22,6 +22,7 @@ class PlaylistManager;
 class ToolButton;
 class GraphicsView;
 class NavigatorView;
+class ClientSideDecoration;
 class BottomButtonGroup;
 class MainWindow : public FramelessWindow
 {
@@ -127,6 +128,7 @@ private:
     ToolButton *m_nextButton;
     GraphicsView *m_graphicsView;
     NavigatorView *m_gv;
+    ClientSideDecoration *m_csd;
     BottomButtonGroup *m_bottomButtonGroup;
     bool m_protectedMode = false;
     bool m_clickedOnWindow = false;

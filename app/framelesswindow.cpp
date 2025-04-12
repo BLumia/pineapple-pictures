@@ -17,7 +17,9 @@ FramelessWindow::FramelessWindow(QWidget *parent)
     , m_oldCursorShape(Qt::ArrowCursor)
     , m_oldEdges()
 {
-    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinMaxButtonsHint);
+    // this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinMaxButtonsHint);
+    this->setWindowFlags(Qt::ExpandedClientAreaHint | Qt::NoTitleBarBackgroundHint);
+    this->setAttribute(Qt::WA_LayoutOnEntireRect);
     this->setMouseTracking(true);
     this->setAttribute(Qt::WA_Hover, true);
     this->installEventFilter(this);
@@ -93,6 +95,11 @@ bool FramelessWindow::mousePress(QMouseEvent* event)
         Qt::Edges edges = this->getEdgesByPos(event->globalPosition().toPoint(), win->frameGeometry());
         if (edges) {
             win->startSystemResize(edges);
+            return true;
+        }
+        else if (event->position().y() < contentsMargins().top()) {
+            qDebug() << contentsMargins();
+            win->startSystemMove();
             return true;
         }
     }

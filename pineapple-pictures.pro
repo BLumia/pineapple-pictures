@@ -44,7 +44,8 @@ SOURCES += \
     app/actionmanager.cpp \
     app/playlistmanager.cpp \
     app/shortcutedit.cpp \
-    app/fileopeneventhandler.cpp
+    app/fileopeneventhandler.cpp \
+	app/clientsidedecoration.cpp
 
 HEADERS += \
     app/aboutdialog.h \
@@ -64,7 +65,8 @@ HEADERS += \
     app/actionmanager.h \
     app/playlistmanager.h \
     app/shortcutedit.h \
-    app/fileopeneventhandler.h
+    app/fileopeneventhandler.h \
+	app/clientsidedecoration.h
 
 TRANSLATIONS = \
     app/translations/PineapplePictures_en.ts \

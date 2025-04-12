@@ -103,6 +103,7 @@ add_executable (${EXE_NAME}
     ${PPIC_CPP_FILES}
     ${PPIC_QRC_FILES}
     ${PPIC_RC_FILES}
+    app/clientsidedecoration.h app/clientsidedecoration.cpp
 )
 
 set(ADD_TRANSLATIONS_ADDITIONAL_ARGS)
