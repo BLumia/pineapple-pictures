@@ -115,6 +115,7 @@ add_executable (${EXE_NAME}
     ${PPIC_CPP_FILES}
     ${PPIC_QRC_FILES}
     ${PPIC_RC_FILES}
+    app/clientsidedecoration.h app/clientsidedecoration.cpp
 )
 
 if (${QT_VERSION_MAJOR} EQUAL "6")

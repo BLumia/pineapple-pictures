@@ -18,7 +18,9 @@ FramelessWindow::FramelessWindow(QWidget *parent)
     , m_oldEdges()
 {
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinMaxButtonsHint);
+    // this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinMaxButtonsHint);
+    this->setWindowFlags(Qt::ExpandedClientAreaHint | Qt::NoTitleBarBackgroundHint);
+    this->setAttribute(Qt::WA_LayoutOnEntireRect);
 #else
     // There is a bug in Qt 5 that will make pressing Meta+Up cause the app
     // fullscreen under Windows, see QTBUG-91226 to learn more.
@@ -104,6 +106,11 @@ bool FramelessWindow::mousePress(QMouseEvent* event)
 #endif // QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
         if (edges) {
             win->startSystemResize(edges);
+            return true;
+        }
+        else if (event->position().y() < contentsMargins().top()) {
+            qDebug() << contentsMargins();
+            win->startSystemMove();
             return true;
         }
     }

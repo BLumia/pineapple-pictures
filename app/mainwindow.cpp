@@ -6,6 +6,7 @@
 
 #include "settings.h"
 #include "toolbutton.h"
+#include "clientsidedecoration.h"
 #include "bottombuttongroup.h"
 #include "graphicsview.h"
 #include "navigatorview.h"
@@ -50,9 +51,9 @@ MainWindow::MainWindow(QWidget *parent)
     , m_pm(new PlaylistManager(this))
     , m_fileSystemWatcher(new QFileSystemWatcher(this))
 {
-    if (Settings::instance()->stayOnTop()) {
-        this->setWindowFlag(Qt::WindowStaysOnTopHint);
-    }
+    // if (Settings::instance()->stayOnTop()) {
+    //     this->setWindowFlag(Qt::WindowStaysOnTopHint);
+    // }
 
     this->setAttribute(Qt::WA_TranslucentBackground, true);
     this->setMinimumSize(350, 330);
@@ -102,12 +103,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_graphicsView, &GraphicsView::viewportRectChanged,
             m_gv, &NavigatorView::updateMainViewportRegion);
 
-    m_closeButton = new ToolButton(true, m_graphicsView);
-    m_closeButton->setIconSize(QSize(32, 32));
-    m_closeButton->setFixedSize(QSize(50, 50));
-    m_closeButton->setIconResourcePath(":/icons/window-close.svg");
+    m_csd = new ClientSideDecoration(this);
+    m_csd->setVisible(false);
 
-    connect(m_closeButton, &QAbstractButton::clicked,
+    connect(m_csd, &ClientSideDecoration::windowCloseRequested,
             this, &MainWindow::closeWindow);
 
     m_prevButton = new ToolButton(false, m_graphicsView);
@@ -139,7 +138,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     m_bottomButtonGroup->setOpacity(0, false);
     m_gv->setOpacity(0, false);
-    m_closeButton->setOpacity(0, false);
+    m_csd->setOpacity(0, false);
 
     connect(m_pm, &PlaylistManager::totalCountChanged, this, [this](int galleryFileCount) {
         m_prevButton->setVisible(galleryFileCount > 1);
@@ -165,7 +164,7 @@ MainWindow::MainWindow(QWidget *parent)
     });
 
     // allow some mouse events can go through these widgets for resizing window.
-    installResizeCapture(m_closeButton);
+    installResizeCapture(m_csd);
     installResizeCapture(m_graphicsView);
     installResizeCapture(m_graphicsView->viewport());
     installResizeCapture(m_gv);
@@ -309,7 +308,7 @@ void MainWindow::enterEvent(QT_ENTER_EVENT *event)
     m_bottomButtonGroup->setOpacity(1);
     m_gv->setOpacity(1);
 
-    m_closeButton->setOpacity(1);
+    m_csd->setOpacity(1);
     m_prevButton->setOpacity(1);
     m_nextButton->setOpacity(1);
 
@@ -318,10 +317,10 @@ void MainWindow::enterEvent(QT_ENTER_EVENT *event)
 
 void MainWindow::leaveEvent(QEvent *event)
 {
+    m_csd->setOpacity(0);
     m_bottomButtonGroup->setOpacity(0);
     m_gv->setOpacity(0);
 
-    m_closeButton->setOpacity(0);
     m_prevButton->setOpacity(0);
     m_nextButton->setOpacity(0);
 
@@ -594,10 +593,10 @@ void MainWindow::closeWindow()
 
 void MainWindow::updateWidgetsPosition()
 {
-    m_closeButton->move(width() - m_closeButton->width(), 0);
     m_prevButton->move(25, (height() - m_prevButton->sizeHint().height()) / 2);
     m_nextButton->move(width() - m_nextButton->sizeHint().width() - 25,
                        (height() - m_prevButton->sizeHint().height()) / 2);
+    m_csd->resize(width(), 40);
     m_bottomButtonGroup->move((width() - m_bottomButtonGroup->width()) / 2,
                               height() - m_bottomButtonGroup->height());
     m_gv->move(width() - m_gv->width(), height() - m_gv->height());
@@ -606,7 +605,7 @@ void MainWindow::updateWidgetsPosition()
 void MainWindow::toggleProtectedMode()
 {
     m_protectedMode = !m_protectedMode;
-    m_closeButton->setVisible(!m_protectedMode);
+    m_csd->setVisible(!m_protectedMode);
     m_prevButton->setVisible(!m_protectedMode);
     m_nextButton->setVisible(!m_protectedMode);
 }
