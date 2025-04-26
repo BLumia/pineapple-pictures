@@ -68,7 +68,7 @@ HEADERS += \
     app/fileopeneventhandler.h
 
 TRANSLATIONS = \
-    app/translations/PineapplePictures.ts \
+    app/translations/PineapplePictures_en.ts \
     app/translations/PineapplePictures_zh_CN.ts \
     app/translations/PineapplePictures_de.ts \
     app/translations/PineapplePictures_es.ts \
