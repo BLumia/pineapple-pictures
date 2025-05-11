@@ -84,12 +84,11 @@
       <description>
         <p>This release adds the following features:</p>
         <ul>
-          <li>Support enforce windowed mode on start-up</li>
+          <li>Support enforces windowed mode on start-up</li>
           <li>Reload image automatically when current image gets updated</li>
         </ul>
         <p>This release fixes the following bugs:</p>
         <ul>
-          <li>Refer to the right exiv2 CMake module so it can be found on Linux</li>
           <li>Display correct text language on macOS</li>
         </ul>
         <p>This release includes the following changes:</p>

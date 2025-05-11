@@ -3,11 +3,10 @@ Version 1.0.0
 Released: 2025-05-03
 
 Features:
- * Support enforce windowed mode on start-up
+ * Support enforces windowed mode on start-up
  * Reload image automatically when current image gets updated
 
 Bugfixes:
- * Refer to the right exiv2 CMake module so it can be found on Linux
  * Display correct text language on macOS
 
 Miscellaneous:
