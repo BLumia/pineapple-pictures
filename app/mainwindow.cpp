@@ -304,7 +304,7 @@ void MainWindow::showEvent(QShowEvent *event)
     return FramelessWindow::showEvent(event);
 }
 
-void MainWindow::enterEvent(QT_ENTER_EVENT *event)
+void MainWindow::enterEvent(QEnterEvent *event)
 {
     m_bottomButtonGroup->setOpacity(1);
     m_gv->setOpacity(1);
@@ -345,11 +345,7 @@ void MainWindow::mouseMoveEvent(QMouseEvent *event)
 {
     if (event->buttons() & Qt::LeftButton && m_clickedOnWindow && !isMaximized() && !isFullScreen()) {
         if (!window()->windowHandle()->startSystemMove()) {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
             move(event->globalPosition().toPoint() - m_oldMousePos);
-#else
-            move(event->globalPos() - m_oldMousePos);
-#endif // QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
         }
         event->accept();
     }

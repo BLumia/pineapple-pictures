@@ -3,30 +3,6 @@ name: Ubuntu CI
 on: [push, pull_request]
 
 jobs:
-  ubuntu-22-04-build:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4
-      - name: Get build dept.
-        run: |
-          sudo apt update
-          sudo apt install cmake qtbase5-dev libqt5svg5-dev qttools5-dev libexiv2-dev
-      - name: Build it
-        run: |
-          mkdir build
-          cd build
-          cmake ../ -DPREFER_QT_5=ON
-          make
-          cpack -G DEB
-      - name: Try install it
-        run: |
-          cd build
-          sudo apt install ./*.deb
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ubuntu-22.04-deb-package
-          path: build/*.deb
-
   ubuntu-24-04-build:
     runs-on: ubuntu-24.04
     steps:

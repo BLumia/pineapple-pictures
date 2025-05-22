@@ -1,9 +1,8 @@
-# SPDX-FileCopyrightText: 2024 Gary Wang <git@blumia.net>
+# SPDX-FileCopyrightText: 2025 Gary Wang <git@blumia.net>
 #
 # SPDX-License-Identifier: MIT
 
-QT       += core widgets gui svg
-greaterThan(QT_MAJOR_VERSION, 5): QT += svgwidgets
+QT       += core widgets gui svg svgwidgets
 
 TARGET = ppic
 TEMPLATE = app

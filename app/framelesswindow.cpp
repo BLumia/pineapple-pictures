@@ -17,14 +17,7 @@ FramelessWindow::FramelessWindow(QWidget *parent)
     , m_oldCursorShape(Qt::ArrowCursor)
     , m_oldEdges()
 {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinMaxButtonsHint);
-#else
-    // There is a bug in Qt 5 that will make pressing Meta+Up cause the app
-    // fullscreen under Windows, see QTBUG-91226 to learn more.
-    // The bug seems no longer exists in Qt 6 (I only tested it under Qt 6.3.0).
-    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint);
-#endif // QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     this->setMouseTracking(true);
     this->setAttribute(Qt::WA_Hover, true);
     this->installEventFilter(this);
@@ -97,11 +90,7 @@ bool FramelessWindow::mousePress(QMouseEvent* event)
 {
     if (event->buttons() & Qt::LeftButton && !isMaximized() && !isFullScreen()) {
         QWindow* win = window()->windowHandle();
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
         Qt::Edges edges = this->getEdgesByPos(event->globalPosition().toPoint(), win->frameGeometry());
-#else
-        Qt::Edges edges = this->getEdgesByPos(event->globalPos(), win->frameGeometry());
-#endif // QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
         if (edges) {
             win->startSystemResize(edges);
             return true;

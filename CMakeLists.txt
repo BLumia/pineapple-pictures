@@ -10,7 +10,6 @@ include(GNUInstallDirs)
 include(FeatureSummary)
 
 option (EXIV2_METADATA_SUPPORT "Better image metadata support via libexiv2" ON)
-option (PREFER_QT_5 "Prefer to use Qt 5" OFF)
 option (TRANSLATION_RESOURCE_EMBEDDING "Embedding .qm translation files inside resource" OFF)
 
 set (CMAKE_CXX_STANDARD 17)
@@ -18,26 +17,14 @@ set (CMAKE_CXX_STANDARD_REQUIRED ON)
 set (CMAKE_AUTOMOC ON)
 set (CMAKE_AUTORCC ON)
 
-if (PREFER_QT_5)
-    find_package(QT NAMES Qt5 REQUIRED COMPONENTS Core)
-else ()
-    find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core)
-endif ()
+find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core)
 
-if (${QT_VERSION_MAJOR} EQUAL "5")
-    set (QT_MINIMUM_VERSION "5.15.2")
-else ()
-    set (QT_MINIMUM_VERSION "6.4")
-endif ()
+set (QT_MINIMUM_VERSION "6.4")
 
 find_package(Qt${QT_VERSION_MAJOR} ${QT_MINIMUM_VERSION} REQUIRED
-    COMPONENTS Widgets Svg LinguistTools
+    COMPONENTS Widgets Svg SvgWidgets LinguistTools
     OPTIONAL_COMPONENTS DBus
 )
-
-if (${QT_VERSION_MAJOR} EQUAL "6")
-    find_package(Qt${QT_DEFAULT_MAJOR_VERSION} ${QT_MINIMUM_VERSION} CONFIG REQUIRED SvgWidgets)
-endif ()
 
 if (EXIV2_METADATA_SUPPORT)
     find_package(exiv2)
@@ -117,34 +104,23 @@ add_executable (${EXE_NAME}
     ${PPIC_RC_FILES}
 )
 
-if (${QT_VERSION_MAJOR} EQUAL "6")
-    set(ADD_TRANSLATIONS_ADDITIONAL_ARGS)
+set(ADD_TRANSLATIONS_ADDITIONAL_ARGS)
 
-    if (Qt6_VERSION VERSION_GREATER_EQUAL "6.9.0")
-        set(ADD_TRANSLATIONS_ADDITIONAL_ARGS MERGE_QT_TRANSLATIONS)
-    endif()
+if (Qt6_VERSION VERSION_GREATER_EQUAL "6.9.0")
+    set(ADD_TRANSLATIONS_ADDITIONAL_ARGS MERGE_QT_TRANSLATIONS)
+endif()
 
-    if (TRANSLATION_RESOURCE_EMBEDDING)
-        qt_add_translations(${EXE_NAME} ${ADD_TRANSLATIONS_ADDITIONAL_ARGS} TS_FILES ${PPIC_TS_FILES})
-    else()
-        qt_add_translations(${EXE_NAME} ${ADD_TRANSLATIONS_ADDITIONAL_ARGS} TS_FILES ${PPIC_TS_FILES} QM_FILES_OUTPUT_VARIABLE PPIC_QM_FILES)
-    endif()
+if (TRANSLATION_RESOURCE_EMBEDDING)
+    qt_add_translations(${EXE_NAME} ${ADD_TRANSLATIONS_ADDITIONAL_ARGS} TS_FILES ${PPIC_TS_FILES})
 else()
-    qt_create_translation(PPIC_QM_FILES ${PPIC_CPP_FILES_FOR_I18N} ${PPIC_TS_FILES})
+    qt_add_translations(${EXE_NAME} ${ADD_TRANSLATIONS_ADDITIONAL_ARGS} TS_FILES ${PPIC_TS_FILES} QM_FILES_OUTPUT_VARIABLE PPIC_QM_FILES)
 endif()
 
 target_sources(${EXE_NAME} PRIVATE ${PPIC_QM_FILES})
 
-target_link_libraries (${EXE_NAME} Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Svg)
-if (${QT_VERSION_MAJOR} EQUAL "6")
-    target_link_libraries (${EXE_NAME} Qt::SvgWidgets)
-endif ()
+target_link_libraries (${EXE_NAME} Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Svg Qt${QT_VERSION_MAJOR}::SvgWidgets)
 
 if (exiv2_FOUND)
-    if(NOT TARGET Exiv2::exiv2lib AND TARGET exiv2lib)
-        # for exiv2 0.27.x
-        add_library(Exiv2::exiv2lib ALIAS exiv2lib)
-    endif()
     target_link_libraries (${EXE_NAME}
         Exiv2::exiv2lib
     )
@@ -153,7 +129,7 @@ if (exiv2_FOUND)
     )
 endif ()
 
-if (TARGET Qt5::DBus OR TARGET Qt6::DBus)
+if (TARGET Qt6::DBus)
     target_link_libraries (${EXE_NAME}
         Qt${QT_VERSION_MAJOR}::DBus
     )

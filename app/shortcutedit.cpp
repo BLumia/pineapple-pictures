@@ -63,9 +63,7 @@ void ShortcutEditor::reloadShortcuts()
     shortcuts.append(QKeySequence());
     for (const QKeySequence & shortcut : shortcuts) {
         QKeySequenceEdit * keyseqEdit = new QKeySequenceEdit(this);
-#if QT_VERSION >= QT_VERSION_CHECK(6, 4, 0)
         keyseqEdit->setClearButtonEnabled(true);
-#endif // QT_VERSION >= QT_VERSION_CHECK(6, 4, 0)
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
         keyseqEdit->setMaximumSequenceLength(1);
 #endif // QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
