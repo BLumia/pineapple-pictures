@@ -15,7 +15,7 @@ jobs:
         run: |
           mkdir build
           cd build
-          cmake ../ -DPREFER_QT_5=OFF
+          cmake ../
           make
           cpack -G DEB
       - name: Try install it

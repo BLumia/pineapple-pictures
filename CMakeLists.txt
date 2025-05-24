@@ -121,6 +121,10 @@ target_sources(${EXE_NAME} PRIVATE ${PPIC_QM_FILES})
 target_link_libraries (${EXE_NAME} Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Svg Qt${QT_VERSION_MAJOR}::SvgWidgets)
 
 if (exiv2_FOUND)
+    if(NOT TARGET Exiv2::exiv2lib AND TARGET exiv2lib)
+        # for exiv2 0.27.x and (macOS?) conan build
+        add_library(Exiv2::exiv2lib ALIAS exiv2lib)
+    endif()
     target_link_libraries (${EXE_NAME}
         Exiv2::exiv2lib
     )
