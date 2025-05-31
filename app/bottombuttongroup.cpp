@@ -6,8 +6,6 @@
 
 #include "opacityhelper.h"
 
-#include <functional>
-
 #include <QToolButton>
 #include <QVBoxLayout>
 #include <QDebug>

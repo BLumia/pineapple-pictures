@@ -17,9 +17,11 @@
 #include <QTranslator>
 #include <QUrl>
 
+using namespace Qt::Literals::StringLiterals;
+
 int main(int argc, char *argv[])
 {
-    QCoreApplication::setApplicationName("Pineapple Pictures");
+    QCoreApplication::setApplicationName(u"Pineapple Pictures"_s);
     QCoreApplication::setApplicationVersion(PPIC_VERSION_STRING);
     QGuiApplication::setHighDpiScaleFactorRoundingPolicy(Settings::instance()->hiDpiScaleFactorBehavior());
 
@@ -27,20 +29,20 @@ int main(int argc, char *argv[])
 
     QTranslator translator;
 #if defined(TRANSLATION_RESOURCE_EMBEDDING)
-    const QString qmDir = QLatin1String(":/i18n/");
+    const QString qmDir = u":/i18n/"_s;
 #elif defined(QM_FILE_INSTALL_ABSOLUTE_DIR)
     const QString qmDir = QT_STRINGIFY(QM_FILE_INSTALL_ABSOLUTE_DIR);
 #else
     const QString qmDir = QDir(QCoreApplication::applicationDirPath()).absoluteFilePath("translations");
 #endif
-    if (translator.load(QLocale(), QLatin1String("PineapplePictures"), QLatin1String("_"), qmDir)) {
+    if (translator.load(QLocale(), u"PineapplePictures"_s, u"_"_s, qmDir)) {
         QCoreApplication::installTranslator(&translator);
     }
 
     QGuiApplication::setApplicationDisplayName(QCoreApplication::translate("main", "Pineapple Pictures"));
 
     // commandline options
-    QCommandLineOption supportedImageFormats(QStringLiteral("supported-image-formats"), QCoreApplication::translate("main", "List supported image format suffixes, and quit program."));
+    QCommandLineOption supportedImageFormats(u"supported-image-formats"_s, QCoreApplication::translate("main", "List supported image format suffixes, and quit program."));
     // parse commandline arguments
     QCommandLineParser parser;
     parser.addOption(supportedImageFormats);

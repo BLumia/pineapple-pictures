@@ -11,6 +11,8 @@
 #include <QFileInfo>
 #include <QImageReader>
 
+using namespace Qt::Literals::StringLiterals;
+
 MetadataModel::MetadataModel(QObject *parent)
     : QAbstractItemModel(parent)
 {
@@ -37,131 +39,131 @@ void MetadataModel::setFile(const QString &imageFilePath)
     const QString & imageDimensionsString = imageSize(imgReader.size());
     const QString & imageRatioString = imageSizeRatio(imgReader.size());
 
-    appendSection(QStringLiteral("Description"), tr("Description", "Section name."));
-    appendSection(QStringLiteral("Origin"), tr("Origin", "Section name."));
-    appendSection(QStringLiteral("Image"), tr("Image", "Section name."));
-    appendSection(QStringLiteral("Camera"), tr("Camera", "Section name."));
-    appendSection(QStringLiteral("AdvancedPhoto"), tr("Advanced photo", "Section name."));
-    appendSection(QStringLiteral("GPS"), tr("GPS", "Section name."));
-    appendSection(QStringLiteral("File"), tr("File", "Section name."));
+    appendSection(u"Description"_s, tr("Description", "Section name."));
+    appendSection(u"Origin"_s, tr("Origin", "Section name."));
+    appendSection(u"Image"_s, tr("Image", "Section name."));
+    appendSection(u"Camera"_s, tr("Camera", "Section name."));
+    appendSection(u"AdvancedPhoto"_s, tr("Advanced photo", "Section name."));
+    appendSection(u"GPS"_s, tr("GPS", "Section name."));
+    appendSection(u"File"_s, tr("File", "Section name."));
 
     if (imgReader.supportsOption(QImageIOHandler::Size)) {
-        appendProperty(QStringLiteral("Image"), QStringLiteral("Image.Dimensions"),
+        appendProperty(u"Image"_s, u"Image.Dimensions"_s,
                        tr("Dimensions"), imageDimensionsString);
-        appendProperty(QStringLiteral("Image"), QStringLiteral("Image.SizeRatio"),
+        appendProperty(u"Image"_s, u"Image.SizeRatio"_s,
                        tr("Aspect ratio"), imageRatioString);
     }
     if (imgReader.supportsAnimation() && imgReader.imageCount() > 1) {
-        appendProperty(QStringLiteral("Image"), QStringLiteral("Image.FrameCount"),
+        appendProperty(u"Image"_s, u"Image.FrameCount"_s,
                        tr("Frame count"), QString::number(imgReader.imageCount()));
     }
 
-    appendProperty(QStringLiteral("File"), QStringLiteral("File.Name"),
+    appendProperty(u"File"_s, u"File.Name"_s,
                    tr("Name"), fileInfo.fileName());
-    appendProperty(QStringLiteral("File"), QStringLiteral("File.ItemType"),
+    appendProperty(u"File"_s, u"File.ItemType"_s,
                    tr("Item type"), itemTypeString);
-    appendProperty(QStringLiteral("File"), QStringLiteral("File.Path"),
+    appendProperty(u"File"_s, u"File.Path"_s,
                    tr("Folder path"), QDir::toNativeSeparators(fileInfo.path()));
-    appendProperty(QStringLiteral("File"), QStringLiteral("File.Size"),
+    appendProperty(u"File"_s, u"File.Size"_s,
                    tr("Size"), sizeString);
-    appendProperty(QStringLiteral("File"), QStringLiteral("File.CreatedTime"),
+    appendProperty(u"File"_s, u"File.CreatedTime"_s,
                    tr("Date created"), birthTimeString);
-    appendProperty(QStringLiteral("File"), QStringLiteral("File.LastModified"),
+    appendProperty(u"File"_s, u"File.LastModified"_s,
                    tr("Date modified"), lastModifiedTimeString);
 
     Exiv2Wrapper wrapper;
     if (wrapper.load(imageFilePath)) {
         wrapper.cacheSections();
 
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Description"),
-                                  QStringLiteral("Xmp.dc.title"), tr("Title"), true);
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Description"),
-                                  QStringLiteral("Exif.Image.ImageDescription"), tr("Subject"), true);
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Description"),
-                                  QStringLiteral("Exif.Image.Rating"), tr("Rating"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Description"),
-                                  QStringLiteral("Xmp.dc.subject"), tr("Tags"));
-        appendPropertyIfNotEmpty(QStringLiteral("Description"), QStringLiteral("Description.Comments"),
+        appendExivPropertyIfExist(wrapper, u"Description"_s,
+                                  u"Xmp.dc.title"_s, tr("Title"), true);
+        appendExivPropertyIfExist(wrapper, u"Description"_s,
+                                  u"Exif.Image.ImageDescription"_s, tr("Subject"), true);
+        appendExivPropertyIfExist(wrapper, u"Description"_s,
+                                  u"Exif.Image.Rating"_s, tr("Rating"));
+        appendExivPropertyIfExist(wrapper, u"Description"_s,
+                                  u"Xmp.dc.subject"_s, tr("Tags"));
+        appendPropertyIfNotEmpty(u"Description"_s, u"Description.Comments"_s,
                                  tr("Comments"), wrapper.comment());
 
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Origin"),
-                                  QStringLiteral("Exif.Image.Artist"), tr("Authors"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Origin"),
-                                  QStringLiteral("Exif.Photo.DateTimeOriginal"), tr("Date taken"));
+        appendExivPropertyIfExist(wrapper, u"Origin"_s,
+                                  u"Exif.Image.Artist"_s, tr("Authors"));
+        appendExivPropertyIfExist(wrapper, u"Origin"_s,
+                                  u"Exif.Photo.DateTimeOriginal"_s, tr("Date taken"));
         // FIXME: We may fetch the same type of metadata from different metadata collection.
         //        Current implementation is not pretty and may need to do a rework...
         // appendExivPropertyIfExist(wrapper, QStringLiteral("Origin"),
         //                                  QStringLiteral("Xmp.xmp.CreatorTool"), tr("Program name"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Origin"),
-                                  QStringLiteral("Exif.Image.Software"), tr("Program name"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Origin"),
-                                  QStringLiteral("Exif.Image.Copyright"), tr("Copyright"));
+        appendExivPropertyIfExist(wrapper, u"Origin"_s,
+                                  u"Exif.Image.Software"_s, tr("Program name"));
+        appendExivPropertyIfExist(wrapper, u"Origin"_s,
+                                  u"Exif.Image.Copyright"_s, tr("Copyright"));
 
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Image"),
-                                  QStringLiteral("Exif.Image.XResolution"), tr("Horizontal resolution"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Image"),
-                                  QStringLiteral("Exif.Image.YResolution"), tr("Vertical resolution"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Image"),
-                                  QStringLiteral("Exif.Image.ResolutionUnit"), tr("Resolution unit"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Image"),
-                                  QStringLiteral("Exif.Photo.ColorSpace"), tr("Colour representation"));
+        appendExivPropertyIfExist(wrapper, u"Image"_s,
+                                  u"Exif.Image.XResolution"_s, tr("Horizontal resolution"));
+        appendExivPropertyIfExist(wrapper, u"Image"_s,
+                                  u"Exif.Image.YResolution"_s, tr("Vertical resolution"));
+        appendExivPropertyIfExist(wrapper, u"Image"_s,
+                                  u"Exif.Image.ResolutionUnit"_s, tr("Resolution unit"));
+        appendExivPropertyIfExist(wrapper, u"Image"_s,
+                                  u"Exif.Photo.ColorSpace"_s, tr("Colour representation"));
 
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
-                                  QStringLiteral("Exif.Image.Make"), tr("Camera maker"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
-                                  QStringLiteral("Exif.Image.Model"), tr("Camera model"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
-                                  QStringLiteral("Exif.Photo.FNumber"), tr("F-stop"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
-                                  QStringLiteral("Exif.Photo.ExposureTime"), tr("Exposure time"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
-                                  QStringLiteral("Exif.Photo.ISOSpeedRatings"), tr("ISO speed"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
-                                  QStringLiteral("Exif.Photo.ExposureBiasValue"), tr("Exposure bias"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
-                                  QStringLiteral("Exif.Photo.FocalLength"), tr("Focal length"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
-                                  QStringLiteral("Exif.Photo.MaxApertureValue"), tr("Max aperture"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
-                                  QStringLiteral("Exif.Photo.MeteringMode"), tr("Metering mode"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
-                                  QStringLiteral("Exif.Photo.SubjectDistance"), tr("Subject distance"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
-                                  QStringLiteral("Exif.Photo.Flash"), tr("Flash mode"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("Camera"),
-                                  QStringLiteral("Exif.Photo.FocalLengthIn35mmFilm"), tr("35mm focal length"));
+        appendExivPropertyIfExist(wrapper, u"Camera"_s,
+                                  u"Exif.Image.Make"_s, tr("Camera maker"));
+        appendExivPropertyIfExist(wrapper, u"Camera"_s,
+                                  u"Exif.Image.Model"_s, tr("Camera model"));
+        appendExivPropertyIfExist(wrapper, u"Camera"_s,
+                                  u"Exif.Photo.FNumber"_s, tr("F-stop"));
+        appendExivPropertyIfExist(wrapper, u"Camera"_s,
+                                  u"Exif.Photo.ExposureTime"_s, tr("Exposure time"));
+        appendExivPropertyIfExist(wrapper, u"Camera"_s,
+                                  u"Exif.Photo.ISOSpeedRatings"_s, tr("ISO speed"));
+        appendExivPropertyIfExist(wrapper, u"Camera"_s,
+                                  u"Exif.Photo.ExposureBiasValue"_s, tr("Exposure bias"));
+        appendExivPropertyIfExist(wrapper, u"Camera"_s,
+                                  u"Exif.Photo.FocalLength"_s, tr("Focal length"));
+        appendExivPropertyIfExist(wrapper, u"Camera"_s,
+                                  u"Exif.Photo.MaxApertureValue"_s, tr("Max aperture"));
+        appendExivPropertyIfExist(wrapper, u"Camera"_s,
+                                  u"Exif.Photo.MeteringMode"_s, tr("Metering mode"));
+        appendExivPropertyIfExist(wrapper, u"Camera"_s,
+                                  u"Exif.Photo.SubjectDistance"_s, tr("Subject distance"));
+        appendExivPropertyIfExist(wrapper, u"Camera"_s,
+                                  u"Exif.Photo.Flash"_s, tr("Flash mode"));
+        appendExivPropertyIfExist(wrapper, u"Camera"_s,
+                                  u"Exif.Photo.FocalLengthIn35mmFilm"_s, tr("35mm focal length"));
 
-        appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
-                                  QStringLiteral("Exif.Photo.LensModel"), tr("Lens model"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
-                                  QStringLiteral("Exif.Photo.Contrast"), tr("Contrast"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
-                                  QStringLiteral("Exif.Photo.BrightnessValue"), tr("Brightness"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
-                                  QStringLiteral("Exif.Photo.ExposureProgram"), tr("Exposure program"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
-                                  QStringLiteral("Exif.Photo.Saturation"), tr("Saturation"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
-                                  QStringLiteral("Exif.Photo.Sharpness"), tr("Sharpness"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
-                                  QStringLiteral("Exif.Photo.WhiteBalance"), tr("White balance"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
-                                  QStringLiteral("Exif.Photo.DigitalZoomRatio"), tr("Digital zoom"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("AdvancedPhoto"),
-                                  QStringLiteral("Exif.Photo.ExifVersion"), tr("EXIF version"));
+        appendExivPropertyIfExist(wrapper, u"AdvancedPhoto"_s,
+                                  u"Exif.Photo.LensModel"_s, tr("Lens model"));
+        appendExivPropertyIfExist(wrapper, u"AdvancedPhoto"_s,
+                                  u"Exif.Photo.Contrast"_s, tr("Contrast"));
+        appendExivPropertyIfExist(wrapper, u"AdvancedPhoto"_s,
+                                  u"Exif.Photo.BrightnessValue"_s, tr("Brightness"));
+        appendExivPropertyIfExist(wrapper, u"AdvancedPhoto"_s,
+                                  u"Exif.Photo.ExposureProgram"_s, tr("Exposure program"));
+        appendExivPropertyIfExist(wrapper, u"AdvancedPhoto"_s,
+                                  u"Exif.Photo.Saturation"_s, tr("Saturation"));
+        appendExivPropertyIfExist(wrapper, u"AdvancedPhoto"_s,
+                                  u"Exif.Photo.Sharpness"_s, tr("Sharpness"));
+        appendExivPropertyIfExist(wrapper, u"AdvancedPhoto"_s,
+                                  u"Exif.Photo.WhiteBalance"_s, tr("White balance"));
+        appendExivPropertyIfExist(wrapper, u"AdvancedPhoto"_s,
+                                  u"Exif.Photo.DigitalZoomRatio"_s, tr("Digital zoom"));
+        appendExivPropertyIfExist(wrapper, u"AdvancedPhoto"_s,
+                                  u"Exif.Photo.ExifVersion"_s, tr("EXIF version"));
 
-        appendExivPropertyIfExist(wrapper, QStringLiteral("GPS"),
-                                  QStringLiteral("Exif.GPSInfo.GPSLatitudeRef"), tr("Latitude reference"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("GPS"),
-                                  QStringLiteral("Exif.GPSInfo.GPSLatitude"), tr("Latitude"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("GPS"),
-                                  QStringLiteral("Exif.GPSInfo.GPSLongitudeRef"), tr("Longitude reference"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("GPS"),
-                                  QStringLiteral("Exif.GPSInfo.GPSLongitude"), tr("Longitude"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("GPS"),
-                                  QStringLiteral("Exif.GPSInfo.GPSAltitudeRef"), tr("Altitude reference"));
-        appendExivPropertyIfExist(wrapper, QStringLiteral("GPS"),
-                                  QStringLiteral("Exif.GPSInfo.GPSAltitude"), tr("Altitude"));
+        appendExivPropertyIfExist(wrapper, u"GPS"_s,
+                                  u"Exif.GPSInfo.GPSLatitudeRef"_s, tr("Latitude reference"));
+        appendExivPropertyIfExist(wrapper, u"GPS"_s,
+                                  u"Exif.GPSInfo.GPSLatitude"_s, tr("Latitude"));
+        appendExivPropertyIfExist(wrapper, u"GPS"_s,
+                                  u"Exif.GPSInfo.GPSLongitudeRef"_s, tr("Longitude reference"));
+        appendExivPropertyIfExist(wrapper, u"GPS"_s,
+                                  u"Exif.GPSInfo.GPSLongitude"_s, tr("Longitude"));
+        appendExivPropertyIfExist(wrapper, u"GPS"_s,
+                                  u"Exif.GPSInfo.GPSAltitudeRef"_s, tr("Altitude reference"));
+        appendExivPropertyIfExist(wrapper, u"GPS"_s,
+                                  u"Exif.GPSInfo.GPSAltitude"_s, tr("Altitude"));
 
     }
 }
