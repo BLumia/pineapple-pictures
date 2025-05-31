@@ -44,6 +44,8 @@
 #include <QDBusConnectionInterface>
 #endif // HAVE_QTDBUS
 
+using namespace Qt::Literals::StringLiterals;
+
 MainWindow::MainWindow(QWidget *parent)
     : FramelessWindow(parent)
     , m_am(new ActionManager)
@@ -56,17 +58,17 @@ MainWindow::MainWindow(QWidget *parent)
 
     this->setAttribute(Qt::WA_TranslucentBackground, true);
     this->setMinimumSize(350, 330);
-    this->setWindowIcon(QIcon(":/icons/app-icon.svg"));
+    this->setWindowIcon(QIcon(u":/icons/app-icon.svg"_s));
     this->setMouseTracking(true);
     this->setAcceptDrops(true);
 
     m_pm->setAutoLoadFilterSuffixes(supportedImageFormats());
 
-    m_fadeOutAnimation = new QPropertyAnimation(this, "windowOpacity");
+    m_fadeOutAnimation = new QPropertyAnimation(this, "windowOpacity"_ba);
     m_fadeOutAnimation->setDuration(300);
     m_fadeOutAnimation->setStartValue(1);
     m_fadeOutAnimation->setEndValue(0);
-    m_floatUpAnimation = new QPropertyAnimation(this, "geometry");
+    m_floatUpAnimation = new QPropertyAnimation(this, "geometry"_ba);
     m_floatUpAnimation->setDuration(300);
     m_floatUpAnimation->setEasingCurve(QEasingCurve::OutCirc);
     m_exitAnimationGroup = new QParallelAnimationGroup(this);
@@ -92,7 +94,7 @@ MainWindow::MainWindow(QWidget *parent)
     m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
 
     connect(m_graphicsView, &GraphicsView::navigatorViewRequired,
-            this, [ = ](bool required, const QTransform & tf){
+            this, [this](bool required, const QTransform & tf){
         m_gv->setTransform(GraphicsView::resetScale(tf));
         m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
         m_gv->setVisible(required);
@@ -447,13 +449,11 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
     QMenu * menu = new QMenu;
     QMenu * copyMenu = new QMenu(tr("&Copy"));
     QUrl currentFileUrl = currentImageFileUrl();
-    QImage clipboardImage;
-    QUrl clipboardFileUrl;
 
     QAction * copyPixmap = m_am->actionCopyPixmap;
     QAction * copyFilePath = m_am->actionCopyFilePath;
 
-    copyMenu->setIcon(QIcon::fromTheme(QLatin1String("edit-copy")));
+    copyMenu->setIcon(QIcon::fromTheme(u"edit-copy"_s));
     copyMenu->addAction(copyPixmap);
     if (currentFileUrl.isValid()) {
         copyMenu->addAction(copyFilePath);
@@ -780,7 +780,7 @@ void MainWindow::on_actionTrash_triggered()
     if (result == QMessageBox::Yes) {
         bool succ = file.moveToTrash();
         if (!succ) {
-            QMessageBox::warning(this, "Failed to move file to trash",
+            QMessageBox::warning(this, tr("Failed to move file to trash"),
                                  tr("Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation."));
         } else {
             m_pm->removeAt(index);
@@ -891,9 +891,9 @@ void MainWindow::on_actionLocateInFileManager_triggered()
         QDesktopServices::openUrl(folderUrl);
         return;
     }
-    QDBusInterface fm1Iface(QStringLiteral("org.freedesktop.FileManager1"),
-                            QStringLiteral("/org/freedesktop/FileManager1"),
-                            QStringLiteral("org.freedesktop.FileManager1"));
+    QDBusInterface fm1Iface(u"org.freedesktop.FileManager1"_s,
+                            u"/org/freedesktop/FileManager1"_s,
+                            u"org.freedesktop.FileManager1"_s);
     fm1Iface.setTimeout(1000);
     fm1Iface.callWithArgumentList(QDBus::Block, "ShowItems", {
                                       QStringList{currentFileUrl.toString()},
