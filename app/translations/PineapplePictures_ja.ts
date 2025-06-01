@@ -4,169 +4,169 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../aboutdialog.cpp" line="27"/>
+        <location filename="../aboutdialog.cpp" line="29"/>
         <source>About</source>
         <translation>情報</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="30"/>
+        <location filename="../aboutdialog.cpp" line="32"/>
         <source>Launch application with image file path as argument to load the file.</source>
         <translation>画像ファイルのパスをパラメータとしてアプリケーションを起動すると、ファイルを読み込みます。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="31"/>
+        <location filename="../aboutdialog.cpp" line="33"/>
         <source>Drag and drop image file onto the window is also supported.</source>
         <translation>画像ファイルをウィンドウにドラッグ＆ドロップすることもできます。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="32"/>
+        <location filename="../aboutdialog.cpp" line="34"/>
         <source>None of the operations in this application will alter the pictures on disk.</source>
         <translation>このアプリのどの操作も、ディスク上の写真に変更を加えることはありません。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="33"/>
+        <location filename="../aboutdialog.cpp" line="35"/>
         <source>Context menu option explanation:</source>
         <translation>コンテキストメニューのオプションの説明:</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="40"/>
+        <location filename="../aboutdialog.cpp" line="42"/>
         <source>Make window stay on top of all other windows.</source>
         <translation>ウィンドウを最前面に表示します。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="43"/>
+        <location filename="../aboutdialog.cpp" line="45"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
         <translation>誤ってウィンドウを閉じないようにします。(例：ウィンドウをダブルクリックする)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="46"/>
+        <location filename="../aboutdialog.cpp" line="48"/>
         <source>Avoid resetting the zoom/rotation/flip state that was applied to the image view when switching between images.</source>
         <translation>画像を切り替える時に、画像表示に適用されているズーム、回転、反転の状態を維持します。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="53"/>
+        <location filename="../aboutdialog.cpp" line="55"/>
         <source>Version: %1</source>
         <translation>バージョン: %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="64"/>
+        <location filename="../aboutdialog.cpp" line="66"/>
         <source>Logo designed by %1</source>
         <translation>ロゴデザイン: %1</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="66"/>
+        <location filename="../aboutdialog.cpp" line="68"/>
         <source>Built with Qt %1 (%2)</source>
         <translation>Qt %1 (%2) でビルドされました</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="67"/>
+        <location filename="../aboutdialog.cpp" line="69"/>
         <source>Source code</source>
         <translation>ソースコード</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="77"/>
+        <location filename="../aboutdialog.cpp" line="79"/>
         <source>Contributors</source>
         <translation>貢献者</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="79"/>
+        <location filename="../aboutdialog.cpp" line="81"/>
         <source>List of contributors on GitHub</source>
         <translation>GitHubでの貢献者リスト</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="80"/>
+        <location filename="../aboutdialog.cpp" line="82"/>
         <source>Thanks to all people who contributed to this project.</source>
         <translation>このプロジェクトに貢献したすべての人に感謝します。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="84"/>
+        <location filename="../aboutdialog.cpp" line="86"/>
         <source>Translators</source>
         <translation>翻訳者</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="85"/>
+        <location filename="../aboutdialog.cpp" line="87"/>
         <source>I would like to thank the following people who volunteered to translate this application.</source>
         <translation>このアプリケーションの翻訳にボランティアで参加してくださった以下の方々に感謝します。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="129"/>
+        <location filename="../aboutdialog.cpp" line="131"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
         <translation>%1は以下のフリーソフトウェア・ライブラリで構築されています。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="153"/>
+        <location filename="../aboutdialog.cpp" line="155"/>
         <source>&amp;Special Thanks</source>
         <translation>スペシャルサンクス(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="155"/>
+        <location filename="../aboutdialog.cpp" line="157"/>
         <source>&amp;Third-party Libraries</source>
         <translation>サードパーティライブラリ(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="91"/>
+        <location filename="../aboutdialog.cpp" line="93"/>
         <source>Your Rights</source>
         <translation>利用者の権利</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="61"/>
+        <location filename="../aboutdialog.cpp" line="63"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
         <translation>Copyright (c) %1 %2</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="93"/>
+        <location filename="../aboutdialog.cpp" line="95"/>
         <source>%1 is released under the MIT License.</source>
         <translation>%1は、MITライセンスのもとで公開されています。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="94"/>
+        <location filename="../aboutdialog.cpp" line="96"/>
         <source>This license grants people a number of freedoms:</source>
         <translation>このライセンスは人々に多くの自由を与えます。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="95"/>
+        <location filename="../aboutdialog.cpp" line="97"/>
         <source>You are free to use %1, for any purpose</source>
         <translation>%1は、どのような目的にも自由に使用するできます</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="96"/>
+        <location filename="../aboutdialog.cpp" line="98"/>
         <source>You are free to distribute %1</source>
         <translation>%1を自由に配布することができます</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="97"/>
+        <location filename="../aboutdialog.cpp" line="99"/>
         <source>You can study how %1 works and change it</source>
         <translation>%1がどのように作動するかを研究し、それを変更することができます</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="98"/>
+        <location filename="../aboutdialog.cpp" line="100"/>
         <source>You can distribute changed versions of %1</source>
         <translation>変更されたバージョンの %1を配布することができます</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="100"/>
+        <location filename="../aboutdialog.cpp" line="102"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
         <translation>MITライセンスは、この自由を保証しています。誰もそれを奪うことは許されていません。</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="128"/>
+        <location filename="../aboutdialog.cpp" line="130"/>
         <source>Third-party Libraries used by %1</source>
         <translation>%1が使用するサードパーティライブラリ</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="151"/>
+        <location filename="../aboutdialog.cpp" line="153"/>
         <source>&amp;Help</source>
         <translation>へルプ(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="152"/>
+        <location filename="../aboutdialog.cpp" line="154"/>
         <source>&amp;About</source>
         <translation>情報(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="154"/>
+        <location filename="../aboutdialog.cpp" line="156"/>
         <source>&amp;License</source>
         <translation>ライセンス(&amp;L)</translation>
     </message>
@@ -174,7 +174,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../mainwindow.cpp" line="272"/>
+        <location filename="../mainwindow.cpp" line="283"/>
         <location filename="../graphicsscene.cpp" line="100"/>
         <source>Drag image here</source>
         <translation>ここに画像をドラッグしてください</translation>
@@ -187,13 +187,13 @@
         <translation type="vanished">ファイルURLリストがエンプティーです</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="52"/>
+        <location filename="../graphicsview.cpp" line="50"/>
         <source>File is not a valid image</source>
         <translation>ファイルが有効な画像ではありません</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="56"/>
-        <location filename="../graphicsview.cpp" line="60"/>
+        <location filename="../graphicsview.cpp" line="54"/>
+        <location filename="../graphicsview.cpp" line="58"/>
         <source>Image data is invalid or currently unsupported</source>
         <translation>無効またはサポートされていない画像データ</translation>
     </message>
@@ -209,38 +209,43 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="180"/>
-        <location filename="../mainwindow.cpp" line="543"/>
+        <location filename="../mainwindow.cpp" line="188"/>
+        <location filename="../mainwindow.cpp" line="550"/>
         <source>File url list is empty</source>
         <translation>ファイルurlリストがエンプティーです</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="441"/>
+        <location filename="../mainwindow.cpp" line="450"/>
         <source>&amp;Copy</source>
         <translation>コピー(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="558"/>
         <source>Image data is invalid</source>
         <translation>画像のデータが無効です</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="558"/>
+        <location filename="../mainwindow.cpp" line="565"/>
         <source>Not supported mimedata: %1</source>
         <translation>無効なmimedata: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="754"/>
+        <location filename="../mainwindow.cpp" line="761"/>
         <source>Image From Clipboard</source>
         <translation>クリップボードからの画像</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="772"/>
+        <location filename="../mainwindow.cpp" line="779"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
         <translation>「%1」をゴミ箱に移動しますか？</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="777"/>
+        <location filename="../mainwindow.cpp" line="783"/>
+        <source>Failed to move file to trash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="784"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
         <translation>ゴミ箱への移動に失敗しました。ファイルのアクセス許可や、ファイルシステムの制限、プラットフォームの制限などを確認してください。</translation>
     </message>
@@ -261,19 +266,19 @@
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="118"/>
-        <location filename="../aboutdialog.cpp" line="39"/>
+        <location filename="../aboutdialog.cpp" line="41"/>
         <source>Stay on top</source>
         <translation>最前面に表示する</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="119"/>
-        <location filename="../aboutdialog.cpp" line="42"/>
+        <location filename="../aboutdialog.cpp" line="44"/>
         <source>Protected mode</source>
         <translation>プロテクトモード</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="120"/>
-        <location filename="../aboutdialog.cpp" line="45"/>
+        <location filename="../aboutdialog.cpp" line="47"/>
         <source>Keep transformation</source>
         <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
         <translation>表示状態を維持する</translation>
@@ -359,7 +364,7 @@
         <translation>次の画像</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="771"/>
+        <location filename="../mainwindow.cpp" line="778"/>
         <location filename="../actionmanager.cpp" line="117"/>
         <source>Move to Trash</source>
         <translation>ゴミ箱へ移動する</translation>
@@ -402,314 +407,314 @@
 <context>
     <name>MetadataModel</name>
     <message>
-        <location filename="../metadatamodel.cpp" line="41"/>
+        <location filename="../metadatamodel.cpp" line="43"/>
         <source>Origin</source>
         <comment>Section name.</comment>
         <translation>元の場所</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="42"/>
+        <location filename="../metadatamodel.cpp" line="44"/>
         <source>Image</source>
         <comment>Section name.</comment>
         <translation>イメージ</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="46"/>
+        <location filename="../metadatamodel.cpp" line="48"/>
         <source>File</source>
         <comment>Section name.</comment>
         <translation>ファイル</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="43"/>
+        <location filename="../metadatamodel.cpp" line="45"/>
         <source>Camera</source>
         <comment>Section name.</comment>
         <translation>カメラ</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="33"/>
+        <location filename="../metadatamodel.cpp" line="35"/>
         <source>%1 File</source>
         <translation>%1 ファイル</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="40"/>
+        <location filename="../metadatamodel.cpp" line="42"/>
         <source>Description</source>
         <comment>Section name.</comment>
         <translation>説明</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="44"/>
+        <location filename="../metadatamodel.cpp" line="46"/>
         <source>Advanced photo</source>
         <comment>Section name.</comment>
         <translation>アドバンストフォト</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="45"/>
+        <location filename="../metadatamodel.cpp" line="47"/>
         <source>GPS</source>
         <comment>Section name.</comment>
         <translation>GPS</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="50"/>
+        <location filename="../metadatamodel.cpp" line="52"/>
         <source>Dimensions</source>
         <translation>解像度</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="52"/>
+        <location filename="../metadatamodel.cpp" line="54"/>
         <source>Aspect ratio</source>
         <translation>アスペクト比</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="56"/>
+        <location filename="../metadatamodel.cpp" line="58"/>
         <source>Frame count</source>
         <translation>フレームカウント</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="60"/>
+        <location filename="../metadatamodel.cpp" line="62"/>
         <source>Name</source>
         <translation>画像名</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="62"/>
+        <location filename="../metadatamodel.cpp" line="64"/>
         <source>Item type</source>
         <translation>項目の種類</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="64"/>
+        <location filename="../metadatamodel.cpp" line="66"/>
         <source>Folder path</source>
         <translation>フォルダパス</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="66"/>
+        <location filename="../metadatamodel.cpp" line="68"/>
         <source>Size</source>
         <translation>サイズ</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="68"/>
+        <location filename="../metadatamodel.cpp" line="70"/>
         <source>Date created</source>
         <translation>作成日時</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="70"/>
+        <location filename="../metadatamodel.cpp" line="72"/>
         <source>Date modified</source>
         <translation>更新日時</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="77"/>
+        <location filename="../metadatamodel.cpp" line="79"/>
         <source>Title</source>
         <translation>タイトル</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="79"/>
+        <location filename="../metadatamodel.cpp" line="81"/>
         <source>Subject</source>
         <translation>サブジェクト</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="81"/>
+        <location filename="../metadatamodel.cpp" line="83"/>
         <source>Rating</source>
         <translation>評価</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="83"/>
+        <location filename="../metadatamodel.cpp" line="85"/>
         <source>Tags</source>
         <translation>タグ</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="85"/>
+        <location filename="../metadatamodel.cpp" line="87"/>
         <source>Comments</source>
         <translation>コメント</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="88"/>
+        <location filename="../metadatamodel.cpp" line="90"/>
         <source>Authors</source>
         <translation>作成者</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="90"/>
+        <location filename="../metadatamodel.cpp" line="92"/>
         <source>Date taken</source>
         <translation>撮影日時</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="96"/>
+        <location filename="../metadatamodel.cpp" line="98"/>
         <source>Program name</source>
         <translation>プログラム名</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="98"/>
+        <location filename="../metadatamodel.cpp" line="100"/>
         <source>Copyright</source>
         <translation>著作権</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="101"/>
+        <location filename="../metadatamodel.cpp" line="103"/>
         <source>Horizontal resolution</source>
         <translation>水平解像度</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="103"/>
+        <location filename="../metadatamodel.cpp" line="105"/>
         <source>Vertical resolution</source>
         <translation>垂直解像度</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="105"/>
+        <location filename="../metadatamodel.cpp" line="107"/>
         <source>Resolution unit</source>
         <translation>解像度の単位</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="107"/>
+        <location filename="../metadatamodel.cpp" line="109"/>
         <source>Colour representation</source>
         <translation>色空間</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="110"/>
+        <location filename="../metadatamodel.cpp" line="112"/>
         <source>Camera maker</source>
         <translation>カメラの製造元</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="112"/>
+        <location filename="../metadatamodel.cpp" line="114"/>
         <source>Camera model</source>
         <translation>カメラのモデル</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="114"/>
+        <location filename="../metadatamodel.cpp" line="116"/>
         <source>F-stop</source>
         <translation>絞り値</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="116"/>
+        <location filename="../metadatamodel.cpp" line="118"/>
         <source>Exposure time</source>
         <translation>露光時間</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="118"/>
+        <location filename="../metadatamodel.cpp" line="120"/>
         <source>ISO speed</source>
         <translation>ISO速度</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="120"/>
+        <location filename="../metadatamodel.cpp" line="122"/>
         <source>Exposure bias</source>
         <translation>露光補正</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="122"/>
+        <location filename="../metadatamodel.cpp" line="124"/>
         <source>Focal length</source>
         <translation>焦点距離</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="124"/>
+        <location filename="../metadatamodel.cpp" line="126"/>
         <source>Max aperture</source>
         <translation>最大口径</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="126"/>
+        <location filename="../metadatamodel.cpp" line="128"/>
         <source>Metering mode</source>
         <translation>測光モード</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="128"/>
+        <location filename="../metadatamodel.cpp" line="130"/>
         <source>Subject distance</source>
         <translation>被写体距離</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="130"/>
+        <location filename="../metadatamodel.cpp" line="132"/>
         <source>Flash mode</source>
         <translation>フラッシュモード</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="132"/>
+        <location filename="../metadatamodel.cpp" line="134"/>
         <source>35mm focal length</source>
         <translation>35mm 焦点距離</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="135"/>
+        <location filename="../metadatamodel.cpp" line="137"/>
         <source>Lens model</source>
         <translation>レンズモデル</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="137"/>
+        <location filename="../metadatamodel.cpp" line="139"/>
         <source>Contrast</source>
         <translation>コントラスト</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="139"/>
+        <location filename="../metadatamodel.cpp" line="141"/>
         <source>Brightness</source>
         <translation>輝度</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="141"/>
+        <location filename="../metadatamodel.cpp" line="143"/>
         <source>Exposure program</source>
         <translation>露光プログラム</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="143"/>
+        <location filename="../metadatamodel.cpp" line="145"/>
         <source>Saturation</source>
         <translation>彩度</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="145"/>
+        <location filename="../metadatamodel.cpp" line="147"/>
         <source>Sharpness</source>
         <translation>シャープネス</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="147"/>
+        <location filename="../metadatamodel.cpp" line="149"/>
         <source>White balance</source>
         <translation>ホワイトバランス</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="149"/>
+        <location filename="../metadatamodel.cpp" line="151"/>
         <source>Digital zoom</source>
         <translation>デジタルズーム倍率</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="151"/>
+        <location filename="../metadatamodel.cpp" line="153"/>
         <source>EXIF version</source>
         <translation>EXIFバージョン</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="154"/>
+        <location filename="../metadatamodel.cpp" line="156"/>
         <source>Latitude reference</source>
         <translation>緯度基準</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="156"/>
+        <location filename="../metadatamodel.cpp" line="158"/>
         <source>Latitude</source>
         <translation>緯度</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="158"/>
+        <location filename="../metadatamodel.cpp" line="160"/>
         <source>Longitude reference</source>
         <translation>経度基準</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="160"/>
+        <location filename="../metadatamodel.cpp" line="162"/>
         <source>Longitude</source>
         <translation>経度</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="162"/>
+        <location filename="../metadatamodel.cpp" line="164"/>
         <source>Altitude reference</source>
         <translation>高度基準</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="164"/>
+        <location filename="../metadatamodel.cpp" line="166"/>
         <source>Altitude</source>
         <translation>高度</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="174"/>
+        <location filename="../metadatamodel.cpp" line="176"/>
         <source>%1 x %2</source>
         <translation>%1 × %2</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="192"/>
+        <location filename="../metadatamodel.cpp" line="194"/>
         <source>%1 : %2</source>
         <translation>%1 : %2</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="317"/>
+        <location filename="../metadatamodel.cpp" line="319"/>
         <source>Property</source>
         <translation>プロパティ</translation>
     </message>
     <message>
-        <location filename="../metadatamodel.cpp" line="317"/>
+        <location filename="../metadatamodel.cpp" line="319"/>
         <source>Value</source>
         <translation>値</translation>
     </message>
@@ -849,7 +854,7 @@
 <context>
     <name>ShortcutEdit</name>
     <message>
-        <location filename="../shortcutedit.cpp" line="111"/>
+        <location filename="../shortcutedit.cpp" line="109"/>
         <source>No shortcuts</source>
         <translation>ショートカットなし</translation>
     </message>
@@ -857,7 +862,7 @@
 <context>
     <name>ShortcutEditor</name>
     <message>
-        <location filename="../shortcutedit.cpp" line="77"/>
+        <location filename="../shortcutedit.cpp" line="75"/>
         <source>Shortcut #%1</source>
         <translation>ショートカット #%1</translation>
     </message>
@@ -865,17 +870,17 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.cpp" line="43"/>
+        <location filename="../main.cpp" line="42"/>
         <source>Pineapple Pictures</source>
         <translation>Pineapple Pictures</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="46"/>
+        <location filename="../main.cpp" line="45"/>
         <source>List supported image format suffixes, and quit program.</source>
         <translation>サポートされている画像形式の拡張子を一覧表示し、プログラムを終了します。</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="50"/>
+        <location filename="../main.cpp" line="49"/>
         <source>File list.</source>
         <translation>ファイルリスト</translation>
     </message>
