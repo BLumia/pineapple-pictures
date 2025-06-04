@@ -246,7 +246,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="783"/>
         <source>Failed to move file to trash</source>
-        <translation type="unfinished"></translation>
+        <translation>Verplaatsen naar prullenbak mislukt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="784"/>
