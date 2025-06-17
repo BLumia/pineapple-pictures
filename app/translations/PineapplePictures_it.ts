@@ -242,7 +242,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="783"/>
         <source>Failed to move file to trash</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile spostare il file nel cestino</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="784"/>
