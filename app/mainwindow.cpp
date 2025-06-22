@@ -75,11 +75,7 @@ MainWindow::MainWindow(QWidget *parent)
     m_exitAnimationGroup->addAnimation(m_fadeOutAnimation);
     m_exitAnimationGroup->addAnimation(m_floatUpAnimation);
     connect(m_exitAnimationGroup, &QParallelAnimationGroup::finished,
-#ifdef Q_OS_MAC
-            this, &QWidget::hide);
-#else
-            this, &QWidget::close);
-#endif
+            this, &MainWindow::doCloseWindow);
 
     GraphicsScene * scene = new GraphicsScene(this);
 
@@ -580,12 +576,16 @@ void MainWindow::centerWindow()
 
 void MainWindow::closeWindow()
 {
-    QRect windowRect(this->geometry());
-    m_floatUpAnimation->setStartValue(windowRect);
-    m_floatUpAnimation->setEndValue(windowRect.adjusted(0, -80, 0, 0));
-    m_floatUpAnimation->setStartValue(QRect(this->geometry().x(), this->geometry().y(), this->geometry().width(), this->geometry().height()));
-    m_floatUpAnimation->setEndValue(QRect(this->geometry().x(), this->geometry().y()-80, this->geometry().width(), this->geometry().height()));
-    m_exitAnimationGroup->start();
+    if (Settings::instance()->useBuiltInCloseAnimation()) {
+        QRect windowRect(this->geometry());
+        m_floatUpAnimation->setStartValue(windowRect);
+        m_floatUpAnimation->setEndValue(windowRect.adjusted(0, -80, 0, 0));
+        m_floatUpAnimation->setStartValue(QRect(this->geometry().x(), this->geometry().y(), this->geometry().width(), this->geometry().height()));
+        m_floatUpAnimation->setEndValue(QRect(this->geometry().x(), this->geometry().y()-80, this->geometry().width(), this->geometry().height()));
+        m_exitAnimationGroup->start();
+    } else {
+        doCloseWindow();
+    }
 }
 
 void MainWindow::updateWidgetsPosition()
@@ -910,6 +910,15 @@ void MainWindow::on_actionLocateInFileManager_triggered()
 void MainWindow::on_actionQuitApp_triggered()
 {
     quitAppAction(false);
+}
+
+void MainWindow::doCloseWindow()
+{
+#ifdef Q_OS_MAC
+    this->hide();
+#else
+    this->close();
+#endif
 }
 
 bool MainWindow::updateFileWatcher(const QString &basePath)

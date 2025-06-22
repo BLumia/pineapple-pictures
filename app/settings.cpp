@@ -45,12 +45,17 @@ Settings *Settings::instance()
     return m_settings_instance;
 }
 
-bool Settings::stayOnTop()
+bool Settings::stayOnTop() const
 {
     return m_qsettings->value("stay_on_top", true).toBool();
 }
 
-bool Settings::useLightCheckerboard()
+bool Settings::useBuiltInCloseAnimation() const
+{
+    return m_qsettings->value("use_built_in_close_animation", true).toBool();
+}
+
+bool Settings::useLightCheckerboard() const
 {
     return m_qsettings->value("use_light_checkerboard", false).toBool();
 }
@@ -86,6 +91,12 @@ Qt::HighDpiScaleFactorRoundingPolicy Settings::hiDpiScaleFactorBehavior() const
 void Settings::setStayOnTop(bool on)
 {
     m_qsettings->setValue("stay_on_top", on);
+    m_qsettings->sync();
+}
+
+void Settings::setUseBuiltInCloseAnimation(bool on)
+{
+    m_qsettings->setValue("use_built_in_close_animation", on);
     m_qsettings->sync();
 }
 
