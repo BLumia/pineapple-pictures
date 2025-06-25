@@ -16,16 +16,6 @@
 #define ACTION_NAME(s) QStringLiteral(STRIFY(s))
 #define STRIFY(s) #s
 
-ActionManager::ActionManager()
-{
-
-}
-
-ActionManager::~ActionManager()
-{
-
-}
-
 QIcon ActionManager::loadHidpiIcon(const QString &resp, QSize sz)
 {
     QSvgRenderer r(resp);

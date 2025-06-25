@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2022 Gary Wang <wzc782970009@gmail.com>
+// SPDX-FileCopyrightText: 2025 Gary Wang <git@blumia.net>
 //
 // SPDX-License-Identifier: MIT
 
@@ -12,8 +12,8 @@ class MainWindow;
 class ActionManager
 {
 public:
-    ActionManager();
-    ~ActionManager();
+    explicit ActionManager() = default;
+    ~ActionManager() = default;
 
     void setupAction(MainWindow * mainWindow);
     void retranslateUi(MainWindow *MainWindow);

@@ -18,7 +18,7 @@ class ShortcutEditor : public QWidget
     Q_OBJECT
 public:
     explicit ShortcutEditor(ShortcutEdit * shortcutEdit, QWidget * parent = nullptr);
-    ~ShortcutEditor();
+    ~ShortcutEditor() = default;
 
     void setDescription(const QString & desc);
 

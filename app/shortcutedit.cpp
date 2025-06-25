@@ -40,11 +40,6 @@ ShortcutEditor::ShortcutEditor(ShortcutEdit * shortcutEdit, QWidget * parent)
     reloadShortcuts();
 }
 
-ShortcutEditor::~ShortcutEditor()
-{
-
-}
-
 void ShortcutEditor::setDescription(const QString &desc)
 {
     m_descriptionLabel->setText(desc);
