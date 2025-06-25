@@ -178,7 +178,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../mainwindow.cpp" line="279"/>
+        <location filename="../mainwindow.cpp" line="276"/>
         <location filename="../graphicsscene.cpp" line="100"/>
         <source>Drag image here</source>
         <translation>Arrastre una imagen aquí</translation>
@@ -213,43 +213,43 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="184"/>
-        <location filename="../mainwindow.cpp" line="546"/>
+        <location filename="../mainwindow.cpp" line="181"/>
+        <location filename="../mainwindow.cpp" line="545"/>
         <source>File url list is empty</source>
         <translation>La lista de ubicaciones está vacía</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="446"/>
+        <location filename="../mainwindow.cpp" line="445"/>
         <source>&amp;Copy</source>
         <translation>&amp;Copiar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="554"/>
+        <location filename="../mainwindow.cpp" line="553"/>
         <source>Image data is invalid</source>
         <translation>Los datos de la imagen no son válidos</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="561"/>
+        <location filename="../mainwindow.cpp" line="560"/>
         <source>Not supported mimedata: %1</source>
         <translation>El tipo MIME no es compatible: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="761"/>
+        <location filename="../mainwindow.cpp" line="759"/>
         <source>Image From Clipboard</source>
         <translation>Imagen del portapapeles</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="779"/>
+        <location filename="../mainwindow.cpp" line="777"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
         <translation>¿Estás seguro de que quieres mover &quot;%1&quot; a la papelera de reciclaje?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="783"/>
+        <location filename="../mainwindow.cpp" line="781"/>
         <source>Failed to move file to trash</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="784"/>
+        <location filename="../mainwindow.cpp" line="782"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
         <translation>Mover a la papelera ha fallado, puede deberse a un problema con los permisos de los archivos, una limitación del sistema de archivos o una limitación de la plataforma.</translation>
     </message>
@@ -368,7 +368,7 @@
         <translation>Imagen siguiente</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="778"/>
+        <location filename="../mainwindow.cpp" line="776"/>
         <location filename="../actionmanager.cpp" line="117"/>
         <source>Move to Trash</source>
         <translation>Mover a la papelera</translation>
@@ -726,136 +726,141 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="30"/>
+        <location filename="../settingsdialog.cpp" line="31"/>
         <source>Settings</source>
         <translation>Preferencias</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="38"/>
+        <location filename="../settingsdialog.cpp" line="39"/>
         <source>Options</source>
         <translation>Opciones</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="50"/>
+        <location filename="../settingsdialog.cpp" line="51"/>
         <source>Shortcuts</source>
         <translation>Atajos</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="60"/>
+        <location filename="../settingsdialog.cpp" line="61"/>
         <source>Editing shortcuts for action &quot;%1&quot;:</source>
         <translation>Editando atajos para la acción &quot;%1&quot;:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="69"/>
+        <location filename="../settingsdialog.cpp" line="70"/>
         <source>Failed to set shortcuts</source>
         <translation>No se pudieron establecer accesos directos</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="70"/>
+        <location filename="../settingsdialog.cpp" line="71"/>
         <source>Please check if shortcuts are duplicated with existing shortcuts.</source>
         <translation>Por favor, verifique si los accesos directos están duplicados.</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="77"/>
+        <location filename="../settingsdialog.cpp" line="78"/>
         <source>Do nothing</source>
         <translation>No hacer nada</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="78"/>
+        <location filename="../settingsdialog.cpp" line="79"/>
         <source>Close the window</source>
         <translation>Cerrar la ventana</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="79"/>
+        <location filename="../settingsdialog.cpp" line="80"/>
         <source>Toggle maximize</source>
         <translation>Maximizar/desmaximizar</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="80"/>
+        <location filename="../settingsdialog.cpp" line="81"/>
         <source>Toggle fullscreen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="84"/>
+        <location filename="../settingsdialog.cpp" line="85"/>
         <source>Zoom in and out</source>
         <translation>Ampliar y reducir</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="85"/>
+        <location filename="../settingsdialog.cpp" line="86"/>
         <source>View next or previous item</source>
         <translation>Mostrar el elemento siguiente/anterior</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="89"/>
+        <location filename="../settingsdialog.cpp" line="90"/>
         <source>Auto size</source>
         <translation>Tamaño automático</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="90"/>
+        <location filename="../settingsdialog.cpp" line="91"/>
         <source>Maximized</source>
         <translation>Maximizar</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="91"/>
+        <location filename="../settingsdialog.cpp" line="92"/>
         <source>Windowed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="95"/>
+        <location filename="../settingsdialog.cpp" line="96"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
         <translation>Redondeo (escala de enteros)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="96"/>
+        <location filename="../settingsdialog.cpp" line="97"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
         <translation>Ceil (redondear enteros hacia arriba)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="97"/>
+        <location filename="../settingsdialog.cpp" line="98"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
         <translation>Floor (redondear enteros hacia abajo)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="98"/>
+        <location filename="../settingsdialog.cpp" line="99"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
         <translation>Redondeo (redondear los enteros)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="121"/>
+        <location filename="../settingsdialog.cpp" line="122"/>
         <source>Stay on top when start-up</source>
         <translation>Mantener encima al inicio</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="122"/>
+        <location filename="../settingsdialog.cpp" line="123"/>
         <source>Use built-in close window animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="123"/>
+        <location filename="../settingsdialog.cpp" line="124"/>
         <source>Use light-color checkerboard</source>
         <translation>Utilice un tablero de ajedrez de color claro</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="124"/>
+        <location filename="../settingsdialog.cpp" line="125"/>
+        <source>Loop the loaded gallery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="126"/>
         <source>Double-click behavior</source>
         <translation>Comportamiento del doble clic</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="125"/>
+        <location filename="../settingsdialog.cpp" line="127"/>
         <source>Mouse wheel behavior</source>
         <translation>Comportamiento de la rueda del ratón</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="126"/>
+        <location filename="../settingsdialog.cpp" line="128"/>
         <source>Default window size</source>
         <translation>Tamaño de la ventana por defecto</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="127"/>
+        <location filename="../settingsdialog.cpp" line="129"/>
         <source>HiDPI scale factor rounding policy</source>
         <translation>Política de redondeo del factor de escala HiDPI</translation>
     </message>
