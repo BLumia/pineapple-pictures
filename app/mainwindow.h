@@ -110,6 +110,7 @@ private slots:
 
 private:
     bool updateFileWatcher(const QString & basePath = QString());
+    void updateGalleryButtonsVisibility();
 
 private:
     ActionManager *m_am;

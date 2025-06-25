@@ -62,10 +62,12 @@ public:
     Q_INVOKABLE QModelIndex loadPlaylist(const QList<QUrl> & urls);
     Q_INVOKABLE QModelIndex loadPlaylist(const QUrl & url);
 
-    int totalCount() const;
+    inline int totalCount() const;
     QModelIndex previousIndex() const;
     QModelIndex nextIndex() const;
     QModelIndex curIndex() const;
+    inline bool isFirstIndex() const;
+    inline bool isLastIndex() const;
     void setCurrentIndex(const QModelIndex & index);
     QUrl urlByIndex(const QModelIndex & index);
     QString localFileByIndex(const QModelIndex & index);

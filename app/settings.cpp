@@ -60,6 +60,11 @@ bool Settings::useLightCheckerboard() const
     return m_qsettings->value("use_light_checkerboard", false).toBool();
 }
 
+bool Settings::loopGallery() const
+{
+    return m_qsettings->value("loop_gallery", true).toBool();
+}
+
 Settings::DoubleClickBehavior Settings::doubleClickBehavior() const
 {
     QString result = m_qsettings->value("double_click_behavior", "Close").toString();
@@ -103,6 +108,12 @@ void Settings::setUseBuiltInCloseAnimation(bool on)
 void Settings::setUseLightCheckerboard(bool light)
 {
     m_qsettings->setValue("use_light_checkerboard", light);
+    m_qsettings->sync();
+}
+
+void Settings::setLoopGallery(bool on)
+{
+    m_qsettings->setValue("loop_gallery", on);
     m_qsettings->sync();
 }
 

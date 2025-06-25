@@ -25,6 +25,7 @@ private:
     QCheckBox * m_stayOnTop = nullptr;
     QCheckBox * m_useBuiltInCloseAnimation = nullptr;
     QCheckBox * m_useLightCheckerboard = nullptr;
+    QCheckBox * m_loopGallery = nullptr;
     QComboBox * m_doubleClickBehavior = nullptr;
     QComboBox * m_mouseWheelBehavior = nullptr;
     QComboBox * m_initWindowSizeBehavior = nullptr;

@@ -139,10 +139,7 @@ MainWindow::MainWindow(QWidget *parent)
     m_gv->setOpacity(0, false);
     m_closeButton->setOpacity(0, false);
 
-    connect(m_pm, &PlaylistManager::totalCountChanged, this, [this](int galleryFileCount) {
-        m_prevButton->setVisible(galleryFileCount > 1);
-        m_nextButton->setVisible(galleryFileCount > 1);
-    });
+    connect(m_pm, &PlaylistManager::totalCountChanged, this, &MainWindow::updateGalleryButtonsVisibility);
 
     connect(m_pm->model(), &PlaylistModel::modelReset, this, std::bind(&MainWindow::galleryCurrent, this, false, false));
     connect(m_pm, &PlaylistManager::currentIndexChanged, this, std::bind(&MainWindow::galleryCurrent, this, true, false));
@@ -278,6 +275,8 @@ void MainWindow::galleryCurrent(bool showLoadImageHintWhenEmpty, bool reloadImag
     } else if (showLoadImageHintWhenEmpty && m_pm->totalCount() <= 0) {
         m_graphicsView->showText(QCoreApplication::translate("GraphicsScene", "Drag image here"));
     }
+
+    updateGalleryButtonsVisibility();
 
     if (shouldResetfileWatcher) updateFileWatcher();
 }
@@ -603,8 +602,7 @@ void MainWindow::toggleProtectedMode()
 {
     m_protectedMode = !m_protectedMode;
     m_closeButton->setVisible(!m_protectedMode);
-    m_prevButton->setVisible(!m_protectedMode);
-    m_nextButton->setVisible(!m_protectedMode);
+    updateGalleryButtonsVisibility();
 }
 
 void MainWindow::toggleStayOnTop()
@@ -926,4 +924,14 @@ bool MainWindow::updateFileWatcher(const QString &basePath)
     m_fileSystemWatcher->removePaths(m_fileSystemWatcher->files());
     if (!basePath.isEmpty()) return m_fileSystemWatcher->addPath(basePath);
     return false;
+}
+
+void MainWindow::updateGalleryButtonsVisibility()
+{
+    const int galleryFileCount = m_pm->totalCount();
+    const bool loopGallery = Settings::instance()->loopGallery();
+    m_prevButton->setVisible(!m_protectedMode && galleryFileCount > 1);
+    m_nextButton->setVisible(!m_protectedMode && galleryFileCount > 1);
+    m_prevButton->setEnabled(loopGallery || !m_pm->isFirstIndex());
+    m_nextButton->setEnabled(loopGallery || !m_pm->isLastIndex());
 }

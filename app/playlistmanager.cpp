@@ -196,7 +196,7 @@ QModelIndex PlaylistManager::previousIndex() const
     int count = totalCount();
     if (count == 0) return {};
 
-    return m_model.index(m_currentIndex - 1 < 0 ? count - 1 : m_currentIndex - 1);
+    return m_model.index(isFirstIndex() ? count - 1 : m_currentIndex - 1);
 }
 
 QModelIndex PlaylistManager::nextIndex() const
@@ -204,12 +204,22 @@ QModelIndex PlaylistManager::nextIndex() const
     int count = totalCount();
     if (count == 0) return {};
 
-    return m_model.index(m_currentIndex + 1 == count ? 0 : m_currentIndex + 1);
+    return m_model.index(isLastIndex() ? 0 : m_currentIndex + 1);
 }
 
 QModelIndex PlaylistManager::curIndex() const
 {
     return m_model.index(m_currentIndex);
+}
+
+bool PlaylistManager::isFirstIndex() const
+{
+    return m_currentIndex == 0;
+}
+
+bool PlaylistManager::isLastIndex() const
+{
+    return m_currentIndex + 1 == totalCount();
 }
 
 void PlaylistManager::setCurrentIndex(const QModelIndex &index)

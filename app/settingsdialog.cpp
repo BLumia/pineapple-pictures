@@ -22,6 +22,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     , m_stayOnTop(new QCheckBox)
     , m_useBuiltInCloseAnimation(new QCheckBox)
     , m_useLightCheckerboard(new QCheckBox)
+    , m_loopGallery(new QCheckBox)
     , m_doubleClickBehavior(new QComboBox)
     , m_mouseWheelBehavior(new QComboBox)
     , m_initWindowSizeBehavior(new QComboBox)
@@ -121,6 +122,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     settingsForm->addRow(tr("Stay on top when start-up"), m_stayOnTop);
     settingsForm->addRow(tr("Use built-in close window animation"), m_useBuiltInCloseAnimation);
     settingsForm->addRow(tr("Use light-color checkerboard"), m_useLightCheckerboard);
+    settingsForm->addRow(tr("Loop the loaded gallery"), m_loopGallery);
     settingsForm->addRow(tr("Double-click behavior"), m_doubleClickBehavior);
     settingsForm->addRow(tr("Mouse wheel behavior"), m_mouseWheelBehavior);
     settingsForm->addRow(tr("Default window size"), m_initWindowSizeBehavior);
@@ -129,6 +131,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     m_stayOnTop->setChecked(Settings::instance()->stayOnTop());
     m_useBuiltInCloseAnimation->setChecked(Settings::instance()->useBuiltInCloseAnimation());
     m_useLightCheckerboard->setChecked(Settings::instance()->useLightCheckerboard());
+    m_loopGallery->setChecked(Settings::instance()->loopGallery());
     m_doubleClickBehavior->setModel(new QStringListModel(dcbDropDown));
     Settings::DoubleClickBehavior dcb = Settings::instance()->doubleClickBehavior();
     m_doubleClickBehavior->setCurrentIndex(static_cast<int>(dcb));
@@ -147,16 +150,28 @@ SettingsDialog::SettingsDialog(QWidget *parent)
         }
     }
 
-    connect(m_stayOnTop, &QCheckBox::stateChanged, this, [ = ](int state){
+#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+# define QCHECKBOX_CHECKSTATECHANGED QCheckBox::checkStateChanged
+# define QT_CHECKSTATE Qt::CheckState
+#else
+# define QCHECKBOX_CHECKSTATECHANGED QCheckBox::stateChanged
+# define QT_CHECKSTATE int
+#endif // QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+
+    connect(m_stayOnTop, &QCHECKBOX_CHECKSTATECHANGED, this, [ = ](QT_CHECKSTATE state){
         Settings::instance()->setStayOnTop(state == Qt::Checked);
     });
 
-    connect(m_useBuiltInCloseAnimation, &QCheckBox::stateChanged, this, [ = ](int state){
+    connect(m_useBuiltInCloseAnimation, &QCHECKBOX_CHECKSTATECHANGED, this, [ = ](QT_CHECKSTATE state){
         Settings::instance()->setUseBuiltInCloseAnimation(state == Qt::Checked);
     });
 
-    connect(m_useLightCheckerboard, &QCheckBox::stateChanged, this, [ = ](int state){
+    connect(m_useLightCheckerboard, &QCHECKBOX_CHECKSTATECHANGED, this, [ = ](QT_CHECKSTATE state){
         Settings::instance()->setUseLightCheckerboard(state == Qt::Checked);
+    });
+
+    connect(m_loopGallery, &QCHECKBOX_CHECKSTATECHANGED, this, [ = ](QT_CHECKSTATE state){
+        Settings::instance()->setLoopGallery(state == Qt::Checked);
     });
 
     connect(m_doubleClickBehavior, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [ = ](int index){
