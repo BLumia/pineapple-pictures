@@ -175,7 +175,16 @@ MainWindow::~MainWindow()
 void MainWindow::showUrls(const QList<QUrl> &urls)
 {
     if (!urls.isEmpty()) {
-        m_graphicsView->showFileFromPath(urls.first().toLocalFile());
+        const QUrl & firstUrl = urls.first();
+        if (urls.count() == 1) {
+            const QString lowerCaseUrlPath(firstUrl.path().toLower());
+            if (lowerCaseUrlPath.endsWith(".m3u8") || lowerCaseUrlPath.endsWith(".m3u")) {
+                m_pm->loadM3U8Playlist(firstUrl);
+                galleryCurrent(true, true);
+                return;
+            }
+        }
+        m_graphicsView->showFileFromPath(firstUrl.toLocalFile());
         m_pm->loadPlaylist(urls);
     } else {
         m_graphicsView->showText(tr("File url list is empty"));

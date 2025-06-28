@@ -186,6 +186,26 @@ QModelIndex PlaylistManager::loadPlaylist(const QUrl &url)
     return idx;
 }
 
+QModelIndex PlaylistManager::loadM3U8Playlist(const QUrl &url)
+{
+    QFile file(url.toLocalFile());
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QList<QUrl> urls;
+        while (!file.atEnd()) {
+            QString line = file.readLine();
+            if (line.startsWith('#')) {
+                continue;
+            }
+            QFileInfo fileInfo(file);
+            QUrl item = QUrl::fromUserInput(line, fileInfo.absolutePath());
+            urls.append(item);
+        }
+        return loadPlaylist(urls);
+    } else {
+        return {};
+    }
+}
+
 int PlaylistManager::totalCount() const
 {
     return m_model.rowCount();

@@ -61,6 +61,7 @@ public:
     void setPlaylist(const QList<QUrl> & url);
     Q_INVOKABLE QModelIndex loadPlaylist(const QList<QUrl> & urls);
     Q_INVOKABLE QModelIndex loadPlaylist(const QUrl & url);
+    Q_INVOKABLE QModelIndex loadM3U8Playlist(const QUrl & url);
 
     int totalCount() const;
     QModelIndex previousIndex() const;
