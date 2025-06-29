@@ -255,6 +255,9 @@ void MainWindow::clearGallery()
 
 void MainWindow::galleryPrev()
 {
+    const bool loopGallery = Settings::instance()->loopGallery();
+    if (!loopGallery && m_pm->isFirstIndex()) return;
+
     QModelIndex index = m_pm->previousIndex();
     if (index.isValid()) {
         m_pm->setCurrentIndex(index);
@@ -264,6 +267,9 @@ void MainWindow::galleryPrev()
 
 void MainWindow::galleryNext()
 {
+    const bool loopGallery = Settings::instance()->loopGallery();
+    if (!loopGallery && m_pm->isLastIndex()) return;
+
     QModelIndex index = m_pm->nextIndex();
     if (index.isValid()) {
         m_pm->setCurrentIndex(index);
