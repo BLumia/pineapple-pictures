@@ -230,7 +230,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="781"/>
         <source>Failed to move file to trash</source>
-        <translation type="unfinished"></translation>
+        <translation>கோப்பை குப்பைக்கு நகர்த்துவதில் தோல்வி</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="782"/>
@@ -782,7 +782,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="92"/>
         <source>Windowed</source>
-        <translation type="unfinished"></translation>
+        <translation>சாளரம்</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="96"/>
@@ -816,7 +816,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="123"/>
         <source>Use built-in close window animation</source>
-        <translation type="unfinished"></translation>
+        <translation>உள்ளமைக்கப்பட்ட நெருக்கமான சாளர அனிமேஷனைப் பயன்படுத்தவும்</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="124"/>
@@ -826,7 +826,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="125"/>
         <source>Loop the loaded gallery</source>
-        <translation type="unfinished"></translation>
+        <translation>ஏற்றப்பட்ட கேலரியை சுற்றுங்கள்</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="126"/>
