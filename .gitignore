@@ -11,6 +11,8 @@
 
 # Generic Build Dir
 [Bb]uild/
+cmake-build-*/
 
 # IDE/Editor config folders
 .vscode/
+.idea/

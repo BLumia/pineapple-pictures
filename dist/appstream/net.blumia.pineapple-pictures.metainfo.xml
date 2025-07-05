@@ -80,6 +80,22 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" version="1.1.0" date="2025-07-06T00:00:00Z">
+      <description>
+        <p>This release adds the following features:</p>
+        <ul>
+          <li>New option to disable built-in close window animation</li>
+          <li>New option to disable gallery looping</li>
+          <li>Support load m3u8 as image gallery playlist</li>
+        </ul>
+        <p>This release includes the following change:</p>
+        <ul>
+          <li>Drop Qt 5 support</li>
+        </ul>
+        <p>With contributions from:</p>
+        <p>Heimen Stoffels, albanobattistella, தமிழ்நேரம்</p>
+      </description>
+    </release>
     <release type="stable" version="1.0.0" date="2025-05-03T00:00:00Z">
       <description>
         <p>This release adds the following features:</p>
@@ -87,7 +103,7 @@
           <li>Support enforces windowed mode on start-up</li>
           <li>Reload image automatically when current image gets updated</li>
         </ul>
-        <p>This release fixes the following bugs:</p>
+        <p>This release fixes the following bug:</p>
         <ul>
           <li>Display correct text language on macOS</li>
         </ul>
