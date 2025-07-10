@@ -72,9 +72,9 @@ jobs:
         set CMAKE_PREFIX_PATH=%PWD%/dependencies_bin
         mkdir dependencies_src
         echo ::group::===== exiv2 =====
-        curl -fsSL -o exiv2_bin.zip https://github.com/Exiv2/exiv2/releases/download/v0.28.3/exiv2-0.28.3-2019msvc64.zip
+        curl -fsSL -o exiv2_bin.zip https://github.com/Exiv2/exiv2/releases/download/v0.28.5/exiv2-0.28.5-2022msvc-AMD64.zip
         7z x exiv2_bin.zip -y
-        ren .\exiv2-0.28.3-2019msvc64 dependencies_bin
+        ren .\exiv2-0.28.5-2022msvc-AMD64 dependencies_bin
         echo ::endgroup::
         echo ::group::===== zlib =====
         curl -fsSL -o zlib_src.zip https://zlib.net/zlib131.zip
@@ -109,7 +109,7 @@ jobs:
         echo ::endgroup::
         echo ::group::===== KArchive =====
         git clone -q https://invent.kde.org/frameworks/karchive.git dependencies_src/karchive
-        cmake .\dependencies_src\karchive -Bbuild_dependencies/karchive -DWITH_LIBZSTD=OFF -DWITH_BZIP2=OFF -DWITH_LIBLZMA=OFF -DCMAKE_INSTALL_PREFIX="dependencies_bin" || goto :error
+        cmake .\dependencies_src\karchive -Bbuild_dependencies/karchive -DBUILD_TESTING=OFF -DWITH_LIBZSTD=OFF -DWITH_BZIP2=OFF -DWITH_LIBLZMA=OFF -DCMAKE_INSTALL_PREFIX="dependencies_bin" || goto :error
         cmake --build build_dependencies/karchive --config Release --target=install || goto :error
         echo ::endgroup::
         echo ::group::===== KImageFormats =====
