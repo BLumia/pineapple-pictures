@@ -23,8 +23,7 @@ Pineapple Pictures is a lightweight image viewer that allows you view JPEG, PNG,
 
 ### Maintained by contributors / certain distro's package maintainers
 
-- Debian (since bullseye) or Ubuntu (since 21.04): `sudo apt install pineapple-pictures`
-- Nix / NixOS: [pineapple-pictures](https://search.nixos.org/packages?channel=unstable&show=pineapple-pictures&from=0&size=50&sort=relevance&type=packages&query=pineapple-pictures) (maintained by @wineee)
+[![Packaging status](https://repology.org/badge/vertical-allrepos/pineapple-pictures.svg?columns=4)](https://repology.org/project/pineapple-pictures/versions)
 
 ## Help Translation!
 
