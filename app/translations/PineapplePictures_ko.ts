@@ -242,7 +242,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="781"/>
         <source>Failed to move file to trash</source>
-        <translation type="unfinished"></translation>
+        <translation>파일을 휴지통으로 이동하지 못했습니다</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="782"/>
@@ -296,12 +296,12 @@
     <message>
         <location filename="../actionmanager.cpp" line="108"/>
         <source>Pause/Resume Animation</source>
-        <translation type="unfinished"></translation>
+        <translation>애니메이션 일시 중지/재개</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="109"/>
         <source>Animation Go to Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>애니메이션 다음 프레임으로 이동</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="111"/>
@@ -729,27 +729,27 @@
     <message>
         <location filename="../settingsdialog.cpp" line="39"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>옵션</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="51"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>단축키</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="61"/>
         <source>Editing shortcuts for action &quot;%1&quot;:</source>
-        <translation type="unfinished"></translation>
+        <translation>작업 &quot;%1&quot;의 단축키 편집:</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="70"/>
         <source>Failed to set shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>단축키 설정 실패</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="71"/>
         <source>Please check if shortcuts are duplicated with existing shortcuts.</source>
-        <translation type="unfinished"></translation>
+        <translation>단축키가 기존 단축키와 중복되는지 확인해 주세요.</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="78"/>
@@ -769,7 +769,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="81"/>
         <source>Toggle fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>전체 화면 전환</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="85"/>
@@ -794,7 +794,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="92"/>
         <source>Windowed</source>
-        <translation type="unfinished"></translation>
+        <translation>창 모드</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="96"/>
@@ -828,7 +828,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="123"/>
         <source>Use built-in close window animation</source>
-        <translation type="unfinished"></translation>
+        <translation>내장된 창 닫기 애니메이션 사용</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="124"/>
@@ -838,7 +838,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="125"/>
         <source>Loop the loaded gallery</source>
-        <translation type="unfinished"></translation>
+        <translation>로드된 갤러리 반복</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="126"/>
@@ -866,7 +866,7 @@
     <message>
         <location filename="../shortcutedit.cpp" line="109"/>
         <source>No shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>단축키 없음</translation>
     </message>
 </context>
 <context>
@@ -874,7 +874,7 @@
     <message>
         <location filename="../shortcutedit.cpp" line="75"/>
         <source>Shortcut #%1</source>
-        <translation type="unfinished"></translation>
+        <translation>단축키 #%1</translation>
     </message>
 </context>
 <context>
