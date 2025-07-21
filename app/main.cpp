@@ -76,6 +76,18 @@ int main(int argc, char *argv[])
         w.showUrls({url});
         w.initWindowSize();
     });
+
+    // Handle dock icon clicks to show hidden window
+    a.connect(&a, &QApplication::applicationStateChanged, [&w](Qt::ApplicationState state) {
+        if (state == Qt::ApplicationActive && w.isHidden()) {
+            w.showUrls({});
+            w.galleryCurrent(true, true);
+            w.setWindowOpacity(1);
+            w.showNormal();
+            w.raise();
+            w.activateWindow();
+        }
+    });
 #endif // Q_OS_MACOS
 
     QStringList urlStrList = parser.positionalArguments();

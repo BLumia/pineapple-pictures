@@ -188,6 +188,7 @@ void MainWindow::showUrls(const QList<QUrl> &urls)
         m_pm->loadPlaylist(urls);
     } else {
         m_graphicsView->showText(tr("File url list is empty"));
+        m_pm->setPlaylist(urls);
         return;
     }
 
@@ -312,7 +313,7 @@ QStringList MainWindow::supportedImageFormats()
 void MainWindow::showEvent(QShowEvent *event)
 {
     updateWidgetsPosition();
-
+    
     return FramelessWindow::showEvent(event);
 }
 
