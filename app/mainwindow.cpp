@@ -313,7 +313,7 @@ QStringList MainWindow::supportedImageFormats()
 void MainWindow::showEvent(QShowEvent *event)
 {
     updateWidgetsPosition();
-    
+
     return FramelessWindow::showEvent(event);
 }
 
