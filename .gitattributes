@@ -1,0 +1,5 @@
+*.txt    text eol=lf
+*.cpp    text eol=lf
+*.h      text eol=lf
+*.ui     text eol=lf
+*.qml    text eol=lf
