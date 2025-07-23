@@ -3,7 +3,7 @@ SPDX-PackageName = "Pineapple Pictures"
 SPDX-PackageDownloadLocation = "https://github.com/BLumia/pineapple-pictures"
 
 [[annotations]]
-path = [".gitignore", "appveyor.yml", ".github/**"]
+path = [".gitattributes", ".git-blame-ignore-revs", ".gitignore", "appveyor.yml", ".github/**"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "None"
 SPDX-License-Identifier = "CC0-1.0"
