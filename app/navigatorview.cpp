@@ -9,6 +9,7 @@
 
 #include <QMouseEvent>
 #include <QDebug>
+#include <QTimer>
 
 NavigatorView::NavigatorView(QWidget *parent)
     : QGraphicsView (parent)
@@ -34,10 +35,14 @@ void NavigatorView::setOpacity(qreal opacity, bool animated)
 
 void NavigatorView::updateMainViewportRegion()
 {
-    if (m_mainView != nullptr) {
-        m_viewportRegion = mapFromScene(m_mainView->mapToScene(m_mainView->rect()));
-        update();
-    }
+    // Use QTimer::singleShot with lambda to delay the update
+    // This ensures all geometry updates are complete before calculating viewport region
+    QTimer::singleShot(0, [this]() {
+        if (m_mainView != nullptr) {
+            m_viewportRegion = mapFromScene(m_mainView->mapToScene(m_mainView->rect()));
+            update();
+        }
+    });
 }
 
 void NavigatorView::mousePressEvent(QMouseEvent *event)

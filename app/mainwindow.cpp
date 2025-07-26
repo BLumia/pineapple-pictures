@@ -700,6 +700,7 @@ void MainWindow::on_actionActualSize_triggered()
 {
     m_graphicsView->resetScale();
     m_graphicsView->setEnableAutoFitInView(false);
+    m_graphicsView->setLongImageMode(false);
 }
 
 void MainWindow::on_actionToggleMaximize_triggered()
@@ -728,6 +729,7 @@ void MainWindow::on_actionFitInView_triggered()
 {
     m_graphicsView->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
     m_graphicsView->setEnableAutoFitInView(m_graphicsView->scaleFactor() <= 1);
+    m_graphicsView->setLongImageMode(false);
 }
 
 void MainWindow::on_actionFitByWidth_triggered()
@@ -813,14 +815,12 @@ void MainWindow::on_actionRotateClockwise_triggered()
 {
     m_graphicsView->rotateView();
     m_graphicsView->displayScene();
-    m_gv->setVisible(false);
 }
 
 void MainWindow::on_actionRotateCounterClockwise_triggered()
 {
     m_graphicsView->rotateView(false);
     m_graphicsView->displayScene();
-    m_gv->setVisible(false);
 }
 
 void MainWindow::on_actionPrevPicture_triggered()

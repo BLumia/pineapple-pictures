@@ -38,6 +38,7 @@ public:
     bool useBuiltInCloseAnimation() const;
     bool useLightCheckerboard() const;
     bool loopGallery() const;
+    bool autoLongImageMode() const;
     DoubleClickBehavior doubleClickBehavior() const;
     MouseWheelBehavior mouseWheelBehavior() const;
     WindowSizeBehavior initWindowSizeBehavior() const;
@@ -47,6 +48,7 @@ public:
     void setUseBuiltInCloseAnimation(bool on);
     void setUseLightCheckerboard(bool light);
     void setLoopGallery(bool on);
+    void setAutoLongImageMode(bool on);
     void setDoubleClickBehavior(DoubleClickBehavior dcb);
     void setMouseWheelBehavior(MouseWheelBehavior mwb);
     void setInitWindowSizeBehavior(WindowSizeBehavior wsb);

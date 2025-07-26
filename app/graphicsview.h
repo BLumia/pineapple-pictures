@@ -39,11 +39,19 @@ public:
     void displayScene();
     bool isSceneBiggerThanView() const;
     void setEnableAutoFitInView(bool enable = true);
+    void setLongImageMode(bool enable = true);
 
     bool avoidResetTransform() const;
     void setAvoidResetTransform(bool avoidReset);
 
     static QTransform resetScale(const QTransform & orig);
+
+    // Long image mode support
+    bool isLongImage() const;
+    bool shouldEnterLongImageMode() const;
+    void applyLongImageMode();
+    void applyLongImageModeDirect();
+    bool isInLongImageMode() const;
 
 signals:
     void navigatorViewRequired(bool required, QTransform transform);
@@ -70,6 +78,7 @@ private:
     // ... or even more? e.g. "fit/snap width" things...
     // Currently it's "no fit" when it's false and "fit when view is smaller" when it's true.
     bool m_enableFitInView = false;
+    bool m_longImageMode = false;
     bool m_avoidResetTransform = false;
     bool m_checkerboardEnabled = false;
     bool m_useLightCheckerboard = false;
