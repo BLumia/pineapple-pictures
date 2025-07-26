@@ -217,6 +217,13 @@ void MainWindow::adjustWindowSizeBySceneRect()
 {
     if (m_pm->totalCount() < 1) return;
 
+    // Check if long image mode should be applied
+    if (m_graphicsView->shouldEnterLongImageMode()) {
+        // For long images, maximize the window to provide maximum viewing area
+        showMaximized();
+        return;
+    }
+
     QSize sceneSize = m_graphicsView->sceneRect().toRect().size();
     QSize sceneSizeWithMargins = sceneSize + QSize(130, 125);
 
@@ -813,14 +820,14 @@ void MainWindow::on_actionRotateClockwise_triggered()
 {
     m_graphicsView->rotateView();
     m_graphicsView->displayScene();
-    m_gv->setVisible(false);
+    // Let displayScene() handle navigator visibility through navigatorViewRequired signal
 }
 
 void MainWindow::on_actionRotateCounterClockwise_triggered()
 {
     m_graphicsView->rotateView(false);
     m_graphicsView->displayScene();
-    m_gv->setVisible(false);
+    // Let displayScene() handle navigator visibility through navigatorViewRequired signal
 }
 
 void MainWindow::on_actionPrevPicture_triggered()
