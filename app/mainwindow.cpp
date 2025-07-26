@@ -217,12 +217,19 @@ void MainWindow::adjustWindowSizeBySceneRect()
 {
     if (m_pm->totalCount() < 1) return;
 
+    // Check if long image mode should be applied
+    if (m_graphicsView->shouldEnterLongImageMode()) {
+        // For long images, maximize the window to provide maximum viewing area
+        showMaximized();
+        return;
+    }
+
     QSize sceneSize = m_graphicsView->sceneRect().toRect().size();
     QSize sceneSizeWithMargins = sceneSize + QSize(130, 125);
 
     if (m_graphicsView->scaleFactor() < 1 || size().expandedTo(sceneSizeWithMargins) != size()) {
         // if it scaled down by the resize policy:
-        QSize screenSize = qApp->screenAt(QCursor::pos())->availableSize();
+        QSize screenSize = window()->screen()->availableSize();
         if (screenSize.expandedTo(sceneSize) == screenSize) {
             // we can show the picture by increase the window size.
             QSize finalSize = (screenSize.expandedTo(sceneSizeWithMargins) == screenSize) ?
@@ -584,7 +591,7 @@ void MainWindow::centerWindow()
             Qt::LeftToRight,
             Qt::AlignCenter,
             this->size(),
-            qApp->screenAt(QCursor::pos())->availableGeometry()
+            window()->screen()->availableGeometry()
         )
     );
 }
@@ -813,14 +820,14 @@ void MainWindow::on_actionRotateClockwise_triggered()
 {
     m_graphicsView->rotateView();
     m_graphicsView->displayScene();
-    m_gv->setVisible(false);
+    // Let displayScene() handle navigator visibility through navigatorViewRequired signal
 }
 
 void MainWindow::on_actionRotateCounterClockwise_triggered()
 {
     m_graphicsView->rotateView(false);
     m_graphicsView->displayScene();
-    m_gv->setVisible(false);
+    // Let displayScene() handle navigator visibility through navigatorViewRequired signal
 }
 
 void MainWindow::on_actionPrevPicture_triggered()

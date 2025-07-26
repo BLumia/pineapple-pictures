@@ -9,6 +9,7 @@
 
 #include <QDebug>
 #include <QMouseEvent>
+#include <QScreen>
 #include <QScrollBar>
 #include <QMimeData>
 #include <QImageReader>
@@ -124,6 +125,7 @@ void GraphicsView::resetTransform()
 void GraphicsView::zoomView(qreal scaleFactor)
 {
     m_enableFitInView = false;
+    m_longImageMode = false;  // Exit long image mode when user manually zooms
     scale(scaleFactor, scaleFactor);
     applyTransformationModeByScaleFactor();
     emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
@@ -140,6 +142,10 @@ void GraphicsView::rotateView(bool clockwise)
                   0,                  0,                  1);
     tf = transform() * tf;
     setTransform(tf);
+    
+    // Apply transformation mode but don't emit navigator signal here
+    // Let displayScene() handle the navigator visibility correctly
+    applyTransformationModeByScaleFactor();
 }
 
 void GraphicsView::flipView(bool horizontal)
@@ -156,6 +162,7 @@ void GraphicsView::flipView(bool horizontal)
 
 void GraphicsView::resetScale()
 {
+    m_longImageMode = false;  // Exit long image mode when user manually resets scale
     setTransform(resetScale(transform()));
     applyTransformationModeByScaleFactor();
     emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
@@ -171,7 +178,7 @@ void GraphicsView::fitByOrientation(Qt::Orientation ori, bool scaleDownOnly)
 {
     resetScale();
 
-    QRectF viewRect = this->viewport()->rect().adjusted(2, 2, -2, -2);
+    QRectF viewRect = this->viewport()->rect();
     QRectF imageRect = transform().mapRect(sceneRect());
 
     qreal ratio;
@@ -185,11 +192,161 @@ void GraphicsView::fitByOrientation(Qt::Orientation ori, bool scaleDownOnly)
     if (scaleDownOnly && ratio > 1) ratio = 1;
 
     scale(ratio, ratio);
-    centerOn(imageRect.top(), 0);
+    
+    // Position the image correctly based on orientation
+    if (ori == Qt::Horizontal) {
+        // For horizontal fit (fit by width), center vertically and align to left
+        centerOn(sceneRect().left(), sceneRect().center().y());
+    } else {
+        // For vertical fit (fit by height), center horizontally and align to top
+        centerOn(sceneRect().center().x(), sceneRect().top());
+    }
+    
     m_enableFitInView = false;
 
     applyTransformationModeByScaleFactor();
     emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
+}
+
+bool GraphicsView::isLongImage() const
+{
+    // Get the transformed image size (considering rotation and other transforms)
+    QRectF transformedRect = transform().mapRect(sceneRect());
+    QSizeF imageSize = transformedRect.size();
+    
+    if (imageSize.isEmpty()) return false;
+    
+    qreal aspectRatio = imageSize.width() / imageSize.height();
+    
+    // Check if aspect ratio exceeds 5:2 (wide) or 2:5 (tall)
+    return aspectRatio > 2.5 || aspectRatio < 0.4;
+}
+
+bool GraphicsView::shouldEnterLongImageMode() const
+{
+    // Check if long image mode is enabled in settings
+    if (!Settings::instance()->autoLongImageMode()) return false;
+    
+    // Check if image is a long image
+    if (!isLongImage()) return false;
+    
+    // Check if transformed image size is larger than screen available size
+    QRectF transformedRect = transform().mapRect(sceneRect());
+    QSizeF imageSize = transformedRect.size();
+    QSize screenSize = window()->screen()->availableSize();
+    
+    return imageSize.width() > screenSize.width() || imageSize.height() > screenSize.height();
+}
+
+void GraphicsView::applyLongImageMode()
+{
+    if (!shouldEnterLongImageMode()) {
+        m_longImageMode = false;
+        return;
+    }
+    
+    m_longImageMode = true;
+    applyLongImageModeDirect();
+}
+
+void GraphicsView::applyLongImageModeDirect()
+{
+    // Determine image orientation based on current transform
+    QRectF transformedRect = transform().mapRect(sceneRect());
+    qreal aspectRatio = transformedRect.width() / transformedRect.height();
+    bool isTallImage = aspectRatio < 0.4;
+    bool isWideImage = aspectRatio > 2.5;
+    
+    // Reset scale to work with original image size
+    resetScale();
+    m_longImageMode = true;  // Re-enter long image mode after reset
+    
+    // Get current image and viewport sizes after reset
+    QRectF imageRect = transform().mapRect(sceneRect());
+    QRectF viewRect = this->viewport()->rect();
+    QSize viewSize = viewRect.size().toSize();
+    
+    if (isTallImage) {
+        // Tall image (height >> width): fit by width
+        if (imageRect.width() > viewSize.width()) {
+            // If width is larger than viewport, scale down to fit width
+            qreal ratio = viewRect.width() / imageRect.width();
+            scale(ratio, ratio);
+        }
+        
+        // For tall images, position at top
+        // Find the scene point that corresponds to the top-center of the transformed image
+        QRectF originalScene = sceneRect();
+        QPointF sceneTopCenter;
+        
+        // For different rotation states, find the corresponding scene point
+        QTransform currentTransform = transform();
+        if (qFuzzyIsNull(currentTransform.m12()) && qFuzzyIsNull(currentTransform.m21())) {
+            // 0° or 180° rotation
+            if (currentTransform.m11() > 0 && currentTransform.m22() > 0) {
+                // 0° rotation: use original top-center
+                sceneTopCenter = QPointF(originalScene.center().x(), originalScene.top());
+            } else {
+                // 180° rotation: the visual "top" is now at the scene bottom
+                sceneTopCenter = QPointF(originalScene.center().x(), originalScene.bottom());
+            }
+        } else {
+            // 90/270 degree rotation: the "top" in view corresponds to left/right in scene
+            if (currentTransform.m12() > 0) {
+                // 90 degree: top in view = left in scene
+                sceneTopCenter = QPointF(originalScene.left(), originalScene.center().y());
+            } else {
+                // 270 degree: top in view = right in scene  
+                sceneTopCenter = QPointF(originalScene.right(), originalScene.center().y());
+            }
+        }
+        centerOn(sceneTopCenter);
+        
+    } else if (isWideImage) {
+        // Wide image (width >> height): fit by height  
+        if (imageRect.height() > viewSize.height()) {
+            // If height is larger than viewport, scale down to fit height
+            qreal ratio = viewRect.height() / imageRect.height();
+            scale(ratio, ratio);
+        }
+        
+        // For wide images, position at left
+        // Find the scene point that corresponds to the left-center of the transformed image
+        QRectF originalScene = sceneRect();
+        QPointF sceneLeftCenter;
+        
+        // For different rotation states, find the corresponding scene point
+        QTransform currentTransform = transform();
+        if (qFuzzyIsNull(currentTransform.m12()) && qFuzzyIsNull(currentTransform.m21())) {
+            // 0° or 180° rotation
+            if (currentTransform.m11() > 0 && currentTransform.m22() > 0) {
+                // 0° rotation: use original left-center
+                sceneLeftCenter = QPointF(originalScene.left(), originalScene.center().y());
+            } else {
+                // 180° rotation: the visual "left" is now at the scene right
+                sceneLeftCenter = QPointF(originalScene.right(), originalScene.center().y());
+            }
+        } else {
+            // 90/270 degree rotation: the "left" in view corresponds to top/bottom in scene
+            if (currentTransform.m21() > 0) {
+                // 90 degree: left in view = top in scene
+                sceneLeftCenter = QPointF(originalScene.center().x(), originalScene.top());
+            } else {
+                // 270 degree: left in view = bottom in scene
+                sceneLeftCenter = QPointF(originalScene.center().x(), originalScene.bottom());
+            }
+        }
+        centerOn(sceneLeftCenter);
+    }
+    
+    m_enableFitInView = false;
+    applyTransformationModeByScaleFactor();
+    emit navigatorViewRequired(!isThingSmallerThanWindowWith(transform()), transform());
+}
+
+bool GraphicsView::isInLongImageMode() const
+{
+    return m_longImageMode;
 }
 
 void GraphicsView::displayScene()
@@ -199,8 +356,23 @@ void GraphicsView::displayScene()
         return;
     }
 
+    // Check if should apply long image mode
+    if (shouldEnterLongImageMode()) {
+        applyLongImageMode();
+        m_firstUserMediaLoaded = true;
+        return;
+    }
+
+    // Not in long image mode
+    m_longImageMode = false;
+
     if (isSceneBiggerThanView()) {
         fitInView(sceneRect(), Qt::KeepAspectRatio);
+        // After fitInView, the image should fit the window, so hide navigator
+        emit navigatorViewRequired(false, transform());
+    } else {
+        // Image is already smaller than window, no navigator needed
+        emit navigatorViewRequired(false, transform());
     }
 
     m_enableFitInView = true;
@@ -294,7 +466,12 @@ void GraphicsView::wheelEvent(QWheelEvent *event)
 
 void GraphicsView::resizeEvent(QResizeEvent *event)
 {
-    if (m_enableFitInView) {
+    if (m_longImageMode) {
+        // In long image mode, reapply long image logic on resize
+        // We directly apply the long image mode logic without rechecking
+        // if we should enter long image mode, as the mode is already active
+        applyLongImageModeDirect();
+    } else if (m_enableFitInView) {
         bool originalSizeSmallerThanWindow = isThingSmallerThanWindowWith(resetScale(transform()));
         if (originalSizeSmallerThanWindow && scaleFactor() >= 1) {
             // no longer need to do fitInView()
