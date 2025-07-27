@@ -832,7 +832,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="123"/>
         <source>Use built-in close window animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Meegeleverde animatie voor venster sluiten gebruiken</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="124"/>
@@ -842,7 +842,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="125"/>
         <source>Loop the loaded gallery</source>
-        <translation type="unfinished"></translation>
+        <translation>Gekozen galerij herhalen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="126"/>
