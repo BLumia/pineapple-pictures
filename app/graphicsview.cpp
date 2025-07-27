@@ -171,21 +171,90 @@ void GraphicsView::fitByOrientation(Qt::Orientation ori, bool scaleDownOnly)
 {
     resetScale();
 
-    QRectF viewRect = this->viewport()->rect().adjusted(2, 2, -2, -2);
+    QRectF viewRect = this->viewport()->rect();
     QRectF imageRect = transform().mapRect(sceneRect());
+    QSize viewSize = viewRect.size().toSize();
 
     qreal ratio;
 
     if (ori == Qt::Horizontal) {
-        ratio = viewRect.width() / imageRect.width();
+        // Horizontal fit means fit by width
+        if (scaleDownOnly && imageRect.width() <= viewSize.width()) {
+            // Image width already fits, no scaling needed
+            ratio = 1;
+        } else {
+            ratio = viewRect.width() / imageRect.width();
+        }
     } else {
-        ratio = viewRect.height() / imageRect.height();
+        // Vertical fit means fit by height
+        if (scaleDownOnly && imageRect.height() <= viewSize.height()) {
+            // Image height already fits, no scaling needed
+            ratio = 1;
+        } else {
+            ratio = viewRect.height() / imageRect.height();
+        }
     }
 
-    if (scaleDownOnly && ratio > 1) ratio = 1;
+    if (ratio != 1) {
+        scale(ratio, ratio);
+    }
 
-    scale(ratio, ratio);
-    centerOn(imageRect.top(), 0);
+    // Position the image correctly based on orientation with rotation consideration
+    QRectF originalScene = sceneRect();
+    QTransform currentTransform = transform();
+
+    if (ori == Qt::Horizontal) {
+        // For horizontal fit (fit by width), position at top (for tall images)
+        // Find the scene point that corresponds to the top-center of the transformed image
+        QPointF sceneTopCenter;
+
+        if (qFuzzyIsNull(currentTransform.m12()) && qFuzzyIsNull(currentTransform.m21())) {
+            // 0° or 180° rotation
+            if (currentTransform.m11() > 0 && currentTransform.m22() > 0) {
+                // 0° rotation: use original top-center
+                sceneTopCenter = QPointF(originalScene.center().x(), originalScene.top());
+            } else {
+                // 180° rotation: the visual "top" is now at the scene bottom
+                sceneTopCenter = QPointF(originalScene.center().x(), originalScene.bottom());
+            }
+        } else {
+            // 90/270 degree rotation: the "top" in view corresponds to left/right in scene
+            if (currentTransform.m12() > 0) {
+                // 90 degree: top in view = left in scene
+                sceneTopCenter = QPointF(originalScene.left(), originalScene.center().y());
+            } else {
+                // 270 degree: top in view = right in scene
+                sceneTopCenter = QPointF(originalScene.right(), originalScene.center().y());
+            }
+        }
+        centerOn(sceneTopCenter);
+    } else {
+        // For vertical fit (fit by height), position at left (for wide images)
+        // Find the scene point that corresponds to the left-center of the transformed image
+        QPointF sceneLeftCenter;
+
+        if (qFuzzyIsNull(currentTransform.m12()) && qFuzzyIsNull(currentTransform.m21())) {
+            // 0° or 180° rotation
+            if (currentTransform.m11() > 0 && currentTransform.m22() > 0) {
+                // 0° rotation: use original left-center
+                sceneLeftCenter = QPointF(originalScene.left(), originalScene.center().y());
+            } else {
+                // 180° rotation: the visual "left" is now at the scene right
+                sceneLeftCenter = QPointF(originalScene.right(), originalScene.center().y());
+            }
+        } else {
+            // 90/270 degree rotation: the "left" in view corresponds to top/bottom in scene
+            if (currentTransform.m21() > 0) {
+                // 90 degree: left in view = top in scene
+                sceneLeftCenter = QPointF(originalScene.center().x(), originalScene.top());
+            } else {
+                // 270 degree: left in view = bottom in scene
+                sceneLeftCenter = QPointF(originalScene.center().x(), originalScene.bottom());
+            }
+        }
+        centerOn(sceneLeftCenter);
+    }
+
     m_enableFitInView = false;
 
     applyTransformationModeByScaleFactor();
