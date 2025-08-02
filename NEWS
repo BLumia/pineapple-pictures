@@ -1,3 +1,20 @@
+Version 1.1.1
+~~~~~~~~~~~~~
+Released: 2025-08-02
+
+Features:
+ * Click dock icon should show window when it's hidden on macOS
+
+Bugfixes:
+ * Ensure "Fit by Width" position the view to the beginning of the image
+
+Miscellaneous:
+ * Update translations
+ * Update Exiv2 version for Windows binary build
+
+Contributors:
+ Heimen Stoffels, VenusGirl, தமிழ்நேரம்
+
 Version 1.1.0
 ~~~~~~~~~~~~~
 Released: 2025-07-06

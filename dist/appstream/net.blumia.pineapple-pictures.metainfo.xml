@@ -80,6 +80,25 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" version="1.1.1" date="2025-08-02T00:00:00Z">
+      <description>
+        <p>This release adds the following feature:</p>
+        <ul>
+          <li>Click dock icon should show window when it's hidden on macOS</li>
+        </ul>
+        <p>This release fixes the following bug:</p>
+        <ul>
+          <li>Ensure "Fit by Width" position the view to the beginning of the image</li>
+        </ul>
+        <p>This release includes the following changes:</p>
+        <ul>
+          <li>Update translations</li>
+          <li>Update Exiv2 version for Windows binary build</li>
+        </ul>
+        <p>With contributions from:</p>
+        <p>Heimen Stoffels, VenusGirl, தமிழ்நேரம்</p>
+      </description>
+    </release>
     <release type="stable" version="1.1.0" date="2025-07-06T00:00:00Z">
       <description>
         <p>This release adds the following features:</p>
