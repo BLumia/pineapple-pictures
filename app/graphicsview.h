@@ -76,7 +76,7 @@ private:
     // Currently it's "no fit" when it's false and "fit when view is smaller" when it's true.
     bool m_enableFitInView = false;
     bool m_longImageMode = false;
-    bool m_avoidResetTransform = false;
+    bool m_avoidResetTransform = true;
     bool m_checkerboardEnabled = false;
     bool m_useLightCheckerboard = false;
     bool m_firstUserMediaLoaded = false;
