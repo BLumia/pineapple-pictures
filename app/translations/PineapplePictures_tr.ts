@@ -178,7 +178,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../mainwindow.cpp" line="276"/>
+        <location filename="../mainwindow.cpp" line="292"/>
         <location filename="../graphicsscene.cpp" line="100"/>
         <source>Drag image here</source>
         <translation>Resmi buraya sürükleyin</translation>
@@ -213,189 +213,189 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="181"/>
-        <location filename="../mainwindow.cpp" line="545"/>
+        <location filename="../mainwindow.cpp" line="190"/>
+        <location filename="../mainwindow.cpp" line="561"/>
         <source>File url list is empty</source>
         <translation>Dosya URL listesi boş</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="445"/>
+        <location filename="../mainwindow.cpp" line="461"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopyala</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="553"/>
+        <location filename="../mainwindow.cpp" line="569"/>
         <source>Image data is invalid</source>
         <translation>Resim verisi geçersiz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="560"/>
+        <location filename="../mainwindow.cpp" line="576"/>
         <source>Not supported mimedata: %1</source>
         <translation>Desteklenmeyen dosya türü verisi: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="759"/>
+        <location filename="../mainwindow.cpp" line="777"/>
         <source>Image From Clipboard</source>
         <translation>Panodaki Resim</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="777"/>
+        <location filename="../mainwindow.cpp" line="795"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
         <translation>&quot;%1&quot; ögesini geri dönüşüm kutusuna taşımak istediğinizden emin misiniz?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="781"/>
+        <location filename="../mainwindow.cpp" line="799"/>
         <source>Failed to move file to trash</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="782"/>
+        <location filename="../mainwindow.cpp" line="800"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
         <translation>Çöp kutusuna taşıma başarısız oldu, dosya izin sorunu, dosya sistemi sınırlaması veya platform sınırlamasından kaynaklanıyor olabilir.</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="114"/>
+        <location filename="../actionmanager.cpp" line="104"/>
         <source>Copy P&amp;ixmap</source>
         <translation>P&amp;ixmap&apos;i Kopyala</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="115"/>
+        <location filename="../actionmanager.cpp" line="105"/>
         <source>Copy &amp;File Path</source>
         <translation>&amp;Dosya Yolunu Kopyala</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="133"/>
+        <location filename="../actionmanager.cpp" line="123"/>
         <source>Properties</source>
         <translation>Özellikler</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="118"/>
+        <location filename="../actionmanager.cpp" line="108"/>
         <location filename="../aboutdialog.cpp" line="41"/>
         <source>Stay on top</source>
         <translation>Üstte tut</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="119"/>
+        <location filename="../actionmanager.cpp" line="109"/>
         <location filename="../aboutdialog.cpp" line="44"/>
         <source>Protected mode</source>
         <translation>Korumalı kip</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="120"/>
+        <location filename="../actionmanager.cpp" line="110"/>
         <location filename="../aboutdialog.cpp" line="47"/>
         <source>Keep transformation</source>
         <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
         <translation>Dönüşümü koru</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="99"/>
+        <location filename="../actionmanager.cpp" line="89"/>
         <source>Zoom in</source>
         <translation>Yaklaştır</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="100"/>
+        <location filename="../actionmanager.cpp" line="90"/>
         <source>Zoom out</source>
         <translation>Uzaklaştır</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="108"/>
+        <location filename="../actionmanager.cpp" line="98"/>
         <source>Pause/Resume Animation</source>
         <translation>Canlandırmayı Duraklat/Sürdür</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="109"/>
+        <location filename="../actionmanager.cpp" line="99"/>
         <source>Animation Go to Next Frame</source>
         <translation>Canlandırma Sonraki Kareye Git</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="111"/>
+        <location filename="../actionmanager.cpp" line="101"/>
         <source>Flip &amp;Horizontally</source>
         <translation>&amp;Yatay Çevir</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="112"/>
+        <location filename="../actionmanager.cpp" line="102"/>
         <source>Fit to view</source>
         <translation>Görünüme sığdır</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="113"/>
+        <location filename="../actionmanager.cpp" line="103"/>
         <source>Fit to width</source>
         <translation>Genişliğe sığdır</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="116"/>
+        <location filename="../actionmanager.cpp" line="106"/>
         <source>&amp;Paste</source>
         <translation>Ya&amp;pıştır</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="101"/>
+        <location filename="../actionmanager.cpp" line="91"/>
         <source>Toggle Checkerboard</source>
         <translation>Damalı Ekrana Geç</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="95"/>
+        <location filename="../actionmanager.cpp" line="85"/>
         <source>&amp;Open...</source>
         <translation>&amp;Aç...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="97"/>
+        <location filename="../actionmanager.cpp" line="87"/>
         <source>Actual size</source>
         <translation>Gerçek boyut</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="98"/>
+        <location filename="../actionmanager.cpp" line="88"/>
         <source>Toggle maximize</source>
         <translation>Tam boyuta geç</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="102"/>
+        <location filename="../actionmanager.cpp" line="92"/>
         <source>Rotate right</source>
         <translation>Sağa döndür</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="103"/>
+        <location filename="../actionmanager.cpp" line="93"/>
         <source>Rotate left</source>
         <translation>Sola döndür</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="105"/>
+        <location filename="../actionmanager.cpp" line="95"/>
         <source>Previous image</source>
         <translation>Önceki resim</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="106"/>
+        <location filename="../actionmanager.cpp" line="96"/>
         <source>Next image</source>
         <translation>Sonraki resim</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="776"/>
-        <location filename="../actionmanager.cpp" line="117"/>
+        <location filename="../mainwindow.cpp" line="794"/>
+        <location filename="../actionmanager.cpp" line="107"/>
         <source>Move to Trash</source>
         <translation>Çöp Kutusuna Taşı</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="121"/>
+        <location filename="../actionmanager.cpp" line="111"/>
         <source>Configure...</source>
         <translation>Yapılandır...</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="122"/>
+        <location filename="../actionmanager.cpp" line="112"/>
         <source>Help</source>
         <translation>Yardım</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="125"/>
+        <location filename="../actionmanager.cpp" line="115"/>
         <source>Show in File Explorer</source>
         <comment>File Explorer is the name of explorer.exe under Windows</comment>
         <translation>Dosya Gezgini&apos;nde Göster</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="131"/>
+        <location filename="../actionmanager.cpp" line="121"/>
         <source>Show in directory</source>
         <translation>Dizinde göster</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="134"/>
+        <location filename="../actionmanager.cpp" line="124"/>
         <source>Quit</source>
         <translation>Çıkış</translation>
     </message>
@@ -726,141 +726,146 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="31"/>
+        <location filename="../settingsdialog.cpp" line="32"/>
         <source>Settings</source>
         <translation>Ayarlar</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="39"/>
+        <location filename="../settingsdialog.cpp" line="40"/>
         <source>Options</source>
         <translation>Seçenekler</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="51"/>
+        <location filename="../settingsdialog.cpp" line="52"/>
         <source>Shortcuts</source>
         <translation>Kısayollar</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="61"/>
+        <location filename="../settingsdialog.cpp" line="62"/>
         <source>Editing shortcuts for action &quot;%1&quot;:</source>
         <translation>&quot;%1&quot; için kısayol düzenleniyor:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="70"/>
+        <location filename="../settingsdialog.cpp" line="71"/>
         <source>Failed to set shortcuts</source>
         <translation>Kısayollar ayarlanamadı</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="71"/>
+        <location filename="../settingsdialog.cpp" line="72"/>
         <source>Please check if shortcuts are duplicated with existing shortcuts.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="78"/>
+        <location filename="../settingsdialog.cpp" line="79"/>
         <source>Do nothing</source>
         <translation>Hiçbir şey yapma</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="79"/>
+        <location filename="../settingsdialog.cpp" line="80"/>
         <source>Close the window</source>
         <translation>Pencereyi kapat</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="80"/>
+        <location filename="../settingsdialog.cpp" line="81"/>
         <source>Toggle maximize</source>
         <translation>Tam boyuta geç</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="81"/>
+        <location filename="../settingsdialog.cpp" line="82"/>
         <source>Toggle fullscreen</source>
         <translation>Tam ekranı aç/kapat</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="85"/>
+        <location filename="../settingsdialog.cpp" line="86"/>
         <source>Zoom in and out</source>
         <translation>Yaklaştır ve uzaklaştır</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="86"/>
+        <location filename="../settingsdialog.cpp" line="87"/>
         <source>View next or previous item</source>
         <translation>Sonraki veya önceki ögeyi görüntüle</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="90"/>
+        <location filename="../settingsdialog.cpp" line="91"/>
         <source>Auto size</source>
         <translation>Otomatik boyut</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="91"/>
+        <location filename="../settingsdialog.cpp" line="92"/>
         <source>Maximized</source>
         <translation>Tam boyut</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="92"/>
+        <location filename="../settingsdialog.cpp" line="93"/>
         <source>Windowed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="96"/>
+        <location filename="../settingsdialog.cpp" line="97"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
         <translation>Yuvarlak (Tamsayı ölçekleme)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="97"/>
+        <location filename="../settingsdialog.cpp" line="98"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
         <translation>Tavan (Tamsayı ölçekleme)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="98"/>
+        <location filename="../settingsdialog.cpp" line="99"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
         <translation>Kat (Tamsayı ölçekleme)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="99"/>
+        <location filename="../settingsdialog.cpp" line="100"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
         <translation>Sistemi takip et (Kesirli ölçekleme)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="122"/>
+        <location filename="../settingsdialog.cpp" line="123"/>
         <source>Stay on top when start-up</source>
         <translation>Açılışta pencerelerin üstünde kal</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="123"/>
+        <location filename="../settingsdialog.cpp" line="124"/>
         <source>Use built-in close window animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="124"/>
+        <location filename="../settingsdialog.cpp" line="125"/>
         <source>Use light-color checkerboard</source>
         <translation>Açık renk dama tahtası kullan</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="125"/>
+        <location filename="../settingsdialog.cpp" line="126"/>
         <source>Loop the loaded gallery</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="126"/>
+        <location filename="../settingsdialog.cpp" line="127"/>
+        <source>Auto long image mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="128"/>
         <source>Double-click behavior</source>
         <translation>Çift tıklama davranışı</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="127"/>
+        <location filename="../settingsdialog.cpp" line="129"/>
         <source>Mouse wheel behavior</source>
         <translation>Fare tekeri davranışı</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="128"/>
+        <location filename="../settingsdialog.cpp" line="130"/>
         <source>Default window size</source>
         <translation>Öntanımlı pencere boyutu</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="129"/>
+        <location filename="../settingsdialog.cpp" line="131"/>
         <source>HiDPI scale factor rounding policy</source>
         <translation>HiDPI ölçek katsayısı yuvarlama ilkesi</translation>
     </message>
@@ -868,7 +873,7 @@
 <context>
     <name>ShortcutEdit</name>
     <message>
-        <location filename="../shortcutedit.cpp" line="109"/>
+        <location filename="../shortcutedit.cpp" line="104"/>
         <source>No shortcuts</source>
         <translation>Kısayol yok</translation>
     </message>
@@ -876,7 +881,7 @@
 <context>
     <name>ShortcutEditor</name>
     <message>
-        <location filename="../shortcutedit.cpp" line="75"/>
+        <location filename="../shortcutedit.cpp" line="70"/>
         <source>Shortcut #%1</source>
         <translation>Kısayol #%1</translation>
     </message>
