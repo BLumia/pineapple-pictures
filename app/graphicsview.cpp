@@ -280,33 +280,7 @@ bool GraphicsView::isLongImage() const
     return aspectRatio > 2.5 || aspectRatio < 0.4;
 }
 
-bool GraphicsView::shouldEnterLongImageMode() const
-{
-    // Check if long image mode is enabled in settings
-    if (!Settings::instance()->autoLongImageMode()) return false;
-    
-    // Check if image is a long image
-    if (!isLongImage()) return false;
-    
-    // Check if transformed image size is larger than the size of the view
-    QSizeF imageSize = transform().mapRect(sceneRect()).size();
-    QSizeF viewSize = viewport()->size();
-    
-    return imageSize.width() > viewSize.width() || imageSize.height() > viewSize.height();
-}
-
-void GraphicsView::applyLongImageMode()
-{
-    if (!shouldEnterLongImageMode()) {
-        m_longImageMode = false;
-        return;
-    }
-    
-    m_longImageMode = true;
-    applyLongImageModeDirect();
-}
-
-void GraphicsView::applyLongImageModeDirect()
+void GraphicsView::fitLongImage()
 {
     // Determine image orientation based on current transform
     QRectF transformedRect = transform().mapRect(sceneRect());
@@ -324,11 +298,6 @@ void GraphicsView::applyLongImageModeDirect()
     }
 }
 
-bool GraphicsView::isInLongImageMode() const
-{
-    return m_longImageMode;
-}
-
 void GraphicsView::displayScene()
 {
     if (shouldAvoidTransform()) {
@@ -337,16 +306,15 @@ void GraphicsView::displayScene()
     }
 
     // Check if should apply long image mode
-    if (shouldEnterLongImageMode()) {
-        applyLongImageMode();
+    if (Settings::instance()->autoLongImageMode() && isLongImage()) {
+        m_longImageMode = true;
         m_firstUserMediaLoaded = true;
+        if (isSceneBiggerThanView()) fitLongImage();
         return;
     }
 
-    // Not in long image mode
-    m_longImageMode = false;
-
     if (isSceneBiggerThanView()) {
+        // Do fit-in-view
         fitInView(sceneRect(), Qt::KeepAspectRatio);
         // After fitInView, the image should fit the window, so hide navigator
         emit navigatorViewRequired(false, transform());
@@ -355,6 +323,7 @@ void GraphicsView::displayScene()
         emit navigatorViewRequired(false, transform());
     }
 
+    m_longImageMode = false;
     m_enableFitInView = true;
     m_firstUserMediaLoaded = true;
 }
@@ -455,7 +424,7 @@ void GraphicsView::resizeEvent(QResizeEvent *event)
         // In long image mode, reapply long image logic on resize
         // We directly apply the long image mode logic without rechecking
         // if we should enter long image mode, as the mode is already active
-        applyLongImageModeDirect();
+        fitLongImage();
     } else if (m_enableFitInView) {
         bool originalSizeSmallerThanWindow = isThingSmallerThanWindowWith(resetScale(transform()));
         if (originalSizeSmallerThanWindow && scaleFactor() >= 1) {

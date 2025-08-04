@@ -48,10 +48,7 @@ public:
 
     // Long image mode support
     bool isLongImage() const;
-    bool shouldEnterLongImageMode() const;
-    void applyLongImageMode();
-    void applyLongImageModeDirect();
-    bool isInLongImageMode() const;
+    void fitLongImage();
 
 signals:
     void navigatorViewRequired(bool required, QTransform transform);
