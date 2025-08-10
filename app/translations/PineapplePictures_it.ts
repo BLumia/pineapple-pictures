@@ -828,7 +828,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="124"/>
         <source>Use built-in close window animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizza l&apos;animazione di chiusura della finestra integrata</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="125"/>
@@ -838,12 +838,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="126"/>
         <source>Loop the loaded gallery</source>
-        <translation type="unfinished"></translation>
+        <translation>Esegui il loop della galleria caricata</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="127"/>
         <source>Auto long image mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modalità immagine lunga automatica</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="128"/>
