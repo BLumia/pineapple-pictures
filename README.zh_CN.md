@@ -16,7 +16,7 @@
 
 ### 由原作者维护
 
-- [GitHub Release 页面](https://github.com/BLumia/pineapple-pictures/releases) | [gitee 发布页面](https://gitee.com/blumia/pineapple-pictures/releases)
+- [GitHub Release 页面](https://github.com/BLumia/pineapple-pictures/releases)
 - [SourceForge](https://sourceforge.net/projects/pineapple-pictures/)
 - Archlinux AUR: [pineapple-pictures](https://aur.archlinux.org/packages/pineapple-pictures/) | [pineapple-pictures-git](https://aur.archlinux.org/packages/pineapple-pictures-git/)
 - [Itch.io 商店](https://blumia.itch.io/pineapple-pictures)
