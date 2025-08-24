@@ -9,7 +9,7 @@ SPDX-FileCopyrightText = "None"
 SPDX-License-Identifier = "CC0-1.0"
 
 [[annotations]]
-path = ["README**.md", "NEWS", "assets/**.rc", "assets/**.qrc", "dist/**"]
+path = ["README**.md", "NEWS", "assets/**.rc.in", "assets/**.qrc", "dist/**"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "None"
 SPDX-License-Identifier = "CC0-1.0"
