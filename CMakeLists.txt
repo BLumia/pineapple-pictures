@@ -94,7 +94,8 @@ file (GLOB PPIC_TS_FILES app/translations/*.ts)
 set (PPIC_CPP_FILES_FOR_I18N ${PPIC_CPP_FILES})
 
 if (WIN32)
-    list(APPEND PPIC_RC_FILES assets/pineapple-pictures.rc)
+    configure_file(assets/pineapple-pictures.rc.in pineapple-pictures.rc @ONLY)
+    list(APPEND PPIC_RC_FILES ${CMAKE_CURRENT_BINARY_DIR}/pineapple-pictures.rc)
 endif ()
 
 add_executable (${EXE_NAME}
