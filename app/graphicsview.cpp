@@ -282,19 +282,12 @@ bool GraphicsView::isLongImage() const
 
 void GraphicsView::fitLongImage()
 {
-    // Determine image orientation based on current transform
     QRectF transformedRect = transform().mapRect(sceneRect());
-    qreal aspectRatio = transformedRect.width() / transformedRect.height();
-    bool isTallImage = aspectRatio < 0.4;
-    bool isWideImage = aspectRatio > 2.5;
-    
-    // Use fitByOrientation with the migrated logic
-    if (isTallImage) {
-        // Tall image (height >> width): fit by width
-        fitByOrientation(Qt::Horizontal, true);  // scaleDownOnly = true
-    } else if (isWideImage) {
-        // Wide image (width >> height): fit by height
-        fitByOrientation(Qt::Vertical, true);    // scaleDownOnly = true
+
+    if (transformedRect.width() < transformedRect.height()) {
+        fitByOrientation(Qt::Horizontal, true);
+    } else {
+        fitByOrientation(Qt::Vertical, true);
     }
 }
 

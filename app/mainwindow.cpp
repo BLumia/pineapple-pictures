@@ -737,6 +737,12 @@ void MainWindow::on_actionFitByWidth_triggered()
     m_graphicsView->fitByOrientation();
 }
 
+void MainWindow::on_actionFitLongImage_triggered()
+{
+    m_graphicsView->setLongImageMode(true);
+    m_graphicsView->fitLongImage();
+}
+
 void MainWindow::on_actionCopyPixmap_triggered()
 {
     QClipboard *cb = QApplication::clipboard();
