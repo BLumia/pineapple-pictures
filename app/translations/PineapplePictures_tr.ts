@@ -246,7 +246,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="805"/>
         <source>Failed to move file to trash</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya çöpe taşınamadı</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="806"/>
@@ -325,7 +325,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="105"/>
         <source>Fit long image</source>
-        <translation type="unfinished"></translation>
+        <translation>Geniş resmi sığdır</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="108"/>
@@ -758,7 +758,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="72"/>
         <source>Please check if shortcuts are duplicated with existing shortcuts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kısayolların var olan kısayollarla çakışma durumunu denetleyin.</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="79"/>
@@ -803,7 +803,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="93"/>
         <source>Windowed</source>
-        <translation type="unfinished"></translation>
+        <translation>Pencereli</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="97"/>
@@ -837,7 +837,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="124"/>
         <source>Use built-in close window animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Yerleşik kapat pencere canlandırmasını kullan</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="125"/>
@@ -847,12 +847,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="126"/>
         <source>Loop the loaded gallery</source>
-        <translation type="unfinished"></translation>
+        <translation>Yüklenen galeriyi döngüye al</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="127"/>
         <source>Auto long image mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Kendiliğinden uzun resim kipi</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="128"/>
