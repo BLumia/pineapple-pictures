@@ -90,9 +90,9 @@ jobs:
         cmake --build build_dependencies/aom --config Release --target=install || goto :error
         echo ::endgroup::
         echo ::group::===== libavif =====
-        curl -fsSL -o libavif-v1_2_1.zip https://github.com/AOMediaCodec/libavif/archive/v1.2.1.zip
-        7z x libavif-v1_2_1.zip -y -o"dependencies_src"
-        ren .\dependencies_src\libavif-1.2.1 libavif || goto :error
+        curl -fsSL -o libavif-v1_3_0.zip https://github.com/AOMediaCodec/libavif/archive/v1.3.0.zip
+        7z x libavif-v1_3_0.zip -y -o"dependencies_src"
+        ren .\dependencies_src\libavif-1.3.0 libavif || goto :error
         cmake ./dependencies_src/libavif -Bbuild_dependencies/libavif -DCMAKE_INSTALL_PREFIX="dependencies_bin" -DAVIF_CODEC_AOM=ON -DAVIF_LIBYUV=LOCAL
         cmake --build build_dependencies/libavif --config Release --target=install || goto :error
         echo ::endgroup::
