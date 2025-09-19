@@ -1,3 +1,18 @@
+Version 1.2.0
+~~~~~~~~~~~~~
+Released: 2025-09-21
+
+Features:
+ * Long image mode that detect extra wide image and auto fit by its thin side
+ * Windows: Add product version to binary metadata / resource file
+
+Miscellaneous:
+ * Update translations
+ * Update libavif version for Windows binary build
+
+Contributors:
+ Heimen Stoffels, albanobattistella, Sabri Ünal
+
 Version 1.1.1
 ~~~~~~~~~~~~~
 Released: 2025-08-02

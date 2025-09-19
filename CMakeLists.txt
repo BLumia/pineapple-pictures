@@ -4,7 +4,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-project(pineapple-pictures VERSION 1.1.1) # don't forget to update NEWS file and AppStream metadata.
+project(pineapple-pictures VERSION 1.2.0) # don't forget to update NEWS file and AppStream metadata.
 
 include(GNUInstallDirs)
 include(FeatureSummary)

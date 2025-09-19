@@ -80,6 +80,22 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" version="1.2.0" date="2025-09-21T00:00:00Z">
+      <description>
+        <p>This release adds the following features:</p>
+        <ul>
+          <li>Long image mode that detect extra wide image and auto fit by its thin side</li>
+          <li>Windows: Add product version to binary metadata / resource file</li>
+        </ul>
+        <p>This release includes the following changes:</p>
+        <ul>
+          <li>Update translations</li>
+          <li>Update libavif version for Windows binary build</li>
+        </ul>
+        <p>With contributions from:</p>
+        <p>Heimen Stoffels, albanobattistella, Sabri Ünal</p>
+      </description>
+    </release>
     <release type="stable" version="1.1.1" date="2025-08-02T00:00:00Z">
       <description>
         <p>This release adds the following feature:</p>
