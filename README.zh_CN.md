@@ -26,9 +26,19 @@
 
 [![打包状态](https://repology.org/badge/vertical-allrepos/pineapple-pictures.svg?columns=4)](https://repology.org/project/pineapple-pictures/versions)
 
-## 帮助翻译!
+## 参与贡献
+
+除了参与反馈和代码贡献外，也欢迎各种类型的贡献！
+
+### 帮助翻译!
 
 [在 Weblate 上帮助此项目翻译到更多语言!](https://hosted.weblate.org/projects/pineapple-pictures/)
+
+### 打赏
+
+[![Afdian](https://static.afdiancdn.com/static/img/logo/logo.png)Afdian | 爱发电](https://afdian.com/a/BLumia)
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/blumia)
 
 ## 手动构建步骤:
 

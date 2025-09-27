@@ -25,9 +25,19 @@ Pineapple Pictures is a lightweight image viewer that allows you view JPEG, PNG,
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/pineapple-pictures.svg?columns=4)](https://repology.org/project/pineapple-pictures/versions)
 
-## Help Translation!
+## Contribution
+
+Beside feedback and code contribution, other contributions are also welcome!
+
+### Help Translation!
 
 [Translate this project on Weblate!](https://hosted.weblate.org/projects/pineapple-pictures/)
+
+### Funding
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/blumia)
+
+[![Afdian](https://static.afdiancdn.com/static/img/logo/logo.png)Afdian](https://afdian.com/a/BLumia)
 
 ## Build it manually:
 
