@@ -40,6 +40,7 @@
   <launchable type="desktop-id">net.blumia.pineapple-pictures.desktop</launchable>
   <url type="homepage">https://github.com/BLumia/pineapple-pictures</url>
   <url type="bugtracker">https://github.com/BLumia/pineapple-pictures/issues</url>
+  <url type="donation">https://ko-fi.com/blumia</url>
   <url type="translate">https://hosted.weblate.org/projects/pineapple-pictures/</url>
   <provides>
     <binary>ppic</binary>
