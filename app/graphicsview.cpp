@@ -53,12 +53,15 @@ void GraphicsView::showFileFromPath(const QString &filePath)
         } else if (!imageReader.canRead()) {
             showText(tr("Image data is invalid or currently unsupported"));
         } else {
-            QPixmap && pixmap = QPixmap::fromImageReader(&imageReader);
-            if (pixmap.isNull()) {
+            QImage && img = imageReader.read();
+            if (img.isNull()) {
                 showText(tr("Image data is invalid or currently unsupported"));
             } else {
-                pixmap.setDevicePixelRatio(devicePixelRatioF());
-                showImage(pixmap);
+                if (img.format() == QImage::Format_CMYK8888) {
+                    img.convertToColorSpace(QColorSpace::SRgb);
+                }
+                img.setDevicePixelRatio(devicePixelRatioF());
+                showImage(img);
             }
         }
     }
