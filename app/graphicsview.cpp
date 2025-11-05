@@ -8,6 +8,7 @@
 #include "settings.h"
 
 #include <QDebug>
+#include <QColorSpace>
 #include <QMouseEvent>
 #include <QScrollBar>
 #include <QMimeData>
@@ -53,6 +54,7 @@ void GraphicsView::showFileFromPath(const QString &filePath)
         } else if (!imageReader.canRead()) {
             showText(tr("Image data is invalid or currently unsupported"));
         } else {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
             QImage && img = imageReader.read();
             if (img.isNull()) {
                 showText(tr("Image data is invalid or currently unsupported"));
@@ -63,6 +65,15 @@ void GraphicsView::showFileFromPath(const QString &filePath)
                 img.setDevicePixelRatio(devicePixelRatioF());
                 showImage(img);
             }
+#else
+            QPixmap && pixmap = QPixmap::fromImageReader(&imageReader);
+            if (pixmap.isNull()) {
+                showText(tr("Image data is invalid or currently unsupported"));
+            } else {
+                pixmap.setDevicePixelRatio(devicePixelRatioF());
+                showImage(pixmap);
+            }
+#endif // QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
         }
     }
 }
