@@ -84,10 +84,9 @@ jobs:
         ren .\dependencies_src\zlib-1.3.1 zlib || goto :error
         cmake ./dependencies_src/zlib -Bbuild_dependencies/zlib -DCMAKE_INSTALL_PREFIX="dependencies_bin" || goto :error
         cmake --build build_dependencies/zlib --config Release --target=install || goto :error
-        curl -fsSL -o expat_src.zip https://github.com/libexpat/libexpat/archive/R_2_6_2.zip
         echo ::endgroup::
         echo ::group::===== AOM for libavif AVI decoding support =====
-        git clone -q -b v3.12.0 --depth 1 https://aomedia.googlesource.com/aom dependencies_src/aom
+        git clone -q -b v3.13.1 --depth 1 https://aomedia.googlesource.com/aom dependencies_src/aom
         cmake ./dependencies_src/aom -Bbuild_dependencies/aom -DCMAKE_INSTALL_PREFIX="dependencies_bin" -DENABLE_DOCS=OFF -DBUILD_SHARED_LIBS=ON -DAOM_TARGET_CPU=generic -DENABLE_TESTS=OFF -DENABLE_TESTDATA=OFF -DENABLE_TOOLS=OFF -DENABLE_EXAMPLES=0 || goto :error
         cmake --build build_dependencies/aom --config Release --target=install || goto :error
         echo ::endgroup::
@@ -99,8 +98,9 @@ jobs:
         cmake --build build_dependencies/libavif --config Release --target=install || goto :error
         echo ::endgroup::
         echo ::group::===== expat =====
+        curl -fsSL -o expat_src.zip https://github.com/libexpat/libexpat/archive/R_2_7_3.zip
         7z x expat_src.zip -y -o"dependencies_src"
-        ren .\dependencies_src\libexpat-R_2_6_2 expat || goto :error
+        ren .\dependencies_src\libexpat-R_2_7_3 expat || goto :error
         cmake ./dependencies_src/expat/expat -Bbuild_dependencies/expat -DCMAKE_INSTALL_PREFIX="dependencies_bin" || goto :error
         cmake --build build_dependencies/expat --config Release --target=install || goto :error
         echo ::endgroup::
@@ -116,7 +116,7 @@ jobs:
         echo ::endgroup::
         echo ::group::===== KImageFormats =====
         git clone -q https://invent.kde.org/frameworks/kimageformats.git dependencies_src/kimageformats
-        cmake .\dependencies_src\kimageformats -Bbuild_dependencies/kimageformats -DKDE_INSTALL_QTPLUGINDIR=%QT_ROOT_DIR%\plugins || goto :error
+        cmake .\dependencies_src\kimageformats -Bbuild_dependencies/kimageformats -DBUILD_TESTING=OFF -DKDE_INSTALL_QTPLUGINDIR=%QT_ROOT_DIR%\plugins || goto :error
         cmake --build build_dependencies/kimageformats --config Release --target=install || goto :error
         echo ::endgroup::
         :: ------ app ------
