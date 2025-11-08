@@ -321,7 +321,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="105"/>
         <source>Fit long image</source>
-        <translation type="unfinished"></translation>
+        <translation>Adatta immagine lunga</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="108"/>
