@@ -1,3 +1,19 @@
+Version 1.2.1
+~~~~~~~~~~~~~
+Released: 2025-11-22
+
+Bugfixes:
+ * Fix incorrect color when display some CMYK images.
+
+Miscellaneous:
+ * Now use Qt 6.10.1 for pre-built binary
+ * Update README description and AppStream metainfo
+ * Update translations
+ * Update libavif, AOM and expat version for Windows binary build
+
+Contributors:
+ albanobattistella
+
 Version 1.2.0
 ~~~~~~~~~~~~~
 Released: 2025-09-21

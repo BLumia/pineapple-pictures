@@ -81,6 +81,23 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" version="1.2.1" date="2025-11-22T00:00:00Z">
+      <description>
+        <p>This release fixes the following bug:</p>
+        <ul>
+          <li>Fix incorrect color when display some CMYK images.</li>
+        </ul>
+        <p>This release includes the following changes:</p>
+        <ul>
+          <li>Now use Qt 6.10.1 for pre-built binary</li>
+          <li>Update README description and AppStream metainfo</li>
+          <li>Update translations</li>
+          <li>Update libavif, AOM and expat version for Windows binary build</li>
+        </ul>
+        <p>With contributions from:</p>
+        <p>albanobattistella</p>
+      </description>
+    </release>
     <release type="stable" version="1.2.0" date="2025-09-21T00:00:00Z">
       <description>
         <p>This release adds the following features:</p>

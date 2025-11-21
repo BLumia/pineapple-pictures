@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2022 Gary Wang <wzc782970009@gmail.com>
+// SPDX-FileCopyrightText: 2025 Gary Wang <git@blumia.net>
 //
 // SPDX-License-Identifier: MIT
 
@@ -105,7 +105,7 @@ AboutDialog::AboutDialog(QWidget *parent)
 
     const QString mitLicense(QStringLiteral(R"(Expat/MIT License
 
-Copyright (c) 2025 BLumia
+Copyright &copy; 2025 BLumia
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
