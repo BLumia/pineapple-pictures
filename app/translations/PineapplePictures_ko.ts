@@ -36,12 +36,12 @@
     <message>
         <location filename="../aboutdialog.cpp" line="45"/>
         <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation>실수로 창을 닫지 마십시오. (예: 창을 두 번 클릭하여)</translation>
+        <translation>실수로 창을 닫지 않도록 합니다. (예: 창을 더블 클릭하는 경우)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="48"/>
         <source>Avoid resetting the zoom/rotation/flip state that was applied to the image view when switching between images.</source>
-        <translation>이미지 간 전환 시 이미지 보기에 적용되었던 줌/회전/플립 상태를 재설정하지 마세요.</translation>
+        <translation>이미지 간 전환 시 이미지 보기에 적용된 확대/축소, 회전, 뒤집기 상태를 재설정하지 않습니다.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="55"/>
@@ -92,7 +92,7 @@
         <location filename="../aboutdialog.cpp" line="131"/>
         <source>%1 is built on the following free software libraries:</source>
         <comment>Free as in freedom</comment>
-        <translation>%1은 다음과 같은 무료 소프트웨어 라이브러리를 기반으로 합니다:</translation>
+        <translation>%1는 다음과 같은 무료 소프트웨어 라이브러리를 기반으로 합니다:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="155"/>
@@ -118,7 +118,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="95"/>
         <source>%1 is released under the MIT License.</source>
-        <translation>사용자의 권한 %1은 MIT 라이선스에 따라 릴리스됩니다.</translation>
+        <translation>%1는 MIT 라이선스에 따라 배포됩니다.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="96"/>
@@ -128,7 +128,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="97"/>
         <source>You are free to use %1, for any purpose</source>
-        <translation>%1을(를) 어떤 용도로도 자유롭게 사용할 수 있습니다</translation>
+        <translation>%1를 어떤 용도로도 자유롭게 사용할 수 있습니다</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="98"/>
@@ -143,7 +143,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="100"/>
         <source>You can distribute changed versions of %1</source>
-        <translation>변경된 버전의 %1을 배포할 수 있습니다</translation>
+        <translation>변경된 버전의 %1를 배포할 수 있습니다</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="102"/>
@@ -321,7 +321,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="105"/>
         <source>Fit long image</source>
-        <translation type="unfinished"></translation>
+        <translation>긴 이미지 맞추기</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="108"/>
@@ -805,25 +805,25 @@
         <location filename="../settingsdialog.cpp" line="97"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
-        <translation>라운드 (정수 스케일링)</translation>
+        <translation>반올림 (정수 스케일링)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="98"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
-        <translation>셰일 (정수 스케일링)</translation>
+        <translation>올림 (정수 스케일링)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="99"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
-        <translation>바닥 (정수 스케일링)</translation>
+        <translation>내림 (정수 스케일링)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="100"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
-        <translation>팔로우 시스템 (부분 스케일링)</translation>
+        <translation>시스템 따르기 (소수점 스케일링)</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="123"/>
@@ -848,12 +848,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="127"/>
         <source>Auto long image mode</source>
-        <translation type="unfinished"></translation>
+        <translation>자동 긴 이미지 모드</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="128"/>
         <source>Double-click behavior</source>
-        <translation>더블클릭 동작</translation>
+        <translation>더블 클릭 동작</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="129"/>
