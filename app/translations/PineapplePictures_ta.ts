@@ -175,7 +175,7 @@
     <name>GraphicsScene</name>
     <message>
         <location filename="../mainwindow.cpp" line="292"/>
-        <location filename="../graphicsscene.cpp" line="100"/>
+        <location filename="../graphicsscene.cpp" line="102"/>
         <source>Drag image here</source>
         <translation>படத்தை இங்கே இழுக்கவும்</translation>
     </message>
@@ -183,13 +183,14 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../graphicsview.cpp" line="50"/>
+        <location filename="../graphicsview.cpp" line="51"/>
         <source>File is not a valid image</source>
         <translation>கோப்பு சரியான படம் அல்ல</translation>
     </message>
     <message>
-        <location filename="../graphicsview.cpp" line="54"/>
-        <location filename="../graphicsview.cpp" line="58"/>
+        <location filename="../graphicsview.cpp" line="55"/>
+        <location filename="../graphicsview.cpp" line="60"/>
+        <location filename="../graphicsview.cpp" line="71"/>
         <source>Image data is invalid or currently unsupported</source>
         <translation>படத் தரவு தவறானது அல்லது தற்போது ஆதரிக்கப்படாதது</translation>
     </message>
@@ -715,146 +716,151 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="32"/>
+        <location filename="../settingsdialog.cpp" line="33"/>
         <source>Settings</source>
         <translation>அமைப்புகள்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="40"/>
+        <location filename="../settingsdialog.cpp" line="41"/>
         <source>Options</source>
         <translation>விருப்பங்கள்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="52"/>
+        <location filename="../settingsdialog.cpp" line="53"/>
         <source>Shortcuts</source>
         <translation>குறுக்குவழிகள்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="62"/>
+        <location filename="../settingsdialog.cpp" line="63"/>
         <source>Editing shortcuts for action &quot;%1&quot;:</source>
         <translation>செயலுக்கான குறுக்குவழிகளைத் திருத்துதல் &quot;%1&quot;:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="71"/>
+        <location filename="../settingsdialog.cpp" line="72"/>
         <source>Failed to set shortcuts</source>
         <translation>குறுக்குவழிகளை அமைப்பதில் தோல்வி</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="72"/>
+        <location filename="../settingsdialog.cpp" line="73"/>
         <source>Please check if shortcuts are duplicated with existing shortcuts.</source>
         <translation>தற்போதுள்ள குறுக்குவழிகளுடன் குறுக்குவழிகள் நகல் செய்யப்பட்டுள்ளதா என்று சரிபார்க்கவும்.</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="79"/>
+        <location filename="../settingsdialog.cpp" line="80"/>
         <source>Do nothing</source>
         <translation>எதுவும் செய்ய வேண்டாம்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="80"/>
+        <location filename="../settingsdialog.cpp" line="81"/>
         <source>Close the window</source>
         <translation>சாளரத்தை மூடு</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="81"/>
+        <location filename="../settingsdialog.cpp" line="82"/>
         <source>Toggle maximize</source>
         <translation>அதிகபட்சத்தை மாற்றவும்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="82"/>
+        <location filename="../settingsdialog.cpp" line="83"/>
         <source>Toggle fullscreen</source>
         <translation>மாற்று முழுத்திரை</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="86"/>
+        <location filename="../settingsdialog.cpp" line="87"/>
         <source>Zoom in and out</source>
         <translation>உள்ளேயும் வெளியேயும் பெரிதாக்கவும்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="87"/>
+        <location filename="../settingsdialog.cpp" line="88"/>
         <source>View next or previous item</source>
         <translation>அடுத்த அல்லது முந்தைய உருப்படியைக் காண்க</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="91"/>
+        <location filename="../settingsdialog.cpp" line="92"/>
         <source>Auto size</source>
         <translation>வாகன அளவு</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="92"/>
+        <location filename="../settingsdialog.cpp" line="93"/>
         <source>Maximized</source>
         <translation>அதிகபட்சம்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="93"/>
+        <location filename="../settingsdialog.cpp" line="94"/>
         <source>Windowed</source>
         <translation>சாளரம்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="97"/>
+        <location filename="../settingsdialog.cpp" line="98"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
         <translation>சுற்று (முழு எண் அளவிடுதல்)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="98"/>
+        <location filename="../settingsdialog.cpp" line="99"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
         <translation>சீல் (முழு எண் அளவிடுதல்)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="99"/>
+        <location filename="../settingsdialog.cpp" line="100"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
         <translation>மாடி (முழு எண் அளவிடுதல்)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="100"/>
+        <location filename="../settingsdialog.cpp" line="101"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
         <translation>கணினியைப் பின்பற்றவும் (பகுதியளவு அளவிடுதல்)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="123"/>
+        <location filename="../settingsdialog.cpp" line="124"/>
         <source>Stay on top when start-up</source>
         <translation>தொடக்கத்தில் இருக்கும்போது மேலே இருங்கள்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="124"/>
+        <location filename="../settingsdialog.cpp" line="125"/>
         <source>Use built-in close window animation</source>
         <translation>உள்ளமைக்கப்பட்ட நெருக்கமான சாளர அனிமேஷனைப் பயன்படுத்தவும்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="125"/>
+        <location filename="../settingsdialog.cpp" line="126"/>
         <source>Use light-color checkerboard</source>
         <translation>ஒளி-வண்ண செக்கர்போர்டைப் பயன்படுத்தவும்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="126"/>
+        <location filename="../settingsdialog.cpp" line="127"/>
         <source>Loop the loaded gallery</source>
         <translation>ஏற்றப்பட்ட கேலரியை சுற்றுங்கள்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="127"/>
+        <location filename="../settingsdialog.cpp" line="128"/>
         <source>Auto long image mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="128"/>
+        <location filename="../settingsdialog.cpp" line="129"/>
+        <source>Limit SVG support to SVG Tiny 1.2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="130"/>
         <source>Double-click behavior</source>
         <translation>நடத்தை இருமுறை சொடுக்கு செய்யவும்</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="129"/>
+        <location filename="../settingsdialog.cpp" line="131"/>
         <source>Mouse wheel behavior</source>
         <translation>சுட்டி சக்கர நடத்தை</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="130"/>
+        <location filename="../settingsdialog.cpp" line="132"/>
         <source>Default window size</source>
         <translation>இயல்புநிலை சாளர அளவு</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="131"/>
+        <location filename="../settingsdialog.cpp" line="133"/>
         <source>HiDPI scale factor rounding policy</source>
         <translation>HIDPI அளவிலான காரணி ரவுண்டிங் கொள்கை</translation>
     </message>

@@ -70,6 +70,19 @@ bool Settings::autoLongImageMode() const
     return m_qsettings->value("auto_long_image_mode", true).toBool();
 }
 
+bool Settings::svgTiny12Only() const
+{
+    // Qt 6.7.0's SVG support is terrible caused by huge memory usage, see QTBUG-124287
+    // Qt 6.7.1's is somewhat better, memory issue seems fixed, but still laggy when zoom in, see QTBUG-126771.
+    // Qt 6.9.3 and Qt 6.10.1 seems no longer have the laggy issue, so let's make the default value different
+    // based on Qt version.
+#if QT_VERSION < QT_VERSION_CHECK(6, 9, 3)
+    return m_qsettings->value("svg_tiny12_only", true).toBool();
+#else
+    return m_qsettings->value("svg_tiny12_only", false).toBool();
+#endif // QT_VERSION < QT_VERSION_CHECK(6, 9, 3)
+}
+
 Settings::DoubleClickBehavior Settings::doubleClickBehavior() const
 {
     QString result = m_qsettings->value("double_click_behavior", "Close").toString();
@@ -125,6 +138,12 @@ void Settings::setLoopGallery(bool on)
 void Settings::setAutoLongImageMode(bool on)
 {
     m_qsettings->setValue("auto_long_image_mode", on);
+    m_qsettings->sync();
+}
+
+void Settings::setSvgTiny12Only(bool on)
+{
+    m_qsettings->setValue("svg_tiny12_only", on);
     m_qsettings->sync();
 }
 

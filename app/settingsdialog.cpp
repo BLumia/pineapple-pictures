@@ -24,6 +24,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     , m_useLightCheckerboard(new QCheckBox)
     , m_loopGallery(new QCheckBox)
     , m_autoLongImageMode(new QCheckBox)
+    , m_svgTiny12Only(new QCheckBox)
     , m_doubleClickBehavior(new QComboBox)
     , m_mouseWheelBehavior(new QComboBox)
     , m_initWindowSizeBehavior(new QComboBox)
@@ -125,6 +126,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     settingsForm->addRow(tr("Use light-color checkerboard"), m_useLightCheckerboard);
     settingsForm->addRow(tr("Loop the loaded gallery"), m_loopGallery);
     settingsForm->addRow(tr("Auto long image mode"), m_autoLongImageMode);
+    settingsForm->addRow(tr("Limit SVG support to SVG Tiny 1.2"), m_svgTiny12Only);
     settingsForm->addRow(tr("Double-click behavior"), m_doubleClickBehavior);
     settingsForm->addRow(tr("Mouse wheel behavior"), m_mouseWheelBehavior);
     settingsForm->addRow(tr("Default window size"), m_initWindowSizeBehavior);
@@ -135,6 +137,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     m_useLightCheckerboard->setChecked(Settings::instance()->useLightCheckerboard());
     m_loopGallery->setChecked(Settings::instance()->loopGallery());
     m_autoLongImageMode->setChecked(Settings::instance()->autoLongImageMode());
+    m_svgTiny12Only->setChecked(Settings::instance()->svgTiny12Only());
     m_doubleClickBehavior->setModel(new QStringListModel(dcbDropDown));
     Settings::DoubleClickBehavior dcb = Settings::instance()->doubleClickBehavior();
     m_doubleClickBehavior->setCurrentIndex(static_cast<int>(dcb));
@@ -179,6 +182,10 @@ SettingsDialog::SettingsDialog(QWidget *parent)
 
     connect(m_autoLongImageMode, &QCHECKBOX_CHECKSTATECHANGED, this, [ = ](QT_CHECKSTATE state){
         Settings::instance()->setAutoLongImageMode(state == Qt::Checked);
+    });
+
+    connect(m_svgTiny12Only, &QCHECKBOX_CHECKSTATECHANGED, this, [ = ](QT_CHECKSTATE state){
+        Settings::instance()->setSvgTiny12Only(state == Qt::Checked);
     });
 
     connect(m_doubleClickBehavior, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [ = ](int index){
