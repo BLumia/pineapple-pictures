@@ -270,6 +270,14 @@ if (DEFINED QM_FILE_INSTALL_DIR)
     )
 endif()
 
+if (WIN32)
+    install(
+        FILES dist/passoc/ppic.pacfg
+        DESTINATION ${CMAKE_INSTALL_BINDIR}
+        RENAME default-assoc.pacfg
+    )
+endif()
+
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 # CPACK: General Settings

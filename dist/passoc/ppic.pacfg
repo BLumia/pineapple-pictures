@@ -1,0 +1,110 @@
+targetApp=ppic.exe
+friendlyAppName=Pineapple Pictures
+friendlyAppName[zh_CN]=菠萝看图
+openCommand="\"{targetAppFullPath}\" \"%1\""
+
+[ProgId/jpeg]
+name=JPEG Image
+name[zh_CN]=JPEG 图像
+extensions=jpg,jpeg,jfif
+
+[ProgId/gif]
+name=GIF Animation Image
+name[zh_CN]=GIF 动图
+
+[ProgId/png]
+name=PNG Image
+name[zh_CN]=PNG 图像
+
+[ProgId/svg]
+name=Scalable Vector Graphics
+name[zh_CN]=可缩放矢量图像
+
+[ProgId/webp]
+name=WebP Image
+name[zh_CN]=WebP 图像
+extensions=webp
+
+[ProgId/avif]
+name=AV1 Image File
+name[zh_CN]=AV1 图像文件
+
+[ProgId/ico]
+name=Windows Icon Image
+name[zh_CN]=Windows 图标图像
+
+[ProgId/icns]
+name=Apple Icon Image
+name[zh_CN]=苹果图标图像
+
+[ProgId/psd]
+name=Photoshop Document
+name[zh_CN]=Photoshop 文档
+extensions=psd,psb,pdd,psdt
+
+[ProgId/kra]
+name=Krita Document
+name[zh_CN]=Krita 文档
+
+[ProgId/xcf]
+name=GIMP Document
+name[zh_CN]=GIMP 文档
+
+[ProgId/tga]
+name=TARGA Image
+name[zh_CN]=TARGA 图像
+
+[ProgId/tif]
+name=Tagged Image File Format
+name[zh_CN]=标签图像文件格式
+extensions=tif,tiff
+
+[ProgId/dds]
+name=DirectDraw Surface
+
+[ProgId/hdr]
+name=High Dynamic Range Image
+name[zh_CN]=高动态范围图像
+
+[ProgId/iff]
+name=Interchange File Format
+name[zh_CN]=可交换文件格式
+
+[ProgId/pic]
+name=Softimage Picture
+name[zh_CN]=Softimage 图像
+
+[ProgId/pcx]
+name=PiCture eXchange PC Paintbrush Image
+name[zh_CN]=PC Paintbrush 图像
+
+[ProgId/qoi]
+name=Quite OK Image
+name[zh_CN]=挺 OK 图像
+
+[ProgId/ras]
+name=Sun Raster Image
+name[zh_CN]=Sun 栅格图象
+extensions=ras,sun
+
+[ProgId/ora]
+name=OpenRaster Image
+name[zh_CN]=OpenRaster 图象
+
+[ProgId/ani]
+name=Animated Cursor
+name[zh_CN]=动态光标
+
+[ProgId/pfm]
+name=Portable Float Map
+extensions=pfm,phm
+
+[ProgId/rgb]
+name=Silicon Graphics Image
+extensions=rgb,rgba,bw,sgi
+
+[ProgId/pxr]
+name=Pixar Raster Image
+
+[ProgId/sct]
+name=Scitex Continuous Tone

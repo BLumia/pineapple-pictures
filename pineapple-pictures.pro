@@ -87,7 +87,7 @@ RESOURCES += \
     assets/resources.qrc
 
 # Generate from svg:
-# magick convert -density 512x512 -background none app-icon.svg -define icon:auto-resize app-icon.ico
+# magick -density 512x512 -background none app-icon.svg -define icon:auto-resize app-icon.ico
 RC_ICONS = assets/icons/app-icon.ico
 
 # Windows only, for rc file (we're not going to use the .rc file in this repo)
