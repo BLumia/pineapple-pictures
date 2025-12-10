@@ -276,6 +276,17 @@ if (WIN32)
         DESTINATION ${CMAKE_INSTALL_BINDIR}
         RENAME default-assoc.pacfg
     )
+
+    install(
+        FILES
+            dist/passoc/generic.ico
+            dist/passoc/jpeg.ico
+            dist/passoc/gif.ico
+            dist/passoc/svg.ico
+            dist/passoc/png.ico
+            dist/passoc/psd.ico
+        DESTINATION "${CMAKE_INSTALL_BINDIR}/icons"
+    )
 endif()
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

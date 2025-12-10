@@ -126,7 +126,7 @@ jobs:
         cmake --install build --config Release --prefix "%PWD%\build"
         echo ::endgroup::
         :: ------ pkg ------
-        windeployqt --verbose=2 --no-compiler-runtime --no-quick-import --no-translations --no-opengl-sw --no-system-d3d-compiler --no-system-dxc-compiler --skip-plugin-types tls,networkinformation build\bin\ppic.exe
+        windeployqt --verbose=2 --no-compiler-runtime --no-quick-import --no-translations --no-network --no-opengl-sw --no-system-d3d-compiler --no-system-dxc-compiler --skip-plugin-types tls,networkinformation build\bin\ppic.exe
         robocopy ./dependencies_bin/bin build/bin *.dll
         if ErrorLevel 8 (exit /B 1)
         copy LICENSE build\bin

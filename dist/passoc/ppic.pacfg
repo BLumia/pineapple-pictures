@@ -59,6 +59,10 @@ name=Tagged Image File Format
 name[zh_CN]=标签图像文件格式
 extensions=tif,tiff
 
+[ProgId/bmp]
+name=Bitmap
+name[zh_CN]=位图
+
 [ProgId/dds]
 name=DirectDraw Surface
 
