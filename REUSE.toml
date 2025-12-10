@@ -9,10 +9,16 @@ SPDX-FileCopyrightText = "None"
 SPDX-License-Identifier = "CC0-1.0"
 
 [[annotations]]
-path = ["README**.md", "NEWS", "assets/**.rc.in", "assets/**.qrc", "dist/**"]
+path = ["README**.md", "NEWS", "assets/**.rc.in", "assets/**.qrc", "dist/appstream/**", "dist/**.in", "dist/**.desktop"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "None"
 SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = ["dist/passoc/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Gary Wang"
+SPDX-License-Identifier = "MIT"
 
 [[annotations]]
 path = ["app/translations/**.ts", "assets/plain/translators.html"]
