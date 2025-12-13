@@ -74,9 +74,9 @@ jobs:
         set CMAKE_PREFIX_PATH=%PWD%/dependencies_bin
         mkdir dependencies_src
         echo ::group::===== exiv2 =====
-        curl -fsSL -o exiv2_bin.zip https://github.com/Exiv2/exiv2/releases/download/v0.28.5/exiv2-0.28.5-2022msvc-AMD64.zip
+        curl -fsSL -o exiv2_bin.zip https://github.com/Exiv2/exiv2/releases/download/v0.28.7/exiv2-0.28.7-2022msvc-AMD64.zip
         7z x exiv2_bin.zip -y
-        ren .\exiv2-0.28.5-2022msvc-AMD64 dependencies_bin
+        ren .\exiv2-0.28.7-2022msvc-AMD64 dependencies_bin
         echo ::endgroup::
         echo ::group::===== zlib =====
         curl -fsSL -o zlib_src.zip https://zlib.net/zlib131.zip
@@ -124,6 +124,10 @@ jobs:
         cmake -Bbuild .
         cmake --build build --config Release
         cmake --install build --config Release --prefix "%PWD%\build"
+        echo ::endgroup::
+        echo ::group::===== passoc stuff =====
+        curl -fsSL -o passoc-standalone.zip https://github.com/BLumia/pineapple-assoc-manager/releases/latest/download/pineapple-assoc-manager-qt${{ matrix.qt_ver }}-standalone.zip
+        7z x passoc-standalone.zip passoc.exe -y -o"build/bin"
         echo ::endgroup::
         :: ------ pkg ------
         windeployqt --verbose=2 --no-compiler-runtime --no-quick-import --no-translations --no-network --no-opengl-sw --no-system-d3d-compiler --no-system-dxc-compiler --skip-plugin-types tls,networkinformation build\bin\ppic.exe

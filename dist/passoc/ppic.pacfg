@@ -63,6 +63,10 @@ extensions=tif,tiff
 name=Bitmap
 name[zh_CN]=位图
 
+[ProgId/wbmp]
+name=Wireless Bitmap
+name[zh_CN]=无线位图
+
 [ProgId/dds]
 name=DirectDraw Surface
 
