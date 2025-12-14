@@ -222,7 +222,7 @@ void MainWindow::adjustWindowSizeBySceneRect()
 
     if (m_graphicsView->scaleFactor() < 1 || size().expandedTo(sceneSizeWithMargins) != size()) {
         // if it scaled down by the resize policy:
-        QSize screenSize = window()->screen()->availableSize();
+        QSize screenSize = qApp->screenAt(QCursor::pos())->availableSize();
         if (screenSize.expandedTo(sceneSize) == screenSize) {
             // we can show the picture by increase the window size.
             QSize finalSize = (screenSize.expandedTo(sceneSizeWithMargins) == screenSize) ?
@@ -584,7 +584,7 @@ void MainWindow::centerWindow()
             Qt::LeftToRight,
             Qt::AlignCenter,
             this->size(),
-            window()->screen()->availableGeometry()
+            qApp->screenAt(QCursor::pos())->availableGeometry()
         )
     );
 }
