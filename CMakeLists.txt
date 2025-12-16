@@ -304,7 +304,7 @@ elseif (APPLE)
 elseif (UNIX)
     set (CPACK_SYSTEM_NAME "${CMAKE_SYSTEM_NAME}-${CMAKE_SYSTEM_PROCESSOR}")
     set (CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
-    set (CPACK_DEBIAN_PACKAGE_RECOMMENDS "kimageformat-plugins")
+    set (CPACK_DEBIAN_PACKAGE_RECOMMENDS "kimageformat6-plugins")
 endif()
 
 include(CPack)

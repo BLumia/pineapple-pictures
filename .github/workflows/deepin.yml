@@ -1,0 +1,35 @@
+name: deepin 25 CI
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build-deepin-25-deb:
+    runs-on: ubuntu-latest
+    container:
+      image: linuxdeepin/deepin:crimson
+      options: --user root
+
+    steps:
+      - name: Update package lists and install basic tools
+        run: |
+          apt update
+          apt install -y git ca-certificates curl file
+      - uses: actions/checkout@v4
+      - name: Get build dept.
+        run: |
+          apt install -y cmake qt6-base-dev qt6-svg-dev qt6-tools-dev libexiv2-dev
+      - name: Build it
+        run: |
+          git config --global --add safe.directory '*' # to avoid "fatal: detected dubious ownership in repository at xxx"
+          cmake -Bbuild -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr .
+          cmake --build build -j
+          cd build
+          cpack -G DEB
+      - name: Try install it
+        run: |
+          cd build
+          apt install -y ./*.deb
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deepin-25-deb-package
+          path: build/*.deb
