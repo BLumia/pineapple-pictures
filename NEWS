@@ -1,3 +1,23 @@
+Version 1.3.0
+~~~~~~~~~~~~~
+Released: 2025-12-20
+
+Features:
+ * New option to limit SVG support to SVG Tiny 1.2 standard
+ * Windows: ship tools and configurations that help user associate image files to this program
+
+Bugfixes:
+ * Fix window not appear at the screen that the mouse cursor is at
+ * Fix Windows prebuilt binary having AVIF plugin included but not actually support it
+
+Miscellaneous:
+ * CPack DEB: will now recommend "kimageformat6-plugins" instead of the KF5 version
+ * Update translations
+ * Update exiv2 version for Windows binary build
+
+Contributors:
+ VenusGirl, Andrey
+
 Version 1.2.1
 ~~~~~~~~~~~~~
 Released: 2025-11-22
@@ -214,4 +234,3 @@ Bugfixes:
 
 Contributors:
  yyc12345
-

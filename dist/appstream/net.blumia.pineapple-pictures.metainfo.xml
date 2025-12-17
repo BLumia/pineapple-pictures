@@ -81,6 +81,28 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" version="1.3.0" date="2025-12-20T00:00:00Z">
+      <description>
+        <p>This release adds the following features:</p>
+        <ul>
+          <li>New option to limit SVG support to SVG Tiny 1.2 standard</li>
+          <li>Windows: ship tools and configurations that help user associate image files to this program</li>
+        </ul>
+        <p>This release fixes the following bugs:</p>
+        <ul>
+          <li>Fix window not appear at the screen that the mouse cursor is at</li>
+          <li>Fix Windows prebuilt binary having AVIF plugin included but not actually support it</li>
+        </ul>
+        <p>This release includes the following changes:</p>
+        <ul>
+          <li>CPack DEB: will now recommend "kimageformat6-plugins" instead of the KF5 version</li>
+          <li>Update translations</li>
+          <li>Update exiv2 version for Windows binary build</li>
+        </ul>
+        <p>With contributions from:</p>
+        <p>VenusGirl, Andrey</p>
+      </description>
+    </release>
     <release type="stable" version="1.2.1" date="2025-11-22T00:00:00Z">
       <description>
         <p>This release fixes the following bug:</p>
