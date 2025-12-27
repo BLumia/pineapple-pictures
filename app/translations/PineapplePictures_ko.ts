@@ -854,7 +854,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="129"/>
         <source>Limit SVG support to SVG Tiny 1.2</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG 지원을 SVG Tiny 1.2로 제한</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="130"/>
