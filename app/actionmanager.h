@@ -23,6 +23,7 @@ public:
 
 public:
     QAction *actionOpen;
+    QAction *actionSaveAs;
 
     QAction *actionActualSize;
     QAction *actionToggleMaximize;

@@ -38,6 +38,7 @@
 #include <QProcess>
 #include <QDesktopServices>
 #include <QMessageBox>
+#include <QImageWriter>
 
 #ifdef HAVE_QTDBUS
 #include <QDBusInterface>
@@ -504,6 +505,12 @@ void MainWindow::contextMenuEvent(QContextMenuEvent *event)
         menu->addAction(paste);
     }
 
+#if 0
+    if (currentFileUrl.isValid()) {
+        menu->addAction(m_am->actionSaveAs);
+    }
+#endif // 0
+
     menu->addSeparator();
 
     menu->addAction(m_am->actionHorizontalFlip);
@@ -693,6 +700,70 @@ void MainWindow::on_actionOpen_triggered()
     QList<QUrl> urls(QFileDialog::getOpenFileUrls(this, QString(), pictureUrl));
     if (!urls.isEmpty()) {
         showUrls(urls);
+    }
+}
+
+void MainWindow::on_actionSaveAs_triggered()
+{
+    QUrl currentFileUrl = currentImageFileUrl();
+    if (!currentFileUrl.isValid()) {
+        QMessageBox::warning(this, tr("Save As"), tr("No image is currently open."));
+        return;
+    }
+
+    QStringList supportedFormats;
+    QStringList nameFilters;
+
+    const QList<QByteArray> imageFormats = QImageWriter::supportedImageFormats();
+    for (const QByteArray &format : imageFormats) {
+        QString formatStr = QString::fromLatin1(format).toLower();
+        if (!formatStr.isEmpty()) {
+            supportedFormats << formatStr;
+            nameFilters << tr("%1 Image (*.%2)").arg(formatStr.toUpper(), formatStr);
+        }
+    }
+
+    if (imageFormats.isEmpty()) {
+        QMessageBox::warning(this, tr("Save As"),
+                            tr("No supported image formats are available."));
+        return;
+    }
+
+    QString selectedFilter;
+    QString saveFilePath = QFileDialog::getSaveFileName(this,
+        tr("Save As"),
+        QStandardPaths::writableLocation(QStandardPaths::PicturesLocation),
+        nameFilters.join(";;"),
+        &selectedFilter);
+
+    if (saveFilePath.isEmpty()) {
+        return; // User cancelled
+    }
+
+    // Ensure the file has the correct extension
+    QString expectedExtension;
+
+    const int filterIndex = nameFilters.indexOf(selectedFilter);
+    if (filterIndex != -1) {
+        expectedExtension = supportedFormats.at(filterIndex);
+    }
+
+    if (!expectedExtension.isEmpty() && !saveFilePath.endsWith('.' + expectedExtension, Qt::CaseInsensitive)) {
+        saveFilePath += '.' + expectedExtension;
+    }
+
+    // Save the image
+    QImageReader imageReader(currentFileUrl.toLocalFile());
+    imageReader.setAutoTransform(true);
+    imageReader.setDecideFormatFromContent(true);
+    imageReader.setAllocationLimit(0);
+    QImage img(imageReader.read());
+    QImageWriter writer(saveFilePath);
+    writer.setFormat(expectedExtension.toLatin1());
+    if (!writer.write(img)) {
+        QMessageBox::warning(this, tr("Save As"),
+                            tr("Failed to save image: %1").arg(writer.errorString()));
+        return;
     }
 }
 
