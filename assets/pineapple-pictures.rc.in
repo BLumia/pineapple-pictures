@@ -6,7 +6,7 @@ BEGIN
         BLOCK "040904E4"
         BEGIN
             VALUE "FileDescription", "Pineapple Pictures - Image Viewer"
-            VALUE "LegalCopyright", "MIT/Expat License - Copyright (C) 2024 Gary Wang"
+            VALUE "LegalCopyright", "MIT/Expat License - Copyright (C) 2026 Gary Wang"
             VALUE "ProductName", "Pineapple Pictures"
             VALUE "ProductVersion", "@PROJECT_VERSION@"
         END
