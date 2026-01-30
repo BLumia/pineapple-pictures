@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - qt_ver: '6.10.1'
+          - qt_ver: '6.10.2'
             vs: '2022'
             aqt_arch: 'win64_msvc2022_64'
             msvc_arch: 'x64'
@@ -45,7 +45,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - qt_ver: '6.10.1'
+          - qt_ver: '6.10.2'
             vs: '2022'
             aqt_arch: 'win64_msvc2022_64'
             msvc_arch: 'x64'
