@@ -240,27 +240,27 @@
         <location filename="../mainwindow.cpp" line="734"/>
         <location filename="../mainwindow.cpp" line="764"/>
         <source>Save As</source>
-        <translation type="unfinished"></translation>
+        <translation>Opslaan als</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="710"/>
         <source>No image is currently open.</source>
-        <translation type="unfinished"></translation>
+        <translation>Er is geen afbeelding geopend.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="722"/>
         <source>%1 Image (*.%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1-afbeelding (*.%2)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="728"/>
         <source>No supported image formats are available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Er zijn geen ondersteunde formaten beschikbaar.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="765"/>
         <source>Failed to save image: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>De afbeelding kan niet worden opgeslagen: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="854"/>
@@ -324,7 +324,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
         <source>Save &amp;As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Opslaan &amp;als…</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
@@ -359,7 +359,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="107"/>
         <source>Fit long image</source>
-        <translation type="unfinished"></translation>
+        <translation>Lange afbeelding inpassen</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="110"/>
@@ -891,7 +891,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="129"/>
         <source>Limit SVG support to SVG Tiny 1.2</source>
-        <translation type="unfinished"></translation>
+        <translation>Svg-ondersteuning beperken tot SVG Tiny 1.2</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="130"/>
