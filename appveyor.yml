@@ -134,7 +134,7 @@ build_script:
   - copy %CMAKE_INSTALL_PREFIX%\bin\libexpat-1.dll
   - copy %CMAKE_INSTALL_PREFIX%\bin\libexiv2.dll
   - copy %CMAKE_INSTALL_PREFIX%\bin\libavif.dll
-  - copy %CMAKE_INSTALL_PREFIX%\bin\libzlib.dll
+  - copy %CMAKE_INSTALL_PREFIX%\bin\libz.dll
   - copy %CMAKE_INSTALL_PREFIX%\bin\libKF?Archive.dll
   - windeployqt %WINDEPLOYQT_ARGS% .\ppic.exe
 # copy 3rdparty licenses for the libs we vendored for windows...
