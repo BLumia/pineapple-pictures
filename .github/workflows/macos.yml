@@ -8,11 +8,11 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Install Qt
       uses: jurplel/install-qt-action@v4
       with:
-        version: '6.10.2'
+        version: '6.10.3'
         modules: 'qtimageformats'
         cache: true
     - name: Install Conan and Dependencies
@@ -33,7 +33,7 @@ jobs:
       run: |
         macdeployqt ./ppic.app -dmg
         ls
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v6
       with:
         name: "macos-bundle"
         path: "*.dmg"

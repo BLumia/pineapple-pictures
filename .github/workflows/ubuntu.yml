@@ -6,7 +6,7 @@ jobs:
   ubuntu-24-04-build:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Get build dept.
         run: |
           sudo apt update
@@ -22,7 +22,7 @@ jobs:
         run: |
           cd build
           sudo apt install ./*.deb
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: ubuntu-24.04-deb-package
           path: build/*.deb

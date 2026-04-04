@@ -14,7 +14,7 @@ jobs:
         run: |
           apt update
           apt install -y git ca-certificates curl file
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Get build dept.
         run: |
           apt install -y cmake qt6-base-dev qt6-svg-dev qt6-tools-dev libexiv2-dev
@@ -29,7 +29,7 @@ jobs:
         run: |
           cd build
           apt install -y ./*.deb
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: deepin-25-deb-package
           path: build/*.deb
