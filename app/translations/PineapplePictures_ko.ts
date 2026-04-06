@@ -236,27 +236,27 @@
         <location filename="../mainwindow.cpp" line="734"/>
         <location filename="../mainwindow.cpp" line="764"/>
         <source>Save As</source>
-        <translation type="unfinished"></translation>
+        <translation>다른 이름으로 저장</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="710"/>
         <source>No image is currently open.</source>
-        <translation type="unfinished"></translation>
+        <translation>현재 열려 있는 이미지가 없습니다.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="722"/>
         <source>%1 Image (*.%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 이미지 (*.%2)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="728"/>
         <source>No supported image formats are available.</source>
-        <translation type="unfinished"></translation>
+        <translation>지원되는 이미지 형식을 사용할 수 없습니다.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="765"/>
         <source>Failed to save image: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>이미지 저장 실패: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="854"/>
@@ -320,7 +320,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
         <source>Save &amp;As...</source>
-        <translation type="unfinished"></translation>
+        <translation>다른 이름으로 저장(&amp;A)...</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
