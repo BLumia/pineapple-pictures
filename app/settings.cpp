@@ -55,6 +55,11 @@ bool Settings::useBuiltInCloseAnimation() const
     return m_qsettings->value("use_built_in_close_animation", true).toBool();
 }
 
+bool Settings::showTitleBar() const
+{
+    return m_qsettings->value("show_title_bar", true).toBool();
+}
+
 bool Settings::useLightCheckerboard() const
 {
     return m_qsettings->value("use_light_checkerboard", false).toBool();
@@ -120,6 +125,12 @@ void Settings::setStayOnTop(bool on)
 void Settings::setUseBuiltInCloseAnimation(bool on)
 {
     m_qsettings->setValue("use_built_in_close_animation", on);
+    m_qsettings->sync();
+}
+
+void Settings::setShowTitleBar(bool on)
+{
+    m_qsettings->setValue("show_title_bar", on);
     m_qsettings->sync();
 }
 

@@ -12,7 +12,7 @@ class ToolButton : public QPushButton
 {
     Q_OBJECT
 public:
-    ToolButton(bool hoverColor = false, QWidget * parent = nullptr);
+    ToolButton(QWidget * parent = nullptr);
     void setIconResourcePath(const QString &iconp);
 
 public slots:

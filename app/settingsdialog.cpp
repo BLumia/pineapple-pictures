@@ -21,6 +21,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     : QDialog(parent)
     , m_stayOnTop(new QCheckBox)
     , m_useBuiltInCloseAnimation(new QCheckBox)
+    , m_showTitleBar(new QCheckBox)
     , m_useLightCheckerboard(new QCheckBox)
     , m_loopGallery(new QCheckBox)
     , m_autoLongImageMode(new QCheckBox)
@@ -123,6 +124,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
 
     settingsForm->addRow(tr("Stay on top when start-up"), m_stayOnTop);
     settingsForm->addRow(tr("Use built-in close window animation"), m_useBuiltInCloseAnimation);
+    settingsForm->addRow(tr("Show title bar"), m_showTitleBar);
     settingsForm->addRow(tr("Use light-color checkerboard"), m_useLightCheckerboard);
     settingsForm->addRow(tr("Loop the loaded gallery"), m_loopGallery);
     settingsForm->addRow(tr("Auto long image mode"), m_autoLongImageMode);
@@ -134,6 +136,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
 
     m_stayOnTop->setChecked(Settings::instance()->stayOnTop());
     m_useBuiltInCloseAnimation->setChecked(Settings::instance()->useBuiltInCloseAnimation());
+    m_showTitleBar->setChecked(Settings::instance()->showTitleBar());
     m_useLightCheckerboard->setChecked(Settings::instance()->useLightCheckerboard());
     m_loopGallery->setChecked(Settings::instance()->loopGallery());
     m_autoLongImageMode->setChecked(Settings::instance()->autoLongImageMode());
@@ -170,6 +173,10 @@ SettingsDialog::SettingsDialog(QWidget *parent)
 
     connect(m_useBuiltInCloseAnimation, &QCHECKBOX_CHECKSTATECHANGED, this, [ = ](QT_CHECKSTATE state){
         Settings::instance()->setUseBuiltInCloseAnimation(state == Qt::Checked);
+    });
+
+    connect(m_showTitleBar, &QCHECKBOX_CHECKSTATECHANGED, this, [ = ](QT_CHECKSTATE state){
+        Settings::instance()->setShowTitleBar(state == Qt::Checked);
     });
 
     connect(m_useLightCheckerboard, &QCHECKBOX_CHECKSTATECHANGED, this, [ = ](QT_CHECKSTATE state){

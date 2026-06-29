@@ -44,6 +44,7 @@ set (PPIC_CPP_FILES
     app/graphicsview.cpp
     app/graphicsscene.cpp
     app/bottombuttongroup.cpp
+    app/titlebar.cpp
     app/navigatorview.cpp
     app/opacityhelper.cpp
     app/toolbutton.cpp
@@ -65,6 +66,7 @@ set (PPIC_HEADER_FILES
     app/graphicsview.h
     app/graphicsscene.h
     app/bottombuttongroup.h
+    app/titlebar.h
     app/navigatorview.h
     app/opacityhelper.h
     app/toolbutton.h

@@ -20,6 +20,7 @@ QT_END_NAMESPACE
 class ActionManager;
 class PlaylistManager;
 class ToolButton;
+class TitleBar;
 class GraphicsView;
 class NavigatorView;
 class BottomButtonGroup;
@@ -123,9 +124,9 @@ private:
     QPropertyAnimation *m_floatUpAnimation;
     QParallelAnimationGroup *m_exitAnimationGroup;
     QFileSystemWatcher *m_fileSystemWatcher;
-    ToolButton *m_closeButton;
     ToolButton *m_prevButton;
     ToolButton *m_nextButton;
+    TitleBar *m_titleBar;
     GraphicsView *m_graphicsView;
     NavigatorView *m_gv;
     BottomButtonGroup *m_bottomButtonGroup;

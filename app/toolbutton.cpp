@@ -11,7 +11,7 @@
 #include <QGraphicsOpacityEffect>
 #include <QPropertyAnimation>
 
-ToolButton::ToolButton(bool hoverColor, QWidget *parent)
+ToolButton::ToolButton(QWidget *parent)
     : QPushButton(parent)
     , m_opacityHelper(new OpacityHelper(this))
 {
@@ -19,11 +19,6 @@ ToolButton::ToolButton(bool hoverColor, QWidget *parent)
     QString qss = "QPushButton {"
                   "background: transparent;"
                   "}";
-    if (hoverColor) {
-        qss += "QPushButton:hover {"
-               "background: red;"
-               "}";
-    }
     setStyleSheet(qss);
 }
 

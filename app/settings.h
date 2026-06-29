@@ -36,6 +36,7 @@ public:
 
     bool stayOnTop() const;
     bool useBuiltInCloseAnimation() const;
+    bool showTitleBar() const;
     bool useLightCheckerboard() const;
     bool loopGallery() const;
     bool autoLongImageMode() const;
@@ -47,6 +48,7 @@ public:
 
     void setStayOnTop(bool on);
     void setUseBuiltInCloseAnimation(bool on);
+    void setShowTitleBar(bool on);
     void setUseLightCheckerboard(bool light);
     void setLoopGallery(bool on);
     void setAutoLongImageMode(bool on);
