@@ -178,7 +178,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../mainwindow.cpp" line="293"/>
+        <location filename="../mainwindow.cpp" line="294"/>
         <location filename="../graphicsscene.cpp" line="102"/>
         <source>Drag image here</source>
         <translation>Sleep een afbeelding hierheen</translation>
@@ -214,71 +214,71 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="191"/>
-        <location filename="../mainwindow.cpp" line="568"/>
+        <location filename="../mainwindow.cpp" line="192"/>
+        <location filename="../mainwindow.cpp" line="569"/>
         <source>File url list is empty</source>
         <translation>De bestandspadlijst is leeg</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="462"/>
+        <location filename="../mainwindow.cpp" line="463"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopiëren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="576"/>
+        <location filename="../mainwindow.cpp" line="577"/>
         <source>Image data is invalid</source>
         <translation>Beschadigde afbeeldingsgegevens</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="583"/>
+        <location filename="../mainwindow.cpp" line="584"/>
         <source>Not supported mimedata: %1</source>
         <translation>Niet-ondersteunde mime-gegevens: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="710"/>
-        <location filename="../mainwindow.cpp" line="727"/>
-        <location filename="../mainwindow.cpp" line="734"/>
-        <location filename="../mainwindow.cpp" line="764"/>
+        <location filename="../mainwindow.cpp" line="716"/>
+        <location filename="../mainwindow.cpp" line="733"/>
+        <location filename="../mainwindow.cpp" line="740"/>
+        <location filename="../mainwindow.cpp" line="770"/>
         <source>Save As</source>
         <translation>Opslaan als</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="710"/>
+        <location filename="../mainwindow.cpp" line="716"/>
         <source>No image is currently open.</source>
         <translation>Er is geen afbeelding geopend.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="722"/>
+        <location filename="../mainwindow.cpp" line="728"/>
         <source>%1 Image (*.%2)</source>
         <translation>%1-afbeelding (*.%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="728"/>
+        <location filename="../mainwindow.cpp" line="734"/>
         <source>No supported image formats are available.</source>
         <translation>Er zijn geen ondersteunde formaten beschikbaar.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="765"/>
+        <location filename="../mainwindow.cpp" line="771"/>
         <source>Failed to save image: %1</source>
         <translation>De afbeelding kan niet worden opgeslagen: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="854"/>
+        <location filename="../mainwindow.cpp" line="860"/>
         <source>Image From Clipboard</source>
         <translation>Afbeelding van klembord</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="872"/>
+        <location filename="../mainwindow.cpp" line="878"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
         <translation>Weet u zeker dat u “%1” naar de prullenbak wilt verplaatsen?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="876"/>
+        <location filename="../mainwindow.cpp" line="882"/>
         <source>Failed to move file to trash</source>
         <translation>Verplaatsen naar prullenbak mislukt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="877"/>
+        <location filename="../mainwindow.cpp" line="883"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
         <translation>Het bestand kan niet naar de prullenbak worden verplaatst, mogelijk door een rechtenprobleem of systeembeperking.</translation>
     </message>
@@ -407,7 +407,7 @@
         <translation>Volgende afbeelding</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="871"/>
+        <location filename="../mainwindow.cpp" line="877"/>
         <location filename="../actionmanager.cpp" line="111"/>
         <source>Move to Trash</source>
         <translation>Verplaatsen naar prullenbak</translation>
@@ -765,151 +765,156 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="33"/>
+        <location filename="../settingsdialog.cpp" line="34"/>
         <source>Settings</source>
         <translation>Instellingen</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="41"/>
+        <location filename="../settingsdialog.cpp" line="42"/>
         <source>Options</source>
         <translation>Opties</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="53"/>
+        <location filename="../settingsdialog.cpp" line="54"/>
         <source>Shortcuts</source>
         <translation>Sneltoetsen</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="63"/>
+        <location filename="../settingsdialog.cpp" line="64"/>
         <source>Editing shortcuts for action &quot;%1&quot;:</source>
         <translation>Bewerken van sneltoetsen voor actie ‘%1’:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="72"/>
+        <location filename="../settingsdialog.cpp" line="73"/>
         <source>Failed to set shortcuts</source>
         <translation>Instellen mislukt</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="73"/>
+        <location filename="../settingsdialog.cpp" line="74"/>
         <source>Please check if shortcuts are duplicated with existing shortcuts.</source>
         <translation>Controleer of de gekozen sneltoetsen niet al in gebruik zijn.</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="80"/>
+        <location filename="../settingsdialog.cpp" line="81"/>
         <source>Do nothing</source>
         <translation>Niets doen</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="81"/>
+        <location filename="../settingsdialog.cpp" line="82"/>
         <source>Close the window</source>
         <translation>Venster sluiten</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="82"/>
+        <location filename="../settingsdialog.cpp" line="83"/>
         <source>Toggle maximize</source>
         <translation>Maximaliseren/Demaximaliseren</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="83"/>
+        <location filename="../settingsdialog.cpp" line="84"/>
         <source>Toggle fullscreen</source>
         <translation>Schermvullende weergave aan/uit</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="87"/>
+        <location filename="../settingsdialog.cpp" line="88"/>
         <source>Zoom in and out</source>
         <translation>In-/Uitzoomen</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="88"/>
+        <location filename="../settingsdialog.cpp" line="89"/>
         <source>View next or previous item</source>
         <translation>Ga naar volgende of vorige item</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="92"/>
+        <location filename="../settingsdialog.cpp" line="93"/>
         <source>Auto size</source>
         <translation>Automatische grootte</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="93"/>
+        <location filename="../settingsdialog.cpp" line="94"/>
         <source>Maximized</source>
         <translation>Gemaximaliseerd</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="94"/>
+        <location filename="../settingsdialog.cpp" line="95"/>
         <source>Windowed</source>
         <translation>Venster</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="98"/>
+        <location filename="../settingsdialog.cpp" line="99"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
         <translation>Rond (geheel getal)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="99"/>
+        <location filename="../settingsdialog.cpp" line="100"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
         <translation>Keil (geheel getal)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="100"/>
+        <location filename="../settingsdialog.cpp" line="101"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
         <translation>Grond (geheel getal)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="101"/>
+        <location filename="../settingsdialog.cpp" line="102"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
         <translation>Systeeminstelling (fractionele schaal)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="124"/>
+        <location filename="../settingsdialog.cpp" line="125"/>
         <source>Stay on top when start-up</source>
         <translation>Automatisch altijd bovenop</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="125"/>
+        <location filename="../settingsdialog.cpp" line="126"/>
         <source>Use built-in close window animation</source>
         <translation>Meegeleverde animatie voor venster sluiten gebruiken</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="126"/>
+        <location filename="../settingsdialog.cpp" line="127"/>
+        <source>Show title bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="128"/>
         <source>Use light-color checkerboard</source>
         <translation>Licht schaakbordpatroon gebruiken</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="127"/>
+        <location filename="../settingsdialog.cpp" line="129"/>
         <source>Loop the loaded gallery</source>
         <translation>Gekozen galerij herhalen</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="128"/>
+        <location filename="../settingsdialog.cpp" line="130"/>
         <source>Auto long image mode</source>
         <translation>Automatische langeafbeeldingsmodus</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="129"/>
+        <location filename="../settingsdialog.cpp" line="131"/>
         <source>Limit SVG support to SVG Tiny 1.2</source>
         <translation>Svg-ondersteuning beperken tot SVG Tiny 1.2</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="130"/>
+        <location filename="../settingsdialog.cpp" line="132"/>
         <source>Double-click behavior</source>
         <translation>Dubbelklikgedrag</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="131"/>
+        <location filename="../settingsdialog.cpp" line="133"/>
         <source>Mouse wheel behavior</source>
         <translation>Scrollwielgedrag</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="132"/>
+        <location filename="../settingsdialog.cpp" line="134"/>
         <source>Default window size</source>
         <translation>Standaard vensterafmetingen</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="133"/>
+        <location filename="../settingsdialog.cpp" line="135"/>
         <source>HiDPI scale factor rounding policy</source>
         <translation>HiDPI-schaalfactor - afrondbeleid</translation>
     </message>

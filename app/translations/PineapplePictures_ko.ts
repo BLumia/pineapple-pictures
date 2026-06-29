@@ -174,7 +174,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../mainwindow.cpp" line="293"/>
+        <location filename="../mainwindow.cpp" line="294"/>
         <location filename="../graphicsscene.cpp" line="102"/>
         <source>Drag image here</source>
         <translation>이미지를 여기로 끌기</translation>
@@ -210,71 +210,71 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="191"/>
-        <location filename="../mainwindow.cpp" line="568"/>
+        <location filename="../mainwindow.cpp" line="192"/>
+        <location filename="../mainwindow.cpp" line="569"/>
         <source>File url list is empty</source>
         <translation>파일 URL 목록이 비어 있습니다</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="462"/>
+        <location filename="../mainwindow.cpp" line="463"/>
         <source>&amp;Copy</source>
         <translation>복사(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="576"/>
+        <location filename="../mainwindow.cpp" line="577"/>
         <source>Image data is invalid</source>
         <translation>이미지 데이터가 잘못되었습니다</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="583"/>
+        <location filename="../mainwindow.cpp" line="584"/>
         <source>Not supported mimedata: %1</source>
         <translation>지원되지 않는 mimedata: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="710"/>
-        <location filename="../mainwindow.cpp" line="727"/>
-        <location filename="../mainwindow.cpp" line="734"/>
-        <location filename="../mainwindow.cpp" line="764"/>
+        <location filename="../mainwindow.cpp" line="716"/>
+        <location filename="../mainwindow.cpp" line="733"/>
+        <location filename="../mainwindow.cpp" line="740"/>
+        <location filename="../mainwindow.cpp" line="770"/>
         <source>Save As</source>
         <translation>다른 이름으로 저장</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="710"/>
+        <location filename="../mainwindow.cpp" line="716"/>
         <source>No image is currently open.</source>
         <translation>현재 열려 있는 이미지가 없습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="722"/>
+        <location filename="../mainwindow.cpp" line="728"/>
         <source>%1 Image (*.%2)</source>
         <translation>%1 이미지 (*.%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="728"/>
+        <location filename="../mainwindow.cpp" line="734"/>
         <source>No supported image formats are available.</source>
         <translation>지원되는 이미지 형식을 사용할 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="765"/>
+        <location filename="../mainwindow.cpp" line="771"/>
         <source>Failed to save image: %1</source>
         <translation>이미지 저장 실패: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="854"/>
+        <location filename="../mainwindow.cpp" line="860"/>
         <source>Image From Clipboard</source>
         <translation>클립보드에서 이미지</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="872"/>
+        <location filename="../mainwindow.cpp" line="878"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
         <translation>&quot;%1&quot;을 휴지통으로 옮기시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="876"/>
+        <location filename="../mainwindow.cpp" line="882"/>
         <source>Failed to move file to trash</source>
         <translation>파일을 휴지통으로 이동하지 못했습니다</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="877"/>
+        <location filename="../mainwindow.cpp" line="883"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
         <translation>휴지통으로 이동하지 못했습니다. 파일 권한 문제, 파일 시스템 제한 또는 플랫폼 제한으로 인해 발생할 수 있습니다.</translation>
     </message>
@@ -403,7 +403,7 @@
         <translation>다음 이미지</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="871"/>
+        <location filename="../mainwindow.cpp" line="877"/>
         <location filename="../actionmanager.cpp" line="111"/>
         <source>Move to Trash</source>
         <translation>휴지통으로 이동</translation>
@@ -761,151 +761,156 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="33"/>
+        <location filename="../settingsdialog.cpp" line="34"/>
         <source>Settings</source>
         <translation>설정</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="41"/>
+        <location filename="../settingsdialog.cpp" line="42"/>
         <source>Options</source>
         <translation>옵션</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="53"/>
+        <location filename="../settingsdialog.cpp" line="54"/>
         <source>Shortcuts</source>
         <translation>단축키</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="63"/>
+        <location filename="../settingsdialog.cpp" line="64"/>
         <source>Editing shortcuts for action &quot;%1&quot;:</source>
         <translation>작업 &quot;%1&quot;의 단축키 편집:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="72"/>
+        <location filename="../settingsdialog.cpp" line="73"/>
         <source>Failed to set shortcuts</source>
         <translation>단축키 설정 실패</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="73"/>
+        <location filename="../settingsdialog.cpp" line="74"/>
         <source>Please check if shortcuts are duplicated with existing shortcuts.</source>
         <translation>단축키가 기존 단축키와 중복되는지 확인해 주세요.</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="80"/>
+        <location filename="../settingsdialog.cpp" line="81"/>
         <source>Do nothing</source>
         <translation>아무것도 하지 않음</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="81"/>
+        <location filename="../settingsdialog.cpp" line="82"/>
         <source>Close the window</source>
         <translation>창 닫기</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="82"/>
+        <location filename="../settingsdialog.cpp" line="83"/>
         <source>Toggle maximize</source>
         <translation>최대화 전환</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="83"/>
+        <location filename="../settingsdialog.cpp" line="84"/>
         <source>Toggle fullscreen</source>
         <translation>전체 화면 전환</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="87"/>
+        <location filename="../settingsdialog.cpp" line="88"/>
         <source>Zoom in and out</source>
         <translation>확대 및 축소</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="88"/>
+        <location filename="../settingsdialog.cpp" line="89"/>
         <source>View next or previous item</source>
         <translation>다음 또는 이전 항목 보기</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="92"/>
+        <location filename="../settingsdialog.cpp" line="93"/>
         <source>Auto size</source>
         <translation>자동 크기</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="93"/>
+        <location filename="../settingsdialog.cpp" line="94"/>
         <source>Maximized</source>
         <translation>최대화</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="94"/>
+        <location filename="../settingsdialog.cpp" line="95"/>
         <source>Windowed</source>
         <translation>창 모드</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="98"/>
+        <location filename="../settingsdialog.cpp" line="99"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
         <translation>반올림 (정수 스케일링)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="99"/>
+        <location filename="../settingsdialog.cpp" line="100"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
         <translation>올림 (정수 스케일링)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="100"/>
+        <location filename="../settingsdialog.cpp" line="101"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
         <translation>내림 (정수 스케일링)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="101"/>
+        <location filename="../settingsdialog.cpp" line="102"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
         <translation>시스템 따르기 (소수점 스케일링)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="124"/>
+        <location filename="../settingsdialog.cpp" line="125"/>
         <source>Stay on top when start-up</source>
         <translation>시작 시 맨 위에 유지</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="125"/>
+        <location filename="../settingsdialog.cpp" line="126"/>
         <source>Use built-in close window animation</source>
         <translation>내장된 창 닫기 애니메이션 사용</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="126"/>
+        <location filename="../settingsdialog.cpp" line="127"/>
+        <source>Show title bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="128"/>
         <source>Use light-color checkerboard</source>
         <translation>밝은 색상의 바둑판 사용</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="127"/>
+        <location filename="../settingsdialog.cpp" line="129"/>
         <source>Loop the loaded gallery</source>
         <translation>로드된 갤러리 반복</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="128"/>
+        <location filename="../settingsdialog.cpp" line="130"/>
         <source>Auto long image mode</source>
         <translation>자동 긴 이미지 모드</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="129"/>
+        <location filename="../settingsdialog.cpp" line="131"/>
         <source>Limit SVG support to SVG Tiny 1.2</source>
         <translation>SVG 지원을 SVG Tiny 1.2로 제한</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="130"/>
+        <location filename="../settingsdialog.cpp" line="132"/>
         <source>Double-click behavior</source>
         <translation>더블 클릭 동작</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="131"/>
+        <location filename="../settingsdialog.cpp" line="133"/>
         <source>Mouse wheel behavior</source>
         <translation>마우스 휠 동작</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="132"/>
+        <location filename="../settingsdialog.cpp" line="134"/>
         <source>Default window size</source>
         <translation>기본 창 크기</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="133"/>
+        <location filename="../settingsdialog.cpp" line="135"/>
         <source>HiDPI scale factor rounding policy</source>
         <translation>HiDPI 배율 반올림 정책</translation>
     </message>
