@@ -32,6 +32,7 @@ SOURCES += \
     app/mainwindow.cpp \
     app/graphicsview.cpp \
     app/bottombuttongroup.cpp \
+    app/titlebar.cpp \
     app/graphicsscene.cpp \
     app/navigatorview.cpp \
     app/opacityhelper.cpp \
@@ -52,6 +53,7 @@ HEADERS += \
     app/mainwindow.h \
     app/graphicsview.h \
     app/bottombuttongroup.h \
+    app/titlebar.h \
     app/graphicsscene.h \
     app/navigatorview.h \
     app/opacityhelper.h \
