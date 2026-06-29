@@ -11,6 +11,22 @@
 #include <QVBoxLayout>
 #include <QWindow>
 
+#ifdef Q_OS_WIN
+#include "windows.h"
+void fixWindowStyle(QWidget * that)
+{
+    HWND hwnd = (HWND)that->winId();
+
+    LONG style = GetWindowLong(hwnd, GWL_STYLE);
+    style |= WS_THICKFRAME | WS_CAPTION | WS_MAXIMIZEBOX | WS_MINIMIZEBOX | WS_SYSMENU;
+    SetWindowLong(hwnd, GWL_STYLE, style);
+
+    SetWindowPos(hwnd, nullptr, 0, 0, 0, 0,
+                 SWP_FRAMECHANGED | SWP_NOMOVE | SWP_NOSIZE |
+                     SWP_NOZORDER | SWP_NOACTIVATE);
+}
+#endif
+
 FramelessWindow::FramelessWindow(QWidget *parent)
     : QWidget(parent)
     , m_centralLayout(new QVBoxLayout(this))
@@ -39,6 +55,14 @@ void FramelessWindow::setCentralWidget(QWidget *widget)
 void FramelessWindow::installResizeCapture(QObject* widget)
 {
     widget->installEventFilter(this);
+}
+
+void FramelessWindow::showEvent(QShowEvent *event)
+{
+#ifdef Q_OS_WIN
+    fixWindowStyle(this);
+#endif // Q_OS_WIN
+    return QWidget::showEvent(event);
 }
 
 bool FramelessWindow::eventFilter(QObject* o, QEvent* e)

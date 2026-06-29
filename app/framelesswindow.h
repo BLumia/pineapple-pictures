@@ -20,6 +20,9 @@ public:
     void setCentralWidget(QWidget * widget);
     void installResizeCapture(QObject* widget);
 
+protected slots:
+    void showEvent(QShowEvent *event) override;
+
 protected:
     bool eventFilter(QObject *o, QEvent *e) override;
     bool mouseHover(QHoverEvent* event, QWidget* wg);
