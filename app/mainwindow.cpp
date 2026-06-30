@@ -292,6 +292,7 @@ void MainWindow::galleryCurrent(bool showLoadImageHintWhenEmpty, bool reloadImag
         setWindowTitle(m_pm->urlByIndex(index).fileName());
     } else if (showLoadImageHintWhenEmpty && m_pm->totalCount() <= 0) {
         m_graphicsView->showText(QCoreApplication::translate("GraphicsScene", "Drag image here"));
+        setWindowTitle(QString());
     }
 
     updateGalleryButtonsVisibility();
