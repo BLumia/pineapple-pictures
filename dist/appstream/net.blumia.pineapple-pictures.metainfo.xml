@@ -53,6 +53,7 @@
   <url type="bugtracker">https://github.com/BLumia/pineapple-pictures/issues</url>
   <url type="donation">https://ko-fi.com/blumia</url>
   <url type="translate">https://hosted.weblate.org/projects/pineapple-pictures/</url>
+  <url type="vcs-browser">https://github.com/BLumia/pineapple-pictures</url>
   <provides>
     <binary>ppic</binary>
   </provides>
