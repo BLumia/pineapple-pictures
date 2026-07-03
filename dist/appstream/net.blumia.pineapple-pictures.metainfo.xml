@@ -102,6 +102,26 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" version="1.5.0" date="2026-07-04T00:00:00Z">
+      <description>
+        <p>This release adds the following features:</p>
+        <ul>
+          <li>Introduced an optional titlebar that display file name and allows drag and double-click to move and toggle maximize state</li>
+          <li>Windows: Now the application will use the system's built-in animation for open window animation</li>
+        </ul>
+        <p>This release fixes the following bug:</p>
+        <ul>
+          <li>Show empty url list should also reset window title to blank</li>
+        </ul>
+        <p>This release includes the following changes:</p>
+        <ul>
+          <li>Update translations</li>
+          <li>Add vcs-browser link to AppStream metadata</li>
+        </ul>
+        <p>With contributions from:</p>
+        <p>Heimen Stoffels (vistaus), VenusGirl (VenusGirl)</p>
+      </description>
+    </release>
     <release type="stable" version="1.4.1" date="2026-04-05T00:00:00Z">
       <description>
         <p>This release includes the following changes:</p>

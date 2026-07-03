@@ -1,3 +1,21 @@
+Version 1.5.0
+~~~~~~~~~~~~~
+Released: 2026-07-04
+
+Features:
+ * Introduced an optional titlebar that display file name and allows drag and double-click to move and toggle maximize state
+ * Windows: Now the application will use the system's built-in animation for open window animation
+
+Bugfixes:
+ * Show empty url list should also reset window title to blank
+
+Miscellaneous:
+ * Update translations
+ * Add vcs-browser link to AppStream metadata
+
+Contributors:
+ Heimen Stoffels (vistaus), VenusGirl (VenusGirl)
+
 Version 1.4.1
 ~~~~~~~~~~~~~
 Released: 2026-04-05
