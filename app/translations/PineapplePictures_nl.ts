@@ -876,7 +876,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="127"/>
         <source>Show title bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Titelbalk tonen</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="128"/>
