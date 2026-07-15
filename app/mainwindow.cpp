@@ -238,6 +238,13 @@ void MainWindow::adjustWindowSizeBySceneRect()
             // just call resetScale() here to ensure the thing is no longer scaled.
             m_graphicsView->resetScale();
             centerWindow();
+
+            // to avoid the window appearing maximized while not being actually maximized
+            // which is common when viewing screenshots of the same screen size
+            if (finalSize == screenSize) {
+                showMaximized();
+            }
+            
         } else {
             // toggle maximum
             showMaximized();
