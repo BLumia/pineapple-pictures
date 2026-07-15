@@ -129,8 +129,7 @@ void TitleBar::mouseMoveEvent(QMouseEvent *event)
         }
     }
 
-    if (event->buttons() & Qt::LeftButton && m_dragPending
-        && !window()->isMaximized() && !window()->isFullScreen()) {
+    if (event->buttons() & Qt::LeftButton && m_dragPending && !window()->isFullScreen()) {
         if (QWindow *wh = window()->windowHandle()) {
             if (!wh->startSystemMove())
                 window()->move(event->globalPosition().toPoint() - m_moveStartPos);
