@@ -346,7 +346,12 @@ void MainWindow::leaveEvent(QEvent *event)
 
 void MainWindow::mousePressEvent(QMouseEvent *event)
 {
-    if (event->buttons() & Qt::LeftButton) {
+    bool optionalMaximized = false;
+    #if defined(Q_OS_WIN)
+        optionalMaximized = isMaximized();
+    #endif
+
+    if (event->buttons() & Qt::LeftButton && !optionalMaximized && !isFullScreen()) {
         m_clickedOnWindow = true;
         m_oldMousePos = event->pos();
 //        qDebug() << m_oldMousePos << m_graphicsView->transform().m11()
@@ -359,7 +364,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 
 void MainWindow::mouseMoveEvent(QMouseEvent *event)
 {
-    if (event->buttons() & Qt::LeftButton && m_clickedOnWindow && !isFullScreen()) {
+    if (event->buttons() & Qt::LeftButton && m_clickedOnWindow) {
         if (!window()->windowHandle()->startSystemMove()) {
             move(event->globalPosition().toPoint() - m_oldMousePos);
         }
