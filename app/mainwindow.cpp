@@ -229,15 +229,22 @@ void MainWindow::adjustWindowSizeBySceneRect()
             // we can show the picture by increase the window size.
             QSize finalSize = (screenSize.expandedTo(sceneSizeWithMargins) == screenSize) ?
                               sceneSizeWithMargins : screenSize;
-            // We have a very reasonable sizeHint() value ;P
-            this->resize(finalSize.expandedTo(this->sizeHint()));
+
+            // to avoid the window appearing maximized while not being actually maximized
+            // which is common when viewing screenshots of the same screen size
+            if (finalSize == screenSize) {
+                showMaximized();
+            } else {
+                // We have a very reasonable sizeHint() value ;P
+                this->resize(finalSize.expandedTo(this->sizeHint()));
+                centerWindow();
+            }
 
             // We're sure the window can display the whole thing with 1:1 scale.
             // The old window size may cause fitInView call from resize() and the
             // above resize() call won't reset the scale back to 1:1, so we
             // just call resetScale() here to ensure the thing is no longer scaled.
             m_graphicsView->resetScale();
-            centerWindow();
         } else {
             // toggle maximum
             showMaximized();
