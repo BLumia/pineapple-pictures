@@ -360,10 +360,6 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 void MainWindow::mouseMoveEvent(QMouseEvent *event)
 {
     if (event->buttons() & Qt::LeftButton && m_clickedOnWindow && !isFullScreen()) {
-        if (isMaximized()){
-            window()->showNormal();
-        }
-        
         if (!window()->windowHandle()->startSystemMove()) {
             move(event->globalPosition().toPoint() - m_oldMousePos);
         }
