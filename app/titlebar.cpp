@@ -115,7 +115,6 @@ void TitleBar::mousePressEvent(QMouseEvent *event)
     }
 
     m_dragPending = true;
-    m_moveStartPos = event->pos();
     event->accept();
 }
 
@@ -129,17 +128,18 @@ void TitleBar::mouseMoveEvent(QMouseEvent *event)
         }
     }
 
-    bool optionalMaximized = false;
-    #if defined(Q_OS_WIN)
-        optionalMaximized = isMaximized();
-    #endif
+#if defined(Q_OS_WIN)
+    const bool shouldAcceptDrag = !window()->isMaximized() && !window()->isFullScreen();
+#else
+    const bool shouldAcceptDrag = !window()->isFullScreen();
+#endif
 
-    if (event->buttons() & Qt::LeftButton && m_dragPending
-        && !window()->isFullScreen() && !optionalMaximized) {
-        
+    if (event->buttons() & Qt::LeftButton && m_dragPending && shouldAcceptDrag) {
+
         if (QWindow *wh = window()->windowHandle()) {
-            if (!wh->startSystemMove())
-                window()->move(event->globalPosition().toPoint() - m_moveStartPos);
+            if (wh->startSystemMove()) {
+                m_dragPending = false;
+            }
         }
         event->accept();
     }

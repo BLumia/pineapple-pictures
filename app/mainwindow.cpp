@@ -353,16 +353,14 @@ void MainWindow::leaveEvent(QEvent *event)
 
 void MainWindow::mousePressEvent(QMouseEvent *event)
 {
-    bool optionalMaximized = false;
-    #if defined(Q_OS_WIN)
-        optionalMaximized = isMaximized();
-    #endif
+#if defined(Q_OS_WIN)
+    const bool shouldAcceptDrag = !isMaximized() && !isFullScreen();
+#else
+    const bool shouldAcceptDrag = !isFullScreen();
+#endif
 
-    if (event->buttons() & Qt::LeftButton && !optionalMaximized && !isFullScreen()) {
+    if (event->buttons() & Qt::LeftButton && shouldAcceptDrag) {
         m_clickedOnWindow = true;
-        m_oldMousePos = event->pos();
-//        qDebug() << m_oldMousePos << m_graphicsView->transform().m11()
-//                 << m_graphicsView->transform().m22() << m_graphicsView->matrix().m12();
         event->accept();
     }
 
@@ -372,8 +370,8 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 void MainWindow::mouseMoveEvent(QMouseEvent *event)
 {
     if (event->buttons() & Qt::LeftButton && m_clickedOnWindow) {
-        if (!window()->windowHandle()->startSystemMove()) {
-            move(event->globalPosition().toPoint() - m_oldMousePos);
+        if (window()->windowHandle()->startSystemMove()) {
+            m_clickedOnWindow = false;
         }
         event->accept();
     }

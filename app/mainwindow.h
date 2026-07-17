@@ -119,7 +119,6 @@ private:
     ActionManager *m_am;
     PlaylistManager *m_pm;
 
-    QPoint m_oldMousePos;
     QPropertyAnimation *m_fadeOutAnimation;
     QPropertyAnimation *m_floatUpAnimation;
     QParallelAnimationGroup *m_exitAnimationGroup;

@@ -54,7 +54,6 @@ private:
     bool m_closeHovered = false;
     bool m_closePressed = false;
     bool m_dragPending = false;
-    QPoint m_moveStartPos;
 };
 
 #endif // TITLEBAR_H
