@@ -60,6 +60,11 @@ bool Settings::showTitleBar() const
     return m_qsettings->value("show_title_bar", true).toBool();
 }
 
+bool Settings::showBirdEyeView() const
+{
+    return m_qsettings->value("show_bird_eye_view", true).toBool();
+}
+
 bool Settings::useLightCheckerboard() const
 {
     return m_qsettings->value("use_light_checkerboard", false).toBool();
@@ -131,6 +136,12 @@ void Settings::setUseBuiltInCloseAnimation(bool on)
 void Settings::setShowTitleBar(bool on)
 {
     m_qsettings->setValue("show_title_bar", on);
+    m_qsettings->sync();
+}
+
+void Settings::setShowBirdEyeView(bool on)
+{
+    m_qsettings->setValue("show_bird_eye_view", on);
     m_qsettings->sync();
 }
 
