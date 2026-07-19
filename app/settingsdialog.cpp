@@ -126,7 +126,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     settingsForm->addRow(tr("Stay on top when start-up"), m_stayOnTop);
     settingsForm->addRow(tr("Use built-in close window animation"), m_useBuiltInCloseAnimation);
     settingsForm->addRow(tr("Show title bar"), m_showTitleBar);
-    settingsForm->addRow(tr("Show bird-eye view"), m_showBirdEyeView);
+    settingsForm->addRow(tr("Show bird's-eye view"), m_showBirdEyeView);
     settingsForm->addRow(tr("Use light-color checkerboard"), m_useLightCheckerboard);
     settingsForm->addRow(tr("Loop the loaded gallery"), m_loopGallery);
     settingsForm->addRow(tr("Auto long image mode"), m_autoLongImageMode);
