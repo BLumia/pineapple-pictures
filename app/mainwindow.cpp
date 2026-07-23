@@ -93,10 +93,14 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(m_graphicsView, &GraphicsView::navigatorViewRequired,
             this, [this](bool required, const QTransform & tf){
-        m_gv->setTransform(GraphicsView::resetScale(tf));
-        m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
-        m_gv->setVisible(required);
-        m_gv->updateMainViewportRegion();
+        if (Settings::instance()->showBirdEyeView()){
+            m_gv->setTransform(GraphicsView::resetScale(tf));
+            m_gv->fitInView(m_gv->sceneRect(), Qt::KeepAspectRatio);
+            m_gv->setVisible(required);
+            m_gv->updateMainViewportRegion();
+        } else {
+             m_gv->setVisible(false);
+        }
     });
 
     connect(m_graphicsView, &GraphicsView::viewportRectChanged,
