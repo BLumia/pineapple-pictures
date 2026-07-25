@@ -55,7 +55,8 @@ void TitleBar::setCloseButtonOnly(bool only)
 QRect TitleBar::closeButtonRect() const
 {
     const int btnWidth = closeButtonWidth();
-    return QRect(width() - btnWidth, 0, btnWidth, height());
+    
+    return QRect(isRightToLeft() ? 0 : width() - btnWidth, 0, btnWidth, height());
 }
 
 void TitleBar::paintEvent(QPaintEvent *event)
@@ -72,14 +73,21 @@ void TitleBar::paintEvent(QPaintEvent *event)
     const QRect closeRect = closeButtonRect();
 
     // Title text (leave room for the close button).
-    QRect labelRect = rect().adjusted(8, 0, 0, 0);
-    if (m_closeButtonVisible)
-        labelRect.setRight(closeRect.left() - 2);
+    QRect labelRect = rect();
+    if (isRightToLeft()) {
+        labelRect.adjust(0, 0, -8, 0);
+        if (m_closeButtonVisible)
+            labelRect.setLeft(closeRect.right() + 2);
+    } else {
+        labelRect.adjust(8, 0, 0, 0);
+        if (m_closeButtonVisible)
+            labelRect.setRight(closeRect.left() - 2);
+    }
 
     const QString title = window() ? window()->windowTitle() : QString();
     if (!m_closeButtonOnly && !title.isEmpty()) {
         const QString elided = painter.fontMetrics().elidedText(title, Qt::ElideRight, labelRect.width());
-        const int flags = Qt::AlignLeft | Qt::AlignVCenter | Qt::TextSingleLine;
+        const int flags = Qt::AlignLeading | Qt::AlignVCenter | Qt::TextSingleLine;
         painter.setPen(Qt::black);
         painter.drawText(labelRect.adjusted(1, 1, 1, 1), flags, elided);
         painter.setPen(Qt::white);
