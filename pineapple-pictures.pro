@@ -71,14 +71,23 @@ HEADERS += \
 TRANSLATIONS = \
     app/translations/PineapplePictures_en.ts \
     app/translations/PineapplePictures_zh_CN.ts \
+    app/translations/PineapplePictures_ar.ts \
     app/translations/PineapplePictures_de.ts \
     app/translations/PineapplePictures_es.ts \
     app/translations/PineapplePictures_fr.ts \
+    app/translations/PineapplePictures_id.ts \
+    app/translations/PineapplePictures_it.ts \
+    app/translations/PineapplePictures_ja.ts \
+    app/translations/PineapplePictures_ko.ts \
     app/translations/PineapplePictures_nb_NO.ts \
     app/translations/PineapplePictures_nl.ts \
     app/translations/PineapplePictures_ru.ts \
     app/translations/PineapplePictures_si.ts \
-    app/translations/PineapplePictures_id.ts
+    app/translations/PineapplePictures_sl.ts \
+    app/translations/PineapplePictures_ta.ts \
+    app/translations/PineapplePictures_tr.ts \
+    app/translations/PineapplePictures_uk.ts \
+    app/translations/PineapplePictures_vi.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -174,7 +174,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../mainwindow.cpp" line="294"/>
+        <location filename="../mainwindow.cpp" line="305"/>
         <location filename="../graphicsscene.cpp" line="102"/>
         <source>Drag image here</source>
         <translation>اسحب صورة هنا</translation>
@@ -198,71 +198,71 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="192"/>
-        <location filename="../mainwindow.cpp" line="569"/>
+        <location filename="../mainwindow.cpp" line="196"/>
+        <location filename="../mainwindow.cpp" line="584"/>
         <source>File url list is empty</source>
         <translation>قائمة عناوين الملفات فارغة</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="463"/>
+        <location filename="../mainwindow.cpp" line="478"/>
         <source>&amp;Copy</source>
         <translation>&amp;نسخ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="577"/>
+        <location filename="../mainwindow.cpp" line="592"/>
         <source>Image data is invalid</source>
         <translation>بيانات الصورة غير صالحة</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="584"/>
+        <location filename="../mainwindow.cpp" line="599"/>
         <source>Not supported mimedata: %1</source>
         <translation>بيانات نوع الوسيط غير مدعومة: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="716"/>
-        <location filename="../mainwindow.cpp" line="733"/>
-        <location filename="../mainwindow.cpp" line="740"/>
-        <location filename="../mainwindow.cpp" line="770"/>
+        <location filename="../mainwindow.cpp" line="731"/>
+        <location filename="../mainwindow.cpp" line="748"/>
+        <location filename="../mainwindow.cpp" line="755"/>
+        <location filename="../mainwindow.cpp" line="785"/>
         <source>Save As</source>
         <translation>حفظ كـ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="716"/>
+        <location filename="../mainwindow.cpp" line="731"/>
         <source>No image is currently open.</source>
         <translation>لا صورة مفتوحة حاليًا.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="728"/>
+        <location filename="../mainwindow.cpp" line="743"/>
         <source>%1 Image (*.%2)</source>
         <translation>صورة %1 (*.%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="734"/>
+        <location filename="../mainwindow.cpp" line="749"/>
         <source>No supported image formats are available.</source>
         <translation>لا تنسيقات صور مدعومة متوفرة.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="771"/>
+        <location filename="../mainwindow.cpp" line="786"/>
         <source>Failed to save image: %1</source>
         <translation>فشل في حفظ الصورة: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="860"/>
+        <location filename="../mainwindow.cpp" line="875"/>
         <source>Image From Clipboard</source>
         <translation>صورة من الحافظة</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="878"/>
+        <location filename="../mainwindow.cpp" line="893"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
         <translation>هل أنت متأكد أنك تريد نقل &quot;%1&quot; إلى سلة المهملات؟</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="882"/>
+        <location filename="../mainwindow.cpp" line="897"/>
         <source>Failed to move file to trash</source>
         <translation>فشل النقل إلى سلة المهملات</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="883"/>
+        <location filename="../mainwindow.cpp" line="898"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
         <translation>فشل النقل إلى سلة المهملات، قد يكون هذا بسبب مشكلة في أذونات الملف، قيود في نظام الملفات، أو قيود في نظام التشغيل.</translation>
     </message>
@@ -391,7 +391,7 @@
         <translation>الصورة التالية</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="877"/>
+        <location filename="../mainwindow.cpp" line="892"/>
         <location filename="../actionmanager.cpp" line="111"/>
         <source>Move to Trash</source>
         <translation>النقل إلى سلة المهملات</translation>
@@ -749,156 +749,161 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="34"/>
+        <location filename="../settingsdialog.cpp" line="35"/>
         <source>Settings</source>
         <translation>الإعدادات</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="42"/>
+        <location filename="../settingsdialog.cpp" line="43"/>
         <source>Options</source>
         <translation>الخيارات</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="54"/>
+        <location filename="../settingsdialog.cpp" line="55"/>
         <source>Shortcuts</source>
         <translation>الاختصارات</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="64"/>
+        <location filename="../settingsdialog.cpp" line="65"/>
         <source>Editing shortcuts for action &quot;%1&quot;:</source>
         <translation>تعديل الاختصارات للإجراء &quot;%1&quot;:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="73"/>
+        <location filename="../settingsdialog.cpp" line="74"/>
         <source>Failed to set shortcuts</source>
         <translation>فشل تعيين الاختصارات</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="74"/>
+        <location filename="../settingsdialog.cpp" line="75"/>
         <source>Please check if shortcuts are duplicated with existing shortcuts.</source>
         <translation>الرجاء التأكد من أن الاختصارات ليست مكررة بالفعل.</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="81"/>
+        <location filename="../settingsdialog.cpp" line="82"/>
         <source>Do nothing</source>
         <translation>فعل لاشيء</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="82"/>
+        <location filename="../settingsdialog.cpp" line="83"/>
         <source>Close the window</source>
         <translation>إغلاق النافذة</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="83"/>
+        <location filename="../settingsdialog.cpp" line="84"/>
         <source>Toggle maximize</source>
         <translation>تبديل تكبير النافذة</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="84"/>
+        <location filename="../settingsdialog.cpp" line="85"/>
         <source>Toggle fullscreen</source>
         <translation>تبديل ملء الشاشة</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="88"/>
+        <location filename="../settingsdialog.cpp" line="89"/>
         <source>Zoom in and out</source>
         <translation>التكبير والتصغير</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="89"/>
+        <location filename="../settingsdialog.cpp" line="90"/>
         <source>View next or previous item</source>
         <translation>عرض العنصر الآتي أو السابق</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="93"/>
+        <location filename="../settingsdialog.cpp" line="94"/>
         <source>Auto size</source>
         <translation>حجم تلقائي</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="94"/>
+        <location filename="../settingsdialog.cpp" line="95"/>
         <source>Maximized</source>
         <translation>مكبر</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="95"/>
+        <location filename="../settingsdialog.cpp" line="96"/>
         <source>Windowed</source>
         <translation>في نافذة</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="99"/>
+        <location filename="../settingsdialog.cpp" line="100"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
         <translation>تقريب (تحجيم صحيح)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="100"/>
+        <location filename="../settingsdialog.cpp" line="101"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
         <translation>تقريب للأعلى (تحجيم صحيح)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="101"/>
+        <location filename="../settingsdialog.cpp" line="102"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
         <translation>تقريب للأسفل (تحجيم صحيح)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="102"/>
+        <location filename="../settingsdialog.cpp" line="103"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
         <translation>إتباع النظام (تحجيم كسري)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="125"/>
+        <location filename="../settingsdialog.cpp" line="126"/>
         <source>Stay on top when start-up</source>
         <translation>البقاء فوق جميع النوافذ عند البدء</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="126"/>
+        <location filename="../settingsdialog.cpp" line="127"/>
         <source>Use built-in close window animation</source>
         <translation>استخدام تأثير غلق النافذة الخاص</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="127"/>
+        <location filename="../settingsdialog.cpp" line="128"/>
         <source>Show title bar</source>
         <translation>إظهار شريط العنوان</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="128"/>
+        <location filename="../settingsdialog.cpp" line="129"/>
+        <source>Show bird&apos;s-eye view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="130"/>
         <source>Use light-color checkerboard</source>
         <translation>استخدام شبكة فاتحة</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="129"/>
+        <location filename="../settingsdialog.cpp" line="131"/>
         <source>Loop the loaded gallery</source>
         <translation>تكرار القائمة المحملة</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="130"/>
+        <location filename="../settingsdialog.cpp" line="132"/>
         <source>Auto long image mode</source>
         <translation>وضع الصور الطويلة تلقائيًا</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="131"/>
+        <location filename="../settingsdialog.cpp" line="133"/>
         <source>Limit SVG support to SVG Tiny 1.2</source>
         <translation>حد دعم تنسيق SVG إلي نسخة Tiny 1.2</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="132"/>
+        <location filename="../settingsdialog.cpp" line="134"/>
         <source>Double-click behavior</source>
         <translation>السلوك عند النقر مرتين</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="133"/>
+        <location filename="../settingsdialog.cpp" line="135"/>
         <source>Mouse wheel behavior</source>
         <translation>السلوك عند تحريك عجلة الفأرة</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="134"/>
+        <location filename="../settingsdialog.cpp" line="136"/>
         <source>Default window size</source>
         <translation>حجم النافذة الافتراضي</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="135"/>
+        <location filename="../settingsdialog.cpp" line="137"/>
         <source>HiDPI scale factor rounding policy</source>
         <translation>سياسة تقريب معامل حجم الدقة العالية</translation>
     </message>
