@@ -174,7 +174,7 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../mainwindow.cpp" line="294"/>
+        <location filename="../mainwindow.cpp" line="305"/>
         <location filename="../graphicsscene.cpp" line="102"/>
         <source>Drag image here</source>
         <translation>Povlecite sliko sem</translation>
@@ -198,71 +198,71 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="192"/>
-        <location filename="../mainwindow.cpp" line="569"/>
+        <location filename="../mainwindow.cpp" line="196"/>
+        <location filename="../mainwindow.cpp" line="584"/>
         <source>File url list is empty</source>
         <translation>Seznam url-jev datotek je prazen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="463"/>
+        <location filename="../mainwindow.cpp" line="478"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopiraj</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="577"/>
+        <location filename="../mainwindow.cpp" line="592"/>
         <source>Image data is invalid</source>
         <translation>Podatki slike so neveljavni</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="584"/>
+        <location filename="../mainwindow.cpp" line="599"/>
         <source>Not supported mimedata: %1</source>
         <translation>Ni podprtih podatkov mime: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="716"/>
-        <location filename="../mainwindow.cpp" line="733"/>
-        <location filename="../mainwindow.cpp" line="740"/>
-        <location filename="../mainwindow.cpp" line="770"/>
+        <location filename="../mainwindow.cpp" line="731"/>
+        <location filename="../mainwindow.cpp" line="748"/>
+        <location filename="../mainwindow.cpp" line="755"/>
+        <location filename="../mainwindow.cpp" line="785"/>
         <source>Save As</source>
         <translation>Shrani kot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="716"/>
+        <location filename="../mainwindow.cpp" line="731"/>
         <source>No image is currently open.</source>
         <translation>Trenutno ni odprta nobena slika.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="728"/>
+        <location filename="../mainwindow.cpp" line="743"/>
         <source>%1 Image (*.%2)</source>
         <translation>Slika %1 (*.%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="734"/>
+        <location filename="../mainwindow.cpp" line="749"/>
         <source>No supported image formats are available.</source>
         <translation>Nobenih podprtih formatov slik ni na razpolago.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="771"/>
+        <location filename="../mainwindow.cpp" line="786"/>
         <source>Failed to save image: %1</source>
         <translation>Shranjevanje slike ni uspelo: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="860"/>
+        <location filename="../mainwindow.cpp" line="875"/>
         <source>Image From Clipboard</source>
         <translation>Slika iz odložišča</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="878"/>
+        <location filename="../mainwindow.cpp" line="893"/>
         <source>Are you sure you want to move &quot;%1&quot; to recycle bin?</source>
         <translation>Ali ste prepričani, da želite premakniti &quot;%1&quot; v koš?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="882"/>
+        <location filename="../mainwindow.cpp" line="897"/>
         <source>Failed to move file to trash</source>
         <translation>Datoteke ni bilo mogoče premakniti v koš</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="883"/>
+        <location filename="../mainwindow.cpp" line="898"/>
         <source>Move to trash failed, it might caused by file permission issue, file system limitation, or platform limitation.</source>
         <translation>Premik v koš ni uspel. Morda je vzrok težava z dovoljenji za datoteke, omejitev datotečnega sistema ali omejitev platforme.</translation>
     </message>
@@ -391,7 +391,7 @@
         <translation>Naslednja slika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="877"/>
+        <location filename="../mainwindow.cpp" line="892"/>
         <location filename="../actionmanager.cpp" line="111"/>
         <source>Move to Trash</source>
         <translation>Premakni v koš</translation>
@@ -749,156 +749,161 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../settingsdialog.cpp" line="34"/>
+        <location filename="../settingsdialog.cpp" line="35"/>
         <source>Settings</source>
         <translation>Nastavitve</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="42"/>
+        <location filename="../settingsdialog.cpp" line="43"/>
         <source>Options</source>
         <translation>Možnosti</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="54"/>
+        <location filename="../settingsdialog.cpp" line="55"/>
         <source>Shortcuts</source>
         <translation>Bližnjice</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="64"/>
+        <location filename="../settingsdialog.cpp" line="65"/>
         <source>Editing shortcuts for action &quot;%1&quot;:</source>
         <translation>Urejanje bližnjic za dejanje &quot;%1&quot;:</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="73"/>
+        <location filename="../settingsdialog.cpp" line="74"/>
         <source>Failed to set shortcuts</source>
         <translation>Nastavitev bližnjic ni uspela</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="74"/>
+        <location filename="../settingsdialog.cpp" line="75"/>
         <source>Please check if shortcuts are duplicated with existing shortcuts.</source>
         <translation>Preverite, ali so bližnjice podvojene z obstoječimi bližnjicami.</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="81"/>
+        <location filename="../settingsdialog.cpp" line="82"/>
         <source>Do nothing</source>
         <translation>Ne naredi ničesar</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="82"/>
+        <location filename="../settingsdialog.cpp" line="83"/>
         <source>Close the window</source>
         <translation>Zapri okno</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="83"/>
+        <location filename="../settingsdialog.cpp" line="84"/>
         <source>Toggle maximize</source>
         <translation>Preklopi maksimiranje</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="84"/>
+        <location filename="../settingsdialog.cpp" line="85"/>
         <source>Toggle fullscreen</source>
         <translation>Preklopi celozaslonski način</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="88"/>
+        <location filename="../settingsdialog.cpp" line="89"/>
         <source>Zoom in and out</source>
         <translation>Povečava in pomanjšava</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="89"/>
+        <location filename="../settingsdialog.cpp" line="90"/>
         <source>View next or previous item</source>
         <translation>Ogled naslednjega ali prejšnjega elementa</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="93"/>
+        <location filename="../settingsdialog.cpp" line="94"/>
         <source>Auto size</source>
         <translation>Samodejna velikost</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="94"/>
+        <location filename="../settingsdialog.cpp" line="95"/>
         <source>Maximized</source>
         <translation>Maksimizirano</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="95"/>
+        <location filename="../settingsdialog.cpp" line="96"/>
         <source>Windowed</source>
         <translation>Okenski način</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="99"/>
+        <location filename="../settingsdialog.cpp" line="100"/>
         <source>Round (Integer scaling)</source>
         <comment>This option means round up for .5 and above</comment>
         <translation>Zaokroženo (celoštevilsko skaliranje)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="100"/>
+        <location filename="../settingsdialog.cpp" line="101"/>
         <source>Ceil (Integer scaling)</source>
         <comment>This option means always round up</comment>
         <translation>Zaokroževanje navzgor (celoštevilsko skaliranje)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="101"/>
+        <location filename="../settingsdialog.cpp" line="102"/>
         <source>Floor (Integer scaling)</source>
         <comment>This option means always round down</comment>
         <translation>Zaokroževanje navzdol (celoštevilsko skaliranje)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="102"/>
+        <location filename="../settingsdialog.cpp" line="103"/>
         <source>Follow system (Fractional scaling)</source>
         <comment>This option means don&apos;t round</comment>
         <translation>Sledi sistemu (delno skaliranje)</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="125"/>
+        <location filename="../settingsdialog.cpp" line="126"/>
         <source>Stay on top when start-up</source>
         <translation>Ostani na vrhu pri zagonu</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="126"/>
+        <location filename="../settingsdialog.cpp" line="127"/>
         <source>Use built-in close window animation</source>
         <translation>Uporabi vgrajeno animacijo zapiranja okna</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="127"/>
+        <location filename="../settingsdialog.cpp" line="128"/>
         <source>Show title bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="128"/>
+        <location filename="../settingsdialog.cpp" line="129"/>
+        <source>Show bird&apos;s-eye view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.cpp" line="130"/>
         <source>Use light-color checkerboard</source>
         <translation>Uporabite svetlo šahovnico</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="129"/>
+        <location filename="../settingsdialog.cpp" line="131"/>
         <source>Loop the loaded gallery</source>
         <translation>Ponavljaj naloženo galerijo</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="130"/>
+        <location filename="../settingsdialog.cpp" line="132"/>
         <source>Auto long image mode</source>
         <translation>Samodejni način dolge slike</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="131"/>
+        <location filename="../settingsdialog.cpp" line="133"/>
         <source>Limit SVG support to SVG Tiny 1.2</source>
         <translation>Omeji podporo za SVG na SVG Tiny 1.2</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="132"/>
+        <location filename="../settingsdialog.cpp" line="134"/>
         <source>Double-click behavior</source>
         <translation>Obnašanje dvojnega klika</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="133"/>
+        <location filename="../settingsdialog.cpp" line="135"/>
         <source>Mouse wheel behavior</source>
         <translation>Obnašanje miškinega kolesca</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="134"/>
+        <location filename="../settingsdialog.cpp" line="136"/>
         <source>Default window size</source>
         <translation>Privzeta velikost okna</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="135"/>
+        <location filename="../settingsdialog.cpp" line="137"/>
         <source>HiDPI scale factor rounding policy</source>
         <translation>Politika zaokroževanja faktorja merila HiDPI</translation>
     </message>
