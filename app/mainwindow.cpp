@@ -630,7 +630,7 @@ void MainWindow::updateWidgetsPosition()
 {
     if (m_titleBar->closeButtonOnly()) {
         const int bw = m_titleBar->closeButtonWidth();
-        m_titleBar->setGeometry(width() - bw, 0, bw, m_titleBar->height());
+        m_titleBar->setGeometry(isRightToLeft() ? 0 : width() - bw, 0, bw, m_titleBar->height());
     } else {
         m_titleBar->setGeometry(0, 0, width(), m_titleBar->height());
     }
