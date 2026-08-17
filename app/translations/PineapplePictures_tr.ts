@@ -240,27 +240,27 @@
         <location filename="../mainwindow.cpp" line="755"/>
         <location filename="../mainwindow.cpp" line="785"/>
         <source>Save As</source>
-        <translation type="unfinished"></translation>
+        <translation>Farklı Kaydet</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="731"/>
         <source>No image is currently open.</source>
-        <translation type="unfinished"></translation>
+        <translation>Şu anda açık bir resim yok.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="743"/>
         <source>%1 Image (*.%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Resim (*.%2)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="749"/>
         <source>No supported image formats are available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Desteklenen resim biçimi yok.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="786"/>
         <source>Failed to save image: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Resim kaydedilemedi: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="875"/>
@@ -324,7 +324,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="88"/>
         <source>Save &amp;As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Farklı &amp;Kaydet...</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
@@ -876,12 +876,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="128"/>
         <source>Show title bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Başlık çubuğunu göster</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="129"/>
         <source>Show bird&apos;s-eye view</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuş bakışı görünümünü göster</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="130"/>

@@ -11,7 +11,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="32"/>
         <source>Launch application with image file path as argument to load the file.</source>
-        <translation>إطلاق التطبيق مع استخدام مسار ملف الصورة كمُعامل لتحميل الملف.</translation>
+        <translation>أطلق التطبيق مع استخدام مسار ملف صورة كمُعامل لفتح الملف.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="33"/>
@@ -113,22 +113,22 @@
         <location filename="../aboutdialog.cpp" line="63"/>
         <source>Copyright (c) %1 %2</source>
         <comment>%1 is year, %2 is the name of copyright holder(s)</comment>
-        <translation>حقوق النسخ مملوكة لصالح %1 لعام %2</translation>
+        <translation>حقوق النسخ مملوكة لصالح %2 لعام %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="95"/>
         <source>%1 is released under the MIT License.</source>
-        <translation>%1 منشور تحت رخصة MIT.</translation>
+        <translation>تم إصدار %1 بموجب ترخيص MIT.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="96"/>
         <source>This license grants people a number of freedoms:</source>
-        <translation>هذه الرخصة تمنح المستخدم عدة حقوق وحريات:</translation>
+        <translation>هذه الرخصة تمنح المستخدم عدة حريات:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="97"/>
         <source>You are free to use %1, for any purpose</source>
-        <translation>يحق لك استخدام %1 لأي غرض</translation>
+        <translation>لك الحرية في استخدام %1 لأي غرض كان</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="98"/>
@@ -138,7 +138,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="99"/>
         <source>You can study how %1 works and change it</source>
-        <translation>يمكنك دراسة طريقة عمل %1 وتعديلها</translation>
+        <translation>يمكنك دراسة طريقة عمل %1 وتعديله</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="100"/>
@@ -148,12 +148,12 @@
     <message>
         <location filename="../aboutdialog.cpp" line="102"/>
         <source>The MIT license guarantees you this freedom. Nobody is ever permitted to take it away.</source>
-        <translation>رخصة MIT تضمن لك تلك الحقوق. لا أحد له الحق في سلبهم منك.</translation>
+        <translation>رخصة MIT تضمن لك تلك الحريات. لا أحد له الحق في سلبهم منك.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="130"/>
         <source>Third-party Libraries used by %1</source>
-        <translation>المكتبات الخارجية المستخدمة من قِبَل %1</translation>
+        <translation>المكتبات الخارجية المستخدمة في %1</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="153"/>
@@ -244,7 +244,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="786"/>
         <source>Failed to save image: %1</source>
-        <translation>فشل في حفظ الصورة: %1</translation>
+        <translation>فشل حفظ الصورة: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="875"/>
@@ -259,7 +259,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="897"/>
         <source>Failed to move file to trash</source>
-        <translation>فشل النقل إلى سلة المهملات</translation>
+        <translation>فشل نقل الملف إلى سلة المهملات</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="898"/>
@@ -298,7 +298,7 @@
         <location filename="../aboutdialog.cpp" line="47"/>
         <source>Keep transformation</source>
         <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
-        <translation>إبقاء التحويل</translation>
+        <translation>الحفاظ على التحويلات</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
@@ -503,7 +503,7 @@
     <message>
         <location filename="../metadatamodel.cpp" line="64"/>
         <source>Item type</source>
-        <translation>نوع العنصر</translation>
+        <translation>نوع الملف</translation>
     </message>
     <message>
         <location filename="../metadatamodel.cpp" line="66"/>
@@ -865,7 +865,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="129"/>
         <source>Show bird&apos;s-eye view</source>
-        <translation type="unfinished"></translation>
+        <translation>إظهار إطار مصغر عند التكبير</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="130"/>
@@ -880,12 +880,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="132"/>
         <source>Auto long image mode</source>
-        <translation>وضع الصور الطويلة تلقائيًا</translation>
+        <translation>ملائمة الصور الطويلة تلقائيًا</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="133"/>
         <source>Limit SVG support to SVG Tiny 1.2</source>
-        <translation>حد دعم تنسيق SVG إلي نسخة Tiny 1.2</translation>
+        <translation>حد دعم تنسيق SVG إلي مواصفة SVG Tiny 1.2</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="134"/>
@@ -895,7 +895,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="135"/>
         <source>Mouse wheel behavior</source>
-        <translation>السلوك عند تحريك عجلة الفأرة</translation>
+        <translation>السلوك عند تمرير عجلة الفأرة</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="136"/>

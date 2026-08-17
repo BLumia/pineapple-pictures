@@ -881,7 +881,7 @@
     <message>
         <location filename="../settingsdialog.cpp" line="129"/>
         <source>Show bird&apos;s-eye view</source>
-        <translation type="unfinished"></translation>
+        <translation>Vogelvluchtweergave</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="130"/>
