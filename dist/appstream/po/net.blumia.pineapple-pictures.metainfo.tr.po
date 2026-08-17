@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2023-08-22 18:49中国标准时间\n"
-"PO-Revision-Date: 2025-12-20 20:00+0000\n"
-"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
+"PO-Revision-Date: 2026-07-29 10:01+0000\n"
+"Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/pineapple-"
 "pictures/appstream-metadata/tr/>\n"
 "Language: tr\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 #. (itstool) path: component/name
 #: net.blumia.pineapple-pictures.metainfo.xml:7
@@ -27,23 +27,26 @@ msgstr "Resim Görüntüleyici"
 #: net.blumia.pineapple-pictures.metainfo.xml:12
 msgid "Pineapple Pictures is a lightweight and easy-to-use image viewer that comes with a handy navigation thumbnail when zoom-in, and doesn't contain any image management support."
 msgstr ""
+"Pineapple Resimler, yakınlaştırma yapıldığında kullanışlı bir gezinme küçük "
+"resmi sunan, hafif ve kullanımı kolay bir resim görüntüleyicidir, herhangi "
+"bir resim yönetimi desteği içermez."
 
 #. (itstool) path: screenshot/caption
 #: net.blumia.pineapple-pictures.metainfo.xml:17
 msgid "Main window when an image file is loaded"
-msgstr ""
+msgstr "Bir resim dosyası yüklendiğinde ana pencere"
 
 #. (itstool) path: screenshot/caption
 #: net.blumia.pineapple-pictures.metainfo.xml:22
 msgid "Zooming in a raster image"
-msgstr ""
+msgstr "Raster resimde yakınlaştırma"
 
 #. (itstool) path: screenshot/caption
 #: net.blumia.pineapple-pictures.metainfo.xml:27
 msgid "Zooming in a vector image"
-msgstr ""
+msgstr "Vektör resimde yakınlaştırma"
 
 #. (itstool) path: component/developer_name
 #: net.blumia.pineapple-pictures.metainfo.xml:34
 msgid "Gary (BLumia) Wang et al."
-msgstr "Gary (BLumia) Wang et al."
+msgstr "Gary (BLumia) Wang ve diğerleri"

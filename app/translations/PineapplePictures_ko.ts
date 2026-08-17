@@ -872,12 +872,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="128"/>
         <source>Show title bar</source>
-        <translation type="unfinished"></translation>
+        <translation>제목 표시줄 표시</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="129"/>
         <source>Show bird&apos;s-eye view</source>
-        <translation type="unfinished"></translation>
+        <translation>조감도 보기 표시</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="130"/>
