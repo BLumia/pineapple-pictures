@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - qt_ver: '6.10.3'
+          - qt_ver: '6.11.2'
             vs: '2022'
             aqt_arch: 'win64_msvc2022_64'
             msvc_arch: 'x64'
@@ -24,6 +24,8 @@ jobs:
         version: ${{ matrix.qt_ver }}
         modules: 'qtimageformats'
         cache: true
+        # we need this until miurahr/aqtinstall#1007 ships 3.3.1 for Qt >= 6.11.0 for Windows.
+        aqtsource: 'aqtinstall @ git+https://github.com/miurahr/aqtinstall@16db45a70b5905ad596941b223469bc86a56901e'
     - name: Build
       shell: cmd
       run: |

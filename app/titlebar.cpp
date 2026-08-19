@@ -136,7 +136,7 @@ void TitleBar::mouseMoveEvent(QMouseEvent *event)
         }
     }
 
-#if defined(Q_OS_WIN)
+#if defined(Q_OS_WIN) and QT_VERSION < QT_VERSION_CHECK(6, 11, 2)
     const bool shouldAcceptDrag = !window()->isMaximized() && !window()->isFullScreen();
 #else
     const bool shouldAcceptDrag = !window()->isFullScreen();
