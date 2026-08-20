@@ -102,6 +102,28 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release type="stable" version="1.6.0" date="2026-08-22T00:00:00Z">
+      <description>
+        <p>This release adds the following features:</p>
+        <ul>
+          <li>Allow dragging window from titlebar to move window when maximized</li>
+          <li>Add an option to show/hide bird-eye view</li>
+        </ul>
+        <p>This release fixes the following bugs:</p>
+        <ul>
+          <li>Maximize the window when the image size matches the screen size</li>
+          <li>Fix window might stuck when drag move on some ill-formed window manager</li>
+          <li>Make titlebar respect RTL layout</li>
+        </ul>
+        <p>This release includes the following changes:</p>
+        <ul>
+          <li>Update translations</li>
+          <li>Update Qt version to 6.11.2 for Windows and macOS pre-built binaries</li>
+        </ul>
+        <p>With contributions from:</p>
+        <p>Tech-Tac, Heimen Stoffels (vistaus), VenusGirl, Oğuz Ersen</p>
+      </description>
+    </release>
     <release type="stable" version="1.5.0" date="2026-07-04T00:00:00Z">
       <description>
         <p>This release adds the following features:</p>
