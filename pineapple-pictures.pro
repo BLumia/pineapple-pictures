@@ -45,7 +45,8 @@ SOURCES += \
     app/actionmanager.cpp \
     app/playlistmanager.cpp \
     app/shortcutedit.cpp \
-    app/fileopeneventhandler.cpp
+    app/fileopeneventhandler.cpp \
+    app/winplaylistpatch.cpp
 
 HEADERS += \
     app/aboutdialog.h \
@@ -66,7 +67,8 @@ HEADERS += \
     app/actionmanager.h \
     app/playlistmanager.h \
     app/shortcutedit.h \
-    app/fileopeneventhandler.h
+    app/fileopeneventhandler.h \
+    app/winplaylistpatch.h
 
 TRANSLATIONS = \
     app/translations/PineapplePictures_en.ts \
@@ -108,5 +110,5 @@ QMAKE_TARGET_COPYRIGHT = MIT/Expat License - Copyright (C) 2024 Gary Wang
 
 # MSVC only, since QMake doesn't have a CMAKE_CXX_STANDARD_LIBRARIES or cpp_winlibs similar thing
 win32-msvc* {
-    LIBS += -luser32
+    LIBS += -luser32 -lole32 -loleaut32
 }
