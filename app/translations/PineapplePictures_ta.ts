@@ -290,7 +290,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="44"/>
         <location filename="../actionmanager.cpp" line="113"/>
-        <source>Prevent Closing</source>
+        <source>Lock Mode</source>
         <translation>பாதுகாக்கப்பட்ட பயன்முறை</translation>
     </message>
     <message>

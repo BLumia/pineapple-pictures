@@ -287,7 +287,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="44"/>
         <location filename="../actionmanager.cpp" line="113"/>
-        <source>Prevent Closing</source>
+        <source>Lock Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

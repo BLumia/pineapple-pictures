@@ -289,7 +289,7 @@
     <message>
         <location filename="../actionmanager.cpp" line="113" />
         <location filename="../aboutdialog.cpp" line="44" />
-        <source>Prevent Closing</source>
+        <source>Lock Mode</source>
         <translation>سرکھیات سیٹنگ</translation>
     </message>
     <message>

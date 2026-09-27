@@ -302,7 +302,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="44"/>
         <location filename="../actionmanager.cpp" line="113"/>
-        <source>Prevent Closing</source>
+        <source>Lock Mode</source>
         <translation>Modalità protetta</translation>
     </message>
     <message>
