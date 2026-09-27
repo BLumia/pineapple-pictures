@@ -35,7 +35,7 @@
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="45"/>
-        <source>Avoid closing the window accidentally. (e.g. by double clicking the window)</source>
+        <source>Prevent accidentally switching the image or closing the window.</source>
         <translation>தற்செயலாக நெருக்கமான சாளரத்தைத் தவிர்க்கவும். (எ.கா. சாளரத்தை இருமுறை சொடுக்கு செய்வதன் மூலம்)</translation>
     </message>
     <message>

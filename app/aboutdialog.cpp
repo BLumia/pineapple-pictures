@@ -42,7 +42,7 @@ AboutDialog::AboutDialog(QWidget *parent)
             .arg(tr("Make the window stay on top of all other windows.")),
         u"<li><b>%1</b>:<br/>%2</li>"_s
             .arg(QCoreApplication::translate("MainWindow", "Lock Mode"))
-            .arg(tr("Avoid closing the window accidentally. (e.g. by double clicking the window)")),
+            .arg(tr("Prevent accidentally switching the image or closing the window.")),
         u"<li><b>%1</b>:<br/>%2</li>"_s
             .arg(QCoreApplication::translate("MainWindow", "Keep Transformation", "The 'transformation' means the flip/rotation status that currently applied to the image view"))
             .arg(tr("Avoid resetting the zoom/rotation/flip state that was applied to the image view when switching between images.")),

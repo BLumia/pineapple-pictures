@@ -35,7 +35,7 @@
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="45"/>
-        <source>Avoid closing the window accidentally. (e.g. by double clicking the window)</source>
+        <source>Prevent accidentally switching the image or closing the window.</source>
         <translation>避免窗口意外关闭。（如：不小心双击了窗口触发了关闭窗口行为）</translation>
     </message>
     <message>
