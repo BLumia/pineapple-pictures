@@ -36,7 +36,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="45"/>
         <source>Prevent accidentally switching the image or closing the window.</source>
-        <translation>誤ってウィンドウを閉じないようにします。(例：ウィンドウをダブルクリックする)</translation>
+        <translation type="unfinished">誤ってウィンドウを閉じないようにします。(例：ウィンドウをダブルクリックする)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="48"/>

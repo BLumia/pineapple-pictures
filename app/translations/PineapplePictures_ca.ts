@@ -35,7 +35,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="45" />
         <source>Prevent accidentally switching the image or closing the window.</source>
-        <translation>Evita que es tanqui la finestra accidentalment (com ara en fer doble clic a la finestra)</translation>
+        <translation type="unfinished">Evita que es tanqui la finestra accidentalment (com ara en fer doble clic a la finestra)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="48" />
