@@ -10,12 +10,12 @@
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="32"/>
-        <source>Launch application with image file path as argument to load the file.</source>
+        <source>Launch the application using an image file path as an argument to load the file.</source>
         <translation>கோப்பை ஏற்ற வாதமாக பட கோப்பு பாதையுடன் பயன்பாட்டைத் தொடங்கவும்.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="33"/>
-        <source>Drag and drop image file onto the window is also supported.</source>
+        <source>Dragging and dropping an image file onto the window is also supported.</source>
         <translation>படக் கோப்பை சாளரத்தில் இழுத்து விடுங்கள்.</translation>
     </message>
     <message>
@@ -25,18 +25,18 @@
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="35"/>
-        <source>Context menu option explanation:</source>
+        <source>Context menu options explanation:</source>
         <translation>சூழல் பட்டியல் விருப்பம் விளக்கம்:</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="42"/>
-        <source>Make window stay on top of all other windows.</source>
+        <source>Make the window stay on top of all other windows.</source>
         <translation>மற்ற எல்லா சன்னல்களுக்கும் மேலாக சாளரத்தை வைக்கவும்.</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="45"/>
-        <source>Avoid close window accidentally. (eg. by double clicking the window)</source>
-        <translation>தற்செயலாக நெருக்கமான சாளரத்தைத் தவிர்க்கவும். (எ.கா. சாளரத்தை இருமுறை சொடுக்கு செய்வதன் மூலம்)</translation>
+        <source>Prevent accidentally switching the image or closing the window.</source>
+        <translation type="unfinished">தற்செயலாக நெருக்கமான சாளரத்தைத் தவிர்க்கவும். (எ.கா. சாளரத்தை இருமுறை சொடுக்கு செய்வதன் மூலம்)</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="48"/>
@@ -174,8 +174,8 @@
 <context>
     <name>GraphicsScene</name>
     <message>
-        <location filename="../mainwindow.cpp" line="305"/>
         <location filename="../graphicsscene.cpp" line="102"/>
+        <location filename="../mainwindow.cpp" line="305"/>
         <source>Drag image here</source>
         <translation>படத்தை இங்கே இழுக்கவும்</translation>
     </message>
@@ -268,7 +268,7 @@
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="108"/>
-        <source>Copy P&amp;ixmap</source>
+        <source>Copy as Raster &amp;Image</source>
         <translation>பி &amp; ஐஎக்ச்மேப்பை நகலெடுக்கவும்</translation>
     </message>
     <message>
@@ -282,27 +282,27 @@
         <translation>பண்புகள்</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="112"/>
         <location filename="../aboutdialog.cpp" line="41"/>
-        <source>Stay on top</source>
+        <location filename="../actionmanager.cpp" line="112"/>
+        <source>Stay on Top</source>
         <translation>மேலே இருங்கள்</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="113"/>
         <location filename="../aboutdialog.cpp" line="44"/>
-        <source>Protected mode</source>
+        <location filename="../actionmanager.cpp" line="113"/>
+        <source>Lock Mode</source>
         <translation>பாதுகாக்கப்பட்ட பயன்முறை</translation>
     </message>
     <message>
-        <location filename="../actionmanager.cpp" line="114"/>
         <location filename="../aboutdialog.cpp" line="47"/>
-        <source>Keep transformation</source>
+        <location filename="../actionmanager.cpp" line="114"/>
+        <source>Keep Transformation</source>
         <comment>The &apos;transformation&apos; means the flip/rotation status that currently applied to the image view</comment>
         <translation>மாற்றத்தைத் தொடருங்கள்</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="92"/>
-        <source>Zoom in</source>
+        <source>Zoom In</source>
         <translation>பெரிதாக்கு</translation>
     </message>
     <message>
@@ -312,7 +312,7 @@
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="93"/>
-        <source>Zoom out</source>
+        <source>Zoom Out</source>
         <translation>சிறிதாக்கு</translation>
     </message>
     <message>
@@ -322,7 +322,7 @@
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="102"/>
-        <source>Animation Go to Next Frame</source>
+        <source>Next Animation Frame</source>
         <translation>அனிமேசன் அடுத்த சட்டகத்திற்குச் செல்லுங்கள்</translation>
     </message>
     <message>
@@ -332,17 +332,17 @@
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="105"/>
-        <source>Fit to view</source>
+        <source>Fit to View</source>
         <translation>பார்க்க பொருத்தமானது</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="106"/>
-        <source>Fit to width</source>
+        <source>Fit to Width</source>
         <translation>அகலத்திற்கு ஏற்றது</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="107"/>
-        <source>Fit long image</source>
+        <source>Fit Long Image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -362,37 +362,37 @@
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="90"/>
-        <source>Actual size</source>
+        <source>Actual Size</source>
         <translation>உண்மையான அளவு</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="91"/>
-        <source>Toggle maximize</source>
+        <source>Toggle Maximize</source>
         <translation>அதிகபட்சத்தை மாற்றவும்</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="95"/>
-        <source>Rotate right</source>
+        <source>Rotate Clockwise</source>
         <translation>வலதுபுறம் சுழற்றுங்கள்</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="96"/>
-        <source>Rotate left</source>
+        <source>Rotate Counterclockwise</source>
         <translation>இடதுபுறம் சுழலும்</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="98"/>
-        <source>Previous image</source>
+        <source>Previous Image</source>
         <translation>முந்தைய படம்</translation>
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="99"/>
-        <source>Next image</source>
+        <source>Next Image</source>
         <translation>அடுத்த படம்</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="892"/>
         <location filename="../actionmanager.cpp" line="111"/>
+        <location filename="../mainwindow.cpp" line="892"/>
         <source>Move to Trash</source>
         <translation>குப்பைக்கு நகர்த்தவும்</translation>
     </message>
@@ -414,7 +414,7 @@
     </message>
     <message>
         <location filename="../actionmanager.cpp" line="125"/>
-        <source>Show in directory</source>
+        <source>Show in Directory</source>
         <translation>கோப்பகத்தில் காட்டு</translation>
     </message>
     <message>
@@ -775,7 +775,7 @@
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="75"/>
-        <source>Please check if shortcuts are duplicated with existing shortcuts.</source>
+        <source>Please check if these shortcuts are assigned to other actions.</source>
         <translation>தற்போதுள்ள குறுக்குவழிகளுடன் குறுக்குவழிகள் நகல் செய்யப்பட்டுள்ளதா என்று சரிபார்க்கவும்.</translation>
     </message>
     <message>
@@ -810,7 +810,7 @@
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="94"/>
-        <source>Auto size</source>
+        <source>Auto</source>
         <translation>வாகன அளவு</translation>
     </message>
     <message>
@@ -849,12 +849,12 @@
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="126"/>
-        <source>Stay on top when start-up</source>
+        <source>Stay on top by default</source>
         <translation>தொடக்கத்தில் இருக்கும்போது மேலே இருங்கள்</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="127"/>
-        <source>Use built-in close window animation</source>
+        <source>Use built-in window closing animation</source>
         <translation>உள்ளமைக்கப்பட்ட நெருக்கமான சாளர அனிமேஷனைப் பயன்படுத்தவும்</translation>
     </message>
     <message>
@@ -869,7 +869,7 @@
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="130"/>
-        <source>Use light-color checkerboard</source>
+        <source>Use light-colored checkerboard</source>
         <translation>ஒளி-வண்ண செக்கர்போர்டைப் பயன்படுத்தவும்</translation>
     </message>
     <message>
@@ -879,7 +879,7 @@
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="132"/>
-        <source>Auto long image mode</source>
+        <source>Automatically fit long images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -899,7 +899,7 @@
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="136"/>
-        <source>Default window size</source>
+        <source>Default window state</source>
         <translation>இயல்புநிலை சாளர அளவு</translation>
     </message>
     <message>

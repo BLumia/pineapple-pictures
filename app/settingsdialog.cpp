@@ -72,7 +72,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
                                                                     newShortcuts);
             if (!succ) {
                 QMessageBox::warning(this, tr("Failed to set shortcuts"),
-                                     tr("Please check if shortcuts are duplicated with existing shortcuts."));
+                                     tr("Please check if these shortcuts are assigned to other actions."));
             }
             shortcutEdit->setShortcuts(action->shortcuts());
         });
@@ -91,7 +91,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     };
 
     static QList< QPair<Settings::WindowSizeBehavior, QString> > _iws_options {
-        { Settings::WindowSizeBehavior::Auto, tr("Auto size") },
+        { Settings::WindowSizeBehavior::Auto, tr("Auto") },
         { Settings::WindowSizeBehavior::Maximized, tr("Maximized") },
         { Settings::WindowSizeBehavior::Windowed, tr("Windowed") }
     };
@@ -123,17 +123,17 @@ SettingsDialog::SettingsDialog(QWidget *parent)
         hidpiDropDown.append(hidpiOption.second);
     }
 
-    settingsForm->addRow(tr("Stay on top when start-up"), m_stayOnTop);
-    settingsForm->addRow(tr("Use built-in close window animation"), m_useBuiltInCloseAnimation);
+    settingsForm->addRow(tr("Stay on top by default"), m_stayOnTop);
+    settingsForm->addRow(tr("Use built-in window closing animation"), m_useBuiltInCloseAnimation);
     settingsForm->addRow(tr("Show title bar"), m_showTitleBar);
     settingsForm->addRow(tr("Show bird's-eye view"), m_showBirdEyeView);
-    settingsForm->addRow(tr("Use light-color checkerboard"), m_useLightCheckerboard);
+    settingsForm->addRow(tr("Use light-colored checkerboard"), m_useLightCheckerboard);
     settingsForm->addRow(tr("Loop the loaded gallery"), m_loopGallery);
-    settingsForm->addRow(tr("Auto long image mode"), m_autoLongImageMode);
+    settingsForm->addRow(tr("Automatically fit long images"), m_autoLongImageMode);
     settingsForm->addRow(tr("Limit SVG support to SVG Tiny 1.2"), m_svgTiny12Only);
     settingsForm->addRow(tr("Double-click behavior"), m_doubleClickBehavior);
     settingsForm->addRow(tr("Mouse wheel behavior"), m_mouseWheelBehavior);
-    settingsForm->addRow(tr("Default window size"), m_initWindowSizeBehavior);
+    settingsForm->addRow(tr("Default window state"), m_initWindowSizeBehavior);
     settingsForm->addRow(tr("HiDPI scale factor rounding policy"), m_hiDpiRoundingPolicyBehavior);
 
     m_stayOnTop->setChecked(Settings::instance()->stayOnTop());

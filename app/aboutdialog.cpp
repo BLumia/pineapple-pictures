@@ -29,22 +29,22 @@ AboutDialog::AboutDialog(QWidget *parent)
     this->setWindowTitle(tr("About"));
 
     const QStringList helpStr {
-        u"<p>%1</p>"_s.arg(tr("Launch application with image file path as argument to load the file.")),
-        u"<p>%1</p>"_s.arg(tr("Drag and drop image file onto the window is also supported.")),
+        u"<p>%1</p>"_s.arg(tr("Launch the application using an image file path as an argument to load the file.")),
+        u"<p>%1</p>"_s.arg(tr("Dragging and dropping an image file onto the window is also supported.")),
         u"<p>%1</p>"_s.arg(tr("None of the operations in this application will alter the pictures on disk.")),
-        u"<p>%1</p>"_s.arg(tr("Context menu option explanation:")),
+        u"<p>%1</p>"_s.arg(tr("Context menu options explanation:")),
         u"<ul>"_s,
         // blumia: Chain two arg() here since it seems lupdate will remove one of them if we use
         //         the old `arg(QCoreApp::translate(), tr())` way, but it's worth to mention
         //         `arg(QCoreApp::translate(), this->tr())` works, but lupdate will complain about the usage.
         u"<li><b>%1</b>:<br/>%2</li>"_s
-            .arg(QCoreApplication::translate("MainWindow", "Stay on top"))
-            .arg(tr("Make window stay on top of all other windows.")),
+            .arg(QCoreApplication::translate("MainWindow", "Stay on Top"))
+            .arg(tr("Make the window stay on top of all other windows.")),
         u"<li><b>%1</b>:<br/>%2</li>"_s
-            .arg(QCoreApplication::translate("MainWindow", "Protected mode"))
-            .arg(tr("Avoid close window accidentally. (eg. by double clicking the window)")),
+            .arg(QCoreApplication::translate("MainWindow", "Lock Mode"))
+            .arg(tr("Prevent accidentally switching the image or closing the window.")),
         u"<li><b>%1</b>:<br/>%2</li>"_s
-            .arg(QCoreApplication::translate("MainWindow", "Keep transformation", "The 'transformation' means the flip/rotation status that currently applied to the image view"))
+            .arg(QCoreApplication::translate("MainWindow", "Keep Transformation", "The 'transformation' means the flip/rotation status that currently applied to the image view"))
             .arg(tr("Avoid resetting the zoom/rotation/flip state that was applied to the image view when switching between images.")),
         u"</ul>"_s
     };

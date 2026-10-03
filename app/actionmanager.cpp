@@ -87,31 +87,31 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
     actionOpen->setText(QCoreApplication::translate("MainWindow", "&Open...", nullptr));
     actionSaveAs->setText(QCoreApplication::translate("MainWindow", "Save &As...", nullptr));
 
-    actionActualSize->setText(QCoreApplication::translate("MainWindow", "Actual size", nullptr));
-    actionToggleMaximize->setText(QCoreApplication::translate("MainWindow", "Toggle maximize", nullptr));
-    actionZoomIn->setText(QCoreApplication::translate("MainWindow", "Zoom in", nullptr));
-    actionZoomOut->setText(QCoreApplication::translate("MainWindow", "Zoom out", nullptr));
+    actionActualSize->setText(QCoreApplication::translate("MainWindow", "Actual Size", nullptr));
+    actionToggleMaximize->setText(QCoreApplication::translate("MainWindow", "Toggle Maximize", nullptr));
+    actionZoomIn->setText(QCoreApplication::translate("MainWindow", "Zoom In", nullptr));
+    actionZoomOut->setText(QCoreApplication::translate("MainWindow", "Zoom Out", nullptr));
     actionToggleCheckerboard->setText(QCoreApplication::translate("MainWindow", "Toggle Checkerboard", nullptr));
-    actionRotateClockwise->setText(QCoreApplication::translate("MainWindow", "Rotate right", nullptr));
-    actionRotateCounterClockwise->setText(QCoreApplication::translate("MainWindow", "Rotate left", nullptr));
+    actionRotateClockwise->setText(QCoreApplication::translate("MainWindow", "Rotate Clockwise", nullptr));
+    actionRotateCounterClockwise->setText(QCoreApplication::translate("MainWindow", "Rotate Counterclockwise", nullptr));
 
-    actionPrevPicture->setText(QCoreApplication::translate("MainWindow", "Previous image", nullptr));
-    actionNextPicture->setText(QCoreApplication::translate("MainWindow", "Next image", nullptr));
+    actionPrevPicture->setText(QCoreApplication::translate("MainWindow", "Previous Image", nullptr));
+    actionNextPicture->setText(QCoreApplication::translate("MainWindow", "Next Image", nullptr));
 
     actionTogglePauseAnimation->setText(QCoreApplication::translate("MainWindow", "Pause/Resume Animation", nullptr));
-    actionAnimationNextFrame->setText(QCoreApplication::translate("MainWindow", "Animation Go to Next Frame", nullptr));
+    actionAnimationNextFrame->setText(QCoreApplication::translate("MainWindow", "Next Animation Frame", nullptr));
 
     actionHorizontalFlip->setText(QCoreApplication::translate("MainWindow", "Flip &Horizontally", nullptr));
-    actionFitInView->setText(QCoreApplication::translate("MainWindow", "Fit to view", nullptr));
-    actionFitByWidth->setText(QCoreApplication::translate("MainWindow", "Fit to width", nullptr));
-    actionFitLongImage->setText(QCoreApplication::translate("MainWindow", "Fit long image", nullptr));
-    actionCopyPixmap->setText(QCoreApplication::translate("MainWindow", "Copy P&ixmap", nullptr));
+    actionFitInView->setText(QCoreApplication::translate("MainWindow", "Fit to View", nullptr));
+    actionFitByWidth->setText(QCoreApplication::translate("MainWindow", "Fit to Width", nullptr));
+    actionFitLongImage->setText(QCoreApplication::translate("MainWindow", "Fit Long Image", nullptr));
+    actionCopyPixmap->setText(QCoreApplication::translate("MainWindow", "Copy as Raster &Image", nullptr));
     actionCopyFilePath->setText(QCoreApplication::translate("MainWindow", "Copy &File Path", nullptr));
     actionPaste->setText(QCoreApplication::translate("MainWindow", "&Paste", nullptr));
     actionTrash->setText(QCoreApplication::translate("MainWindow", "Move to Trash", nullptr));
-    actionToggleStayOnTop->setText(QCoreApplication::translate("MainWindow", "Stay on top", nullptr));
-    actionToggleProtectMode->setText(QCoreApplication::translate("MainWindow", "Protected mode", nullptr));
-    actionToggleAvoidResetTransform->setText(QCoreApplication::translate("MainWindow", "Keep transformation", "The 'transformation' means the flip/rotation status that currently applied to the image view"));
+    actionToggleStayOnTop->setText(QCoreApplication::translate("MainWindow", "Stay on Top", nullptr));
+    actionToggleProtectMode->setText(QCoreApplication::translate("MainWindow", "Lock Mode", nullptr));
+    actionToggleAvoidResetTransform->setText(QCoreApplication::translate("MainWindow", "Keep Transformation", "The 'transformation' means the flip/rotation status that currently applied to the image view"));
     actionSettings->setText(QCoreApplication::translate("MainWindow", "Configure...", nullptr));
     actionHelp->setText(QCoreApplication::translate("MainWindow", "Help", nullptr));
 #ifdef Q_OS_WIN
@@ -122,7 +122,7 @@ void ActionManager::retranslateUi(MainWindow *mainWindow)
         )
     );
 #else
-    actionLocateInFileManager->setText(QCoreApplication::translate("MainWindow", "Show in directory", nullptr));
+    actionLocateInFileManager->setText(QCoreApplication::translate("MainWindow", "Show in Directory", nullptr));
 #endif // Q_OS_WIN
     actionProperties->setText(QCoreApplication::translate("MainWindow", "Properties", nullptr));
     actionQuitApp->setText(QCoreApplication::translate("MainWindow", "Quit", nullptr));
