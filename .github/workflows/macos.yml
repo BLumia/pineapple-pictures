@@ -12,7 +12,7 @@ jobs:
     - name: Install Qt
       uses: jurplel/install-qt-action@v4
       with:
-        version: '6.11.2'
+        version: '6.12.0'
         modules: 'qtimageformats'
         cache: true
     - name: Install Conan and Dependencies
