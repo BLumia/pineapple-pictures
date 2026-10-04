@@ -860,12 +860,12 @@
     <message>
         <location filename="../settingsdialog.cpp" line="128"/>
         <source>Show title bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaži naslovno vrstico</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="129"/>
         <source>Show bird&apos;s-eye view</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži ptičjo perspektivo</translation>
     </message>
     <message>
         <location filename="../settingsdialog.cpp" line="130"/>
