@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: MIT
 
 #include "playlistmanager.h"
+#include "winplaylistpatch.h"
 
 #include <QCollator>
 #include <QDir>
@@ -47,6 +48,24 @@ QModelIndex PlaylistModel::loadPlaylist(const QUrl &url)
         return idx == -1 ? appendToPlaylist(url) : index(idx);
     }
 
+    QList<QUrl> playlist;
+    int idx = -1;
+
+#ifdef Q_OS_WIN
+    // In Windows, Qt approach can not reflect their Windows Explorer's
+    // custom sort rules (e.g. sort by file size) or display options (e.g. show hidden files).
+    // So we need to use Win32 COM functions to try fetching Explorer-aware playlist in advance.
+    // And use Qt approach as fallback.
+    std::optional<qsizetype> winidx = std::nullopt;
+    if (WinPlaylistPatch::loadPlaylist(url, m_autoLoadSuffixes, playlist, winidx)) {
+        if (winidx.has_value()) {
+            idx = *winidx;
+        } else {
+            idx = -1;
+        }
+    } else {
+#endif // Q_OS_WIN
+
     QStringList entryList = dir.entryList(
         m_autoLoadSuffixes,
         QDir::Files | QDir::NoSymLinks, QDir::NoSort);
@@ -56,9 +75,8 @@ QModelIndex PlaylistModel::loadPlaylist(const QUrl &url)
 
     std::sort(entryList.begin(), entryList.end(), collator);
 
-    QList<QUrl> playlist;
-
-    int idx = -1;
+    playlist.clear();
+    idx = -1;
     for (int i = 0; i < entryList.count(); i++) {
         const QString & fileName = entryList.at(i);
         const QString & oneEntry = dir.absoluteFilePath(fileName);
@@ -68,6 +86,11 @@ QModelIndex PlaylistModel::loadPlaylist(const QUrl &url)
             idx = i;
         }
     }
+
+#ifdef Q_OS_WIN
+    }
+#endif // Q_OS_WIN
+
     if (idx == -1) {
         idx = playlist.count();
         playlist.append(url);

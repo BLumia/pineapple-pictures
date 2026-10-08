@@ -57,6 +57,7 @@ set (PPIC_CPP_FILES
     app/playlistmanager.cpp
     app/shortcutedit.cpp
     app/fileopeneventhandler.cpp
+    app/winplaylistpatch.cpp
 )
 
 set (PPIC_HEADER_FILES
@@ -79,6 +80,7 @@ set (PPIC_HEADER_FILES
     app/playlistmanager.h
     app/shortcutedit.h
     app/fileopeneventhandler.h
+    app/winplaylistpatch.h
 )
 
 set (PPIC_QRC_FILES
